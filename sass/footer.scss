@@ -3,18 +3,28 @@
 footer{
     height: 768px;
     // border: $show_border;
-    background-image: url(../img/footer/footer_bg_01_3.jpg);
+
+    .backgroundImage{
+        background-image: url(../img/footer/footer_bg_01_3.jpg);
+        height: 768px;
+        width: 100%;
+        position: sticky;
+        top: 0px;
+    }
+    
 
     .wrapper{
         // width: 1180px;
         height: 100%;
         border: $show_border;
+        box-sizing: border-box;
         margin: $margin_center;
 
         ul{
             display: flex;
             
             height: 100%;
+            // overflow: hidden;
             
 
             li{
@@ -34,7 +44,7 @@ footer{
                 .info{
                     margin-top: 130px;
                     // border: $show_border;
-                    width: 37%;
+                    width: 400px;
 
                     h5{
                         margin-bottom: 20px;
@@ -76,7 +86,7 @@ footer{
                     .icon{
                         margin-top: 60px;
                         img{
-                            border: $show_border;
+                            // border: $show_border;
                             // display: block;
                             height: 40px;
                             margin-right: 40px;

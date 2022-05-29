@@ -1,10 +1,17 @@
 footer {
   height: 768px;
+}
+footer .backgroundImage {
   background-image: url(../img/footer/footer_bg_01_3.jpg);
+  height: 768px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
 }
 footer .wrapper {
   height: 100%;
   border: 1px solid #000;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 footer .wrapper ul {
@@ -23,7 +30,7 @@ footer .wrapper ul li:first-child {
 }
 footer .wrapper ul li:first-child .info {
   margin-top: 130px;
-  width: 37%;
+  width: 400px;
 }
 footer .wrapper ul li:first-child .info h5 {
   margin-bottom: 20px;
@@ -60,7 +67,6 @@ footer .wrapper ul li:first-child .info .icon {
   margin-top: 60px;
 }
 footer .wrapper ul li:first-child .info .icon img {
-  border: 1px solid #000;
   height: 40px;
   margin-right: 40px;
 }
