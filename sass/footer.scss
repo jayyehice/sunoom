@@ -4,15 +4,6 @@ footer{
     height: 768px;
     // border: $show_border;
 
-    .backgroundImage{
-        background-image: url(../img/footer/footer_bg_01_3.jpg);
-        height: 768px;
-        width: 100%;
-        position: sticky;
-        top: 0px;
-    }
-    
-
     .wrapper{
         // width: 1180px;
         height: 100%;
@@ -20,86 +11,77 @@ footer{
         box-sizing: border-box;
         margin: $margin_center;
 
-        ul{
-            display: flex;
-            
-            height: 100%;
-            // overflow: hidden;
+        
             
 
-            li{
-                box-sizing: border-box;
-                height: 100%;
+    #footer_li_left{
+        box-sizing: border-box;
+        height: 100%;
+        // border: $show_border;
+        flex-shrink: 0;
+    
+        padding-left: 90px;
+        padding-top: 90px;
+        width: 100%;
+            
+            
+
+            .info{
+                margin-top: 130px;
                 // border: $show_border;
-                flex-shrink: 0;
-            }
+                width: 400px;
 
-            li:first-child{
-                padding-left: 90px;
-                padding-top: 90px;
-                width: 100%;
-                
-                
+                h5{
+                    margin-bottom: 20px;
+                }
 
-                .info{
-                    margin-top: 130px;
-                    // border: $show_border;
-                    width: 400px;
+                .subscribe{
+                    margin-top: 55px;
+                    margin-bottom: 10px;
 
-                    h5{
-                        margin-bottom: 20px;
-                    }
-
-                    .subscribe{
-                        margin-top: 55px;
+                    p{
                         margin-bottom: 10px;
-
-                        p{
-                            margin-bottom: 10px;
-                        }
-
-                        input{
-                            width: 300px;
-                            height: 30px;
-                            background-color: #0C1244;
-                            box-sizing: border-box;
-                            border: 0;
-                            font-family: 'Noto Sans TC';
-                            color: #F5F0DD;
-                            font-size: 16rem;
-                            font-weight: normal;
-                        }
-
-                        button{
-                            width: 80px;
-                            height: 30px;
-                            box-sizing: border-box;
-                            background-color: transparent;
-                            border: 1px solid #0C1244;
-                        }
                     }
 
-                    & > p{
-                        line-height: 1.6;
+                    input{
+                        width: 300px;
+                        height: 30px;
+                        background-color: #0C1244;
+                        box-sizing: border-box;
+                        border: 0;
+                        font-family: 'Noto Sans TC';
+                        color: #F5F0DD;
+                        font-size: 16rem;
+                        font-weight: normal;
                     }
 
-                    .icon{
-                        margin-top: 60px;
-                        img{
-                            // border: $show_border;
-                            // display: block;
-                            height: 40px;
-                            margin-right: 40px;
-                        }
+                    button{
+                        width: 80px;
+                        height: 30px;
+                        box-sizing: border-box;
+                        background-color: transparent;
+                        border: 1px solid #0C1244;
+                    }
+                }
+
+                & > p{
+                    line-height: 1.6;
+                }
+
+                .icon{
+                    margin-top: 60px;
+                    img{
+                        // border: $show_border;
+                        // display: block;
+                        height: 40px;
+                        margin-right: 40px;
                     }
                 }
             }
-
-            li:last-child{
-                width: 50%;
-                background-color: #ccc;
-            }
         }
+
+            
+        
 
     }
 

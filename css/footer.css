@@ -1,48 +1,35 @@
 footer {
   height: 768px;
 }
-footer .backgroundImage {
-  background-image: url(../img/footer/footer_bg_01_3.jpg);
-  height: 768px;
-  width: 100%;
-  position: sticky;
-  top: 0px;
-}
 footer .wrapper {
   height: 100%;
   border: 1px solid #000;
   box-sizing: border-box;
   margin: 0 auto;
 }
-footer .wrapper ul {
-  display: flex;
-  height: 100%;
-}
-footer .wrapper ul li {
+footer .wrapper #footer_li_left {
   box-sizing: border-box;
   height: 100%;
   flex-shrink: 0;
-}
-footer .wrapper ul li:first-child {
   padding-left: 90px;
   padding-top: 90px;
   width: 100%;
 }
-footer .wrapper ul li:first-child .info {
+footer .wrapper #footer_li_left .info {
   margin-top: 130px;
   width: 400px;
 }
-footer .wrapper ul li:first-child .info h5 {
+footer .wrapper #footer_li_left .info h5 {
   margin-bottom: 20px;
 }
-footer .wrapper ul li:first-child .info .subscribe {
+footer .wrapper #footer_li_left .info .subscribe {
   margin-top: 55px;
   margin-bottom: 10px;
 }
-footer .wrapper ul li:first-child .info .subscribe p {
+footer .wrapper #footer_li_left .info .subscribe p {
   margin-bottom: 10px;
 }
-footer .wrapper ul li:first-child .info .subscribe input {
+footer .wrapper #footer_li_left .info .subscribe input {
   width: 300px;
   height: 30px;
   background-color: #0C1244;
@@ -53,26 +40,22 @@ footer .wrapper ul li:first-child .info .subscribe input {
   font-size: 16rem;
   font-weight: normal;
 }
-footer .wrapper ul li:first-child .info .subscribe button {
+footer .wrapper #footer_li_left .info .subscribe button {
   width: 80px;
   height: 30px;
   box-sizing: border-box;
   background-color: transparent;
   border: 1px solid #0C1244;
 }
-footer .wrapper ul li:first-child .info > p {
+footer .wrapper #footer_li_left .info > p {
   line-height: 1.6;
 }
-footer .wrapper ul li:first-child .info .icon {
+footer .wrapper #footer_li_left .info .icon {
   margin-top: 60px;
 }
-footer .wrapper ul li:first-child .info .icon img {
+footer .wrapper #footer_li_left .info .icon img {
   height: 40px;
   margin-right: 40px;
-}
-footer .wrapper ul li:last-child {
-  width: 50%;
-  background-color: #ccc;
 }
 
 /*# sourceMappingURL=footer.css.map */
