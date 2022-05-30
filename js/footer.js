@@ -2,16 +2,9 @@
 
 let footer = document.getElementById("footer");
 let footer_ul = document.getElementById("footer_ul");
-console.log(getComputedStyle(footer_ul).width);
+// console.log(getComputedStyle(footer_ul).width);
 
-let footer_height = parseInt(getComputedStyle(footer).height)+parseInt(getComputedStyle(footer_ul).width)/2;
-
-// let footer_li_right = document.getElementById("footer_li_right");
-// let footer_li_left = document.getElementById("footer_li_left");
-
-// let footer_height = parseInt(getComputedStyle(footer).height) + parseInt(getComputedStyle(footer_li_right).width);
-// let footer_li_left_width = parseInt(getComputedStyle(footer_li_left).width);
-// let footer_li_right_width = parseInt(getComputedStyle(footer_li_right).width);
+let footer_height = parseInt(getComputedStyle(footer_ul).height)+parseInt(getComputedStyle(footer_ul).width)/2;
 
 
 footer.setAttribute("style", `height: ${footer_height}px;`);
@@ -25,8 +18,14 @@ window.addEventListener("scroll", e => {
         let scroll_move = window.scrollY-footer.offsetTop;
 
         footer_ul.scrollLeft = scroll_move;
-        
+        // footer_ul.setAttribute("style", `left: -${scroll_move}px;`);
+
+        // console.log(scroll_move);
         // console.log(footer_ul.scrollLeft);
+        
+    }else{
+        footer_ul.scrollLeft = 0;
+        // footer_ul.removeAttribute('style');
     }
     
 })
