@@ -1,13 +1,39 @@
 footer {
-  height: 768px;
+  position: relative;
+}
+footer ul {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+footer ul li {
+  height: 100%;
+  flex-shrink: 0;
+}
+footer ul li:first-child {
+  width: 100%;
+  background-image: url("../img/footer/footer_bg_01_3.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+footer ul li:last-child {
+  width: 50%;
+  background-color: #ccc;
 }
 footer .wrapper {
-  height: 100%;
+  height: 100vh;
   border: 1px solid #000;
   box-sizing: border-box;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
 }
-footer .wrapper #footer_li_left {
+footer .wrapper #content {
   box-sizing: border-box;
   height: 100%;
   flex-shrink: 0;
@@ -15,21 +41,21 @@ footer .wrapper #footer_li_left {
   padding-top: 90px;
   width: 100%;
 }
-footer .wrapper #footer_li_left .info {
+footer .wrapper #content .info {
   margin-top: 130px;
   width: 400px;
 }
-footer .wrapper #footer_li_left .info h5 {
+footer .wrapper #content .info h5 {
   margin-bottom: 20px;
 }
-footer .wrapper #footer_li_left .info .subscribe {
+footer .wrapper #content .info .subscribe {
   margin-top: 55px;
   margin-bottom: 10px;
 }
-footer .wrapper #footer_li_left .info .subscribe p {
+footer .wrapper #content .info .subscribe p {
   margin-bottom: 10px;
 }
-footer .wrapper #footer_li_left .info .subscribe input {
+footer .wrapper #content .info .subscribe input {
   width: 300px;
   height: 30px;
   background-color: #0C1244;
@@ -40,20 +66,20 @@ footer .wrapper #footer_li_left .info .subscribe input {
   font-size: 16rem;
   font-weight: normal;
 }
-footer .wrapper #footer_li_left .info .subscribe button {
+footer .wrapper #content .info .subscribe button {
   width: 80px;
   height: 30px;
   box-sizing: border-box;
   background-color: transparent;
   border: 1px solid #0C1244;
 }
-footer .wrapper #footer_li_left .info > p {
+footer .wrapper #content .info > p {
   line-height: 1.6;
 }
-footer .wrapper #footer_li_left .info .icon {
+footer .wrapper #content .info .icon {
   margin-top: 60px;
 }
-footer .wrapper #footer_li_left .info .icon img {
+footer .wrapper #content .info .icon img {
   height: 40px;
   margin-right: 40px;
 }
