@@ -13,17 +13,93 @@ footer section ul {
   z-index: -1;
   transition: all 0.3s;
 }
-footer section ul li {
+footer section ul > li {
   height: 100%;
   flex-shrink: 0;
 }
-footer section ul li:first-child {
+footer section ul > li:first-child {
   width: 100%;
   background-image: url("../img/footer/footer_bg_01_3.jpg");
+  background-size: cover;
 }
-footer section ul li:last-child {
+footer section ul > li:last-child {
   width: 50%;
   background-color: #F5F0DD;
+  border: 3px solid #0C1244;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+footer section ul > li:last-child > p {
+  line-height: 40px;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #0C1244;
+}
+footer section ul > li:last-child .today_weather {
+  display: flex;
+  margin-top: 40px;
+  padding: 0 50px;
+}
+footer section ul > li:last-child .today_weather div {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+footer section ul > li:last-child .today_weather .today_weather_left h1 {
+  margin-bottom: 30px;
+}
+footer section ul > li:last-child .today_weather .today_weather_left h1:first-child {
+  font-size: 72px;
+}
+footer section ul > li:last-child .today_weather .today_weather_center h1 {
+  text-align: center;
+}
+footer section ul > li:last-child .today_weather .today_weather_center svg {
+  width: 100%;
+  margin-top: 45px;
+}
+footer section ul > li:last-child .today_weather .today_weather_right {
+  text-align: right;
+}
+footer section ul > li:last-child .today_weather .today_weather_right h1:first-child {
+  font-size: 80px;
+  margin-bottom: 65px;
+}
+footer section ul > li:last-child .today_weather .today_weather_right div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+footer section ul > li:last-child .today_weather .today_weather_right div svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+footer section ul > li:last-child .wave {
+  position: relative;
+  margin-top: 10px;
+  height: 10px;
+}
+footer section ul > li:last-child .wave svg {
+  width: 100%;
+  position: absolute;
+}
+footer section ul > li:last-child .wave svg:last-child {
+  top: 5px;
+}
+footer section ul > li:last-child .week_weather {
+  margin-top: 50px;
+  display: flex;
+  padding: 0 75px;
+}
+footer section ul > li:last-child .week_weather > li {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+footer section ul > li:last-child .week_weather > li svg {
+  width: 50%;
+  height: 95px;
 }
 footer section .wrapper {
   height: 100vh;
