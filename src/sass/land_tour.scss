@@ -1,0 +1,105 @@
+@import 'base/var';
+body{
+    background-color: #F5F0DD;
+}
+
+header{
+    height: 700px;
+    box-sizing: border-box;
+    border: $show_border;
+}
+
+.breadcrumbs{
+    height: 140px;
+    box-sizing: border-box;
+    border: $show_border;
+}
+
+.slogan_banner{
+    box-sizing: border-box;
+    border: $show_border;
+    height: 585px;
+    position: relative;
+
+    img{
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .leaf_left{
+        top: 0px;
+        left: 0px;
+    }
+
+    .leaf_right{
+        top: 0px;
+        right: 0px;
+    }
+
+    .deer{
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .slogan{
+        box-sizing: border-box;
+        border: $show_border;
+        text-align: center;
+        width: 360px;
+        // height: 90px;
+        margin-top: 20%;
+        margin-left: 60%;
+
+        h3:first-child{
+            font-size: 128rem;
+            text-align: right;
+            border: $show_border;
+            line-height: 0.3;
+            margin-right: 50px;
+        }
+    }
+}
+
+.ecotourism{
+    width: 1200px;
+    height: 540px;
+    margin: $margin_center;
+    border: $show_border;
+    box-sizing: border-box;
+    margin-top: 100px;
+    position: relative;
+
+    ul{
+        display: flex;
+        width: 100%;
+
+        li{
+            flex-basis: 0;
+            flex-grow: 1;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .intro{
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(245,240,221, .7);
+        text-align: center;
+        padding: 60px 45px 0px;
+        box-sizing: border-box;
+
+        h3{
+            margin-bottom: 40px;
+        }
+
+        
+    }
+}
