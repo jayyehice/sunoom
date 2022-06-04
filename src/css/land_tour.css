@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #F5F0DD;
 }
@@ -8,36 +9,35 @@ header {
   border: 1px solid #000;
 }
 
-.breadcrumbs {
+main .breadcrumbs {
   height: 140px;
   box-sizing: border-box;
   border: 1px solid #000;
 }
-
-.slogan_banner {
+main .slogan_banner {
   box-sizing: border-box;
   border: 1px solid #000;
   height: 585px;
   position: relative;
 }
-.slogan_banner img {
+main .slogan_banner img {
   display: block;
   position: absolute;
   z-index: -1;
 }
-.slogan_banner .leaf_left {
+main .slogan_banner .leaf_left {
   top: 0px;
   left: 0px;
 }
-.slogan_banner .leaf_right {
+main .slogan_banner .leaf_right {
   top: 0px;
   right: 0px;
 }
-.slogan_banner .deer {
+main .slogan_banner .deer {
   bottom: 0px;
   left: 0px;
 }
-.slogan_banner .slogan {
+main .slogan_banner .slogan {
   box-sizing: border-box;
   border: 1px solid #000;
   text-align: center;
@@ -45,15 +45,14 @@ header {
   margin-top: 20%;
   margin-left: 60%;
 }
-.slogan_banner .slogan h3:first-child {
+main .slogan_banner .slogan h3:first-child {
   font-size: 128rem;
   text-align: right;
   border: 1px solid #000;
   line-height: 0.3;
   margin-right: 50px;
 }
-
-.ecotourism {
+main .ecotourism {
   width: 1200px;
   height: 540px;
   margin: 0 auto;
@@ -62,18 +61,18 @@ header {
   margin-top: 100px;
   position: relative;
 }
-.ecotourism ul {
+main .ecotourism ul {
   display: flex;
   width: 100%;
 }
-.ecotourism ul li {
+main .ecotourism ul li {
   flex-basis: 0;
   flex-grow: 1;
 }
-.ecotourism ul li img {
+main .ecotourism ul li img {
   width: 100%;
 }
-.ecotourism .intro {
+main .ecotourism .intro_word {
   width: 300px;
   height: 250px;
   position: absolute;
@@ -85,8 +84,50 @@ header {
   padding: 60px 45px 0px;
   box-sizing: border-box;
 }
-.ecotourism .intro h3 {
+main .ecotourism .intro_word h3 {
   margin-bottom: 40px;
+}
+main .activity_intro ul {
+  margin-top: 185px;
+}
+main .activity_intro ul li {
+  text-align: center;
+}
+main .activity_intro ul li .wrapper {
+  width: 1262px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+main .activity_intro ul li .wrapper > div {
+  width: 600px;
+  margin-left: 50px;
+}
+main .activity_intro ul li .wrapper > div h3 {
+  margin-top: 20px;
+}
+main .activity_intro ul li .wrapper > div > p {
+  width: 395px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+main .activity_intro ul li .wrapper > div .comment {
+  width: 395px;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  /* ===== 重要性的星號 ===== */
+}
+main .activity_intro ul li .wrapper > div .comment div.star_block {
+  display: inline-block;
+}
+main .activity_intro ul li .wrapper > div .comment div.star_block > span.star {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 3px;
+}
+main .activity_intro ul li .wrapper > div .comment div.star_block > span.star.-on {
+  color: yellow;
 }
 
 /*# sourceMappingURL=land_tour.css.map */
