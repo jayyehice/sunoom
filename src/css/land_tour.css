@@ -52,6 +52,9 @@ main .slogan_banner .slogan h3:first-child {
   line-height: 0.3;
   margin-right: 50px;
 }
+main .slogan_banner .slogan h5 {
+  margin-top: 40px;
+}
 main .ecotourism {
   width: 1200px;
   height: 540px;
@@ -88,20 +91,22 @@ main .ecotourism .intro_word h3 {
   margin-bottom: 40px;
 }
 main .activity_intro ul {
-  margin-top: 185px;
+  padding-top: 185px;
+  overflow: hidden;
 }
 main .activity_intro ul li {
   text-align: center;
+  margin-bottom: 130px;
+  position: relative;
 }
 main .activity_intro ul li .wrapper {
-  width: 1262px;
+  width: 1200px;
   margin: 0 auto;
   border: 1px solid #000;
   box-sizing: border-box;
 }
 main .activity_intro ul li .wrapper > div {
   width: 600px;
-  margin-left: 50px;
 }
 main .activity_intro ul li .wrapper > div h3 {
   margin-top: 20px;
@@ -128,6 +133,132 @@ main .activity_intro ul li .wrapper > div .comment div.star_block > span.star {
 }
 main .activity_intro ul li .wrapper > div .comment div.star_block > span.star.-on {
   color: yellow;
+}
+main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
+  position: absolute;
+  top: -100px;
+  right: 120px;
+}
+main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
+  position: absolute;
+  top: -300px;
+  left: 0px;
+  z-index: -1;
+}
+main .activity_intro ul li:nth-child(1) .wrapper #cloud_02 {
+  position: absolute;
+  top: 230px;
+  right: 0px;
+  z-index: -1;
+}
+main .activity_intro ul li:nth-child(2) .wrapper > div {
+  margin-left: 600px;
+}
+main .activity_intro ul li:nth-child(2) #butterfly_01 {
+  position: absolute;
+  top: 80px;
+  left: 220px;
+}
+main .activity_intro ul li:nth-child(2) #branch_01 {
+  position: absolute;
+  top: 0px;
+  left: -140px;
+}
+main .activity_intro ul li:nth-child(3) {
+  margin-bottom: 260px;
+}
+main .activity_intro ul li:nth-child(3) .wrapper > div {
+  margin-left: 100px;
+}
+main .activity_intro ul li:nth-child(3) #branch_02 {
+  position: absolute;
+  top: -90px;
+  right: 0px;
+}
+main .activity_intro ul li:nth-child(4) {
+  margin-bottom: 290px;
+}
+main .activity_intro ul li:nth-child(4) .wrapper > div {
+  margin-left: 500px;
+}
+main .activity_intro ul li:nth-child(4) #branch_03 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+main .activity_intro ul li:nth-child(5) {
+  margin-bottom: 250px;
+}
+main .activity_intro ul li:nth-child(5) #branch_04 {
+  position: absolute;
+  top: -60px;
+  right: -100px;
+}
+main .activity_intro ul li:nth-child(5) #branch_05 {
+  position: absolute;
+  top: 160px;
+  right: 0px;
+}
+main .activity_intro ul li:nth-child(5) #flower_01 {
+  position: absolute;
+  top: -60px;
+  left: 640px;
+}
+main .activity_intro ul li:nth-child(5) #butter_02 {
+  position: absolute;
+  top: -92px;
+  left: 737px;
+}
+main .activity_intro ul li:nth-child(6) {
+  margin-bottom: 50px;
+}
+main .activity_intro ul li:nth-child(6) #branch_06 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+main .instagram {
+  margin-bottom: 80px;
+}
+main .instagram .wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+main .instagram .wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+main .instagram .wrapper .title img {
+  margin-right: 35px;
+}
+main .instagram .wrapper ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+main .instagram .wrapper ul li {
+  width: 438px;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .instagram .wrapper ul li img {
+  margin-bottom: 20px;
+}
+main .instagram .wrapper ul li img:hover {
+  cursor: pointer;
+}
+
+footer {
+  height: 100vh;
+  border: 1px solid #000;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=land_tour.css.map */

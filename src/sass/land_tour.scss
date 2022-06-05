@@ -61,6 +61,10 @@ main{
                 line-height: 0.3;
                 margin-right: 50px;
             }
+
+            h5{
+                margin-top: 40px;
+            }
         }
     }
 
@@ -109,18 +113,23 @@ main{
 
     .activity_intro{
         ul{
-            margin-top: 185px;
+            padding-top: 185px;
+            // margin-top: 185px;
+            overflow: hidden;
             li{
                 text-align: center;
+                margin-bottom: 130px;
+                position: relative;
+                // overflow: hidden;
                 .wrapper{
-                    width: 1262px;
+                    width: 1200px;
                     margin: $margin_center;
                     border: $show_border;
                     box-sizing: border-box;
 
                     &>div{
                         width: 600px;
-                        margin-left: 50px;
+                        // margin-left: 50px;
                         
                         h3{
                             margin-top: 20px;
@@ -152,8 +161,175 @@ main{
                             }
                         }
                     }
+
+                    
+                }
+            }
+
+            li:nth-child(1){
+                .wrapper{
+                    #bird_01{
+                        position: absolute;
+                        top:-100px;
+                        right: 120px;
+                    }
+
+                    #cloud_01{
+                        position: absolute;
+                        top:-300px;
+                        left: 0px;
+                        z-index: -1;
+                    }
+
+                    #cloud_02{
+                        position: absolute;
+                        top:230px;
+                        right: 0px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            li:nth-child(2){
+                .wrapper{
+                    &>div{
+                        margin-left: 600px;
+                    }
+                }
+
+                #butterfly_01{
+                    position: absolute;
+                    top: 80px;
+                    left: 220px;
+                }
+
+                #branch_01{
+                    position: absolute;
+                    top: 0px;
+                    left: -140px;
+                }
+            }
+
+            li:nth-child(3){
+                margin-bottom: 260px;
+                .wrapper{
+                    &>div{
+                        margin-left: 100px;
+                    }
+                }
+                #branch_02{
+                    position: absolute;
+                    top: -90px;
+                    right: 0px;
+                }
+            }
+
+            li:nth-child(4){
+                margin-bottom: 290px;
+                .wrapper{
+                    &>div{
+                        margin-left: 500px;
+                    }
+                }
+                #branch_03{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+
+            li:nth-child(5){
+                margin-bottom: 250px;
+                
+                #branch_04{
+                    position: absolute;
+                    top: -60px;
+                    right: -100px;
+                }
+
+                #branch_05{
+                    position: absolute;
+                    top: 160px;
+                    right: 0px;
+                }
+
+                #flower_01{
+                    position: absolute;
+                    top: -60px;
+                    left: 640px;
+                }
+
+                #butter_02{
+                    position: absolute;
+                    top: -92px;
+                    left: 737px;
+                }
+
+                
+            }
+
+            li:nth-child(6){
+                margin-bottom: 50px;
+                #branch_06{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
                 }
             }
         }
     }
+
+    .instagram{
+        margin-bottom: 80px;
+        .wrapper{
+            width: 900px;
+            margin: 0 auto;
+            // border: $show_border;
+            // box-sizing: border-box;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                img{
+                    margin-right: 35px;
+                }
+            }
+
+            ul{
+                width: 100%;
+                // height: 1000px;
+                display: flex;
+                justify-content: space-between;
+                flex-shrink: 0;
+                flex-wrap: wrap;
+                // border: $show_border;
+                // box-sizing: border-box;
+                li{
+                    width: 438px;
+                    // border: $show_border;
+                    // box-sizing: border-box;
+                    display: flex;
+                    flex-shrink: 0;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    img{
+                        margin-bottom: 20px;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    height: 100vh;
+    border: $show_border;
+    box-sizing: border-box;
 }
