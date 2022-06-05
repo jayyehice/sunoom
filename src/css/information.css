@@ -1,0 +1,102 @@
+body {
+  background-color: #F5F0DD;
+}
+
+header {
+  height: 700px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+main .breadcrumbs {
+  height: 140px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+main .map .wrapper {
+  width: 1070px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+main .map .wrapper h3 {
+  margin-bottom: 75px;
+}
+main .map .wrapper ul {
+  width: 705px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+main .map .wrapper ul li .big_btn {
+  width: 140px;
+  height: 50px;
+  border: 1.5px solid #0C1244;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  font-size: 16px;
+}
+main .map .wrapper ul li .big_btn:hover {
+  cursor: pointer;
+  color: #F5F0DD;
+  border: 1.5px solid #F5F0DD;
+  background-color: #0C1244;
+}
+main .map .wrapper ol img {
+  display: block;
+  width: 899px;
+  margin: 0 auto;
+}
+main .map .polaroid svg {
+  display: block;
+  margin: 0 auto;
+}
+main .map .polaroid ul {
+  width: 1010px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+main .map .polaroid ul li {
+  width: 200px;
+  position: relative;
+  margin-top: -15px;
+}
+main .map .polaroid ul li::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 41px;
+  background-color: #0C1244;
+  position: absolute;
+  top: -30px;
+  left: 92px;
+}
+main .map .polaroid ul li img {
+  width: 100%;
+  display: block;
+}
+main .map .polaroid ul li h5 {
+  text-align: center;
+  width: 100%;
+  line-height: 90px;
+  border: 1px solid #0C1244;
+}
+main .map .polaroid ul li:nth-child(2) {
+  margin-top: 0px;
+  width: 295px;
+}
+main .map .polaroid ul li:nth-child(2)::after {
+  left: 140px;
+}
+main .map .polaroid ul li:nth-child(2) h5 {
+  line-height: 132px;
+}
+
+footer {
+  height: 100vh;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=information.css.map */
