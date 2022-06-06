@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '../css/reset.css';
 @import '../css/common.css';
 .overFlow {
   position: fixed;
@@ -137,7 +136,6 @@ header a {
 header nav {
   position: relative;
   display: none;
-  border: 1px solid rgb(255, 207, 207);
 }
 header video {
   position: absolute;
