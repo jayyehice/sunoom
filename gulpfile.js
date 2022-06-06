@@ -24,7 +24,7 @@ exports.mvhtml = mvfile;
 
 // copy images
 function mvimages() {
-    return src(['./src/images/*.*','./src/images/**/*.*']).pipe(dest('dist/images'));
+    return src(['./src/img/*.*','./src/img/**/*.*']).pipe(dest('dist/img'));
 }
 
 exports.mvimg = mvimages;
@@ -53,9 +53,9 @@ const cleanCSS = require('gulp-clean-css');
 function minicss() {
     return src('css/*.css')
         .pipe(cleanCSS())
-        .pipe(rename({
-            extname: '.min.css'
-        }))
+        // .pipe(rename({
+        //     extname: '.min.css'
+        // }))
         .pipe(dest('dist/css'))
 }
 
@@ -101,7 +101,7 @@ exports.style = sassstyle;
 const fileinclude = require('gulp-file-include');
 
  function includeHTML() {
-    return src('src/*.html') //  來源
+    return src('src/test.html') //  來源
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
@@ -151,8 +151,8 @@ function browser(done) {
 }
 
 
-exports.default =  series(parallel(sassstyle, includeHTML , miniJs ,mvimages), browser) 
+// exports.default =  series(parallel(sassstyle, includeHTML , miniJs ,mvimages), browser) 
 
-
+exports.default =  parallel(sassstyle, includeHTML , miniJs , mvimages)
 
 
