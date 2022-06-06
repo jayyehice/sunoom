@@ -1,0 +1,147 @@
+@import '../css/reset.css';
+@import '../css/common.css';
+body {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+main {
+  border: 1px solid firebrick;
+  width: 1280px;
+  margin: 0 auto;
+  color: #0C1244;
+}
+
+.wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+}
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+p {
+  margin-top: 17px;
+  margin-left: 100px;
+}
+
+h3 {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.member_left {
+  width: 1000px;
+  margin: 0 auto;
+}
+.member_left .loginMain {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.member_left .loginText .loginTextBottom {
+  text-align: center;
+}
+.member_left .loginText a {
+  font-size: 24rem;
+}
+.member_left .loginText span {
+  font-size: 24rem;
+}
+.member_left .loginForm label {
+  font-size: 24rem;
+  display: inline-block;
+  margin-right: 55px;
+}
+.member_left .loginForm input {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 75px;
+}
+.member_left .loginForm .pwd {
+  margin-bottom: 0;
+}
+.member_left .loginForm input:last-child {
+  margin-top: 60px;
+  font-size: 16rem;
+}
+.member_left .loginForm .btn {
+  background-color: #F5F0DD;
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #0C1244;
+  margin-bottom: 30px;
+}
+.member_left .loginPic {
+  margin-bottom: 100px;
+}
+.member_right {
+  display: none;
+  width: 1000px;
+  margin: 0 auto;
+}
+.member_right .registerMain {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.member_right .registerPic {
+  margin-bottom: 100px;
+}
+.member_right .registerText a {
+  font-size: 24rem;
+}
+.member_right .registerForm {
+  margin-left: 46px;
+}
+.member_right .registerForm label {
+  font-size: 24rem;
+  display: inline-block;
+  margin-right: 69px;
+}
+.member_right .registerForm input {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 42px;
+}
+.member_right .registerForm .pwdSureText {
+  margin-right: 21px;
+}
+.member_right .registerForm .whantEmail {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.member_right .registerForm .whantEmailText {
+  font-size: 20rem;
+}
+.member_right .registerForm .registerTextBottom {
+  text-align: center;
+}
+.member_right .registerForm .registerTextBottom .btn {
+  background-color: #F5F0DD;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  font-size: 16rem;
+  text-align: center;
+  border: 1px solid #0C1244;
+}
+.member_right .registerForm .registerTextBottom span {
+  display: inline-block;
+  width: 30px;
+}
+.member_right .registerForm .registerTextBottom a {
+  font-size: 20rem;
+}
+
+/*# sourceMappingURL=login.css.map */
