@@ -1,0 +1,132 @@
+@import "sass/base/reset";
+@import "sass/base/common";
+
+@mixin circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #0C1244;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+    
+body{
+    background-color:#F5F0DD;
+    color: #0C1244;
+    section{
+        h2{
+            text-align: center;
+        }
+    }
+    //步驟區塊開始
+    .shoppingProcess{
+        width: 1180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0 auto;
+        img{
+            width: 100px;
+            height: 24px;
+
+        }
+        .chooseAdate{
+            @include circle;
+            background-color: #0C1244;
+            color:#F5F0DD
+        }
+        .chooseAtrip{
+            @include circle;
+        }
+        .tallyOrder{
+            @include circle;
+        }
+        .orderComplete{
+            @include circle;
+        }
+        //步驟區塊結束
+
+    }
+    //選擇內容區塊開始
+    .selectDate{
+        text-align: center;
+        width: 1075px;
+        height: 100px;
+        margin: 50px auto;
+        padding-bottom: 50px;
+        h3{
+            margin: 50px 0;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            width: 250px;
+            height: 100px;
+            border: 1px solid #0C1244;
+            margin-right: 25px;
+            line-height: 40px;
+            #numberOfPeople{
+                width: 50px;
+                
+                border: none;
+            }
+        }
+        li:nth-child(3){
+            line-height: 40px;
+        }
+        li:last-child{
+            margin-right: 0px;
+            line-height: 40px;
+        }
+        
+    }//選擇內容區塊結束
+    .datePickerBox{
+        width: 700px;
+        height: 360px;
+        margin: 0px auto;
+        border: 1px solid #0C1244;
+        position: relative;
+        .dateTitle{
+            p{
+                margin: 20px;
+                
+            }
+            i{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                right: 20px;
+                top: 20px;
+                
+            }
+        }
+        .pickerBox{
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #0C1244;
+        }
+
+    }
+    #NextPage{
+        display: block;
+        width: 140px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color:#F5F0DD;
+        border:1px solid #0C1244;
+        margin: 50px auto;
+        &:hover{
+            color:#F5F0DD;
+            background-color:#0C1244;
+            border:1px solid #F5F0DD;
+        }
+    }
+
+    
+}
