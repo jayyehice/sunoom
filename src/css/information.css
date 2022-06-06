@@ -167,8 +167,37 @@ main .island_intro .wrapper .origin > h5 {
 main .island_intro .wrapper .feature > h4 {
   margin-bottom: 25px;
 }
-main .island_intro .wrapper .feature p:last-child {
+main .island_intro .wrapper .feature p:nth-child(3) {
   margin-bottom: 40px;
+}
+main .island_intro .wrapper .feature ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .island_intro .wrapper .feature ul li {
+  height: 570px;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+main .island_intro .wrapper .feature ul li img {
+  height: 100%;
+}
+main .island_intro .wrapper .develope > h4 {
+  margin-top: 85px;
+  margin-bottom: 25px;
+}
+main .island_intro .wrapper .develope p:nth-child(3) {
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  line-height: 1.6;
+}
+main .island_intro .wrapper .develope img {
+  width: 816px;
+  display: block;
+  margin: 0 auto;
 }
 main .island_intro .wrapper .underline {
   margin-bottom: 24px;

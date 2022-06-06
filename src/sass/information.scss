@@ -206,8 +206,46 @@ main{
                     margin-bottom: 25px;
                 }
                 
-                p:last-child{
+                p:nth-child(3){
                     margin-bottom: 40px;
+                }
+
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // margin-top: 40px;
+                    li{
+                        height: 570px;
+                        flex-basis: 0;
+                        flex-grow: 1;
+                        overflow: hidden;
+                        img{
+                            // width:100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                
+            }
+
+            .develope{
+                &>h4{
+                    margin-top: 85px;
+                    margin-bottom: 25px;
+                }
+                
+                p:nth-child(3){
+                    width: 340px;
+                    margin: 0 auto;
+                    margin-bottom: 45px;
+                    line-height: 1.6;
+                }
+
+                img{
+                    width: 816px;
+                    display: block;
+                    margin: 0 auto;
                 }
                 
             }
