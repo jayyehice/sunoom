@@ -1,5 +1,9 @@
+@import url("reset.css");
 html {
   font-size: 6.25%;
+  font-family: Noto Sans TC;
+  color: #0C1244;
+  line-height: 1.6;
 }
 
 h1 {
@@ -28,6 +32,10 @@ h6 {
 
 p {
   font-size: 16rem;
+}
+
+.wrapper {
+  width: 1180px;
 }
 
 /*# sourceMappingURL=common.css.map */

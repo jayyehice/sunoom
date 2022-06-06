@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- <link rel="stylesheet" href="./css/header.css"> -->
+
+    <!-- 引用jq -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+    
+    <!-- header  -->
+    <header>
+
+        <button type="button" class="hamburger_icon">
+            <span class="-hr -top"></span>
+            <span class="-hr -middle"></span>
+            <span class="-hr -bottom"></span>
+        </button>
+
+        <nav>
+            <video autoplay muted loop>
+                <source src="./movies/island_1.mp4">
+            </video>
+
+            <button type="button" class="btn2">
+                <span class="-hr -top"></span>
+                <span class="-hr -middle"></span>
+                <span class="-hr -bottom"></span>
+            </button>
+    
+            <ul class="one">
+                <li><a href="#">明島の住</a></li>
+                <li><a href="#">明島の食</a></li>
+                <li>
+                    <a href="#">明島の遊
+                        <ul class="two">
+                            <li><a href="#">- 海の遊</a></li>
+                            <li><a href="#">- 陸の遊</a></li>
+                            <li><a href="#">- 套の遊</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li><a href="#">明島の評論</a></li>
+                <li><a href="#">明島の資訊</a></li>
+            </ul>
+
+            <img class="ham_logo" src="./img/header/header_ham_sunoomlogo.png" alt="logo">
+
+            <a href="#">
+                <img class="ham_pay" src="./img/header/header_ham_pay.png" alt="">
+            </a>
+
+            <a href="#">
+                <img class="ham_member" src="./img/header/header_ham_member.png" alt="">
+            </a>
+
+            <section class="ham_social">
+
+                <a href="#">
+                    <img class="ham_ig" src="./img/header/header_ham_instagram.png" alt="ig圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_ytb" src="./img/header/header_ham_youtube.png" alt="ytb圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_fb" src="./img/header/header_ham_facebook.png" alt="fb圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_twi" src="./img/header/header_ham_twitter.png" alt="twi圖">
+                </a>
+
+            </section>
+
+
+        </nav>
+
+        <h1 class="headerCenter">
+            <a href="#">
+                <img class="headerSunLogo" src="./img/header/header_sunoomlogo.png" alt="日島logo圖">
+            </a>
+            <a class="headerMoonLogo" href="#">
+                <img src="./img/header/header_sunoomlogo_moon.png" alt="月島logo圖">
+            </a>
+
+        </h1>
+
+        <section class="headerRight">
+        
+            <a class="sunPay" href="#">
+                <img src="./img/header/header_pay.png" alt="日立即訂購紐">
+            </a>
+            <a class="moonPay" href="#">
+                <img src="./img/header/header_pay_moon.png" alt="月立即訂購紐">
+            </a>
+
+            <div class="switch">
+                <img id="sunSwitch" src="./img/header/header_sun_switch.png" alt="日月切換紐">
+                <img id="moonSwitch" src="./img/header/header_moon_switch.png" alt="日月切換紐">
+            </div>
+
+        </section>
+
+    </header>
+
+    <div style="height: 100px;"></div>
+
+    <!-- js -->
+    <script src="./js/header.js"></script>
+</body>
+</html>

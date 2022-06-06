@@ -1,0 +1,97 @@
+@import '../css/reset.css';
+@import '../css/common.css';
+main {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.wrapper {
+  border: 1px solid black;
+  width: 1180px;
+  margin: 0 auto;
+}
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+h3 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+p {
+  margin-left: 90px;
+  line-height: 50px;
+}
+
+.registerMain {
+  border: 1px solid red;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.registerPic {
+  border: 1px solid #ccc;
+  margin-bottom: 100px;
+}
+
+.registerText {
+  border: 1px solid blue;
+}
+.registerText a {
+  font-size: 24rem;
+  border: 1px solid firebrick;
+}
+
+.registerForm {
+  border: 1px solid green;
+  margin-left: 46px;
+}
+.registerForm label {
+  font-size: 24rem;
+  display: inline-block;
+  margin-right: 69px;
+}
+.registerForm input {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 42px;
+}
+.registerForm .pwdSureText {
+  margin-right: 21px;
+}
+.registerForm .whantEmail {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.registerForm .whantEmailText {
+  font-size: 20rem;
+}
+.registerForm .registerTextBottom {
+  text-align: center;
+}
+.registerForm .registerTextBottom .btn {
+  background-color: #F5F0DD;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  font-size: 16rem;
+  text-align: center;
+  border: 1px solid #0C1244;
+}
+.registerForm .registerTextBottom span {
+  display: inline-block;
+  width: 30px;
+}
+.registerForm .registerTextBottom a {
+  font-size: 20rem;
+}
+
+/*# sourceMappingURL=register.css.map */
