@@ -1,1 +1,104 @@
-/* No CSS *//*# sourceMappingURL=member.css.map */
+@import '../css/reset.css';
+@import '../css/common.css';
+body {
+  background-color: #F5F0DD;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+main {
+  border: 1px solid firebrick;
+  width: 1280px;
+  margin: 0 auto;
+  color: #0C1244;
+}
+
+.wrapper {
+  border: 1px solid black;
+  width: 1063px;
+  margin: 0 auto;
+}
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+p {
+  margin-top: 17px;
+  margin-left: 100px;
+}
+
+h3 {
+  margin-top: 62px;
+  text-align: center;
+}
+
+.signOut {
+  background-color: #F5F0DD;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  font-size: 20rem;
+  text-align: center;
+  border: 1px solid #0C1244;
+  float: right;
+  margin-bottom: 62px;
+}
+
+.memberPage {
+  border: 1px solid rebeccapurple;
+  clear: both;
+  display: flex;
+  height: 900px;
+}
+.memberPage li {
+  font-size: 24rem;
+  width: 355px;
+  height: 100px;
+  border-radius: 29px 29px 0 0;
+  border: 1px solid #0C1244;
+  text-align: center;
+  line-height: 100px;
+  justify-items: center;
+}
+.memberPage a {
+  text-align: center;
+}
+
+.basicData {
+  border: 1px solid royalblue;
+  text-align: center;
+  display: none;
+}
+.basicData label {
+  font-size: 24rem;
+  margin-right: 27px;
+}
+.basicData input {
+  margin-bottom: 23px;
+  width: 400px;
+  height: 50px;
+}
+.basicData .memberPhone {
+  margin-bottom: 0;
+}
+.basicData .sure {
+  margin-top: 51px;
+  margin-bottom: 10px;
+}
+.basicData .btn {
+  background-color: #F5F0DD;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  font-size: 16rem;
+  text-align: center;
+  border: 1px solid #0C1244;
+}
+
+.orderCheck {
+  display: none;
+}
+
+/*# sourceMappingURL=member.css.map */

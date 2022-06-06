@@ -1,0 +1,322 @@
+@import 'reset.css';
+
+// 禁止滾動
+.overFlow{
+  position: fixed;
+  width: 100%;
+}
+
+// 切換背景
+.moon{
+  background-color: #0C1244;
+  // color: #F5F0DD;
+}
+  
+  
+// ========漢堡==========
+
+/* 基本按鈕樣式 */
+
+// 按鈕1
+button.hamburger_icon{
+  border: 1px solid grey;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  background: none;
+
+  /* 每一條橫線的樣式 */
+  span.-hr{
+    height: 1px;
+    width: 80%;
+    background-color: grey;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* 最上面那條線的樣式 */
+  span.-hr.-top{
+    top: 25%;
+  }
+
+  /* 最下面那條線的樣式 */
+  span.-hr.-bottom{
+    top: 75%;
+  }
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.hamburger_icon.-on{
+
+  span.-hr.-top{
+    transform-origin: top left;
+    top: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(45deg);
+  }
+
+  /* 中間的線 */
+  span.-hr.-middle{
+    opacity: 0;
+  }
+  
+  /* 下方的線 */
+  span.-hr.-bottom{
+    transform-origin: top left;
+    bottom: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(-45deg);
+    top: auto;
+  }
+  
+}
+
+    
+// 按鈕2
+button.btn2{
+  border: 1px solid #fff;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+
+  /* 每一條橫線的樣式 */
+  span.-hr{
+    height: 1px;
+    width: 80%;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* 最上面那條線的樣式 */
+  span.-hr.-top{
+    top: 25%;
+  }
+
+  /* 最下面那條線的樣式 */
+  span.-hr.-bottom{
+    top: 75%;
+  }
+
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.btn2.-on{
+
+  span.-hr.-top{
+    transform-origin: top left;
+    top: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(45deg);
+  }
+
+  /* 中間的線 */
+  span.-hr.-middle{
+    opacity: 0;
+  }
+  
+  /* 下方的線 */
+  span.-hr.-bottom{
+    transform-origin: top left;
+    bottom: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(-45deg);
+    top: auto;
+  }
+
+}
+  
+// =========漢堡結束========
+
+.header{
+    // width: 1280px;
+    // margin: 0 auto;
+    // border: 1px solid red;
+    font-size: 20px;
+
+    a{
+      display: block;
+      text-decoration: none;
+      color: #ccc;
+      
+  } 
+  
+  nav{
+      position: relative;
+      display: none;
+      border: 1px solid rgb(255, 207, 207);
+  
+  }
+  
+  video{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      // height: calc(100vh - 46px);
+      height: 100vh;
+      object-fit:cover;  
+  }
+  
+    /* 共同 ul*/
+  ul{
+  
+  }
+  
+  /* 共同 li*/
+  li{
+      line-height: 40px;
+      // border-bottom: 1px solid rgb(60, 107, 202);
+  }
+  
+  .one{
+      width: 120px;
+      mix-blend-mode:screen;
+      // border: 1px solid #fff;
+      margin-left: 411px;
+      padding-top: 133px;
+  
+  }
+  
+  .one > li{
+  
+  }
+  
+  .two{
+      // border: 1px solid purple;
+      margin-left: 30px;
+  }
+  
+  .two > li{
+  
+  }
+  
+  .ham_logo{
+    // border: 1px solid rgb(127, 217, 242);
+    position: absolute;
+    left: 190px;
+    top: 180px;
+  }
+  
+  .ham_pay{
+    // border: 1px solid teal;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  
+  }
+  
+  .ham_member{
+    // border: 1px solid teal;
+    position: absolute;
+    right: 130px;
+    top: 30px;
+  
+  }
+  
+  .ham_social{
+    // border: 1px solid rgb(245, 255, 99);
+    display: flex;
+    margin-left: 210px;
+    margin-top: 45px;
+    z-index: 1;
+    // z-index 需要position預設以外才可用
+    position: relative;
+  }
+  
+  .ham_ig{
+    // border: 1px solid red;
+    margin-right: 50px;
+  
+  }
+  
+  .ham_ytb{
+    // border: 1px solid brown;
+    margin-right: 50px;
+  
+  }
+  
+  .ham_fb{
+    // border: 1px solid brown;
+    margin-right: 50px;
+  
+  }
+  
+  .ham_twi{
+    // border: 1px solid brown;
+  
+  }
+
+  .headerCenter{
+    padding-top: 77px;
+    text-align: center;
+
+    a{
+      // display: inline-block;
+    }
+
+    img{
+    }
+
+    .headerSunLogo{
+      
+    }
+
+    .headerMoonLogo{
+      display: none;
+    }
+  }
+
+  // header 右側區塊
+  .headerRight{
+    text-align: right;
+
+    position: fixed;
+    right: 50px;
+    top: 50px;
+
+    .sunPay{
+
+    }
+
+    .moonPay{
+      display: none;
+    }
+
+    .switch{
+      #sunSwitch{
+        cursor: pointer;
+        
+      }
+
+      #moonSwitch{
+        cursor: pointer;
+        display: none;
+      }
+    }
+  }
+
+}
+

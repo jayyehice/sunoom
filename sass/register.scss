@@ -1,0 +1,142 @@
+// 引入其他檔案
+@import '../css/reset.css';
+@import '../css/common.css';
+
+
+main{
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #F5F0DD;
+    color: #0C1244;
+}
+
+.wrapper{
+    border: 1px solid black;
+    width: 1180px;
+    margin: 0 auto;
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        color: #0C1244;
+    }
+}
+
+h3{
+    margin-top: 100px;
+    text-align: center;
+}
+
+p{
+    margin-left: 90px;
+    line-height: 50px;
+
+}
+
+.registerMain{
+    border: 1px solid red;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.registerPic{
+    border: 1px solid #ccc;
+    margin-bottom: 100px;
+}
+
+.register img{
+}
+
+.registerText{
+    border: 1px solid blue;
+
+    a{
+        // display: inline-block;
+        // text-decoration: none;
+        font-size: 24rem;
+        border: 1px solid firebrick;
+    }
+
+}
+
+.registerForm{
+    border: 1px solid green;
+    margin-left: 46px;
+
+    label{
+        font-size: 24rem;
+        display: inline-block;
+        margin-right: 69px;
+    
+    }
+    
+    input{
+        width: 300px;
+        height: 50px;
+        margin-bottom: 42px;
+    
+    }
+
+    .name{
+
+    }
+
+    .phone{
+
+    }
+
+    .email{
+
+    }
+
+    .pwd{
+
+    }
+
+    .pwdSureText{
+        margin-right: 21px;
+
+
+    }
+
+    .pwdSure{
+
+    }
+
+    .whantEmail{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+
+    }
+
+    .whantEmailText{
+        font-size: 20rem;
+    }
+    .registerTextBottom{
+        text-align: center;
+
+        .btn{
+            background-color: #F5F0DD;
+            display: inline-block;
+            width: 140px;
+            height: 50px;
+            font-size: 16rem;
+            text-align: center;
+            border: 1px solid #0C1244;
+            // margin-bottom: 30px;
+        }
+
+        span{
+            display: inline-block;
+            width: 30px;
+        }
+
+        a{
+            font-size: 20rem;
+        }
+    }
+}
+
