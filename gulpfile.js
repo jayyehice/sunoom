@@ -29,6 +29,29 @@ function mvimages() {
 
 exports.mvimg = mvimages;
 
+// copy JavaScript
+function mvjavascript() {
+    return src('./src/js/*.*').pipe(dest('dist/js'));
+}
+
+exports.mvjs = mvjavascript;
+
+
+// copy css
+function mvallcss() {
+    return src('./src/css/*.*').pipe(dest('dist/css'));
+}
+
+exports.mvcss = mvallcss;
+
+
+
+// copy movies
+function mvallmovies() {
+    return src('./src/movies/*.*').pipe(dest('dist/movies'));
+}
+
+exports.mvmovies = mvallmovies;
 
 // 同步跟異步
 
@@ -153,6 +176,6 @@ function browser(done) {
 
 // exports.default =  series(parallel(sassstyle, includeHTML , miniJs ,mvimages), browser) 
 
-exports.default =  parallel(sassstyle, includeHTML , miniJs , mvimages)
+exports.default =  parallel(mvallcss, includeHTML , mvjavascript , mvimages, mvallmovies)
 
 
