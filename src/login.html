@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>會員專區-登入/註冊</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <button type="button" class="hamburger_icon">
+            <span class="-hr -top"></span>
+            <span class="-hr -middle"></span>
+            <span class="-hr -bottom"></span>
+        </button>
+
+        <nav>
+            <video autoplay muted loop>
+                <source src="./movies/island_1.mp4">
+            </video>
+
+            <button type="button" class="btn2">
+                <span class="-hr -top"></span>
+                <span class="-hr -middle"></span>
+                <span class="-hr -bottom"></span>
+            </button>
+    
+            <ul class="one">
+                <li><a href="#">明島の住</a></li>
+                <li><a href="#">明島の食</a></li>
+                <li>
+                    <a href="#">明島の遊
+                        <ul class="two">
+                            <li><a href="#">- 海の遊</a></li>
+                            <li><a href="#">- 陸の遊</a></li>
+                            <li><a href="#">- 套の遊</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li><a href="#">明島の評論</a></li>
+                <li><a href="#">明島の資訊</a></li>
+            </ul>
+
+            <img class="ham_logo" src="./img/header/header_ham_sunoomlogo.png" alt="logo">
+
+            <a href="#">
+                <img class="ham_pay" src="./img/header/header_ham_pay.png" alt="">
+            </a>
+
+            <a href="#">
+                <img class="ham_member" src="./img/header/header_ham_member.png" alt="">
+            </a>
+
+            <section class="ham_social">
+
+                <a href="#">
+                    <img class="ham_ig" src="./img/header/header_ham_instagram.png" alt="ig圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_ytb" src="./img/header/header_ham_youtube.png" alt="ytb圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_fb" src="./img/header/header_ham_facebook.png" alt="fb圖">
+                </a>
+    
+                <a href="#">
+                    <img class="ham_twi" src="./img/header/header_ham_twitter.png" alt="twi圖">
+                </a>
+
+            </section>
+
+
+        </nav>
+
+        <h1 class="headerCenter">
+            <a href="#">
+                <img class="headerSunLogo" src="./img/header/header_sunoomlogo.png" alt="日島logo圖">
+            </a>
+            <a class="headerMoonLogo" href="#">
+                <img src="./img/header/header_sunoomlogo_moon.png" alt="月島logo圖">
+            </a>
+
+        </h1>
+
+        <section class="headerRight">
+        
+            <a class="sunPay" href="#">
+                <img src="./img/header/header_pay.png" alt="日立即訂購紐">
+            </a>
+            <a class="moonPay" href="#">
+                <img src="./img/header/header_pay_moon.png" alt="月立即訂購紐">
+            </a>
+
+            <div class="switch">
+                <img id="sunSwitch" src="./img/header/header_sun_switch.png" alt="日月切換紐">
+                <img id="moonSwitch" src="./img/header/header_moon_switch.png" alt="日月切換紐">
+            </div>
+
+        </section>
+
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="member_left">
+                <p>
+                    <a href="#">首頁</a>/<a href="#">會員登入</a>
+                </p>
+
+                <h3>會員登入</h3>
+    
+                <section class="loginMain">
+                    <article class="loginText">
+    
+                        <form class="loginForm" method="post" action="">
+              
+                            <label for="">帳號</label>
+                            <input type="text" class="account" name="account">
+    
+                            <br>
+                            <label for="">密碼</label>
+                            <input type="text" class="pwd" name="pwd">
+    
+                            <br>
+                            <input type="submit" class="btn" value="登入">
+                        </form>
+    
+                        <div class="loginTextBottom">
+                            <a class="registerBtn" href="#">會員註冊</a>
+                            <span>|</span>
+                            <a href="#">忘記密碼</a>
+                        </div>
+                        
+                    </article>
+    
+                    <article class="loginPic">
+                        <img src="./img/member/member_login.jpg" alt="小島圖">
+                    </article>
+                </section>
+    
+            </div>
+
+            <div class="member_right">
+                <p>
+                    <a href="#">首頁</a>/<a href="#">會員註冊</a>
+                </p>
+
+                <h3>會員註冊</h3>
+    
+                <section class="registerMain">
+    
+                    <article class="registerPic">
+                        <img src="./img/member/member_register.jpg" alt="小島圖">
+                    </article>
+    
+                    <article class="registerText">
+
+                        <form class="registerForm" method="post" action="">
+                            <label for="">姓名</label>
+                            <input type="text" class="name" name="name">
+    
+                            <br>
+                            <label for="">電話</label>
+                            <input type="text" class="phone" name="phone">
+    
+                            <br>
+                            <label for="">信箱</label>
+                            <input type="text" class="email" name="email">
+    
+                            <br>
+                            <label for="">密碼</label>
+                            <input type="text" class="pwd" name="pwd">
+    
+                            <br>
+                            <label class="pwdSureText" for="">密碼確認</label>
+                            <input type="text" class="pwdSure" name="pwdSure">
+                            <br>
+    
+                            <input type="checkbox" class="whantEmail" name="" id="">
+                            <label class="whantEmailText" for="">我想要收到明島的email</label>
+    
+                            <br>
+                            <div class="registerTextBottom">
+                                <input type="submit" class="btn" value="註冊">
+                                <span></span>
+                                <a class="loginBtn" href="#">已有帳號</a>
+                            </div>
+                            
+                            
+                        </form>
+    
+                        
+    
+                    </article>
+        
+                </section>
+    
+            </div>
+        </div>
+    </main>
+    
+    <script src="./js/header.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
