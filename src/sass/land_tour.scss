@@ -1,0 +1,335 @@
+@import 'base/var';
+body{
+    background-color: #F5F0DD;
+}
+
+header{
+    height: 700px;
+    box-sizing: border-box;
+    border: $show_border;
+}
+
+
+main{
+
+    .breadcrumbs{
+        height: 140px;
+        box-sizing: border-box;
+        border: $show_border;
+    }
+
+    .slogan_banner{
+        box-sizing: border-box;
+        border: $show_border;
+        height: 585px;
+        position: relative;
+
+        img{
+            display: block;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .leaf_left{
+            top: 0px;
+            left: 0px;
+        }
+
+        .leaf_right{
+            top: 0px;
+            right: 0px;
+        }
+
+        .deer{
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .slogan{
+            box-sizing: border-box;
+            border: $show_border;
+            text-align: center;
+            width: 360px;
+            // height: 90px;
+            margin-top: 20%;
+            margin-left: 60%;
+
+            h3:first-child{
+                font-size: 128rem;
+                text-align: right;
+                border: $show_border;
+                line-height: 0.3;
+                margin-right: 50px;
+            }
+
+            h5{
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .ecotourism{
+        width: 1200px;
+        height: 540px;
+        margin: $margin_center;
+        border: $show_border;
+        box-sizing: border-box;
+        margin-top: 100px;
+        position: relative;
+
+        ul{
+            display: flex;
+            width: 100%;
+
+            li{
+                flex-basis: 0;
+                flex-grow: 1;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .intro_word{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(245,240,221, .7);
+            text-align: center;
+            padding: 60px 45px 0px;
+            box-sizing: border-box;
+
+            h3{
+                margin-bottom: 40px;
+            }
+
+            
+        }
+    }
+
+    .activity_intro{
+        ul{
+            padding-top: 185px;
+            // margin-top: 185px;
+            overflow: hidden;
+            li{
+                text-align: center;
+                margin-bottom: 130px;
+                position: relative;
+                // overflow: hidden;
+                .wrapper{
+                    width: 1200px;
+                    margin: $margin_center;
+                    border: $show_border;
+                    box-sizing: border-box;
+
+                    &>div{
+                        width: 600px;
+                        // margin-left: 50px;
+                        
+                        h3{
+                            margin-top: 20px;
+                        }
+
+                        &>p{
+                            
+                            width: 395px;
+                            margin: $margin_center;
+                            margin-top: 20px;
+                        }
+
+                        .comment{
+                            width: 395px;
+                            margin: $margin_center;
+                            margin-top: 15px;
+                            display: flex;
+                            /* ===== 重要性的星號 ===== */
+                            div.star_block{
+                                display: inline-block;
+                            }
+                            div.star_block > span.star{
+                                cursor: pointer;
+                                display: inline-block;
+                                margin-right: 3px;
+                            }
+                            div.star_block > span.star.-on{
+                                color: yellow;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+
+            li:nth-child(1){
+                .wrapper{
+                    #bird_01{
+                        position: absolute;
+                        top:-100px;
+                        right: 120px;
+                    }
+
+                    #cloud_01{
+                        position: absolute;
+                        top:-300px;
+                        left: 0px;
+                        z-index: -1;
+                    }
+
+                    #cloud_02{
+                        position: absolute;
+                        top:230px;
+                        right: 0px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            li:nth-child(2){
+                .wrapper{
+                    &>div{
+                        margin-left: 600px;
+                    }
+                }
+
+                #butterfly_01{
+                    position: absolute;
+                    top: 80px;
+                    left: 220px;
+                }
+
+                #branch_01{
+                    position: absolute;
+                    top: 0px;
+                    left: -140px;
+                }
+            }
+
+            li:nth-child(3){
+                margin-bottom: 260px;
+                .wrapper{
+                    &>div{
+                        margin-left: 100px;
+                    }
+                }
+                #branch_02{
+                    position: absolute;
+                    top: -90px;
+                    right: 0px;
+                }
+            }
+
+            li:nth-child(4){
+                margin-bottom: 290px;
+                .wrapper{
+                    &>div{
+                        margin-left: 500px;
+                    }
+                }
+                #branch_03{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+
+            li:nth-child(5){
+                margin-bottom: 250px;
+                
+                #branch_04{
+                    position: absolute;
+                    top: -60px;
+                    right: -100px;
+                }
+
+                #branch_05{
+                    position: absolute;
+                    top: 160px;
+                    right: 0px;
+                }
+
+                #flower_01{
+                    position: absolute;
+                    top: -60px;
+                    left: 640px;
+                }
+
+                #butter_02{
+                    position: absolute;
+                    top: -92px;
+                    left: 737px;
+                }
+
+                
+            }
+
+            li:nth-child(6){
+                margin-bottom: 50px;
+                #branch_06{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+        }
+    }
+
+    .instagram{
+        margin-bottom: 80px;
+        .wrapper{
+            width: 900px;
+            margin: 0 auto;
+            // border: $show_border;
+            // box-sizing: border-box;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                img{
+                    margin-right: 35px;
+                }
+            }
+
+            ul{
+                width: 100%;
+                // height: 1000px;
+                display: flex;
+                justify-content: space-between;
+                flex-shrink: 0;
+                flex-wrap: wrap;
+                // border: $show_border;
+                // box-sizing: border-box;
+                li{
+                    width: 438px;
+                    // border: $show_border;
+                    // box-sizing: border-box;
+                    display: flex;
+                    flex-shrink: 0;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    img{
+                        margin-bottom: 20px;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    height: 100vh;
+    border: $show_border;
+    box-sizing: border-box;
+}

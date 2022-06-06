@@ -1,7 +1,7 @@
 
 @import 'base/var';
 @import 'base/font';
-
+@import url("reset.css");
 
 
 h1 {
@@ -32,3 +32,6 @@ p {
     font-size: 16rem;
 }
 
+.wrapper{
+    width: 1180px;
+}
