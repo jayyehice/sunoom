@@ -124,7 +124,7 @@ exports.style = sassstyle;
 const fileinclude = require('gulp-file-include');
 
  function includeHTML() {
-    return src('src/test.html') //  來源
+    return src('src/*.html') //  來源
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
