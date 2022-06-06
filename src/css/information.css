@@ -102,29 +102,32 @@ main .island_intro .wrapper {
   margin: 0 auto;
   border: 1px solid #000;
 }
-main .island_intro .wrapper .triangle_img {
+main .island_intro .wrapper .origin {
+  margin-bottom: 100px;
+}
+main .island_intro .wrapper .origin .triangle_img {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .island_intro .wrapper .triangle_img .island_intro_top, main .island_intro .wrapper .triangle_img .island_intro_down {
+main .island_intro .wrapper .origin .triangle_img .island_intro_top, main .island_intro .wrapper .origin .triangle_img .island_intro_down {
   display: flex;
   position: relative;
 }
-main .island_intro .wrapper .triangle_img .island_intro_top > div, main .island_intro .wrapper .triangle_img .island_intro_down > div {
+main .island_intro .wrapper .origin .triangle_img .island_intro_top > div, main .island_intro .wrapper .origin .triangle_img .island_intro_down > div {
   background-color: #ccc;
   overflow: hidden;
 }
-main .island_intro .wrapper .triangle_img .island_intro_top > div img, main .island_intro .wrapper .triangle_img .island_intro_down > div img {
+main .island_intro .wrapper .origin .triangle_img .island_intro_top > div img, main .island_intro .wrapper .origin .triangle_img .island_intro_down > div img {
   height: 100%;
 }
-main .island_intro .wrapper .triangle_img .triangle_center {
+main .island_intro .wrapper .origin .triangle_img .triangle_center {
   position: absolute;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
-main .island_intro .wrapper .triangle_img .triangle_left {
+main .island_intro .wrapper .origin .triangle_img .triangle_left {
   width: 92px;
   height: 370px;
   clip-path: polygon(100% 50%, 0 0, 0 100%);
@@ -132,7 +135,7 @@ main .island_intro .wrapper .triangle_img .triangle_left {
   top: 0px;
   left: 0px;
 }
-main .island_intro .wrapper .triangle_img .triangle_right {
+main .island_intro .wrapper .origin .triangle_img .triangle_right {
   width: 92px;
   height: 370px;
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -140,26 +143,47 @@ main .island_intro .wrapper .triangle_img .triangle_right {
   top: 0px;
   right: 0px;
 }
-main .island_intro .wrapper .triangle_img .island_intro_top {
+main .island_intro .wrapper .origin .triangle_img .island_intro_top {
   margin-bottom: 9px;
 }
-main .island_intro .wrapper .triangle_img .triangle_margin {
+main .island_intro .wrapper .origin .triangle_img .triangle_margin {
   margin: 0 10px;
 }
-main .island_intro .wrapper .triangle_img .triangle_up {
+main .island_intro .wrapper .origin .triangle_img .triangle_up {
   width: 180px;
   height: 180px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-main .island_intro .wrapper .triangle_img .triangle_down {
+main .island_intro .wrapper .origin .triangle_img .triangle_down {
   width: 180px;
   height: 180px;
   clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
-main .island_intro .wrapper > h5 {
-  width: 780px;
+main .island_intro .wrapper .origin > h5 {
+  width: 70%;
   margin: 0 auto;
   margin-top: 20px;
+}
+main .island_intro .wrapper .feature > h4 {
+  margin-bottom: 25px;
+}
+main .island_intro .wrapper .feature p:last-child {
+  margin-bottom: 40px;
+}
+main .island_intro .wrapper .underline {
+  margin-bottom: 24px;
+  position: relative;
+}
+main .island_intro .wrapper .underline::after {
+  content: "";
+  display: block;
+  width: 178px;
+  height: 1px;
+  background-color: #0C1244;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 footer {
