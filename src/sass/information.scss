@@ -403,6 +403,7 @@ main{
                     overflow: hidden;
                     margin-bottom: 50px;
                     transition: all .5s;
+
                     
                     h5{
                         line-height: 80px;
@@ -411,7 +412,11 @@ main{
                         box-sizing: border-box;
                         padding: 0px 30px;
                         position: relative;
-
+                        
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        
                         &::before, &::after{
                             content: "";
                             display: block;

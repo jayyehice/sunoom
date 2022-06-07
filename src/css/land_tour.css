@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   background-color: #F5F0DD;
 }
@@ -115,24 +114,31 @@ main .activity_intro ul li .wrapper > div > p {
   width: 395px;
   margin: 0 auto;
   margin-top: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
 }
 main .activity_intro ul li .wrapper > div .comment {
   width: 395px;
   margin: 0 auto;
   margin-top: 15px;
   display: flex;
-  /* ===== 重要性的星號 ===== */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
 }
 main .activity_intro ul li .wrapper > div .comment div.star_block {
   display: inline-block;
+  margin-right: 13px;
 }
-main .activity_intro ul li .wrapper > div .comment div.star_block > span.star {
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 3px;
+main .activity_intro ul li .wrapper > div .comment div.star_block i {
+  color: #FFBF44;
 }
-main .activity_intro ul li .wrapper > div .comment div.star_block > span.star.-on {
-  color: yellow;
+main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
+  margin-right: 25px;
+}
+main .activity_intro ul li .wrapper > div .comment > i {
+  margin-right: 7px;
 }
 main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
@@ -141,7 +147,7 @@ main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
 }
 main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
   position: absolute;
-  top: -300px;
+  top: -210px;
   left: 0px;
   z-index: -1;
 }
@@ -199,15 +205,18 @@ main .activity_intro ul li:nth-child(5) #branch_05 {
   top: 160px;
   right: 0px;
 }
-main .activity_intro ul li:nth-child(5) #flower_01 {
+main .activity_intro ul li:nth-child(5) .wrapper > div {
+  position: relative;
+}
+main .activity_intro ul li:nth-child(5) .wrapper > div #flower_01 {
   position: absolute;
   top: -60px;
-  left: 640px;
+  right: -100px;
 }
-main .activity_intro ul li:nth-child(5) #butter_02 {
+main .activity_intro ul li:nth-child(5) .wrapper > div #butter_02 {
   position: absolute;
-  top: -92px;
-  left: 737px;
+  top: -93px;
+  right: -81px;
 }
 main .activity_intro ul li:nth-child(6) {
   margin-bottom: 50px;
@@ -253,6 +262,60 @@ main .instagram .wrapper ul li img {
 }
 main .instagram .wrapper ul li img:hover {
   cursor: pointer;
+}
+main .instagram #ig_pop_up {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100%;
+}
+main .instagram #ig_pop_up #ig_pop_up_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+  width: 800px;
+  background-color: #000;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+  width: 400px;
+  background-color: #fff;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
+  height: 85px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #BBB;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
+  height: calc(100% - 85px);
+  padding: 25px;
 }
 
 footer {

@@ -334,6 +334,9 @@ main #faq .wrapper ul li h5 {
   padding: 0px 30px;
   position: relative;
 }
+main #faq .wrapper ul li h5:hover {
+  cursor: pointer;
+}
 main #faq .wrapper ul li h5::before, main #faq .wrapper ul li h5::after {
   content: "";
   display: block;
