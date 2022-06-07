@@ -167,8 +167,40 @@ main .island_intro .wrapper .origin > h5 {
 main .island_intro .wrapper .feature > h4 {
   margin-bottom: 25px;
 }
-main .island_intro .wrapper .feature p:last-child {
+main .island_intro .wrapper .feature p:nth-child(3) {
   margin-bottom: 40px;
+}
+main .island_intro .wrapper .feature ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .island_intro .wrapper .feature ul li {
+  height: 570px;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+main .island_intro .wrapper .feature ul li img {
+  height: 100%;
+}
+main .island_intro .wrapper .develope > h4 {
+  margin-top: 85px;
+  margin-bottom: 25px;
+}
+main .island_intro .wrapper .develope p:nth-child(3) {
+  margin-bottom: 45px;
+}
+main .island_intro .wrapper .develope p:nth-child(4) {
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  line-height: 1.6;
+}
+main .island_intro .wrapper .develope img {
+  width: 816px;
+  display: block;
+  margin: 0 auto;
 }
 main .island_intro .wrapper .underline {
   margin-bottom: 24px;
@@ -184,6 +216,146 @@ main .island_intro .wrapper .underline::after {
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
+}
+main .contact {
+  margin-top: 160px;
+}
+main .contact .wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+main .contact .wrapper h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+main .contact .wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .contact .wrapper ul li {
+  width: 345px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1.5px solid #0C1244;
+}
+main .contact .wrapper ul li h4 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .contact .wrapper ul li p {
+  margin-bottom: 25px;
+}
+main .contact .wrapper ul li img {
+  margin-top: 10px;
+}
+main .traffic {
+  margin-top: 70px;
+  text-align: center;
+}
+main .traffic .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+main .traffic .wrapper > h3 {
+  margin-bottom: 70px;
+}
+main .traffic .wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .traffic .wrapper ul > li {
+  width: 565px;
+  box-sizing: border-box;
+  border: 1.5px solid #0C1244;
+}
+main .traffic .wrapper ul > li .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+main .traffic .wrapper ul > li .title i {
+  font-size: 20rem;
+  margin-right: 20px;
+  height: 24px;
+}
+main .traffic .wrapper ul > li > h4 {
+  margin-bottom: 35px;
+}
+main .traffic .wrapper ul > li ol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .traffic .wrapper ul > li ol li {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+main .traffic .wrapper ul > li ol li h4 {
+  line-height: 70px;
+  border-top: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
+}
+main .traffic .wrapper ul > li ol li h5 {
+  margin-top: 45px;
+}
+main .traffic .wrapper ul > li ol li h5:last-child {
+  margin-bottom: 45px;
+}
+main #faq {
+  margin-top: 204px;
+  margin-bottom: 100px;
+}
+main #faq .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+main #faq .wrapper h3 {
+  line-height: 80px;
+  box-sizing: border-box;
+  border: 1.5px solid #0C1244;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main #faq .wrapper ul li {
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  transition: all 0.5s;
+}
+main #faq .wrapper ul li h5 {
+  line-height: 80px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  box-sizing: border-box;
+  padding: 0px 30px;
+  position: relative;
+}
+main #faq .wrapper ul li h5::before, main #faq .wrapper ul li h5::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #F5F0DD;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  right: 30px;
+}
+main #faq .wrapper ul li h5::after {
+  transform: rotateZ(90deg);
+  transition: all 0.5s;
+}
+main #faq .wrapper ul li p {
+  box-sizing: border-box;
+  border: 1px solid #0C1244;
+  padding: 30px;
+  box-sizing: border-box;
+}
+main #faq .wrapper ul .faq_li-on h5::after {
+  transform: rotateZ(180deg);
 }
 
 footer {
