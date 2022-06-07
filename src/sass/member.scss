@@ -58,10 +58,16 @@ h3{
 
 // 主區塊
 .memberPage{
-    border: 1px solid rebeccapurple;
+    // border: 1px solid #0C1244;
+    border-left: 1px solid #0C1244;
+    border-right: 1px solid #0C1244;
+    border-bottom: 1px solid #0C1244;
+    // 還要再包一層XD 現在的ul區塊會凸出來
+
     clear: both;
     display: flex;
     height: 900px;
+    border-radius: 0px 0px 46px 46px;
 
     li{
         font-size: 24rem;
@@ -76,7 +82,9 @@ h3{
     }
 
     a{
+        display: block;
         text-align: center;
+
     }
 }
 
@@ -134,11 +142,97 @@ h3{
 
 // 第2分頁
 .changePwd{
-    // display: none;
+    display: none;
+    text-align: center;
+
+    .pwdForm{
+
+
+        label{
+            font-size: 24rem;
+            margin-right: 47px;
+
+        }
+
+        .pfSureText{
+            margin-left: -24px;
+        }
+
+        input{
+            width: 400px;
+            height: 50px;
+            margin-bottom: 23px;
+
+        }
+
+        .btn{
+            background-color: #F5F0DD;
+            display: inline-block;
+            width: 140px;
+            height: 50px;
+            font-size: 16rem;
+            text-align: center;
+            border: 1px solid #0C1244;
+
+        }
+
+        .pfSure{
+            // margin-bottom: 0;
+            margin-bottom: 51px;
+        }
+
+        .pfYes{
+            margin-bottom: 10px;
+        }
+    }
+
+
+
 }
 
 
 // 第3分頁
 .orderCheck{
     display: none;
+
+    table{
+        border: 1px solid #0C1244;
+        width: 960px;
+        margin: 0 auto;
+        font-size: 20rem;
+
+        thead{
+            tr{
+                th{
+                    // border: 1px solid #0C1244;
+                    border-bottom: 1px solid #0C1244;
+                    
+                    line-height: 50px;
+                }
+            }
+        }
+
+        tbody{
+
+            tr{
+                text-align: center;
+
+                td{
+                    // border: 1px solid #0C1244;
+                    line-height: 50px;
+
+                    input{
+                        width: 80px;
+                        height: 30px;
+                        font-size: 12rem;
+                        background-color: #F5F0DD;
+                        border: 1px solid #0C1244;
+
+
+                    }
+                }
+            }
+        }
+
+    }
 }

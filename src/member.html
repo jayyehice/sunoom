@@ -57,33 +57,54 @@
                 <form class="pwdForm" method="" action="">
               
                     <label for="">舊密碼</label>
-                    <input type="text" class="" name="">
+                    <input type="text" class="pfOpwd" name="">
 
                     <br>
                     <label for="">新密碼</label>
-                    <input type="text" class="" name="">
+                    <input type="text" class="pfNpwd" name="">
 
                     <br>
-                    <label for="">確認密碼</label>
-                    <input type="text" class="" name="">
+                    <label class="pfSureText" for="">確認密碼</label>
+                    <input type="text" class="pfSure" name="">
 
                     <br>
-                    <input type="submit" class="btn" value="確認變更">
+                    <input type="submit" class="btn pfYes" value="確認變更">
 
                     <br>
-                    <input type="button" class="btn" value="取消">
+                    <input type="button" class="btn pfNo" value="取消">
                 </form>
 
             </div>
 
-            <div id="" class="orderCheck">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
+            <div id="orderCheck" class="orderCheck">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>訂單編號</th>
+                            <th>訂購日期</th>
+                            <th>訂單金額</th>
+                            <th>付款方式</th>
+                            <th>付款狀態</th>
+                            <th>訂單明細</th>
+                            <th>取消訂單</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>2022.05.05</td>
+                            <td>$1,000</td>
+                            <td>信用卡</td>
+                            <td>未完成</td>
+                            <td>
+                                <input type="button" value="查看">
+                            </td>
+                            <td>
+                                <input type="button" value="取消">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
        </div>
    </main>
