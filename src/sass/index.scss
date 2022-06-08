@@ -1,5 +1,4 @@
-@import url(../css/reset.css);
-@import url(../css/common.css);
+@import 'base/var';
 
 body {
     background-color: #F5F0DD;
@@ -276,15 +275,15 @@ nav {
             position: relative;
             display: flex;
             flex-direction: row-reverse;
-            margin-bottom: 180px;
+            margin-bottom: 220px;
 
             .LiveLandText {
                 width: 630px;
                 height: 350px;
                 position: absolute;
                 // border: 1px sienna solid;
-                top: 220px;
-                right: 0;
+                top: 320px;
+                left: 0;
                 background-color: #F5F0DD;
                 padding: 80px;
                 box-sizing: border-box;
@@ -306,7 +305,7 @@ nav {
                     height: 5px;
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    left: 0;
                     box-sizing: border-box;
                 }
 
@@ -344,7 +343,7 @@ nav {
                     height: 5px;
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    right: 0;
                 }
 
                 .comments_area {
@@ -385,9 +384,33 @@ nav {
 
                 }
             }
-        }
-    }
+        }      
 
+    }
+    
 }
 
+.instagram{
+    .wrapper{
+        border: 1px solid red;
+        width: 1180px;
+        margin: 0 auto;
+        .fa-brands{
+            font-size: 60px;
+            width: 60px;
+            text-align: center;
+            border: 1px solid salmon;
+        }
+        .igAccount{
+            text-align: center;
+        }
+
+        .instagramPhoto{
+            border: 1px solid black;
+            width: 936px ;
+            margin: 0 auto;
+        }
+        
+    }
+}
 

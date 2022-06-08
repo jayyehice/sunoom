@@ -1,5 +1,5 @@
-@import url(../css/reset.css);
-@import url(../css/common.css);
+@import 'base/var';
+
 body {
   background-color: #F5F0DD;
   color: #0C1244;
@@ -231,14 +231,14 @@ nav .main_button img {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 180px;
+  margin-bottom: 220px;
 }
 .category .wrapper .LiveLand .LiveLandText {
   width: 630px;
   height: 350px;
   position: absolute;
-  top: 220px;
-  right: 0;
+  top: 320px;
+  left: 0;
   background-color: #F5F0DD;
   padding: 80px;
   box-sizing: border-box;
@@ -259,7 +259,7 @@ nav .main_button img {
   height: 5px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   box-sizing: border-box;
 }
 .category .wrapper .LiveLand .LiveLandText .draw02 {
@@ -293,7 +293,7 @@ nav .main_button img {
   height: 5px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 .category .wrapper .LiveLand .LiveLandText .comments_area {
   margin-top: 40px;
@@ -324,6 +324,26 @@ nav .main_button img {
 .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
   background-color: #0C1244;
   color: #F5F0DD;
+}
+
+.instagram .wrapper {
+  border: 1px solid red;
+  width: 1180px;
+  margin: 0 auto;
+}
+.instagram .wrapper .fa-brands {
+  font-size: 60px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid salmon;
+}
+.instagram .wrapper .igAccount {
+  text-align: center;
+}
+.instagram .wrapper .instagramPhoto {
+  border: 1px solid black;
+  width: 936px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=index.css.map */
