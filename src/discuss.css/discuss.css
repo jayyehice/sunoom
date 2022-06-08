@@ -352,15 +352,20 @@ margin-left: 170px;
 
 /* 彈窗部分的CSS */
 
+.pop-up-out{
+    /* border:1px solid red; */
+    position: relative;
+    bottom: 1420px;
+}
+
 .pop-up{
     border:1px solid rgb(170, 170, 170);
     padding-top: 20px;
     padding-bottom: 80px;
+    position: absolute;
     margin-top: 0px;
     margin-left: 200px;
     width:880px;
-    position: relative;
-    bottom: 1420px;
     z-index: 3;
     background-color: #f5f0dd;
     display: none;
@@ -647,7 +652,7 @@ margin-left: 170px;
 /* 討論區-彈窗-發表新文章 */
 /* 表單部分 */
 .form_region{
-    border:1px solid #0C1244;
+    /* border:1px solid #0C1244; */
     background-color:#f5f0dd;
     z-index: 3;
     padding-top: 20px;
@@ -665,6 +670,15 @@ margin-left: 170px;
     font-size: 32px;
     color: #0C1244;
     margin-left: 20px;
+}
+
+.form_region .absolute{
+    border:1px solid #0C1244;
+    background-color: #f5f0dd;
+    position: absolute;
+    height: 950px;
+    width: 879px;
+    left: 0px;
 }
 
 .form_region .form_region1{
@@ -701,6 +715,7 @@ margin-left: 170px;
 .form_region .form_region2 .choose{
     height:50px;
     width:251px;
+    font-size: 24px;
 }
 
 .form_region .form_region3{
@@ -737,6 +752,7 @@ margin-left: 170px;
     max-height:470px;
     max-width:801px;
     resize: none;
+    font-size: 20px;
 }
 
 .form_region .form_region5{
@@ -752,5 +768,27 @@ margin-left: 170px;
 
 .form_region .disappear2{
     /* border:1px solid red; */
+    margin-top: 20px;
     margin-left: 832px;
+}
+
+.form_region .form_region6{
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form_region .form_region6 .name6{
+    margin-right: 25px;
+}
+
+.form_region .form_region6 .fa-star{
+    /* border:1px solid red; */
+    color:#FFBF44;
+}
+
+.form_region .form_region6 .fa-star-half-stroke{
+    /* border:1px solid red; */
+    color:#FFBF44;
 }
