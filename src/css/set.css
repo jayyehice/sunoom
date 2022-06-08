@@ -1,0 +1,146 @@
+body {
+  background-color: #F5F0DD;
+  box-sizing: border-box;
+  color: #0C1244;
+}
+
+main {
+  border: 1px solid firebrick;
+  width: 1280px;
+  margin: 0 auto;
+  color: #0C1244;
+}
+
+.wrapper {
+  border: 1px solid black;
+  width: 1080px;
+  margin: 0 auto;
+}
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+p {
+  margin-top: 17px;
+  margin-left: 100px;
+}
+
+h3 {
+  margin-top: 62px;
+  margin-left: 100px;
+  margin-bottom: 55px;
+}
+
+.setTopNav {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.setTopNav li {
+  border: 1px solid rebeccapurple;
+  text-align: center;
+  margin-left: 25px;
+}
+.setTopNav li:first-child {
+  margin-left: 0;
+}
+
+.wrapper .setLogin {
+  display: block;
+  text-align: center;
+  font-size: 24rem;
+}
+.wrapper .setLogin .setSpeaker {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 10px;
+}
+
+.setMain {
+  margin-top: 60px;
+  border: 1px solid #ccc;
+  display: flex;
+  width: 1080px;
+  height: 543px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+.setMain .setPic {
+  border: 1px solid green;
+  padding: 65px;
+}
+.setMain .setPic > img {
+  margin-bottom: 10px;
+}
+.setMain .setPic .setPicS {
+  border: 1px solid #fff;
+}
+.setMain .setPic .setPicS > img:nth-child(2) {
+  border: 1px solid red;
+  margin: 0 10px;
+}
+.setMain .setText {
+  display: block;
+  border: 1px solid navy;
+  width: 471px;
+  height: 357px;
+  padding: 65px;
+  padding-left: 0;
+  position: relative;
+}
+.setMain .setText .setTextPic {
+  position: absolute;
+  right: 64px;
+  top: 64px;
+}
+.setMain .setText h4 {
+  text-align: left;
+  margin-bottom: 18px;
+}
+.setMain .setText h5 {
+  margin-bottom: 20px;
+}
+.setMain .setText .setTextTitle {
+  margin: 0;
+  margin-bottom: 25px;
+}
+.setMain .setText .setTextWord {
+  margin: 0;
+  margin-bottom: 46px;
+}
+.setMain .setText .setTextWord2 {
+  margin: 0;
+  margin-bottom: 60px;
+}
+.setMain .setText .setTextBotm {
+  border: 1px solid royalblue;
+  display: flex;
+  justify-content: space-between;
+}
+.setMain .setText .setTextBotm .stbS {
+  border: 1px solid darkgreen;
+}
+.setMain .setText .setTextBotm .stbS p {
+  margin: 0;
+}
+.setMain .setText .setTextBotm .stbS a .stbSP {
+  margin-right: 10px;
+  position: relative;
+  right: 0;
+  top: 7px;
+}
+.setMain .setText .setTextBotm .setBook {
+  border: 1px solid #000;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+/*# sourceMappingURL=set.css.map */
