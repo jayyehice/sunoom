@@ -1,4 +1,4 @@
-// 引入其他檔案
+// 引入其他檔案 url scss才可以 不一定 理解有誤
 // @import '../css/reset.css';
 // @import '../css/common.css';
 
@@ -100,7 +100,7 @@ h3{
     text-align: center;
 
     //先消失
-    display: none;
+    // display: none;
 
     .memberForm{
 
@@ -142,7 +142,7 @@ h3{
 
 // 第2分頁
 .changePwd{
-    display: none;
+    // display: none;
     text-align: center;
 
     .pwdForm{
@@ -193,7 +193,7 @@ h3{
 
 // 第3分頁
 .orderCheck{
-    display: none;
+    // display: none;
 
     table{
         border: 1px solid #0C1244;
