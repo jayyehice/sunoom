@@ -185,8 +185,6 @@ window.addEventListener("load", function () {
                                 </a>
                             </div>
     `
-    active4.innerHTML = ""
-    active5.innerHTML = ""
 
     });
 
@@ -295,8 +293,7 @@ window.addEventListener("load", function () {
                                 </a>
                             </div>
     `
-    active4.innerHTML = ""
-    active5.innerHTML = ""
+
     });
 
     $("#active4").on("click", function () {
@@ -434,7 +431,6 @@ window.addEventListener("load", function () {
         </a>
     </div>
     `
-    active5.innerHTML = ""
     });
 
     $("#active5").on("click", function () {
@@ -480,12 +476,12 @@ window.addEventListener("load", function () {
 
 });
 
-function showEdit(nums){
-    console.log(nums);
-    $(`.article_list${nums}`).css('display','block')
-}
+// function showEdit(nums){
+//     console.log(nums);
+//     $(`.article_list${nums}`).css('display','block')
+// }
 
-function closeBlock(nums){
-    $(`.article_text a${nums}`).css('display','none')
-    console.log(aaa)
-}
+// function closeBlock(nums){
+//     $(`.article_text a${nums}`).css('display','none')
+//     console.log(aaa)
+// }

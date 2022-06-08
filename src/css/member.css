@@ -1,5 +1,3 @@
-@import '../css/reset.css';
-@import '../css/common.css';
 body {
   background-color: #F5F0DD;
   border: 1px solid black;
@@ -47,10 +45,13 @@ h3 {
 }
 
 .memberPage {
-  border: 1px solid rebeccapurple;
+  border-left: 1px solid #0C1244;
+  border-right: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
   clear: both;
   display: flex;
   height: 900px;
+  border-radius: 0px 0px 46px 46px;
 }
 .memberPage li {
   font-size: 24rem;
@@ -63,13 +64,13 @@ h3 {
   justify-items: center;
 }
 .memberPage a {
+  display: block;
   text-align: center;
 }
 
 .basicData {
   border: 1px solid royalblue;
   text-align: center;
-  display: none;
 }
 .basicData label {
   font-size: 24rem;
@@ -97,8 +98,59 @@ h3 {
   border: 1px solid #0C1244;
 }
 
-.orderCheck {
-  display: none;
+.changePwd {
+  text-align: center;
+}
+.changePwd .pwdForm label {
+  font-size: 24rem;
+  margin-right: 47px;
+}
+.changePwd .pwdForm .pfSureText {
+  margin-left: -24px;
+}
+.changePwd .pwdForm input {
+  width: 400px;
+  height: 50px;
+  margin-bottom: 23px;
+}
+.changePwd .pwdForm .btn {
+  background-color: #F5F0DD;
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  font-size: 16rem;
+  text-align: center;
+  border: 1px solid #0C1244;
+}
+.changePwd .pwdForm .pfSure {
+  margin-bottom: 51px;
+}
+.changePwd .pwdForm .pfYes {
+  margin-bottom: 10px;
+}
+
+.orderCheck table {
+  border: 1px solid #0C1244;
+  width: 960px;
+  margin: 0 auto;
+  font-size: 20rem;
+}
+.orderCheck table thead tr th {
+  border-bottom: 1px solid #0C1244;
+  line-height: 50px;
+}
+.orderCheck table tbody tr {
+  text-align: center;
+}
+.orderCheck table tbody tr td {
+  line-height: 50px;
+}
+.orderCheck table tbody tr td input {
+  width: 80px;
+  height: 30px;
+  font-size: 12rem;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
 }
 
 /*# sourceMappingURL=member.css.map */

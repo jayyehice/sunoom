@@ -1,0 +1,7 @@
+diff a/src/css/header.css b/src/css/header.css	(rejected hunks)
+@@ -1,5 +1,4 @@
+ @charset "UTF-8";
+-@import '../css/reset.css';
+ @import '../css/common.css';
+ .overFlow {
+   position: fixed;

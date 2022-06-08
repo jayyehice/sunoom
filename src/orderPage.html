@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orderPage</title>
+    <link rel="stylesheet" href="./css/orderPage.css">
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script src="./JS/orderPage.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="../node_modules/vue2-slot-calendar/lib/calendar.min.css" >
+    <script src="../node_modules/vue2-slot-calendar/lib/calendar.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <button id="sunoomChange">
+            sunoomChange
+        </button>
+    </header>
+    <article>
+        <section>
+            <h2>訂購流程</h2>
+            <div class="shoppingProcess">
+                <div class="chooseAdate">
+                    <h4>1.選擇日期</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="chooseAtrip">
+                    <h4>2.選擇行程</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="tallyOrder">
+                    <h4>3.結帳</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="orderComplete">
+                    <h4>4.訂單完成</h4>
+                </div>
+            </div>
+            <div class="selectDate">
+                <h3>1.選擇日期</h3>
+                <ul class="chooseBlock">
+                    <li>
+                        <h4>開始</h4>
+                        <span id="beginDate"></span>
+                    </li>
+                    <li>
+                        <h4>結束</h4>
+                        <span id="endDate"></span>
+                    </li>
+                    <li>
+                        <h4>人數</h4>
+                        <input type="number" name=""  value="1" id="numberOfPeople" min="1" max="100">
+                    </li>
+                    <li>
+                        <h4>旅程規劃</h4>
+                        <select name="" id="">
+                            <option value="">探險風格</option>
+                            <option value="">家庭親子組合</option>
+                            <option value="">就四五三度假</option> 
+                            <option value="">蜜月旅行</option>
+                            <option value="">純海洋行程</option>
+                            <option value="">生態導覽團</option>
+                            <option value="">自由行</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="datePickerBox">
+                <div class="dateTitle">
+                    <p>旅程規劃(<span id="bookingDays"></span>)</p>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="pickerBox" >
+                    <input type="text" name="dates" id="dateBooking">
+                    <!-- <calendar v-model ="value" show-date-only :disabled-days-of-week ="disabled" :format ="format" :clear-button ="clear" :placeholder ="placeholder" :lang ="lang" :position ="position" :on-day-click ="dayClick" > </calendar > -->
+                </div>
+            </div>
+            <button id="NextPage">Next</button>
+        </section> 
+    </article>
+    <footer></footer>
+</body>
+</html>

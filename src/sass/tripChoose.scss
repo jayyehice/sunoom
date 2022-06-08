@@ -1,0 +1,698 @@
+
+
+@mixin circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #0C1244;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+
+body{
+    background-color:#F5F0DD;
+    section{
+        h2{
+            text-align: center;
+        }
+    }
+    .shoppingProcess{
+        width: 1180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0 auto;
+        img{
+            width: 100px;
+            height: 24px;
+
+        }
+        .chooseAdate{
+            @include circle;
+        }
+        .chooseAtrip{
+            @include circle;
+            background-color: #0C1244;
+            color:#F5F0DD
+        }
+        .tallyOrder{
+            @include circle;
+        }
+        .orderComplete{
+            @include circle;
+        }
+        //步驟區塊結束
+
+    }
+    //日期區塊
+    .datePickerBox{
+        width: 700px;
+        height: 360px;
+        margin: 50px auto;
+        border: 1px solid #0C1244;
+        position: relative;
+        .dateTitle{
+            p{
+                margin: 20px;
+                
+            }
+            i{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                right: 20px;
+                top: 20px;
+                
+            }
+        }
+        .pickerBox{
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #0C1244;
+        }
+
+    }
+
+    .tripChooseBlock{
+        width: 1000px;
+        height: 616px;
+        border:2px solid #0C1244;
+        margin: 50px auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        .itineraryTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 5px;
+            }
+        }
+        .morningItineraryA{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid #0C1244;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .morningBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #morningImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .morningBlockB{
+                    margin: 0 auto;
+                    .optionBlockA{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceA{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addItineraryM{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .noonItinerary{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .noonBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #noonImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .noonBlockB{
+                    margin: 0 auto;
+                    .optionBlockB{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceB{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryTextB{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addItineraryN{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .eveningItinerary{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 16px;
+            img{
+                width: 120px;
+            }
+            .eveningBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #eveningImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .eveningBlockB{
+                    margin: 0 auto;
+                    .optionBlockC{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceC{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryTextC{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addItineraryE{
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+
+    .foodChooseBlock{
+        width: 1000px;
+        height: 616px;
+        border:2px solid #0C1244;
+        margin: 0 auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        .foodTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 5px;
+            }
+        }
+        .morningFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid #0C1244;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .morningFoodTitle{
+                text-align: center;
+            }
+            .morningFoodA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #morningFoodImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .morningFoodB{
+                    margin: 0 auto;
+                    .foodOptionBlockA{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceA{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextA{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addFoodM{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .noonFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .noonFoodA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #noonFoodImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .noonFoodB{
+                    margin: 0 auto;
+                    .foodoptionBlockB{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceB{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextB{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addFoodN{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .eveningFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 16px;
+            img{
+                width: 120px;
+            }
+            .eveningFoodA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #eveningFoodImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .eveningFoodB{
+                    margin: 0 auto;
+                    .foodoptionBlockC{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceC{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextC{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addFoodE{
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+
+    .stayChooseBlock{
+        width: 1000px;
+        height: 616px;
+        border:2px solid #0C1244;
+        margin: 50px auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        .stayTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 5px;
+            }
+        }
+        .cabin{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid #0C1244;
+            padding: 15px;
+            .cabinTitle{
+                text-align: center;
+            }
+            #cabinButton{
+                width: 20px;
+                height: 20px;
+            }
+            .cabinBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #cabinImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .cabinBlockB{
+                    margin: 0 auto;
+                    .cabinOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #cabinPrice{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #cabinText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addcabin{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .camping{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 15px;
+            .campingTitle{
+                text-align: center;
+            }
+            #campingButton{
+                width: 20px;
+                height: 20px;
+            }
+            .campingBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #campingImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .campingBlockB{
+                    margin: 0 auto;
+                    .campingOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #campingPrice{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #campingText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addCamping{
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+        }
+        .villa{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #0C1244;
+            padding: 16px;
+            .villaTitle{
+                text-align: center;
+            }
+            #villaButton{
+                width: 20px;
+                height: 20px;
+            }
+            .villaBlockA{
+                border:1px solid #0C1244;
+                display: flex;
+                width: 700px;
+                height: 150px;
+                border-radius: 22px;
+                #villaImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    border-radius: 22px;
+                    line-height: 120px;
+                
+                }
+                .villaBlockB{
+                    margin: 0 auto;
+                    .villaOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            background-color: #F5F0DD;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #villaPrice{
+                            border: 1px solid #0C1244;
+                            width: 140px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #villaText{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addVilla{
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+    #NextPage{
+        display: block;
+        width: 140px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color:#F5F0DD;
+        border:1px solid #0C1244;
+        margin: 50px auto;
+        &:hover{
+            color:#F5F0DD;
+            background-color:#0C1244;
+            border:1px solid #F5F0DD;
+        }
+    }
+}
+
