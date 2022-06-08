@@ -102,6 +102,7 @@ footer section ul > li:last-child .week_weather > li svg {
   height: 95px;
 }
 footer section .wrapper {
+  width: 1180px;
   height: 100vh;
   box-sizing: border-box;
   position: absolute;
