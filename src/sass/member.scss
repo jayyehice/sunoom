@@ -1,6 +1,6 @@
-// 引入其他檔案 url scss才可以 不一定 理解有誤
-// @import '../css/reset.css';
-// @import '../css/common.css';
+// 引入其他檔案 
+// @import 'base/var';
+
 
 body{
     background-color: #F5F0DD;
@@ -61,10 +61,6 @@ h3{
     // border: 1px solid #0C1244;
     width: 1063px;
     margin: 0 auto;
-    // border-left: 1px solid #0C1244;
-    // border-right: 1px solid #0C1244;
-    // border-bottom: 1px solid #0C1244;
-    // 還要再包一層XD 現在的ul區塊會凸出來
 
     clear: both;
     display: flex;
@@ -94,22 +90,23 @@ h3{
             background-color: #0C1244;
             border-radius: 29px 29px 0 0;
         }
-        
+
     }
-    
-
-
 }
 
+.memberPage > li.active a{
+    color: #F5F0DD;
+    background-color: #0C1244;
+    border-radius: 29px 29px 0 0;
 
-
+}
 
 // 第1分頁
 .basicData{
     // clear: both;
     width: 1063px;
     margin: 0 auto;
-    height: 900px;
+    height: 500px;
     text-align: center;
 
     border-left: 1px solid #0C1244;
@@ -164,7 +161,7 @@ h3{
     text-align: center;
     width: 1063px;
     margin: 0 auto;
-    height: 900px;
+    height: 500px;
 
     border-left: 1px solid #0C1244;
     border-right: 1px solid #0C1244;
@@ -222,7 +219,7 @@ h3{
     display: none;
     width: 1063px;
     margin: 0 auto;
-    height: 900px;
+    height: 500px;
 
     border-left: 1px solid #0C1244;
     border-right: 1px solid #0C1244;
