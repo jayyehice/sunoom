@@ -1,5 +1,3 @@
-@import 'base/var';
-
 body {
   background-color: #F5F0DD;
   color: #0C1244;
@@ -326,6 +324,9 @@ nav .main_button img {
   color: #F5F0DD;
 }
 
+.instagram {
+  padding-bottom: 250px;
+}
 .instagram .wrapper {
   border: 1px solid red;
   width: 1180px;
@@ -344,6 +345,116 @@ nav .main_button img {
   border: 1px solid black;
   width: 936px;
   margin: 0 auto;
+}
+.instagram #ig_pop_up {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100%;
+}
+.instagram #ig_pop_up #ig_pop_up_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+  width: 800px;
+  background-color: #000;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+  width: 400px;
+  background-color: #fff;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
+  height: 85px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #BBB;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
+  height: calc(100% - 85px);
+  padding: 25px;
+}
+
+.traffic {
+  text-align: center;
+}
+.traffic .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+.traffic .wrapper > h3 {
+  margin-bottom: 70px;
+}
+.traffic .wrapper ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.traffic .wrapper ul > li {
+  width: 565px;
+  box-sizing: border-box;
+  border: 1.5px solid #0C1244;
+}
+.traffic .wrapper ul > li .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+.traffic .wrapper ul > li .title i {
+  font-size: 20rem;
+  margin-right: 20px;
+  height: 24px;
+}
+.traffic .wrapper ul > li > h4 {
+  margin-bottom: 35px;
+}
+.traffic .wrapper ul > li ol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.traffic .wrapper ul > li ol li {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.traffic .wrapper ul > li ol li h4 {
+  line-height: 70px;
+  border-top: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
+}
+.traffic .wrapper ul > li ol li h5 {
+  margin-top: 45px;
+}
+.traffic .wrapper ul > li ol li h5:last-child {
+  margin-bottom: 45px;
 }
 
 /*# sourceMappingURL=index.css.map */
