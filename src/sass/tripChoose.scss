@@ -12,11 +12,26 @@
 };
 
 
+.bodyCover{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: rgba($color: #000000, $alpha:.5);
+    position: fixed;
+    display: none;
+}
 body{
     background-color:#F5F0DD;
+    span{
+        font-size: 16px;
+    }
     section{
         h2{
             text-align: center;
+        }
+        h3{
+            text-align: center;
+            margin: 50px 0;
         }
     }
     .shoppingProcess{
@@ -76,7 +91,152 @@ body{
         }
 
     }
+    .ListSmall{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0C1244;
+        color: #F5F0DD;
+        writing-mode: vertical-lr;
+        width: 50px;
+        height: 170px;
+        position: fixed;
+        right: 0;
+        top: 10%;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        .circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border:1px solid #F5F0DD;
+            color: #F5F0DD;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+    }
+    .BigList{
+        width:0px;
+        height: 100vh;
+        background-color:#F5F0DD;
+        border:2px solid #0C1244;
+        transition: all 2s;
+        right: 3%;
+        top: 0%;
+        position: fixed;
+        display: none;
+        z-index: 1;
+        overflow-y: auto;
+        span{
+            font-weight: bolder;
+        }
+        h6{
+            font-weight: bolder;
+            margin-left: 10px;
+        }
+        .leftButton{
+            width: 8px;
+            height: 8px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .rightButton{
+            width: 8px;
+            height: 8px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .deleteButton{
+            width: 16px;
+            cursor: pointer;
+        }
+        p{
+            font-weight: bolder;
+            margin: 10px;
+        }
+        .ListTitle{
+            width: 260px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: #0C1244;
+            color: #F5F0DD;
+            text-align: center;
+            line-height: 50px;
+        }
+        .tripAndDate{
+            border-bottom: 1px solid #0C1244;
+            padding: 10px;
 
+            input{
+                width: 200px;
+                background-color: #F5F0DD;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: safe;
+            align-items: center;
+            flex-grow: 1;
+            margin: 10px 0;
+            li{
+               align-content: center;
+            }
+            li:first-Child{
+                text-align: center;
+                width: 80px;
+            }
+            li:nth-Child(2){
+                width: 50px;
+                text-align: center;
+            }
+            li:nth-Child(3){
+                width: 100px;
+                text-align: center;
+            }
+        }
+        .tripList{
+            border-bottom: 1px solid #0C1244;
+        }
+        .FoodList{
+            border-bottom: 1px solid #0C1244;
+        }
+        .StayList{
+            border-bottom: 1px solid #0C1244;
+        }
+        .totalBlock{
+            margin:  20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            .totalTitle{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                span{
+                    font-size: 16px;
+                }
+            }
+            .totalPrice{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                line-height: 20.5px;
+                text-align: center;
+                span{
+                    font-size: 20px;
+                    color: #FFBF44;
+                }
+                #couponPrice{
+                    color: #FF4444;
+                }
+            }
+        }
+    }
+    
     .tripChooseBlock{
         width: 1000px;
         height: 616px;
@@ -88,10 +248,12 @@ body{
             display: flex;
             justify-content: center;
             position: relative;
+            height: 66px;
+            align-items: center;
             .chooseDate{
                 position: absolute;
                 right: 10%;
-                top: 5px;
+                top: 30%;
             }
         }
         .morningItineraryA{
@@ -284,10 +446,12 @@ body{
             display: flex;
             justify-content: center;
             position: relative;
+            height: 66px;
+            align-items: center;
             .chooseDate{
                 position: absolute;
                 right: 10%;
-                top: 5px;
+                top: 30%;
             }
         }
         .morningFood{
@@ -483,10 +647,12 @@ body{
             display: flex;
             justify-content: center;
             position: relative;
+            height: 66px;
+            align-items: center;
             .chooseDate{
                 position: absolute;
                 right: 10%;
-                top: 5px;
+                top: 30%;
             }
         }
         .cabin{

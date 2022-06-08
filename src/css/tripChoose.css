@@ -1,8 +1,24 @@
+.bodyCover {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: none;
+}
+
 body {
   background-color: #F5F0DD;
 }
+body span {
+  font-size: 16px;
+}
 body section h2 {
   text-align: center;
+}
+body section h3 {
+  text-align: center;
+  margin: 50px 0;
 }
 body .shoppingProcess {
   width: 1180px;
@@ -80,6 +96,150 @@ body .datePickerBox .pickerBox {
   width: 100%;
   border-top: 1px solid #0C1244;
 }
+body .ListSmall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  writing-mode: vertical-lr;
+  width: 50px;
+  height: 170px;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+body .ListSmall .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+}
+body .BigList {
+  width: 0px;
+  height: 100vh;
+  background-color: #F5F0DD;
+  border: 2px solid #0C1244;
+  transition: all 2s;
+  right: 3%;
+  top: 0%;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  overflow-y: auto;
+}
+body .BigList span {
+  font-weight: bolder;
+}
+body .BigList h6 {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+body .BigList .leftButton {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+body .BigList .rightButton {
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+body .BigList .deleteButton {
+  width: 16px;
+  cursor: pointer;
+}
+body .BigList p {
+  font-weight: bolder;
+  margin: 10px;
+}
+body .BigList .ListTitle {
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+}
+body .BigList .tripAndDate {
+  border-bottom: 1px solid #0C1244;
+  padding: 10px;
+}
+body .BigList .tripAndDate input {
+  width: 200px;
+  background-color: #F5F0DD;
+}
+body .BigList ul {
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px 0;
+}
+body .BigList ul li {
+  align-content: center;
+}
+body .BigList ul li:first-Child {
+  text-align: center;
+  width: 80px;
+}
+body .BigList ul li:nth-Child(2) {
+  width: 50px;
+  text-align: center;
+}
+body .BigList ul li:nth-Child(3) {
+  width: 100px;
+  text-align: center;
+}
+body .BigList .tripList {
+  border-bottom: 1px solid #0C1244;
+}
+body .BigList .FoodList {
+  border-bottom: 1px solid #0C1244;
+}
+body .BigList .StayList {
+  border-bottom: 1px solid #0C1244;
+}
+body .BigList .totalBlock {
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+body .BigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .BigList .totalBlock .totalTitle span {
+  font-size: 16px;
+}
+body .BigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 20.5px;
+  text-align: center;
+}
+body .BigList .totalBlock .totalPrice span {
+  font-size: 20px;
+  color: #FFBF44;
+}
+body .BigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
 body .tripChooseBlock {
   width: 1000px;
   height: 616px;
@@ -92,11 +252,13 @@ body .tripChooseBlock .itineraryTitle {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 66px;
+  align-items: center;
 }
 body .tripChooseBlock .itineraryTitle .chooseDate {
   position: absolute;
   right: 10%;
-  top: 5px;
+  top: 30%;
 }
 body .tripChooseBlock .morningItineraryA {
   display: flex;
@@ -281,11 +443,13 @@ body .foodChooseBlock .foodTitle {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 66px;
+  align-items: center;
 }
 body .foodChooseBlock .foodTitle .chooseDate {
   position: absolute;
   right: 10%;
-  top: 5px;
+  top: 30%;
 }
 body .foodChooseBlock .morningFood {
   display: flex;
@@ -473,11 +637,13 @@ body .stayChooseBlock .stayTitle {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 66px;
+  align-items: center;
 }
 body .stayChooseBlock .stayTitle .chooseDate {
   position: absolute;
   right: 10%;
-  top: 5px;
+  top: 30%;
 }
 body .stayChooseBlock .cabin {
   display: flex;

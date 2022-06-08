@@ -1,0 +1,148 @@
+
+@mixin circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #0C1244;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+body{
+    background-color: #F5F0DD;
+    section{
+        h2{
+            text-align: center;
+        }
+    }
+    .shoppingProcess{
+        width: 1180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0 auto;
+        img{
+            width: 100px;
+            height: 24px;
+
+        }
+        .chooseAdate{
+            @include circle;
+        }
+        .chooseAtrip{
+            @include circle;
+        }
+        .tallyOrder{
+            @include circle;
+        }
+        .orderComplete{
+            @include circle;
+            background-color: #0C1244;
+            color:#F5F0DD
+        }
+        //訂購流程結束
+    }
+    //訂單完成文字區塊
+    .FinishTextBlock{
+        h3{
+            text-align: center;
+            margin: 50px 0;
+        }
+        h5{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    //訂購明細表
+    .bigList{
+        width: 1000px;
+        height: 920px;
+        border:2px solid #0C1244;
+        margin: 50px auto;
+        .ListTitle{
+            margin: 0px auto;
+            width: 980px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #0C1244;
+            color: #F5F0DD;
+            font-size: 20px;
+        }
+        .ListDate{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 20px;
+            li{
+                margin-right: 20px;
+                font-size: 16px;
+                font-weight: bolder;
+                display: flex;
+                align-items: center;
+            }
+            li:first-Child{
+                font-weight: bolder;
+                font-size: 16px;
+            }
+        }
+        .tripList{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0;
+            li{
+                width: 250px;
+                height: 195px;
+                border: 1px solid #0C1244;
+                text-align: center;
+                ol{
+                    list-style: none;
+                }
+            }
+
+            li:first-child{
+                line-height: 195px;
+                border-left: none;
+            }
+            li:last-Child{
+                border-right: none;
+            }
+        }
+        .totalBlock{
+            margin:  40px 20px;
+            display: flex;
+            justify-content:flex-end;
+            align-content: center;
+            height: 150px;
+            .totalTitle{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 19.5px;
+            }
+            .totalPrice{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                line-height: 12px;
+                text-align: center;
+                span{
+                    color: #FFBF44;
+                    font-size: 20px;
+                }
+                #couponPrice{
+                    color: #FF4444;
+                }
+            }
+        
+        }
+    }
+}

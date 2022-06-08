@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tripChoose</title>
     <link rel="stylesheet" href="./css/tripChoose.css">
+    <link rel="stylesheet" href="./css/common.css">
     <script src="./JS/jquery-3.6.0.js"></script>
     <script src="./js/tripChoose.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="../node_modules/vue2-slot-calendar/lib/calendar.min.css" >
-    <script src="../node_modules/vue2-slot-calendar/lib/calendar.min.js"></script>
+    <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    <div class="bodyCover"></div>
     <header></header>
     <article>
         <section>
@@ -38,6 +39,7 @@
                     <h4>4.訂單完成</h4>
                 </div>
             </div>
+            <h3>2.選擇行程</h3>
             <div class="datePickerBox">
                 <div class="dateTitle">
                     <p>旅程規劃(<span id="bookingDays"></span>)</p>
@@ -48,6 +50,83 @@
                     <!-- <calendar v-model ="value" show-date-only :disabled-days-of-week ="disabled" :format ="format" :clear-button ="clear" :placeholder ="placeholder" :lang ="lang" :position ="position" :on-day-click ="dayClick" > </calendar > -->
                 </div>
             </div>
+            <!-- 小訂單明細 -->
+            <div class="ListSmall">
+                <h5>訂單明細 </h5><div class="circle">+</div>
+            </div>
+            <!-- 明細彈窗 -->
+            <div class="BigList">
+                <div class="ListTitle">
+                    <h5>訂單明細</h5>
+                </div>
+                <div class="tripAndDate">
+                    <p>自由行</p>
+                    <p>Check In:</p>
+                    <input type="date" name="" id="" value="2022-07-16">
+                    <p>Check out:</p>
+                    <input type="date" name="" id="" value="2022-07-16">
+                </div>
+                <div class="tripList">
+                    <p>遊</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>潛水(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >6<img class="rightButton" src="./img/orderPage/right_button.png"></li>
+                        <li>$11,994</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                    <ul>
+                        <li>巨石陣(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >2<img class="rightButton" src="./img/orderPage/right_button.png"></li>
+                        <li>$3,998</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+
+                </div>
+                <div class="FoodList">
+                    <p>食</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>BBQ(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >6<img class="rightButton" src="./img/orderPage/right_button.png"></li>                        <li>$3,000</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                    <ul>
+                        <li>漢堡(月)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >4<img class="rightButton" src="./img/orderPage/right_button.png"></li>                        <li>$1,200</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                </div>
+                <div class="StayList">
+                    <p>宿</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>帳篷露營(月)</li>
+                        <li>6</li>
+                        <li>$11,994</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                </div>
+                <div class="totalBlock">
+                    <div class="totalTitle">
+                        <span>小計：</span><br>
+                        <span>折扣碼：</span><br>
+                        <span>折扣金額：</span><br>
+                        <span>總金額：</span><br>
+                    </div>
+                    <div class="totalPrice">
+                        <span>$32,186</span><br>
+                        <select name="" id="">
+                            <option value="">Long_bro_only_9453</option>
+                            <option value="">NewMember</option>
+                        </select><br>
+                        <span id="couponPrice">-$16,093</span><br>
+                        <span>$16,093</span><br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 選購區塊 -->
             <div class="tripChooseBlock">
                     <div class="itineraryTitle">
                         <h4>遊</h4>
@@ -203,7 +282,7 @@
                     </div>
                     <div class="cabin">
                         <div class="cabinTitle">
-                            <h4>小木屋</h4>
+                            <h4>森林木屋</h4>
                             <p>自由之丘</p>
                         </div>
                         <input type="radio" name="stayChoose" id="cabinButton">

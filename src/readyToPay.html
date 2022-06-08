@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>readyToPay</title>
+    <link rel="stylesheet" href="./css/readyToPay.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/readyToPay.js"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <header></header>
+    <article>
+        <section>
+            <h2>訂購流程</h2>
+            <div class="shoppingProcess">
+                <div class="chooseAdate">
+                    <h4>1.選擇日期</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="chooseAtrip">
+                    <h4>2.選擇行程</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="tallyOrder">
+                    <h4>3.結帳</h4>
+                </div>
+                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="orderComplete">
+                    <h4>4.訂單完成</h4>
+                </div>
+            </div>
+            <!-- 訂購流程結束 -->
+            <h3>3.結帳</h3>
+            <!-- 訂單明細開始 -->
+            <div class="bigList">
+                <div class="ListTitle">訂單明細</div>
+                <ul class="ListDate">
+                    <li>自由行</li>
+                    <li>Check In：<h6>2022/07/16</h6></li>
+                    <li>Check Out：<h6>2022/07/18</h6></li>
+                </ul>
+                <ul class="tripList">
+                    <li>07/16(Sat)</li>
+                    <li>遊<ol></ol></li>
+                    <li>食<ol></ol></li>
+                    <li>宿<ol></ol></li>
+                </ul>
+                <ul class="tripList">
+                    <li>07/17(Sat)</li>
+                    <li>遊<ol></ol></li>
+                    <li>食<ol></ol></li>
+                    <li>宿<ol></ol></li>
+                </ul>
+                <ul class="tripList">
+                    <li>07/18(Sat)</li>
+                    <li>遊<ol></ol></li>
+                    <li>食<ol></ol></li>
+                    <li>宿<ol></ol></li>
+                </ul>
+                <div class="totalBlock">
+                    <div class="totalTitle">
+                        <span>小計：</span><br>
+                        <span>折扣碼：</span><br>
+                        <span>折扣金額：</span><br>
+                        <span>總金額：</span><br>
+                    </div>
+                    <div class="totalPrice">
+                        <span>$32,186</span><br>
+                        <select name="" id="">
+                            <option value="">Long_bro_only_9453</option>
+                            <option value="">NewMember</option>
+                        </select><br>
+                        <span id="couponPrice">-$16,093</span><br>
+                        <span>$16,093</span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="payBlock">
+                <h4>PayMent</h4>
+                <h5>E-Mail</h5>
+                <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <div class="phoneBlock">
+                    <div class="phone">
+                        <h5>連絡電話</h5>
+                        <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+                    </div>
+                    <p>我們將會發送確認的驗證碼郵件。<br>
+                        *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
+                </div>
+
+                <div class="nameBlock">
+                    <div class="firstName">
+                        <h5>姓氏</h5>
+                        <input type="text" name="" id="firstName">
+                    </div>
+                    <div class="lastName">
+                        <h5>名字</h5>
+                        <input type="text" name="" id="lastName">
+                    </div>
+                    <div class="payWay">
+                        <h5>付款方式</h5>
+                        <select name="" id="payWay">
+                            <option value="">信用卡</option>
+                            <option value="">匯款</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="creditCardBlock">
+                    <h4>輸入信用卡</h4>
+                    <h5>輸入卡號</h5>
+                    <div class="creditCardNums">
+                        <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                    </div>
+                    <div class="expAndScode">
+                        <div class="exp">
+                            <h5>有效日期</h5>
+                            <input type="month" name="" id="">
+                        </div>
+                        <div class="Scode">
+                            <h5>安全碼</h5>
+                            <input type="text" maxlength="3" oninput = "value=value.replace(/[^\d]/g,'')">
+                        </div> 
+                    </div>
+                </div>
+                <div class="directions">
+                    <p>訂房注意事項<br>
+                        <br>
+                        ◎ 90 公分以下孩童加人不加床，酌收300元/人＜每房僅限一位＞，加棉被一件500元。
+                        ◎ 90公分以上 --- 佔床（或加床）含早餐，加第一人每人加收1,000元，加二人合收1,500元。<br>
+                        <br>
+                        1. 房價已含服務費及早餐。<br>
+                        2. 訂房時請確認人數，為維護住房品質，入宿當天無法提供臨時任何加床或加寢具之服務須在訂房時告知，請您務必配合依訂房人數入住。<br>
+                        3. 如有超住人數，明島有權拒絕房客當天入住，並收取50%房費作為山居留房至當日之損失，特此說明。<br>
+                        4. 當日住宿者若無法於當日下午三點~五點前抵達Chick in，請務必提早告知！明島有權不再保留訂房！並且當日訂金無法退還！<br>
+                        5. 為維持房客住房品質，客房內嚴禁炊煮；嚴禁酗酒喧鬧。若有類似情事發生，經人員勸導無效，可要求房客立即退房，房費並不予退還。<br>
+                        6. 因安全顧慮，室內禁止吸禁，嚴禁炊煮、烤肉及攜帶寵物。(若在房間抽菸將收1,000元清潔費)<br>
+                        7. 禁止使用非客房配置之任何電器用品及瓦斯器具，以免發生危險。<br>
+                    </p>
+                    <div class="agreeListOne">
+                        <input type="checkbox" name="" id="">
+                        <p>我同意收到電子最新消息和優惠</p>
+                    </div>
+                    <div class="agreeListTwo">
+                        <input type="checkbox" name="" id="">
+                        <p>我同意隱私條款與預訂政策和條件</p>
+                    </div>
+                    <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
+                </div>
+            </div>
+            <button id="FinishPage">完成結帳</button>
+        </section>
+    </article>
+    <footer></footer>
+</body>
+</html>
