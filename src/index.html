@@ -1,12 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>明島 Sunoom</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <header>
+        <div class="wrapper">
+            <!-- index main sun & moon video intro -->
+            <div class="index_video">
+                <video controls poster="./img/index_main_videobn.png" autoplay loop muted controls playsinline muted
+                    video>
+                    <source src="./img/index/index_main_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <nav>
+                <div class="hamburger">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+                <img src="./img/sunoomLOGO_white.png" alt="sunoomLogo">
+                <div class="main_button">
+                    <div class="book_button">
+                        <a href="#">立即訂購</a>
+                    </div>
+                    <img src="./img/sun_button.png">
+                </div>
+
+
+            </nav>
+            <div class="switchText">
+                <p>Click Button Switch To The Night</p><i class="fa-thin fa-arrow-up-right"></i>
+            </div>
+            <h1>日月の島</h1>
+            <h2>大自然不可思議的奇蹟
+                <br>為綺麗晝夜傾倒
+            </h2>
+        </div>
+    </header>
+    <main>
+        <section class="parallax">
+            <h3>Sunoom</h3>
+            <!-- <img src="./img/index/muntain_bg01.png"> -->
+            <img src="./img/index/muntain_bg02.png" class="muntain01">
+            <!-- <img src="./img/index/tree01.png">
+            <img src="./img/index/tree02.png">
+            <img src="./img/index/tree03.png">
+            <img src="./img/index/sun.png">
+            <img src="./img/index/cloud.png">
+            <img src="./img/index/cloud02.png">
+            <img src="./img/index/bird.png"> -->
+        </section>
+        <section class="news">
+            <div class="news_title">
+                <h4>お知らせ</h4>
+                <h3>NEWS</h3>
+            </div>
+            <div class="news_text">
+                <p>2022年5月10日&emsp;&emsp;月島沙灘的一日海灘淨灘活動開始囉！歡迎遊客自由參與 \^o^/</p>
+                <p>2022年6月10日&emsp;&emsp;【明島速報】日島南邊小鹿島的超人氣明星『 一鹿』生了小寶寶！</p>
+                <p>2022年7月15日&emsp;&emsp;罕見！誓言花道的冰山小蒼蘭移植成功，花期短暫一定要來看哦！</p>
+            </div>
+        </section>
+        <section class="category">
+            <div class="wrapper">
+                <h3>Category</h3>
+                <ul>
+                    <li class="FoodSea">
+                        <img src="./img/index/category_food_img.png" alt="foodImg">
+                        <img class="cloud01" src="./img/index/cloud.png" alt="cloud">
+                        <div class="foodSeaText">
+                            <h3>食</h3>
+                            <div class="draw01"></div>
+                            <div class="draw02"></div>
+                            <div class="draw03"></div>
+                            <div class="draw04"></div>
+                            <div class="draw05"></div>
+                            <p>在明島可以享用到米其林星級主廚為您製作的餐點，選用最新鮮、高檔的食材，來豐富你旅程的每一天！</p>
+                            <p>Good food is like friendship rich, and warm. Happy food promotes a happy life.</p>
+                            <div class="comments_area">
+                                <div>
+                                    <p><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        (158則評論)
+                                    </p>
+                                    <a><i class="fa-solid fa-circle-plus"></i>More Comments</a>
+                                </div>
+                                <a class=viewButton href="#">View More</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="LiveLand">
+                        <img src="./img/index/category_live_img.png" alt="foodImg">
+                        <!-- <img class="cloud01" src="./img/index/cloud.png" alt="cloud"> -->
+                        <div class="LiveLandText">
+                            <h3>住</h3>
+                            <div class="draw01"></div>
+                            <div class="draw02"></div>
+                            <div class="draw03"></div>
+                            <div class="draw04"></div>
+                            <div class="draw05"></div>
+                            <p>在明島，有三種住宿方式，海上渡假村、森林小木屋、美景露營，小朋友才做選擇，您可以全都要，快來預約看看吧。</p>
+                            <p>The most luxurious resort is here for you to enjoy.Plan a romantic getaway.</p>
+                            <div class="comments_area">
+                                <div>
+                                    <p><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        (158則評論)
+                                    </p>
+                                    <a><i class="fa-solid fa-circle-plus"></i>More Comments</a>
+                                </div>
+                                <a class=viewButton href="#">View More</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="FoodSea">
+                        <img src="./img/index/category_seatour_img.png" alt="SeaImg">
+                        <div class="foodSeaText">
+                            <h3>海</h3>
+                            <div class="draw01"></div>
+                            <div class="draw02"></div>
+                            <div class="draw03"></div>
+                            <div class="draw04"></div>
+                            <div class="draw05"></div>
+                            <p>不管是愛拍照的網美、熱愛探索海洋的潛水客，或喜愛慢步調欣賞大自然生態者、熱愛刺激和極限運動的冒險家。各種不同玩法，都能在明島找到專屬自己的行程。</p>
+                            <p>The Deeper You Go, The Cooler It Gets.Keep calm and Dive on.</p>
+                            <div class="comments_area">
+                                <div>
+                                    <p><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        (158則評論)
+                                    </p>
+                                    <a><i class="fa-solid fa-circle-plus"></i>More Comments</a>
+                                </div>
+                                <a class=viewButton href="#">View More</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="LiveLand">
+                        <img src="./img/index/category_landtour_img.png" alt="foodImg">
+                        <!-- <img class="cloud01" src="./img/index/cloud.png" alt="cloud"> -->
+                        <div class="LiveLandText">
+                            <h3>陸</h3>
+                            <div class="draw01"></div>
+                            <div class="draw02"></div>
+                            <div class="draw03"></div>
+                            <div class="draw04"></div>
+                            <div class="draw05"></div>
+                            <p>在明島，有三種住宿方式，海上渡假村、森林小木屋、美景露營，但小朋友才做選擇，您可以全都要，快來預約看看吧。</p>
+                            <p>Keep close to Nature’s heart and break clear away, once in awhile, and climb a mountain.
+                            </p>
+                            <div class="comments_area">
+                                <div>
+                                    <p><i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        (158則評論)
+                                    </p>
+                                    <a><i class="fa-solid fa-circle-plus"></i>More Comments</a>
+                                </div>
+                                <a class="viewButton" href="#">View More</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="instagram">
+            <div class="wrapper">
+
+                <i class="fa-brands fa-instagram"></i>
+                <h4 class="igAccount">@sunoomisland</h4>
+                <ul class="instagramPhoto">
+                    <li>
+                        <img src="../src/img/index/instagram_img01.png">
+                        <img src="../src/img/index/instagram_img02.png">
+                        <img src="../src/img/index/instagram_img03.png">
+                    </li>
+                    <li>
+                        <img src="../src/img/index/instagram_img04.png">
+                        <img src="../src/img/index/instagram_img05.png">
+                        <img src="../src/img/index/instagram_img06.png">
+                        <img src="../src/img/index/instagram_img07.png">
+                    </li>
+                    <li>
+                        <img src="../src/img/index/instagram_img08.png">
+                        <img src="../src/img/index/instagram_img09.png">
+                        <img src="../src/img/index/instagram_img10.png">
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrapper">
+
+        </div>
+    </footer>
 </body>
+
 </html>
