@@ -2,16 +2,16 @@ body {
   background-color: #F5F0DD;
   box-sizing: border-box;
   color: #0C1244;
+  line-height: 1.6;
+  letter-spacing: 3px;
 }
 
 main {
-  border: 1px solid firebrick;
   margin: 0 auto;
   color: #0C1244;
 }
 
 .wrapper {
-  border: 1px solid black;
   width: 1080px;
   margin: 0 auto;
 }
@@ -31,20 +31,17 @@ h3 {
 }
 
 .setTopNav {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
 }
-.setTopNav li {
-  border: 1px solid rebeccapurple;
-  text-align: center;
-  margin-left: 65px;
-}
 .setTopNav li:first-child {
   margin-left: 0;
 }
-
+.setTopNav li {
+  text-align: center;
+  margin-left: 50px;
+}
 .wrapper .setLogin {
   display: block;
   text-align: center;
@@ -59,7 +56,7 @@ h3 {
 
 .setMain {
   margin-top: 60px;
-  border: 1px solid #ccc;
+  border: 1px solid #0C1244;
   display: flex;
   width: 1080px;
   height: 543px;
@@ -67,22 +64,16 @@ h3 {
   justify-content: space-between;
 }
 .setMain .setPic {
-  border: 1px solid green;
   padding: 65px;
 }
 .setMain .setPic > img {
   margin-bottom: 10px;
 }
-.setMain .setPic .setPicS {
-  border: 1px solid #fff;
-}
 .setMain .setPic .setPicS > img:nth-child(2) {
-  border: 1px solid red;
-  margin: 0 10px;
+  margin: 0 7px;
 }
 .setMain .setText {
   display: block;
-  border: 1px solid navy;
   width: 471px;
   height: 357px;
   padding: 65px;
@@ -92,11 +83,11 @@ h3 {
 .setMain .setText .setTextPic {
   position: absolute;
   right: 64px;
-  top: 64px;
+  top: 130px;
 }
 .setMain .setText h4 {
   text-align: left;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .setMain .setText h5 {
   margin-bottom: 20px;
@@ -107,19 +98,15 @@ h3 {
 }
 .setMain .setText .setTextWord {
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 30px;
 }
 .setMain .setText .setTextWord2 {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .setMain .setText .setTextBotm {
-  border: 1px solid royalblue;
   display: flex;
   justify-content: space-between;
-}
-.setMain .setText .setTextBotm .stbS {
-  border: 1px solid darkgreen;
 }
 .setMain .setText .setTextBotm .stbS p {
   margin: 0;
@@ -136,8 +123,18 @@ h3 {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background-color: #0C1244;
+  color: #0C1244;
+  background-color: #F5F0DD;
+}
+.setMain .setText .setTextBotm .setBook:hover {
+  cursor: pointer;
   color: #F5F0DD;
+  border: 1.5px solid #F5F0DD;
+  background-color: #0C1244;
+}
+
+.setMain:last-child {
+  margin-bottom: 100px;
 }
 
 /*# sourceMappingURL=set.css.map */
