@@ -122,8 +122,8 @@ main{
                         line-height: 50px;
                         color: $moon_color;
                         margin-left: auto;
-    
                         &:hover {
+                            cursor: pointer; 
                             background-color: $moon_color;
                             color: $sun_color;
                         }
