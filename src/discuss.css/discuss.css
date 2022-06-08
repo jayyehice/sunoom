@@ -1,0 +1,756 @@
+@import url(reset.css);
+
+body{
+    font-family: Noto Sans CJK;
+    background-color: #f5f0dd;
+    margin: 0 auto; 
+
+}
+
+.wrapper{
+    margin: 0 auto;
+    width:1280px;
+    padding: 0;
+}
+
+h1{
+    /* border:1px solid red; */
+    text-align: center;
+    font-size: 32px;
+    color:#0C1244
+}
+
+
+/* 麵包屑區塊的css */
+.breadcrumb{
+    /* border:1px solid red; */
+    background-color: #D9D9D9;
+    padding:5px 10px;
+}
+
+.breadcrumb-list{
+    /* border:1px solid red; */
+    list-style: none;
+}
+
+.breadcrumb-list > li{
+    /* border:1px solid red; */
+    display:inline-block;
+    margin-right: 10px;
+    color:#000000;
+}
+
+.breadcrumb-list > li::before{
+    /* border:1px solid red; */
+    content:"/";
+    color:black;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.breadcrumb-list > li:first-child::before{
+    content:"";
+    margin-right: 0;
+}
+
+.breadcrumb-list > li a{
+    text-decoration: none;
+    display:inline-block;
+    color:#000000;
+}
+
+.breadcrumb-list > li a:hover{
+    color:#000000;
+}
+
+/* 官方文章區塊 */
+/* banner_1圖片部分 */
+.official_article{
+    /* border:1px solid red; */
+    display: flex;
+    width:100%;
+    
+}
+.official_article .banner_1{
+    /* border:1px solid red; */
+    width:520px;
+    margin: 0px 40px 0px 100px;
+}
+
+.official_article .banner_1 img{
+    /* border:1px solid red; */
+    width: 100%;
+    height:519px;
+}
+
+.official_article .banner_1 a{
+    text-decoration: none;
+}
+
+.official_article .banner_1 .text_1{
+    position: relative;
+    bottom: 260px;
+    left: 100px;
+    color:white;
+    font-size:32px;
+    height:0px;
+}
+
+/* banner_2圖片區域 */
+.official_article .banner_2{
+    /* border:1px solid red; */
+    width:525px;
+}
+
+/* photo_1區域 */
+.official_article .banner_2 .photo_1{
+    /* border:1px solid red; */
+    width: 520px;
+}
+
+.official_article .banner_2 .photo_1 img{
+    /* border:1px solid red; */
+    width:100%;
+    height:240px;
+}
+
+.official_article .banner_2 .photo_1 a{
+    text-decoration: none;
+}
+
+.official_article .banner_2 .photo_1 .text_2{
+    /* border:1px solid red; */
+    width: 300px;
+    position: relative;
+    bottom: 135px;
+    left: 110px;
+    font-size: 32px;
+    color:white;
+}
+
+/* photo_2區域 */
+.official_article .banner_2 .photo_2{
+    /* border:1px solid red; */
+    width:520px;
+}
+
+.official_article .banner_2 .photo_2 img{
+    /* border:1px solid red; */
+    width:100%;
+    height:240px;
+}
+
+.official_article .banner_2 .photo_2 a{
+    text-decoration: none;
+}
+
+.official_article .banner_2 .photo_2 .text_3{
+    /* border:1px solid red; */
+    width:300px;
+    font-size: 32px;
+    color:white;
+    position:relative;
+    bottom: 140px;
+    left:165px
+}
+
+.official_article .banner_2 .more{
+    border: 1px solid #0C1244;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 378px;
+    margin-bottom:50px;
+}
+
+.official_article .banner_2 .more a{
+    text-decoration: none;
+    padding:20px 30px 20px 30px;
+}
+
+.official_article .banner_2 .more .text_4{
+    color:#0C1244;
+    font-size: 16px;
+}
+
+/* 文章列表區域 */
+hr{
+    width: 1080px;
+}
+
+h2{
+    /* border:1px solid red; */
+    width:105px;
+    font-size: 24px;
+    color:#0C1244;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+/* 文章列表上半部 */
+
+.article .article_type{
+    /* border:1px solid red; */
+    width:1080px;
+    margin-left:100px;
+}
+
+.article .article_type ul{
+    /* border:1px solid red; */
+    display: flex;
+}
+
+.article .article_type ul li{
+    border:1px solid #0C1244;
+    width:180px;
+    height:100px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+}
+
+.article .article_type ul li a{
+    color:#0C1244;
+    text-decoration: none;
+    padding:36px;
+    position: relative;
+    top: 40px;
+}
+
+.article .article_type ul .li-5{
+margin-left: 170px;
+}
+
+/* 文章列表下半部 */
+
+/* 以下是第一項的css */
+/* .solid{ */
+    /* border:1px solid red; */
+    /* display: none; */
+/* } */
+
+.article_list{
+    border:1px solid #0C1244;
+    width:1080px;
+    margin-left: 100px;
+    /* display: block; */
+}
+
+.article_text{
+    /* border: 1px solid #0C1244; */
+    /* border-bottom: 1px solid #0C1244; */
+    height:164px;
+    /* display:none; */
+}
+
+.article_text a{
+    /* border: 1px solid red; */
+    display: flex;
+    height:164px;
+    text-decoration: none;
+    /* display:none; */
+}
+
+.article_list .img_1{
+    /* border:1px solid red; */
+    width:161px;
+    height:97px;
+    margin-left:36px;
+    margin-top: 30px;
+    /* display:none; */
+}
+
+.article_list .img_1 img{
+    width:100%;
+    height:97px;
+    /* display:none; */
+}
+
+.article_list .content{
+    /* border:1px solid red; */
+    width:800px;
+}
+
+.article_list .content .title{
+    /* border:1px solid red; */
+    margin-top: 40px;
+    margin-left: 25px;
+    font-size:20px;
+    color:#0C1244;
+}
+
+.article_list .content .comment{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 16px;
+    color:#0C1244;
+}
+
+.article_list .content .icons{
+    /* border:1px solid red; */
+    display: flex;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.article_list .content .icons .icon-1{
+    /* border:1px solid red; */
+    display: flex;
+    margin-right: 445px;
+}
+
+.article_list .content .icons .icon-1 img{
+    width:18px;
+    height:17;
+    margin-right:5px;
+}
+
+.article_list .content .icons .icon-1 .span1{
+    margin-top: 3px;
+    font-size: 16px;
+    color:#0C1244;
+}
+
+.article_list .content .icons .icon-2{
+    /* border:1px solid red; */
+    display: flex;
+    margin-right: 20px;
+}
+
+.article_list .content .icons .icon-2 img{
+    width:18px;
+    height:18;
+    margin-right:5px;
+}
+
+.article_list .content .icons .icon-2 .span2{
+    margin-top: 3px;
+    font-size: 16px;
+    color:#0C1244;
+}
+
+.article_list .content .icons .icon-3{
+    /* border:1px solid red; */
+    display: flex;
+}
+
+.article_list .content .icons .icon-3 img{
+    width:18px;
+    height:18;
+    margin-right:5px;
+}
+
+.article_list .content .icons .icon-3 .span3{
+    margin-top: 3px;
+    font-size: 16px;
+    color: #0C1244;
+}
+
+/* 彈窗部分的CSS */
+
+.pop-up{
+    border:1px solid rgb(170, 170, 170);
+    padding-top: 20px;
+    padding-bottom: 80px;
+    margin-top: 0px;
+    margin-left: 200px;
+    width:880px;
+    position: relative;
+    bottom: 1420px;
+    z-index: 3;
+    background-color: #f5f0dd;
+    display: none;
+    /* display:block */
+}
+
+.pop-up .disappear{
+    /* border: 1px solid red; */
+    margin-left: 835px;
+}
+
+.pop-up .icons{
+    /* border:1px solid red; */
+    display: flex;
+    width: 802px;
+    margin-left: 37px;
+}
+
+.pop-up .icons .icon-1{
+    display: flex;
+    margin-right: 20px;
+}
+
+.pop-up .icons .icon-1 .span1{
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.pop-up .icons .icon-2{
+    display: flex;
+}
+
+.pop-up .icons .icon-2 .span2{
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.hr1{
+    width:802px;
+}
+
+.pop-up .icons2{
+    /* border:1px solid red; */
+    display: flex;
+    width: 802px;
+    margin-left: 37px;
+    margin-bottom: 10px;
+}
+
+.pop-up .icons2 .span3{
+    /* border:1px solid red; */
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.pop-up .discuss-region{
+    /* border:1px solid red; */
+    display: flex;
+    width:802px;
+    margin-left: 37px;
+    margin-bottom: 40px;
+}
+
+.pop-up .discuss-region .comment-region{
+    border:1px solid #0C1244;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.hr2{
+    width:878px;
+}
+
+/* 評論區的css */
+.task_container{
+    /* border:1px solid red; */
+}
+
+.task_container .title1{
+    font-size: 24px;
+    margin-top: 25px;
+    margin-left: 35px;
+}
+
+.task_container .task_add_block{
+    /* border:1px solid red; */
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 0;
+    transition: transform .5s, box-shadow .5s;
+}
+
+.task_container .task_add_block .-on{
+    box-shadow: 0 0 5px gray;
+    transform: scale(1.01);
+    transform-origin: center center;
+}
+
+.task_container .task_add_block .task_name{
+    /* border:1px solid red; */
+    width: calc(100% - 60px);
+    border: 1px solid lightgray;
+    border-radius: 3px 0 0 3px;
+    height: 120px;
+    font-size: 20px;
+    padding: 5px 10px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.task_container .task_add_block .task_name::placeholder{
+    color: lightgray;
+}
+
+.task_container .task_add_block .task_add{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 141px;
+    height: 52px;
+    margin-left: 666px;
+    margin-top: 20px;
+    vertical-align: top;
+    border: 1px solid lightgray;
+    border-left: 0;
+    background-color: white;
+    box-shadow: none;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.task_container .task_add_block .task_add:active{
+    box-shadow: 1px 1px 3px lightgray inset, -1px -1px 3px lightgray inset;
+    background-color: #fcfcfc;
+    /* font-size: 1.5rem; */
+}
+
+  /* ===== 討論列表 ===== */
+
+.task_container .task_list_parent{
+    /* border:1px solid red; */
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.task_container .task_list_parent .task_list{
+    /* border:1px solid red; */
+    margin: 0;
+    margin-right: 42px;
+    padding: 0;
+    list-style: none;
+}
+
+.task_container .task_list_parent .task_list > li{
+    /* border:1px solid red; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.task_container .task_list_parent .task_list > li.fade_out {
+    opacity: 0;
+}
+
+.task_container .task_list_parent .task_list > li:first-child{
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+.task_container .task_list_parent .task_list > li:first-child button.btn_up{
+    /* border:1px solid red; */
+    background-color: lightgray !important;
+    cursor: not-allowed !important;
+    color: gray;
+}
+
+.task_container .task_list_parent .task_list > li:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.task_container .task_list_parent .task_list > li:last-child button.btn_down {
+    /* border:1px solid red; */
+    background-color: lightgray !important;
+    cursor: not-allowed !important;
+    color: gray;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex{
+    /* border:1px solid red; */
+    display: flex;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > div{
+      /* border: 1px solid blue; */
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .left_block{
+    /* border:1px solid red; */
+    width: 0px;
+    flex-shrink: 0;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .left_block .btn_flex {
+    display: flex;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .left_block .btn_flex > button{
+    flex-grow: 1;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  
+    background: none;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .middle_block{
+    font-size: 1.8rem;
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .middle_block .para {
+    margin: 0;
+    font-size: 16px;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .right_block{
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .right_block .btn_flex{
+    display: flex;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .right_block .btn_flex > button{
+    flex-grow: 1;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  
+    background: none;
+    background-color:#faeab1;
+    border: 0;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .middle_block .task_name_update{
+    /* border:1px solid red; */
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 3px 0 0 3px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.task_container .task_list_parent .task_list > li >.item_flex > .middle_block .task_name_update::placeholder{
+    color: lightgray;
+}
+
+.-none {
+    display: none;
+}
+
+
+/* 討論區-彈窗-發表新文章 */
+/* 表單部分 */
+.form_region{
+    border:1px solid #0C1244;
+    background-color:#f5f0dd;
+    z-index: 3;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    margin-top: 0px;
+    margin-left: 200px;
+    width:880px;
+    display: none;
+    position: relative;
+    bottom: 820px;
+}
+
+.form_region .title2{
+    /* border: 1px solid red; */
+    font-size: 32px;
+    color: #0C1244;
+    margin-left: 20px;
+}
+
+.form_region .form_region1{
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form_region .form_region1 .name1{
+    margin-right: 25px;
+}
+
+.form_region .form_region1 .write1{
+    height:50px;
+    width:662px;
+    font-size: 24px;
+}
+
+.form_region .form_region2{
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form_region .form_region2 .name2{
+    /* border:1px solid red; */
+    margin-right: 25px;
+}
+
+.form_region .form_region2 .choose{
+    height:50px;
+    width:251px;
+}
+
+.form_region .form_region3{
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.form_region .form_region3 .name3{
+    /* border:1px solid red; */
+    margin-right: 25px;
+}
+
+.form_region .form_region4{
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.form_region .form_region4 .name4{
+    /* border:1px solid red; */
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.form_region .form_region4 .write2{
+    /* border:1px solid red; */
+    height:470px;
+    width:801px;
+    max-height:470px;
+    max-width:801px;
+    resize: none;
+}
+
+.form_region .form_region5{
+    /* border:1px solid red; */
+    margin-left: 697px;
+}
+
+.form_region .form_region5 .button{
+    width:140px;
+    height:50px;
+    font-size: 20px;
+}
+
+.form_region .disappear2{
+    /* border:1px solid red; */
+    margin-left: 832px;
+}
