@@ -1,4 +1,4 @@
-@import url("reset.css");
+@charset "UTF-8";
 html {
   font-size: 6.25%;
   font-family: Noto Sans TC;
@@ -34,8 +34,35 @@ p {
   font-size: 16rem;
 }
 
-.wrapper {
-  width: 1180px;
+/* RWD 576px以下字型大小 */
+@media screen and (max-width: 575.98px) {
+  h1 {
+    font-size: 40rem;
+  }
+
+  h2 {
+    font-size: 36rem;
+  }
+
+  h3 {
+    font-size: 28rem;
+  }
+
+  h4 {
+    font-size: 24rem;
+  }
+
+  h5 {
+    font-size: 20rem;
+  }
+
+  h6 {
+    font-size: 12rem;
+  }
+
+  p {
+    font-size: 16rem;
+  }
 }
 
 /*# sourceMappingURL=common.css.map */
