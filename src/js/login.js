@@ -1,17 +1,21 @@
-$(function(){
+$(document).ready(function(){
     
-    $(".registerBtn").on("click",function(){
+    $(".registerBtn").click(function(e){
         // alert("hello")
-        $(".member_left").hide()
+        $(".member_left").hide();
         $(".member_right").show();
+        // 停止預設行為
+        e.preventDefault();
+
 
     });
 
-    $(".loginBtn").on("click",function(){
+    $(".loginBtn").click(function(e){
         // alert("hello")
-        $(".member_right").hide()
+        $(".member_right").hide();
         $(".member_left").show();
-
+        // 停止預設行為
+        e.preventDefault();
     });
 
 });

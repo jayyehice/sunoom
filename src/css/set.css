@@ -6,7 +6,6 @@ body {
 
 main {
   border: 1px solid firebrick;
-  width: 1280px;
   margin: 0 auto;
   color: #0C1244;
 }
@@ -24,12 +23,10 @@ main {
 
 p {
   margin-top: 17px;
-  margin-left: 100px;
 }
 
 h3 {
   margin-top: 62px;
-  margin-left: 100px;
   margin-bottom: 55px;
 }
 
@@ -42,7 +39,7 @@ h3 {
 .setTopNav li {
   border: 1px solid rebeccapurple;
   text-align: center;
-  margin-left: 25px;
+  margin-left: 65px;
 }
 .setTopNav li:first-child {
   margin-left: 0;

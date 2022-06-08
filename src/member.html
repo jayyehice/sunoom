@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>會員專區</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/member.css">
+    <title>會員專區</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 </head>
 <body>
 
@@ -24,10 +25,10 @@
             <ul class="memberPage">
                 <li><a href="#basicData">基本資料</a></li>
                 <li><a href="#changePwd">密碼修改</a></li>
-                <li><a href="#">訂單查詢</a></li>
+                <li><a href="#orderCheck">訂單查詢</a></li>
             </ul>
 
-            <div id="basicData" class="basicData">
+            <div id="basicData" class="memberInner basicData">
                 <input type="file" name="" id="">
 
                 <form class="memberForm" method="" action="">
@@ -52,7 +53,7 @@
 
             </div>
 
-            <div id="changePwd" class="changePwd">
+            <div id="changePwd" class="memberInner changePwd">
 
                 <form class="pwdForm" method="" action="">
               
@@ -76,7 +77,7 @@
 
             </div>
 
-            <div id="orderCheck" class="orderCheck">
+            <div id="orderCheck" class="memberInner orderCheck">
                 <table>
                     <thead>
                         <tr>
@@ -109,5 +110,6 @@
        </div>
    </main>
     
+   <script src="./js/member.js"></script>
 </body>
 </html>

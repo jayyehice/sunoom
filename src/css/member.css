@@ -1,19 +1,18 @@
 body {
   background-color: #F5F0DD;
   border: 1px solid black;
-  box-sizing: border-box;
+  color: #0C1244;
 }
 
 main {
   border: 1px solid firebrick;
-  width: 1280px;
   margin: 0 auto;
   color: #0C1244;
 }
 
 .wrapper {
   border: 1px solid black;
-  width: 1063px;
+  width: 1080px;
   margin: 0 auto;
 }
 .wrapper a {
@@ -24,7 +23,6 @@ main {
 
 p {
   margin-top: 17px;
-  margin-left: 100px;
 }
 
 h3 {
@@ -45,12 +43,10 @@ h3 {
 }
 
 .memberPage {
-  border-left: 1px solid #0C1244;
-  border-right: 1px solid #0C1244;
-  border-bottom: 1px solid #0C1244;
+  width: 1063px;
+  margin: 0 auto;
   clear: both;
   display: flex;
-  height: 900px;
   border-radius: 0px 0px 46px 46px;
 }
 .memberPage li {
@@ -62,15 +58,27 @@ h3 {
   text-align: center;
   line-height: 100px;
   justify-items: center;
+  color: #0C1244;
 }
-.memberPage a {
+.memberPage li a {
   display: block;
   text-align: center;
 }
+.memberPage li :hover {
+  color: #F5F0DD;
+  background-color: #0C1244;
+  border-radius: 29px 29px 0 0;
+}
 
 .basicData {
-  border: 1px solid royalblue;
+  width: 1063px;
+  margin: 0 auto;
+  height: 900px;
   text-align: center;
+  border-left: 1px solid #0C1244;
+  border-right: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
+  padding-top: 100px;
 }
 .basicData label {
   font-size: 24rem;
@@ -99,7 +107,15 @@ h3 {
 }
 
 .changePwd {
+  display: none;
   text-align: center;
+  width: 1063px;
+  margin: 0 auto;
+  height: 900px;
+  border-left: 1px solid #0C1244;
+  border-right: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
+  padding-top: 100px;
 }
 .changePwd .pwdForm label {
   font-size: 24rem;
@@ -129,6 +145,16 @@ h3 {
   margin-bottom: 10px;
 }
 
+.orderCheck {
+  display: none;
+  width: 1063px;
+  margin: 0 auto;
+  height: 900px;
+  border-left: 1px solid #0C1244;
+  border-right: 1px solid #0C1244;
+  border-bottom: 1px solid #0C1244;
+  padding-top: 100px;
+}
 .orderCheck table {
   border: 1px solid #0C1244;
   width: 960px;

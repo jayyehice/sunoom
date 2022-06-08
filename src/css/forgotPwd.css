@@ -1,0 +1,74 @@
+body {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+main {
+  border: 1px solid firebrick;
+  margin: 0 auto;
+  color: #0C1244;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+p {
+  margin-top: 17px;
+}
+
+h3 {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.forgotMain {
+  width: 618px;
+  margin: 0 auto;
+}
+.forgotMain h4 {
+  text-align: center;
+}
+.forgotMain .forgotForm {
+  border: 1px solid red;
+  text-align: center;
+  margin-top: 50px;
+}
+.forgotMain .forgotForm label {
+  font-size: 24rem;
+}
+.forgotMain .forgotForm .forgotFormInput {
+  width: 400px;
+  height: 50px;
+  background-color: #F5F0DD;
+  margin: 15px 0;
+}
+.forgotMain .forgotForm .forgotFormBtn {
+  background-color: #F5F0DD;
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #0C1244;
+  margin-bottom: 10px;
+}
+.forgotMain .forgotForm a {
+  font-size: 20rem;
+}
+.forgotMain .forgotForm .reminder {
+  margin-top: 150px;
+}
+.forgotMain .forgotForm .reminderText {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+/*# sourceMappingURL=forgotPwd.css.map */
