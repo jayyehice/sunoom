@@ -5,13 +5,13 @@
 body{
     background-color: #F5F0DD;
     border: 1px solid black;
-    // color: #0C1244;
-    box-sizing: border-box;
+    color: #0C1244;
+    // box-sizing: border-box;
 }
 
 main{
     border: 1px solid firebrick;
-    width: 1280px;
+    // width: 1280px;
     margin: 0 auto;
     // background-color: #F5F0DD;
     color: #0C1244;
@@ -19,7 +19,7 @@ main{
 
 .wrapper{
     border: 1px solid black;
-    width: 1063px;
+    width: 1080px;
     margin: 0 auto;
     // display: flex;
 
@@ -32,7 +32,7 @@ main{
 
 p{
     margin-top: 17px;
-    margin-left: 100px;
+    // margin-left: 100px;
 
 }
 
@@ -59,14 +59,16 @@ h3{
 // 主區塊
 .memberPage{
     // border: 1px solid #0C1244;
-    border-left: 1px solid #0C1244;
-    border-right: 1px solid #0C1244;
-    border-bottom: 1px solid #0C1244;
+    width: 1063px;
+    margin: 0 auto;
+    // border-left: 1px solid #0C1244;
+    // border-right: 1px solid #0C1244;
+    // border-bottom: 1px solid #0C1244;
     // 還要再包一層XD 現在的ul區塊會凸出來
 
     clear: both;
     display: flex;
-    height: 900px;
+    // height: 900px;
     border-radius: 0px 0px 46px 46px;
 
     li{
@@ -78,14 +80,25 @@ h3{
         text-align: center;
         line-height: 100px;
         justify-items: center;
+        color: #0C1244;
 
+
+        a{
+            display: block;
+            text-align: center;
+    
+        }
+
+        :hover{
+            color: #F5F0DD;
+            background-color: #0C1244;
+            border-radius: 29px 29px 0 0;
+        }
+        
     }
+    
 
-    a{
-        display: block;
-        text-align: center;
 
-    }
 }
 
 
@@ -94,10 +107,15 @@ h3{
 // 第1分頁
 .basicData{
     // clear: both;
-    border: 1px solid royalblue;
-    // width: 1063px;
-    // margin: 0 auto;
+    width: 1063px;
+    margin: 0 auto;
+    height: 900px;
     text-align: center;
+
+    border-left: 1px solid #0C1244;
+    border-right: 1px solid #0C1244;
+    border-bottom: 1px solid #0C1244;
+    padding-top: 100px;
 
     //先消失
     // display: none;
@@ -142,8 +160,16 @@ h3{
 
 // 第2分頁
 .changePwd{
-    // display: none;
+    display: none;
     text-align: center;
+    width: 1063px;
+    margin: 0 auto;
+    height: 900px;
+
+    border-left: 1px solid #0C1244;
+    border-right: 1px solid #0C1244;
+    border-bottom: 1px solid #0C1244;
+    padding-top: 100px;
 
     .pwdForm{
 
@@ -193,7 +219,15 @@ h3{
 
 // 第3分頁
 .orderCheck{
-    // display: none;
+    display: none;
+    width: 1063px;
+    margin: 0 auto;
+    height: 900px;
+
+    border-left: 1px solid #0C1244;
+    border-right: 1px solid #0C1244;
+    border-bottom: 1px solid #0C1244;
+    padding-top: 100px;
 
     table{
         border: 1px solid #0C1244;

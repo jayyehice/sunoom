@@ -10,15 +10,15 @@ body{
 
 main{
     border: 1px solid firebrick;
-    width: 1280px;
+    // width: 1280px;
     margin: 0 auto;
     // background-color: #F5F0DD;
     color: #0C1244;
 }
 
 .wrapper{
-    // border: 1px solid black;
-    width: 1180px;
+    border: 1px solid black;
+    width: 1080px;
     margin: 0 auto;
     display: flex;
 
@@ -31,7 +31,7 @@ main{
 
 p{
     margin-top: 17px;
-    margin-left: 100px;
+    margin-left: -40px;
 
 }
 
@@ -71,6 +71,7 @@ h3{
     
         span{
             font-size: 24rem;
+            margin: 0 45px;
         }
     
     }
@@ -81,7 +82,7 @@ h3{
         label{
             font-size: 24rem;
             display: inline-block;
-            margin-right: 55px;
+            margin-right: 40px;
         
         }
         
@@ -109,6 +110,11 @@ h3{
             margin: 0 auto;
             border: 1px solid #0C1244;
             margin-bottom: 30px;
+
+            &:hover{
+
+
+            }
         }
     }
     
@@ -168,7 +174,7 @@ h3{
         label{
             font-size: 24rem;
             display: inline-block;
-            margin-right: 69px;
+            margin-right: 40px;
         
         }
         
@@ -196,12 +202,15 @@ h3{
         }
     
         .pwdSureText{
-            margin-right: 21px;
+            // margin-right: 21px;
+            margin-left: -47px;
+
     
     
         }
     
         .pwdSure{
+            margin-left: 0;
     
         }
     
@@ -209,6 +218,8 @@ h3{
             width: 30px;
             height: 30px;
             text-align: center;
+            position: relative;
+            top: 7px;
     
         }
     
