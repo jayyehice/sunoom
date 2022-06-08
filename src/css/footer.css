@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer section {
   position: sticky;
   top: 0px;
@@ -102,6 +103,7 @@ footer section ul > li:last-child .week_weather > li svg {
   height: 95px;
 }
 footer section .wrapper {
+  width: 1180px;
   height: 100vh;
   box-sizing: border-box;
   position: absolute;
@@ -113,7 +115,6 @@ footer section .wrapper #content {
   box-sizing: border-box;
   height: 100%;
   flex-shrink: 0;
-  padding-left: 90px;
   padding-top: 90px;
   width: 100%;
 }
@@ -158,6 +159,41 @@ footer section .wrapper #content .info .icon {
 footer section .wrapper #content .info .icon img {
   height: 40px;
   margin-right: 40px;
+}
+
+/* RWD 576px以下字型大小 */
+@media screen and (max-width: 575.98px) {
+  footer {
+    position: static;
+  }
+  footer section ul {
+    position: static;
+  }
+  footer section ul > li {
+    height: auto;
+  }
+  footer section ul > li:first-child {
+    display: none;
+  }
+  footer section ul > li:last-child {
+    width: 100%;
+  }
+  footer section .wrapper {
+    position: static;
+    width: 100%;
+    transform: translateX(0%);
+    background-image: url("../img/footer/footer_bg_01_3.jpg");
+    background-size: cover;
+  }
+  footer section .wrapper #content {
+    padding-left: 0;
+    width: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer section .wrapper #content .info {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

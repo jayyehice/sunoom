@@ -47,7 +47,7 @@ $(function () {
             $('.shoppingProcess div').css({
                 border:'1px solid #F5F0DD',
             })
-            $('.shoppingProcess img').attr('src','./image/orderPageArrowWhite.png');
+            $('.shoppingProcess img').attr('src','./img/orderPage/orderPageArrowWhite.png');
 
             $('.selectDate li').css({
                 border:'1px solid #F5F0DD',
@@ -90,7 +90,7 @@ $(function () {
             $('.shoppingProcess div').css({
                 border:'1px solid #0C1244',
             })
-            $('.shoppingProcess img').attr('src','./image/orderPageArrow.png');
+            $('.shoppingProcess img').attr('src','./img/orderPage/orderPageArrow.png');
             $('.selectDate li').css({
                 border:'1px solid #0C1244',
             })

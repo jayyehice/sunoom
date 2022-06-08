@@ -1,0 +1,155 @@
+body {
+  background-color: #F5F0DD;
+}
+body section h2 {
+  text-align: center;
+}
+body .shoppingProcess {
+  width: 1180px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+body .shoppingProcess img {
+  width: 100px;
+  height: 24px;
+}
+body .shoppingProcess .chooseAdate {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .shoppingProcess .chooseAtrip {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .shoppingProcess .tallyOrder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .shoppingProcess .orderComplete {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+body .FinishTextBlock h3 {
+  text-align: center;
+  margin: 50px 0;
+}
+body .FinishTextBlock h5 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+body .bigList {
+  width: 1000px;
+  height: 920px;
+  border: 2px solid #0C1244;
+  margin: 50px auto;
+}
+body .bigList .ListTitle {
+  margin: 0px auto;
+  width: 980px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  font-size: 20px;
+}
+body .bigList .ListDate {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 20px;
+}
+body .bigList .ListDate li {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+body .bigList .ListDate li:first-Child {
+  font-weight: bolder;
+  font-size: 16px;
+}
+body .bigList .tripList {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+body .bigList .tripList li {
+  width: 250px;
+  height: 195px;
+  border: 1px solid #0C1244;
+  text-align: center;
+}
+body .bigList .tripList li ol {
+  list-style: none;
+}
+body .bigList .tripList li:first-child {
+  line-height: 195px;
+  border-left: none;
+}
+body .bigList .tripList li:last-Child {
+  border-right: none;
+}
+body .bigList .totalBlock {
+  margin: 40px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  height: 150px;
+}
+body .bigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 19.5px;
+}
+body .bigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 12px;
+  text-align: center;
+}
+body .bigList .totalBlock .totalPrice span {
+  color: #FFBF44;
+  font-size: 20px;
+}
+body .bigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
+
+/*# sourceMappingURL=FinishPay.css.map */

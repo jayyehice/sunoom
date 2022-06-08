@@ -4,7 +4,7 @@ footer{
     // height: 1500px;
     // border: $show_border;
     // position: relative;
-
+    
 
     section{
         position: sticky;
@@ -157,7 +157,7 @@ footer{
 
 
         .wrapper{
-            // width: 1180px;
+            width: 1180px;
             height: 100vh;
             // border: $show_border;
             box-sizing: border-box;
@@ -167,16 +167,14 @@ footer{
             left: 50%;
             transform: translateX(-50%);
 
-            
-                
-
             #content{
                 box-sizing: border-box;
                 height: 100%;
                 // border: $show_border;
                 flex-shrink: 0;
             
-                padding-left: 90px;
+                // padding-left: 90px;
+                // padding-right: 60%;
                 padding-top: 90px;
                 width: 100%;
                     
@@ -242,4 +240,48 @@ footer{
 }
 
 
+/* RWD 576px以下字型大小 */
+@media screen and (max-width: 575.98px){
 
+    footer{
+        position: static;
+        section{
+
+            ul{
+                position: static;
+
+                &>li{
+                    height: auto;
+                }
+                &>li:first-child{
+                    display: none;
+                }
+
+                &>li:last-child{
+                    width: 100%;
+                }
+                
+            }
+
+            .wrapper{
+                position: static;
+                width: 100%;
+                transform:translateX(0%);
+                background-image: url("../img/footer/footer_bg_01_3.jpg");
+                background-size: cover;
+
+                #content{
+                    padding-left: 0;
+                    width: auto;
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .info{
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}

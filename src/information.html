@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>路遊</title>
+    <title>園區資訊</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/information.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/vue.js"></script>
 </head>
 <body>
     <header>header</header>
@@ -142,7 +143,32 @@
                     <h4>明島特色</h4>
                     <p class="underline">晝夜奇觀 X 自然寶藏</p>
                     <p>A Whole World On A Single Island.</p>
+                    <ul>
+                        <li>
+                            <img src="./img/information/feaeure_01.jpg" alt="">
+                        </li>
+                        
+                        <li>
+                            <img src="./img/information/feaeure_02.jpg" alt="">
+                        </li>
 
+                        <li>
+                            <img src="./img/information/feaeure_03.jpg" alt="">
+                        </li>
+
+                        <li>
+                            <img src="./img/information/feaeure_04.jpg" alt="">
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="develope">
+                    <h4>明島發展</h4>
+                    <p class="underline">日月同輝 X 永續經營</p>
+                    <p>“I read; I travel; I become.; I alive” — Sunoom</p>
+                    <p> 明島因其特性，我們打造成適合海陸雙棲遊玩 探險的觀光小島，同時我們也注重保護自然生態，不過度開發是我們的宗旨，平衡環境與發展，實現永續營。</p>
+                    <img src="./img/information/develope_01.jpg" alt="">
                 </div>
 
 
@@ -152,9 +178,116 @@
 
         </section>
 
+        <section class="contact">
+            <div class="wrapper">
+                <h3>聯絡資訊</h3>
+                <ul>
+                    <li>
+                        <h4>日島辦公室</h4>
+                        <p>聯絡人：Miss.Sun</p>
+                        <p>電話：02-XXXX-XXXX</p>
+                        <p>傳真：02-XXXX-XXXX</p>
+                        <p>位置：慶隆廟左轉第一個路口</p>
+                        <p>Email：sunoom@gmail.com</p>
+                        <img src="./img/information/contact_sun.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <h4>月島辦公室</h4>
+                        <p>聯絡人：Mr.moon</p>
+                        <p>電話：02-XXXX-XXXX</p>
+                        <p>傳真：02-XXXX-XXXX</p>
+                        <p>位置：慶隆廟左轉第一個路口</p>
+                        <p>Email：sunoom@gmail.com</p>
+                        <img src="./img/information/contact_moon.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <h4>台灣辦公室</h4>
+                        <p>聯絡人：Miss.Star</p>
+                        <p>電話：02-XXXX-XXXX</p>
+                        <p>傳真：02-XXXX-XXXX</p>
+                        <p>位置：慶隆廟左轉第一個路口</p>
+                        <p>Email：sunoom@gmail.com</p>
+                        <img src="./img/information/contact_taiwan.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="traffic">
+            <div class="wrapper">
+                <h3>交通資訊</h3>
+                <ul>
+                    <li>
+                        <div class="title">
+                            <i class="fa-solid fa-anchor"></i>
+                            <h3>船班時刻</h3>
+                        </div>
+                        <h4>航行時間約40分鐘</h4>
+                        <ol>
+                            <li>
+                                <h4>登島</h4>
+                                <h5>8:20</h5>
+                                <h5>9:20</h5>
+                                <h5>10:20</h5>
+                            </li>
+
+                            <li>
+                                <h4>離島</h4>
+                                <h5>14:20</h5>
+                                <h5>15:20</h5>
+                                <h5>16:20</h5>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        <div class="title">
+                            <i class="fa-solid fa-plane-departure"></i>
+                            <h3>航班時刻</h3>
+                        </div>
+                        <h4>航行時間約20分鐘</h4>
+                        <ol>
+                            <li>
+                                <h4>起飛</h4>
+                                <h5>8:20</h5>
+                                <h5>9:20</h5>
+                                <h5>10:20</h5>
+                            </li>
+
+                            <li>
+                                <h4>降落</h4>
+                                <h5>14:20</h5>
+                                <h5>15:20</h5>
+                                <h5>16:20</h5>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </section>
         
+        <section id="faq">
+            <div class="wrapper">
+                <h3>FAQ</h3>
+                <ul>
+                    <li v-for="faq in faq_list" class="faq_li">
+                        <h5 class="faq_h5">{{faq[1]}}</h5>
+                        <p class="faq_p">{{faq[2]}}</p>
+                    </li>
+
+                    <!-- <li class="faq_li">
+                        <h5 class="faq_h5">一、去明島旅行需要攜带哪些物品？</h5>
+                        <p class="faq_p">日島氣候溫暖宜人，備好夏裝即可；月島氣候寒冷，需準備防寒外套，如果您計畫遊玩兩座島，請備齊夏冬衣物及防曬乳，徒步旅行或探索海岸則需輕便衣物，如果您計畫造訪計畫登山則需攜帶更為保暖的衣物，以便適應劇烈溫差。日島氣候溫暖宜人，備好夏裝即可；月島氣候寒冷，需準備防寒外套，如果您計畫遊玩兩座島，請備齊夏冬衣物及防曬乳，徒步旅行或探索海岸則需輕便衣物，如果您計畫造訪計畫登山則需攜帶更為保暖的衣物，以便適應劇烈溫差。</p>
+                    </li> -->
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
+
+    <script src="./js/information.js"></script>
 </body>
 </html>
