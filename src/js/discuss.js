@@ -11,12 +11,12 @@ window.addEventListener("load", function () {
         active.innerHTML =
             `
                 <div class="article_text" >
-                    <a href="#">
+                    <a href="#"  class="article1">
                         <div class="img_1">
-                            <img src="img/beach-gafb0175c9_1280.jpg" alt="">
-                               </div>
+                            <img src="img/pexels-matt-hill-9910577 1.jpg" alt="">
+                        </div>
                         <div class="content">
-                            <div class="title">明島旅遊景點 - 獨角獸森林奇遇！？</div>
+                            <div class="title">明島旅遊景點 - 壯觀巨石陣</div>
                             <div class="comment">聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</div>
                             <div class="icons">
                                 <div class="icon-1">
@@ -44,9 +44,9 @@ window.addEventListener("load", function () {
             `
         active2.innerHTML =
             ` <div class="article_text article_text4">
-        <a href="#">
+        <a href="#"  class="article1">
             <div class="img_1">
-                <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                <img src="img/pexels-le-vampire-2651903 1.jpg" alt="">
             </div>
             <div class="content">
                 <div class="title">明島旅遊景點 - 超靈月老神社</div>
@@ -88,11 +88,11 @@ window.addEventListener("load", function () {
             <div class="article_text">
             <a href="#">
                 <div class="img_1">
-                    <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                    <img src="img/pexels-matt-hill-9910577 1.jpg" alt="">
                 </div>
                 <div class="content">
-                    <div class="title">明島旅遊景點 - 適合全家大小的日島海洋行程</div>
-                    <div class="comment">這次去明島已經是第二次了，純海洋行程豐富卻還蠻慢節奏的，確實有顧到對海...........</div>
+                    <div class="title">明島旅遊景點 - 壯觀巨石陣</div>
+                    <div class="comment">聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</div>
                     <div class="icons">
                         <div class="icon-1">
                             <div>
@@ -122,7 +122,7 @@ window.addEventListener("load", function () {
     <div class="article_text article_text5">
                                 <a href="#">
                                     <div class="img_1">
-                                        <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                                        <img src="img/pexels-oliver-sjöström-1001780 1.jpg" alt="">
                                     </div>
                                     <div class="content">
                                         <div class="title">明島旅遊景點 - 激推！香蕉船的小林教練</div>
@@ -156,7 +156,7 @@ window.addEventListener("load", function () {
             <div class="article_text3">
                                 <a href="#">
                                     <div class="img_1">
-                                        <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                                        <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
                                     </div>
                                     <div class="content">
                                         <div class="title">明島旅遊景點 - 適合全家大小的日島海洋行程</div>
@@ -194,7 +194,7 @@ window.addEventListener("load", function () {
         <div class="article_text">
             <a href="https://www.bing.com/">
                 <div class="img_1">
-                    <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                    <img src="img/pexels-etkin-celep-11728983 1.jpg" alt="">
                 </div>
                 <div class="content">
                 <div class="title">明島旅遊景點 - 獨角獸森林奇遇！？</div>
@@ -229,7 +229,7 @@ window.addEventListener("load", function () {
         <div class="article_text3">
         <a href="#">
             <div class="img_1">
-                <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
             </div>
             <div class="content">
                 <div class="title">明島旅遊景點 - 適合全家大小的日島海洋行程</div>
@@ -264,7 +264,7 @@ window.addEventListener("load", function () {
     <div class="article_text article_text4">
                                 <a href="#">
                                     <div class="img_1">
-                                        <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                                        <img src="img/pexels-le-vampire-2651903 1.jpg" alt="">
                                     </div>
                                     <div class="content">
                                         <div class="title">明島旅遊景點 - 超靈月老神社</div>
@@ -302,7 +302,7 @@ window.addEventListener("load", function () {
             <div class="article_text">
             <a href="#">
                 <div class="img_1">
-                    <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                    <img src="img/pexels-le-vampire-2651903 1.jpg" alt="">
                 </div>
                 <div class="content">
                     <div class="title">明島旅遊景點 - 超靈月老神社</div>
@@ -335,7 +335,7 @@ window.addEventListener("load", function () {
         ` <div class="article_text3">
         <a href="#">
             <div class="img_1">
-                <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
             </div>
             <div class="content">
                 <div class="title">明島旅遊景點 - 適合全家大小的日島海洋行程</div>
@@ -368,7 +368,7 @@ window.addEventListener("load", function () {
         <div class="article_text article_text5">
         <a href="#">
             <div class="img_1">
-                <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                <img src="img/pexels-oliver-sjöström-1001780 1.jpg" alt="">
             </div>
             <div class="content">
                 <div class="title">明島旅遊景點 - 激推！香蕉船的小林教練</div>
@@ -402,7 +402,7 @@ window.addEventListener("load", function () {
         <div class="article_text">
         <a href="#">
             <div class="img_1">
-                <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                <img src="img/pexels-matt-hill-9910577 1.jpg" alt="">
             </div>
             <div class="content">
                 <div class="title" style="color:red;">明島旅遊景點 - 壯觀巨石陣</div>
@@ -439,7 +439,7 @@ window.addEventListener("load", function () {
             <div class="article_text">
             <a href="#">
                 <div class="img_1">
-                    <img src="img/beach-gafb0175c9_1280.jpg" alt="">
+                    <img src="img/pexels-oliver-sjöström-1001780 1.jpg" alt="">
                 </div>
                 <div class="content">
                     <div class="title">明島旅遊景點 - 激推！香蕉船的小林教練</div>
