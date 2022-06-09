@@ -1,42 +1,36 @@
-body {
+.land_tour {
   background-color: #F5F0DD;
+  color: #0C1244;
 }
-
-header {
-  height: 700px;
-  box-sizing: border-box;
-  border: 1px solid #000;
-}
-
-main .breadcrumbs {
+.land_tour main .breadcrumbs {
   height: 140px;
   box-sizing: border-box;
   border: 1px solid #000;
 }
-main .slogan_banner {
+.land_tour main .slogan_banner {
   box-sizing: border-box;
   border: 1px solid #000;
   height: 585px;
   position: relative;
 }
-main .slogan_banner img {
+.land_tour main .slogan_banner img {
   display: block;
   position: absolute;
   z-index: -1;
 }
-main .slogan_banner .leaf_left {
+.land_tour main .slogan_banner .leaf_left {
   top: 0px;
   left: 0px;
 }
-main .slogan_banner .leaf_right {
+.land_tour main .slogan_banner .leaf_right {
   top: 0px;
   right: 0px;
 }
-main .slogan_banner .deer {
+.land_tour main .slogan_banner .deer {
   bottom: 0px;
   left: 0px;
 }
-main .slogan_banner .slogan {
+.land_tour main .slogan_banner .slogan {
   box-sizing: border-box;
   border: 1px solid #000;
   text-align: center;
@@ -44,17 +38,17 @@ main .slogan_banner .slogan {
   margin-top: 20%;
   margin-left: 60%;
 }
-main .slogan_banner .slogan h3:first-child {
+.land_tour main .slogan_banner .slogan h3:first-child {
   font-size: 128rem;
   text-align: right;
   border: 1px solid #000;
   line-height: 0.3;
   margin-right: 50px;
 }
-main .slogan_banner .slogan h5 {
+.land_tour main .slogan_banner .slogan h5 {
   margin-top: 40px;
 }
-main .ecotourism {
+.land_tour main .ecotourism {
   width: 1200px;
   height: 540px;
   margin: 0 auto;
@@ -63,18 +57,18 @@ main .ecotourism {
   margin-top: 100px;
   position: relative;
 }
-main .ecotourism ul {
+.land_tour main .ecotourism ul {
   display: flex;
   width: 100%;
 }
-main .ecotourism ul li {
+.land_tour main .ecotourism ul li {
   flex-basis: 0;
   flex-grow: 1;
 }
-main .ecotourism ul li img {
+.land_tour main .ecotourism ul li img {
   width: 100%;
 }
-main .ecotourism .intro_word {
+.land_tour main .ecotourism .intro_word {
   width: 300px;
   height: 250px;
   position: absolute;
@@ -86,38 +80,38 @@ main .ecotourism .intro_word {
   padding: 60px 45px 0px;
   box-sizing: border-box;
 }
-main .ecotourism .intro_word h3 {
+.land_tour main .ecotourism .intro_word h3 {
   margin-bottom: 40px;
 }
-main .activity_intro ul {
+.land_tour main .activity_intro ul {
   padding-top: 185px;
   overflow: hidden;
 }
-main .activity_intro ul li {
+.land_tour main .activity_intro ul li {
   text-align: center;
   margin-bottom: 130px;
   position: relative;
 }
-main .activity_intro ul li .wrapper {
+.land_tour main .activity_intro ul li .wrapper {
   width: 1200px;
   margin: 0 auto;
   border: 1px solid #000;
   box-sizing: border-box;
 }
-main .activity_intro ul li .wrapper > div {
+.land_tour main .activity_intro ul li .wrapper > div {
   width: 600px;
 }
-main .activity_intro ul li .wrapper > div h3 {
+.land_tour main .activity_intro ul li .wrapper > div h3 {
   margin-top: 20px;
 }
-main .activity_intro ul li .wrapper > div > p {
+.land_tour main .activity_intro ul li .wrapper > div > p {
   width: 395px;
   margin: 0 auto;
   margin-top: 20px;
   border: 1px solid #000;
   box-sizing: border-box;
 }
-main .activity_intro ul li .wrapper > div .comment {
+.land_tour main .activity_intro ul li .wrapper > div .comment {
   width: 395px;
   margin: 0 auto;
   margin-top: 15px;
@@ -127,129 +121,129 @@ main .activity_intro ul li .wrapper > div .comment {
   border: 1px solid #000;
   box-sizing: border-box;
 }
-main .activity_intro ul li .wrapper > div .comment div.star_block {
+.land_tour main .activity_intro ul li .wrapper > div .comment div.star_block {
   display: inline-block;
   margin-right: 13px;
 }
-main .activity_intro ul li .wrapper > div .comment div.star_block i {
+.land_tour main .activity_intro ul li .wrapper > div .comment div.star_block i {
   color: #FFBF44;
 }
-main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
+.land_tour main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
   margin-right: 25px;
 }
-main .activity_intro ul li .wrapper > div .comment > i {
+.land_tour main .activity_intro ul li .wrapper > div .comment > i {
   margin-right: 7px;
 }
-main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
+.land_tour main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
   top: -100px;
   right: 120px;
 }
-main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
+.land_tour main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
   position: absolute;
   top: -210px;
   left: 0px;
   z-index: -1;
 }
-main .activity_intro ul li:nth-child(1) .wrapper #cloud_02 {
+.land_tour main .activity_intro ul li:nth-child(1) .wrapper #cloud_02 {
   position: absolute;
   top: 230px;
   right: 0px;
   z-index: -1;
 }
-main .activity_intro ul li:nth-child(2) .wrapper > div {
+.land_tour main .activity_intro ul li:nth-child(2) .wrapper > div {
   margin-left: 600px;
 }
-main .activity_intro ul li:nth-child(2) #butterfly_01 {
+.land_tour main .activity_intro ul li:nth-child(2) #butterfly_01 {
   position: absolute;
   top: 80px;
   left: 220px;
 }
-main .activity_intro ul li:nth-child(2) #branch_01 {
+.land_tour main .activity_intro ul li:nth-child(2) #branch_01 {
   position: absolute;
   top: 0px;
   left: -140px;
 }
-main .activity_intro ul li:nth-child(3) {
+.land_tour main .activity_intro ul li:nth-child(3) {
   margin-bottom: 260px;
 }
-main .activity_intro ul li:nth-child(3) .wrapper > div {
+.land_tour main .activity_intro ul li:nth-child(3) .wrapper > div {
   margin-left: 100px;
 }
-main .activity_intro ul li:nth-child(3) #branch_02 {
+.land_tour main .activity_intro ul li:nth-child(3) #branch_02 {
   position: absolute;
   top: -90px;
   right: 0px;
 }
-main .activity_intro ul li:nth-child(4) {
+.land_tour main .activity_intro ul li:nth-child(4) {
   margin-bottom: 290px;
 }
-main .activity_intro ul li:nth-child(4) .wrapper > div {
+.land_tour main .activity_intro ul li:nth-child(4) .wrapper > div {
   margin-left: 500px;
 }
-main .activity_intro ul li:nth-child(4) #branch_03 {
+.land_tour main .activity_intro ul li:nth-child(4) #branch_03 {
   position: absolute;
   top: 0px;
   left: 0px;
 }
-main .activity_intro ul li:nth-child(5) {
+.land_tour main .activity_intro ul li:nth-child(5) {
   margin-bottom: 250px;
 }
-main .activity_intro ul li:nth-child(5) #branch_04 {
+.land_tour main .activity_intro ul li:nth-child(5) #branch_04 {
   position: absolute;
   top: -60px;
   right: -100px;
 }
-main .activity_intro ul li:nth-child(5) #branch_05 {
+.land_tour main .activity_intro ul li:nth-child(5) #branch_05 {
   position: absolute;
   top: 160px;
   right: 0px;
 }
-main .activity_intro ul li:nth-child(5) .wrapper > div {
+.land_tour main .activity_intro ul li:nth-child(5) .wrapper > div {
   position: relative;
 }
-main .activity_intro ul li:nth-child(5) .wrapper > div #flower_01 {
+.land_tour main .activity_intro ul li:nth-child(5) .wrapper > div #flower_01 {
   position: absolute;
   top: -60px;
   right: -100px;
 }
-main .activity_intro ul li:nth-child(5) .wrapper > div #butter_02 {
+.land_tour main .activity_intro ul li:nth-child(5) .wrapper > div #butter_02 {
   position: absolute;
   top: -93px;
   right: -81px;
 }
-main .activity_intro ul li:nth-child(6) {
+.land_tour main .activity_intro ul li:nth-child(6) {
   margin-bottom: 50px;
 }
-main .activity_intro ul li:nth-child(6) #branch_06 {
+.land_tour main .activity_intro ul li:nth-child(6) #branch_06 {
   position: absolute;
   top: 0px;
   left: 0px;
 }
-main .instagram {
+.land_tour main .instagram {
   margin-bottom: 80px;
 }
-main .instagram .wrapper {
+.land_tour main .instagram .wrapper {
   width: 900px;
   margin: 0 auto;
 }
-main .instagram .wrapper .title {
+.land_tour main .instagram .wrapper .title {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
 }
-main .instagram .wrapper .title img {
+.land_tour main .instagram .wrapper .title img {
   margin-right: 35px;
 }
-main .instagram .wrapper ul {
+.land_tour main .instagram .wrapper ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
   flex-wrap: wrap;
 }
-main .instagram .wrapper ul li {
+.land_tour main .instagram .wrapper ul li {
   width: 438px;
   display: flex;
   flex-shrink: 0;
@@ -257,13 +251,13 @@ main .instagram .wrapper ul li {
   align-items: center;
   justify-content: space-between;
 }
-main .instagram .wrapper ul li img {
+.land_tour main .instagram .wrapper ul li img {
   margin-bottom: 20px;
 }
-main .instagram .wrapper ul li img:hover {
+.land_tour main .instagram .wrapper ul li img:hover {
   cursor: pointer;
 }
-main .instagram #ig_pop_up {
+.land_tour main .instagram #ig_pop_up {
   display: none;
   position: fixed;
   top: 0;
@@ -271,7 +265,7 @@ main .instagram #ig_pop_up {
   height: 100vh;
   width: 100%;
 }
-main .instagram #ig_pop_up #ig_pop_up_content {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -280,26 +274,26 @@ main .instagram #ig_pop_up #ig_pop_up_content {
   display: flex;
   justify-content: center;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
   width: 800px;
   background-color: #000;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
   margin-top: 100px;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
   text-align: center;
   line-height: 100px;
   color: #fff;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
   width: 400px;
   background-color: #fff;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
   height: 85px;
   padding: 0 25px;
   box-sizing: border-box;
@@ -308,20 +302,328 @@ main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
   justify-content: flex-start;
   border-bottom: 1px solid #BBB;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
   width: 55px;
   border-radius: 50%;
   margin-right: 15px;
 }
-main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
   height: calc(100% - 85px);
   padding: 25px;
 }
 
-footer {
-  height: 100vh;
+.land_tour_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.land_tour_moon main .breadcrumbs {
+  height: 140px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+.land_tour_moon main .slogan_banner {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  height: 585px;
+  position: relative;
+}
+.land_tour_moon main .slogan_banner img {
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+.land_tour_moon main .slogan_banner .leaf_left {
+  top: 0px;
+  left: 0px;
+}
+.land_tour_moon main .slogan_banner .leaf_right {
+  top: 0px;
+  right: 0px;
+}
+.land_tour_moon main .slogan_banner .deer {
+  bottom: 0px;
+  left: 0px;
+}
+.land_tour_moon main .slogan_banner .slogan {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  text-align: center;
+  width: 360px;
+  margin-top: 20%;
+  margin-left: 60%;
+}
+.land_tour_moon main .slogan_banner .slogan h3:first-child {
+  font-size: 128rem;
+  text-align: right;
+  border: 1px solid #000;
+  line-height: 0.3;
+  margin-right: 50px;
+}
+.land_tour_moon main .slogan_banner .slogan h5 {
+  margin-top: 40px;
+}
+.land_tour_moon main .ecotourism {
+  width: 1200px;
+  height: 540px;
+  margin: 0 auto;
   border: 1px solid #000;
   box-sizing: border-box;
+  margin-top: 100px;
+  position: relative;
+}
+.land_tour_moon main .ecotourism ul {
+  display: flex;
+  width: 100%;
+}
+.land_tour_moon main .ecotourism ul li {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.land_tour_moon main .ecotourism ul li img {
+  width: 100%;
+}
+.land_tour_moon main .ecotourism .intro_word {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(245, 240, 221, 0.7);
+  text-align: center;
+  padding: 60px 45px 0px;
+  box-sizing: border-box;
+}
+.land_tour_moon main .ecotourism .intro_word h3 {
+  margin-bottom: 40px;
+}
+.land_tour_moon main .activity_intro ul {
+  padding-top: 185px;
+  overflow: hidden;
+}
+.land_tour_moon main .activity_intro ul li {
+  text-align: center;
+  margin-bottom: 130px;
+  position: relative;
+}
+.land_tour_moon main .activity_intro ul li .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div {
+  width: 600px;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div h3 {
+  margin-top: 20px;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div > p {
+  width: 395px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment {
+  width: 395px;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment div.star_block {
+  display: inline-block;
+  margin-right: 13px;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment div.star_block i {
+  color: #FFBF44;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
+  margin-right: 25px;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment > i {
+  margin-right: 7px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
+  position: absolute;
+  top: -100px;
+  right: 120px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
+  position: absolute;
+  top: -210px;
+  left: 0px;
+  z-index: -1;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #cloud_02 {
+  position: absolute;
+  top: 230px;
+  right: 0px;
+  z-index: -1;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(2) .wrapper > div {
+  margin-left: 600px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(2) #butterfly_01 {
+  position: absolute;
+  top: 80px;
+  left: 220px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(2) #branch_01 {
+  position: absolute;
+  top: 0px;
+  left: -140px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(3) {
+  margin-bottom: 260px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(3) .wrapper > div {
+  margin-left: 100px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(3) #branch_02 {
+  position: absolute;
+  top: -90px;
+  right: 0px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(4) {
+  margin-bottom: 290px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(4) .wrapper > div {
+  margin-left: 500px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(4) #branch_03 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) {
+  margin-bottom: 250px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) #branch_04 {
+  position: absolute;
+  top: -60px;
+  right: -100px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) #branch_05 {
+  position: absolute;
+  top: 160px;
+  right: 0px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) .wrapper > div {
+  position: relative;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) .wrapper > div #flower_01 {
+  position: absolute;
+  top: -60px;
+  right: -100px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(5) .wrapper > div #butter_02 {
+  position: absolute;
+  top: -93px;
+  right: -81px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(6) {
+  margin-bottom: 50px;
+}
+.land_tour_moon main .activity_intro ul li:nth-child(6) #branch_06 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.land_tour_moon main .instagram {
+  margin-bottom: 80px;
+}
+.land_tour_moon main .instagram .wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+.land_tour_moon main .instagram .wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.land_tour_moon main .instagram .wrapper .title img {
+  margin-right: 35px;
+}
+.land_tour_moon main .instagram .wrapper ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.land_tour_moon main .instagram .wrapper ul li {
+  width: 438px;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.land_tour_moon main .instagram .wrapper ul li img {
+  margin-bottom: 20px;
+}
+.land_tour_moon main .instagram .wrapper ul li img:hover {
+  cursor: pointer;
+}
+.land_tour_moon main .instagram #ig_pop_up {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100%;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+  width: 800px;
+  background-color: #000;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+  width: 400px;
+  background-color: #fff;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author {
+  height: 85px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #BBB;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+  width: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
+  height: calc(100% - 85px);
+  padding: 25px;
 }
 
 /*# sourceMappingURL=land_tour.css.map */
