@@ -1,215 +1,652 @@
-body{
-    background-color: #F5F0DD;
-    // border: 1px solid black;
-    box-sizing: border-box;
-    color: #0C1244;
-    line-height: 1.6;
-    letter-spacing: 3px;
+.set{
+    @import 'base/var';
+    background-color: $sun_color;
+    color: $moon_color;
 
-}
-
-main{
-    // border: 1px solid firebrick;
-    // width: 1280px;
-    margin: 0 auto;
-    // background-color: #F5F0DD;
-    color: #0C1244;
-}
-
-.wrapper{
-    // border: 1px solid black;
-    width: 1080px;
-    margin: 0 auto;
-    // display: flex;
-
-    a{
-        display: inline-block;
-        text-decoration: none;
-        color: #0C1244;
-    }
-}
-
-p{
-    margin-top: 17px;
-    // margin-left: 100px;
-
-}
-
-
-h3{
-    margin-top: 62px;
-    // margin-left: 100px;
-    margin-bottom: 55px;
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        // background-color: #F5F0DD;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
     
-}
-
-.setTopNav{
-    // border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-
-    li:first-child{
-        margin-left: 0;
-    }
-
-    li{
-        // border: 1px solid rebeccapurple;
-        text-align: center;
-        margin-left: 50px;
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            // display: flex;
         
-
-        a{
-
-            img{
-
-            }
-
-            h4{
-
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
             }
         }
-    }
-}
-
-.wrapper .setLogin{
-    display: block;
-    text-align: center;
-    font-size: 24rem;
-    
-
-    .setSpeaker{
-        display: inline-block;
-        position: relative;
-        left: 0;
-        top: 10px;
-    }
-
-
-}
-
-.setMain{
-    margin-top: 60px;
-    border: 1px solid #0C1244;
-    display: flex;
-    width: 1080px;
-    height: 543px;
-    margin-bottom: 50px;
-
-    justify-content: space-between;
-
-    .setPic{
-        // border: 1px solid green;
-        padding: 65px;
-
-        > img{
-            // border: 1px solid #000;
-            margin-bottom: 10px;
+        
+        p{
+            margin-top: 17px;
+            // margin-left: 100px;
+        
         }
-
-        .setPicS{
-            // border: 1px solid #fff;
-
-            > img:nth-child(2){
-                // border: 1px solid red;
-                margin: 0 7px;
-
-            }
+        
+        
+        h3{
+            margin-top: 62px;
+            // margin-left: 100px;
+            margin-bottom: 55px;
+            
         }
-    }
-
-    .setText{
-        display: block;
-        // border: 1px solid navy;
-        width: 471px;
-        height: 357px;
-        padding: 65px;
-        padding-left: 0;
-
-        position: relative;
-
-        .setTextPic{
-            position: absolute;
-            right: 64px;
-            top: 130px;
-        }
-
-        h4{
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        h5{
-            margin-bottom: 20px;
-
-        }
-
-        .setTextTitle{
-            margin: 0;
-            margin-bottom: 25px;
-
-        }
-
-        .setTextWord{
-            margin: 0;
-            margin-bottom: 30px;
-        }
-
-        .setTextWord2{
-            margin: 0;
-            margin-bottom: 20px;
-        }
-
-
-
-        .setTextBotm{
-            // border: 1px solid royalblue;
+        
+        .setTopNav{
+            // border: 1px solid red;
             display: flex;
-            justify-content: space-between;
-
-            .stbS{
-                // border: 1px solid darkgreen;
+            justify-content: center;
+            margin-bottom: 100px;
+        
+            li:first-child{
+                margin-left: 0;
+            }
+        
+            li{
+                // border: 1px solid rebeccapurple;
+                text-align: center;
+                margin-left: 50px;
                 
-
-                p{
-                    margin: 0;
-
-                }
-
+        
                 a{
-
-                    .stbSP{
-                        margin-right: 10px;
-                        position: relative;
-                        right: 0;
-                        top: 7px;
+        
+                    img{
+        
+                    }
+        
+                    h4{
+        
                     }
                 }
-
             }
+        }
+        
+        .wrapper .setLogin{
+            display: block;
+            text-align: center;
+            font-size: 24rem;
+            
+        
+            .setSpeaker{
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 10px;
+            }
+        
+        
+        }
+        
+        .setMain{
+            margin-top: 60px;
+            border: 1px solid $moon_color;
+            display: flex;
+            width: 1080px;
+            height: 543px;
+            margin-bottom: 50px;
+        
+            justify-content: space-between;
+        
+            .setPic{
+                // border: 1px solid green;
+                padding: 65px;
+        
+                > img{
+                    // border: 1px solid #000;
+                    margin-bottom: 10px;
+                }
+        
+                .setPicS{
+                    // border: 1px solid #fff;
+        
+                    > img:nth-child(2){
+                        // border: 1px solid red;
+                        margin: 0 7px;
+        
+                    }
+                }
+            }
+        
+            .setText{
+                display: block;
+                // border: 1px solid navy;
+                width: 471px;
+                height: 357px;
+                padding: 65px;
+                padding-left: 0;
+        
+                position: relative;
+        
+                .setTextPic{
+                    position: absolute;
+                    right: 64px;
+                    top: 130px;
+                }
+        
+                h4{
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+        
+                h5{
+                    margin-bottom: 20px;
+        
+                }
+        
+                .setTextTitle{
+                    margin: 0;
+                    margin-bottom: 25px;
+        
+                }
+        
+                .setTextWord{
+                    margin: 0;
+                    margin-bottom: 30px;
+                }
+        
+                .setTextWord2{
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+        
+        
+        
+                .setTextBotm{
+                    // border: 1px solid royalblue;
+                    display: flex;
+                    justify-content: space-between;
+        
+                    .stbS{
+                        // border: 1px solid darkgreen;
+                        
+        
+                        p{
+                            margin: 0;
+        
+                        }
+        
+                        a{
+        
+                            .stbSP{
+                                margin-right: 10px;
+                                position: relative;
+                                right: 0;
+                                top: 7px;
+                            }
+                        }
+        
+                    }
+        
+                    .setBook{
+                        border: $show_border;
+                        width: 140px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $moon_color;
+                        background-color: $sun_color;
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+                }
+        
+            }
+        
+        }
+        
+        .setMain:last-child{
+            margin-bottom: 100px;
+        }
+        
+    }
+    
+}
 
-            .setBook{
-                border: 1px solid #000;
-                width: 140px;
-                height: 50px;
+.set_moon{
+    @import 'base/var';
+    background-color: $sun_color;
+    color: $moon_color;
+
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        // background-color: #F5F0DD;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
+    
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            // display: flex;
+        
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
+            }
+        }
+        
+        p{
+            margin-top: 17px;
+            // margin-left: 100px;
+        
+        }
+        
+        
+        h3{
+            margin-top: 62px;
+            // margin-left: 100px;
+            margin-bottom: 55px;
+            
+        }
+        
+        .setTopNav{
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        
+            li:first-child{
+                margin-left: 0;
+            }
+        
+            li{
+                // border: 1px solid rebeccapurple;
                 text-align: center;
-                line-height: 50px;
-                color: #0C1244;
-                background-color: #F5F0DD;
-
-                &:hover{
-                    cursor: pointer;
-                    color: #F5F0DD;
-                    border: 1.5px solid #F5F0DD;
-                    background-color: #0C1244;
+                margin-left: 50px;
+                
+        
+                a{
+        
+                    img{
+        
+                    }
+        
+                    h4{
+        
+                    }
                 }
             }
         }
-
+        
+        .wrapper .setLogin{
+            display: block;
+            text-align: center;
+            font-size: 24rem;
+            
+        
+            .setSpeaker{
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 10px;
+            }
+        
+        
+        }
+        
+        .setMain{
+            margin-top: 60px;
+            border: 1px solid $moon_color;
+            display: flex;
+            width: 1080px;
+            height: 543px;
+            margin-bottom: 50px;
+        
+            justify-content: space-between;
+        
+            .setPic{
+                // border: 1px solid green;
+                padding: 65px;
+        
+                > img{
+                    // border: 1px solid #000;
+                    margin-bottom: 10px;
+                }
+        
+                .setPicS{
+                    // border: 1px solid #fff;
+        
+                    > img:nth-child(2){
+                        // border: 1px solid red;
+                        margin: 0 7px;
+        
+                    }
+                }
+            }
+        
+            .setText{
+                display: block;
+                // border: 1px solid navy;
+                width: 471px;
+                height: 357px;
+                padding: 65px;
+                padding-left: 0;
+        
+                position: relative;
+        
+                .setTextPic{
+                    position: absolute;
+                    right: 64px;
+                    top: 130px;
+                }
+        
+                h4{
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+        
+                h5{
+                    margin-bottom: 20px;
+        
+                }
+        
+                .setTextTitle{
+                    margin: 0;
+                    margin-bottom: 25px;
+        
+                }
+        
+                .setTextWord{
+                    margin: 0;
+                    margin-bottom: 30px;
+                }
+        
+                .setTextWord2{
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+        
+        
+        
+                .setTextBotm{
+                    // border: 1px solid royalblue;
+                    display: flex;
+                    justify-content: space-between;
+        
+                    .stbS{
+                        // border: 1px solid darkgreen;
+                        
+        
+                        p{
+                            margin: 0;
+        
+                        }
+        
+                        a{
+        
+                            .stbSP{
+                                margin-right: 10px;
+                                position: relative;
+                                right: 0;
+                                top: 7px;
+                            }
+                        }
+        
+                    }
+        
+                    .setBook{
+                        border: $show_border;
+                        width: 140px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $moon_color;
+                        background-color: $sun_color;
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+                }
+        
+            }
+        
+        }
+        
+        .setMain:last-child{
+            margin-bottom: 100px;
+        }
+        
     }
 
 }
 
-.setMain:last-child{
-    margin-bottom: 100px;
-}
+
+// body{
+//     // background-color: #F5F0DD;
+//     // border: 1px solid black;
+//     // box-sizing: border-box;
+//     // color: #0C1244;
+//     // line-height: 1.6;
+//     // letter-spacing: 3px;
+
+// }
+
+// main{
+//     // border: 1px solid firebrick;
+//     // width: 1280px;
+//     margin: 0 auto;
+//     // background-color: #F5F0DD;
+//     box-sizing: border-box;
+//     line-height: 1.6;
+//     letter-spacing: 3px;
+
+//     .wrapper{
+//         // border: 1px solid black;
+//         width: 1080px;
+//         margin: 0 auto;
+//         // display: flex;
+    
+//         a{
+//             display: inline-block;
+//             text-decoration: none;
+//             color: $moon_color;
+//         }
+//     }
+    
+//     p{
+//         margin-top: 17px;
+//         // margin-left: 100px;
+    
+//     }
+    
+    
+//     h3{
+//         margin-top: 62px;
+//         // margin-left: 100px;
+//         margin-bottom: 55px;
+        
+//     }
+    
+//     .setTopNav{
+//         // border: 1px solid red;
+//         display: flex;
+//         justify-content: center;
+//         margin-bottom: 100px;
+    
+//         li:first-child{
+//             margin-left: 0;
+//         }
+    
+//         li{
+//             // border: 1px solid rebeccapurple;
+//             text-align: center;
+//             margin-left: 50px;
+            
+    
+//             a{
+    
+//                 img{
+    
+//                 }
+    
+//                 h4{
+    
+//                 }
+//             }
+//         }
+//     }
+    
+//     .wrapper .setLogin{
+//         display: block;
+//         text-align: center;
+//         font-size: 24rem;
+        
+    
+//         .setSpeaker{
+//             display: inline-block;
+//             position: relative;
+//             left: 0;
+//             top: 10px;
+//         }
+    
+    
+//     }
+    
+//     .setMain{
+//         margin-top: 60px;
+//         border: 1px solid $moon_color;
+//         display: flex;
+//         width: 1080px;
+//         height: 543px;
+//         margin-bottom: 50px;
+    
+//         justify-content: space-between;
+    
+//         .setPic{
+//             // border: 1px solid green;
+//             padding: 65px;
+    
+//             > img{
+//                 // border: 1px solid #000;
+//                 margin-bottom: 10px;
+//             }
+    
+//             .setPicS{
+//                 // border: 1px solid #fff;
+    
+//                 > img:nth-child(2){
+//                     // border: 1px solid red;
+//                     margin: 0 7px;
+    
+//                 }
+//             }
+//         }
+    
+//         .setText{
+//             display: block;
+//             // border: 1px solid navy;
+//             width: 471px;
+//             height: 357px;
+//             padding: 65px;
+//             padding-left: 0;
+    
+//             position: relative;
+    
+//             .setTextPic{
+//                 position: absolute;
+//                 right: 64px;
+//                 top: 130px;
+//             }
+    
+//             h4{
+//                 text-align: left;
+//                 margin-bottom: 20px;
+//             }
+    
+//             h5{
+//                 margin-bottom: 20px;
+    
+//             }
+    
+//             .setTextTitle{
+//                 margin: 0;
+//                 margin-bottom: 25px;
+    
+//             }
+    
+//             .setTextWord{
+//                 margin: 0;
+//                 margin-bottom: 30px;
+//             }
+    
+//             .setTextWord2{
+//                 margin: 0;
+//                 margin-bottom: 20px;
+//             }
+    
+    
+    
+//             .setTextBotm{
+//                 // border: 1px solid royalblue;
+//                 display: flex;
+//                 justify-content: space-between;
+    
+//                 .stbS{
+//                     // border: 1px solid darkgreen;
+                    
+    
+//                     p{
+//                         margin: 0;
+    
+//                     }
+    
+//                     a{
+    
+//                         .stbSP{
+//                             margin-right: 10px;
+//                             position: relative;
+//                             right: 0;
+//                             top: 7px;
+//                         }
+//                     }
+    
+//                 }
+    
+//                 .setBook{
+//                     border: $show_border;
+//                     width: 140px;
+//                     height: 50px;
+//                     text-align: center;
+//                     line-height: 50px;
+//                     color: $moon_color;
+//                     background-color: $sun_color;
+    
+//                     &:hover{
+//                         cursor: pointer;
+//                         color: $sun_color;
+//                         border: 1.5px solid $sun_color;
+//                         background-color: $moon_color;
+//                     }
+//                 }
+//             }
+    
+//         }
+    
+//     }
+    
+//     .setMain:last-child{
+//         margin-bottom: 100px;
+//     }
+    
+// }
+
