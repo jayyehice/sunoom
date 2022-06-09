@@ -1,13 +1,15 @@
 body{
     background-color: #F5F0DD;
     // border: 1px solid black;
-    // color: #0C1244;
     box-sizing: border-box;
     color: #0C1244;
+    line-height: 1.6;
+    letter-spacing: 3px;
+
 }
 
 main{
-    border: 1px solid firebrick;
+    // border: 1px solid firebrick;
     // width: 1280px;
     margin: 0 auto;
     // background-color: #F5F0DD;
@@ -15,7 +17,7 @@ main{
 }
 
 .wrapper{
-    border: 1px solid black;
+    // border: 1px solid black;
     width: 1080px;
     margin: 0 auto;
     // display: flex;
@@ -42,15 +44,19 @@ h3{
 }
 
 .setTopNav{
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
 
+    li:first-child{
+        margin-left: 0;
+    }
+
     li{
-        border: 1px solid rebeccapurple;
+        // border: 1px solid rebeccapurple;
         text-align: center;
-        margin-left: 65px;
+        margin-left: 50px;
         
 
         a{
@@ -63,9 +69,6 @@ h3{
 
             }
         }
-    }
-    li:first-child{
-        margin-left: 0;
     }
 }
 
@@ -87,7 +90,7 @@ h3{
 
 .setMain{
     margin-top: 60px;
-    border: 1px solid #ccc;
+    border: 1px solid #0C1244;
     display: flex;
     width: 1080px;
     height: 543px;
@@ -96,7 +99,7 @@ h3{
     justify-content: space-between;
 
     .setPic{
-        border: 1px solid green;
+        // border: 1px solid green;
         padding: 65px;
 
         > img{
@@ -105,12 +108,11 @@ h3{
         }
 
         .setPicS{
-            border: 1px solid #fff;
+            // border: 1px solid #fff;
 
             > img:nth-child(2){
-
-                border: 1px solid red;
-                margin: 0 10px;
+                // border: 1px solid red;
+                margin: 0 7px;
 
             }
         }
@@ -118,7 +120,7 @@ h3{
 
     .setText{
         display: block;
-        border: 1px solid navy;
+        // border: 1px solid navy;
         width: 471px;
         height: 357px;
         padding: 65px;
@@ -129,12 +131,12 @@ h3{
         .setTextPic{
             position: absolute;
             right: 64px;
-            top: 64px;
+            top: 130px;
         }
 
         h4{
             text-align: left;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         h5{
@@ -150,23 +152,23 @@ h3{
 
         .setTextWord{
             margin: 0;
-            margin-bottom: 46px;
+            margin-bottom: 30px;
         }
 
         .setTextWord2{
             margin: 0;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
 
 
 
         .setTextBotm{
-            border: 1px solid royalblue;
+            // border: 1px solid royalblue;
             display: flex;
             justify-content: space-between;
 
             .stbS{
-                border: 1px solid darkgreen;
+                // border: 1px solid darkgreen;
                 
 
                 p{
@@ -192,12 +194,22 @@ h3{
                 height: 50px;
                 text-align: center;
                 line-height: 50px;
-                background-color: #0C1244;
-                color: #F5F0DD;
+                color: #0C1244;
+                background-color: #F5F0DD;
 
+                &:hover{
+                    cursor: pointer;
+                    color: #F5F0DD;
+                    border: 1.5px solid #F5F0DD;
+                    background-color: #0C1244;
+                }
             }
         }
 
     }
+
 }
 
+.setMain:last-child{
+    margin-bottom: 100px;
+}
