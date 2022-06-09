@@ -1,5 +1,7 @@
+@import 'base/var';
+
+
 .information{
-    @import 'base/var';
     background-color: $sun_color;
     color: $moon_color;
     main{
@@ -446,7 +448,6 @@
 }
 
 .information_moon{
-    @import 'base/var';
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
@@ -895,16 +896,3 @@
 
 
 
-// header{
-//     height: 700px;
-//     box-sizing: border-box;
-//     border: $show_border;
-// }
-
-
-
-// footer{
-//     height: 100vh;
-//     border: $show_border;
-//     box-sizing: border-box;
-// }

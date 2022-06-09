@@ -77,11 +77,20 @@ $(function(){
 // 日按紐
   $(function(){
     
+    let moon_class = $("body")[0].className + "_moon";
+
+
     $("#sunSwitch").click(function(){
       // alert("test")
       $(this).hide();
       $("#moonSwitch").show();
+
+      console.log($("body")[0].className);
+      
+
+
       // 背景切換
+      $("body").addClass(moon_class);
       $("body").addClass("moon");
       // $("header").addClass("moon");
 
@@ -97,20 +106,22 @@ $(function(){
       // $("button.hamburger_icon").hide();
       // $("button.hamburger_icon_moon").show();
 
+      
+
+      
 
     });
 
 
-  });
-
 // 月按鈕
-  $(function(){
+
     
     $("#moonSwitch").click(function(){
       // alert("test")
       $(this).hide();
       $("#sunSwitch").show();
       $("body").removeClass("moon");
+      $("body").removeClass(moon_class);
       // $("header").removeClass("moon");
 
       // 切換日島版logo
