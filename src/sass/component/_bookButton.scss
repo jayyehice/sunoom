@@ -1,0 +1,16 @@
+.bookButton{
+    border: 1.5px solid $moon_color;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    color: $moon_color;
+    margin-left: auto;
+    &:hover {
+        cursor: pointer; 
+        background-color: $moon_color;
+        color: $sun_color;
+    }
+}
