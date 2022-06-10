@@ -35,7 +35,7 @@ $(function () {
     $('#sunoomChange').click(function(){
         
         if($('#sunoomChange').hasClass('changing')){
-            $('body').css({
+            $('.orderPage').css({
                 color:"#F5F0DD",
                 backgroundColor:"#0C1244"
             })
@@ -78,7 +78,7 @@ $(function () {
             $('#sunoomChange').removeClass('changing');
 
         }else{
-            $('body').css({
+            $('.orderPage').css({
                 color:"#0C1244",
                 backgroundColor:"#F5F0DD"
             })
