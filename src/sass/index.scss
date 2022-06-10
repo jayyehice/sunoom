@@ -291,38 +291,181 @@
         }
     
         .instagram{
+            padding-bottom: 250px;
             .wrapper{
-                // border: 1px solid red;
                 width: 1180px;
                 margin: 0 auto;
                 .fa-brands{
                     font-size: 60px;
                     width: 60px;
                     text-align: center;
-                    // border: 1px solid salmon;
                 }
                 .igAccount{
                     text-align: center;
                 }
     
                 .instagramPhoto{
-                    // border: 1px solid black;
                     width: 936px ;
                     margin: 0 auto;
+
+                    li{
+                        img:hover{
+                            cursor: pointer;
+                        }
+                    }
                 }
                 
             }
+
+            #ig_pop_up{
+                display: none;
+                position: fixed;
+                top: 0;
+                background-color: rgba(0, 0, 0, .4);
+                height: 100vh;
+                width: 100%;
+                #ig_pop_up_content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1200px;
+                    display: flex;
+                    // align-items: flex-start;
+                    justify-content: center;
+        
+                    #ig_pop_up_left{
+                        width: 800px;
+                        background-color: #000;
+                        img{
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 100px;
+                        }
+        
+                        p{
+                            text-align: center;
+                            line-height: 100px;
+                            color: #fff;
+                            // padding-left: 60px;
+                            // box-sizing: border-box;
+                        }
+                        
+                    }
+        
+                    #ig_pop_up_right{
+                        width: 400px;
+                        background-color: #fff;
+                        #ig_author{
+                            height: 85px;
+                            padding: 0 25px;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border-bottom: 1px solid #BBB;
+        
+                            #ig_author_img{
+                                width: 55px;
+                                border-radius: 50%;
+                                margin-right: 15px;
+                            }
+        
+                        }
+        
+                        #ig_words{
+                            height: calc(100% - 85px);
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
         }
+
+
+        .traffic{
+            margin-top: 70px;
+            text-align: center;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+        
+                &>h3{
+                    margin-bottom: 70px;
+                }
+        
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &>li{
+                        width: 565px;
+                        box-sizing: border-box;
+                        border: 1.5px solid $moon_color;
+        
+                        .title{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 35px;
+                            margin-bottom: 30px;
+                            
+        
+                            i{
+                                font-size: 20rem;
+                                margin-right: 20px;
+                                height: 24px;
+                               
+                            }
+        
+        
+                        }
+        
+                        &>h4{
+                            margin-bottom: 35px;
+                        }
+        
+                        ol{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            li{
+                                flex-basis: 0;
+                                flex-grow: 1;
+                                h4{
+                                    line-height: 70px;
+                                    border-top: 1px solid $moon_color;
+                                    border-bottom: 1px solid $moon_color;
+                                }
+        
+                                h5{
+                                    margin-top: 45px;
+                                }
+        
+                                h5:last-child{
+                                    margin-bottom: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 
+
+
 .index_moon {
-    // @import 'base/moonColorSwitch';
+    @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
     letter-spacing: 3px;
     line-height: 1.6;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+
     main{
         .parallax {
             background-image: url(../img/index/muntain_bg01.png);
@@ -608,29 +751,170 @@
         }
     
         .instagram{
+            padding-bottom: 250px;
             .wrapper{
-                // border: 1px solid red;
                 width: 1180px;
                 margin: 0 auto;
                 .fa-brands{
                     font-size: 60px;
                     width: 60px;
                     text-align: center;
-                    // border: 1px solid salmon;
                 }
                 .igAccount{
                     text-align: center;
                 }
     
                 .instagramPhoto{
-                    // border: 1px solid black;
                     width: 936px ;
                     margin: 0 auto;
+
+                    li{
+                        img:hover{
+                            cursor: pointer;
+                        }
+                    }
                 }
                 
             }
+
+            #ig_pop_up{
+                display: none;
+                position: fixed;
+                top: 0;
+                background-color: rgba(0, 0, 0, .4);
+                height: 100vh;
+                width: 100%;
+                #ig_pop_up_content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1200px;
+                    display: flex;
+                    // align-items: flex-start;
+                    justify-content: center;
+        
+                    #ig_pop_up_left{
+                        width: 800px;
+                        background-color: #000;
+                        img{
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 100px;
+                        }
+        
+                        p{
+                            text-align: center;
+                            line-height: 100px;
+                            color: #fff;
+                            // padding-left: 60px;
+                            // box-sizing: border-box;
+                        }
+                        
+                    }
+        
+                    #ig_pop_up_right{
+                        width: 400px;
+                        background-color: #fff;
+                        #ig_author{
+                            height: 85px;
+                            padding: 0 25px;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border-bottom: 1px solid #BBB;
+        
+                            #ig_author_img{
+                                width: 55px;
+                                border-radius: 50%;
+                                margin-right: 15px;
+                            }
+        
+                        }
+        
+                        #ig_words{
+                            height: calc(100% - 85px);
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
         }
+
+
+        .traffic{
+            margin-top: 70px;
+            text-align: center;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+        
+                &>h3{
+                    margin-bottom: 70px;
+                }
+        
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &>li{
+                        width: 565px;
+                        box-sizing: border-box;
+                        border: 1.5px solid $moon_color;
+        
+                        .title{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 35px;
+                            margin-bottom: 30px;
+                            
+        
+                            i{
+                                font-size: 20rem;
+                                margin-right: 20px;
+                                height: 24px;
+                               
+                            }
+        
+        
+                        }
+        
+                        &>h4{
+                            margin-bottom: 35px;
+                        }
+        
+                        ol{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            li{
+                                flex-basis: 0;
+                                flex-grow: 1;
+                                h4{
+                                    line-height: 70px;
+                                    border-top: 1px solid $moon_color;
+                                    border-bottom: 1px solid $moon_color;
+                                }
+        
+                                h5{
+                                    margin-top: 45px;
+                                }
+        
+                                h5:last-child{
+                                    margin-bottom: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
+
 }
 
 header {
@@ -734,6 +1018,8 @@ nav {
         width: 90px;
     }
 }
+
+/*
 main{
     .parallax {
         background-image: url(../img/index/muntain_bg01.png);
@@ -1042,72 +1328,8 @@ main{
         }
     }
 }
-
-.traffic{
-    // margin-top: 70px;
-    text-align: center;
-    .wrapper{
-        width: 1180px;
-        margin: 0 auto;
-
-        &>h3{
-            margin-bottom: 70px;
-        }
-
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &>li{
-                width: 565px;
-                box-sizing: border-box;
-                border: 1.5px solid $moon_color;
-
-                .title{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 35px;
-                    margin-bottom: 30px;
-                    
-
-                    i{
-                        font-size: 20rem;
-                        margin-right: 20px;
-                        height: 24px;
-                       
-                    }
+*/
 
 
-                }
 
-                &>h4{
-                    margin-bottom: 35px;
-                }
 
-                ol{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    li{
-                        flex-basis: 0;
-                        flex-grow: 1;
-                        h4{
-                            line-height: 70px;
-                            border-top: 1px solid $moon_color;
-                            border-bottom: 1px solid $moon_color;
-                        }
-
-                        h5{
-                            margin-top: 45px;
-                        }
-
-                        h5:last-child{
-                            margin-bottom: 45px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
