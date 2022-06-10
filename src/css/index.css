@@ -1,11 +1,523 @@
-@import 'base/var';
-
-body {
+.index {
   background-color: #F5F0DD;
   color: #0C1244;
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: "Times New Roman", "Noto Sans TC", sans-serif;
+}
+.index main .parallax {
+  background-image: url(../img/index/muntain_bg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+}
+.index main .parallax h3 {
+  text-align: center;
+}
+.index main .parallax .muntain01 {
+  width: 100%;
+}
+.index main .news {
+  display: flex;
+  border: 1px solid #0C1244;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+.index main .news .news_title {
+  width: 120px;
+  height: 70px;
+}
+.index main .news .news_text {
+  margin-left: 75px;
+}
+.index main .category .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+.index main .category .wrapper > h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.index main .category .wrapper .FoodSea {
+  height: 600px;
+  position: relative;
+  margin-bottom: 180px;
+}
+.index main .category .wrapper .FoodSea .cloud01 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.index main .category .wrapper .FoodSea .foodSeaText {
+  width: 630px;
+  height: 350px;
+  position: absolute;
+  top: 220px;
+  right: 0;
+  background-color: #F5F0DD;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .FoodSea .foodSeaText h3 {
+  width: 100px;
+  border-radius: 50%;
+  line-height: 100px;
+  border: 4px solid #0C1244;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  right: 100px;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .draw01 {
+  background-color: #0C1244;
+  width: 65%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .draw02 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .draw03 {
+  background-color: #0C1244;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .draw04 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 345px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .draw05 {
+  background-color: #0C1244;
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: flex;
+  justify-content: space-between;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.index main .category .wrapper .LiveLand {
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 220px;
+}
+.index main .category .wrapper .LiveLand .LiveLandText {
+  width: 630px;
+  height: 350px;
+  position: absolute;
+  top: 320px;
+  left: 0;
+  background-color: #F5F0DD;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .LiveLand .LiveLandText h3 {
+  width: 100px;
+  border-radius: 50%;
+  line-height: 100px;
+  border: 4px solid #0C1244;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  left: 100px;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .draw01 {
+  background-color: #0C1244;
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .draw02 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .draw03 {
+  background-color: #0C1244;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .draw04 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 345px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .draw05 {
+  background-color: #0C1244;
+  width: 65%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: flex;
+  justify-content: space-between;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.index main .instagram .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+.index main .instagram .wrapper .fa-brands {
+  font-size: 60px;
+  width: 60px;
+  text-align: center;
+}
+.index main .instagram .wrapper .igAccount {
+  text-align: center;
+}
+.index main .instagram .wrapper .instagramPhoto {
+  width: 936px;
+  margin: 0 auto;
+}
+
+.index_moon {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  font-family: "Times New Roman", "Noto Sans TC", sans-serif;
+}
+.index_moon main .parallax {
+  background-image: url(../img/index/muntain_bg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+}
+.index_moon main .parallax h3 {
+  text-align: center;
+}
+.index_moon main .parallax .muntain01 {
+  width: 100%;
+}
+.index_moon main .news {
+  display: flex;
+  border: 1px solid #0C1244;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+.index_moon main .news .news_title {
+  width: 120px;
+  height: 70px;
+}
+.index_moon main .news .news_text {
+  margin-left: 75px;
+}
+.index_moon main .category .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+.index_moon main .category .wrapper > h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.index_moon main .category .wrapper .FoodSea {
+  height: 600px;
+  position: relative;
+  margin-bottom: 180px;
+}
+.index_moon main .category .wrapper .FoodSea .cloud01 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText {
+  width: 630px;
+  height: 350px;
+  position: absolute;
+  top: 220px;
+  right: 0;
+  background-color: #F5F0DD;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText h3 {
+  width: 100px;
+  border-radius: 50%;
+  line-height: 100px;
+  border: 4px solid #0C1244;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  right: 100px;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .draw01 {
+  background-color: #0C1244;
+  width: 65%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .draw02 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .draw03 {
+  background-color: #0C1244;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .draw04 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 345px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .draw05 {
+  background-color: #0C1244;
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: flex;
+  justify-content: space-between;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.index_moon main .category .wrapper .LiveLand {
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 220px;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText {
+  width: 630px;
+  height: 350px;
+  position: absolute;
+  top: 320px;
+  left: 0;
+  background-color: #F5F0DD;
+  padding: 80px;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText h3 {
+  width: 100px;
+  border-radius: 50%;
+  line-height: 100px;
+  border: 4px solid #0C1244;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  left: 100px;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .draw01 {
+  background-color: #0C1244;
+  width: 14%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .draw02 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .draw03 {
+  background-color: #0C1244;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .draw04 {
+  background-color: #0C1244;
+  width: 5px;
+  height: 345px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .draw05 {
+  background-color: #0C1244;
+  width: 65%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: flex;
+  justify-content: space-between;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.index_moon main .instagram .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+.index_moon main .instagram .wrapper .fa-brands {
+  font-size: 60px;
+  width: 60px;
+  text-align: center;
+}
+.index_moon main .instagram .wrapper .igAccount {
+  text-align: center;
+}
+.index_moon main .instagram .wrapper .instagramPhoto {
+  width: 936px;
+  margin: 0 auto;
 }
 
 header {
@@ -17,7 +529,6 @@ header .wrapper {
   margin: 0 auto;
 }
 header .wrapper .switchText {
-  border: 1px white solid;
   margin: 0 auto;
   width: 260px;
   height: 40px;
@@ -88,53 +599,53 @@ nav .main_button img {
   width: 90px;
 }
 
-.parallax {
+main .parallax {
   background-image: url(../img/index/muntain_bg01.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   position: relative;
 }
-.parallax h3 {
+main .parallax h3 {
   text-align: center;
 }
-
-.news {
+main .parallax .muntain01 {
+  width: 100%;
+}
+main .news {
   display: flex;
   border: 1px solid #0C1244;
   height: 250px;
   align-items: center;
   justify-content: center;
 }
-.news .news_title {
+main .news .news_title {
   width: 120px;
   height: 70px;
 }
-.news .news_text {
+main .news .news_text {
   margin-left: 75px;
 }
-
-.category .wrapper {
+main .category .wrapper {
   width: 1180px;
   margin: 0 auto;
-  border: 1px solid purple;
 }
-.category .wrapper > h3 {
+main .category .wrapper > h3 {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 80px;
 }
-.category .wrapper .FoodSea {
+main .category .wrapper .FoodSea {
   height: 600px;
   position: relative;
   margin-bottom: 180px;
 }
-.category .wrapper .FoodSea .cloud01 {
+main .category .wrapper .FoodSea .cloud01 {
   position: absolute;
   top: 0;
   right: 0;
 }
-.category .wrapper .FoodSea .foodSeaText {
+main .category .wrapper .FoodSea .foodSeaText {
   width: 630px;
   height: 350px;
   position: absolute;
@@ -144,7 +655,7 @@ nav .main_button img {
   padding: 80px;
   box-sizing: border-box;
 }
-.category .wrapper .FoodSea .foodSeaText h3 {
+main .category .wrapper .FoodSea .foodSeaText h3 {
   width: 100px;
   border-radius: 50%;
   line-height: 100px;
@@ -154,7 +665,7 @@ nav .main_button img {
   top: -50px;
   right: 100px;
 }
-.category .wrapper .FoodSea .foodSeaText .draw01 {
+main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #0C1244;
   width: 65%;
   height: 5px;
@@ -162,7 +673,7 @@ nav .main_button img {
   top: 0;
   left: 0;
 }
-.category .wrapper .FoodSea .foodSeaText .draw02 {
+main .category .wrapper .FoodSea .foodSeaText .draw02 {
   background-color: #0C1244;
   width: 5px;
   height: 100%;
@@ -170,7 +681,7 @@ nav .main_button img {
   top: 0;
   left: 0;
 }
-.category .wrapper .FoodSea .foodSeaText .draw03 {
+main .category .wrapper .FoodSea .foodSeaText .draw03 {
   background-color: #0C1244;
   width: 100%;
   height: 5px;
@@ -178,7 +689,7 @@ nav .main_button img {
   bottom: 0;
   left: 0;
 }
-.category .wrapper .FoodSea .foodSeaText .draw04 {
+main .category .wrapper .FoodSea .foodSeaText .draw04 {
   background-color: #0C1244;
   width: 5px;
   height: 345px;
@@ -187,7 +698,7 @@ nav .main_button img {
   right: 0;
   box-sizing: border-box;
 }
-.category .wrapper .FoodSea .foodSeaText .draw05 {
+main .category .wrapper .FoodSea .foodSeaText .draw05 {
   background-color: #0C1244;
   width: 14%;
   height: 5px;
@@ -196,23 +707,23 @@ nav .main_button img {
   right: 0;
   box-sizing: border-box;
 }
-.category .wrapper .FoodSea .foodSeaText .comments_area {
+main .category .wrapper .FoodSea .foodSeaText .comments_area {
   margin-top: 40px;
   color: #0C1244;
   display: flex;
   justify-content: space-between;
 }
-.category .wrapper .FoodSea .foodSeaText .comments_area .fa-star {
+main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star {
   color: #FFBF44;
   font-size: 12px;
   letter-spacing: -5px;
 }
-.category .wrapper .FoodSea .foodSeaText .comments_area .fa-star-half-stroke {
+main .category .wrapper .FoodSea .foodSeaText .comments_area .fa-star-half-stroke {
   color: #FFBF44;
   font-size: 12px;
   letter-spacing: -5px;
 }
-.category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
+main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
   border: 1.5px solid #0C1244;
   width: 140px;
   height: 50px;
@@ -222,18 +733,18 @@ nav .main_button img {
   line-height: 50px;
   color: #0C1244;
 }
-.category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
+main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
   background-color: #0C1244;
   color: #F5F0DD;
 }
-.category .wrapper .LiveLand {
+main .category .wrapper .LiveLand {
   height: 600px;
   position: relative;
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 220px;
 }
-.category .wrapper .LiveLand .LiveLandText {
+main .category .wrapper .LiveLand .LiveLandText {
   width: 630px;
   height: 350px;
   position: absolute;
@@ -243,7 +754,7 @@ nav .main_button img {
   padding: 80px;
   box-sizing: border-box;
 }
-.category .wrapper .LiveLand .LiveLandText h3 {
+main .category .wrapper .LiveLand .LiveLandText h3 {
   width: 100px;
   border-radius: 50%;
   line-height: 100px;
@@ -253,7 +764,7 @@ nav .main_button img {
   top: -50px;
   left: 100px;
 }
-.category .wrapper .LiveLand .LiveLandText .draw01 {
+main .category .wrapper .LiveLand .LiveLandText .draw01 {
   background-color: #0C1244;
   width: 14%;
   height: 5px;
@@ -262,7 +773,7 @@ nav .main_button img {
   left: 0;
   box-sizing: border-box;
 }
-.category .wrapper .LiveLand .LiveLandText .draw02 {
+main .category .wrapper .LiveLand .LiveLandText .draw02 {
   background-color: #0C1244;
   width: 5px;
   height: 100%;
@@ -270,7 +781,7 @@ nav .main_button img {
   top: 0;
   left: 0;
 }
-.category .wrapper .LiveLand .LiveLandText .draw03 {
+main .category .wrapper .LiveLand .LiveLandText .draw03 {
   background-color: #0C1244;
   width: 100%;
   height: 5px;
@@ -278,7 +789,7 @@ nav .main_button img {
   bottom: 0;
   left: 0;
 }
-.category .wrapper .LiveLand .LiveLandText .draw04 {
+main .category .wrapper .LiveLand .LiveLandText .draw04 {
   background-color: #0C1244;
   width: 5px;
   height: 345px;
@@ -287,7 +798,7 @@ nav .main_button img {
   right: 0;
   box-sizing: border-box;
 }
-.category .wrapper .LiveLand .LiveLandText .draw05 {
+main .category .wrapper .LiveLand .LiveLandText .draw05 {
   background-color: #0C1244;
   width: 65%;
   height: 5px;
@@ -295,23 +806,23 @@ nav .main_button img {
   top: 0;
   right: 0;
 }
-.category .wrapper .LiveLand .LiveLandText .comments_area {
+main .category .wrapper .LiveLand .LiveLandText .comments_area {
   margin-top: 40px;
   color: #0C1244;
   display: flex;
   justify-content: space-between;
 }
-.category .wrapper .LiveLand .LiveLandText .comments_area .fa-star {
+main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star {
   color: #FFBF44;
   font-size: 12px;
   letter-spacing: -5px;
 }
-.category .wrapper .LiveLand .LiveLandText .comments_area .fa-star-half-stroke {
+main .category .wrapper .LiveLand .LiveLandText .comments_area .fa-star-half-stroke {
   color: #FFBF44;
   font-size: 12px;
   letter-spacing: -5px;
 }
-.category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
+main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
   border: 1.5px solid #0C1244;
   width: 140px;
   height: 50px;
@@ -321,27 +832,23 @@ nav .main_button img {
   line-height: 50px;
   color: #0C1244;
 }
-.category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
+main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
   background-color: #0C1244;
   color: #F5F0DD;
 }
-
-.instagram .wrapper {
-  border: 1px solid red;
+main .instagram .wrapper {
   width: 1180px;
   margin: 0 auto;
 }
-.instagram .wrapper .fa-brands {
+main .instagram .wrapper .fa-brands {
   font-size: 60px;
   width: 60px;
   text-align: center;
-  border: 1px solid salmon;
 }
-.instagram .wrapper .igAccount {
+main .instagram .wrapper .igAccount {
   text-align: center;
 }
-.instagram .wrapper .instagramPhoto {
-  border: 1px solid black;
+main .instagram .wrapper .instagramPhoto {
   width: 936px;
   margin: 0 auto;
 }
