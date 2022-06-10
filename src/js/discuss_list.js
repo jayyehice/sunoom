@@ -317,6 +317,25 @@ $('.discussion').click(function(e){
     $('.form_region').css('display','block')
 });
 
+
+// 討論區文章圖片更換(開啟)
+$('.article1').click(function(e){
+    console.log('article1')
+    e.preventDefault();
+    $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
+    $('.pop-up').css('display','block')
+    console.log($(this).children('.img_1').children('img').attr("src"))
+});
+
+// 討論區文章圖片更換(關閉)
+// $('.article1').click(function(e){
+//     console.log('article1')
+//     e.preventDefault();
+//     $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
+//     $('.pop-up').css('display','none')
+//     console.log($(this).children('.img_1').children('img').attr("src"))
+// });
+
 // 關閉
 $('.png1').click(function(e){
     console.log('png1')
