@@ -1,0 +1,273 @@
+
+@mixin noteBookBig{
+    @media(max-width:1440px){
+        @content
+    }
+    
+};
+@mixin noteBook{
+    @media(max-width:1366px){
+        @content
+    }
+    
+};
+@mixin pad{
+    @media(min-width:768px) and (max-width:992px){
+        @content
+    }
+    
+};
+@mixin mobile{
+    @media(max-width:576px){
+        @content
+    }
+    
+};
+body{
+    background-color: blue;
+    display: block;
+}
+.allPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    cursor: pointer;
+    h5{
+        @include noteBookBig{
+            font-size: 16rem;
+        }
+        @include noteBook{
+            font-size: 12rem;
+        }
+        @include mobile{
+            font-size: 16rem;
+        }
+        
+    }
+    span{
+        display: block;
+        font-size: 120rem;
+        font-weight: bolder;
+        @include noteBookBig{
+            font-size: 90rem;
+        }
+        @include noteBook{
+            font-size: 70rem;
+        }
+        @include pad{
+            font-size: 50rem;
+        }
+    }
+    .SeaItinerary{
+        width: 50%;
+        height: 100%;
+        background-color: rgba($color: #8EADFB, $alpha: .65);
+        border-top:50px solid rgba($color: #08537D, $alpha: .73);
+        border-left: 50px solid rgba($color: #08537D, $alpha: .73);
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        &:hover{
+            #seaVideo{
+                display: block;
+                // z-index: 999;
+            }
+        }
+        img{
+           width: 100%;
+        }
+        video{
+            width: 100%;
+            display: none;
+        }
+        @include mobile{
+            border-top: 25px solid rgba($color: #08537D, $alpha: .73);
+            border-left: 25px solid rgba($color: #08537D, $alpha: .73);
+            text-align: center;
+        }
+        @include noteBook{
+            border-top: 25px solid rgba($color: #08537D, $alpha: .73);
+            border-left: 25px solid rgba($color: #08537D, $alpha: .73);
+        }
+        span{
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            color: #fff;
+            @include mobile{
+                top: 20%;
+                right: 25%;
+            }
+        }
+        h5{
+            position: absolute;
+            top: 40%;
+            right: 37%;
+            color: #fff;
+            @include noteBook{
+                top:35%
+            }
+            @include pad{
+                top: 36%;
+            }
+            @include mobile{
+                top: 35%;
+                right: 0%;
+            }
+        }
+
+    }
+    .LandItinerary{
+        width: 50%;
+        height: 100%;
+        // background-color: rgba($color: #4BB656, $alpha: .51);
+        border-top: 50px solid #7A8D7C;
+        border-right: 50px solid #7A8D7C;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        &:hover{
+            #landVideo{
+                display: block;
+                // z-index: 999;
+            }
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        video{
+           width: 100%;
+           display: none;
+        }
+        @include mobile{
+            border-top: 25px solid #7A8D7C;
+            border-right: 25px solid #7A8D7C;
+            text-align: center;
+        }
+        @include noteBook{
+            border-top: 25px solid #7A8D7C;
+            border-right: 25px solid #7A8D7C;
+        }
+        
+        span{
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            color: #fff;
+            @include mobile{
+                top: 20%;
+                right: 25%;
+            }
+        }
+        h5{
+            position: absolute;
+            top: 40%;
+            left: 37%;
+            color: #fff;
+            @include noteBook{
+                top:35%
+            }
+            @include pad{
+                top: 36%;
+            }
+            @include mobile{
+                top: 35%;
+                left: 0%;
+            }
+        }
+    }
+    .packageTour{
+        position: absolute;
+        bottom: 0px;
+        clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+        background-color: #FFE8BD;
+        border-bottom: 50px solid #FFDA91;
+        border-left: 50px solid #FFDA91;
+        border-right: 50px solid #FFDA91;
+        height: 50%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        &:hover{
+            #packVideo{
+                display: block;
+                z-index: 999;
+            }
+        }
+        @include noteBook{
+            border-bottom: 25px solid #FFDA91;
+            border-left: 25px solid #FFDA91;
+            border-right: 25px solid #FFDA91;
+        }
+        video{
+            width: 100%;
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+        .Pagebox{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            
+            span{
+                position: absolute;
+                top: 20%;
+                left: 46.5%;
+                color: #fff;
+            
+                @include noteBook{
+                    left: 47%;
+                }
+                @include pad{
+                    left: 46.5%;
+                }
+                @include mobile{
+                    left: 37.5%;
+                    top: 35%;
+                }
+            }
+            h5{
+                position: absolute;
+                top: 60%;
+                left: 44%;
+                color: #fff;
+                font-weight:bolder;
+                @include noteBook{
+                    left: 45%;
+                }
+                @include pad{
+                    left: 41%;
+                }
+                @include mobile{
+                    left: 20%;
+                    top: 64%;
+                }
+            }
+            h5:nth-Child(3){
+                top: 70%;
+                left: 56%;
+                @include pad{
+                    left: 57%;
+                    top: 78%;
+                }
+                @include mobile{
+                    left: 70%;
+                    top: 70%;
+                }
+            }
+            
+        }
+
+    }
+
+}
+

@@ -1,5 +1,4 @@
-@import "sass/base/reset";
-@import "sass/base/common";
+@import 'base/var';
 
 @mixin circle{
     width: 200px;
@@ -12,9 +11,9 @@
     align-items: center;
 };
     
-body{
-    background-color:#F5F0DD;
-    color: #0C1244;
+.orderPage{
+    background-color:$sun_color;
+    color: $moon_color;
     section{
         h2{
             text-align: center;

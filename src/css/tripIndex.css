@@ -1,0 +1,284 @@
+body {
+  background-color: blue;
+  display: block;
+}
+
+.allPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 1440px) {
+  .allPage h5 {
+    font-size: 16rem;
+  }
+}
+@media (max-width: 1366px) {
+  .allPage h5 {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 576px) {
+  .allPage h5 {
+    font-size: 16rem;
+  }
+}
+.allPage span {
+  display: block;
+  font-size: 120rem;
+  font-weight: bolder;
+}
+@media (max-width: 1440px) {
+  .allPage span {
+    font-size: 90rem;
+  }
+}
+@media (max-width: 1366px) {
+  .allPage span {
+    font-size: 70rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage span {
+    font-size: 50rem;
+  }
+}
+.allPage .SeaItinerary {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(142, 173, 251, 0.65);
+  border-top: 50px solid rgba(8, 83, 125, 0.73);
+  border-left: 50px solid rgba(8, 83, 125, 0.73);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.allPage .SeaItinerary:hover #seaVideo {
+  display: block;
+}
+.allPage .SeaItinerary img {
+  width: 100%;
+}
+.allPage .SeaItinerary video {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 576px) {
+  .allPage .SeaItinerary {
+    border-top: 25px solid rgba(8, 83, 125, 0.73);
+    border-left: 25px solid rgba(8, 83, 125, 0.73);
+    text-align: center;
+  }
+}
+@media (max-width: 1366px) {
+  .allPage .SeaItinerary {
+    border-top: 25px solid rgba(8, 83, 125, 0.73);
+    border-left: 25px solid rgba(8, 83, 125, 0.73);
+  }
+}
+.allPage .SeaItinerary span {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .allPage .SeaItinerary span {
+    top: 20%;
+    right: 25%;
+  }
+}
+.allPage .SeaItinerary h5 {
+  position: absolute;
+  top: 40%;
+  right: 37%;
+  color: #fff;
+}
+@media (max-width: 1366px) {
+  .allPage .SeaItinerary h5 {
+    top: 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage .SeaItinerary h5 {
+    top: 36%;
+  }
+}
+@media (max-width: 576px) {
+  .allPage .SeaItinerary h5 {
+    top: 35%;
+    right: 0%;
+  }
+}
+.allPage .LandItinerary {
+  width: 50%;
+  height: 100%;
+  border-top: 50px solid #7A8D7C;
+  border-right: 50px solid #7A8D7C;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.allPage .LandItinerary:hover #landVideo {
+  display: block;
+}
+.allPage .LandItinerary img {
+  width: 100%;
+  display: block;
+}
+.allPage .LandItinerary video {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 576px) {
+  .allPage .LandItinerary {
+    border-top: 25px solid #7A8D7C;
+    border-right: 25px solid #7A8D7C;
+    text-align: center;
+  }
+}
+@media (max-width: 1366px) {
+  .allPage .LandItinerary {
+    border-top: 25px solid #7A8D7C;
+    border-right: 25px solid #7A8D7C;
+  }
+}
+.allPage .LandItinerary span {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .allPage .LandItinerary span {
+    top: 20%;
+    right: 25%;
+  }
+}
+.allPage .LandItinerary h5 {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  color: #fff;
+}
+@media (max-width: 1366px) {
+  .allPage .LandItinerary h5 {
+    top: 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage .LandItinerary h5 {
+    top: 36%;
+  }
+}
+@media (max-width: 576px) {
+  .allPage .LandItinerary h5 {
+    top: 35%;
+    left: 0%;
+  }
+}
+.allPage .packageTour {
+  position: absolute;
+  bottom: 0px;
+  clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+  background-color: #FFE8BD;
+  border-bottom: 50px solid #FFDA91;
+  border-left: 50px solid #FFDA91;
+  border-right: 50px solid #FFDA91;
+  height: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.allPage .packageTour:hover #packVideo {
+  display: block;
+  z-index: 999;
+}
+@media (max-width: 1366px) {
+  .allPage .packageTour {
+    border-bottom: 25px solid #FFDA91;
+    border-left: 25px solid #FFDA91;
+    border-right: 25px solid #FFDA91;
+  }
+}
+.allPage .packageTour video {
+  width: 100%;
+  display: none;
+}
+.allPage .packageTour img {
+  width: 100%;
+}
+.allPage .packageTour .Pagebox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.allPage .packageTour .Pagebox span {
+  position: absolute;
+  top: 20%;
+  left: 46.5%;
+  color: #fff;
+}
+@media (max-width: 1366px) {
+  .allPage .packageTour .Pagebox span {
+    left: 47%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage .packageTour .Pagebox span {
+    left: 46.5%;
+  }
+}
+@media (max-width: 576px) {
+  .allPage .packageTour .Pagebox span {
+    left: 37.5%;
+    top: 35%;
+  }
+}
+.allPage .packageTour .Pagebox h5 {
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  color: #fff;
+  font-weight: bolder;
+}
+@media (max-width: 1366px) {
+  .allPage .packageTour .Pagebox h5 {
+    left: 45%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage .packageTour .Pagebox h5 {
+    left: 41%;
+  }
+}
+@media (max-width: 576px) {
+  .allPage .packageTour .Pagebox h5 {
+    left: 20%;
+    top: 64%;
+  }
+}
+.allPage .packageTour .Pagebox h5:nth-Child(3) {
+  top: 70%;
+  left: 56%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .allPage .packageTour .Pagebox h5:nth-Child(3) {
+    left: 57%;
+    top: 78%;
+  }
+}
+@media (max-width: 576px) {
+  .allPage .packageTour .Pagebox h5:nth-Child(3) {
+    left: 70%;
+    top: 70%;
+  }
+}
+
+/*# sourceMappingURL=tripIndex.css.map */

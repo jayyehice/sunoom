@@ -1,11 +1,920 @@
 @import 'base/var';
 
-body {
-    background-color: #F5F0DD;
-    color: #0C1244;
+.index {
+    background-color: $sun_color;
+    color: $moon_color;
     letter-spacing: 3px;
     line-height: 1.6;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+    main{
+        .parallax {
+            background-image: url(../img/index/muntain_bg01.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            position: relative;
+    
+            h3 {
+                text-align: center;
+            }
+    
+            .muntain01{
+                width: 100%;
+            }
+        }
+    
+        .news {
+            display: flex;
+            border: 1px solid $moon_color;
+            height: 250px;
+            align-items: center;
+            justify-content: center;
+    
+            .news_title {
+                width: 120px;
+                height: 70px;
+            }
+    
+            .news_text {
+                margin-left: 75px;
+            }
+        }
+    
+        .category {
+            .wrapper {
+                width: 1180px;
+                margin: 0 auto;
+    
+                &>h3 {
+                    text-align: center;
+                    margin-top: 40px;
+                    margin-bottom: 80px;
+                }
+    
+                .FoodSea{
+                    height: 600px;
+                    position: relative;
+                    margin-bottom: 180px;
+    
+                    .cloud01 {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+    
+                    .foodSeaText {
+                        width: 630px;
+                        height: 350px;
+                        position: absolute;
+                        // border: 1px sienna solid;
+                        top: 220px;
+                        right: 0;
+                        background-color: $sun_color;
+                        padding: 80px;
+                        box-sizing: border-box;
+    
+                        h3 {
+                            width: 100px;
+                            border-radius: 50%;
+                            line-height: 100px;
+                            border: 4px solid $moon_color;
+                            text-align: center;
+                            position: absolute;
+                            top: -50px;
+                            right: 100px;
+                        }
+    
+                        .draw01{
+                            background-color: $moon_color;
+                            width: 65%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw02{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw03{
+                            background-color: $moon_color;
+                            width: 100%;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+    
+                        .draw04{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 345px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw05{
+                            background-color: $moon_color;
+                            width: 14%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .comments_area {
+                            margin-top: 40px;
+                            color: $moon_color;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .fa-star {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+                            .fa-star-half-stroke {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+    
+    
+    
+                            .viewButton{
+                                border: 1.5px solid $moon_color;
+                                width: 140px;
+                                height: 50px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+    
+    
+                        }
+                    }
+                }
+                .LiveLand{
+                    height: 600px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    margin-bottom: 220px;
+    
+                    .LiveLandText {
+                        width: 630px;
+                        height: 350px;
+                        position: absolute;
+                        // border: 1px sienna solid;
+                        top: 320px;
+                        left: 0;
+                        background-color: $sun_color;
+                        padding: 80px;
+                        box-sizing: border-box;
+    
+                        h3 {
+                            width: 100px;
+                            border-radius: 50%;
+                            line-height: 100px;
+                            border: 4px solid $moon_color;
+                            text-align: center;
+                            position: absolute;
+                            top: -50px;
+                            left: 100px;
+                        }
+    
+                        .draw01{
+                            background-color: $moon_color;
+                            width: 14%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw02{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw03{
+                            background-color: $moon_color;
+                            width: 100%;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+    
+                        .draw04{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 345px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw05{
+                            background-color: $moon_color;
+                            width: 65%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+    
+                        .comments_area {
+                            margin-top: 40px;
+                            color: $moon_color;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .fa-star {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+                            .fa-star-half-stroke {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+    
+    
+    
+                            .viewButton{
+                                border: 1.5px solid $moon_color;
+                                width: 140px;
+                                height: 50px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+    
+    
+                        }
+                    }
+                }      
+    
+            }
+            
+        }
+    
+        .instagram{
+            padding-bottom: 250px;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+                .fa-brands{
+                    font-size: 60px;
+                    width: 60px;
+                    text-align: center;
+                }
+                .igAccount{
+                    text-align: center;
+                }
+    
+                .instagramPhoto{
+                    width: 936px ;
+                    margin: 0 auto;
+
+                    li{
+                        img:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+            #ig_pop_up{
+                display: none;
+                position: fixed;
+                top: 0;
+                background-color: rgba(0, 0, 0, .4);
+                height: 100vh;
+                width: 100%;
+                #ig_pop_up_content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1200px;
+                    display: flex;
+                    // align-items: flex-start;
+                    justify-content: center;
+        
+                    #ig_pop_up_left{
+                        width: 800px;
+                        background-color: #000;
+                        img{
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 100px;
+                        }
+        
+                        p{
+                            text-align: center;
+                            line-height: 100px;
+                            color: #fff;
+                            // padding-left: 60px;
+                            // box-sizing: border-box;
+                        }
+                        
+                    }
+        
+                    #ig_pop_up_right{
+                        width: 400px;
+                        background-color: #fff;
+                        #ig_author{
+                            height: 85px;
+                            padding: 0 25px;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border-bottom: 1px solid #BBB;
+        
+                            #ig_author_img{
+                                width: 55px;
+                                border-radius: 50%;
+                                margin-right: 15px;
+                            }
+        
+                        }
+        
+                        #ig_words{
+                            height: calc(100% - 85px);
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .traffic{
+            margin-top: 70px;
+            text-align: center;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+        
+                &>h3{
+                    margin-bottom: 70px;
+                }
+        
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &>li{
+                        width: 565px;
+                        box-sizing: border-box;
+                        border: 1.5px solid $moon_color;
+        
+                        .title{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 35px;
+                            margin-bottom: 30px;
+                            
+        
+                            i{
+                                font-size: 20rem;
+                                margin-right: 20px;
+                                height: 24px;
+                               
+                            }
+        
+        
+                        }
+        
+                        &>h4{
+                            margin-bottom: 35px;
+                        }
+        
+                        ol{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            li{
+                                flex-basis: 0;
+                                flex-grow: 1;
+                                h4{
+                                    line-height: 70px;
+                                    border-top: 1px solid $moon_color;
+                                    border-bottom: 1px solid $moon_color;
+                                }
+        
+                                h5{
+                                    margin-top: 45px;
+                                }
+        
+                                h5:last-child{
+                                    margin-bottom: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+.index_moon {
+    @import 'base/moonColorSwitch';
+    background-color: $sun_color;
+    color: $moon_color;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+
+    main{
+        .parallax {
+            background-image: url(../img/index/muntain_bg01.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            position: relative;
+    
+            h3 {
+                text-align: center;
+            }
+    
+            .muntain01{
+                width: 100%;
+            }
+        }
+    
+        .news {
+            display: flex;
+            border: 1px solid $moon_color;
+            height: 250px;
+            align-items: center;
+            justify-content: center;
+    
+            .news_title {
+                width: 120px;
+                height: 70px;
+            }
+    
+            .news_text {
+                margin-left: 75px;
+            }
+        }
+    
+        .category {
+            .wrapper {
+                width: 1180px;
+                margin: 0 auto;
+    
+                &>h3 {
+                    text-align: center;
+                    margin-top: 40px;
+                    margin-bottom: 80px;
+                }
+    
+                .FoodSea{
+                    height: 600px;
+                    position: relative;
+                    margin-bottom: 180px;
+    
+                    .cloud01 {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+    
+                    .foodSeaText {
+                        width: 630px;
+                        height: 350px;
+                        position: absolute;
+                        // border: 1px sienna solid;
+                        top: 220px;
+                        right: 0;
+                        background-color: $sun_color;
+                        padding: 80px;
+                        box-sizing: border-box;
+    
+                        h3 {
+                            width: 100px;
+                            border-radius: 50%;
+                            line-height: 100px;
+                            border: 4px solid $moon_color;
+                            text-align: center;
+                            position: absolute;
+                            top: -50px;
+                            right: 100px;
+                        }
+    
+                        .draw01{
+                            background-color: $moon_color;
+                            width: 65%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw02{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw03{
+                            background-color: $moon_color;
+                            width: 100%;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+    
+                        .draw04{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 345px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw05{
+                            background-color: $moon_color;
+                            width: 14%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .comments_area {
+                            margin-top: 40px;
+                            color: $moon_color;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .fa-star {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+                            .fa-star-half-stroke {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+    
+    
+    
+                            .viewButton{
+                                border: 1.5px solid $moon_color;
+                                width: 140px;
+                                height: 50px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+    
+    
+                        }
+                    }
+                }
+                .LiveLand{
+                    height: 600px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    margin-bottom: 220px;
+    
+                    .LiveLandText {
+                        width: 630px;
+                        height: 350px;
+                        position: absolute;
+                        // border: 1px sienna solid;
+                        top: 320px;
+                        left: 0;
+                        background-color: $sun_color;
+                        padding: 80px;
+                        box-sizing: border-box;
+    
+                        h3 {
+                            width: 100px;
+                            border-radius: 50%;
+                            line-height: 100px;
+                            border: 4px solid $moon_color;
+                            text-align: center;
+                            position: absolute;
+                            top: -50px;
+                            left: 100px;
+                        }
+    
+                        .draw01{
+                            background-color: $moon_color;
+                            width: 14%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw02{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        .draw03{
+                            background-color: $moon_color;
+                            width: 100%;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+    
+                        .draw04{
+                            background-color: $moon_color;
+                            width: 5px;
+                            height: 345px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            box-sizing: border-box;
+                        }
+    
+                        .draw05{
+                            background-color: $moon_color;
+                            width: 65%;
+                            height: 5px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+    
+                        .comments_area {
+                            margin-top: 40px;
+                            color: $moon_color;
+                            display: flex;
+                            justify-content: space-between;
+    
+                            .fa-star {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+                            .fa-star-half-stroke {
+                                color: #FFBF44;
+                                font-size: 12px;
+                                letter-spacing: -5px;
+                            }
+    
+    
+    
+                            .viewButton{
+                                border: 1.5px solid $moon_color;
+                                width: 140px;
+                                height: 50px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+    
+    
+                        }
+                    }
+                }      
+    
+            }
+            
+        }
+    
+        .instagram{
+            padding-bottom: 250px;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+                .fa-brands{
+                    font-size: 60px;
+                    width: 60px;
+                    text-align: center;
+                }
+                .igAccount{
+                    text-align: center;
+                }
+    
+                .instagramPhoto{
+                    width: 936px ;
+                    margin: 0 auto;
+
+                    li{
+                        img:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+            #ig_pop_up{
+                display: none;
+                position: fixed;
+                top: 0;
+                background-color: rgba(0, 0, 0, .4);
+                height: 100vh;
+                width: 100%;
+                #ig_pop_up_content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1200px;
+                    display: flex;
+                    // align-items: flex-start;
+                    justify-content: center;
+        
+                    #ig_pop_up_left{
+                        width: 800px;
+                        background-color: #000;
+                        img{
+                            max-width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 100px;
+                        }
+        
+                        p{
+                            text-align: center;
+                            line-height: 100px;
+                            color: #fff;
+                            // padding-left: 60px;
+                            // box-sizing: border-box;
+                        }
+                        
+                    }
+        
+                    #ig_pop_up_right{
+                        width: 400px;
+                        background-color: #fff;
+                        #ig_author{
+                            height: 85px;
+                            padding: 0 25px;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border-bottom: 1px solid #BBB;
+        
+                            #ig_author_img{
+                                width: 55px;
+                                border-radius: 50%;
+                                margin-right: 15px;
+                            }
+        
+                        }
+        
+                        #ig_words{
+                            height: calc(100% - 85px);
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .traffic{
+            margin-top: 70px;
+            text-align: center;
+            .wrapper{
+                width: 1180px;
+                margin: 0 auto;
+        
+                &>h3{
+                    margin-bottom: 70px;
+                }
+        
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &>li{
+                        width: 565px;
+                        box-sizing: border-box;
+                        border: 1.5px solid $moon_color;
+        
+                        .title{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 35px;
+                            margin-bottom: 30px;
+                            
+        
+                            i{
+                                font-size: 20rem;
+                                margin-right: 20px;
+                                height: 24px;
+                               
+                            }
+        
+        
+                        }
+        
+                        &>h4{
+                            margin-bottom: 35px;
+                        }
+        
+                        ol{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            li{
+                                flex-basis: 0;
+                                flex-grow: 1;
+                                h4{
+                                    line-height: 70px;
+                                    border-top: 1px solid $moon_color;
+                                    border-bottom: 1px solid $moon_color;
+                                }
+        
+                                h5{
+                                    margin-top: 45px;
+                                }
+        
+                                h5:last-child{
+                                    margin-bottom: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
 }
 
 header {
@@ -18,7 +927,7 @@ header {
         margin: 0 auto;
 
         .switchText {
-            border: 1px white solid;
+            // border: 1px white solid;
             margin: 0 auto;
             width: 260px;
             height: 40px;
@@ -80,16 +989,16 @@ nav {
         display: block;
         width: 90px;
         height: 30px;
-        color: #0C1244;
-        background-color: #F5F0DD;
+        color: $moon_color;
+        background-color: $sun_color;
         border-radius: 15px;
         text-align: center;
         cursor: pointer;
 
 
         &:hover {
-            background-color: #0C1244;
-            color: #F5F0DD;
+            background-color: $moon_color;
+            color: $sun_color;
         }
 
         a {
@@ -98,7 +1007,7 @@ nav {
             line-height: 30px;
 
             &:hover {
-                color: #F5F0DD;
+                color: $sun_color;
             }
 
         }
@@ -110,441 +1019,317 @@ nav {
     }
 }
 
-.parallax {
-    background-image: url(../img/index/muntain_bg01.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-    position: relative;
+/*
+main{
+    .parallax {
+        background-image: url(../img/index/muntain_bg01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+        position: relative;
 
-    h3 {
-        text-align: center;
-    }
-}
-
-.news {
-    display: flex;
-    border: 1px solid #0C1244;
-    height: 250px;
-    align-items: center;
-    justify-content: center;
-
-    .news_title {
-        width: 120px;
-        height: 70px;
-    }
-
-    .news_text {
-        margin-left: 75px;
-    }
-}
-
-.category {
-    .wrapper {
-        width: 1180px;
-        margin: 0 auto;
-        border: 1px solid purple;
-
-        &>h3 {
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 80px;
-        }
-
-        .FoodSea{
-            height: 600px;
-            position: relative;
-            margin-bottom: 180px;
-
-            .cloud01 {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-
-            .foodSeaText {
-                width: 630px;
-                height: 350px;
-                position: absolute;
-                // border: 1px sienna solid;
-                top: 220px;
-                right: 0;
-                background-color: #F5F0DD;
-                padding: 80px;
-                box-sizing: border-box;
-
-                h3 {
-                    width: 100px;
-                    border-radius: 50%;
-                    line-height: 100px;
-                    border: 4px solid #0C1244;
-                    text-align: center;
-                    position: absolute;
-                    top: -50px;
-                    right: 100px;
-                }
-
-                .draw01{
-                    background-color: #0C1244;
-                    width: 65%;
-                    height: 5px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                .draw02{
-                    background-color: #0C1244;
-                    width: 5px;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                .draw03{
-                    background-color: #0C1244;
-                    width: 100%;
-                    height: 5px;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                }
-
-                .draw04{
-                    background-color: #0C1244;
-                    width: 5px;
-                    height: 345px;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    box-sizing: border-box;
-                }
-
-                .draw05{
-                    background-color: #0C1244;
-                    width: 14%;
-                    height: 5px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    box-sizing: border-box;
-                }
-
-                .comments_area {
-                    margin-top: 40px;
-                    color: #0C1244;
-                    display: flex;
-                    justify-content: space-between;
-
-                    .fa-star {
-                        color: #FFBF44;
-                        font-size: 12px;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke {
-                        color: #FFBF44;
-                        font-size: 12px;
-                        letter-spacing: -5px;
-                    }
-
-
-
-                    .viewButton{
-                        border: 1.5px solid #0C1244;
-                        width: 140px;
-                        height: 50px;
-                        text-align: center;
-                        display: block;
-                        text-decoration: none;
-                        line-height: 50px;
-                        color: #0C1244;
-
-                        &:hover {
-                            background-color: #0C1244;
-                            color: #F5F0DD;
-                        }
-                    }
-
-
-                }
-            }
-        }
-        .LiveLand{
-            height: 600px;
-            position: relative;
-            display: flex;
-            flex-direction: row-reverse;
-            margin-bottom: 220px;
-
-            .LiveLandText {
-                width: 630px;
-                height: 350px;
-                position: absolute;
-                // border: 1px sienna solid;
-                top: 320px;
-                left: 0;
-                background-color: #F5F0DD;
-                padding: 80px;
-                box-sizing: border-box;
-
-                h3 {
-                    width: 100px;
-                    border-radius: 50%;
-                    line-height: 100px;
-                    border: 4px solid #0C1244;
-                    text-align: center;
-                    position: absolute;
-                    top: -50px;
-                    left: 100px;
-                }
-
-                .draw01{
-                    background-color: #0C1244;
-                    width: 14%;
-                    height: 5px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    box-sizing: border-box;
-                }
-
-                .draw02{
-                    background-color: #0C1244;
-                    width: 5px;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                .draw03{
-                    background-color: #0C1244;
-                    width: 100%;
-                    height: 5px;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                }
-
-                .draw04{
-                    background-color: #0C1244;
-                    width: 5px;
-                    height: 345px;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    box-sizing: border-box;
-                }
-
-                .draw05{
-                    background-color: #0C1244;
-                    width: 65%;
-                    height: 5px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                }
-
-                .comments_area {
-                    margin-top: 40px;
-                    color: #0C1244;
-                    display: flex;
-                    justify-content: space-between;
-
-                    .fa-star {
-                        color: #FFBF44;
-                        font-size: 12px;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke {
-                        color: #FFBF44;
-                        font-size: 12px;
-                        letter-spacing: -5px;
-                    }
-
-
-
-                    .viewButton{
-                        border: 1.5px solid #0C1244;
-                        width: 140px;
-                        height: 50px;
-                        text-align: center;
-                        display: block;
-                        text-decoration: none;
-                        line-height: 50px;
-                        color: #0C1244;
-
-                        &:hover {
-                            background-color: #0C1244;
-                            color: #F5F0DD;
-                        }
-                    }
-
-
-                }
-            }
-        }      
-
-    }
-    
-}
-
-.instagram{
-    padding-bottom: 250px;
-    .wrapper{
-        border: 1px solid red;
-        width: 1180px;
-        margin: 0 auto;
-        .fa-brands{
-            font-size: 60px;
-            width: 60px;
-            text-align: center;
-            border: 1px solid salmon;
-        }
-        .igAccount{
+        h3 {
             text-align: center;
         }
 
-        .instagramPhoto{
-            border: 1px solid black;
-            width: 936px ;
+        .muntain01{
+            width: 100%;
+        }
+    }
+
+    .news {
+        display: flex;
+        border: 1px solid $moon_color;
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+
+        .news_title {
+            width: 120px;
+            height: 70px;
+        }
+
+        .news_text {
+            margin-left: 75px;
+        }
+    }
+
+    .category {
+        .wrapper {
+            width: 1180px;
             margin: 0 auto;
+
+            &>h3 {
+                text-align: center;
+                margin-top: 40px;
+                margin-bottom: 80px;
+            }
+
+            .FoodSea{
+                height: 600px;
+                position: relative;
+                margin-bottom: 180px;
+
+                .cloud01 {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .foodSeaText {
+                    width: 630px;
+                    height: 350px;
+                    position: absolute;
+                    // border: 1px sienna solid;
+                    top: 220px;
+                    right: 0;
+                    background-color: $sun_color;
+                    padding: 80px;
+                    box-sizing: border-box;
+
+                    h3 {
+                        width: 100px;
+                        border-radius: 50%;
+                        line-height: 100px;
+                        border: 4px solid $moon_color;
+                        text-align: center;
+                        position: absolute;
+                        top: -50px;
+                        right: 100px;
+                    }
+
+                    .draw01{
+                        background-color: $moon_color;
+                        width: 65%;
+                        height: 5px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .draw02{
+                        background-color: $moon_color;
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .draw03{
+                        background-color: $moon_color;
+                        width: 100%;
+                        height: 5px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    .draw04{
+                        background-color: $moon_color;
+                        width: 5px;
+                        height: 345px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                    }
+
+                    .draw05{
+                        background-color: $moon_color;
+                        width: 14%;
+                        height: 5px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                    }
+
+                    .comments_area {
+                        margin-top: 40px;
+                        color: $moon_color;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .fa-star {
+                            color: #FFBF44;
+                            font-size: 12px;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke {
+                            color: #FFBF44;
+                            font-size: 12px;
+                            letter-spacing: -5px;
+                        }
+
+
+
+                        .viewButton{
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: block;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+            .LiveLand{
+                height: 600px;
+                position: relative;
+                display: flex;
+                flex-direction: row-reverse;
+                margin-bottom: 220px;
+
+                .LiveLandText {
+                    width: 630px;
+                    height: 350px;
+                    position: absolute;
+                    // border: 1px sienna solid;
+                    top: 320px;
+                    left: 0;
+                    background-color: $sun_color;
+                    padding: 80px;
+                    box-sizing: border-box;
+
+                    h3 {
+                        width: 100px;
+                        border-radius: 50%;
+                        line-height: 100px;
+                        border: 4px solid $moon_color;
+                        text-align: center;
+                        position: absolute;
+                        top: -50px;
+                        left: 100px;
+                    }
+
+                    .draw01{
+                        background-color: $moon_color;
+                        width: 14%;
+                        height: 5px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        box-sizing: border-box;
+                    }
+
+                    .draw02{
+                        background-color: $moon_color;
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .draw03{
+                        background-color: $moon_color;
+                        width: 100%;
+                        height: 5px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    .draw04{
+                        background-color: $moon_color;
+                        width: 5px;
+                        height: 345px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                    }
+
+                    .draw05{
+                        background-color: $moon_color;
+                        width: 65%;
+                        height: 5px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    .comments_area {
+                        margin-top: 40px;
+                        color: $moon_color;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .fa-star {
+                            color: #FFBF44;
+                            font-size: 12px;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke {
+                            color: #FFBF44;
+                            font-size: 12px;
+                            letter-spacing: -5px;
+                        }
+
+
+
+                        .viewButton{
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: block;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
+                        }
+
+
+                    }
+                }
+            }      
+
         }
         
     }
 
-    #ig_pop_up{
-        display: none;
-        position: fixed;
-        top: 0;
-        background-color: rgba(0, 0, 0, .4);
-        height: 100vh;
-        width: 100%;
-        #ig_pop_up_content{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 1200px;
-            display: flex;
-            // align-items: flex-start;
-            justify-content: center;
-
-            #ig_pop_up_left{
-                width: 800px;
-                background-color: #000;
-                img{
-                    max-width: 100%;
-                    display: block;
-                    margin: 0 auto;
-                    margin-top: 100px;
-                }
-
-                p{
-                    text-align: center;
-                    line-height: 100px;
-                    color: #fff;
-                    // padding-left: 60px;
-                    // box-sizing: border-box;
-                }
-                
+    .instagram{
+        .wrapper{
+            // border: 1px solid red;
+            width: 1180px;
+            margin: 0 auto;
+            .fa-brands{
+                font-size: 60px;
+                width: 60px;
+                text-align: center;
+                // border: 1px solid salmon;
+            }
+            .igAccount{
+                text-align: center;
             }
 
-            #ig_pop_up_right{
-                width: 400px;
-                background-color: #fff;
-                #ig_author{
-                    height: 85px;
-                    padding: 0 25px;
-                    box-sizing: border-box;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    border-bottom: 1px solid #BBB;
-
-                    #ig_author_img{
-                        width: 55px;
-                        border-radius: 50%;
-                        margin-right: 15px;
-                    }
-
-                }
-
-                #ig_words{
-                    height: calc(100% - 85px);
-                    padding: 25px;
-                }
+            .instagramPhoto{
+                // border: 1px solid black;
+                width: 936px ;
+                margin: 0 auto;
             }
+            
         }
     }
 }
-
-.traffic{
-    // margin-top: 70px;
-    text-align: center;
-    .wrapper{
-        width: 1180px;
-        margin: 0 auto;
-
-        &>h3{
-            margin-bottom: 70px;
-        }
-
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &>li{
-                width: 565px;
-                box-sizing: border-box;
-                border: 1.5px solid $moon_color;
-
-                .title{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 35px;
-                    margin-bottom: 30px;
-                    
-
-                    i{
-                        font-size: 20rem;
-                        margin-right: 20px;
-                        height: 24px;
-                       
-                    }
+*/
 
 
-                }
 
-                &>h4{
-                    margin-bottom: 35px;
-                }
 
-                ol{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    li{
-                        flex-basis: 0;
-                        flex-grow: 1;
-                        h4{
-                            line-height: 70px;
-                            border-top: 1px solid $moon_color;
-                            border-bottom: 1px solid $moon_color;
-                        }
-
-                        h5{
-                            margin-top: 45px;
-                        }
-
-                        h5:last-child{
-                            margin-bottom: 45px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
