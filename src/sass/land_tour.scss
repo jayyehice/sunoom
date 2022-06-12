@@ -432,6 +432,7 @@
 
     background-color: $sun_color;
     color: $moon_color;
+
     main{
     
         .breadcrumbs{
@@ -485,8 +486,14 @@
                     margin-right: 50px;
                 }
     
-                h5{
+                .slogan_h5{
+                    // border: $show_border;
                     margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    h5{
+                        margin-left: 10px;
+                    }
                 }
             }
         }
@@ -720,6 +727,10 @@
                         position: absolute;
                         top: 0px;
                         left: 0px;
+                    }
+
+                    #branch_07, #branch_08{
+                        display: none;
                     }
                 }
             }
