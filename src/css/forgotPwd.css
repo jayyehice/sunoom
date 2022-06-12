@@ -1,51 +1,45 @@
-body {
+.forgotPwd {
   background-color: #F5F0DD;
   color: #0C1244;
+}
+.forgotPwd main {
+  margin: 0 auto;
+  box-sizing: border-box;
   line-height: 1.6;
   letter-spacing: 3px;
 }
-
-main {
-  border: 1px solid firebrick;
-  margin: 0 auto;
-  color: #0C1244;
-}
-
-.wrapper {
+.forgotPwd main .wrapper {
   width: 1080px;
   margin: 0 auto;
 }
-.wrapper a {
+.forgotPwd main .wrapper a {
   display: inline-block;
   text-decoration: none;
   color: #0C1244;
 }
-
-p {
+.forgotPwd main p {
   margin-top: 17px;
 }
-
-h3 {
+.forgotPwd main h3 {
   margin-top: 62px;
   text-align: center;
   margin-bottom: 48px;
 }
-
-.forgotMain {
+.forgotPwd main .forgotMain {
   width: 625px;
   margin: 0 auto;
 }
-.forgotMain h4 {
+.forgotPwd main .forgotMain h4 {
   text-align: center;
 }
-.forgotMain .forgotForm {
+.forgotPwd main .forgotMain .forgotForm {
   text-align: center;
   margin-top: 50px;
 }
-.forgotMain .forgotForm label {
+.forgotPwd main .forgotMain .forgotForm label {
   font-size: 24rem;
 }
-.forgotMain .forgotForm .forgotFormInput {
+.forgotPwd main .forgotMain .forgotForm .forgotFormInput {
   width: 400px;
   height: 50px;
   background-color: #F5F0DD;
@@ -54,7 +48,7 @@ h3 {
   padding-left: 10px;
   font-size: 24rem;
 }
-.forgotMain .forgotForm .forgotFormBtn {
+.forgotPwd main .forgotMain .forgotForm .forgotFormBtn {
   background-color: #F5F0DD;
   display: block;
   width: 140px;
@@ -65,19 +59,103 @@ h3 {
   margin-bottom: 10px;
   font-size: 16rem;
 }
-.forgotMain .forgotForm .forgotFormBtn:hover {
+.forgotPwd main .forgotMain .forgotForm .forgotFormBtn:hover {
   cursor: pointer;
   color: #F5F0DD;
   border: 1.5px solid #F5F0DD;
   background-color: #0C1244;
 }
-.forgotMain .forgotForm a {
+.forgotPwd main .forgotMain .forgotForm .resend {
   font-size: 20rem;
+  border: 0;
+  background-color: #F5F0DD;
+  cursor: pointer;
 }
-.forgotMain .forgotForm .reminder {
+.forgotPwd main .forgotMain .forgotForm .reminder {
   margin-top: 150px;
 }
-.forgotMain .forgotForm .reminderText {
+.forgotPwd main .forgotMain .forgotForm .reminderText {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.forgotPwd_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.forgotPwd_moon main {
+  margin: 0 auto;
+  box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+.forgotPwd_moon main .wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+.forgotPwd_moon main .wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #F5F0DD;
+}
+.forgotPwd_moon main p {
+  margin-top: 17px;
+}
+.forgotPwd_moon main h3 {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.forgotPwd_moon main .forgotMain {
+  width: 625px;
+  margin: 0 auto;
+}
+.forgotPwd_moon main .forgotMain h4 {
+  text-align: center;
+}
+.forgotPwd_moon main .forgotMain .forgotForm {
+  text-align: center;
+  margin-top: 50px;
+}
+.forgotPwd_moon main .forgotMain .forgotForm label {
+  font-size: 24rem;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormInput {
+  width: 400px;
+  height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  margin: 15px 0;
+  padding-left: 10px;
+  font-size: 24rem;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn {
+  background-color: #0C1244;
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #F5F0DD;
+  margin-bottom: 10px;
+  font-size: 16rem;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn:hover {
+  cursor: pointer;
+  color: #0C1244;
+  border: 1.5px solid #0C1244;
+  background-color: #F5F0DD;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .resend {
+  font-size: 20rem;
+  border: 0;
+  background-color: #0C1244;
+  cursor: pointer;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .reminder {
+  margin-top: 150px;
+}
+.forgotPwd_moon main .forgotMain .forgotForm .reminderText {
   margin-top: 20px;
   margin-bottom: 100px;
 }
