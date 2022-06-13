@@ -17,54 +17,75 @@ body .shoppingProcess {
   margin: 0 auto;
 }
 body .shoppingProcess img {
-  width: 100px;
+  width: 80px;
   height: 24px;
+  margin: 0 40px;
 }
 body .shoppingProcess .chooseAdate {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .chooseAtrip {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .tallyOrder {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: #0C1244;
   color: #F5F0DD;
 }
+body .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
+}
 body .shoppingProcess .orderComplete {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
 }
 body .bigList {
   width: 1000px;
-  height: 920px;
+  height: 630px;
   border: 2px solid #0C1244;
   margin: 50px auto;
   transition: all 2s;
@@ -105,7 +126,7 @@ body .bigList .tripList {
 }
 body .bigList .tripList li {
   width: 250px;
-  height: 195px;
+  height: 100px;
   border: 1px solid #0C1244;
   text-align: center;
 }
@@ -113,7 +134,7 @@ body .bigList .tripList li ol {
   list-style: none;
 }
 body .bigList .tripList li:first-child {
-  line-height: 195px;
+  line-height: 100px;
   border-left: none;
 }
 body .bigList .tripList li:last-Child {
@@ -156,24 +177,19 @@ body .payBlock h5 {
   margin-top: 15px;
 }
 body .payBlock #payEmail {
-  width: 750px;
+  width: 450px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 24px;
 }
-body .payBlock .phoneBlock {
+body .payBlock .mailAndPhone {
   display: flex;
-  line-height: 1.6;
-  margin-top: 10px;
 }
-body .payBlock .phoneBlock .phone {
-  margin-right: 30px;
-}
-body .payBlock .phoneBlock p {
-  width: 250px;
+body .payBlock .mailAndPhone .email {
+  margin-right: 50px;
 }
 body .payBlock #payPhoneNumber {
-  width: 460px;
+  width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 24px;
@@ -182,10 +198,9 @@ body .payBlock .nameBlock {
   display: flex;
   align-items: center;
   padding-bottom: 40px;
-  border-bottom: 1px solid #0C1244;
 }
 body .payBlock .nameBlock .firstName {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 body .payBlock .nameBlock #firstName {
   width: 200px;
@@ -194,10 +209,10 @@ body .payBlock .nameBlock #firstName {
   font-size: 20px;
 }
 body .payBlock .nameBlock .lastName {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 body .payBlock .nameBlock #lastName {
-  width: 250px;
+  width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 20px;
@@ -207,6 +222,10 @@ body .payBlock .nameBlock #payWay {
   height: 50px;
   background-color: #F5F0DD;
   font-size: 20px;
+}
+body .payBlock .creditCardBlock {
+  margin-top: 50px;
+  border-top: 1px solid #0C1244;
 }
 body .payBlock .creditCardBlock input {
   width: 150px;

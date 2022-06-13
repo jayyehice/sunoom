@@ -29,50 +29,71 @@ body .shoppingProcess {
   margin: 0 auto;
 }
 body .shoppingProcess img {
-  width: 100px;
+  width: 80px;
   height: 24px;
+  margin: 0 40px;
 }
 body .shoppingProcess .chooseAdate {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .chooseAtrip {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: #0C1244;
   color: #F5F0DD;
 }
+body .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
+}
 body .shoppingProcess .tallyOrder {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .orderComplete {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
 }
 body .datePickerBox {
   width: 700px;

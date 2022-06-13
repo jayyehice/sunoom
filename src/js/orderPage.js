@@ -29,7 +29,26 @@
 //     }
 // });
 
+
+
 $(function () {	
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            count:1,
+        },
+        methods: {
+            min(){
+                if(this.count >= 2){
+                    this.count-=1
+                    
+                }
+            }
+        }
+        
+    })
+
+
     //日月切換效果
     $('#sunoomChange').addClass('changing');
     $('#sunoomChange').click(function(){
@@ -148,11 +167,16 @@ $(function () {
     console.log(picker.startDate.format('YYYY-MM-DD'));
     console.log(picker.endDate.format('YYYY-MM-DD'));
     $('#beginDate').html(picker.startDate.format('YYYY-MM-DD'));
-    $('#endDate').html(picker.startDate.format('YYYY-MM-DD'));
+    $('#endDate').html(picker.endDate.format('YYYY-MM-DD'));
     });
 
     $('#NextPage').click(function(){
         window.location.href='tripChoose.html';
     });
+
+    $('#tripChoose').change(function(){
+        // console.log(($('#tripChoose').find("option:selected").text()));
+        $('#bookingDays').text(($('#tripChoose').find("option:selected").text()))
+    })
     
 })

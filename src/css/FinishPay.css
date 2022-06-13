@@ -13,50 +13,71 @@ body .shoppingProcess {
   margin: 0 auto;
 }
 body .shoppingProcess img {
-  width: 100px;
+  width: 80px;
   height: 24px;
+  margin: 0 40px;
 }
 body .shoppingProcess .chooseAdate {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .chooseAtrip {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .tallyOrder {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
 }
 body .shoppingProcess .orderComplete {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: #0C1244;
   color: #F5F0DD;
+}
+body .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
 }
 body .FinishTextBlock h3 {
   text-align: center;
@@ -68,7 +89,7 @@ body .FinishTextBlock h5 {
 }
 body .bigList {
   width: 1000px;
-  height: 920px;
+  height: 630px;
   border: 2px solid #0C1244;
   margin: 50px auto;
 }
@@ -108,7 +129,7 @@ body .bigList .tripList {
 }
 body .bigList .tripList li {
   width: 250px;
-  height: 195px;
+  height: 100px;
   border: 1px solid #0C1244;
   text-align: center;
 }
@@ -116,7 +137,7 @@ body .bigList .tripList li ol {
   list-style: none;
 }
 body .bigList .tripList li:first-child {
-  line-height: 195px;
+  line-height: 100px;
   border-left: none;
 }
 body .bigList .tripList li:last-Child {
