@@ -1,10 +1,16 @@
 @import 'base/var';
 
 .live{
+    
     background-color: $sun_color;
     letter-spacing: 3px;
     line-height: 1.4;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+    color: $moon_color;
+    a{
+        text-decoration: none;
+        color: $moon_color;
+    }
     main{
         .wrapper{
             width: 1180px;
@@ -649,11 +655,17 @@
 }
 
 .live_moon{
-    // @import 'base/moonColorSwitch';
+    @import 'base/moonColorSwitch';
+
     background-color: $sun_color;
     letter-spacing: 3px;
     line-height: 1.4;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+    color: $moon_color;
+    a{
+        text-decoration: none;
+        color: $moon_color;
+    }
     main{
         .wrapper{
             width: 1180px;
@@ -1297,10 +1309,7 @@
     }
 }
 
-a{
-    text-decoration: none;
-    color: $moon_color;
-}
+
 
 header{
     background-image: url(../img/live/live_main_bn.png);

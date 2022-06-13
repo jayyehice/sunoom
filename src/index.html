@@ -8,6 +8,7 @@
     <title>明島 Sunoom</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,15 +17,18 @@
 </head>
 
 <body class="index">
+    @@include('./layout/header.html')
     <header>
         <div class="wrapper">
             <!-- index main sun & moon video intro -->
-            <div class="index_video">
-                <video controls poster="./img/index_main_videobn.png" autoplay loop muted controls playsinline muted
-                    video>
-                    <source src="./img/index/index_main_video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="videoWrappper">
+                <div class="index_video">
+                    <video controls poster="./img/index_main_videobn.png" autoplay loop muted controls playsinline muted
+                        video>
+                        <source src="./img/index/index_main_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
             <nav>
                 <div class="hamburger">
@@ -53,16 +57,16 @@
     </header>
     <main>
         <section class="parallax">
-            <h3>Sunoom</h3>
-            <!-- <img src="./img/index/muntain_bg01.png"> -->
+            <h3 id="text">Sunoom</h3>
+            <img src="./img/index/muntain_bg01.png" cl>
             <img src="./img/index/muntain_bg02.png" class="muntain01">
-            <!-- <img src="./img/index/tree01.png">
+            <img src="./img/index/tree01.png">
             <img src="./img/index/tree02.png">
             <img src="./img/index/tree03.png">
             <img src="./img/index/sun.png">
             <img src="./img/index/cloud.png">
             <img src="./img/index/cloud02.png">
-            <img src="./img/index/bird.png"> -->
+            <img src="./img/index/bird.png">
         </section>
         <section class="news">
             <div class="news_title">
@@ -194,9 +198,9 @@
 
         <section class="instagram">
             <div class="wrapper">
-
                 <i class="fa-brands fa-instagram"></i>
                 <h4 class="igAccount">@sunoomisland</h4>
+            
                 <ul class="instagramPhoto">
                     <li>
                         <img class="ig_img" src="../src/img/index/instagram_img01.png">
@@ -216,6 +220,7 @@
 
                     </li>
                 </ul>
+                <img src="./img/index/cloud02.png" alt="">
             </div>
 
             <div id="ig_pop_up">
@@ -300,6 +305,8 @@
         </div>
     </footer>
 
+    @@include('./layout/footer.html')
+    @@include('./layout/header_footer_script_link.html')
     <script src="./js/instagram_pop_up.js"></script>
 </body>
 

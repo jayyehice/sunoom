@@ -6,17 +6,29 @@
   font-family: "Times New Roman", "Noto Sans TC", sans-serif;
 }
 .index main .parallax {
-  background-image: url(../img/index/muntain_bg01.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.index main .parallax h3 {
+.index main .parallax #text {
+  position: absolute;
+  font-size: 5vw;
   text-align: center;
 }
 .index main .parallax .muntain01 {
   width: 100%;
+}
+.index main .parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 .index main .news {
   display: flex;
@@ -252,7 +264,8 @@
 .index main .instagram .wrapper .fa-brands {
   font-size: 60px;
   width: 60px;
-  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 .index main .instagram .wrapper .igAccount {
   text-align: center;
@@ -626,10 +639,11 @@
   width: 1180px;
   margin: 0 auto;
 }
-.index_moon main .instagram .wrapper .fa-brands {
+.index_moon main .instagram .wrapper .igicon {
   font-size: 60px;
   width: 60px;
   text-align: center;
+  margin: 0 auto;
 }
 .index_moon main .instagram .wrapper .igAccount {
   text-align: center;
@@ -784,7 +798,7 @@ header h2 {
   text-align: center;
 }
 
-.index_video {
+.videoWrappper .index_video {
   top: 0;
   left: 0;
   object-fit: fill;

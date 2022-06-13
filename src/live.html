@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/live.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,7 @@
 </head>
 
 <body class="live">
+    @@include('./layout/header.html')
     <header>
         <div class="wrapper">
             <nav>
@@ -273,6 +275,8 @@
             </section>
         </div>
     </main>
+    @@include('./layout/footer.html')
+    @@include('./layout/header_footer_script_link.html')
 
 </body>
 
