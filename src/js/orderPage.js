@@ -170,7 +170,7 @@ $(function () {
     $('#endDate').html(picker.endDate.format('YYYY-MM-DD'));
     });
 
-    $('#NextPage').click(function(){
+    $('#NextPage').on('click',function(){
         window.location.href='tripChoose.html';
     });
 
