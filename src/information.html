@@ -40,9 +40,9 @@
                         <button class="big_btn" onclick="e.preventDefault">遊</button>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <button class="big_btn" id="test">test</button>
-                    </li>
+                    </li> -->
                     
                 </ul>
 
@@ -298,22 +298,22 @@
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/information.js"></script>
     <script>
-        let test = document.getElementById("test");
-        let img_test = document.getElementById("img_test");
-        let img_tag = document.getElementsByTagName("img");
+        // let test = document.getElementById("test");
+        // let img_test = document.getElementById("img_test");
+        // let img_tag = document.getElementsByTagName("img");
 
-        for(let i=0; i<img_tag.length; i++){
+        // for(let i=0; i<img_tag.length; i++){
 
-            test.addEventListener("click", function(e){
-                e.preventDefault();
-                if(img_tag[i].getAttribute("src").includes("sun")){
-                    img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
-                }else{
-                    img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
-                }
+        //     test.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         if(img_tag[i].getAttribute("src").includes("sun")){
+        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
+        //         }else{
+        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
+        //         }
     
-            });
-        }
+        //     });
+        // }
 
     </script>
 </body>
