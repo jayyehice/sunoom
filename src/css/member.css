@@ -34,6 +34,7 @@
   border: 1px solid #0C1244;
   float: right;
   margin-bottom: 62px;
+  color: #0C1244;
 }
 .member main .signOut:hover {
   cursor: pointer;
@@ -133,6 +134,7 @@
   font-size: 16rem;
   text-align: center;
   border: 1px solid #0C1244;
+  color: #0C1244;
 }
 .member main .basicData .btn:hover {
   cursor: pointer;
@@ -177,6 +179,7 @@
   font-size: 16rem;
   text-align: center;
   border: 1px solid #0C1244;
+  color: #0C1244;
 }
 .member main .changePwd .pwdForm .btn:hover {
   cursor: pointer;
@@ -224,12 +227,90 @@
   font-size: 12rem;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
+  color: #0C1244;
 }
 .member main .orderCheck table tbody tr td input:hover {
   cursor: pointer;
   color: #F5F0DD;
   border: 1.5px solid #F5F0DD;
   background-color: #0C1244;
+}
+.member main .orderCheck .orderDetail {
+  border-spacing: 0;
+  display: none;
+  margin-top: 20px;
+}
+.member main .orderCheck .orderDetail h6 {
+  display: inline-block;
+}
+.member main .orderCheck .orderDetail span {
+  color: #FFAC0C;
+}
+.member main .orderCheck .orderDetail .odTitle {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: top;
+  font-size: 0;
+  position: relative;
+}
+.member main .orderCheck .orderDetail .odTitle h5 {
+  background-color: #0C1244;
+  color: #F5F0DD;
+  width: 980px;
+  height: 50px;
+}
+.member main .orderCheck .orderDetail .odTitle i {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  font-size: 20rem;
+  color: #F5F0DD;
+  cursor: pointer;
+}
+.member main .orderCheck .orderDetail .odTitle p {
+  display: inline-block;
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetail .odTitle h6 {
+  display: inline-block;
+}
+.member main .orderCheck .orderDetail td {
+  border: 1px solid #0C1244;
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+.member main .orderCheck .orderDetail th {
+  border: 1px solid #0C1244;
+  padding: 10px 5px;
+}
+.member main .orderCheck .orderDetail .odTitle2 {
+  text-align: center;
+}
+.member main .orderCheck .orderDetail .odFoot {
+  text-align: right;
+  vertical-align: top;
+}
+.member main .orderCheck .orderDetail .odFoot .odFootLittle {
+  width: 270px;
+  margin-left: auto;
+  text-align: left;
+}
+.member main .orderCheck .orderDetail .odFoot .odFootLittle p {
+  margin-left: 0;
+}
+.member main .orderCheck .orderDetail .odFoot .footTitle {
+  display: inline-block;
+}
+.member main .orderCheck .orderDetail .odFoot span {
+  letter-spacing: normal;
+}
+.member main .orderCheck .orderDetail .odFoot .discountCode {
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+.member main .orderCheck .orderDetail .odFoot .discount {
+  color: #FF4444;
 }
 
 .member_moon {
@@ -268,6 +349,7 @@
   border: 1px solid #F5F0DD;
   float: right;
   margin-bottom: 62px;
+  color: #F5F0DD;
 }
 .member_moon main .signOut:hover {
   cursor: pointer;
@@ -367,6 +449,7 @@
   font-size: 16rem;
   text-align: center;
   border: 1px solid #F5F0DD;
+  color: #F5F0DD;
 }
 .member_moon main .basicData .btn:hover {
   cursor: pointer;
@@ -411,6 +494,7 @@
   font-size: 16rem;
   text-align: center;
   border: 1px solid #F5F0DD;
+  color: #F5F0DD;
 }
 .member_moon main .changePwd .pwdForm .btn:hover {
   cursor: pointer;
@@ -458,12 +542,78 @@
   font-size: 12rem;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
+  color: #F5F0DD;
 }
 .member_moon main .orderCheck table tbody tr td input:hover {
   cursor: pointer;
   color: #0C1244;
   border: 1.5px solid #0C1244;
   background-color: #F5F0DD;
+}
+.member_moon main .orderCheck .orderDetail {
+  border-spacing: 0;
+}
+.member_moon main .orderCheck .orderDetail h6 {
+  display: inline-block;
+}
+.member_moon main .orderCheck .orderDetail span {
+  color: #FFAC0C;
+}
+.member_moon main .orderCheck .orderDetail .odTitle {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: top;
+  font-size: 0;
+}
+.member_moon main .orderCheck .orderDetail .odTitle h5 {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  width: 980px;
+  height: 50px;
+}
+.member_moon main .orderCheck .orderDetail .odTitle p {
+  display: inline-block;
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetail .odTitle h6 {
+  display: inline-block;
+}
+.member_moon main .orderCheck .orderDetail td {
+  border: 1px solid #F5F0DD;
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+.member_moon main .orderCheck .orderDetail th {
+  border: 1px solid #F5F0DD;
+  padding: 10px 5px;
+}
+.member_moon main .orderCheck .orderDetail .odTitle2 {
+  text-align: center;
+}
+.member_moon main .orderCheck .orderDetail .odFoot {
+  text-align: right;
+  vertical-align: top;
+}
+.member_moon main .orderCheck .orderDetail .odFoot .odFootLittle {
+  width: 270px;
+  margin-left: auto;
+  text-align: left;
+}
+.member_moon main .orderCheck .orderDetail .odFoot .odFootLittle p {
+  margin-left: 0;
+}
+.member_moon main .orderCheck .orderDetail .odFoot .footTitle {
+  display: inline-block;
+}
+.member_moon main .orderCheck .orderDetail .odFoot span {
+  letter-spacing: normal;
+}
+.member_moon main .orderCheck .orderDetail .odFoot .discountCode {
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+.member_moon main .orderCheck .orderDetail .odFoot .discount {
+  color: #FF4444;
 }
 
 /*# sourceMappingURL=member.css.map */
