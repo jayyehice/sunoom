@@ -307,7 +307,7 @@ $moon :#0C1244;
                             text-align: center;
                             line-height: 50px;
                             border: 1px solid #0C1244;
-                            margin-top: -35px;
+                            margin-top: -50px;
                             &:hover{
                                 background-color: #0C1244;
                                 color: $sun;
@@ -428,19 +428,20 @@ $moon :#0C1244;
     .food{
         background-color: $sun ;
         main{
-            border-left: 1px #0C1244 solid ;
-            border-right: 1px #0C1244 solid ;
+            border-left: 1px red solid ;
+            border-right: 1px red solid ;
             width: 536px;
             margin: 0 auto;
             .wrapper_top{
+                // width: 536px;
         
                 // 麵包屑
                 .bread{
                     color: $moon;
                     font-size: $p;
                     margin-top: 25px;
-                    margin-bottom: 100px;
-                    margin-left: 100px;
+                    margin-bottom: 50px;
+                    margin-left: 30px;
                     letter-spacing: 3px;
         
                     a{
@@ -466,17 +467,17 @@ $moon :#0C1244;
                     text-align: center;
                     margin-bottom: 20px;
                     margin-top: 50px;
+                    padding: 0 30px;
                 }
                 .food1{
                     .food_right_top_rwd{
                         display: block;
-                        border: 1px solid red;
                         h3{
                             color: $sun;
                             -webkit-text-stroke: 1px #0C1244;
                             font-size: $h3;
                             text-align: center;
-                            margin-top: 28px;
+                            margin-top: px;
                             margin-bottom: 7px;
                             letter-spacing: 3px;
                         }
@@ -500,10 +501,12 @@ $moon :#0C1244;
                     .food1_left{
                         .food1_img{
                             width: 350px;
-                            margin-left: auto;
+                            margin-left: 20px;
                         }
                     }
                     .food1_right{
+                        width: calc(100% - 370px);
+                        margin-top: 10px;
                         .food_right_top{
                             display: none;
                             
@@ -610,11 +613,12 @@ $moon :#0C1244;
                         float: right;
                         .food2_img{
                             width: 350px;
-                            margin-right: auto;
+                            margin-right: 20px;
                         }
                     }
                     .food2_left{
-                        width: calc(100% - 350px);
+                        width: calc(100% - 370px);
+                        margin-top: 10px;
                         .food2_left_top{
                             display: none;
                         }
@@ -682,45 +686,48 @@ $moon :#0C1244;
         
             // 餐廳介紹
             .wrapper_mid{
+                // width: 536px;
                 h2{
                     color: $moon;
                     font-size: $h2;
                     letter-spacing: 3px;
                     text-align: center;
-                    margin-top: 180px;
+                    margin-top: 50px;
                     margin-bottom: 20px;
                     font-weight: bold;
                 }
                 .underline2{
-                    width: 40%;
+                    width: 80%;
                     height: 1px;
                     border-top: 1px solid #0C1244;
                     margin: 0 auto;
-                    margin-bottom: 180px;
                 }
         
                 // 四個餐廳共用Css
                 .restaurant1{
-                    display: flex;
-                    margin-bottom: 120px;
+                    display:initial;
                     .restaurant1_left{
                         .restaurant1_pic1{
-                            margin-left: 100px;
+                            margin: 0 30px;
+                            margin-top: 30px;
+                            width: 476px;
                         }
                     }
                     .restaurant1_right{
-                    border-top: 1px solid #0C1244;
-                    margin-right: 180px;
+                        border-top: 0px;
+                        margin-right: 0px;
                         h3{
                             color: $moon;
                             font-size: $h3;
                             text-align: center;
-                            margin-top: -50px;
+                            margin-top: 20px;
+                            margin-bottom: 30px;
                             letter-spacing: 3px;
                         }
                         .restaurant1_right_top{
-                            padding-top: 80px;
-                            padding-left: 40px;
+                            padding-top: 0px;
+                            padding-left: 0px;
+                            padding: 0 30px;
                             box-sizing: border-box;
                             p{
                                 color: $moon;
@@ -728,33 +735,41 @@ $moon :#0C1244;
                                 letter-spacing: 3px;
                             }
                             .time{
-                                margin-bottom: 35px;
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                                text-align: center;
                             }
                         }
                         .restaurant1_right_bottom{
-                            padding-top: 70px;
-                            padding-left: 40px;
+                            padding-top: 0px;
+                            padding-left: 0px;
+                            padding: 0 30px;
+                            margin-top: 20px;
                             box-sizing: border-box;
+                            display: flex;
+                            justify-content: space-between;
                             p{
                                 color: $moon;
                                 font-size: $p;
                                 letter-spacing: 3px;
-                                margin-bottom: 15px;
+                                margin-bottom: 0px;
                             }
                             a{
                                 color: $moon;
                                 text-decoration: none;
                                 letter-spacing: 3px;
+                                display: inline-block;
+                                margin-top: 25px;
                             }
                             .booknow{
-                                float: right;
+                                float: initial;
                                 display: block;
-                                width: 140px;
-                                height: 50px;
+                                width: 250px;
+                                height: 60px;
                                 text-align: center;
-                                line-height: 50px;
+                                line-height: 60px;
                                 border: 1px solid #0C1244;
-                                margin-top: -35px;
+                                margin-top: 0px;
                                 &:hover{
                                     background-color: #0C1244;
                                     color: $sun;
@@ -780,17 +795,21 @@ $moon :#0C1244;
         
             // 美食地圖
             .wrapper_bottom{
+                // width: 536px;
                 margin-bottom: 150px;
                 h3{
+                    display: none;
                     color: $moon;
                     font-size: $h3;
                     letter-spacing: 3px;
                     text-align: center;
-                    margin-bottom: 50px;
+                    margin-top: 50px;
+                    margin-bottom: 0px;
                 }
         
                 // 美食地圖
                 .map{
+                    display: none;
                     width: 900px;
                     height: 700px;
                     margin: 0 auto;

@@ -274,7 +274,7 @@
   text-align: center;
   line-height: 50px;
   border: 1px solid #0C1244;
-  margin-top: -35px;
+  margin-top: -50px;
 }
 .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom .booknow:hover {
   background-color: #0C1244;
@@ -372,8 +372,8 @@
     background-color: #F5F0DD;
   }
   .food main {
-    border-left: 1px #0C1244 solid;
-    border-right: 1px #0C1244 solid;
+    border-left: 1px red solid;
+    border-right: 1px red solid;
     width: 536px;
     margin: 0 auto;
   }
@@ -381,8 +381,8 @@
     color: #0C1244;
     font-size: 16px;
     margin-top: 25px;
-    margin-bottom: 100px;
-    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-left: 30px;
     letter-spacing: 3px;
   }
   .food main .wrapper_top .bread a {
@@ -405,17 +405,17 @@
     text-align: center;
     margin-bottom: 20px;
     margin-top: 50px;
+    padding: 0 30px;
   }
   .food main .wrapper_top .food1 .food_right_top_rwd {
     display: block;
-    border: 1px solid red;
   }
   .food main .wrapper_top .food1 .food_right_top_rwd h3 {
     color: #F5F0DD;
     -webkit-text-stroke: 1px #0C1244;
     font-size: 28px;
     text-align: center;
-    margin-top: 28px;
+    margin-top: px;
     margin-bottom: 7px;
     letter-spacing: 3px;
   }
@@ -437,7 +437,11 @@
   }
   .food main .wrapper_top .food1 .food1_left .food1_img {
     width: 350px;
-    margin-left: auto;
+    margin-left: 20px;
+  }
+  .food main .wrapper_top .food1 .food1_right {
+    width: calc(100% - 370px);
+    margin-top: 10px;
   }
   .food main .wrapper_top .food1 .food1_right .food_right_top {
     display: none;
@@ -536,10 +540,11 @@
   }
   .food main .wrapper_top .food2 .food2_right .food2_img {
     width: 350px;
-    margin-right: auto;
+    margin-right: 20px;
   }
   .food main .wrapper_top .food2 .food2_left {
-    width: calc(100% - 350px);
+    width: calc(100% - 370px);
+    margin-top: 10px;
   }
   .food main .wrapper_top .food2 .food2_left .food2_left_top {
     display: none;
@@ -602,38 +607,40 @@
     font-size: 36px;
     letter-spacing: 3px;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 50px;
     margin-bottom: 20px;
     font-weight: bold;
   }
   .food main .wrapper_mid .underline2 {
-    width: 40%;
+    width: 80%;
     height: 1px;
     border-top: 1px solid #0C1244;
     margin: 0 auto;
-    margin-bottom: 180px;
   }
   .food main .wrapper_mid .restaurant1 {
-    display: flex;
-    margin-bottom: 120px;
+    display: initial;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_left .restaurant1_pic1 {
-    margin-left: 100px;
+    margin: 0 30px;
+    margin-top: 30px;
+    width: 476px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right {
-    border-top: 1px solid #0C1244;
-    margin-right: 180px;
+    border-top: 0px;
+    margin-right: 0px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right h3 {
     color: #0C1244;
     font-size: 28px;
     text-align: center;
-    margin-top: -50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     letter-spacing: 3px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top {
-    padding-top: 80px;
-    padding-left: 40px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding: 0 30px;
     box-sizing: border-box;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top p {
@@ -642,33 +649,41 @@
     letter-spacing: 3px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top .time {
-    margin-bottom: 35px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom {
-    padding-top: 70px;
-    padding-left: 40px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding: 0 30px;
+    margin-top: 20px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom p {
     color: #0C1244;
     font-size: 16px;
     letter-spacing: 3px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom a {
     color: #0C1244;
     text-decoration: none;
     letter-spacing: 3px;
+    display: inline-block;
+    margin-top: 25px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom .booknow {
-    float: right;
+    float: initial;
     display: block;
-    width: 140px;
-    height: 50px;
+    width: 250px;
+    height: 60px;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     border: 1px solid #0C1244;
-    margin-top: -35px;
+    margin-top: 0px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom .booknow:hover {
     background-color: #0C1244;
@@ -691,13 +706,16 @@
     margin-bottom: 150px;
   }
   .food main .wrapper_bottom h3 {
+    display: none;
     color: #0C1244;
     font-size: 28px;
     letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
   }
   .food main .wrapper_bottom .map {
+    display: none;
     width: 900px;
     height: 700px;
     margin: 0 auto;
