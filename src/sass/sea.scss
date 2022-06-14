@@ -16,29 +16,29 @@ body{
     background-position-y: 600px;
 }
 
-// banner區塊
-.banner{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('../img/sea/turtle.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    // 點點起始
-    .begin{
-        position: absolute;
-        bottom: 60px;
-        left: calc(50% - 50px);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: $sun;
-        text-align: center;
-        line-height: 50px;
-    }
-}
 
 main{
+    // banner區塊
+    .banner{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background-image: url('../img/sea/turtle.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        // 點點起始
+        .begin{
+            position: absolute;
+            bottom: 60px;
+            left: calc(50% - 50px);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $sun;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
     // 線條一
     .line1{
         position: absolute;
