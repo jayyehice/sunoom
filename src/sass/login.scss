@@ -1,264 +1,791 @@
-// 引入其他檔案
-// @import '../css/reset.css';
-// @import '../css/common.css';
+@import 'base/var';
 
-body{
-    background-color: #F5F0DD;
-    // border: 1px solid black;
-    color: #0C1244;
-    line-height: 1.6;
-    letter-spacing: 3px;
-}
+.login{
+    background-color: $sun_color;
+    color: $moon_color;
 
-main{
-    // border: 1px solid firebrick;
-    // width: 1280px;
-    margin: 0 auto;
-    color: #0C1244;
-}
+    main{
 
-.wrapper{
-    // border: 1px solid black;
-    width: 1080px;
-    margin: 0 auto;
-    display: flex;
-
-    a{
-        display: inline-block;
-        text-decoration: none;
-        color: #0C1244;
-    }
-}
-
-p{
-    margin-top: 17px;
-    margin-left: -40px;
-
-}
-
-
-h3{
-    margin-top: 62px;
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.member_left{
-    width: 1000px;
-    margin: 0 auto;
-
-    .loginMain{
-        // border: 1px solid red;
-        width: 1000px;
+        // border: 1px solid firebrick;
+        // width: 1280px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
     
-    .loginText{
-        // border: 1px solid blue;
-    
-        .loginTextBottom{
-            // border: 1px solid firebrick;
-            text-align: center;
-        }
-    
-        a{
-            // display: inline-block;
-            // text-decoration: none;
-            font-size: 24rem;
-            // border: 1px solid firebrick;
-        }
-    
-        span{
-            font-size: 24rem;
-            margin: 0 45px;
-        }
-    
-    }
-    
-    .loginForm{
-        // border: 1px solid green;
-    
-        label{
-            font-size: 24rem;
-            display: inline-block;
-            margin-right: 40px;
-        
-        }
-        
-        input{
-            width: 300px;
-            height: 50px;
-            margin-bottom: 75px;
-            background-color: #F5F0DD;
-            border: 1px solid #0C1244;
-            padding-left: 10px;
-            font-size: 24rem;
-        }
-    
-        .pwd{
-            margin-bottom: 0;
-        }
-    
-        input:last-child{
-            margin-top: 60px;
-            font-size: 16rem;
-        }
-        
-        .btn{
-            background-color: #F5F0DD;
-            display: block;
-            width: 140px;
-            height: 50px;
-            text-align: center;
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
             margin: 0 auto;
-            border: 1px solid #0C1244;
-            margin-bottom: 30px;
-
-            &:hover{
-                cursor: pointer;
-                color: #F5F0DD;
-                border: 1.5px solid #F5F0DD;
-                background-color: #0C1244;
+            display: flex;
+        
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
             }
         }
-    }
-    
-    .loginPic{
-        // border: 1px solid #ccc;
-        margin-bottom: 100px;
-    }
-    
-    .loginPic img{
-    
-    }
-    
-}
-
-// 註冊區塊
-
-.member_right{
-    // border: 1px solid forestgreen;
-    display: none;
-    width: 1000px;
-    margin: 0 auto;
-
-    .registerMain{
-        // border: 1px solid red;
-        width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .registerPic{
-        // border: 1px solid #ccc;
-        margin-bottom: 100px;
-    }
-    
-    .register img{
-    }
-    
-    .registerText{
-        // border: 1px solid blue;
-    
-        a{
-            font-size: 24rem;
-            // border: 1px solid firebrick;
-        }
-    }
-    
-    .registerForm{
-        // border: 1px solid green;
-        margin-left: 46px;
-    
-        label{
-            font-size: 24rem;
-            display: inline-block;
-            margin-right: 40px;
+        
+        p{
+            margin-top: 17px;
+            margin-left: -40px;
         
         }
         
-        input{
-            width: 300px;
-            height: 50px;
-            margin-bottom: 42px;
-            background-color: #F5F0DD;
-            border: 1px solid #0C1244;
-            padding-left: 10px;
-            font-size: 24rem;
-
-        }
-    
-        .name{
-    
-        }
-    
-        .phone{
-    
-        }
-    
-        .email{
-    
-        }
-    
-        .pwd{
-    
-        }
-    
-        .pwdSureText{
-            // margin-right: 21px;
-            margin-left: -47px;
-
-        }
-    
-        .pwdSure{
-            margin-left: -7px;
-    
-        }
-    
-        .whantEmail{
-            width: 30px;
-            height: 30px;
+        
+        h3{
+            margin-top: 62px;
             text-align: center;
-            position: relative;
-            top: 7px;
-            color: #F5F0DD;
+            margin-bottom: 48px;
         }
-    
-        .whantEmailText{
-            font-size: 20rem;
-        }
-        .registerTextBottom{
-            text-align: center;
-    
-            .btn{
-                background-color: #F5F0DD;
-                display: inline-block;
-                width: 140px;
-                height: 50px;
-                font-size: 16rem;
-                text-align: center;
-                border: 1px solid #0C1244;
-                margin-bottom: 100px;
-
-                &:hover{
-                    cursor: pointer;
-                    color: #F5F0DD;
-                    border: 1.5px solid #F5F0DD;
-                    background-color: #0C1244;
+        
+        .member_left{
+            width: 1000px;
+            margin: 0 auto;
+        
+            .loginMain{
+                // border: 1px solid red;
+                width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .loginText{
+                // border: 1px solid blue;
+            
+                .loginTextBottom{
+                    // border: 1px solid firebrick;
+                    text-align: center;
+                }
+            
+                a{
+                    // display: inline-block;
+                    // text-decoration: none;
+                    font-size: 24rem;
+                    // border: 1px solid firebrick;
+                }
+            
+                span{
+                    font-size: 24rem;
+                    margin: 0 45px;
+                }
+            
+            }
+            
+            .loginForm{
+                // border: 1px solid green;
+            
+                label{
+                    font-size: 24rem;
+                    display: inline-block;
+                    margin-right: 40px;
+                
+                }
+                
+                input{
+                    width: 300px;
+                    height: 50px;
+                    margin-bottom: 75px;
+                    background-color: $sun_color;
+                    border: 1px solid $moon_color;
+                    padding-left: 10px;
+                    font-size: 24rem;
+                }
+            
+                .pwd{
+                    margin-bottom: 0;
+                }
+            
+                input:last-child{
+                    margin-top: 60px;
+                    font-size: 16rem;
+                }
+                
+                .btn{
+                    background-color: $sun_color;
+                    display: block;
+                    width: 140px;
+                    height: 50px;
+                    text-align: center;
+                    margin: 0 auto;
+                    border: 1px solid $moon_color;
+                    margin-bottom: 30px;
+        
+                    &:hover{
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                    }
                 }
             }
-    
-            span{
-                display: inline-block;
-                width: 30px;
+            
+            .loginPic{
+                // border: 1px solid #ccc;
+                margin-bottom: 100px;
             }
+            
+            .loginPic img{
+            
+            }
+            
+        }
+        
+        // 註冊區塊
+        
+        .member_right{
+            // border: 1px solid forestgreen;
+            display: none;
+            width: 1000px;
+            margin: 0 auto;
+        
+            .registerMain{
+                // border: 1px solid red;
+                width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .registerPic{
+                // border: 1px solid #ccc;
+                margin-bottom: 100px;
+            }
+            
+            .register img{
+            }
+            
+            .registerText{
+                // border: 1px solid blue;
+            
+                a{
+                    font-size: 24rem;
+                    // border: 1px solid firebrick;
+                }
+            }
+            
+            .registerForm{
+                // border: 1px solid green;
+                margin-left: 46px;
+            
+                label{
+                    font-size: 24rem;
+                    display: inline-block;
+                    margin-right: 40px;
+                
+                }
+                
+                input{
+                    width: 300px;
+                    height: 50px;
+                    margin-bottom: 42px;
+                    background-color: $sun_color;
+                    border: 1px solid $moon_color;
+                    padding-left: 10px;
+                    font-size: 24rem;
+        
+                }
+            
+                .name{
+            
+                }
+            
+                .phone{
+            
+                }
+            
+                .email{
+            
+                }
+            
+                .pwd{
+            
+                }
+            
+                .pwdSureText{
+                    // margin-right: 21px;
+                    margin-left: -47px;
+        
+                }
+            
+                .pwdSure{
+                    margin-left: -7px;
+            
+                }
+            
+                .whantEmail{
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    position: relative;
+                    top: 7px;
+                    color: $sun_color;
+                }
+            
+                .whantEmailText{
+                    font-size: 20rem;
+                }
+                .registerTextBottom{
+                    text-align: center;
+            
+                    .btn{
+                        background-color: $sun_color;
+                        display: inline-block;
+                        width: 140px;
+                        height: 50px;
+                        font-size: 16rem;
+                        text-align: center;
+                        border: 1px solid $moon_color;
+                        margin-bottom: 100px;
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+            
+                    span{
+                        display: inline-block;
+                        width: 30px;
+                    }
+            
+                    a{
+                        font-size: 20rem;
+                    }
+                }
+            }
+        }    
+    }
     
+}
+
+.login_moon{
+    @import 'base/moonColorSwitch';
+    background-color: $sun_color;
+    color: $moon_color;
+
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
+    
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            display: flex;
+        
             a{
-                font-size: 20rem;
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
             }
         }
+        
+        p{
+            margin-top: 17px;
+            margin-left: -40px;
+        
+        }
+        
+        
+        h3{
+            margin-top: 62px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .member_left{
+            width: 1000px;
+            margin: 0 auto;
+        
+            .loginMain{
+                // border: 1px solid red;
+                width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .loginText{
+                // border: 1px solid blue;
+            
+                .loginTextBottom{
+                    // border: 1px solid firebrick;
+                    text-align: center;
+                }
+            
+                a{
+                    // display: inline-block;
+                    // text-decoration: none;
+                    font-size: 24rem;
+                    // border: 1px solid firebrick;
+                }
+            
+                span{
+                    font-size: 24rem;
+                    margin: 0 45px;
+                }
+            
+            }
+            
+            .loginForm{
+                // border: 1px solid green;
+            
+                label{
+                    font-size: 24rem;
+                    display: inline-block;
+                    margin-right: 40px;
+                
+                }
+                
+                input{
+                    width: 300px;
+                    height: 50px;
+                    margin-bottom: 75px;
+                    background-color: $sun_color;
+                    border: 1px solid $moon_color;
+                    padding-left: 10px;
+                    font-size: 24rem;
+                }
+            
+                .pwd{
+                    margin-bottom: 0;
+                }
+            
+                input:last-child{
+                    margin-top: 60px;
+                    font-size: 16rem;
+                }
+                
+                .btn{
+                    background-color: $sun_color;
+                    display: block;
+                    width: 140px;
+                    height: 50px;
+                    text-align: center;
+                    margin: 0 auto;
+                    border: 1px solid $moon_color;
+                    margin-bottom: 30px;
+        
+                    &:hover{
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                    }
+                }
+            }
+            
+            .loginPic{
+                // border: 1px solid #ccc;
+                margin-bottom: 100px;
+            }
+            
+            .loginPic img{
+            
+            }
+            
+        }
+        
+        // 註冊區塊
+        
+        .member_right{
+            // border: 1px solid forestgreen;
+            display: none;
+            width: 1000px;
+            margin: 0 auto;
+        
+            .registerMain{
+                // border: 1px solid red;
+                width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .registerPic{
+                // border: 1px solid #ccc;
+                margin-bottom: 100px;
+            }
+            
+            .register img{
+            }
+            
+            .registerText{
+                // border: 1px solid blue;
+            
+                a{
+                    font-size: 24rem;
+                    // border: 1px solid firebrick;
+                }
+            }
+            
+            .registerForm{
+                // border: 1px solid green;
+                margin-left: 46px;
+            
+                label{
+                    font-size: 24rem;
+                    display: inline-block;
+                    margin-right: 40px;
+                
+                }
+                
+                input{
+                    width: 300px;
+                    height: 50px;
+                    margin-bottom: 42px;
+                    background-color: $sun_color;
+                    border: 1px solid $moon_color;
+                    padding-left: 10px;
+                    font-size: 24rem;
+        
+                }
+            
+                .name{
+            
+                }
+            
+                .phone{
+            
+                }
+            
+                .email{
+            
+                }
+            
+                .pwd{
+            
+                }
+            
+                .pwdSureText{
+                    // margin-right: 21px;
+                    margin-left: -47px;
+        
+                }
+            
+                .pwdSure{
+                    margin-left: -7px;
+            
+                }
+            
+                .whantEmail{
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    position: relative;
+                    top: 7px;
+                    color: $sun_color;
+                }
+            
+                .whantEmailText{
+                    font-size: 20rem;
+                }
+                .registerTextBottom{
+                    text-align: center;
+            
+                    .btn{
+                        background-color: $sun_color;
+                        display: inline-block;
+                        width: 140px;
+                        height: 50px;
+                        font-size: 16rem;
+                        text-align: center;
+                        border: 1px solid $moon_color;
+                        margin-bottom: 100px;
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+            
+                    span{
+                        display: inline-block;
+                        width: 30px;
+                    }
+            
+                    a{
+                        font-size: 20rem;
+                    }
+                }
+            }
+        }    
     }
-}    
+    
+}
+
+
+// body{
+//     background-color: #F5F0DD;
+//     // border: 1px solid black;
+//     color: #0C1244;
+//     line-height: 1.6;
+//     letter-spacing: 3px;
+// }
+
+
+// main{
+//     // border: 1px solid firebrick;
+//     // width: 1280px;
+//     margin: 0 auto;
+//     box-sizing: border-box;
+//     line-height: 1.6;
+//     letter-spacing: 3px;
+
+//     .wrapper{
+//         // border: 1px solid black;
+//         width: 1080px;
+//         margin: 0 auto;
+//         display: flex;
+    
+//         a{
+//             display: inline-block;
+//             text-decoration: none;
+//             color: $moon_color;
+//         }
+//     }
+    
+//     p{
+//         margin-top: 17px;
+//         margin-left: -40px;
+    
+//     }
+    
+    
+//     h3{
+//         margin-top: 62px;
+//         text-align: center;
+//         margin-bottom: 48px;
+//     }
+    
+//     .member_left{
+//         width: 1000px;
+//         margin: 0 auto;
+    
+//         .loginMain{
+//             // border: 1px solid red;
+//             width: 1000px;
+//             margin: 0 auto;
+//             display: flex;
+//             justify-content: space-between;
+//         }
+        
+//         .loginText{
+//             // border: 1px solid blue;
+        
+//             .loginTextBottom{
+//                 // border: 1px solid firebrick;
+//                 text-align: center;
+//             }
+        
+//             a{
+//                 // display: inline-block;
+//                 // text-decoration: none;
+//                 font-size: 24rem;
+//                 // border: 1px solid firebrick;
+//             }
+        
+//             span{
+//                 font-size: 24rem;
+//                 margin: 0 45px;
+//             }
+        
+//         }
+        
+//         .loginForm{
+//             // border: 1px solid green;
+        
+//             label{
+//                 font-size: 24rem;
+//                 display: inline-block;
+//                 margin-right: 40px;
+            
+//             }
+            
+//             input{
+//                 width: 300px;
+//                 height: 50px;
+//                 margin-bottom: 75px;
+//                 background-color: $sun_color;
+//                 border: 1px solid $moon_color;
+//                 padding-left: 10px;
+//                 font-size: 24rem;
+//             }
+        
+//             .pwd{
+//                 margin-bottom: 0;
+//             }
+        
+//             input:last-child{
+//                 margin-top: 60px;
+//                 font-size: 16rem;
+//             }
+            
+//             .btn{
+//                 background-color: $sun_color;
+//                 display: block;
+//                 width: 140px;
+//                 height: 50px;
+//                 text-align: center;
+//                 margin: 0 auto;
+//                 border: 1px solid $moon_color;
+//                 margin-bottom: 30px;
+    
+//                 &:hover{
+//                     cursor: pointer;
+//                     color: $sun_color;
+//                     border: 1.5px solid $sun_color;
+//                     background-color: $moon_color;
+//                 }
+//             }
+//         }
+        
+//         .loginPic{
+//             // border: 1px solid #ccc;
+//             margin-bottom: 100px;
+//         }
+        
+//         .loginPic img{
+        
+//         }
+        
+//     }
+    
+//     // 註冊區塊
+    
+//     .member_right{
+//         // border: 1px solid forestgreen;
+//         display: none;
+//         width: 1000px;
+//         margin: 0 auto;
+    
+//         .registerMain{
+//             // border: 1px solid red;
+//             width: 1000px;
+//             margin: 0 auto;
+//             display: flex;
+//             justify-content: space-between;
+//         }
+        
+//         .registerPic{
+//             // border: 1px solid #ccc;
+//             margin-bottom: 100px;
+//         }
+        
+//         .register img{
+//         }
+        
+//         .registerText{
+//             // border: 1px solid blue;
+        
+//             a{
+//                 font-size: 24rem;
+//                 // border: 1px solid firebrick;
+//             }
+//         }
+        
+//         .registerForm{
+//             // border: 1px solid green;
+//             margin-left: 46px;
+        
+//             label{
+//                 font-size: 24rem;
+//                 display: inline-block;
+//                 margin-right: 40px;
+            
+//             }
+            
+//             input{
+//                 width: 300px;
+//                 height: 50px;
+//                 margin-bottom: 42px;
+//                 background-color: $sun_color;
+//                 border: 1px solid $moon_color;
+//                 padding-left: 10px;
+//                 font-size: 24rem;
+    
+//             }
+        
+//             .name{
+        
+//             }
+        
+//             .phone{
+        
+//             }
+        
+//             .email{
+        
+//             }
+        
+//             .pwd{
+        
+//             }
+        
+//             .pwdSureText{
+//                 // margin-right: 21px;
+//                 margin-left: -47px;
+    
+//             }
+        
+//             .pwdSure{
+//                 margin-left: -7px;
+        
+//             }
+        
+//             .whantEmail{
+//                 width: 30px;
+//                 height: 30px;
+//                 text-align: center;
+//                 position: relative;
+//                 top: 7px;
+//                 color: $sun_color;
+//             }
+        
+//             .whantEmailText{
+//                 font-size: 20rem;
+//             }
+//             .registerTextBottom{
+//                 text-align: center;
+        
+//                 .btn{
+//                     background-color: $sun_color;
+//                     display: inline-block;
+//                     width: 140px;
+//                     height: 50px;
+//                     font-size: 16rem;
+//                     text-align: center;
+//                     border: 1px solid $moon_color;
+//                     margin-bottom: 100px;
+    
+//                     &:hover{
+//                         cursor: pointer;
+//                         color: $sun_color;
+//                         border: 1.5px solid $sun_color;
+//                         background-color: $moon_color;
+//                     }
+//                 }
+        
+//                 span{
+//                     display: inline-block;
+//                     width: 30px;
+//                 }
+        
+//                 a{
+//                     font-size: 20rem;
+//                 }
+//             }
+//         }
+//     }    
+// }
+

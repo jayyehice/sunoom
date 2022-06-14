@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tripChoose</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/tripChoose.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/tripChoose.css">
     <script src="./JS/jquery-3.6.0.js"></script>
     <script src="./js/tripChoose.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -15,11 +15,12 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
-
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body class="tripChoose">
+    @@include('./layout/header.html')   
     <div class="bodyCover"></div>
-    <header></header>
+    <!-- <header></header> -->
     <article>
         <section>
             <h2>訂購流程</h2>
@@ -137,9 +138,12 @@
                         <h4 class="chooseDate">2022/07/16</h4>
                     </div>
                     <div class="morningItineraryA">
-                        <img src="./img/orderPage/morning.png" alt="">
+                        <img class="morningTime" src="./img/orderPage/morning.png" alt="">
                         <div class="morningBlockA">
-                            <img id="morningImg" src="./img/orderPage/Fishing.jfif" alt="">
+                            <div class="morningMobile">
+                                <p>09:00-12:00</p>
+                                <img id="morningImg" src="./img/orderPage/sea.png" alt="">
+                            </div>
                             <div class="morningBlockB">
                                 <div class="optionBlockA">
                                     <select name="" id="">
@@ -164,7 +168,7 @@
                     <div class="noonItinerary">
                         <img src="./img/orderPage/afternoon.png" alt="">
                         <div class="noonBlockA">
-                            <img id="noonImg" src="./img/orderPage/Fishing.jfif" alt="">
+                            <img id="noonImg" src="./img/orderPage/rock.png" alt="">
                             <div class="noonBlockB">
                                 <div class="optionBlockB">
                                     <select name="" id="">
@@ -189,11 +193,11 @@
                     <div class="eveningItinerary">
                         <img src="./img/orderPage/night.png" alt="">
                         <div class="eveningBlockA">
-                            <img id="eveningImg" src="./img/orderPage/Fishing.jfif" alt="">
+                            <img id="eveningImg" src="./img/orderPage/NoChooseimg.png" alt="">
                             <div class="eveningBlockB">
                                 <div class="optionBlockC">
                                     <select name="" id="">
-                                        <option value="">釣魚(日)</option>
+                                        <option value="">不需選購</option>
                                         <option value=""></option>
                                         <option value=""></option>
                                         <option value=""></option>
@@ -203,9 +207,9 @@
                                         <option value=""></option>
                                         <option value=""></option>
                                     </select>
-                                    <span id="tripPriceC">$1999/人</span>
+                                    <span id="tripPriceC">$0/人</span>
                                 </div>
-                                <p id="itineraryTextC">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="itineraryTextC">點擊加入您的專屬旅行</p>
                             </div>
                         </div>
                         <img id="addItineraryE" src="./img/orderPage/shopping-cart-add.png" alt="">
@@ -339,13 +343,13 @@
                             <div class="villaBlockB">
                                 <div class="villaOption">
                                     <select name="" id="">
-                                        
+                                        <option value="">不需選購</option>
                                         <option value="">日島</option>
                                         <option value="">月島</option>
                                     </select>
-                                    <span id="villaPrice">$1999/人</span>
+                                    <span id="villaPrice">$0/人</span>
                                 </div>
-                                <p id="villaText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="villaText">點擊加入您的專屬旅行</p>
                             </div>
                         </div>
                         <img id="addVilla" src="./img/orderPage/shopping-cart-add.png" alt="">
@@ -354,5 +358,7 @@
             <button id="NextPage">Next</button>
         </section>
     </article>
+    @@include('./layout/footer.html')
+@@include('./layout/header_footer_script_link.html')
 </body>
 </html>

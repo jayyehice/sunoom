@@ -4,6 +4,12 @@ body {
 body section h2 {
   text-align: center;
 }
+@media (max-width: 576px) {
+  body section h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
 body .shoppingProcess {
   width: 1180px;
   height: 200px;
@@ -12,10 +18,23 @@ body .shoppingProcess {
   align-items: center;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess {
+    width: 100%;
+    height: 110px;
+  }
+}
 body .shoppingProcess img {
   width: 80px;
   height: 24px;
   margin: 0 40px;
+}
+@media (max-width: 576px) {
+  body .shoppingProcess img {
+    width: 25px;
+    height: 15px;
+    margin: 0;
+  }
 }
 body .shoppingProcess .chooseAdate {
   width: 150px;
@@ -32,6 +51,15 @@ body .shoppingProcess .chooseAdate {
 body .shoppingProcess .chooseAdate h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .chooseAdate {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .chooseAdate h4 {
+    font-size: 16px;
+  }
+}
 body .shoppingProcess .chooseAtrip {
   width: 150px;
   height: 150px;
@@ -47,6 +75,15 @@ body .shoppingProcess .chooseAtrip {
 body .shoppingProcess .chooseAtrip h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .chooseAtrip {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .chooseAtrip h4 {
+    font-size: 16px;
+  }
+}
 body .shoppingProcess .tallyOrder {
   width: 150px;
   height: 150px;
@@ -61,6 +98,15 @@ body .shoppingProcess .tallyOrder {
 }
 body .shoppingProcess .tallyOrder h4:last-Child {
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  body .shoppingProcess .tallyOrder {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .tallyOrder h4 {
+    font-size: 16px;
+  }
 }
 body .shoppingProcess .orderComplete {
   width: 150px;
@@ -79,19 +125,45 @@ body .shoppingProcess .orderComplete {
 body .shoppingProcess .orderComplete h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .orderComplete {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .orderComplete h4 {
+    font-size: 16px;
+  }
+}
 body .FinishTextBlock h3 {
   text-align: center;
   margin: 50px 0;
+}
+@media (max-width: 576px) {
+  body .FinishTextBlock h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
 }
 body .FinishTextBlock h5 {
   text-align: center;
   margin-bottom: 40px;
 }
+@media (max-width: 576px) {
+  body .FinishTextBlock h5 {
+    margin-bottom: 20px;
+  }
+}
 body .bigList {
   width: 1000px;
-  height: 630px;
+  height: auto;
   border: 2px solid #0C1244;
   margin: 50px auto;
+}
+@media (max-width: 576px) {
+  body .bigList {
+    width: 98%;
+    height: 100%;
+  }
 }
 body .bigList .ListTitle {
   margin: 0px auto;
@@ -103,11 +175,22 @@ body .bigList .ListTitle {
   color: #F5F0DD;
   font-size: 20px;
 }
+@media (max-width: 576px) {
+  body .bigList .ListTitle {
+    width: 98%;
+    height: 100%;
+  }
+}
 body .bigList .ListDate {
   display: flex;
   list-style: none;
   justify-content: center;
   margin: 20px;
+}
+@media (max-width: 576px) {
+  body .bigList .ListDate {
+    margin: 10px;
+  }
 }
 body .bigList .ListDate li {
   margin-right: 20px;
@@ -116,32 +199,53 @@ body .bigList .ListDate li {
   display: flex;
   align-items: center;
 }
+@media (max-width: 576px) {
+  body .bigList .ListDate li {
+    margin-right: 7px;
+  }
+}
 body .bigList .ListDate li:first-Child {
   font-weight: bolder;
   font-size: 16px;
 }
-body .bigList .tripList {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+body .bigList table {
+  width: 99%;
+  height: auto;
   margin: 0 auto;
-  padding: 0;
-}
-body .bigList .tripList li {
-  width: 250px;
-  height: 100px;
+  align-content: center;
   border: 1px solid #0C1244;
+}
+body .bigList table th {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bolder;
+  border: 1px solid #0C1244;
+}
+body .bigList table td {
+  border: 1px solid #0C1244;
+  height: 100px;
+  vertical-align: middle;
+}
+body .bigList table td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+body .bigList table ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 576px) {
+  body .bigList table ul {
+    display: block;
+  }
+}
+body .bigList table ul li {
+  margin: 7px;
   text-align: center;
 }
-body .bigList .tripList li ol {
-  list-style: none;
-}
-body .bigList .tripList li:first-child {
-  line-height: 100px;
+body .bigList table ul li:last-child {
+  color: #FFBF44;
   border-left: none;
-}
-body .bigList .tripList li:last-Child {
-  border-right: none;
 }
 body .bigList .totalBlock {
   margin: 40px 20px;
