@@ -23,10 +23,7 @@
     }
     
 };
-body{
-    background-color: blue;
-    display: block;
-}
+
 .allPage{
     width: 100%;
     height: 100vh;
@@ -34,8 +31,12 @@ body{
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
-    
     cursor: pointer;
+    .bigimg{
+        @include mobile{
+            display: none;
+        }
+    }
     h5{
         @include noteBookBig{
             font-size: 16rem;
@@ -46,7 +47,6 @@ body{
         @include mobile{
             font-size: 16rem;
         }
-        
     }
     span{
         display: block;
@@ -66,24 +66,33 @@ body{
         width: 50%;
         height: 100%;
         background-color: rgba($color: #8EADFB, $alpha: .65);
-        border-top:50px solid rgba($color: #08537D, $alpha: .73);
+        border-top:49px solid rgba($color: #08537D, $alpha: .73);
         border-left: 50px solid rgba($color: #08537D, $alpha: .73);
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
-        display: block;
         &:hover{
             #seaVideo{
                 display: block;
                 // z-index: 999;
+                @include mobile{
+                    display: none;
+                }
             }
         }
         img{
            width: 100%;
+           @include mobile{
+            width: auto;
+            height: 100%;
+            }
         }
         video{
             width: 100%;
             display: none;
+            @include mobile{
+                display: none;
+            }
         }
         @include mobile{
             border-top: 25px solid rgba($color: #08537D, $alpha: .73);
@@ -91,14 +100,15 @@ body{
             text-align: center;
         }
         @include noteBook{
-            border-top: 25px solid rgba($color: #08537D, $alpha: .73);
-            border-left: 25px solid rgba($color: #08537D, $alpha: .73);
+            border-top: 24px solid rgba($color: #08537D, $alpha: .73);
+            border-left: 24px solid rgba($color: #08537D, $alpha: .73);
         }
         span{
             position: absolute;
             top: 30%;
             right: 10%;
             color: #fff;
+            
             @include mobile{
                 top: 20%;
                 right: 25%;
@@ -125,26 +135,36 @@ body{
     .LandItinerary{
         width: 50%;
         height: 100%;
-        // background-color: rgba($color: #4BB656, $alpha: .51);
-        border-top: 50px solid #7A8D7C;
+        border-top: 49px solid #7A8D7C;
         border-right: 50px solid #7A8D7C;
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
-        display: block;
         &:hover{
             #landVideo{
                 display: block;
                 // z-index: 999;
+                @include mobile{
+                    display: none;
+                }
             }
         }
         img{
             width: 100%;
             display: block;
+            margin: 0;
+            padding: 0;
+            @include mobile{
+                width: auto;
+                height: 100%;
+            }
         }
         video{
            width: 100%;
            display: none;
+           @include mobile{
+            display: none;
+            }
         }
         @include mobile{
             border-top: 25px solid #7A8D7C;
@@ -152,8 +172,8 @@ body{
             text-align: center;
         }
         @include noteBook{
-            border-top: 25px solid #7A8D7C;
-            border-right: 25px solid #7A8D7C;
+            border-top: 24px solid #7A8D7C;
+            border-right: 24px solid #7A8D7C;
         }
         
         span{
@@ -195,23 +215,33 @@ body{
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        text-align: center;
+
         &:hover{
             #packVideo{
                 display: block;
                 z-index: 999;
+                @include mobile{
+                    display: none;
+                }
             }
         }
         @include noteBook{
-            border-bottom: 25px solid #FFDA91;
-            border-left: 25px solid #FFDA91;
-            border-right: 25px solid #FFDA91;
+            border-bottom: 24px solid #FFDA91;
+            border-left: 24px solid #FFDA91;
+            border-right: 24px solid #FFDA91;
         }
         video{
             width: 100%;
             display: none;
         }
+
+        .mobileimg{
+            height: 100%;
+        }
         img{
             width: 100%;
+
         }
         .Pagebox{
             position: relative;
@@ -223,7 +253,7 @@ body{
                 top: 20%;
                 left: 46.5%;
                 color: #fff;
-            
+                
                 @include noteBook{
                     left: 47%;
                 }

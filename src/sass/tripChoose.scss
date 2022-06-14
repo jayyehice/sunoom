@@ -1,14 +1,24 @@
 
+@mixin mobile{
+    @media(max-width:576px){
+        @content
+    }
+};
 
 @mixin circle{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 1px solid #0C1244;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    h4:last-Child{
+        margin-bottom: 20px;
+    }
 };
 
 
@@ -20,7 +30,7 @@
     position: fixed;
     display: none;
 }
-body{
+.tripChoose{
     background-color:#F5F0DD;
     span{
         font-size: 16px;
@@ -42,9 +52,9 @@ body{
         align-items: center;
         margin:  0 auto;
         img{
-            width: 100px;
+            width: 80px;
             height: 24px;
-
+            margin: 0 40px;
         }
         .chooseAdate{
             @include circle;
@@ -70,6 +80,7 @@ body{
         margin: 50px auto;
         border: 1px solid #0C1244;
         position: relative;
+
         .dateTitle{
             p{
                 margin: 20px;
@@ -244,6 +255,7 @@ body{
         margin: 50px auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+
         .itineraryTitle{
             display: flex;
             justify-content: center;
@@ -262,8 +274,9 @@ body{
             align-items: center;
             border-top: 2px solid #0C1244;
             padding: 15px;
-            img{
+            .morningTime{
                 width: 120px;
+
             }
             .morningBlockA{
                 border:1px solid #0C1244;
@@ -271,21 +284,23 @@ body{
                 width: 700px;
                 height: 150px;
                 border-radius: 22px;
+
                 #morningImg{
                     margin: 15px;
                     width: 170px;
                     height: 120px;
                     border-radius: 22px;
                     line-height: 120px;
-                
                 }
                 .morningBlockB{
-                    margin: 0 auto;
+                    margin: 0px auto;
+
                     .optionBlockA{
                         display: flex;
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+
                         select{
                             width: 140px;
                             height: 35px;
@@ -854,6 +869,12 @@ body{
         background-color:#F5F0DD;
         border:1px solid #0C1244;
         margin: 50px auto;
+        @include mobile{
+            width: 300px;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
         &:hover{
             color:#F5F0DD;
             background-color:#0C1244;

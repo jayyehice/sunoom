@@ -39,11 +39,15 @@
                     <li>
                         <button class="big_btn" onclick="e.preventDefault">遊</button>
                     </li>
+
+                    <!-- <li>
+                        <button class="big_btn" id="test">test</button>
+                    </li> -->
                     
                 </ul>
 
                 <ol>
-                    <img src="./img/information/sun_island_map.jpg" alt="">
+                    <img src="./img/information/sun/island_map.jpg" alt="" id="img_test">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -51,6 +55,7 @@
                 </ol>
             </div>
 
+            
             <div class="polaroid">
                 
                 <svg width="1129" height="48" viewBox="0 0 1129 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,17 +63,17 @@
                 </svg>
                 <ul>
                     <li>
-                        <img src="./img/information/polaroid_img_01.jpg" alt="">
+                        <img src="./img/information/sun/polaroid_img_01.jpg" alt="">
                         <h5>星月沙灘</h5>                        
                     </li>
                     
                     <li>
-                        <img src="./img/information/polaroid_img_02.jpg" alt="">
+                        <img src="./img/information/sun/polaroid_img_02.jpg" alt="">
                         <h5>日月溪</h5>                        
                     </li>
 
                     <li>
-                        <img src="./img/information/polaroid_img_03.jpg" alt="">
+                        <img src="./img/information/sun/polaroid_img_03.jpg" alt="">
                         <h5>登山步道</h5>                        
                     </li>
                 </ul>
@@ -292,5 +297,24 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/information.js"></script>
+    <script>
+        // let test = document.getElementById("test");
+        // let img_test = document.getElementById("img_test");
+        // let img_tag = document.getElementsByTagName("img");
+
+        // for(let i=0; i<img_tag.length; i++){
+
+        //     test.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         if(img_tag[i].getAttribute("src").includes("sun")){
+        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
+        //         }else{
+        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
+        //         }
+    
+        //     });
+        // }
+
+    </script>
 </body>
 </html>

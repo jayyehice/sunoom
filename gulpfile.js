@@ -53,6 +53,16 @@ function mvallmovies() {
 
 exports.mvmovies = mvallmovies;
 
+
+// copy php
+function mvallphp() {
+    return src('./src/php/*.php').pipe(dest('dist/php'));
+}
+
+exports.mvphp = mvallphp;
+
+
+
 // 同步跟異步
 
 
@@ -176,6 +186,6 @@ function browser(done) {
 
 // exports.default =  series(parallel(sassstyle, includeHTML , miniJs ,mvimages), browser) 
 
-exports.default =  parallel(mvallcss, includeHTML , mvjavascript , mvimages, mvallmovies)
+exports.default =  parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp)
 
 
