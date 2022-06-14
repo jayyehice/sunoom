@@ -26,6 +26,18 @@ footer section ul > li:first-child {
   width: 100%;
   background-image: url("../img/footer/sun/footer_bg_01.jpg");
   background-size: cover;
+  position: relative;
+}
+footer section ul > li:first-child .icon {
+  position: absolute;
+  top: 390px;
+  right: 30px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+footer section ul > li:first-child .icon a {
+  margin-bottom: 20px;
 }
 footer section ul > li:last-child {
   width: 50%;
@@ -107,13 +119,12 @@ footer section ul > li:last-child .week_weather > li svg {
   height: 95px;
 }
 footer section .wrapper {
-  width: 1180px;
+  width: 400px;
   height: 100vh;
   box-sizing: border-box;
   position: absolute;
   top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc((100% - 1180px) / 2);
 }
 footer section .wrapper #content {
   box-sizing: border-box;
@@ -124,7 +135,7 @@ footer section .wrapper #content {
 }
 footer section .wrapper #content .info {
   margin-top: 130px;
-  width: 400px;
+  width: 100%;
 }
 footer section .wrapper #content .info h5 {
   margin-bottom: 20px;
@@ -169,7 +180,7 @@ footer section .wrapper #content .info .icon img {
   margin-right: 40px;
 }
 
-/*moon 底下有換背景圖*/
+/*moon 底下有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")*/
 .moon footer {
   background-color: #0C1244;
   color: #F5F0DD;
@@ -197,6 +208,18 @@ footer section .wrapper #content .info .icon img {
   width: 100%;
   background-image: url("../img/footer/moon/footer_bg_01.jpg");
   background-size: cover;
+  position: relative;
+}
+.moon footer section ul > li:first-child .icon {
+  position: absolute;
+  top: 390px;
+  right: 30px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.moon footer section ul > li:first-child .icon a {
+  margin-bottom: 20px;
 }
 .moon footer section ul > li:last-child {
   width: 50%;
@@ -278,13 +301,12 @@ footer section .wrapper #content .info .icon img {
   height: 95px;
 }
 .moon footer section .wrapper {
-  width: 1180px;
+  width: 400px;
   height: 100vh;
   box-sizing: border-box;
   position: absolute;
   top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc((100% - 1180px) / 2);
 }
 .moon footer section .wrapper #content {
   box-sizing: border-box;
@@ -295,7 +317,7 @@ footer section .wrapper #content .info .icon img {
 }
 .moon footer section .wrapper #content .info {
   margin-top: 130px;
-  width: 400px;
+  width: 100%;
 }
 .moon footer section .wrapper #content .info h5 {
   margin-bottom: 20px;
@@ -325,6 +347,9 @@ footer section .wrapper #content .info .icon img {
   background-color: transparent;
   border: 1px solid #F5F0DD;
   color: #F5F0DD;
+}
+.moon footer section .wrapper #content .info .subscribe button:hover {
+  cursor: pointer;
 }
 .moon footer section .wrapper #content .info > p {
   line-height: 1.6;
