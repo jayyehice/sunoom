@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/readyToPay.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./js/readyToPay.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body>
+    @@include('./layout/header.html')
     <header></header>
     <article>
         <section>
@@ -330,5 +331,8 @@
         </section>
     </article>
     <footer></footer>
+    @@include('./layout/footer.html')
+@@include('./layout/header_footer_script_link.html')
+<script src="./js/readyToPay.js"></script>
 </body>
 </html>

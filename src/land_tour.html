@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/land_tour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body class="land_tour">
-    <header>header</header>
+    <!-- <header>header</header> -->
+    @@include('./layout/header.html')
 
     <main>
 
@@ -267,7 +269,8 @@
     </main>
 
     <footer></footer>
-
+    @@include('./layout/footer.html')
+@@include('./layout/header_footer_script_link.html')
     <script src="./js/instagram_pop_up.js"></script>
 </body>
 </html>

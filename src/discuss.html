@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/discuss.css">
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body class="discuss">
+    @@include('./layout/header.html')
     <div class="wrapper">
         <header></header>
         <main>
@@ -353,8 +355,11 @@
         </main>
         <footer></footer>
     </div>
+    @@include('./layout/footer.html')
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="./js/discuss.js"></script>
     <script src="./js/discuss_list.js"></script>
+    @@include('./layout/header_footer_script_link.html')
 </body>
 </html>
