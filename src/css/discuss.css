@@ -1833,15 +1833,16 @@
       font-size: 20px;
     }
     .discuss .pop-up .discuss-region {
-      border:1px solid red;
-      width: 802px;
+      /* border:1px solid red; */
+      width: 447px;
       flex-direction: column;
       margin-left: 37px;
       margin-bottom: 40px;
     }
     .discuss .pop-up .discuss-region .comment-region {
       border: 1px solid #0C1244;
-      margin-left: 30px;
+      margin-top: 20px;
+      margin-left: 0px;
       border-radius: 10px;
       padding: 10px;
     }
