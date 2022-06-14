@@ -1,5 +1,113 @@
 @import 'base/var';
 
+header {
+    padding: 50px;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    // margin-bottom: 300px;
+    .wrapper {
+        width: 1180px;
+        margin: 0 auto;
+
+        .switchText {
+            // border: 1px white solid;
+            margin: 0 auto;
+            width: 260px;
+            height: 40px;
+            margin-top: 20px;
+
+            p {
+                color: white;
+                line-height: 40px;
+                text-align: center;
+            }
+
+            .fa-arrow-up-right {
+                color: white;
+            }
+        }
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin: 60px 0;
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+    }
+}
+
+
+// index main sun & moon video intro
+.videoWrappper{
+    // position: relative;
+    
+
+    .index_video {
+        top: 0;
+        left: 0;
+        object-fit: fill;
+        position: absolute;
+        z-index: -99;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;  
+    }
+}
+
+nav {
+    height: 77px;
+    display: flex;
+    justify-content: space-between;
+
+    .bar {
+        display: block;
+        width: 50px;
+        height: 5px;
+        margin-bottom: 8px;
+        background-color: white;
+        // -webkit-transition: all 0.3s ease-in-out;
+        // transition: all 0.3s ease-in-out;
+    }
+
+    .book_button {
+        display: block;
+        width: 90px;
+        height: 30px;
+        color: $moon_color;
+        background-color: $sun_color;
+        border-radius: 15px;
+        text-align: center;
+        cursor: pointer;
+
+
+        &:hover {
+            background-color: $moon_color;
+            color: $sun_color;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            line-height: 30px;
+
+            &:hover {
+                color: $sun_color;
+            }
+
+        }
+
+    }
+
+    .main_button img {
+        width: 90px;
+    }
+}
+
 .index {
     background-color: $sun_color;
     color: $moon_color;
@@ -53,6 +161,10 @@
     
             .news_text {
                 margin-left: 75px;
+            }
+
+            .news_text_rwd{
+                display: none;
             }
         }
     
@@ -146,6 +258,10 @@
                             right: 0;
                             box-sizing: border-box;
                         }
+
+                        .textarea_RWD{
+                            display: none;
+                        }
     
                         .comments_area {
                             margin-top: 40px;
@@ -181,8 +297,25 @@
                                     color: $sun_color;
                                 }
                             }
-    
-    
+
+                            
+                            
+                        }
+                        .viewButton_RWD{
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: block;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+                            display: none;
+
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
                         }
                     }
                 }
@@ -514,6 +647,9 @@
             .news_text {
                 margin-left: 75px;
             }
+            .news_text_rwd{
+                display: none;
+            }
         }
     
         .category {
@@ -605,6 +741,11 @@
                             top: 0;
                             right: 0;
                             box-sizing: border-box;
+                        }
+
+                        
+                        .textarea_RWD{
+                            display: none;
                         }
     
                         .comments_area {
@@ -721,7 +862,6 @@
                             top: 0;
                             right: 0;
                         }
-    
                         .comments_area {
                             margin-top: 40px;
                             color: $moon_color;
@@ -934,113 +1074,237 @@
 
 }
 
-header {
-    padding: 50px;
-    height: 100vh;
 
-    // margin-bottom: 300px;
-    .wrapper {
-        width: 1180px;
-        margin: 0 auto;
 
-        .switchText {
-            // border: 1px white solid;
-            margin: 0 auto;
-            width: 260px;
-            height: 40px;
-            margin-top: 20px;
 
-            p {
-                color: white;
-                line-height: 40px;
-                text-align: center;
+@media screen and (max-width: 575.98px) {
+    header{
+        
+        
+        .wrapper{
+            width: 100%;
+            
+        }
+        
+        .videowrapper{
+            height: 600px;
+            overflow: hidden;
+            
+        }
+        
+        
+    }
+    .index{
+        main{
+            .parallax{
+                display: none;
             }
+            .news{
+                
+                display: block;
+                .news_title{
+                    margin: 0 auto;
+                    height: 50px;
+                    h3{
+                        margin-top: 20px;
+                        font-size: 24rem;
+                    }
+                    .jpnews{
+                        display: none;
+                    }
+                }
+                .news_text{
+                    display: none;
+                }
+                
+                .news_text_rwd{
+                    display: flex;
+                    padding: 0px 20px;
+                    margin: 0 auto;
+                    .newsLeftText{
+                        margin-right: 18px;
+                        p{
+                            padding-bottom: 25px;
+                        }
+                    }
 
-            .fa-arrow-up-right {
-                color: white;
+                }
             }
+            .category{
+                .wrapper{
+                    width: calc(100% - 40px);
+                    .category_title{
+                        display: none;
+                    }
+    
+                    .FoodSea{
+                        margin-top: 50px;
+                        margin-bottom: 50px;
+                        img{
+                            display: block;
+                            width: 476px;
+                            margin: 0 auto;
+                        }
+
+                        .foodSeaText{
+                            width: 476px;
+                            height: 318px;
+                            top: unset;
+                            right: 20px;
+                            margin-top: 90px;
+                            padding-right: 45px;
+                            padding-left: 45px;
+
+                            h3{
+                                width: 82px;
+                                line-height: 82px;
+                                right: 192px;
+                            }
+                            .draw01{
+                                width: 36%;
+                            }
+
+                            .draw05{
+                                width: 36%;
+                            }
+                            
+                            .draw04{
+                                height: 100%;    
+                            }
+
+                            .textarea{
+                                display: none;
+                            }
+
+                            .textarea_RWD{
+                                display: block;
+                            }
+                            .foodenglish{
+                                p{
+
+                                    display: none;
+                                }
+                            }
+
+                            .comments_area{
+                                margin-top: 20px;
+                                .comments_text_star{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 386px;
+                                }
+                                .viewButton{
+                                    display: none;
+                                }
+
+
+                            }
+                            .viewButton_RWD{
+                                margin-top: 20px;
+                                border: 1.5px solid $moon_color;
+                                width: 380px;
+                                height: 60px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+                                font-size: 20px;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+                        }
+                    }
+
+
+                    
+                    .LiveLand{
+                        margin-top: 200px;
+                        img{
+                            display: block;
+                            width: 476px;
+                            height: 350px;
+                            margin: 0 auto;
+                        }
+
+                        .LiveLandText{
+                            width: 476px;
+                            height: 318px;
+                            top: unset;
+                            left: 15px;
+                            margin-top: 90px;
+                            padding-right: 45px;
+                            padding-left: 45px;
+
+                            h3{
+                                width: 82px;
+                                line-height: 82px;
+                                left: 192px;
+                            }
+                            .draw01{
+                                width: 36%;
+                            }
+
+                            .draw05{
+                                width: 36%;
+                            }
+                            
+                            .draw04{
+                                height: 100%;    
+                            }
+
+                            .textarea{
+                                display: none;
+                            }
+
+                            .textarea_RWD{
+                                display: block;
+                            }
+                            
+
+                            .comments_area{
+                                margin-top: 20px;
+                                .comments_text_star{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 386px;
+                                }
+                                .viewButton{
+                                    display: none;
+                                }
+
+
+                            }
+                            .viewButton_RWD{
+                                margin-top: 20px;
+                                border: 1.5px solid $moon_color;
+                                width: 380px;
+                                height: 60px;
+                                text-align: center;
+                                display: block;
+                                text-decoration: none;
+                                line-height: 50px;
+                                color: $moon_color;
+                                font-size: 20px;
+    
+                                &:hover {
+                                    background-color: $moon_color;
+                                    color: $sun_color;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+ 
+
+ 
         }
     }
-
-    h1 {
-        color: white;
-        text-align: center;
-        margin: 60px 0;
-    }
-
-    h2 {
-        color: white;
-        text-align: center;
-    }
 }
-
-
-// index main sun & moon video intro
-.videoWrappper{
-
-    .index_video {
-        top: 0;
-        left: 0;
-        object-fit: fill;
-        position: absolute;
-        z-index: -99;
-        width: 100%;
-        // height: 700px;
-        // overflow: hidden;  
-    }
-}
-
-nav {
-    height: 77px;
-    display: flex;
-    justify-content: space-between;
-
-    .bar {
-        display: block;
-        width: 50px;
-        height: 5px;
-        margin-bottom: 8px;
-        background-color: white;
-        // -webkit-transition: all 0.3s ease-in-out;
-        // transition: all 0.3s ease-in-out;
-    }
-
-    .book_button {
-        display: block;
-        width: 90px;
-        height: 30px;
-        color: $moon_color;
-        background-color: $sun_color;
-        border-radius: 15px;
-        text-align: center;
-        cursor: pointer;
-
-
-        &:hover {
-            background-color: $moon_color;
-            color: $sun_color;
-        }
-
-        a {
-            display: block;
-            text-decoration: none;
-            line-height: 30px;
-
-            &:hover {
-                color: $sun_color;
-            }
-
-        }
-
-    }
-
-    .main_button img {
-        width: 90px;
-    }
-}
-
-
-
-
 
 
