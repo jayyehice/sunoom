@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/land_tour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body class="land_tour">
-    <header>header</header>
+    <!-- <header>header</header> -->
+    @@include('./layout/header.html')
 
     <main>
 
@@ -24,7 +26,10 @@
             <div class="slogan">
                 <h3>“</h3>
                 <h3>FOREST</h3>
-                <h5>GET LOST IN THE WOODS</h5>
+                <div class="slogan_h5">
+                    <h5>GET LOST</h5>
+                    <h5>IN THE WOODS</h5>
+                </div>
             </div>
         </section>
 
@@ -198,6 +203,9 @@
                 <li>
                     <img id="branch_06" src="./img/land_tour/activity_intro_6_branch_06.png" alt="">
                     <img id="bear_01" src="./img/land_tour/activity_intro_6_bear_01.png" alt="">
+                    <img id="branch_07" src="./img/land_tour/activity_intro_5_branch_04.png" alt="">
+                    <img id="branch_08" src="./img/land_tour/activity_intro_5_branch_05.png" alt="">
+                    
                 </li>
             </ul>
         </section>
@@ -240,7 +248,7 @@
             <div id="ig_pop_up">
                 <div id="ig_pop_up_content">
                     <div id="ig_pop_up_left">
-                        <img id="ig_pop_up_img" src="" alt="">
+                        <img id="ig_pop_up_img" src="./img/land_tour/instagram_1_1.jpg" alt="">
                         <p>圖片文字介接自Instagram，版權屬原作者所有</p>
                     </div>
 
@@ -261,7 +269,8 @@
     </main>
 
     <footer></footer>
-
+    @@include('./layout/footer.html')
+@@include('./layout/header_footer_script_link.html')
     <script src="./js/instagram_pop_up.js"></script>
 </body>
 </html>

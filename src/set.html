@@ -9,11 +9,14 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+@@include('./layout/header_footer_css_link.html')
+
     <link rel="stylesheet" href="./css/set.css">
 
 </head>
 
 <body class="set">
+    @@include('./layout/header.html')
 
     <main>
         <div class="wrapper">
@@ -25,42 +28,42 @@
 
             <ul class="setTopNav">
                 <li>
-                    <a href="#">
+                    <a href="#adventure">
                         <img src="./img/set/set_icon_1_1.png" alt="">
                         <h4>探險風格</h4>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#family">
                         <img src="./img/set/set_icon_1_2.png" alt="">
                         <h4>家庭親子組合</h4>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#relax">
                         <img src="./img/set/set_icon_1_3.png" alt="">
                         <h4>就四五三度假</h4>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#couple">
                         <img src="./img/set/set_icon_1_4.png" alt="">
                         <h4>蜜月旅行</h4>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#sea">
                         <img src="./img/set/set_icon_1_5.png" alt="">
                         <h4>純海洋行程</h4>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#ecology">
                         <img src="./img/set/set_icon_1_6.png" alt="">
                         <h4>生態導覽團</h4>
                     </a>
@@ -73,7 +76,8 @@
                 會員享有滿額免運與會員促銷價！請按此登入
             </a>
 
-             <section class="setMain">
+             <!-- 第1個 -->
+             <section id="adventure" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_1_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -113,7 +117,8 @@
                  
              </section>
 
-             <section class="setMain">
+             <!-- 第2個 -->
+             <section id="family" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_2_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -154,7 +159,8 @@
                  
              </section>
 
-             <section class="setMain">
+             <!-- 第3個 -->
+             <section id="relax" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_3_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -194,7 +200,8 @@
                  
              </section>
 
-             <section class="setMain">
+             <!-- 第4個 -->
+             <section id="couple" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_4_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -234,7 +241,8 @@
                  
              </section>
 
-             <section class="setMain">
+             <!-- 第5個 -->
+             <section id="sea" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_5_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -274,7 +282,8 @@
                  
              </section>
 
-             <section class="setMain">
+             <!-- 第6個 -->
+             <section id="ecology" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/set_6_1.jpg" alt="活動大圖">
                     <div class="setPicS">
@@ -317,6 +326,8 @@
         </div>
     </main>
 
+    @@include('./layout/footer.html')
+@@include('./layout/header_footer_script_link.html')
 </body>
 
 </html>

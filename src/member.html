@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+@@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/member.css">
     <title>會員專區</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 </head>
-<body>
+<body class="member">
+    @@include('./layout/header.html')
 
    <main>
        <div class="wrapper">
             <p>
-                <a href="#">首頁</a> / 會員資料
+                <a href="#">首頁</a> / 會員專區
             </p>
 
-            <h3>會員資料</h3>
+            <h3>會員專區</h3>
 
             <input type="button" class="signOut" value="登出">
 
             <ul class="memberPage">
-                <li><a href="#basicData">基本資料</a></li>
+                <li><a href="#basicData">會員資料</a></li>
                 <li><a href="#changePwd">密碼修改</a></li>
                 <li><a href="#orderCheck">訂單查詢</a></li>
             </ul>
@@ -90,34 +93,123 @@
                     <thead>
                         <tr>
                             <th>訂單編號</th>
-                            <th>訂購日期</th>
+                            <th class="none">訂購日期</th>
                             <th>訂單金額</th>
-                            <th>付款方式</th>
+                            <th class="none">付款方式</th>
                             <th>付款狀態</th>
                             <th>訂單明細</th>
-                            <th>取消訂單</th>
+                            <th class="none">取消訂單</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>001</td>
-                            <td>2022.05.05</td>
+                            <td class="none">2022.05.05</td>
                             <td>$1,000</td>
-                            <td>信用卡</td>
+                            <td class="none">信用卡</td>
                             <td>未完成</td>
                             <td>
-                                <input type="button" value="查看">
+                                <input id="checkOrder" type="button" value="查看">
                             </td>
-                            <td>
-                                <input type="button" value="取消">
+                            <td class="none">
+                                <input id="cancel" type="button" value="取消">
                             </td>
                         </tr>
                     </tbody>
+                </table>
+                
+                <!-- 訂單明細彈窗  -->
+                <table class="orderDetail">
+                    <thead>
+                        <tr>
+                            <th class="odTitle" colspan="4">
+                                <h5>訂單明細</h5><i id="i" class="fa-solid fa-x"></i>
+                                <p>自由行</p>
+                                <p> Check In：</p>
+                                <h6>2022/07/16</h6>
+                                <p>Check Out：</p>
+                                <h6>2022/07/18</h6>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="odTitle2"></td>
+                            <td class="odTitle2">遊</td>
+                            <td class="odTitle2">食</td>
+                            <td class="odTitle2">宿</td>
+                        </tr>
+                        <tr>
+                            <td class="">07/16(Set)</td>
+                            <td class="">
+                                <h6>潛水(日)</h6>
+                                
+                                6<img src="./img/member/member_people.png" alt="">
+                                <span>$11,994</span>
+                                <br>
+                                <h6>巨石陣(日)</h6>
+                                
+                                2<img src="./img/member/member_people.png" alt="">
+                                <span>$3,998</span>
+                            </td>
+                            <td class="">
+                                <h6>BBQ(日)</h6>
+                                
+                                6<img src="./img/member/member_people.png" alt="">
+                                <span>$3,000</span>
+                                <br>
+                                <h6>漢堡(月)</h6>
+                                
+                                4<img src="./img/member/member_people.png" alt="">
+                                <span>$1,200</span>
+                            </td>
+                            <td class="">
+                                <h6>帳篷露營(月)</h6>
+                                
+                                6<img src="./img/member/member_people.png" alt="">
+                                <span>$11,994</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="">07/17(Sun)</td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr>
+                            <td class="">07/18(Mon)</td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="odFoot" colspan="4" rowspan="2">
+                                <div class="odFootLittle">
+                                    <p class="footTitle">小計：</p><span>$32,186</span>
+                                    <br>
+                                    <p class="footTitle">折扣碼：</p>
+                                    <span class="discountCode">Long_bro_only_9453</span>
+                                    <br>
+                                    <p class="footTitle">折扣金額：</p>
+                                    <span class="discount">- $16,093</span>
+                                    <br>
+                                    <p class="footTitle">總金額：</p>
+                                    <span>$16,093</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
        </div>
    </main>
     
+   @@include('./layout/footer.html')
+ 
+@@include('./layout/header_footer_script_link.html')
    <script src="./js/member.js"></script>
 </body>
 </html>

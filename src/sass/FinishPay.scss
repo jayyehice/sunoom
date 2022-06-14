@@ -1,20 +1,42 @@
 
+@mixin mobile{
+    @media(max-width:576px){
+        @content
+    }
+};
+
+
 @mixin circle{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 1px solid #0C1244;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-};
-
+    display: flex;
+    flex-direction: column;
+    h4:last-Child{
+        margin-bottom: 20px;
+    }
+    @include mobile{
+        width: 75px;
+        height: 75px;
+        h4{
+            font-size: 16px;
+        }
+    }
+}
 body{
     background-color: #F5F0DD;
     section{
         h2{
             text-align: center;
+            @include mobile{
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
         }
     }
     .shoppingProcess{
@@ -24,10 +46,19 @@ body{
         justify-content: center;
         align-items: center;
         margin:  0 auto;
+        @include mobile{
+            width: 100%;
+            height: 110px;
+        }
         img{
-            width: 100px;
+            width: 80px;
             height: 24px;
-
+            margin: 0 40px;
+            @include mobile{
+                width: 25px;
+                height: 15px;
+                margin: 0;
+            }
         }
         .chooseAdate{
             @include circle;
@@ -50,19 +81,30 @@ body{
         h3{
             text-align: center;
             margin: 50px 0;
+            @include mobile{
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
         }
         h5{
             text-align: center;
             margin-bottom: 40px;
+            @include mobile{
+                margin-bottom: 20px;
+            }
         }
     }
 
     //訂購明細表
     .bigList{
         width: 1000px;
-        height: 920px;
+        height: auto;
         border:2px solid #0C1244;
         margin: 50px auto;
+        @include mobile{
+            width: 98%;
+            height: 100%;
+        }
         .ListTitle{
             margin: 0px auto;
             width: 980px;
@@ -72,46 +114,77 @@ body{
             background-color: #0C1244;
             color: #F5F0DD;
             font-size: 20px;
+            @include mobile{
+                width: 98%;
+                height: 100%;
+
+            }
         }
         .ListDate{
             display: flex;
             list-style: none;
             justify-content: center;
             margin: 20px;
+            @include mobile{
+                margin: 10px;
+            }
+
             li{
                 margin-right: 20px;
                 font-size: 16px;
                 font-weight: bolder;
                 display: flex;
                 align-items: center;
+                @include mobile{
+                    margin-right: 7px;
+    
+                }
             }
             li:first-Child{
                 font-weight: bolder;
                 font-size: 16px;
             }
+            
         }
-        .tripList{
-            display: flex;
-            list-style: none;
-            justify-content: center;
+        table{
+            width: 99%;
+            height: auto;
             margin: 0 auto;
-            padding: 0;
-            li{
-                width: 250px;
-                height: 195px;
+            align-content: center;
+            border: 1px solid #0C1244;
+            th{
+                height: 50px;
+                line-height: 50px;
+                font-weight: bolder;
                 border: 1px solid #0C1244;
+            }
+            td{
+                border: 1px solid #0C1244;
+                height: 100px; 
+                vertical-align:middle;
+            }
+            td:first-child{
                 text-align: center;
-                ol{
-                    list-style: none;
+                vertical-align:middle;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                // grid-auto-rows: 33px;
+                // display: flex;
+                // text-align: center;
+                // justify-content: space-between;
+                @include mobile{
+                    display: block;
                 }
-            }
-
-            li:first-child{
-                line-height: 195px;
-                border-left: none;
-            }
-            li:last-Child{
-                border-right: none;
+                li{
+                    margin: 7px;
+                    text-align: center;
+                }
+                li:last-child{
+                    color: #FFBF44;
+                    border-left: none;
+                }
             }
         }
         .totalBlock{

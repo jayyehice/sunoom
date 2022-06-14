@@ -40,35 +40,56 @@ new Vue({
 
     beforeCreate() {
         
-        // ajax
+        // ----------------------ajax---------------------
     
-        let xmlHTTP;
+        // let xmlHTTP;
     
-        function $_xmlHttpRequest()
-        {   
-            if(window.ActiveXObject)
-            {
-                xmlHTTP=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            else if(window.XMLHttpRequest)
-            {
-                xmlHTTP=new XMLHttpRequest();
-            }
-        }
+        // function $_xmlHttpRequest()
+        // {   
+        //     if(window.ActiveXObject)
+        //     {
+        //         xmlHTTP=new ActiveXObject("Microsoft.XMLHTTP");
+        //     }
+        //     else if(window.XMLHttpRequest)
+        //     {
+        //         xmlHTTP=new XMLHttpRequest();
+        //     }
+        // }
     
-        $_xmlHttpRequest();
-        xmlHTTP.open("GET","../src/php/information.php",true);
+        // $_xmlHttpRequest();
+        // xmlHTTP.open("GET","../src/php/information.php",true);
     
-        xmlHTTP.onreadystatechange= e =>{
-            if(xmlHTTP.readyState == 4)
-            {
-                if(xmlHTTP.status == 200)
-                {
-                    this.faq_list = JSON.parse(xmlHTTP.responseText);
+        // xmlHTTP.onreadystatechange= e =>{
+        //     if(xmlHTTP.readyState == 4)
+        //     {
+        //         if(xmlHTTP.status == 200)
+        //         {
+        //             this.faq_list = JSON.parse(xmlHTTP.responseText);
+        //         }
+        //     }
+        // }
+        // xmlHTTP.send(null);
+
+
+
+        //fetch
+
+        const url = '../src/php/information.php';
+        fetch(url)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                    // this.faq_list = response.json();
+                } else {
+                    const { status, statusText } = response;
+                 throw Error(`${status}: ${statusText}`);
                 }
-            }
-        }
-        xmlHTTP.send(null);
+            })
+            .then(text => this.faq_list = text);
+
+
+
+
     },
 
     created() {},

@@ -1,13 +1,32 @@
 
+
+@mixin mobile{
+    @media(max-width:576px){
+        @content
+    }
+};
+
 @mixin circle{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 1px solid #0C1244;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    h4:last-Child{
+        margin-bottom: 20px;
+    }
+    @include mobile{
+        width: 75px;
+        height: 75px;
+        h4{
+            font-size: 16px;
+        }
+    }
 };
 
 body{
@@ -15,6 +34,10 @@ body{
     section{
         h2{
             text-align: center;
+            @include mobile{
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
         }
         h3{
             text-align: center;
@@ -28,10 +51,19 @@ body{
         justify-content: center;
         align-items: center;
         margin:  0 auto;
+        @include mobile{
+            width: 100%;
+            height: 110px;
+        }
         img{
-            width: 100px;
+            width: 80px;
             height: 24px;
-
+            margin: 0 40px;
+            @include mobile{
+                width: 25px;
+                height: 15px;
+                margin: 0;
+            }
         }
         .chooseAdate{
             @include circle;
@@ -53,10 +85,13 @@ body{
 
     .bigList{
         width: 1000px;
-        height: 920px;
+        height: auto;
         border:2px solid #0C1244;
         margin: 50px auto;
-        transition: all 2s;
+        @include mobile{
+            width: 98%;
+            height: 100%
+        }
         .ListTitle{
             margin: 0px auto;
             width: 980px;
@@ -66,46 +101,77 @@ body{
             background-color: #0C1244;
             color: #F5F0DD;
             font-size: 20px;
+            @include mobile{
+                width: 98%;
+                height: 100%;
+
+            }
         }
         .ListDate{
             display: flex;
             list-style: none;
             justify-content: center;
             margin: 20px;
+            @include mobile{
+                margin: 10px;
+            }
+
             li{
                 margin-right: 20px;
                 font-size: 16px;
                 font-weight: bolder;
                 display: flex;
                 align-items: center;
+                @include mobile{
+                    margin-right: 7px;
+    
+                }
             }
             li:first-Child{
                 font-weight: bolder;
                 font-size: 16px;
             }
+            
         }
-        .tripList{
-            display: flex;
-            list-style: none;
-            justify-content: center;
+        table{
+            width: 99%;
+            height: auto;
             margin: 0 auto;
-            padding: 0;
-            li{
-                width: 250px;
-                height: 195px;
+            align-content: center;
+            border: 1px solid #0C1244;
+            th{
+                height: 50px;
+                line-height: 50px;
+                font-weight: bolder;
                 border: 1px solid #0C1244;
+            }
+            td{
+                border: 1px solid #0C1244;
+                height: 100px; 
+                vertical-align:middle;
+            }
+            td:first-child{
                 text-align: center;
-                ol{
-                    list-style: none;
+                vertical-align:middle;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                // grid-auto-rows: 33px;
+                // display: flex;
+                // text-align: center;
+                // justify-content: space-between;
+                @include mobile{
+                    display: block;
                 }
-            }
-
-            li:first-child{
-                line-height: 195px;
-                border-left: none;
-            }
-            li:last-Child{
-                border-right: none;
+                li{
+                    margin: 7px;
+                    text-align: center;
+                }
+                li:last-child{
+                    color: #FFBF44;
+                    border-left: none;
+                }
             }
         }
         .totalBlock{
@@ -142,29 +208,38 @@ body{
     .payBlock{
         width: 750px;
         margin: 0 auto;
+        @include mobile{
+            width: 98%;
+            height: 100%
+        }
+        
         h5{
             margin-top: 15px;
         }
         #payEmail{
-            width: 750px;
+            width: 450px;
             height: 50px;
             background-color: #F5F0DD;
             font-size: 24px;
+            @include mobile{
+                width: 90%;
+            }
             
         }
-        .phoneBlock{
+        .mailAndPhone{
             display: flex;
-            line-height: 1.6;
-            margin-top: 10px;
-            .phone{
-                margin-right: 30px;
+            @include mobile{
+                display: block;
             }
-            p{
-                width: 250px;
+            .email{
+                margin-right: 50px;
+                @include mobile{
+                    margin-right: 0;
+                }
             }
         }
         #payPhoneNumber{
-            width: 460px;
+            width: 200px;
             height: 50px;
             background-color: #F5F0DD;
             font-size: 24px;
@@ -173,38 +248,81 @@ body{
             display: flex;
             align-items: center;
             padding-bottom: 40px;
-            border-bottom: 1px solid #0C1244;
+            @include mobile{
+                padding-bottom: 0px;
+            }
             .firstName{
-                margin-right: 40px;
+                margin-right: 50px;
+                @include mobile{
+                    margin-right: 10px;
+                }
             }
             #firstName{
                 width: 200px;
                 height: 50px;
                 background-color: #F5F0DD;
                 font-size: 20px;
+                @include mobile{
+                    width: 150px;
+                }
             }
             .lastName{
-                margin-right: 40px;
+                margin-right: 50px;
+                @include mobile{
+                    margin-right: 0px;
+                }
                 
             }
             #lastName{
-                width: 250px;
+                width: 200px;
                 height: 50px;
                 background-color: #F5F0DD;
                 font-size: 20px;
+                @include mobile{
+                    margin-right: 0px;
+                    width: 180px;
+                }
+            }
+            .payWay{
+                @include mobile{
+                    display: none;
+                }
             }
             #payWay{
                 width: 200px;
                 height: 50px;
                 background-color: #F5F0DD;
                 font-size: 20px;
+                text-align: center;
+                text-align-last:center
+            }
+
+        }
+        .payWayMobile{
+            display: none;
+            margin-bottom: 20px;
+            @include mobile{
+                display: block;
+                #payWayMobileUse{
+                    width: 200px;
+                    height: 50px;
+                    background-color: #F5F0DD;
+                    font-size: 20px;
+                    text-align: center;
+                }
             }
         }
         .creditCardBlock{
+            margin-top: 50px;
+            border-top: 1px solid #0C1244;
             input{
                 width: 150px;
                 height: 50px;
                 background-color: #F5F0DD;
+                @include mobile{
+                    width: 70px;
+                    height: 40px;
+                }
             }
             h4{
                 width: 150px;
@@ -217,8 +335,10 @@ body{
                 margin-bottom: 10px;
             }
             .creditCardNums{
+                
                 input{
                     margin-right: 10px;
+                    text-align: center;
                 }
             }
             .expAndScode{
@@ -250,6 +370,12 @@ body{
         background-color:#F5F0DD;
         border:1px solid #0C1244;
         margin: 50px auto;
+        @include mobile{
+            margin-top: 20px;
+            width: 300px;
+            height: 60px;
+            border-radius: 30px;
+        }
         &:hover{
             color:#F5F0DD;
             background-color:#0C1244;

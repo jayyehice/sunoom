@@ -10,17 +10,19 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/discuss.css">
+@@include('./layout/header_footer_css_link.html')
 </head>
 <body class="discuss">
+    @@include('./layout/header.html')
     <div class="wrapper">
         <header></header>
         <main>
-            <h1>討論區</h1>
+            <h1 class="big-title">討論區</h1>
             <!-- 麵包屑區域 -->
             <div class="breadcrumb">
                 <ol class="breadcrumb-list">
                     <li><a href="#">首頁</a></li>
-                    <li>討論區</li>
+                    <li class="text">討論區</li>
                 </ol>
             </div>
             <!-- 官方文章區域 -->
@@ -28,20 +30,23 @@
                 <div class="banner_1">
                     <a href="#" class="img1">
                         <img src="img/beach-g80f906823_1920.jpg" alt="">
-                        <div class="text_1">明島推薦-純海洋行程</div>
+                        <div class="line1"></div>
+                        <div class="text_1">明島推薦   純海洋行程</div>
                     </a>
                 </div>
                 <div class="banner_2">
                     <div class="photo_1">
                         <a href="#" class="img2">
                             <img src="img/autumn-g3dcd77c2a_1280.jpg" alt="">
-                            <div class="text_2">蜜月旅行~極致浪漫~</div>
+                            <div class="line2"></div>
+                            <div class="text_2">蜜月旅行  極致浪漫~</div>
                         </a>
                     </div>
                     <div class="photo_2">
                         <a href="#" class="img3">
                             <img src="img/bora-bora-gbd69eae9d_1280.jpg" alt="">
-                            <div class="text_3">就是有『鬆』</div>
+                            <div class="line3"></div>
+                            <div class="text_3">就是有『鬆』 通體舒暢</div>
                         </a>
                     </div>
                     <div class="more">
@@ -71,7 +76,7 @@
                         <li id="active5" class="li-5">
                             <a class="discussion">
                                 <img src="img/pen.png" alt="">
-                                評論
+                                <p class="word">評論</p>
                             </a>
                         </li>
                     </ul>
@@ -85,7 +90,7 @@
                                         <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
                                     </div>
                                     <div class="content">
-                                        <div class="title" style="color:red;">明島旅遊景點 - 壯觀巨石陣</div>
+                                        <div class="title" >明島旅遊景點 - 壯觀巨石陣</div>
                                         <div class="comment">聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</div>
                                         <div class="icons">
                                             <div class="icon-1">
@@ -350,8 +355,11 @@
         </main>
         <footer></footer>
     </div>
+    @@include('./layout/footer.html')
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="./js/discuss.js"></script>
     <script src="./js/discuss_list.js"></script>
+    @@include('./layout/header_footer_script_link.html')
 </body>
 </html>

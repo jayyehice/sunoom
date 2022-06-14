@@ -1,215 +1,549 @@
-body{
-    background-color: #F5F0DD;
-    // border: 1px solid black;
-    box-sizing: border-box;
-    color: #0C1244;
-    line-height: 1.6;
-    letter-spacing: 3px;
+@import 'base/var';
 
-}
 
-main{
-    // border: 1px solid firebrick;
-    // width: 1280px;
-    margin: 0 auto;
-    // background-color: #F5F0DD;
-    color: #0C1244;
-}
-
-.wrapper{
-    // border: 1px solid black;
-    width: 1080px;
-    margin: 0 auto;
-    // display: flex;
-
-    a{
-        display: inline-block;
-        text-decoration: none;
-        color: #0C1244;
+@mixin mobile {
+    @media(max-width:579px){
+        @content
     }
 }
 
-p{
-    margin-top: 17px;
-    // margin-left: 100px;
 
-}
+.set{
+    background-color: $sun_color;
+    color: $moon_color;
 
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        // background-color: #F5F0DD;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
 
-h3{
-    margin-top: 62px;
-    // margin-left: 100px;
-    margin-bottom: 55px;
+        @include mobile{
+            line-height: 24rem;
+            
+        }
+
     
-}
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            // display: flex;
 
-.setTopNav{
-    // border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-
-    li:first-child{
-        margin-left: 0;
-    }
-
-    li{
-        // border: 1px solid rebeccapurple;
-        text-align: center;
-        margin-left: 50px;
-        
-
-        a{
-
-            img{
-
-            }
-
-            h4{
-
-            }
-        }
-    }
-}
-
-.wrapper .setLogin{
-    display: block;
-    text-align: center;
-    font-size: 24rem;
-    
-
-    .setSpeaker{
-        display: inline-block;
-        position: relative;
-        left: 0;
-        top: 10px;
-    }
-
-
-}
-
-.setMain{
-    margin-top: 60px;
-    border: 1px solid #0C1244;
-    display: flex;
-    width: 1080px;
-    height: 543px;
-    margin-bottom: 50px;
-
-    justify-content: space-between;
-
-    .setPic{
-        // border: 1px solid green;
-        padding: 65px;
-
-        > img{
-            // border: 1px solid #000;
-            margin-bottom: 10px;
-        }
-
-        .setPicS{
-            // border: 1px solid #fff;
-
-            > img:nth-child(2){
-                // border: 1px solid red;
-                margin: 0 7px;
-
-            }
-        }
-    }
-
-    .setText{
-        display: block;
-        // border: 1px solid navy;
-        width: 471px;
-        height: 357px;
-        padding: 65px;
-        padding-left: 0;
-
-        position: relative;
-
-        .setTextPic{
-            position: absolute;
-            right: 64px;
-            top: 130px;
-        }
-
-        h4{
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        h5{
-            margin-bottom: 20px;
-
-        }
-
-        .setTextTitle{
-            margin: 0;
-            margin-bottom: 25px;
-
-        }
-
-        .setTextWord{
-            margin: 0;
-            margin-bottom: 30px;
-        }
-
-        .setTextWord2{
-            margin: 0;
-            margin-bottom: 20px;
-        }
-
-
-
-        .setTextBotm{
-            // border: 1px solid royalblue;
-            display: flex;
-            justify-content: space-between;
-
-            .stbS{
-                // border: 1px solid darkgreen;
+            @include mobile{
+                width: 479px;
                 
+            }
+        
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
+            }
+        }
+        
+        p{
+            margin-top: 17px;
+            // margin-left: 100px;
+        
+        }
+        
+        
+        h3{
+            margin-top: 62px;
+            // margin-left: 100px;
+            margin-bottom: 55px;
 
-                p{
-                    margin: 0;
+            @include mobile{
+                font-size: 28rem;
+                
+            }
 
-                }
+            
+        }
+        
+        .setTopNav{
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
 
-                a{
+            @include mobile{
+                flex-wrap: wrap;
+                
+            }
 
-                    .stbSP{
-                        margin-right: 10px;
-                        position: relative;
-                        right: 0;
-                        top: 7px;
+        
+            li:first-child{
+                margin-left: 0;
+            }
+        
+            li{
+                // border: 1px solid rebeccapurple;
+                text-align: center;
+                margin-left: 50px;
+
+                @include mobile{
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    
+                    &:nth-child(2){
+                        border: 1px solid rebeccapurple;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                    }
+
+                    &:nth-child(5){
+                        border: 1px solid rebeccapurple;
+                        margin-right: 20px;
+                        margin-left: 20px;
+
                     }
                 }
 
-            }
-
-            .setBook{
-                border: 1px solid #000;
-                width: 140px;
-                height: 50px;
-                text-align: center;
-                line-height: 50px;
-                color: #0C1244;
-                background-color: #F5F0DD;
-
-                &:hover{
-                    cursor: pointer;
-                    color: #F5F0DD;
-                    border: 1.5px solid #F5F0DD;
-                    background-color: #0C1244;
+                
+        
+                a{
+        
+                    img{
+        
+                    }
+        
+                    h4{
+        
+                    }
                 }
             }
         }
+        
+        .wrapper .setLogin{
+            display: block;
+            text-align: center;
+            font-size: 24rem;
+            
+        
+            .setSpeaker{
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 10px;
+            }
+        
+        
+        }
+        
+        .setMain{
+            margin-top: 60px;
+            border: 1px solid $moon_color;
+            display: flex;
+            width: 1080px;
+            height: 543px;
+            margin-bottom: 50px;
+        
+            justify-content: space-between;
 
+            @include mobile{
+                width: 476px;
+                height: 800px;
+                display: block;
+                text-align: center;
+                
+                position: relative;
+            }
+
+        
+            .setPic{
+                // border: 1px solid green;
+                padding: 65px;
+
+                @include mobile{
+                    padding: 10px;
+                    
+                }
+        
+                > img{
+                    // border: 1px solid #000;
+                    margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 0
+                        
+                    }
+
+                }
+        
+                .setPicS{
+                    // border: 1px solid #fff;
+        
+                    > img:nth-child(2){
+                        // border: 1px solid red;
+                        margin: 0 7px;
+        
+                    }
+                }
+            }
+        
+            .setText{
+                display: block;
+                // border: 1px solid navy;
+                width: 471px;
+                height: 357px;
+                padding: 65px;
+                padding-left: 0;
+        
+                position: relative;
+
+                @include mobile{
+                    padding: 0;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    text-align: left;
+                    
+                }
+    
+        
+                .setTextPic{
+                    position: absolute;
+                    right: 64px;
+                    top: 130px;
+
+                    @include mobile{
+                        width: 80px;
+                        right: 64px;
+                        top: 30px;
+    
+                        
+                    }
+        
+    
+                }
+        
+                h4{
+                    text-align: left;
+                    margin-bottom: 20px;
+
+                    @include mobile{
+                        position: absolute;
+                        right: 180px;
+                        top: -280px;
+                        font-weight: 800;
+                    }
+
+                }
+        
+                h5{
+                    margin-bottom: 20px;
+        
+                }
+        
+                .setTextTitle{
+                    margin: 0;
+                    margin-bottom: 25px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
+                }
+        
+                .setTextWord{
+                    margin: 0;
+                    margin-bottom: 30px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
+                }
+        
+                .setTextWord2{
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+        
+                .setTextBotm{
+                    // border: 1px solid royalblue;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include mobile{
+                         justify-content: start;   
+                            
+                    }
+
+        
+                    .stbS{
+                        // border: 1px solid darkgreen;
+                        
+                        p{
+                            margin: 0;
+        
+                        }
+        
+                        a{
+
+                            .stbSP{
+                                margin-right: 10px;
+                                position: relative;
+                                right: 0;
+                                top: 7px;
+                            }
+                        }
+
+                        @include mobile{
+                            margin-right: 100px;
+                        }
+
+        
+                    }
+        
+                    .setBook{
+                        border: $show_border;
+                        width: 140px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $moon_color;
+                        background-color: $sun_color; 
+                        
+                        @include mobile{
+                            margin-right: 10px;
+                        }
+
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+                }
+        
+            }
+        
+        }
+        
+        .setMain:last-child{
+            margin-bottom: 100px;
+        }
+        
     }
-
+    
 }
 
-.setMain:last-child{
-    margin-bottom: 100px;
+.set_moon{
+    @import 'base/moonColorSwitch';
+    background-color: $sun_color;
+    color: $moon_color;
+
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        // background-color: #F5F0DD;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
+    
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            // display: flex;
+        
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
+            }
+        }
+        
+        p{
+            margin-top: 17px;
+            // margin-left: 100px;
+        
+        }
+        
+        
+        h3{
+            margin-top: 62px;
+            // margin-left: 100px;
+            margin-bottom: 55px;
+            
+        }
+        
+        .setTopNav{
+            // border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        
+            li:first-child{
+                margin-left: 0;
+            }
+        
+            li{
+                // border: 1px solid rebeccapurple;
+                text-align: center;
+                margin-left: 50px;
+                
+                a{
+        
+                    img{
+        
+                    }
+        
+                    h4{
+        
+                    }
+                }
+            }
+        }
+        
+        .wrapper .setLogin{
+            display: block;
+            text-align: center;
+            font-size: 24rem;
+        
+            .setSpeaker{
+                display: inline-block;
+                position: relative;
+                left: 0;
+                top: 10px;
+            }
+        
+        }
+        
+        .setMain{
+            margin-top: 60px;
+            border: 1px solid $moon_color;
+            display: flex;
+            width: 1080px;
+            height: 543px;
+            margin-bottom: 50px;
+        
+            justify-content: space-between;
+        
+            .setPic{
+                // border: 1px solid green;
+                padding: 65px;
+        
+                > img{
+                    // border: 1px solid #000;
+                    margin-bottom: 10px;
+                }
+        
+                .setPicS{
+                    // border: 1px solid #fff;
+        
+                    > img:nth-child(2){
+                        // border: 1px solid red;
+                        margin: 0 7px;
+        
+                    }
+                }
+            }
+        
+            .setText{
+                display: block;
+                // border: 1px solid navy;
+                width: 471px;
+                height: 357px;
+                padding: 65px;
+                padding-left: 0;
+        
+                position: relative;
+        
+                .setTextPic{
+                    position: absolute;
+                    right: 64px;
+                    top: 130px;
+                }
+        
+                h4{
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+        
+                h5{
+                    margin-bottom: 20px;
+        
+                }
+        
+                .setTextTitle{
+                    margin: 0;
+                    margin-bottom: 25px;
+        
+                }
+        
+                .setTextWord{
+                    margin: 0;
+                    margin-bottom: 30px;
+                }
+        
+                .setTextWord2{
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+        
+                .setTextBotm{
+                    // border: 1px solid royalblue;
+                    display: flex;
+                    justify-content: space-between;
+        
+                    .stbS{
+                        // border: 1px solid darkgreen;
+                        
+        
+                        p{
+                            margin: 0;
+        
+                        }
+        
+                        a{
+        
+                            .stbSP{
+                                margin-right: 10px;
+                                position: relative;
+                                right: 0;
+                                top: 7px;
+                            }
+                        }
+        
+                    }
+        
+                    .setBook{
+                        border: $show_border;
+                        width: 140px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        color: $moon_color;
+                        background-color: $sun_color;
+        
+                        &:hover{
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+                        }
+                    }
+                }
+        
+            }
+        
+        }
+        
+        .setMain:last-child{
+            margin-bottom: 100px;
+        }
+        
+    }
+
 }
