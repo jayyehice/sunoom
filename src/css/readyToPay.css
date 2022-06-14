@@ -4,6 +4,12 @@ body {
 body section h2 {
   text-align: center;
 }
+@media (max-width: 576px) {
+  body section h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
 body section h3 {
   text-align: center;
   margin: 50px 0;
@@ -16,10 +22,23 @@ body .shoppingProcess {
   align-items: center;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess {
+    width: 100%;
+    height: 110px;
+  }
+}
 body .shoppingProcess img {
   width: 80px;
   height: 24px;
   margin: 0 40px;
+}
+@media (max-width: 576px) {
+  body .shoppingProcess img {
+    width: 25px;
+    height: 15px;
+    margin: 0;
+  }
 }
 body .shoppingProcess .chooseAdate {
   width: 150px;
@@ -36,6 +55,15 @@ body .shoppingProcess .chooseAdate {
 body .shoppingProcess .chooseAdate h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .chooseAdate {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .chooseAdate h4 {
+    font-size: 16px;
+  }
+}
 body .shoppingProcess .chooseAtrip {
   width: 150px;
   height: 150px;
@@ -50,6 +78,15 @@ body .shoppingProcess .chooseAtrip {
 }
 body .shoppingProcess .chooseAtrip h4:last-Child {
   margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  body .shoppingProcess .chooseAtrip {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .chooseAtrip h4 {
+    font-size: 16px;
+  }
 }
 body .shoppingProcess .tallyOrder {
   width: 150px;
@@ -68,6 +105,15 @@ body .shoppingProcess .tallyOrder {
 body .shoppingProcess .tallyOrder h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .tallyOrder {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .tallyOrder h4 {
+    font-size: 16px;
+  }
+}
 body .shoppingProcess .orderComplete {
   width: 150px;
   height: 150px;
@@ -83,12 +129,26 @@ body .shoppingProcess .orderComplete {
 body .shoppingProcess .orderComplete h4:last-Child {
   margin-bottom: 20px;
 }
+@media (max-width: 576px) {
+  body .shoppingProcess .orderComplete {
+    width: 75px;
+    height: 75px;
+  }
+  body .shoppingProcess .orderComplete h4 {
+    font-size: 16px;
+  }
+}
 body .bigList {
   width: 1000px;
-  height: 630px;
+  height: auto;
   border: 2px solid #0C1244;
   margin: 50px auto;
-  transition: all 2s;
+}
+@media (max-width: 576px) {
+  body .bigList {
+    width: 98%;
+    height: 100%;
+  }
 }
 body .bigList .ListTitle {
   margin: 0px auto;
@@ -100,11 +160,22 @@ body .bigList .ListTitle {
   color: #F5F0DD;
   font-size: 20px;
 }
+@media (max-width: 576px) {
+  body .bigList .ListTitle {
+    width: 98%;
+    height: 100%;
+  }
+}
 body .bigList .ListDate {
   display: flex;
   list-style: none;
   justify-content: center;
   margin: 20px;
+}
+@media (max-width: 576px) {
+  body .bigList .ListDate {
+    margin: 10px;
+  }
 }
 body .bigList .ListDate li {
   margin-right: 20px;
@@ -113,32 +184,53 @@ body .bigList .ListDate li {
   display: flex;
   align-items: center;
 }
+@media (max-width: 576px) {
+  body .bigList .ListDate li {
+    margin-right: 7px;
+  }
+}
 body .bigList .ListDate li:first-Child {
   font-weight: bolder;
   font-size: 16px;
 }
-body .bigList .tripList {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+body .bigList table {
+  width: 99%;
+  height: auto;
   margin: 0 auto;
-  padding: 0;
-}
-body .bigList .tripList li {
-  width: 250px;
-  height: 100px;
+  align-content: center;
   border: 1px solid #0C1244;
+}
+body .bigList table th {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bolder;
+  border: 1px solid #0C1244;
+}
+body .bigList table td {
+  border: 1px solid #0C1244;
+  height: 100px;
+  vertical-align: middle;
+}
+body .bigList table td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+body .bigList table ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 576px) {
+  body .bigList table ul {
+    display: block;
+  }
+}
+body .bigList table ul li {
+  margin: 7px;
   text-align: center;
 }
-body .bigList .tripList li ol {
-  list-style: none;
-}
-body .bigList .tripList li:first-child {
-  line-height: 100px;
+body .bigList table ul li:last-child {
+  color: #FFBF44;
   border-left: none;
-}
-body .bigList .tripList li:last-Child {
-  border-right: none;
 }
 body .bigList .totalBlock {
   margin: 40px 20px;
@@ -173,6 +265,12 @@ body .payBlock {
   width: 750px;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  body .payBlock {
+    width: 98%;
+    height: 100%;
+  }
+}
 body .payBlock h5 {
   margin-top: 15px;
 }
@@ -182,11 +280,26 @@ body .payBlock #payEmail {
   background-color: #F5F0DD;
   font-size: 24px;
 }
+@media (max-width: 576px) {
+  body .payBlock #payEmail {
+    width: 90%;
+  }
+}
 body .payBlock .mailAndPhone {
   display: flex;
 }
+@media (max-width: 576px) {
+  body .payBlock .mailAndPhone {
+    display: block;
+  }
+}
 body .payBlock .mailAndPhone .email {
   margin-right: 50px;
+}
+@media (max-width: 576px) {
+  body .payBlock .mailAndPhone .email {
+    margin-right: 0;
+  }
 }
 body .payBlock #payPhoneNumber {
   width: 200px;
@@ -199,8 +312,18 @@ body .payBlock .nameBlock {
   align-items: center;
   padding-bottom: 40px;
 }
+@media (max-width: 576px) {
+  body .payBlock .nameBlock {
+    padding-bottom: 0px;
+  }
+}
 body .payBlock .nameBlock .firstName {
   margin-right: 50px;
+}
+@media (max-width: 576px) {
+  body .payBlock .nameBlock .firstName {
+    margin-right: 10px;
+  }
 }
 body .payBlock .nameBlock #firstName {
   width: 200px;
@@ -208,8 +331,18 @@ body .payBlock .nameBlock #firstName {
   background-color: #F5F0DD;
   font-size: 20px;
 }
+@media (max-width: 576px) {
+  body .payBlock .nameBlock #firstName {
+    width: 150px;
+  }
+}
 body .payBlock .nameBlock .lastName {
   margin-right: 50px;
+}
+@media (max-width: 576px) {
+  body .payBlock .nameBlock .lastName {
+    margin-right: 0px;
+  }
 }
 body .payBlock .nameBlock #lastName {
   width: 200px;
@@ -217,11 +350,40 @@ body .payBlock .nameBlock #lastName {
   background-color: #F5F0DD;
   font-size: 20px;
 }
+@media (max-width: 576px) {
+  body .payBlock .nameBlock #lastName {
+    margin-right: 0px;
+    width: 180px;
+  }
+}
+@media (max-width: 576px) {
+  body .payBlock .nameBlock .payWay {
+    display: none;
+  }
+}
 body .payBlock .nameBlock #payWay {
   width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 20px;
+  text-align: center;
+  text-align-last: center;
+}
+body .payBlock .payWayMobile {
+  display: none;
+  margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  body .payBlock .payWayMobile {
+    display: block;
+  }
+  body .payBlock .payWayMobile #payWayMobileUse {
+    width: 200px;
+    height: 50px;
+    background-color: #F5F0DD;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 body .payBlock .creditCardBlock {
   margin-top: 50px;
@@ -231,6 +393,12 @@ body .payBlock .creditCardBlock input {
   width: 150px;
   height: 50px;
   background-color: #F5F0DD;
+}
+@media (max-width: 576px) {
+  body .payBlock .creditCardBlock input {
+    width: 70px;
+    height: 40px;
+  }
 }
 body .payBlock .creditCardBlock h4 {
   width: 150px;
@@ -244,6 +412,7 @@ body .payBlock .creditCardBlock h4 {
 }
 body .payBlock .creditCardBlock .creditCardNums input {
   margin-right: 10px;
+  text-align: center;
 }
 body .payBlock .creditCardBlock .expAndScode {
   display: flex;
@@ -269,6 +438,14 @@ body #FinishPage {
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
   margin: 50px auto;
+}
+@media (max-width: 576px) {
+  body #FinishPage {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
 }
 body #FinishPage:hover {
   color: #F5F0DD;

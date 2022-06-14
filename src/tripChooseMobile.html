@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行程選擇</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/tripChooseMobile.css">
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script src="./js/tripChoose.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+</head>
+<body class="tripChooseMobile">
+    <div class="bodyCover"></div>
+    <!-- <header></header> -->
+    <article>
+        <section>
+            <h2>訂購流程</h2>
+            <div class="shoppingProcess">
+                <div class="chooseAdate">
+                    <p>1</p>
+                    <p>選擇日期</p>
+                </div>
+                <img class="" src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="chooseAtrip ">
+                    <p>2</p>
+                    <p>選擇行程</p>
+                </div>
+                <img class="" src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="tallyOrder ">
+                    <p>3</p>
+                    <p>結帳</p>
+                </div>
+                <img class="" src="./img/orderPage/orderPageArrow.png" alt="">
+                <div class="orderComplete ">
+                    <p>4</p>
+                    <p>訂單完成</p>
+                </div>
+            </div>
+            <h3>2.選擇行程</h3>
+            <div class="datePickerBox">
+                <div class="dateTitle">
+                    <p>旅程規劃(<span id="bookingDays"></span>)</p>
+                </div>
+                <div class="pickerBox" >
+                    <input type="text" name="dates" id="dateBooking">
+                    <!-- <calendar v-model ="value" show-date-only :disabled-days-of-week ="disabled" :format ="format" :clear-button ="clear" :placeholder ="placeholder" :lang ="lang" :position ="position" :on-day-click ="dayClick" > </calendar > -->
+                </div>
+            </div>
+            <!-- 小訂單明細 -->
+            <div class="ListSmall">
+                <h5>訂單明細 </h5><div class="circle">+</div>
+            </div>
+            <!-- 明細彈窗 -->
+            <div class="BigList">
+                <div class="ListTitle">
+                    <h5>訂單明細</h5>
+                </div>
+                <div class="tripAndDate">
+                    <p>自由行</p>
+                    <p>Check In:</p>
+                    <input type="date" name="" id="" value="2022-07-16">
+                    <p>Check out:</p>
+                    <input type="date" name="" id="" value="2022-07-16">
+                </div>
+                <div class="tripList">
+                    <p>遊</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>潛水(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >6<img class="rightButton" src="./img/orderPage/right_button.png"></li>
+                        <li>$11,994</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                    <ul>
+                        <li>巨石陣(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >2<img class="rightButton" src="./img/orderPage/right_button.png"></li>
+                        <li>$3,998</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+
+                </div>
+                <div class="FoodList">
+                    <p>食</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>BBQ(日)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >6<img class="rightButton" src="./img/orderPage/right_button.png"></li>                        <li>$3,000</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                    <ul>
+                        <li>漢堡(月)</li>
+                        <li><img class="leftButton" src="./img/orderPage/left_button.png" >4<img class="rightButton" src="./img/orderPage/right_button.png"></li>                        <li>$1,200</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                </div>
+                <div class="StayList">
+                    <p>宿</p>
+                    <h6>2022/07/16</h6>
+                    <ul>
+                        <li>帳篷露營(月)</li>
+                        <li>6</li>
+                        <li>$11,994</li>
+                        <li><img  class="deleteButton" src="./img/orderPage/delete_button.png"></li>
+                    </ul>
+                </div>
+                <div class="totalBlock">
+                    <div class="totalTitle">
+                        <span>小計：</span><br>
+                        <span>折扣碼：</span><br>
+                        <span>折扣金額：</span><br>
+                        <span>總金額：</span><br>
+                    </div>
+                    <div class="totalPrice">
+                        <span>$32,186</span><br>
+                        <select name="" id="">
+                            <option value="">Long_bro_only_9453</option>
+                            <option value="">NewMember</option>
+                        </select><br>
+                        <span id="couponPrice">-$16,093</span><br>
+                        <span>$16,093</span><br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 選購區塊 -->
+            <div class="tripChooseBlock">
+                    <div class="itineraryTitle">
+                        <p>遊</p>
+                        <p class="chooseDate">2022/07/16</p>
+                    </div>
+                    <!-- 早上行程挑選 -->
+                    <div class="morningItineraryA">
+                        <div class="morningBlockB">
+                            <p>09:00-12:00</p>
+                            <select name="" id="">
+                                <option value="">釣魚(日)</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <span id="tripPriceA">$1999/人</span>
+                        </div>
+                        <div class="morningBlockA">
+                            <img id="morningImg" src="./img/orderPage/sea.png" alt="">
+                            <p id="itineraryText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addItineraryM" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- 中午行程挑選區塊 -->
+                    <div class="noonItinerary">
+                        <div class="noonBlockB">
+                            <p>15:00-17:00</p>
+                            <select name="" id="">
+                                <option value="">釣魚(日)</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <span id="tripPriceB">$1999/人</span>
+                        </div>
+                        <div class="noonBlockA">
+                            <img id="noonImg" src="./img/orderPage/rock.png" alt="">
+                            <p id="itineraryTextB">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addItineraryN" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <!-- 夜間行程挑選 -->
+                    <div class="eveningItinerary">
+                        <div class="eveningBlockB">
+                            <p>19:00-21:00</p>
+                            <select name="" id="">
+                                <option value="">不需選購</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <span id="tripPriceC">$0/人</span>
+                        </div>
+                        <div class="eveningBlockA">
+                            <img id="eveningImg" src="./img/orderPage/NoChooseimg.png" alt="">
+                            <p id="itineraryTextC">點擊加入您的專屬旅行</p>
+                            <img id="addItineraryE" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 餐點挑選區塊 -->
+                <div class="foodChooseBlock">
+                    <div class="foodTitle">
+                        <p>食</p>
+                        <p class="chooseDate">2022/07/16</p>
+                    </div>
+                    <div class="morningFood">
+                        <div class="morningFoodB">
+                            <p>19:00-21:00</p>
+                            <select name="" id="">
+                                <option value="">Buffet(日)</option>
+                                <option value="">Buffet(月)</option>
+                                <option value="">BBQ(日)</option>
+                                <option value="">BBQ(月)</option>
+                            </select>
+                            <span id="foodPriceA">$1999/人</span>
+                        </div>
+                        <div class="morningFoodA">
+                            <img id="morningFoodImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 5.png" alt="">
+                            <p id="foodTextA">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addFoodM" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>
+                    <!-- 午餐區塊 -->
+                    <div class="noonFood">
+                        <div class="noonFoodB">
+                            <p>15:00-17:00</p>
+                            <select name="" id="">
+                                <option value="">漢堡(日)</option>
+                                <option value="">漢堡(月)</option>
+                                <option value="">Buffet(日)</option>
+                                <option value="">Buffet(月)</option>
+                                <option value="">BBQ(日)</option>
+                                <option value="">BBQ(月)</option>
+                            </select>
+                            <span id="foodPriceB">$1999/人</span>
+                        </div>
+                        <div class="noonFoodA">
+                            <img id="noonFoodImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 6.png" alt="">
+                            <p id="foodTextB">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addFoodN" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="eveningFood">
+                        <div class="eveningFoodB">
+                            <p>19:00-21:00</p>
+                            <select name="" id="">
+                                <option value="">漢堡(日)</option>
+                                <option value="">漢堡(月)</option>
+                                <option value="">BBQ(日)</option>
+                                <option value="">BBQ(月)</option>
+                            </select>
+                            <span id="foodPriceC">$1999/人</span>
+                        </div>
+                        <div class="eveningFoodA">
+                            <img id="eveningFoodImg" src="./img/orderPage/NoChooseimg.png" alt="">
+                            <p id="foodTextC">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addFoodE" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>  
+                </div>
+                <div class="stayChooseBlock">
+                    <div class="stayTitle">
+                        <p>宿</p>
+                        <p class="chooseDate">2022/07/16</p>
+                    </div>
+                    <div class="cabin">
+                        <div class="cabinBlockB">
+                            <div class="cabinTitle">
+                                <input type="radio" name="stayChoose" id="cabinButton">
+                                <p>森林木屋</p>                     
+                            </div>
+                            <select name="" id="">
+                                <option value="">日島</option>
+                                <option value="">月島</option>
+                            </select>
+                            <span id="cabinPrice">$1999/人</span>
+                        </div>
+                        <div class="cabinBlockA">
+                            <img id="cabinImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 5.png" alt="">
+                            <p id="cabinText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addcabin" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="camping">
+                        <div class="campingBlockB">
+                            <div class="campingTitle">
+                                <input type="radio" name="stayChoose" id="campingButton">
+                                <p>帳篷露營</p>
+                            </div>
+                            <select name="" id="">
+                                <option value="">日島</option>
+                                <option value="">月島</option>
+                            </select>
+                            <span id="campingPrice">$1999/人</span>
+                        </div>
+                        <div class="campingBlockA">
+                            <img id="campingImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 6.png" alt="">
+                            <p id="campingText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                            <img id="addCamping" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>    
+                    </div>
+                    
+                    <div class="villa">
+                        <div class="villaBlockB">
+                            <div class="villaTitle">
+                                <input type="radio" name="stayChoose" id="villaButton">
+                                <p>海上Villa</p>
+                            </div>
+                            <select name="" id="">
+                                <option value="">不需選購</option>
+                                <option value="">日島</option>
+                                <option value="">月島</option>
+                            </select>
+                            <span id="villaPrice">$0/人</span>
+                        </div>
+                        <div class="villaBlockA">
+                            <img id="villaImg" src="./img/orderPage/NoChooseimg.png" alt="">
+                            <p id="villaText">點擊加入您的專屬旅行</p>
+                            <img id="addVilla" src="./img/orderPage/shopping-cart-add.png" alt="">
+                        </div>
+                    </div>  
+                </div>
+            <button id="NextPage">Next</button>
+        </section>
+    </article>
+</body>
+</html>
