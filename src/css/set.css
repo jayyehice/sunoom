@@ -1,140 +1,3 @@
-@media (max-width: 579px) {
-  .set {
-    background-color: #F5F0DD;
-    color: #0C1244;
-  }
-  .set main {
-    margin: 0 auto;
-    box-sizing: border-box;
-    line-height: 1.6;
-    letter-spacing: 3px;
-  }
-  .set main .wrapper {
-    width: 539px;
-    margin: 0 auto;
-  }
-  .set main .wrapper a {
-    display: inline-block;
-    text-decoration: none;
-    color: #0C1244;
-  }
-  .set main p {
-    margin-top: 17px;
-  }
-  .set main h3 {
-    margin-top: 62px;
-    margin-bottom: 55px;
-  }
-  .set main .setTopNav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    width: 479px;
-  }
-  .set main .setTopNav li:first-child {
-    margin-left: 0;
-  }
-  .set main .setTopNav li {
-    text-align: center;
-    margin-left: 50px;
-  }
-  .set main .setTopNav li a img {
-    width: 100%;
-  }
-  .set main .wrapper .setLogin {
-    display: block;
-    text-align: center;
-    font-size: 24rem;
-  }
-  .set main .wrapper .setLogin .setSpeaker {
-    display: inline-block;
-    position: relative;
-    left: 0;
-    top: 10px;
-  }
-  .set main .setMain {
-    margin-top: 60px;
-    border: 1px solid #0C1244;
-    display: flex;
-    width: 1080px;
-    height: 543px;
-    margin-bottom: 50px;
-    justify-content: space-between;
-  }
-  .set main .setMain .setPic {
-    padding: 65px;
-  }
-  .set main .setMain .setPic > img {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  .set main .setMain .setPic .setPicS > img:nth-child(2) {
-    margin: 0 7px;
-  }
-  .set main .setMain .setText {
-    display: block;
-    width: 471px;
-    height: 357px;
-    padding: 65px;
-    padding-left: 0;
-    position: relative;
-  }
-  .set main .setMain .setText .setTextPic {
-    position: absolute;
-    right: 64px;
-    top: 130px;
-  }
-  .set main .setMain .setText h4 {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  .set main .setMain .setText h5 {
-    margin-bottom: 20px;
-  }
-  .set main .setMain .setText .setTextTitle {
-    margin: 0;
-    margin-bottom: 25px;
-  }
-  .set main .setMain .setText .setTextWord {
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .set main .setMain .setText .setTextWord2 {
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  .set main .setMain .setText .setTextBotm {
-    display: flex;
-    justify-content: space-between;
-  }
-  .set main .setMain .setText .setTextBotm .stbS p {
-    margin: 0;
-  }
-  .set main .setMain .setText .setTextBotm .stbS a .stbSP {
-    margin-right: 10px;
-    position: relative;
-    right: 0;
-    top: 7px;
-  }
-  .set main .setMain .setText .setTextBotm .setBook {
-    border: 1px solid #000;
-    width: 140px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    color: #0C1244;
-    background-color: #F5F0DD;
-  }
-  .set main .setMain .setText .setTextBotm .setBook:hover {
-    cursor: pointer;
-    color: #F5F0DD;
-    border: 1.5px solid #F5F0DD;
-    background-color: #0C1244;
-  }
-  .set main .setMain:last-child {
-    margin-bottom: 100px;
-  }
-}
 .set {
   background-color: #F5F0DD;
   color: #0C1244;
@@ -145,9 +8,19 @@
   line-height: 1.6;
   letter-spacing: 3px;
 }
+@media (max-width: 579px) {
+  .set main {
+    line-height: 24rem;
+  }
+}
 .set main .wrapper {
   width: 1080px;
   margin: 0 auto;
+}
+@media (max-width: 579px) {
+  .set main .wrapper {
+    width: 479px;
+  }
 }
 .set main .wrapper a {
   display: inline-block;
@@ -161,10 +34,20 @@
   margin-top: 62px;
   margin-bottom: 55px;
 }
+@media (max-width: 579px) {
+  .set main h3 {
+    font-size: 28rem;
+  }
+}
 .set main .setTopNav {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+@media (max-width: 579px) {
+  .set main .setTopNav {
+    flex-wrap: wrap;
+  }
 }
 .set main .setTopNav li:first-child {
   margin-left: 0;
@@ -172,6 +55,22 @@
 .set main .setTopNav li {
   text-align: center;
   margin-left: 50px;
+}
+@media (max-width: 579px) {
+  .set main .setTopNav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .set main .setTopNav li:nth-child(2) {
+    border: 1px solid rebeccapurple;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .set main .setTopNav li:nth-child(5) {
+    border: 1px solid rebeccapurple;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 .set main .wrapper .setLogin {
   display: block;
@@ -193,11 +92,30 @@
   margin-bottom: 50px;
   justify-content: space-between;
 }
+@media (max-width: 579px) {
+  .set main .setMain {
+    width: 476px;
+    height: 800px;
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+}
 .set main .setMain .setPic {
   padding: 65px;
 }
+@media (max-width: 579px) {
+  .set main .setMain .setPic {
+    padding: 10px;
+  }
+}
 .set main .setMain .setPic > img {
   margin-bottom: 10px;
+}
+@media (max-width: 579px) {
+  .set main .setMain .setPic > img {
+    margin-bottom: 0;
+  }
 }
 .set main .setMain .setPic .setPicS > img:nth-child(2) {
   margin: 0 7px;
@@ -210,14 +128,37 @@
   padding-left: 0;
   position: relative;
 }
+@media (max-width: 579px) {
+  .set main .setMain .setText {
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
 .set main .setMain .setText .setTextPic {
   position: absolute;
   right: 64px;
   top: 130px;
 }
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextPic {
+    width: 80px;
+    right: 64px;
+    top: 30px;
+  }
+}
 .set main .setMain .setText h4 {
   text-align: left;
   margin-bottom: 20px;
+}
+@media (max-width: 579px) {
+  .set main .setMain .setText h4 {
+    position: absolute;
+    right: 180px;
+    top: -280px;
+    font-weight: 800;
+  }
 }
 .set main .setMain .setText h5 {
   margin-bottom: 20px;
@@ -226,9 +167,19 @@
   margin: 0;
   margin-bottom: 25px;
 }
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextTitle {
+    margin-bottom: 20px;
+  }
+}
 .set main .setMain .setText .setTextWord {
   margin: 0;
   margin-bottom: 30px;
+}
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextWord {
+    margin-bottom: 20px;
+  }
 }
 .set main .setMain .setText .setTextWord2 {
   margin: 0;
@@ -237,6 +188,11 @@
 .set main .setMain .setText .setTextBotm {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm {
+    justify-content: start;
+  }
 }
 .set main .setMain .setText .setTextBotm .stbS p {
   margin: 0;
@@ -247,6 +203,11 @@
   right: 0;
   top: 7px;
 }
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm .stbS {
+    margin-right: 100px;
+  }
+}
 .set main .setMain .setText .setTextBotm .setBook {
   border: 1px solid #000;
   width: 140px;
@@ -255,6 +216,11 @@
   line-height: 50px;
   color: #0C1244;
   background-color: #F5F0DD;
+}
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm .setBook {
+    margin-right: 10px;
+  }
 }
 .set main .setMain .setText .setTextBotm .setBook:hover {
   cursor: pointer;
@@ -394,133 +360,6 @@
   background-color: #F5F0DD;
 }
 .set_moon main .setMain:last-child {
-  margin-bottom: 100px;
-}
-
-main {
-  margin: 0 auto;
-  box-sizing: border-box;
-  line-height: 1.6;
-  letter-spacing: 3px;
-}
-main .wrapper {
-  width: 1080px;
-  margin: 0 auto;
-}
-main .wrapper a {
-  display: inline-block;
-  text-decoration: none;
-  color: #0C1244;
-}
-main p {
-  margin-top: 17px;
-}
-main h3 {
-  margin-top: 62px;
-  margin-bottom: 55px;
-}
-main .setTopNav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-main .setTopNav li:first-child {
-  margin-left: 0;
-}
-main .setTopNav li {
-  text-align: center;
-  margin-left: 50px;
-}
-main .wrapper .setLogin {
-  display: block;
-  text-align: center;
-  font-size: 24rem;
-}
-main .wrapper .setLogin .setSpeaker {
-  display: inline-block;
-  position: relative;
-  left: 0;
-  top: 10px;
-}
-main .setMain {
-  margin-top: 60px;
-  border: 1px solid #0C1244;
-  display: flex;
-  width: 1080px;
-  height: 543px;
-  margin-bottom: 50px;
-  justify-content: space-between;
-}
-main .setMain .setPic {
-  padding: 65px;
-}
-main .setMain .setPic > img {
-  margin-bottom: 10px;
-}
-main .setMain .setPic .setPicS > img:nth-child(2) {
-  margin: 0 7px;
-}
-main .setMain .setText {
-  display: block;
-  width: 471px;
-  height: 357px;
-  padding: 65px;
-  padding-left: 0;
-  position: relative;
-}
-main .setMain .setText .setTextPic {
-  position: absolute;
-  right: 64px;
-  top: 130px;
-}
-main .setMain .setText h4 {
-  text-align: left;
-  margin-bottom: 20px;
-}
-main .setMain .setText h5 {
-  margin-bottom: 20px;
-}
-main .setMain .setText .setTextTitle {
-  margin: 0;
-  margin-bottom: 25px;
-}
-main .setMain .setText .setTextWord {
-  margin: 0;
-  margin-bottom: 30px;
-}
-main .setMain .setText .setTextWord2 {
-  margin: 0;
-  margin-bottom: 20px;
-}
-main .setMain .setText .setTextBotm {
-  display: flex;
-  justify-content: space-between;
-}
-main .setMain .setText .setTextBotm .stbS p {
-  margin: 0;
-}
-main .setMain .setText .setTextBotm .stbS a .stbSP {
-  margin-right: 10px;
-  position: relative;
-  right: 0;
-  top: 7px;
-}
-main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #000;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  color: #0C1244;
-  background-color: #F5F0DD;
-}
-main .setMain .setText .setTextBotm .setBook:hover {
-  cursor: pointer;
-  color: #F5F0DD;
-  border: 1.5px solid #F5F0DD;
-  background-color: #0C1244;
-}
-main .setMain:last-child {
   margin-bottom: 100px;
 }
 

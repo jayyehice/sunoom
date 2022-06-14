@@ -8,9 +8,19 @@
   line-height: 1.6;
   letter-spacing: 3px;
 }
+@media (max-width: 579px) {
+  .member main {
+    line-height: 24rem;
+  }
+}
 .member main .wrapper {
   width: 1080px;
   margin: 0 auto;
+}
+@media (max-width: 579px) {
+  .member main .wrapper {
+    width: 479px;
+  }
 }
 .member main .wrapper a {
   display: inline-block;
@@ -23,6 +33,11 @@
 .member main h3 {
   margin-top: 62px;
   text-align: center;
+}
+@media (max-width: 579px) {
+  .member main h3 {
+    font-size: 28rem;
+  }
 }
 .member main .signOut {
   background-color: #F5F0DD;
@@ -49,6 +64,11 @@
   display: flex;
   border-radius: 0px 0px 46px 46px;
 }
+@media (max-width: 579px) {
+  .member main .memberPage {
+    width: 479px;
+  }
+}
 .member main .memberPage li {
   font-size: 24rem;
   width: 355px;
@@ -59,6 +79,13 @@
   line-height: 100px;
   justify-items: center;
   color: #0C1244;
+}
+@media (max-width: 579px) {
+  .member main .memberPage li {
+    width: 160px;
+    height: 54px;
+    font-size: 20rem;
+  }
 }
 .member main .memberPage li a {
   display: block;
@@ -86,9 +113,25 @@
   padding-top: 100px;
   margin-bottom: 100px;
 }
+@media (max-width: 579px) {
+  .member main .basicData {
+    width: 476px;
+  }
+}
+@media (max-width: 579px) {
+  .member main .basicData .memberPic {
+    width: 150px;
+  }
+}
 .member main .basicData label {
   font-size: 24rem;
   margin-right: 27px;
+}
+@media (max-width: 579px) {
+  .member main .basicData label {
+    font-size: 25rem;
+    margin-right: 10px;
+  }
 }
 .member main .basicData input {
   margin-bottom: 23px;
@@ -99,22 +142,33 @@
   padding-left: 10px;
   font-size: 24rem;
 }
+@media (max-width: 579px) {
+  .member main .basicData input {
+    width: 330px;
+  }
+}
 .member main .basicData input[type=file] {
   position: fixed;
   right: 100%;
   bottom: 100%;
 }
 .member main .basicData .custom-file-upload {
-  border: 1px solid #ccc;
   display: inline-block;
   cursor: pointer;
   margin-right: 0;
   position: relative;
   top: -7px;
-  width: 290px;
+  width: 292px;
   background-color: #0C1244;
   color: #F5F0DD;
   margin-bottom: 50px;
+}
+@media (max-width: 579px) {
+  .member main .basicData .custom-file-upload {
+    width: 150px;
+    margin-bottom: 20px;
+    font-size: 20rem;
+  }
 }
 .member main .basicData .memberFile {
   border: 0;
@@ -154,6 +208,11 @@
   border-bottom: 1px solid #0C1244;
   padding-top: 100px;
   margin-bottom: 100px;
+}
+@media (max-width: 579px) {
+  .member main .changePwd {
+    width: 476px;
+  }
 }
 .member main .changePwd .pwdForm label {
   font-size: 24rem;
@@ -205,21 +264,46 @@
   padding-top: 100px;
   margin-bottom: 100px;
 }
+@media (max-width: 579px) {
+  .member main .orderCheck {
+    width: 476px;
+  }
+}
 .member main .orderCheck table {
   border: 1px solid #0C1244;
   width: 960px;
   margin: 0 auto;
   font-size: 20rem;
 }
+@media (max-width: 579px) {
+  .member main .orderCheck table {
+    width: 476px;
+  }
+}
 .member main .orderCheck table thead tr th {
   border-bottom: 1px solid #0C1244;
   line-height: 50px;
+}
+@media (max-width: 579px) {
+  .member main .orderCheck table thead tr th {
+    line-height: 48px;
+  }
+}
+@media (max-width: 579px) {
+  .member main .orderCheck table thead tr .none {
+    display: none;
+  }
 }
 .member main .orderCheck table tbody tr {
   text-align: center;
 }
 .member main .orderCheck table tbody tr td {
   line-height: 50px;
+}
+@media (max-width: 579px) {
+  .member main .orderCheck table tbody tr td {
+    line-height: 48px;
+  }
 }
 .member main .orderCheck table tbody tr td input {
   width: 80px;

@@ -25,6 +25,6 @@ $(document).ready(function(){
     });
 
     $("#cancel").click(function(){
-        alert("確定取消？")
+        confirm("您確定要取消訂單嗎？")
     })
 });
