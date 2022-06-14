@@ -56,6 +56,10 @@ footer{
 
                 padding-top: 50px;
 
+                .moon_icon{
+                    display: none;
+                }
+
                 &>p{
                     line-height: 40px;
                     text-align: center;
@@ -121,6 +125,7 @@ footer{
                                 // border: $show_border;
                                 margin-right: 10px;
                                 // color: $moon_color;
+                                
                             }
 
                         }
@@ -155,6 +160,7 @@ footer{
                         svg{
                             width: 50%;
                             height: 95px;
+                            margin: 0 auto;
                         }
 
 
@@ -256,7 +262,11 @@ footer{
 
 }
 
-/*moon 底下有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")*/
+/*
+moon 底下
+有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")
+以及天氣icon
+*/
 .moon{
     @import 'base/moonColorSwitch';
     footer{
@@ -314,6 +324,14 @@ footer{
                     box-sizing: border-box;
     
                     padding-top: 50px;
+
+                    .sun_icon{
+                        display: none;
+                    }
+
+                    .moon_icon{
+                        display: block;
+                    }
     
                     &>p{
                         line-height: 40px;
@@ -414,6 +432,12 @@ footer{
                             svg{
                                 width: 50%;
                                 height: 95px;
+                                margin: 0 auto;
+                            }
+
+                            &>div{
+                                // width: 100%;
+                                
                             }
     
     
@@ -517,6 +541,10 @@ footer{
 }
 
 
+/*
+moon 底下
+有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")
+*/
 /* RWD 576px以下字型大小 */
 @media screen and (max-width: 575.98px){
 
@@ -544,7 +572,7 @@ footer{
                 position: static;
                 width: 100%;
                 transform:translateX(0%);
-                background-image: url("../img/footer/footer_bg_01_3.jpg");
+                background-image: url("../img/footer/sun/footer_bg_01.jpg");
                 background-size: cover;
 
                 #content{
@@ -559,6 +587,50 @@ footer{
                 }
             }
 
+        }
+    }
+
+    .moon{
+        footer{
+            position: static;
+            section{
+    
+                ul{
+                    position: static;
+    
+                    &>li{
+                        height: auto;
+                    }
+                    &>li:first-child{
+                        display: none;
+                    }
+    
+                    &>li:last-child{
+                        width: 100%;
+                    }
+                    
+                }
+    
+                .wrapper{
+                    position: static;
+                    width: 100%;
+                    transform:translateX(0%);
+                    background-image: url("../img/footer/moon/footer_bg_01.jpg");
+                    background-size: cover;
+    
+                    #content{
+                        padding-left: 0;
+                        width: auto;
+                        width: 80%;
+                        margin: 0 auto;
+    
+                        .info{
+                            width: 100%;
+                        }
+                    }
+                }
+    
+            }
         }
     }
 }

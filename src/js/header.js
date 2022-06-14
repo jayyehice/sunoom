@@ -3,7 +3,8 @@
 $(function(){
   
     // 按鈕狀態的切換
-    $("button.hamburger_icon").click(function(){
+    $("button.hamburger_icon").click(function(e){
+      e.preventDefault();
       $(this).toggleClass("-on");
       // 按鈕1消失
       $(this).hide();
