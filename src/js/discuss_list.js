@@ -327,14 +327,33 @@ $('.article1').click(function(e){
     console.log($(this).children('.img_1').children('img').attr("src"))
 });
 
-// 討論區文章圖片更換(關閉)
-// $('.article1').click(function(e){
-//     console.log('article1')
-//     e.preventDefault();
-//     $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-//     $('.pop-up').css('display','none')
-//     console.log($(this).children('.img_1').children('img').attr("src"))
-// });
+$('.img1').click(function(e){
+    console.log('img1')
+    e.preventDefault();
+    $('.pop-up').css('display','block')
+    //console.log($(this).children('img').attr("src"))
+    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+    
+});
+
+$('.img2').click(function(e){
+    console.log('img2')
+    e.preventDefault();
+    $('.pop-up').css('display','block')
+    //console.log($(this).children('img').attr("src"))
+    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+    
+});
+
+$('.img3').click(function(e){
+    console.log('img3')
+    e.preventDefault();
+    $('.pop-up').css('display','block')
+    //console.log($(this).children('img').attr("src"))
+    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+    
+});
+
 
 // 關閉
 $('.png1').click(function(e){
