@@ -749,8 +749,8 @@ main{
         $h6 : 12px;
         $p : 16px;
     
-    $sun : #F5F0DD;
-    $moon :#0C1244;
+        $sun : #F5F0DD;
+        $moon :#0C1244;
         background-image: url('../img/sea/seapage2.png');
         background-size: cover;
         background-repeat: no-repeat;
@@ -915,7 +915,8 @@ main{
     
         // 海遊活動區塊
         .activity{
-            width: 100%;
+            // width: 100%;
+            width: calc(100% - 40px);
             margin: 0 auto;
             position: relative;
             // 麵包屑
@@ -1316,7 +1317,8 @@ main{
     
         // 生態活動區塊
         .echotitle{
-            width: 100%;
+            // width: 100%;
+            width: calc(100% - 40px);
             margin: 0 auto;
     
             .wrapper1{
@@ -1442,7 +1444,6 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                outline: 1px solid yellow;
                 // 左上角框
                 &::before{
                     display: block;
@@ -1521,8 +1522,9 @@ main{
             
         // 照片區
         .photo{
-            width: 1180px;
+            width: 100%;
             margin: 0 auto;
+            overflow: hidden;
             .wrapper1{
                 display: flex;
                 margin-bottom: 50px;

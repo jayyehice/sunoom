@@ -90,9 +90,23 @@
         }
 
         .breadcrumbs{
-            height: 140px;
-            box-sizing: border-box;
-            border: $show_border;
+            .wrapper{
+                width: 1070px;
+                margin: 0 auto;
+                // border: $show_border;
+                ul{
+    
+                    height: 140px;
+                    box-sizing: border-box;
+                    // border: $show_border;
+                    display: flex;
+                    // align-items: flex-start;
+                    li{
+                        margin-right: 10px;
+                        margin-top: 15px;
+                    }
+                }
+            }
         }
     
         .slogan_banner{

@@ -779,7 +779,7 @@ main .photo .wrapper2 .ig {
     display: none;
   }
   main .activity {
-    width: 100%;
+    width: calc(100% - 40px);
     margin: 0 auto;
     position: relative;
   }
@@ -1143,7 +1143,7 @@ main .photo .wrapper2 .ig {
     line-height: 50px;
   }
   main .echotitle {
-    width: 100%;
+    width: calc(100% - 40px);
     margin: 0 auto;
   }
   main .echotitle .wrapper1 {
@@ -1263,7 +1263,6 @@ main .photo .wrapper2 .ig {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid yellow;
   }
   main .echotitle .wrapper3::before {
     display: block;
@@ -1336,8 +1335,9 @@ main .photo .wrapper2 .ig {
     letter-spacing: 3px;
   }
   main .photo {
-    width: 1180px;
+    width: 100%;
     margin: 0 auto;
+    overflow: hidden;
   }
   main .photo .wrapper1 {
     display: flex;
