@@ -12,11 +12,19 @@ $moon :#0C1244;
 
 .food{
     background-color: $sun;
+    // banner區塊
+    .banner{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background-image: url('../img/food/banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+   }
     main{
-        border-left: 5px #0C1244 solid ;
-        border-right: 5px #0C1244 solid ;
         width: 1280px;
         margin: 0 auto;
+
         .wrapper_top{
     
             // 麵包屑
@@ -427,13 +435,20 @@ $moon :#0C1244;
 
     .food{
         background-color: $sun ;
+        // banner區塊
+        .banner{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('../img/food/banner.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
         main{
-            border-left: 1px red solid ;
-            border-right: 1px red solid ;
-            width: 536px;
+            width: calc(100% - 40px);
             margin: 0 auto;
             .wrapper_top{
-                // width: 536px;
         
                 // 麵包屑
                 .bread{
@@ -477,7 +492,7 @@ $moon :#0C1244;
                             -webkit-text-stroke: 1px #0C1244;
                             font-size: $h3;
                             text-align: center;
-                            margin-top: px;
+                            margin-top: 0px;
                             margin-bottom: 7px;
                             letter-spacing: 3px;
                         }
@@ -498,70 +513,82 @@ $moon :#0C1244;
                             margin-bottom: 20px;
                         }
                     }
-                    .food1_left{
-                        .food1_img{
-                            width: 350px;
-                            margin-left: 20px;
-                        }
-                    }
-                    .food1_right{
-                        width: calc(100% - 370px);
-                        margin-top: 10px;
-                        .food_right_top{
-                            display: none;
-                            
-                            h3{
-                                color: $sun;
-                                -webkit-text-stroke: 1px #0C1244;
-                                font-size: $h3;
-                                text-align: center;
-                                margin-top: 28px;
-                                margin-bottom: 7px;
-                                letter-spacing: 3px;
-                            }
-                            .slogan1{
-                                color: $moon;
-                                font-size: $p;
-                                text-align: center;
-                                margin-bottom: 7px;
-                                letter-spacing: 3px;
-                            }
-                            .underline{
-                                width: 40%;
-                                margin: 0 auto;
-                                height: 1px;
-                                border-top:1px solid #0C1244;
-                                display: block;
-                                text-align: center;
-                                margin-bottom: 40px;
+                    .food1_rwd{
+                        display: flex;
+                        .food1_left{
+                            float: initial;
+                            width: 70%;
+                            background-image: url("../img/food/square1-1.jpg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            .food1_img{
+                                display: none;
+                                width: 100%;
+                                height: 100%;
+                                margin-left: 0px;
                             }
                         }
-                        .meals{
-                            margin-bottom: 27px;
-                            text-align: center;
-                            color: $moon;
-                            font-size: $p;
-                        }
-        
-                        .forklist{
-                            width: 85px;
-                            padding-left: 10px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            margin: 0 auto;
-                            .forkset{
-                                text-align: center;
-                                .fa-solid{
-                                    color: $moon;
-                                    display: inline-block;
+                        .food1_right{
+                            float: initial;
+                            width: 30%;
+                            margin-top: 10px;
+                            .food_right_top{
+                                display: none;
+                                
+                                h3{
+                                    color: $sun;
+                                    -webkit-text-stroke: 1px #0C1244;
+                                    font-size: $h3;
+                                    text-align: center;
+                                    margin-top: 28px;
+                                    margin-bottom: 7px;
+                                    letter-spacing: 3px;
                                 }
-                                .ingredients{
-                                    margin-bottom: 20px;
-                                    margin-left: 3px;
+                                .slogan1{
                                     color: $moon;
                                     font-size: $p;
-                                    display: inline-block;
+                                    text-align: center;
+                                    margin-bottom: 7px;
+                                    letter-spacing: 3px;
+                                }
+                                .underline{
+                                    width: 40%;
+                                    margin: 0 auto;
+                                    height: 1px;
+                                    border-top:1px solid #0C1244;
+                                    display: block;
+                                    text-align: center;
+                                    margin-bottom: 40px;
+                                }
+                            }
+                            .meals{
+                                margin-bottom: 27px;
+                                text-align: center;
+                                color: $moon;
+                                font-size: $p;
+                            }
+            
+                            .forklist{
+                                width: 85px;
+                                padding-left: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 0 auto;
+                                .forkset{
+                                    text-align: center;
+                                    .fa-solid{
+                                        color: $moon;
+                                        display: inline-block;
+                                    }
+                                    .ingredients{
+                                        margin-bottom: 20px;
+                                        margin-left: 3px;
+                                        color: $moon;
+                                        font-size: $p;
+                                        display: inline-block;
+                                    }
                                 }
                             }
                         }
@@ -607,80 +634,92 @@ $moon :#0C1244;
                             margin-bottom: 20px;
                         }
                     }
-                
-                    .food2_right{
-                        width: auto;
-                        float: right;
-                        .food2_img{
-                            width: 350px;
-                            margin-right: 20px;
-                        }
-                    }
-                    .food2_left{
-                        width: calc(100% - 370px);
-                        margin-top: 10px;
-                        .food2_left_top{
-                            display: none;
-                        }
-                        h3{
-                            color: $sun;
-                            font-size: $h3;
-                            text-align: center;
-                            margin-top: 28px;
-                            margin-bottom: 7px;
-                            letter-spacing: 3px;
-                            -webkit-text-stroke: 1px #0C1244;
-                        }
-                        .slogan1{
-                            color: $moon;
-                            font-size: $p;
-                            text-align: center;
-                            margin-bottom: 7px;
-                            letter-spacing: 3px;
-                        }
-                        .underline{
-                            width: 40%;
-                            margin: 0 auto;
-                            height: 1px;
-                            border-top:1px solid #0C1244;
-                            display: block;
-                            text-align: center;
-                            margin-bottom: 40px;
-                        }
-        
-                        
-                        .meals{
-                            margin-bottom: 27px;
-                            text-align: center;
-                            color: $moon;
-                            font-size: $p;
-                        }
-        
-                        .forklist{
-                            width: 85px;
-                            padding-left: 10px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            margin: 0 auto;
-                            .forkset{
-                                text-align: center;
-                                .fa-solid{
-                                    color: $moon;
-                                    display: inline-block;
-                                }
-                                .ingredients{
-                                    margin-bottom: 20px;
-                                    margin-left: 3px;
-                                    color: $moon;
-                                    font-size: $p;
-                                    display: inline-block;
-                                }
+                    .food2_rwd{
+                        display: flex;
+                        .food2_right{
+                            float: initial;
+                            width: 70%;
+                            background-image: url("../img/food/square2-1.jpg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            .food2_img{
+                                display: none;
+                                width: 100%;
+                                height: 100%;
+                                margin-left: 0px;
+                                margin-right: 0px;
                             }
                         }
-                        
-                        
+                        .food2_left{
+                            float: initial;
+                            width: 30%;
+                            margin-top: 10px;
+                            .food2_left_top{
+                                display: none;
+                            }
+                            h3{
+                                color: $sun;
+                                font-size: $h3;
+                                text-align: center;
+                                margin-top: 28px;
+                                margin-bottom: 7px;
+                                letter-spacing: 3px;
+                                -webkit-text-stroke: 1px #0C1244;
+                            }
+                            .slogan1{
+                                color: $moon;
+                                font-size: $p;
+                                text-align: center;
+                                margin-bottom: 7px;
+                                letter-spacing: 3px;
+                            }
+                            .underline{
+                                width: 40%;
+                                margin: 0 auto;
+                                height: 1px;
+                                border-top:1px solid #0C1244;
+                                display: block;
+                                text-align: center;
+                                margin-bottom: 40px;
+                            }
+            
+                            
+                            .meals{
+                                margin-bottom: 27px;
+                                text-align: center;
+                                color: $moon;
+                                font-size: $p;
+                            }
+            
+                            .forklist{
+                                width: 85px;
+                                padding-left: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 0 auto;
+                                .forkset{
+                                    text-align: center;
+                                    .fa-solid{
+                                        color: $moon;
+                                        display: inline-block;
+                                    }
+                                    .ingredients{
+                                        margin-bottom: 20px;
+                                        margin-left: 3px;
+                                        color: $moon;
+                                        font-size: $p;
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                            
+                            
+                        }
+
                     }
+                
                 }
             }
         
@@ -708,9 +747,9 @@ $moon :#0C1244;
                     display:initial;
                     .restaurant1_left{
                         .restaurant1_pic1{
-                            margin: 0 30px;
+                            margin: 0 0;
                             margin-top: 30px;
-                            width: 476px;
+                            width: 100%;
                         }
                     }
                     .restaurant1_right{
@@ -727,7 +766,6 @@ $moon :#0C1244;
                         .restaurant1_right_top{
                             padding-top: 0px;
                             padding-left: 0px;
-                            padding: 0 30px;
                             box-sizing: border-box;
                             p{
                                 color: $moon;
@@ -743,28 +781,32 @@ $moon :#0C1244;
                         .restaurant1_right_bottom{
                             padding-top: 0px;
                             padding-left: 0px;
-                            padding: 0 30px;
                             margin-top: 20px;
                             box-sizing: border-box;
                             display: flex;
                             justify-content: space-between;
+                            .commentsArea{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                            }
                             p{
                                 color: $moon;
                                 font-size: $p;
-                                letter-spacing: 3px;
+                                letter-spacing: 0px;
                                 margin-bottom: 0px;
                             }
                             a{
                                 color: $moon;
                                 text-decoration: none;
-                                letter-spacing: 3px;
+                                letter-spacing: 0px;
                                 display: inline-block;
-                                margin-top: 25px;
+                                margin-top: 0px;
                             }
                             .booknow{
                                 float: initial;
                                 display: block;
-                                width: 250px;
+                                width: 50%;
                                 height: 60px;
                                 text-align: center;
                                 line-height: 60px;
