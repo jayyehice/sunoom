@@ -1,5 +1,11 @@
 @import 'base/var';
 
+@mixin mobile {
+    @media(max-width:579px){
+        @content
+    }
+}
+
 .forgotPwd{
     background-color: $sun_color;
     color: $moon_color;
@@ -16,6 +22,11 @@
             // border: 1px solid black;
             width: 1080px;
             margin: 0 auto;
+
+            @include mobile{
+                width: 479px;
+                
+            }
         
             a{
                 display: inline-block;
@@ -33,14 +44,40 @@
             margin-top: 62px;
             text-align: center;
             margin-bottom: 48px;
+
+            @include mobile{
+                font-size: 28rem;
+                margin: 50px 0 20px 0;
+                
+            }
         }
         
         .forgotMain{
             width: 625px;
             margin: 0 auto;
+
+            @include mobile{
+                width: 459px;
+                margin: 0 auto;
+                
+            }
         
             h4{
                 text-align: center;
+
+                @include mobile{
+                    display: none;
+                    
+                }
+            }
+
+            .phoneText{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    font-size: 20rem;
+                }
             }
         
             .forgotForm{
@@ -51,6 +88,10 @@
                 label{
                     font-size: 24rem;
                     
+                    @include mobile{
+                        position: relative;
+                        left: -138px;
+                    }
                 }
         
                 .forgotFormInput{
@@ -61,6 +102,14 @@
                     margin: 15px 0;
                     padding-left: 10px;
                     font-size: 24rem;
+                    box-sizing: border-box;
+
+                    @include mobile{
+                        width: 380px;
+                        height: 60px;
+                        margin: 10px 0 50px 0;
+                        
+                    }
                 }
         
                 .forgotFormBtn{
@@ -73,6 +122,19 @@
                     border: 1px solid $moon_color;
                     margin-bottom: 10px;
                     font-size: 16rem;
+
+                    @include mobile{
+                        margin-bottom: 50px;
+                        width: 300px;
+                        height: 60px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                        font-size: 25rem;
+
+                    }
         
                     &:hover{
                         cursor: pointer;
@@ -86,16 +148,30 @@
                     font-size: 20rem;
                     border: 0;
                     background-color: $sun_color;
+                    color: $moon_color;
                     cursor: pointer;
+
+                    @include mobile{
+                        text-decoration: underline;
+                        margin-bottom: 50px;
+                    }
                 }
         
                 .reminder{
                     margin-top: 150px;
+
+                    @include mobile{
+                        display: none;
+                    }
                 }
         
                 .reminderText{
                     margin-top: 20px;
                     margin-bottom: 100px;
+
+                    @include mobile{
+                        display: none;
+                    }
                 }
             }
         }
@@ -120,6 +196,11 @@
             // border: 1px solid black;
             width: 1080px;
             margin: 0 auto;
+
+            @include mobile{
+                width: 479px;
+                
+            }
         
             a{
                 display: inline-block;
@@ -137,14 +218,40 @@
             margin-top: 62px;
             text-align: center;
             margin-bottom: 48px;
+
+            @include mobile{
+                font-size: 28rem;
+                margin: 50px 0 20px 0;
+                
+            }
         }
         
         .forgotMain{
             width: 625px;
             margin: 0 auto;
+
+            @include mobile{
+                width: 459px;
+                margin: 0 auto;
+                
+            }
         
             h4{
                 text-align: center;
+
+                @include mobile{
+                    display: none;
+                    
+                }
+            }
+
+            .phoneText{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    font-size: 20rem;
+                }
             }
         
             .forgotForm{
@@ -155,6 +262,10 @@
                 label{
                     font-size: 24rem;
                     
+                    @include mobile{
+                        position: relative;
+                        left: -138px;
+                    }
                 }
         
                 .forgotFormInput{
@@ -165,6 +276,14 @@
                     margin: 15px 0;
                     padding-left: 10px;
                     font-size: 24rem;
+                    box-sizing: border-box;
+
+                    @include mobile{
+                        width: 380px;
+                        height: 60px;
+                        margin: 10px 0 50px 0;
+                        
+                    }
                 }
         
                 .forgotFormBtn{
@@ -177,6 +296,19 @@
                     border: 1px solid $moon_color;
                     margin-bottom: 10px;
                     font-size: 16rem;
+
+                    @include mobile{
+                        margin-bottom: 50px;
+                        width: 300px;
+                        height: 60px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                        font-size: 25rem;
+
+                    }
         
                     &:hover{
                         cursor: pointer;
@@ -190,129 +322,34 @@
                     font-size: 20rem;
                     border: 0;
                     background-color: $sun_color;
+                    color: $moon_color;
                     cursor: pointer;
+
+                    @include mobile{
+                        text-decoration: underline;
+                        margin-bottom: 50px;
+                    }
                 }
         
                 .reminder{
                     margin-top: 150px;
+
+                    @include mobile{
+                        display: none;
+                    }
                 }
         
                 .reminderText{
                     margin-top: 20px;
                     margin-bottom: 100px;
+
+                    @include mobile{
+                        display: none;
+                    }
                 }
             }
         }
         
     }
-
 }
-
-// body{
-//     background-color: #F5F0DD;
-//     // border: 1px solid black;
-//     color: #0C1244;
-//     line-height: 1.6;
-//     letter-spacing: 3px;
-// }
-
-
-// main{
-//     // border: 1px solid firebrick;
-//     // width: 1280px;
-//     margin: 0 auto;
-//     box-sizing: border-box;
-//     line-height: 1.6;
-//     letter-spacing: 3px;
-
-//     .wrapper{
-//         // border: 1px solid black;
-//         width: 1080px;
-//         margin: 0 auto;
-    
-//         a{
-//             display: inline-block;
-//             text-decoration: none;
-//             color: $moon_color;
-//         }
-//     }
-    
-//     p{
-//         margin-top: 17px;
-//         // margin-left: 100px;
-//     }
-    
-//     h3{
-//         margin-top: 62px;
-//         text-align: center;
-//         margin-bottom: 48px;
-//     }
-    
-//     .forgotMain{
-//         width: 625px;
-//         margin: 0 auto;
-    
-//         h4{
-//             text-align: center;
-//         }
-    
-//         .forgotForm{
-//             // border: 1px solid red;
-//             text-align: center;
-//             margin-top: 50px;
-    
-//             label{
-//                 font-size: 24rem;
-                
-//             }
-    
-//             .forgotFormInput{
-//                 width: 400px;
-//                 height: 50px;
-//                 background-color: $sun_color;
-//                 border: 1px solid $moon_color;
-//                 margin: 15px 0;
-//                 padding-left: 10px;
-//                 font-size: 24rem;
-//             }
-    
-//             .forgotFormBtn{
-//                 background-color: $sun_color;
-//                 display: block;
-//                 width: 140px;
-//                 height: 50px;
-//                 text-align: center;
-//                 margin: 0 auto;
-//                 border: 1px solid $moon_color;
-//                 margin-bottom: 10px;
-//                 font-size: 16rem;
-    
-//                 &:hover{
-//                     cursor: pointer;
-//                     color: $sun_color;
-//                     border: 1.5px solid $sun_color;
-//                     background-color: $moon_color;
-//                 }
-//             }
-    
-//             .resend{
-//                 font-size: 20rem;
-//                 border: 0;
-//                 background-color: $sun_color;
-//                 cursor: pointer;
-//             }
-    
-//             .reminder{
-//                 margin-top: 150px;
-//             }
-    
-//             .reminderText{
-//                 margin-top: 20px;
-//                 margin-bottom: 100px;
-//             }
-//         }
-//     }
-    
-// }
-
 

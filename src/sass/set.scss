@@ -1,12 +1,10 @@
 @import 'base/var';
 
-
 @mixin mobile {
     @media(max-width:579px){
         @content
     }
 }
-
 
 .set{
     background-color: $sun_color;
@@ -287,11 +285,12 @@
         
                         a{
 
-                            .stbSP{
-                                margin-right: 10px;
-                                position: relative;
-                                right: 0;
-                                top: 7px;
+                            i{
+                                // margin-right: 10px;
+                                // position: relative;
+                                // right: 0;
+                                // top: 7px;
+                                color: $moon_color;
                             }
                         }
 
@@ -303,7 +302,7 @@
                     }
         
                     .setBook{
-                        border: $show_border;
+                        border: 1px solid $moon_color;
                         width: 140px;
                         height: 50px;
                         text-align: center;
@@ -350,12 +349,23 @@
         box-sizing: border-box;
         line-height: 1.6;
         letter-spacing: 3px;
+
+        @include mobile{
+            line-height: 24rem;
+            
+        }
+
     
         .wrapper{
             // border: 1px solid black;
             width: 1080px;
             margin: 0 auto;
             // display: flex;
+
+            @include mobile{
+                width: 479px;
+                
+            }
         
             a{
                 display: inline-block;
@@ -375,6 +385,12 @@
             margin-top: 62px;
             // margin-left: 100px;
             margin-bottom: 55px;
+
+            @include mobile{
+                font-size: 28rem;
+                
+            }
+
             
         }
         
@@ -383,6 +399,12 @@
             display: flex;
             justify-content: center;
             margin-bottom: 100px;
+
+            @include mobile{
+                flex-wrap: wrap;
+                
+            }
+
         
             li:first-child{
                 margin-left: 0;
@@ -392,7 +414,27 @@
                 // border: 1px solid rebeccapurple;
                 text-align: center;
                 margin-left: 50px;
+
+                @include mobile{
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    
+                    &:nth-child(2){
+                        border: 1px solid rebeccapurple;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                    }
+
+                    &:nth-child(5){
+                        border: 1px solid rebeccapurple;
+                        margin-right: 20px;
+                        margin-left: 20px;
+
+                    }
+                }
+
                 
+        
                 a{
         
                     img{
@@ -410,6 +452,7 @@
             display: block;
             text-align: center;
             font-size: 24rem;
+            
         
             .setSpeaker{
                 display: inline-block;
@@ -417,6 +460,7 @@
                 left: 0;
                 top: 10px;
             }
+        
         
         }
         
@@ -429,14 +473,35 @@
             margin-bottom: 50px;
         
             justify-content: space-between;
+
+            @include mobile{
+                width: 476px;
+                height: 800px;
+                display: block;
+                text-align: center;
+                
+                position: relative;
+            }
+
         
             .setPic{
                 // border: 1px solid green;
                 padding: 65px;
+
+                @include mobile{
+                    padding: 10px;
+                    
+                }
         
                 > img{
                     // border: 1px solid #000;
                     margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 0
+                        
+                    }
+
                 }
         
                 .setPicS{
@@ -459,16 +524,43 @@
                 padding-left: 0;
         
                 position: relative;
+
+                @include mobile{
+                    padding: 0;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    text-align: left;
+                    
+                }
+    
         
                 .setTextPic{
                     position: absolute;
                     right: 64px;
                     top: 130px;
+
+                    @include mobile{
+                        width: 80px;
+                        right: 64px;
+                        top: 30px;
+    
+                        
+                    }
+        
+    
                 }
         
                 h4{
                     text-align: left;
                     margin-bottom: 20px;
+
+                    @include mobile{
+                        position: absolute;
+                        right: 180px;
+                        top: -280px;
+                        font-weight: 800;
+                    }
+
                 }
         
                 h5{
@@ -479,12 +571,23 @@
                 .setTextTitle{
                     margin: 0;
                     margin-bottom: 25px;
-        
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
                 }
         
                 .setTextWord{
                     margin: 0;
                     margin-bottom: 30px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
                 }
         
                 .setTextWord2{
@@ -496,36 +599,52 @@
                     // border: 1px solid royalblue;
                     display: flex;
                     justify-content: space-between;
+
+                    @include mobile{
+                         justify-content: start;   
+                            
+                    }
+
         
                     .stbS{
                         // border: 1px solid darkgreen;
                         
-        
                         p{
                             margin: 0;
         
                         }
         
                         a{
-        
-                            .stbSP{
-                                margin-right: 10px;
-                                position: relative;
-                                right: 0;
-                                top: 7px;
+
+                            i{
+                                // margin-right: 10px;
+                                // position: relative;
+                                // right: 0;
+                                // top: 7px;
+                                color: $moon_color;
                             }
                         }
+
+                        @include mobile{
+                            margin-right: 100px;
+                        }
+
         
                     }
         
                     .setBook{
-                        border: $show_border;
+                        border: 1px solid $moon_color;
                         width: 140px;
                         height: 50px;
                         text-align: center;
                         line-height: 50px;
                         color: $moon_color;
-                        background-color: $sun_color;
+                        background-color: $sun_color; 
+                        
+                        @include mobile{
+                            margin-right: 10px;
+                        }
+
         
                         &:hover{
                             cursor: pointer;
@@ -545,5 +664,5 @@
         }
         
     }
-
+    
 }

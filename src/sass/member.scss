@@ -55,7 +55,7 @@
 
             @include mobile{
                 font-size: 28rem;
-                
+                margin-top: 50px;
             }
         }
         
@@ -70,6 +70,11 @@
             float: right;
             margin-bottom: 62px;
             color: $moon_color;
+
+            @include mobile{
+                margin-bottom: 50px;
+            }
+            
         
             &:hover{
                 cursor: pointer;
@@ -118,6 +123,10 @@
                 a{
                     display: block;
                     text-align: center;
+
+                    @include mobile{
+                        line-height: 54px;                    
+                    }
             
                 }
         
@@ -142,7 +151,7 @@
             // clear: both;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             text-align: center;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
@@ -153,6 +162,7 @@
 
             @include mobile{
                 width: 476px;
+                padding-top: 20px;
                 
             }
 
@@ -169,6 +179,23 @@
             }
             
             .memberForm{
+
+                @include mobile{
+                    // text-align: center;
+                }
+
+                > label{
+
+                    @include mobile{
+                        font-size: 25rem;
+                        margin-right: 40px;
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -140px;
+                        margin-bottom: 10px;
+                    }    
+
+                }
                 
             }
             
@@ -178,10 +205,12 @@
 
                 @include mobile{
                     font-size: 25rem;
-                    margin-right: 10px;
+                    margin-right: 40px;
                 }
 
             }
+
+
             
             input{
                 margin-bottom: 23px;
@@ -191,10 +220,11 @@
                 border: 1px solid $moon_color;
                 padding-left: 10px;
                 font-size: 24rem;
+                box-sizing: border-box;
 
                 @include mobile{
-                    width: 330px;
-                    
+                    width: 380px;
+                    height: 60px;
                 }
     
                 
@@ -235,8 +265,13 @@
             }
         
             .sure{
-                margin-top: 51px;
+                margin-top: 50px;
                 margin-bottom: 10px;
+
+                @include mobile{
+                    margin: 20px 0 20px 0;
+
+                }
             }
         
             .btn{
@@ -248,12 +283,33 @@
                 text-align: center;
                 border: 1px solid $moon_color;
                 color: $moon_color;
+
+                @include mobile{
+                    // margin-bottom: 50px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    color: $sun_color;
+                    border: 1.5px solid $sun_color;
+                    background-color: $moon_color;
+                    font-size: 25rem;
+                }
             
                 &:hover{
                     cursor: pointer;
                     color: $sun_color;
                     border: 1.5px solid $sun_color;
                     background-color: $moon_color;
+                }
+            }
+
+            .no{
+                margin-bottom: 70px;
+
+                @include mobile{
+                    margin-bottom: 20px;
+
                 }
             }
         }
@@ -264,7 +320,7 @@
             text-align: center;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
             border-right: 1px solid $moon_color;
@@ -274,7 +330,7 @@
 
             @include mobile{
                 width: 476px;
-                
+                padding-top: 50px;
             }
 
         
@@ -284,11 +340,31 @@
                 label{
                     font-size: 24rem;
                     margin-right: 47px;
+
+                    &:first-child{
+                        // border: 1px solid red;
+                        margin-left: -26px;
+                    }
         
+                    @include mobile{
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -125px;
+
+                        &:first-child{
+                            // border: 1px solid red;
+                            left: -99px;
+                        }
+                    }
+                    
                 }
         
                 .pfSureText{
-                    margin-left: -24px;
+                    margin-left: -26px;
+
+                    @include mobile{
+                        margin-left: 27px;
+                    }
                 }
         
                 input{
@@ -299,6 +375,13 @@
                     border: 1px solid $moon_color;
                     padding-left: 10px;
                     font-size: 24rem;
+                    box-sizing: border-box;
+
+                    @include mobile{
+                        width: 380px;
+                        height: 60px;
+                        margin-bottom: 20px;
+                    }
                 }
         
                 .btn{
@@ -310,6 +393,20 @@
                     text-align: center;
                     border: 1px solid $moon_color;
                     color: $moon_color;
+
+                    @include mobile{
+                        // margin-bottom: 50px;
+                        width: 300px;
+                        height: 60px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                        font-size: 25rem;
+
+                    }
+
         
                     &:hover{
                         cursor: pointer;
@@ -322,14 +419,28 @@
                 .pfSure{
                     // margin-bottom: 0;
                     margin-bottom: 51px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
                 }
         
                 .pfYes{
                     margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .pfNo{
+                    margin-bottom: 70px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
                 }
             }
-        
-        
         
         }
         
@@ -338,7 +449,7 @@
             display: none;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
             border-right: 1px solid $moon_color;
@@ -348,7 +459,8 @@
 
             @include mobile{
                 width: 476px;
-                
+                padding-top: 50px;
+                margin-bottom: 50px;
             }
 
         
@@ -357,10 +469,16 @@
                 width: 960px;
                 margin: 0 auto;
                 font-size: 20rem;
+                margin-bottom: 100px;
 
                 @include mobile{
-                    width: 476px;
-                    
+                    // width: 476px;
+                    width: 455px;
+                    margin-bottom: 50px;
+
+                    .none{
+                        display: none;
+                    }
                 }
     
         
@@ -376,15 +494,10 @@
                             }
                         }
 
-                        @include mobile{
-                            .none{
-                                display: none;
-                            }
-
-                            
-                        }
-        
+                        
                     }
+
+                    
                 }
         
                 tbody{

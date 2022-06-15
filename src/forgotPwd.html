@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>忘記密碼</title>
+    <title>會員專區-忘記密碼</title>
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+@@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/forgotPwd.css">
 
 </head>
 <body class="forgotPwd">
-    
+    @@include('./layout/header.html')
+
     <main>
         <div class="wrapper">
             <p>
@@ -23,14 +25,14 @@
 
             <div class="forgotMain">
                 <h4>輸入信箱，我們將會寄送驗證電子郵件到您的信箱。</h4>
-    
+                <h4 class="phoneText">我們將會寄送新的密碼到您的信箱</h4>
                 <form class="forgotForm" action="">
                     <label for="">註冊信箱</label>
                     <br>
                     <input class="forgotFormInput" type="text">
                     <br>
                     <input class="forgotFormBtn" type="submit" value="確認">
-                    <br>
+                    <!-- <br> -->
                     <input class="resend" type="button" value="重新寄送">
                     
                     <h4 class="reminder">小提醒</h4>
@@ -40,5 +42,8 @@
         </div>
     </main>
 
+    @@include('./layout/footer.html')
+ 
+@@include('./layout/header_footer_script_link.html')    
 </body>
 </html>

@@ -197,11 +197,8 @@
 .set main .setMain .setText .setTextBotm .stbS p {
   margin: 0;
 }
-.set main .setMain .setText .setTextBotm .stbS a .stbSP {
-  margin-right: 10px;
-  position: relative;
-  right: 0;
-  top: 7px;
+.set main .setMain .setText .setTextBotm .stbS a i {
+  color: #0C1244;
 }
 @media (max-width: 579px) {
   .set main .setMain .setText .setTextBotm .stbS {
@@ -209,7 +206,7 @@
   }
 }
 .set main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #000;
+  border: 1px solid #0C1244;
   width: 140px;
   height: 50px;
   text-align: center;
@@ -242,9 +239,19 @@
   line-height: 1.6;
   letter-spacing: 3px;
 }
+@media (max-width: 579px) {
+  .set_moon main {
+    line-height: 24rem;
+  }
+}
 .set_moon main .wrapper {
   width: 1080px;
   margin: 0 auto;
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper {
+    width: 479px;
+  }
 }
 .set_moon main .wrapper a {
   display: inline-block;
@@ -258,10 +265,20 @@
   margin-top: 62px;
   margin-bottom: 55px;
 }
+@media (max-width: 579px) {
+  .set_moon main h3 {
+    font-size: 28rem;
+  }
+}
 .set_moon main .setTopNav {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav {
+    flex-wrap: wrap;
+  }
 }
 .set_moon main .setTopNav li:first-child {
   margin-left: 0;
@@ -269,6 +286,22 @@
 .set_moon main .setTopNav li {
   text-align: center;
   margin-left: 50px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .set_moon main .setTopNav li:nth-child(2) {
+    border: 1px solid rebeccapurple;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .set_moon main .setTopNav li:nth-child(5) {
+    border: 1px solid rebeccapurple;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 .set_moon main .wrapper .setLogin {
   display: block;
@@ -290,11 +323,30 @@
   margin-bottom: 50px;
   justify-content: space-between;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain {
+    width: 476px;
+    height: 800px;
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+}
 .set_moon main .setMain .setPic {
   padding: 65px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic {
+    padding: 10px;
+  }
+}
 .set_moon main .setMain .setPic > img {
   margin-bottom: 10px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic > img {
+    margin-bottom: 0;
+  }
 }
 .set_moon main .setMain .setPic .setPicS > img:nth-child(2) {
   margin: 0 7px;
@@ -307,14 +359,37 @@
   padding-left: 0;
   position: relative;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText {
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
 .set_moon main .setMain .setText .setTextPic {
   position: absolute;
   right: 64px;
   top: 130px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextPic {
+    width: 80px;
+    right: 64px;
+    top: 30px;
+  }
+}
 .set_moon main .setMain .setText h4 {
   text-align: left;
   margin-bottom: 20px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText h4 {
+    position: absolute;
+    right: 180px;
+    top: -280px;
+    font-weight: 800;
+  }
 }
 .set_moon main .setMain .setText h5 {
   margin-bottom: 20px;
@@ -323,9 +398,19 @@
   margin: 0;
   margin-bottom: 25px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextTitle {
+    margin-bottom: 20px;
+  }
+}
 .set_moon main .setMain .setText .setTextWord {
   margin: 0;
   margin-bottom: 30px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextWord {
+    margin-bottom: 20px;
+  }
 }
 .set_moon main .setMain .setText .setTextWord2 {
   margin: 0;
@@ -335,23 +420,35 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm {
+    justify-content: start;
+  }
+}
 .set_moon main .setMain .setText .setTextBotm .stbS p {
   margin: 0;
 }
-.set_moon main .setMain .setText .setTextBotm .stbS a .stbSP {
-  margin-right: 10px;
-  position: relative;
-  right: 0;
-  top: 7px;
+.set_moon main .setMain .setText .setTextBotm .stbS a i {
+  color: #F5F0DD;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .stbS {
+    margin-right: 100px;
+  }
 }
 .set_moon main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #000;
+  border: 1px solid #F5F0DD;
   width: 140px;
   height: 50px;
   text-align: center;
   line-height: 50px;
   color: #F5F0DD;
   background-color: #0C1244;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .setBook {
+    margin-right: 10px;
+  }
 }
 .set_moon main .setMain .setText .setTextBotm .setBook:hover {
   cursor: pointer;
