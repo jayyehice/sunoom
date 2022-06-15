@@ -4,9 +4,86 @@
 
     background-color: $sun_color;
     color: $moon_color;
+    letter-spacing: 3px;
+    line-height: 1.6;
 
     main{
     
+        #top_banner{
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/land_tour/sun/top_banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+            .mask{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .3);
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+
+            .progress-ring, .progress-bg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                // border: 1px solid #fff;
+            }
+    
+            .progress-ring_circle {
+                transition: 0.35s stroke-dashoffset;
+                
+                transform: rotate(-90deg);
+                transform-origin: 50% 50%;
+                
+            }
+
+            .progress-bg{
+                .progress-ring_circle {
+                    color: $sun_color;
+                }
+
+            }
+
+            .progress-ring{
+                .progress-ring_circle {
+                    color: $moon_color;
+                }
+
+            }
+            
+            ul{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                li{
+                    display: flex;
+                    align-items: center;
+                    color: $sun_color;
+                    position: absolute;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 16px;
+                        height: 16px;
+                        background-color: $sun_color;
+                        border-radius: 50%;
+
+                        margin-right: 20px;
+
+                    }
+                }
+
+                
+
+
+            }
+        }
+
         .breadcrumbs{
             height: 140px;
             box-sizing: border-box;
@@ -140,7 +217,7 @@
     
                             &>p{
                                 
-                                width: 395px;
+                                width: 430px;
                                 margin: $margin_center;
                                 margin-top: 20px;
                                 // border: $show_border;
@@ -148,7 +225,7 @@
                             }
     
                             .comment{
-                                width: 395px;
+                                width: 430px;
                                 margin: $margin_center;
                                 margin-top: 15px;
                                 display: flex;
