@@ -1,35 +1,52 @@
 
+
+@import 'base/var';
+
 @mixin mobile{
     @media(max-width:576px){
         @content
     }
 };
 
-
-@mixin circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 1px solid #0C1244;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    h4:last-Child{
-        margin-bottom: 20px;
+.FinishPay{
+    background-color: $sun_color;
+    color: $moon_color;
+    select{
+        background-color: $sun_color;
+        border: 1px solid $moon_color;
+        color: $moon_color;
     }
-    @include mobile{
-        width: 75px;
-        height: 75px;
-        h4{
-            font-size: 16px;
+    input{
+        border: 1px solid $moon_color;
+        color: $moon_color;
+    }
+    button{
+        color: $moon_color;
+    }
+    @mixin circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid $moon_color;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h4:last-Child{
+            margin-bottom: 20px;
+            @include mobile{
+                margin-bottom: 10px;
+            }
+        }
+        @include mobile{
+            width: 75px;
+            height: 75px;
+            h4{
+                font-size: 16px;
+            }
         }
     }
-}
-body{
-    background-color: #F5F0DD;
     section{
         h2{
             text-align: center;
@@ -47,17 +64,16 @@ body{
         align-items: center;
         margin:  0 auto;
         @include mobile{
-            width: 100%;
-            height: 110px;
+            width: 90%;
+            height: 75px;
+            justify-content: space-between;
         }
         img{
             width: 80px;
             height: 24px;
             margin: 0 40px;
             @include mobile{
-                width: 25px;
-                height: 15px;
-                margin: 0;
+                display: none;
             }
         }
         .chooseAdate{
@@ -71,8 +87,8 @@ body{
         }
         .orderComplete{
             @include circle;
-            background-color: #0C1244;
-            color:#F5F0DD
+            background-color: $moon_color;
+            color:$sun_color
         }
         //訂購流程結束
     }
@@ -99,7 +115,7 @@ body{
     .bigList{
         width: 1000px;
         height: auto;
-        border:2px solid #0C1244;
+        border:2px solid $moon_color;
         margin: 50px auto;
         @include mobile{
             width: 98%;
@@ -111,8 +127,8 @@ body{
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #0C1244;
-            color: #F5F0DD;
+            background-color: $moon_color;
+            color: $sun_color;
             font-size: 20px;
             @include mobile{
                 width: 98%;
@@ -151,15 +167,15 @@ body{
             height: auto;
             margin: 0 auto;
             align-content: center;
-            border: 1px solid #0C1244;
+            border: 1px solid $moon_color;
             th{
                 height: 50px;
                 line-height: 50px;
                 font-weight: bolder;
-                border: 1px solid #0C1244;
+                border: 1px solid $moon_color;
             }
             td{
-                border: 1px solid #0C1244;
+                border: 1px solid $moon_color;
                 height: 100px; 
                 vertical-align:middle;
             }
@@ -216,6 +232,291 @@ body{
                 }
             }
         
+        }
+    }
+    .backToIndexAndCheck{
+        width: 330px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 50px;
+        .backToIndex{
+            width: 140px;
+            height: 50px;
+            background-color: $sun_color;
+            border: 1px solid $moon_color;
+            margin-right: 50px;
+            &:hover{
+                background-color: $moon_color;
+                color: $sun_color;
+            }
+        }
+        .backToMember{
+            width: 140px;
+            height: 50px;
+            background-color: $sun_color;
+            border: 1px solid $moon_color;
+            &:hover{
+                background-color: $moon_color;
+                color: $sun_color;
+            }
+        }
+    }
+}
+
+.FinishPay_moon{
+    @import 'base/moonColorSwitch';
+    background-color: $sun_color;
+    color: $moon_color;
+    select{
+        background-color: $sun_color;
+        border: 1px solid $moon_color;
+        color: $moon_color;
+    }
+    input{
+        border: 1px solid $moon_color;
+        color: $moon_color;
+    }
+    button{
+        color: $moon_color;
+    }
+    @mixin circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid $moon_color;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h4:last-Child{
+            margin-bottom: 20px;
+            @include mobile{
+                margin-bottom: 10px;
+            }
+        }
+        @include mobile{
+            width: 75px;
+            height: 75px;
+            h4{
+                font-size: 16px;
+            }
+        }
+    }
+    section{
+        h2{
+            text-align: center;
+            @include mobile{
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .shoppingProcess{
+        width: 1180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0 auto;
+        @include mobile{
+            width: 90%;
+            height: 75px;
+            justify-content: space-between;
+        }
+        img{
+            width: 80px;
+            height: 24px;
+            margin: 0 40px;
+            @include mobile{
+                display: none;
+            }
+        }
+        .chooseAdate{
+            @include circle;
+        }
+        .chooseAtrip{
+            @include circle;
+        }
+        .tallyOrder{
+            @include circle;
+        }
+        .orderComplete{
+            @include circle;
+            background-color: $moon_color;
+            color:$sun_color
+        }
+        //訂購流程結束
+    }
+    //訂單完成文字區塊
+    .FinishTextBlock{
+        h3{
+            text-align: center;
+            margin: 50px 0;
+            @include mobile{
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        }
+        h5{
+            text-align: center;
+            margin-bottom: 40px;
+            @include mobile{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    //訂購明細表
+    .bigList{
+        width: 1000px;
+        height: auto;
+        border:2px solid $moon_color;
+        margin: 50px auto;
+        @include mobile{
+            width: 98%;
+            height: 100%;
+        }
+        .ListTitle{
+            margin: 0px auto;
+            width: 980px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: $moon_color;
+            color: $sun_color;
+            font-size: 20px;
+            @include mobile{
+                width: 98%;
+                height: 100%;
+
+            }
+        }
+        .ListDate{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 20px;
+            @include mobile{
+                margin: 10px;
+            }
+
+            li{
+                margin-right: 20px;
+                font-size: 16px;
+                font-weight: bolder;
+                display: flex;
+                align-items: center;
+                @include mobile{
+                    margin-right: 7px;
+    
+                }
+            }
+            li:first-Child{
+                font-weight: bolder;
+                font-size: 16px;
+            }
+            
+        }
+        table{
+            width: 99%;
+            height: auto;
+            margin: 0 auto;
+            align-content: center;
+            border: 1px solid $moon_color;
+            th{
+                height: 50px;
+                line-height: 50px;
+                font-weight: bolder;
+                border: 1px solid $moon_color;
+            }
+            td{
+                border: 1px solid $moon_color;
+                height: 100px; 
+                vertical-align:middle;
+            }
+            td:first-child{
+                text-align: center;
+                vertical-align:middle;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                // grid-auto-rows: 33px;
+                // display: flex;
+                // text-align: center;
+                // justify-content: space-between;
+                @include mobile{
+                    display: block;
+                }
+                li{
+                    margin: 7px;
+                    text-align: center;
+                }
+                li:last-child{
+                    color: #FFBF44;
+                    border-left: none;
+                }
+            }
+        }
+        .totalBlock{
+            margin:  40px 20px;
+            display: flex;
+            justify-content:flex-end;
+            align-content: center;
+            height: 150px;
+            .totalTitle{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 19.5px;
+            }
+            .totalPrice{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                line-height: 12px;
+                text-align: center;
+                span{
+                    color: #FFBF44;
+                    font-size: 20px;
+                }
+                #couponPrice{
+                    color: #FF4444;
+                }
+            }
+        
+        }
+    }
+    .backToIndexAndCheck{
+        width: 330px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 50px;
+        .backToIndex{
+            width: 140px;
+            height: 50px;
+            background-color: $sun_color;
+            border: 1px solid $moon_color;
+            margin-right: 50px;
+            &:hover{
+                background-color: $moon_color;
+                color: $sun_color;
+            }
+        }
+        .backToMember{
+            width: 140px;
+            height: 50px;
+            background-color: $sun_color;
+            border: 1px solid $moon_color;
+            &:hover{
+                background-color: $moon_color;
+                color: $sun_color;
+            }
         }
     }
 }
