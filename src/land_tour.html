@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>路遊</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/vue.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/land_tour.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @@include('./layout/header_footer_css_link.html')
 </head>
 <body class="land_tour">
@@ -16,7 +17,74 @@
     @@include('./layout/header.html')
 
     <main>
+        <section id="top_banner">
+            <div class="mask"></div>
 
+            <svg
+                class="progress-bg"
+                :width="width"
+                :height="width"
+            >
+            <circle
+                class="progress-ring_circle"
+                stroke="currentColor"
+                stroke-width="6"
+                fill="transparent"
+                :r="radius"
+                :cx="half_width"
+                :cy="half_width"
+                :stroke-dasharray="full_circle_bg"
+                />
+            </svg>
+
+            <svg
+                class="progress-ring"
+                :width="width"
+                :height="width"
+            >
+            <circle
+                class="progress-ring_circle"
+                stroke="currentColor"
+                stroke-width="4"
+                fill="transparent"
+                :r="radius"
+                :cx="half_width"
+                :cy="half_width"
+                :stroke-dasharray="full_circle"
+                :stroke-dashoffset = "offset"/>
+            </svg>
+            <ul>
+                <li v-for="li in li_data" :style="li[1]">
+                    <p>{{li[0]}}</p>
+                    
+                </li>
+
+                <!-- <li>
+                    <p>健行登山</p>
+                    
+                </li>
+
+                <li>
+                    <p>騎馬遊島</p>
+                    
+                </li>
+
+                <li>
+                    <p>沙灘越野車</p>
+                    
+                </li>
+
+                <li>
+                    <p>海灘派對</p>
+                    
+                </li> -->
+
+            </ul>
+            
+
+
+
+        </section>
         <div class="breadcrumbs">Breadcrumbs</div>
 
         <section class="slogan_banner">
@@ -272,5 +340,6 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/instagram_pop_up.js"></script>
+    <script src="./js/progress_ring.js"></script>
 </body>
 </html>
