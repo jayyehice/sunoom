@@ -171,7 +171,12 @@ $(function () {
     });
 
     $('#NextPage').on('click',function(){
-        window.location.href='tripChoose.html';
+        if(window.innerWidth < 576){
+            window.location.href='tripChooseMobile.html';
+        }else{
+            window.location.href='tripChoose.html';
+        }
+        
     });
 
     $('#tripChoose').change(function(){
