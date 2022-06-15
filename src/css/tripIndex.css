@@ -12,6 +12,11 @@
     display: none;
   }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .mobileimg {
+    display: none;
+  }
+}
 @media (max-width: 1440px) {
   .allPage h5 {
     font-size: 16rem;
@@ -19,7 +24,7 @@
 }
 @media (max-width: 1366px) {
   .allPage h5 {
-    font-size: 12rem;
+    font-size: 14rem;
   }
 }
 @media (max-width: 576px) {
@@ -42,9 +47,9 @@
     font-size: 70rem;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage span {
-    font-size: 50rem;
+    font-size: 70rem;
   }
 }
 .allPage .SeaItinerary {
@@ -65,6 +70,11 @@
     display: none;
   }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary:hover #seaVideo {
+    display: none;
+  }
+}
 .allPage .SeaItinerary img {
   width: 100%;
 }
@@ -72,6 +82,12 @@
   .allPage .SeaItinerary img {
     width: auto;
     height: 100%;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary img {
+    width: 100%;
+    height: auto;
   }
 }
 .allPage .SeaItinerary video {
@@ -98,14 +114,21 @@
 }
 .allPage .SeaItinerary span {
   position: absolute;
-  top: 30%;
-  right: 10%;
+  top: 35%;
+  right: 17%;
   color: #fff;
+  transform: translate(-20%, -35%);
 }
 @media (max-width: 576px) {
   .allPage .SeaItinerary span {
-    top: 20%;
+    top: 25%;
     right: 25%;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary span {
+    right: 10%;
+    top: 36%;
   }
 }
 .allPage .SeaItinerary h5 {
@@ -119,7 +142,7 @@
     top: 35%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage .SeaItinerary h5 {
     top: 36%;
   }
@@ -147,9 +170,13 @@
     display: none;
   }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary:hover #landVideo {
+    display: none;
+  }
+}
 .allPage .LandItinerary img {
   width: 100%;
-  display: block;
   margin: 0;
   padding: 0;
 }
@@ -159,11 +186,22 @@
     height: 100%;
   }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary img {
+    width: 100%;
+    height: auto;
+  }
+}
 .allPage .LandItinerary video {
   width: 100%;
   display: none;
 }
 @media (max-width: 576px) {
+  .allPage .LandItinerary video {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage .LandItinerary video {
     display: none;
   }
@@ -183,14 +221,22 @@
 }
 .allPage .LandItinerary span {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 35%;
+  left: 20%;
+  transform: translate(-20%, -35%);
   color: #fff;
 }
 @media (max-width: 576px) {
   .allPage .LandItinerary span {
-    top: 20%;
-    right: 25%;
+    top: 25%;
+    right: 10%;
+    transform: translate(-10%, -25%);
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary span {
+    top: 36%;
+    left: 15%;
   }
 }
 .allPage .LandItinerary h5 {
@@ -204,9 +250,10 @@
     top: 35%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage .LandItinerary h5 {
     top: 36%;
+    left: 34%;
   }
 }
 @media (max-width: 576px) {
@@ -238,6 +285,11 @@
     display: none;
   }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour:hover #packVideo {
+    display: none;
+  }
+}
 @media (max-width: 1366px) {
   .allPage .packageTour {
     border-bottom: 24px solid #FFDA91;
@@ -249,11 +301,23 @@
   width: 100%;
   display: none;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour video {
+    display: none;
+  }
+}
 .allPage .packageTour .mobileimg {
   height: 100%;
+  width: auto;
 }
 .allPage .packageTour img {
   width: 100%;
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour img {
+    width: 100%;
+    height: auto;
+  }
 }
 .allPage .packageTour .Pagebox {
   position: relative;
@@ -262,54 +326,30 @@
 }
 .allPage .packageTour .Pagebox span {
   position: absolute;
-  top: 20%;
-  left: 46.5%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   color: #fff;
 }
-@media (max-width: 1366px) {
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage .packageTour .Pagebox span {
-    left: 47%;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .allPage .packageTour .Pagebox span {
-    left: 46.5%;
-  }
-}
-@media (max-width: 576px) {
-  .allPage .packageTour .Pagebox span {
-    left: 37.5%;
     top: 35%;
   }
 }
 .allPage .packageTour .Pagebox h5 {
   position: absolute;
   top: 60%;
-  left: 44%;
+  left: 50%;
+  transform: translate(-50%, -60%);
   color: #fff;
   font-weight: bolder;
-}
-@media (max-width: 1366px) {
-  .allPage .packageTour .Pagebox h5 {
-    left: 45%;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .allPage .packageTour .Pagebox h5 {
-    left: 41%;
-  }
-}
-@media (max-width: 576px) {
-  .allPage .packageTour .Pagebox h5 {
-    left: 20%;
-    top: 64%;
-  }
 }
 .allPage .packageTour .Pagebox h5:nth-Child(3) {
   top: 70%;
   left: 56%;
+  transform: translate(-56%, -70%);
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 992px) {
   .allPage .packageTour .Pagebox h5:nth-Child(3) {
     left: 57%;
     top: 78%;
@@ -317,8 +357,9 @@
 }
 @media (max-width: 576px) {
   .allPage .packageTour .Pagebox h5:nth-Child(3) {
-    left: 70%;
+    left: 75%;
     top: 70%;
+    transform: translate(-75%, -70%);
   }
 }
 
