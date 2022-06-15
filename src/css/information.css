@@ -2,6 +2,19 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.information main .breadcrumbs .wrapper {
+  width: 1070px;
+  margin: 0 auto;
+}
+.information main .breadcrumbs .wrapper ul {
+  height: 140px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.information main .breadcrumbs .wrapper ul li {
+  margin-right: 10px;
+}
 .information main .map .wrapper {
   width: 1070px;
   margin: 0 auto;
