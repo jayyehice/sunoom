@@ -1,5 +1,20 @@
 
 
+
+.backgroundSystem{
+    input{
+        border:1px solid #0C1244;
+    }
+    textarea{
+        border:1px solid #0C1244;
+    }
+    button{
+        border:1px solid #0C1244;
+    }
+    color: #0C1244;
+}
+
+
 header{
     background-color: #F5F0DD;
     height: 100px;
@@ -41,11 +56,12 @@ header{
     
 }
 
-.wrapper{
+.backwrapper{
     display: flex;
     padding: 0;
     height: 100%;
     color: #0C1244;
+
     nav{
         height: 85vh;
 
@@ -218,10 +234,11 @@ header{
 }
 .formBody_00{
     width: 800px;
-    height: 600px;
+    height: 700px;
     position: absolute;
-    left: 400px;
-    top: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -273,8 +290,9 @@ header{
     width: 800px;
     height: 500px;
     position: absolute;
-    left: 400px;
-    top: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -333,8 +351,9 @@ header{
     width: 400px;
     height: 350px;
     position: absolute;
-    left: 500px;
-    top: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -352,7 +371,7 @@ header{
         }
     }
     .buttonBlock_02{
-        margin: 20px 0;
+        margin: 30px 0;
         button{
             height: 30px;
             background-color: #F5F0DD;
@@ -368,8 +387,9 @@ header{
     width: 800px;
     height: 500px;
     position: absolute;
-    left: 400px;
-    top: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -421,8 +441,9 @@ header{
     width: 800px;
     height: 500px;
     position: absolute;
-    left: 400px;
-    top: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -441,12 +462,10 @@ header{
             // text-align: center;
             width: 70px;
         }
-        .leftForm_04{
-            
+        textarea{
+            height: 100px;
         }
-        .rightForm_04{
-     
-        }
+        
     }
     .buttonBlock_04{
         margin: 40px 0;
@@ -465,8 +484,9 @@ header{
     width: 400px;
     height: 300px;
     position: absolute;
-    left: 500px;
-    top: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -484,7 +504,7 @@ header{
         }
     }
     .buttonBlock_05{
-        margin: 10px 0;
+        margin: 40px 0;
         button{
             height: 30px;
             background-color: #F5F0DD;
@@ -500,8 +520,9 @@ header{
     width: 800px;
     height: 450px;
     position: absolute;
-    left: 400px;
-    top: 120px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background-color: #F5F0DD;
     display: none;
     border-radius: 5%;
@@ -541,7 +562,6 @@ header{
                     color: #F5F0DD;
                 }
             }
-           
         }
     }
     .buttonBlock_06{

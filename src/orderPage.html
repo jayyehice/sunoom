@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/orderPage.css">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/vue.js"></script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -20,9 +19,6 @@
 <body class="orderPage">
     @@include('./layout/header.html')
     <header>
-        <button id="sunoomChange">
-            sunoomChange
-        </button>
     </header>
     <article>
         <section>
@@ -32,17 +28,17 @@
                     <h4>1</h4>
                     <h4>選擇日期</h4>
                 </div>
-                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
                 <div class="chooseAtrip">
                     <h4>2</h4>
                     <h4>選擇行程</h4>
                 </div>
-                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
                 <div class="tallyOrder">
                     <h4>3</h4>
                     <h4>結帳</h4>
                 </div>
-                <img src="./img/orderPage/orderPageArrow.png" alt="">
+                <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
                 <div class="orderComplete">
                     <h4>4</h4>
                     <h4>訂單完成</h4>
@@ -62,9 +58,9 @@
                     <li>
                         <h4>人數</h4>
                         <div id="app" class="pepoleNums" >
-                            <img id="add" @click="count+=1" src="./img/orderPage/left_button.png">
+                            <img id="add" @click="count+=1" src="./img/orderPage/sun/left_button.png">
                             <input  id="pepoleNums" type="number"v-model="count" min="1" >
-                            <img id="min" @click="min" src="./img/orderPage/right_button.png">
+                            <img id="min" @click="min" src="./img/orderPage/sun/right_button.png">
                         </div>
 
                     </li>

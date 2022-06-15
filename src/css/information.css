@@ -236,6 +236,7 @@
 }
 .information main .contact .wrapper ul li img {
   margin-top: 10px;
+  width: 100%;
 }
 .information main .traffic {
   margin-top: 70px;
@@ -332,7 +333,7 @@
   height: 5px;
   background-color: #F5F0DD;
   position: absolute;
-  top: calc(50% - 2.5px);
+  top: 37.5px;
   right: 30px;
 }
 .information main #faq .wrapper ul li h5::after {
@@ -715,6 +716,12 @@
   .information main .map .wrapper ul li:first-child {
     display: none;
   }
+  .information main .map .wrapper ul li {
+    flex-grow: 1;
+  }
+  .information main .map .wrapper ul li .big_btn {
+    width: 100%;
+  }
   .information main .map .wrapper ol img {
     display: none;
   }
@@ -733,7 +740,8 @@
     box-sizing: border-box;
   }
   .information main .map .polaroid ul li:after {
-    left: 67px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .information main .map .polaroid ul li:nth-child(2) {
     width: 150px;
@@ -764,6 +772,15 @@
   }
   .information main .island_intro .wrapper .origin .island_intro_right .island_intro_top div:first-child, .information main .island_intro .wrapper .origin .island_intro_right .island_intro_down div:first-child {
     display: none;
+  }
+  .information main .island_intro .wrapper .origin .triangle_img div {
+    width: 100%;
+  }
+  .information main .island_intro .wrapper .origin .triangle_img > div {
+    width: 30%;
+  }
+  .information main .island_intro .wrapper .origin .triangle_img .triangle_left, .information main .island_intro .wrapper .origin .triangle_img .triangle_right {
+    width: 40%;
   }
   .information main .island_intro .wrapper .feature > h4 {
     margin-bottom: 20px;
@@ -814,6 +831,9 @@
   .information main .traffic .wrapper ul {
     flex-direction: column;
   }
+  .information main .traffic .wrapper ul > li {
+    width: 100%;
+  }
   .information main .traffic .wrapper ul > li .title i {
     font-size: 30rem;
     height: 33rem;
@@ -829,6 +849,9 @@
   }
   .information main #faq .wrapper {
     width: calc(100% - 40px);
+  }
+  .information main #faq .wrapper ul li h5 {
+    padding: 0 60px 0 20px;
   }
   .information main #faq .wrapper ul li p {
     padding: 20px;
