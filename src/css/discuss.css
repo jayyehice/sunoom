@@ -89,8 +89,9 @@
 }
 
 .discuss .official_article .banner_1 .line1{
-  border: 1px solid;
-}
+  
+} 
+
 .discuss .official_article .banner_1 .text_1 {
   position: relative;
   bottom: 260px;
@@ -256,6 +257,7 @@
   /* border:1px solid red; */
   width: 800px;
 }
+
 .discuss .article_list .content .title {
   /* border:1px solid red; */
   margin-top: 40px;
@@ -263,6 +265,16 @@
   font-size: 20px;
   color: #0C1244;
 }
+
+.discuss .article_list .content .star{
+  /* border:1px solid red; */
+  width: 85px;
+  position: relative;
+  left: 700px;
+  bottom: 15px;
+  color:#FFBF44
+}
+
 .discuss .article_list .content .comment {
   /* border: 1px solid red; */
   margin-top: 10px;
@@ -436,9 +448,9 @@
 .discuss .task_container .task_add_block .task_add {
   /* border: 1px solid red; */
   display: inline-block;
-  width: 141px;
-  height: 52px;
-  margin-left: 666px;
+  width: 80px;
+  height: 40px;
+  margin-left: 727px;
   margin-top: 20px;
   vertical-align: top;
   border: 1px solid lightgray;
@@ -572,6 +584,7 @@
 .discuss .-none {
   display: none;
 }
+
 .discuss .form_region {
   /* border:1px solid $moon_color; */
   background-color: #F5F0DD;
@@ -1375,7 +1388,7 @@
   
   .wrapper{
       margin: 0 auto;
-      width:575.98px;
+      width:100%;
       padding: 0;
   }
 
@@ -1704,6 +1717,16 @@
       bottom: 12px;
       right: 139px;
     }
+
+    .discuss .article_list .content .star{
+      /* border:1px solid red; */
+      width: 85px;
+      position: relative;
+      left: 249px;
+      top: 85px;
+      color:#FFBF44
+    }
+
     .discuss .article_list .content .comment {
       /* border: 1px solid red; */
       margin-top: 10px;
@@ -1849,6 +1872,151 @@
     .discuss .pop-up .discuss-region img {
       width: 448px;
       height: 100%;
+    }
+
+    .discuss .task_container .task_add_block .task_add {
+      /* border: 1px solid red; */
+      display: inline-block;
+      width: 380px;
+      height: 60px;
+      margin-left: 48px;
+      margin-top: 20px;
+      vertical-align: top;
+      border: 1px solid lightgray;
+      border-left: 0;
+      background-color: white;
+      box-shadow: none;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      border-radius: 30px;
+    }
+
+
+
+    /* 發表新文章區塊(表單) */
+    .discuss .form_region {
+      /* border:1px solid $moon_color; */
+      background-color: #F5F0DD;
+      z-index: 3;
+      padding-top: 20px;
+      padding-bottom: 80px;
+      margin-top: 0px;
+      margin-left: 10px;
+      width: 530px;
+      display: none;
+      position: relative;
+      bottom: 1040px;
+    }
+    .discuss .form_region .title2 {
+      /* border: 1px solid red; */
+      font-size: 32px;
+      color: #0C1244;
+      margin-left: 0px;
+      text-align: center;
+    }
+    .discuss .form_region .absolute {
+      border: 1px solid #0C1244;
+      background-color: #F5F0DD;
+      position: absolute;
+      height: 990px;
+      width: 530px;
+      left: 0px;
+    }
+    .discuss .form_region .form_region1 {
+      /* border: 1px solid red; */
+      margin-left: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region1 .name1 {
+      margin-right: 25px;
+    }
+    .discuss .form_region .form_region1 .write1 {
+      height: 60px;
+      width: 310px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region2 {
+      /* border: 1px solid red; */
+      margin-left: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region2 .name2 {
+      /* border:1px solid red; */
+      margin-right: 25px;
+    }
+    .discuss .form_region .form_region2 .choose {
+      height: 50px;
+      width: 318px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region3 {
+      /* border: 1px solid red; */
+      margin-left: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region3 .name3 {
+      /* border:1px solid red; */
+      margin-right: 25px;
+    }
+    .discuss .form_region .form_region4 {
+      /* border: 1px solid red; */
+      margin-left: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .discuss .form_region .form_region4 .name4 {
+      /* border:1px solid red; */
+      margin-right: 25px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region4 .write2 {
+      /* border:1px solid red; */
+      height: 470px;
+      width: 476px;
+      max-height: 470px;
+      max-width: 476px;
+      resize: none;
+      font-size: 20px;
+    }
+    .discuss .form_region .form_region5 {
+      /* border:1px solid red; */
+      margin-left: 125px;
+    }
+    .discuss .form_region .form_region5 .button {
+      width: 300px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 30px;
+    }
+    .discuss .form_region .disappear2 {
+      /* border:1px solid red; */
+      margin-top: 20px;
+      margin-left: 475px;
+    }
+    .discuss .form_region .form_region6 {
+      margin-left: 30px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .discuss .form_region .form_region6 .name6 {
+      margin-right: 25px;
+    }
+    .discuss .form_region .form_region6 .fa-star {
+      /* border:1px solid red; */
+      color: #FFBF44;
+    }
+    .discuss .form_region .form_region6 .fa-star-half-stroke {
+      /* border:1px solid red; */
+      color: #FFBF44;
     }
 }
 /*# sourceMappingURL=discuss.css.map */
