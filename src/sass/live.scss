@@ -13,6 +13,13 @@
         color: $moon_color;
     }
 
+    header .headerCenter {
+        position: absolute;
+        z-index: 100;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     main {
         .wrapper {
             width: 1180px;
@@ -150,6 +157,10 @@
                 width: 920px;
                 position: relative;
                 margin-bottom: 100px;
+
+                .bookButton_RWD {
+                    display: none;
+                }
 
                 h3 {
                     text-align: center;
@@ -304,6 +315,7 @@
                 display: flex;
                 margin-bottom: 50px;
 
+
                 // Camping Tents 露營帳篷 leftsection
                 .campingTentsLeft {
                     width: 427px;
@@ -326,6 +338,10 @@
 
                         .mountainImg {
                             margin-top: 110px;
+                        }
+
+                        .t3_RWD {
+                            display: none;
                         }
                     }
                 }
@@ -429,6 +445,10 @@
                 }
             }
 
+            .bookButton_RWD {
+                display: none;
+            }
+
 
             // Villa waterCottage 渡假村
             .villa {
@@ -457,6 +477,10 @@
 
                         .oceanImg {
                             margin-top: 110px;
+                        }
+
+                        .t3_RWD{
+                            display: none;
                         }
                     }
                 }
@@ -2252,23 +2276,30 @@ main {
                 width: 100%;
 
                 .logCabin {
-                    border: 1px solid black;
+                    margin-bottom: 20px;
+                    justify-content: space-around;
 
                     .logCabinLeft {
                         width: 192px;
                         margin-top: 50px;
-                        border: 1px red solid;
+
 
                         .logCabinText {
-                            width: 192px;
-                            margin: 0px 10px 20px 20px;
+                            width: 190px;
+                            margin: 0px 10px 20px 0px;
                             display: flex;
                             flex-direction: column;
+
+                            .forestBorder {
+                                height: 170px;
+                            }
 
                         }
 
                         .t1 {
                             order: 3;
+                            font-size: 20px;
+                            margin-top: 25px;
                         }
 
                         .t2 {
@@ -2285,14 +2316,551 @@ main {
 
                     }
 
-                    .logCabinRight{
+                    .logCabinRight {
                         width: 333px;
-                        border: 1px solid orange;
-                        .logCabinImg{
-                            width: 333px;
+                        margin-top: 50px;
+
+                        .logCabinImg {
+                            width: 330px;
                         }
-                        .rightTextArea{
-                            width: 333px;
+
+                        .rightTextArea {
+                            width: 100%;
+
+                            .logCabinText02 {
+                                width: 330px;
+                                margin-top: 20px;
+
+                                .text {
+                                    width: 268px;
+                                }
+
+                                .logCbinList {
+                                    width: 290px;
+
+                                    .iconArea {
+                                        margin-top: 20px;
+                                    }
+
+                                    .comments_area {
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+
+                            .bookButton {
+                                display: none;
+                            }
+
+                        }
+                    }
+
+
+                }
+
+                .siteLayout {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .siteLayoutwp {
+                        width: calc(100% - 40px);
+                        margin: 0 auto;
+                        margin-top: 20px;
+
+                        .layOutImg {
+                            width: 100%;
+                        }
+
+                        .wood {
+                            width: 32px;
+                            line-height: 32px;
+                        }
+
+                        .wood1 {
+                            right: 85px;
+                            top: 75px;
+                        }
+
+                        .wood11 {
+                            right: 80px;
+                            bottom: 62px;
+                        }
+
+                        .wood2 {
+                            left: 120px;
+                            top: 50px;
+                        }
+
+                        .wood3 {
+                            left: 140px;
+                        }
+                    }
+
+                    .siteLayoutInf01 {
+                        // display: block;
+                        width: 312px;
+                        height: 312px;
+                        left: 22%;
+
+                        .room_img {
+                            width: 250px;
+                            margin-top: 30px;
+                        }
+
+                        .roomInfText {
+                            margin-top: 20px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .siteLayoutInf02 {
+                        // display: block;
+                        width: 312px;
+                        height: 312px;
+                        left: 22%;
+
+                        .room_img {
+                            width: 250px;
+                            margin-top: 30px;
+                        }
+
+                        .roomInfText {
+                            margin-top: 20px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .siteLayoutInf03 {
+                        // display: block;
+                        width: 312px;
+                        height: 312px;
+                        left: 22%;
+
+                        .room_img {
+                            width: 250px;
+                            margin-top: 30px;
+                        }
+
+                        .roomInfText {
+                            margin-top: 20px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .bookButton_RWD {
+                        border: 1.5px solid $moon_color;
+                        width: 380px;
+                        text-align: center;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 50px;
+                        color: $moon_color;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        font-size: 24px;
+                        line-height: 60px;
+
+                        &:hover {
+                            background-color: $moon_color;
+                            color: $sun_color;
+                        }
+                    }
+                }
+
+                .campingTents {
+                    justify-content: space-around;
+                    margin-bottom: 20px;
+
+                    .campingTentsLeft {
+                        width: 192px;
+                        margin-top: 50px;
+
+
+                        .campingTentsText {
+                            width: 190px;
+                            margin: 0px 10px 20px 0px;
+                            display: flex;
+                            flex-direction: column;
+
+                            .mountainBorder {
+                                height: 170px;
+                            }
+
+                            .t3_RWD {
+                                display: block;
+                            }
+                        }
+
+                        .t1 {
+                            order: 3;
+                            font-size: 20px;
+                            margin-top: 25px;
+                        }
+
+                        .t2 {
+                            order: 2;
+                        }
+
+                        .t3 {
+                            display: none;
+                        }
+
+                        .mountainImg {
+                            width: 192px;
+                        }
+
+                    }
+
+                    .campingTentsRight {
+                        width: 333px;
+                        margin-top: 50px;
+
+                        .campingImg {
+                            width: 330px;
+                        }
+
+                        .rightTextArea {
+                            width: 100%;
+
+                            .campingTentsText02 {
+                                width: 330px;
+                                margin-top: 20px;
+
+                                .text {
+                                    width: 268px;
+                                }
+
+                                .campingTentsList {
+                                    width: 290px;
+
+                                    .iconArea {
+                                        margin-top: 40px;
+
+                                        .iconText {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .comments_area {
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+
+                            .bookButton {
+                                display: none;
+                            }
+
+                        }
+                    }
+
+
+                }
+
+                .campingSiteLayout {
+                    width: calc(100% - 40px);
+                    margin-bottom: 20px;
+
+                    .campingsiteLayoutwp {
+                        margin: 0 auto;
+                        margin-top: 20px;
+
+                        .campingLayout_img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .bookButton_RWD {
+                    border: 1.5px solid $moon_color;
+                    width: 380px;
+                    text-align: center;
+                    display: block;
+                    text-decoration: none;
+                    line-height: 50px;
+                    color: $moon_color;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    font-size: 24px;
+                    line-height: 60px;
+
+                    &:hover {
+                        background-color: $moon_color;
+                        color: $sun_color;
+                    }
+                }
+
+                .villa {
+                    margin-bottom: 20px;
+                    justify-content: space-around;
+
+                    .villaLeft {
+                        width: 192px;
+                        margin-top: 50px;
+
+                        .villaText {
+                            width: 190px;
+                            margin: 0px 10px 20px 0px;
+                            display: flex;
+                            flex-direction: column;
+
+                            .oceanBorder {
+                                height: 170px;
+                            }
+
+                            .t1 {
+                                order: 3;
+                                font-size: 20px;
+                                margin-top: 25px;
+                            }
+
+                            .t2 {
+                                order: 2;
+                            }
+
+                            .t3_RWD {
+                                order: 1;
+                            }
+
+                            .t3 {
+                                display: none;
+                            }
+
+                        }
+
+
+                        .oceanImg {
+                            width: 192px;
+                        }
+
+                    }
+
+                    .villaRight {
+                        width: 333px;
+                        margin-top: 50px;
+
+                        .villaImg {
+                            width: 330px;
+                        }
+
+                        .rightTextArea {
+                            width: 100%;
+
+                            .villaText02 {
+                                width: 330px;
+                                margin-top: 20px;
+
+                                .text {
+                                    width: 268px;
+                                }
+
+                                .villaList {
+                                    width: 290px;
+
+                                    .iconArea {
+                                        margin-top: 20px;
+                                    }
+
+                                    .comments_area {
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+
+                            .bookButton {
+                                display: none;
+                            }
+
+                        }
+                    }
+
+
+                }
+
+                .villaSiteLayout {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .villaSiteLayoutwp {
+                        width: calc(100% - 40px);
+                        margin: 0 auto;
+                        margin-top: 20px;
+
+                        .layOutImg {
+                            width: 100%;
+                        }
+
+                        .sea {
+                            width: 30px;
+                            line-height: 30px;
+                        }
+
+                        .sea1 {
+                            right: 220px;
+                            top: 55px;
+                        }
+
+                        
+                        .sea2 {
+                            right: 220px;
+                            bottom: 140px;
+                        }
+                        
+                        .sea3 {
+                            right: 220px;
+                            bottom: 40px;
+                            
+                        }
+                        .sea4 {
+                            left: 155px;
+                            bottom: 142px;
+                        }
+                    }
+
+                    .villaInf01 {
+                        // display: block;
+                        width: 250px;
+                        height: 250px;
+                        left: 26%;
+
+                        .viila_img {
+                            width: 175px;
+                            margin-top: 10px;
+                        }
+
+                        .villaInfText {
+                            margin-top: 5px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .villaInf02 {
+                        // display: block;
+                        width: 250px;
+                        height: 250px;
+                        left: 26%;
+
+                        .viila_img {
+                            width: 175px;
+                            margin-top: 10px;
+                        }
+
+                        .villaInfText {
+                            margin-top: 5px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .villaInf03 {
+                        // display: block;
+                        width: 250px;
+                        height: 250px;
+                        left: 26%;
+
+                        .viila_img {
+                            width: 175px;
+                            margin-top: 10px;
+                        }
+
+                        .villaInfText {
+                            margin-top: 5px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .villaInf04 {
+                        // display: block;
+                        width: 250px;
+                        height: 250px;
+                        left: 26%;
+
+                        .viila_img {
+                            width: 175px;
+                            margin-top: 10px;
+                        }
+
+                        .villaInfText {
+                            margin-top: 5px;
+
+                            .number1 {
+                                width: 40px;
+                                line-height: 40px;
+                                margin-right: 10px;
+                            }
+
+                            .text {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .bookButton_RWD {
+                        border: 1.5px solid $moon_color;
+                        width: 380px;
+                        text-align: center;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 50px;
+                        color: $moon_color;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        font-size: 24px;
+                        line-height: 60px;
+
+                        &:hover {
+                            background-color: $moon_color;
+                            color: $sun_color;
                         }
                     }
                 }
