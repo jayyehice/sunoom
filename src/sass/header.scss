@@ -1,5 +1,11 @@
 // @import '../css/common.css';
 
+@mixin mobile {
+  @media(max-width:579px){
+      @content
+  }
+}
+
 // 禁止滾動
 .overFlow{
   position: fixed;
@@ -31,6 +37,14 @@ button.hamburger_icon{
   background: none;
 
   z-index: 100;
+
+  @include mobile{
+    left: 20px;
+    top: 20px;
+  
+  }
+
+  
 
   /* 每一條橫線的樣式 */
   span.-hr{
@@ -96,6 +110,12 @@ button.btn2{
   cursor: pointer;
   outline: none;
   background: none;
+
+  @include mobile{
+    left: 20px;
+    top: 20px;
+  
+  }
 
   /* 每一條橫線的樣式 */
   span.-hr{
@@ -183,6 +203,7 @@ header{
       // height: calc(100vh - 46px);
       height: 100vh;
       object-fit:cover;  
+
   }
   
     /* 共同 ul*/
@@ -202,6 +223,11 @@ header{
       // border: 1px solid #fff;
       margin-left: 411px;
       padding-top: 133px;
+
+      @include mobile{
+        margin: 0 auto;
+      }
+  
 
 
   
@@ -225,6 +251,12 @@ header{
     position: absolute;
     left: 190px;
     top: 180px;
+
+    @include mobile{
+      left: 0px;
+      top: 100px;
+  
+    }
   }
   
   .ham_pay{
@@ -251,6 +283,11 @@ header{
     z-index: 1;
     // z-index 需要position預設以外才可用
     position: relative;
+
+    @include mobile{
+      left: -190px;
+      top: 0;
+    }
   }
   
   .ham_ig{
@@ -306,23 +343,43 @@ header{
 
     z-index: 100;
 
-    .sunPay{
+    @include mobile{
+      right: -10px;
+      top: 40px;
+    
+    }
+  
 
+    .sunPay{
+      @include mobile{
+        display: none !important;
+      }
     }
 
     .moonPay{
       display: none;
+
+      @include mobile{
+        display: none !important;
+      }
     }
 
     .switch{
       #sunSwitch{
         cursor: pointer;
         
+          @include mobile{
+            transform: rotate(-90deg);
+          }
       }
 
       #moonSwitch{
         cursor: pointer;
         display: none;
+
+        @include mobile{
+          transform: rotate(-90deg);
+        }
       }
     }
   }
