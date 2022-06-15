@@ -88,6 +88,7 @@ footer section ul > li:last-child .today_weather .today_weather_right h1:first-c
 footer section ul > li:last-child .today_weather .today_weather_right div {
   margin-bottom: 10px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 footer section ul > li:last-child .today_weather .today_weather_right div svg {
