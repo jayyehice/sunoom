@@ -29,6 +29,9 @@ $(function(){
             })
             $('.bodyCover').css('display','block')
             $('#dateBooking').css('opacity','0.5')
+            $('.circle').css({
+                transform:'rotate(405deg)',
+            })
             $('.ListSmall').removeClass('on');
         }else{
             
@@ -36,10 +39,17 @@ $(function(){
                 width:"0px",
                 display:"none",
             })
+            $('.circle').css({
+                transform:'rotate(0deg)',
+            })
             $('#dateBooking').css('opacity','1')
             $('.bodyCover').css('display','none')
             $('.ListSmall').addClass('on');
         }
         
+    })
+
+    $('#NextPage').on('click',()=>{
+        window.location.href = './readyToPay.html'
     })
 })

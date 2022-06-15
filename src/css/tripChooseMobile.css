@@ -9,6 +9,19 @@
 
 .tripChooseMobile {
   background-color: #F5F0DD;
+  color: #0C1244;
+}
+.tripChooseMobile select {
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+.tripChooseMobile input {
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+.tripChooseMobile button {
+  color: #0C1244;
 }
 .tripChooseMobile span {
   font-size: 16px;
@@ -22,17 +35,13 @@
   margin-bottom: 20px;
 }
 .tripChooseMobile .shoppingProcess {
-  width: 100%;
+  width: 90%;
   height: 75px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0px auto;
   margin-top: 50px;
-}
-.tripChooseMobile .shoppingProcess img {
-  width: 25px;
-  height: 15px;
 }
 .tripChooseMobile .shoppingProcess .chooseAdate {
   width: 75px;
@@ -40,12 +49,9 @@
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
 }
-.tripChooseMobile .shoppingProcess .chooseAdate h4:last-Child {
-  margin-bottom: 20px;
+.tripChooseMobile .shoppingProcess .chooseAdate p:first-child {
+  margin-top: 15px;
 }
 .tripChooseMobile .shoppingProcess .chooseAtrip {
   width: 75px;
@@ -53,14 +59,11 @@
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
   background-color: #0C1244;
   color: #F5F0DD;
 }
-.tripChooseMobile .shoppingProcess .chooseAtrip h4:last-Child {
-  margin-bottom: 20px;
+.tripChooseMobile .shoppingProcess .chooseAtrip p:first-child {
+  margin-top: 15px;
 }
 .tripChooseMobile .shoppingProcess .tallyOrder {
   width: 75px;
@@ -68,12 +71,9 @@
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
 }
-.tripChooseMobile .shoppingProcess .tallyOrder h4:last-Child {
-  margin-bottom: 20px;
+.tripChooseMobile .shoppingProcess .tallyOrder p:first-child {
+  margin-top: 15px;
 }
 .tripChooseMobile .shoppingProcess .orderComplete {
   width: 75px;
@@ -81,12 +81,9 @@
   border-radius: 50%;
   border: 1px solid #0C1244;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
 }
-.tripChooseMobile .shoppingProcess .orderComplete h4:last-Child {
-  margin-bottom: 20px;
+.tripChooseMobile .shoppingProcess .orderComplete p:first-child {
+  margin-top: 15px;
 }
 .tripChooseMobile .datePickerBox {
   width: 90%;
@@ -123,7 +120,6 @@
   right: 0;
   top: 10%;
   font-size: 20px;
-  text-align: center;
   cursor: pointer;
 }
 .tripChooseMobile .ListSmall .circle {
@@ -132,9 +128,11 @@
   border-radius: 50%;
   border: 1px solid #F5F0DD;
   color: #F5F0DD;
-  text-align: center;
   line-height: 20px;
   margin-top: 10px;
+  text-align: center;
+  transition: all 1s;
+  margin-left: 4px;
 }
 .tripChooseMobile .BigList {
   width: 0px;
@@ -142,7 +140,7 @@
   background-color: #F5F0DD;
   border: 2px solid #0C1244;
   transition: all 2s;
-  right: 15%;
+  right: 14%;
   top: 0%;
   position: fixed;
   display: none;
@@ -277,7 +275,7 @@
 .tripChooseMobile .tripChooseBlock .morningItineraryA {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
   justify-content: center;
   border-bottom: 1px solid #0C1244;
 }
@@ -315,7 +313,6 @@
 }
 .tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockA {
   display: flex;
-  border-radius: 22px;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
@@ -324,7 +321,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockA #itineraryText {
   width: 180px;
@@ -338,7 +334,7 @@
 .tripChooseMobile .tripChooseBlock .noonItinerary {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockB {
   display: flex;
@@ -382,7 +378,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockA #itineraryTextB {
   width: 180px;
@@ -396,7 +391,7 @@
 .tripChooseMobile .tripChooseBlock .eveningItinerary {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockB {
   display: flex;
@@ -472,7 +467,7 @@
 .tripChooseMobile .foodChooseBlock .morningFood {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
   justify-content: center;
   border-bottom: 1px solid #0C1244;
 }
@@ -519,7 +514,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .foodChooseBlock .morningFood .morningFoodA #foodTextA {
   width: 180px;
@@ -533,7 +527,7 @@
 .tripChooseMobile .foodChooseBlock .noonFood {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .foodChooseBlock .noonFood .noonFoodB {
   display: flex;
@@ -577,7 +571,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .foodChooseBlock .noonFood .noonFoodA #foodTextB {
   width: 180px;
@@ -591,7 +584,7 @@
 .tripChooseMobile .foodChooseBlock .eveningFood {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodB {
   display: flex;
@@ -667,7 +660,7 @@
 .tripChooseMobile .stayChooseBlock .cabin {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
   justify-content: center;
 }
 .tripChooseMobile .stayChooseBlock .cabin .cabinBlockB {
@@ -686,15 +679,18 @@
   margin: 5px;
 }
 .tripChooseMobile .stayChooseBlock .cabin .cabinBlockB select {
-  width: 120px;
-  height: 35px;
+  width: 100px;
+  height: 37px;
   border-radius: 22px;
   background-color: #F5F0DD;
   text-align: center;
 }
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB select option {
+  text-align: center;
+}
 .tripChooseMobile .stayChooseBlock .cabin .cabinBlockB #cabinPrice {
   border: 1px solid #0C1244;
-  width: 120px;
+  width: 100px;
   height: 35px;
   border-radius: 22px;
   text-align: center;
@@ -711,7 +707,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .stayChooseBlock .cabin .cabinBlockA #cabinText {
   width: 180px;
@@ -725,7 +720,7 @@
 .tripChooseMobile .stayChooseBlock .camping {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .stayChooseBlock .camping .campingBlockB {
   display: flex;
@@ -743,15 +738,15 @@
   margin: 5px;
 }
 .tripChooseMobile .stayChooseBlock .camping .campingBlockB select {
-  width: 120px;
-  height: 35px;
+  width: 100px;
+  height: 37px;
   border-radius: 22px;
   background-color: #F5F0DD;
   text-align: center;
 }
 .tripChooseMobile .stayChooseBlock .camping .campingBlockB #campingPrice {
   border: 1px solid #0C1244;
-  width: 120px;
+  width: 100px;
   height: 35px;
   border-radius: 22px;
   text-align: center;
@@ -768,7 +763,6 @@
   margin: 5px;
   width: 120px;
   height: 97px;
-  border-radius: 22px;
 }
 .tripChooseMobile .stayChooseBlock .camping .campingBlockA #campingText {
   width: 180px;
@@ -782,7 +776,7 @@
 .tripChooseMobile .stayChooseBlock .villa {
   border-top: 2px solid #0C1244;
   padding: 5px;
-  height: 190px;
+  height: 178px;
 }
 .tripChooseMobile .stayChooseBlock .villa .villaBlockB {
   display: flex;
@@ -800,15 +794,15 @@
   margin: 5px;
 }
 .tripChooseMobile .stayChooseBlock .villa .villaBlockB select {
-  width: 120px;
-  height: 35px;
+  width: 100px;
+  height: 37px;
   border-radius: 22px;
   background-color: #F5F0DD;
   text-align: center;
 }
 .tripChooseMobile .stayChooseBlock .villa .villaBlockB #villaPrice {
   border: 1px solid #0C1244;
-  width: 120px;
+  width: 100px;
   height: 35px;
   border-radius: 22px;
   text-align: center;
@@ -851,6 +845,847 @@
   color: #F5F0DD;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
+  cursor: pointer;
+}
+
+.tripChooseMobile {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.tripChooseMobile select {
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+.tripChooseMobile input {
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+.tripChooseMobile button {
+  color: #F5F0DD;
+}
+.tripChooseMobile span {
+  font-size: 16px;
+}
+.tripChooseMobile section h2 {
+  text-align: center;
+}
+.tripChooseMobile section h3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.tripChooseMobile .shoppingProcess {
+  width: 90%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+.tripChooseMobile .shoppingProcess .chooseAdate {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+}
+.tripChooseMobile .shoppingProcess .chooseAdate p:first-child {
+  margin-top: 15px;
+}
+.tripChooseMobile .shoppingProcess .chooseAtrip {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.tripChooseMobile .shoppingProcess .chooseAtrip p:first-child {
+  margin-top: 15px;
+}
+.tripChooseMobile .shoppingProcess .tallyOrder {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+}
+.tripChooseMobile .shoppingProcess .tallyOrder p:first-child {
+  margin-top: 15px;
+}
+.tripChooseMobile .shoppingProcess .orderComplete {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+}
+.tripChooseMobile .shoppingProcess .orderComplete p:first-child {
+  margin-top: 15px;
+}
+.tripChooseMobile .datePickerBox {
+  width: 90%;
+  height: 275px;
+  margin: 0px auto;
+  border: 1px solid #F5F0DD;
+  position: relative;
+}
+.tripChooseMobile .datePickerBox .dateTitle p {
+  margin: 20px;
+}
+.tripChooseMobile .datePickerBox .dateTitle i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+}
+.tripChooseMobile .datePickerBox .pickerBox {
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #F5F0DD;
+}
+.tripChooseMobile .ListSmall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  writing-mode: vertical-lr;
+  width: 50px;
+  height: 170px;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tripChooseMobile .ListSmall .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+  line-height: 20px;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 1s;
+  margin-left: 4px;
+}
+.tripChooseMobile .BigList {
+  width: 0px;
+  height: 100vh;
+  background-color: #0C1244;
+  border: 2px solid #F5F0DD;
+  transition: all 2s;
+  right: 14%;
+  top: 0%;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  overflow-y: auto;
+}
+.tripChooseMobile .BigList span {
+  font-weight: bolder;
+}
+.tripChooseMobile .BigList h6 {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+.tripChooseMobile .BigList .leftButton {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tripChooseMobile .BigList .rightButton {
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.tripChooseMobile .BigList .deleteButton {
+  width: 16px;
+  cursor: pointer;
+}
+.tripChooseMobile .BigList p {
+  font-weight: bolder;
+  margin: 10px;
+}
+.tripChooseMobile .BigList .ListTitle {
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  text-align: center;
+  line-height: 50px;
+}
+.tripChooseMobile .BigList .tripAndDate {
+  border-bottom: 1px solid #F5F0DD;
+  padding: 10px;
+}
+.tripChooseMobile .BigList .tripAndDate input {
+  width: 200px;
+  background-color: #0C1244;
+}
+.tripChooseMobile .BigList ul {
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px 0;
+}
+.tripChooseMobile .BigList ul li {
+  align-content: center;
+}
+.tripChooseMobile .BigList ul li:first-Child {
+  text-align: center;
+  width: 80px;
+}
+.tripChooseMobile .BigList ul li:nth-Child(2) {
+  width: 50px;
+  text-align: center;
+}
+.tripChooseMobile .BigList ul li:nth-Child(3) {
+  width: 100px;
+  text-align: center;
+}
+.tripChooseMobile .BigList .tripList {
+  border-bottom: 1px solid #F5F0DD;
+}
+.tripChooseMobile .BigList .FoodList {
+  border-bottom: 1px solid #F5F0DD;
+}
+.tripChooseMobile .BigList .StayList {
+  border-bottom: 1px solid #F5F0DD;
+}
+.tripChooseMobile .BigList .totalBlock {
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.tripChooseMobile .BigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tripChooseMobile .BigList .totalBlock .totalTitle span {
+  font-size: 16px;
+}
+.tripChooseMobile .BigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 20.5px;
+  text-align: center;
+}
+.tripChooseMobile .BigList .totalBlock .totalPrice span {
+  font-size: 20px;
+  color: #FFBF44;
+}
+.tripChooseMobile .BigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
+.tripChooseMobile .tripChooseBlock {
+  width: 90%;
+  height: 640px;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+.tripChooseMobile .tripChooseBlock .itineraryTitle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 66px;
+  align-items: center;
+}
+.tripChooseMobile .tripChooseBlock .itineraryTitle .chooseDate {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+  justify-content: center;
+  border-bottom: 1px solid #F5F0DD;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockB #tripPriceA {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA .morningBlockA #itineraryText {
+  width: 180px;
+}
+.tripChooseMobile .tripChooseBlock .morningItineraryA #addItineraryM {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockB #tripPriceB {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockA {
+  display: flex;
+  border-radius: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary .noonBlockA #itineraryTextB {
+  width: 180px;
+}
+.tripChooseMobile .tripChooseBlock .noonItinerary #addItineraryN {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockB #tripPriceC {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary .eveningBlockA #itineraryTextC {
+  width: 180px;
+}
+.tripChooseMobile .tripChooseBlock .eveningItinerary #addItineraryE {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile .foodChooseBlock {
+  width: 90%;
+  height: 640px;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+.tripChooseMobile .foodChooseBlock .foodTitle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 66px;
+  align-items: center;
+}
+.tripChooseMobile .foodChooseBlock .foodTitle .chooseDate {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
+.tripChooseMobile .foodChooseBlock .morningFood {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+  justify-content: center;
+  border-bottom: 1px solid #F5F0DD;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodB #foodPriceA {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodA {
+  display: flex;
+  border-radius: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood .morningFoodA #foodTextA {
+  width: 180px;
+}
+.tripChooseMobile .foodChooseBlock .morningFood #addFoodM {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodB #foodPriceB {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodA {
+  display: flex;
+  border-radius: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood .noonFoodA #foodTextB {
+  width: 180px;
+}
+.tripChooseMobile .foodChooseBlock .noonFood #addFoodN {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodB p {
+  width: 120px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodB select {
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+  margin-right: 5px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodB #foodPriceC {
+  border: 1px solid #F5F0DD;
+  width: 120px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood .eveningFoodA #foodTextC {
+  width: 180px;
+}
+.tripChooseMobile .foodChooseBlock .eveningFood #addFoodE {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile .stayChooseBlock {
+  width: 90%;
+  height: 640px;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+.tripChooseMobile .stayChooseBlock .stayTitle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 66px;
+  align-items: center;
+}
+.tripChooseMobile .stayChooseBlock .stayTitle .chooseDate {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
+.tripChooseMobile .stayChooseBlock .cabin {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+  justify-content: center;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB .cabinTitle {
+  display: flex;
+  align-items: center;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB .cabinTitle #cabinButton {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 5px;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB select {
+  width: 100px;
+  height: 37px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB select option {
+  text-align: center;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockB #cabinPrice {
+  border: 1px solid #F5F0DD;
+  width: 100px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockA {
+  display: flex;
+  border-radius: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockA #cabinImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .stayChooseBlock .cabin .cabinBlockA #cabinText {
+  width: 180px;
+}
+.tripChooseMobile .stayChooseBlock .cabin #addcabin {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile .stayChooseBlock .camping {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockB .campingTitle {
+  display: flex;
+  align-items: center;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockB .campingTitle #campingButton {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 5px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockB select {
+  width: 100px;
+  height: 37px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockB #campingPrice {
+  border: 1px solid #F5F0DD;
+  width: 100px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockA {
+  display: flex;
+  border-radius: 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockA #campingImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .stayChooseBlock .camping .campingBlockA #campingText {
+  width: 180px;
+}
+.tripChooseMobile .stayChooseBlock .camping #addCamping {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.tripChooseMobile .stayChooseBlock .villa {
+  border-top: 2px solid #F5F0DD;
+  padding: 5px;
+  height: 178px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockB .villaTitle {
+  display: flex;
+  align-items: center;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockB .villaTitle #villaButton {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 5px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockB select {
+  width: 100px;
+  height: 37px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  text-align: center;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockB #villaPrice {
+  border: 1px solid #F5F0DD;
+  width: 100px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockA #villaImg {
+  margin: 5px;
+  width: 120px;
+  height: 97px;
+}
+.tripChooseMobile .stayChooseBlock .villa .villaBlockA #villaText {
+  width: 180px;
+}
+.tripChooseMobile .stayChooseBlock .villa #addVilla {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tripChooseMobile #NextPage {
+  display: block;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  margin: 50px auto;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.tripChooseMobile #NextPage:hover {
+  color: #0C1244;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
   cursor: pointer;
 }
 
