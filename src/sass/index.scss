@@ -25,15 +25,33 @@
 
         // margin-bottom: 300px;
         .wrapper {
-            width: 1180px;
+            // width: 1180px;
+            width: 100%;
             margin: 0 auto;
+
+            // index main sun & moon video intro
+            .videoWrappper {
+                // position: relative;
+
+                .index_video {
+                    top: 0;
+                    left: 0;
+                    object-fit: fill;
+                    position: absolute;
+                    z-index: -99;
+                    // width: 100vw;
+                    width: 100%;
+                    height: 100vh;
+                    overflow: hidden;
+                }
+            }
 
             .switchText {
                 // border: 1px white solid;
                 margin: 0 auto;
                 width: 260px;
                 height: 40px;
-                margin-top: 20px;
+                margin-top: 120px;
 
                 p {
                     color: white;
@@ -60,71 +78,6 @@
     }
 
 
-    // index main sun & moon video intro
-    .videoWrappper {
-        // position: relative;
-
-
-        .index_video {
-            top: 0;
-            left: 0;
-            object-fit: fill;
-            position: absolute;
-            z-index: -99;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-    }
-
-    nav {
-        height: 77px;
-        display: flex;
-        justify-content: space-between;
-
-        .bar {
-            display: block;
-            width: 50px;
-            height: 5px;
-            margin-bottom: 8px;
-            background-color: white;
-            // -webkit-transition: all 0.3s ease-in-out;
-            // transition: all 0.3s ease-in-out;
-        }
-
-        .book_button {
-            display: block;
-            width: 90px;
-            height: 30px;
-            color: $moon_color;
-            background-color: $sun_color;
-            border-radius: 15px;
-            text-align: center;
-            cursor: pointer;
-
-
-            &:hover {
-                background-color: $moon_color;
-                color: $sun_color;
-            }
-
-            a {
-                display: block;
-                text-decoration: none;
-                line-height: 30px;
-
-                &:hover {
-                    color: $sun_color;
-                }
-
-            }
-
-        }
-
-        .main_button img {
-            width: 90px;
-        }
-    }
 
     main {
         .parallax {
@@ -460,7 +413,7 @@
         }
 
         .instagram {
-            padding-bottom: 250px;
+            padding-bottom: 30px;
 
             .wrapper {
                 width: 1180px;
@@ -563,6 +516,7 @@
         .traffic {
             margin-top: 70px;
             text-align: center;
+            margin-bottom: 50px;
 
             .wrapper {
                 width: 1180px;

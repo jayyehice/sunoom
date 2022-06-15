@@ -53,6 +53,7 @@
 .information main .map .polaroid svg {
   display: block;
   margin: 0 auto;
+  color: #0C1244;
 }
 .information main .map .polaroid ul {
   width: 1010px;
@@ -405,6 +406,7 @@
 .information_moon main .map .polaroid svg {
   display: block;
   margin: 0 auto;
+  color: #F5F0DD;
 }
 .information_moon main .map .polaroid ul {
   width: 1010px;
