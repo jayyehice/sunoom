@@ -7,7 +7,6 @@
     "打包測試": "gulp default",
     "安裝套件": "npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
-    
   },
   "keywords": [],
   "author": "",
