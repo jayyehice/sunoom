@@ -10,6 +10,10 @@
     background-color: $sun_color;
     color: $moon_color;
 
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
+
     main{
         // border: 1px solid firebrick;
         // width: 1280px;
@@ -26,6 +30,12 @@
             @include mobile{
                 width: 479px;
                 
+            }
+
+            .crumbs{
+                @include mobile{
+                    display: none;
+                }
             }
         
             a{
@@ -183,6 +193,10 @@
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
+
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
 
     main{
         // border: 1px solid firebrick;

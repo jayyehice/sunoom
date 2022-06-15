@@ -29,6 +29,12 @@
                 width: 479px;
                 
             }
+
+            .crumbs{
+                @include mobile{
+                    display: none;
+                }
+            }
         
             a{
                 display: inline-block;
@@ -443,6 +449,12 @@
                 width: 479px;
                 
             }
+
+            .crumbs{
+                @include mobile{
+                    display: none;
+                }
+            }
         
             a{
                 display: inline-block;
@@ -832,5 +844,3 @@
     }
     
 }
-
-

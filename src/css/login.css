@@ -18,6 +18,11 @@
     width: 479px;
   }
 }
+@media (max-width: 579px) {
+  .login main .wrapper .crumbs {
+    display: none;
+  }
+}
 .login main .wrapper a {
   display: inline-block;
   text-decoration: none;
@@ -355,6 +360,11 @@
 @media (max-width: 579px) {
   .login_moon main .wrapper {
     width: 479px;
+  }
+}
+@media (max-width: 579px) {
+  .login_moon main .wrapper .crumbs {
+    display: none;
   }
 }
 .login_moon main .wrapper a {

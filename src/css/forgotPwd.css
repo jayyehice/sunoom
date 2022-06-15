@@ -2,6 +2,9 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.forgotPwd header {
+  border-top: 0.1px solid #F5F0DD;
+}
 .forgotPwd main {
   margin: 0 auto;
   box-sizing: border-box;
@@ -15,6 +18,11 @@
 @media (max-width: 579px) {
   .forgotPwd main .wrapper {
     width: 479px;
+  }
+}
+@media (max-width: 579px) {
+  .forgotPwd main .wrapper .crumbs {
+    display: none;
   }
 }
 .forgotPwd main .wrapper a {
@@ -157,6 +165,9 @@
 .forgotPwd_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+}
+.forgotPwd_moon header {
+  border-top: 0.1px solid #0C1244;
 }
 .forgotPwd_moon main {
   margin: 0 auto;
