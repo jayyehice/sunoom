@@ -1800,4 +1800,43 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
   line-height: 50px;
 }
 
+@media screen and (max-width: 575.98px) {
+  .live main .wrapper {
+    width: 100%;
+  }
+  .live main .wrapper .logCabin {
+    border: 1px solid black;
+  }
+  .live main .wrapper .logCabin .logCabinLeft {
+    width: 192px;
+    margin-top: 50px;
+    border: 1px red solid;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .logCabinText {
+    width: 192px;
+    margin: 0px 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t1 {
+    order: 3;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t2 {
+    order: 2;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t3 {
+    order: 1;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .forestImg {
+    width: 192px;
+  }
+  .live main .wrapper .logCabin .logCabinRight {
+    width: 333px;
+    border: 1px solid orange;
+  }
+  .live main .wrapper .logCabin .logCabinRight .logCabinImg {
+    width: 333px;
+  }
+}
+
 /*# sourceMappingURL=live.css.map */
