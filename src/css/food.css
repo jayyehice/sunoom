@@ -1,9 +1,15 @@
 .food {
   background-color: #F5F0DD;
 }
+.food .banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/food/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .food main {
-  border-left: 5px #0C1244 solid;
-  border-right: 5px #0C1244 solid;
   width: 1280px;
   margin: 0 auto;
 }
@@ -371,10 +377,17 @@
   .food {
     background-color: #F5F0DD;
   }
+  .food .banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/food/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
   .food main {
-    border-left: 1px red solid;
-    border-right: 1px red solid;
-    width: 536px;
+    width: calc(100% - 40px);
     margin: 0 auto;
   }
   .food main .wrapper_top .bread {
@@ -415,7 +428,7 @@
     -webkit-text-stroke: 1px #0C1244;
     font-size: 28px;
     text-align: center;
-    margin-top: px;
+    margin-top: 0px;
     margin-bottom: 7px;
     letter-spacing: 3px;
   }
@@ -435,18 +448,32 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  .food main .wrapper_top .food1 .food1_left .food1_img {
-    width: 350px;
-    margin-left: 20px;
+  .food main .wrapper_top .food1 .food1_rwd {
+    display: flex;
   }
-  .food main .wrapper_top .food1 .food1_right {
-    width: calc(100% - 370px);
+  .food main .wrapper_top .food1 .food1_rwd .food1_left {
+    float: initial;
+    width: 70%;
+    background-image: url("../img/food/square1-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .food main .wrapper_top .food1 .food1_rwd .food1_left .food1_img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+  .food main .wrapper_top .food1 .food1_rwd .food1_right {
+    float: initial;
+    width: 30%;
     margin-top: 10px;
   }
-  .food main .wrapper_top .food1 .food1_right .food_right_top {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .food_right_top {
     display: none;
   }
-  .food main .wrapper_top .food1 .food1_right .food_right_top h3 {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .food_right_top h3 {
     color: #F5F0DD;
     -webkit-text-stroke: 1px #0C1244;
     font-size: 28px;
@@ -455,14 +482,14 @@
     margin-bottom: 7px;
     letter-spacing: 3px;
   }
-  .food main .wrapper_top .food1 .food1_right .food_right_top .slogan1 {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .food_right_top .slogan1 {
     color: #0C1244;
     font-size: 16px;
     text-align: center;
     margin-bottom: 7px;
     letter-spacing: 3px;
   }
-  .food main .wrapper_top .food1 .food1_right .food_right_top .underline {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .food_right_top .underline {
     width: 40%;
     margin: 0 auto;
     height: 1px;
@@ -471,13 +498,13 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .food main .wrapper_top .food1 .food1_right .meals {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .meals {
     margin-bottom: 27px;
     text-align: center;
     color: #0C1244;
     font-size: 16px;
   }
-  .food main .wrapper_top .food1 .food1_right .forklist {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .forklist {
     width: 85px;
     padding-left: 10px;
     display: flex;
@@ -485,14 +512,14 @@
     align-items: flex-start;
     margin: 0 auto;
   }
-  .food main .wrapper_top .food1 .food1_right .forklist .forkset {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .forklist .forkset {
     text-align: center;
   }
-  .food main .wrapper_top .food1 .food1_right .forklist .forkset .fa-solid {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .forklist .forkset .fa-solid {
     color: #0C1244;
     display: inline-block;
   }
-  .food main .wrapper_top .food1 .food1_right .forklist .forkset .ingredients {
+  .food main .wrapper_top .food1 .food1_rwd .food1_right .forklist .forkset .ingredients {
     margin-bottom: 20px;
     margin-left: 3px;
     color: #0C1244;
@@ -534,22 +561,33 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  .food main .wrapper_top .food2 .food2_right {
-    width: auto;
-    float: right;
+  .food main .wrapper_top .food2 .food2_rwd {
+    display: flex;
   }
-  .food main .wrapper_top .food2 .food2_right .food2_img {
-    width: 350px;
-    margin-right: 20px;
+  .food main .wrapper_top .food2 .food2_rwd .food2_right {
+    float: initial;
+    width: 70%;
+    background-image: url("../img/food/square2-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
-  .food main .wrapper_top .food2 .food2_left {
-    width: calc(100% - 370px);
+  .food main .wrapper_top .food2 .food2_rwd .food2_right .food2_img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .food main .wrapper_top .food2 .food2_rwd .food2_left {
+    float: initial;
+    width: 30%;
     margin-top: 10px;
   }
-  .food main .wrapper_top .food2 .food2_left .food2_left_top {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .food2_left_top {
     display: none;
   }
-  .food main .wrapper_top .food2 .food2_left h3 {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left h3 {
     color: #F5F0DD;
     font-size: 28px;
     text-align: center;
@@ -558,14 +596,14 @@
     letter-spacing: 3px;
     -webkit-text-stroke: 1px #0C1244;
   }
-  .food main .wrapper_top .food2 .food2_left .slogan1 {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .slogan1 {
     color: #0C1244;
     font-size: 16px;
     text-align: center;
     margin-bottom: 7px;
     letter-spacing: 3px;
   }
-  .food main .wrapper_top .food2 .food2_left .underline {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .underline {
     width: 40%;
     margin: 0 auto;
     height: 1px;
@@ -574,13 +612,13 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .food main .wrapper_top .food2 .food2_left .meals {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .meals {
     margin-bottom: 27px;
     text-align: center;
     color: #0C1244;
     font-size: 16px;
   }
-  .food main .wrapper_top .food2 .food2_left .forklist {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .forklist {
     width: 85px;
     padding-left: 10px;
     display: flex;
@@ -588,14 +626,14 @@
     align-items: flex-start;
     margin: 0 auto;
   }
-  .food main .wrapper_top .food2 .food2_left .forklist .forkset {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .forklist .forkset {
     text-align: center;
   }
-  .food main .wrapper_top .food2 .food2_left .forklist .forkset .fa-solid {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .forklist .forkset .fa-solid {
     color: #0C1244;
     display: inline-block;
   }
-  .food main .wrapper_top .food2 .food2_left .forklist .forkset .ingredients {
+  .food main .wrapper_top .food2 .food2_rwd .food2_left .forklist .forkset .ingredients {
     margin-bottom: 20px;
     margin-left: 3px;
     color: #0C1244;
@@ -621,9 +659,9 @@
     display: initial;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_left .restaurant1_pic1 {
-    margin: 0 30px;
+    margin: 0 0;
     margin-top: 30px;
-    width: 476px;
+    width: 100%;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right {
     border-top: 0px;
@@ -640,7 +678,6 @@
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top {
     padding-top: 0px;
     padding-left: 0px;
-    padding: 0 30px;
     box-sizing: border-box;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top p {
@@ -656,29 +693,33 @@
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom {
     padding-top: 0px;
     padding-left: 0px;
-    padding: 0 30px;
     margin-top: 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
   }
+  .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom .commentsArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom p {
     color: #0C1244;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     margin-bottom: 0px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom a {
     color: #0C1244;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 0px;
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 0px;
   }
   .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_bottom .booknow {
     float: initial;
     display: block;
-    width: 250px;
+    width: 50%;
     height: 60px;
     text-align: center;
     line-height: 60px;
