@@ -5,11 +5,24 @@
     background-color: $sun_color;
     color: $moon_color;
     main{
-        // .breadcrumbs{
-        //     height: 140px;
-        //     box-sizing: border-box;
-        //     border: $show_border;
-        // }
+        .breadcrumbs{
+            .wrapper{
+                width: 1070px;
+                margin: 0 auto;
+                // border: $show_border;
+                ul{
+    
+                    height: 140px;
+                    box-sizing: border-box;
+                    // border: $show_border;
+                    display: flex;
+                    align-items: center;
+                    li{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
     
         .map{
     
