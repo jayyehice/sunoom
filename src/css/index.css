@@ -328,6 +328,9 @@ nav .main_button img {
   top: 0;
   right: 0;
 }
+.index main .category .wrapper .LiveLand .LiveLandText .textarea_RWD {
+  display: none;
+}
 .index main .category .wrapper .LiveLand .LiveLandText .comments_area {
   margin-top: 40px;
   color: #0C1244;
@@ -712,6 +715,9 @@ nav .main_button img {
   top: 0;
   right: 0;
 }
+.index_moon main .category .wrapper .LiveLand .LiveLandText .textarea_RWD {
+  display: none;
+}
 .index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area {
   margin-top: 40px;
   color: #F5F0DD;
@@ -928,14 +934,14 @@ nav .main_button img {
   }
   .index main .category .wrapper .FoodSea img {
     display: block;
-    width: 476px;
+    width: calc(100% - 60px);
     margin: 0 auto;
   }
   .index main .category .wrapper .FoodSea .foodSeaText {
-    width: 476px;
+    width: calc(100% - 60px);
     height: 318px;
     top: unset;
-    right: 20px;
+    right: 30px;
     margin-top: 90px;
     padding-right: 45px;
     padding-left: 45px;
@@ -995,16 +1001,16 @@ nav .main_button img {
   }
   .index main .category .wrapper .LiveLand img {
     display: block;
-    width: 476px;
+    width: calc(100% - 60px);
     height: 350px;
     margin: 0 auto;
   }
   .index main .category .wrapper .LiveLand .LiveLandText {
-    width: 476px;
+    width: calc(100% - 60px);
     height: 318px;
     top: unset;
-    left: 15px;
-    margin-top: 90px;
+    left: 30px;
+    margin-top: 430px;
     padding-right: 45px;
     padding-left: 45px;
   }
@@ -1054,6 +1060,30 @@ nav .main_button img {
   .index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD:hover {
     background-color: #0C1244;
     color: #F5F0DD;
+  }
+  .index main .instagram {
+    padding-bottom: 0px;
+  }
+  .index main .instagram .wrapper {
+    width: 500px;
+  }
+  .index main .instagram .wrapper .instagramPhoto {
+    width: 500px;
+  }
+  .index main .instagram .wrapper .instagramPhoto .ig_img01 {
+    width: 160px;
+  }
+  .index main .instagram .wrapper .instagramPhoto .ig_img {
+    width: 110px;
+  }
+  .index main .instagram .wrapper .instagramPhoto .ig_img02 {
+    width: 142px;
+  }
+  .index main .instagram .wrapper .cloud03 {
+    display: none;
+  }
+  .index main .traffic .wrapper ul {
+    display: unset;
   }
 }
 

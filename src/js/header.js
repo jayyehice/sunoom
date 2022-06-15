@@ -3,7 +3,8 @@
 $(function(){
   
     // 按鈕狀態的切換
-    $("button.hamburger_icon").click(function(){
+    $("button.hamburger_icon").click(function(e){
+      e.preventDefault();
       $(this).toggleClass("-on");
       // 按鈕1消失
       $(this).hide();
@@ -17,7 +18,7 @@ $(function(){
       $("button.btn2").show();
 
      // 禁止滾動
-     $("body").addClass("overFlow");
+    //  $("body").addClass("overFlow");
 
 
      // 點擊按鈕，選單縮放
@@ -57,7 +58,7 @@ $(function(){
      },500);
     
      // 解開禁止滑動
-     $("body").removeClass("overFlow");
+    //  $("body").removeClass("overFlow");
 
 
      // 點擊按鈕，選單縮放
@@ -72,11 +73,26 @@ $(function(){
     });
 });
 
+function imgSwitch(){
+  let img_tag = document.getElementsByTagName("img");
+
+  for(let i=0; i<img_tag.length; i++){
+    
+    if(img_tag[i].getAttribute("src").includes("/sun/")){
+        img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
+    }else if(img_tag[i].getAttribute("src").includes("/moon/")){
+        img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
+    }
+
+  }
+
+}
   
   
 // 日按紐
   $(function(){
     
+    //加上className_moon by Jay
     let moon_class = $("body")[0].className + "_moon";
 
 
@@ -108,8 +124,8 @@ $(function(){
 
       
 
-      
-
+      //照片切換 by Jay
+      imgSwitch()
     });
 
 
@@ -136,8 +152,8 @@ $(function(){
       // $("button.hamburger_icon_moon").hide();
       // $("button.hamburger_icon").show();
       
-      
-      
+      //照片切換 by Jay
+      imgSwitch()
     });
 
   });

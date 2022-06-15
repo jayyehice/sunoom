@@ -20,6 +20,7 @@ button.hamburger_icon {
   cursor: pointer;
   outline: none;
   background: none;
+  z-index: 100;
   /* 每一條橫線的樣式 */
   /* 最上面那條線的樣式 */
   /* 最下面那條線的樣式 */
@@ -133,8 +134,10 @@ header a {
   color: #ccc;
 }
 header nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: none;
+  z-index: 100;
 }
 header video {
   position: absolute;
@@ -199,6 +202,7 @@ header .headerRight {
   position: fixed;
   right: 50px;
   top: 50px;
+  z-index: 100;
 }
 header .headerRight .moonPay {
   display: none;

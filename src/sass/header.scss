@@ -30,6 +30,8 @@ button.hamburger_icon{
   outline: none;
   background: none;
 
+  z-index: 100;
+
   /* 每一條橫線的樣式 */
   span.-hr{
     height: 1px;
@@ -164,9 +166,12 @@ header{
   } 
   
   nav{
-      position: relative;
+      // position: relative;
+      position: fixed;
+      width: 100%;
       display: none;
       // border: 1px solid rgb(255, 207, 207);
+      z-index: 100;
   
   }
   
@@ -298,6 +303,8 @@ header{
     position: fixed;
     right: 50px;
     top: 50px;
+
+    z-index: 100;
 
     .sunPay{
 
