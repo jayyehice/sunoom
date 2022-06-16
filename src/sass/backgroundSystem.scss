@@ -1,0 +1,579 @@
+
+
+
+.backgroundSystem{
+    input{
+        border:1px solid #0C1244;
+    }
+    textarea{
+        border:1px solid #0C1244;
+    }
+    button{
+        border:1px solid #0C1244;
+    }
+    color: #0C1244;
+}
+
+
+header{
+    background-color: #F5F0DD;
+    height: 100px;
+    .out{
+        height: 30px;
+        width: 60px;
+        text-align: center;
+        align-self: center;
+    }
+    .document{
+        font-size: 30px;
+        align-self: center;
+        color: #0C1244;
+        cursor:pointer;
+    }
+    .mail{
+        font-size: 30px;
+        align-self: center;
+        cursor:pointer;
+    }
+    button{
+        background-color: #F5F0DD;
+        border-radius: 10%;
+        cursor:pointer;
+        &:hover{
+            background-color: #0C1244;
+            color: #F5F0DD
+        }
+    }
+}
+.logo{
+    background-color: #0C1244;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    img{
+        margin: 10px 0;
+    }
+    
+}
+
+.backwrapper{
+    display: flex;
+    padding: 0;
+    height: 100%;
+    color: #0C1244;
+
+    nav{
+        height: 85vh;
+
+        .leftNav{
+            display:flex;
+            flex-direction: column;
+            background-color: #0C1244;
+            height: 100%;
+            // margin-top: 30px;
+        .admin{
+            height: 100px;
+            background-color: #0C1244;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 50px;
+                height: 50px;
+                align-self: center;
+                
+            }
+            .user{
+                align-self: center;
+            }
+            h5{
+                margin-left: 5px;
+                color: #F5F0DD;
+                font-size: 20px;
+            }
+            h6{
+                font-size: 16px;
+                color: #F5F0DD;
+            }
+        }
+    
+
+        a{
+            // width: 150px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #0C1244;
+            border-top: 1px solid #F5F0DD ;
+            border-bottom: 1px solid #F5F0DD ;
+            color: #F5F0DD;
+            cursor:pointer;
+            &:hover{
+                background-color: #F5F0DD;
+                color: #0C1244;
+            }
+        }
+    }
+}
+    .listTitle{
+        margin: 20px;
+        .Title{
+            display: flex;
+            h3{
+                margin: 0 20px;
+                align-self: center;
+                color: 0C1244;
+                text-decoration:underline;
+            }
+            button{
+                background-color: #F5F0DD;
+                color: #0C1244;
+                &:hover{
+                    background-color: #0C1244;
+                    color: #F5F0DD
+                    }
+            }
+        }
+        .checkList{
+            margin: 20px;
+            display: flex;
+            h4{
+                margin: 0  20px;
+                background-color:#F5F0DD;
+                align-self: center;
+                text-align: center;
+                color: 0C1244;
+                &:hover{
+                    background-color: #0C1244;
+                    color: #F5F0DD
+                    }
+            }
+            .addNew{
+                display: flex;
+                
+                i{
+                    font-size: 20px;
+                    align-self: center;
+                    &:hover{
+                        background-color: #0C1244;
+                        color: #F5F0DD
+                        }
+                }
+                span{
+                    text-align: center;
+                    line-height: 30px;
+                    width: 60px;
+                    height: 30px;
+                    background-color: #F5F0DD;
+                    border-radius: 10%;
+                    &:hover{
+                        background-color: #0C1244;
+                        color: #F5F0DD
+                        }
+                }
+            }
+
+        }
+        .table{
+            height: 100%;
+        }
+        .tableBox{
+            border: 1px solid #0C1244;
+            padding:  0 12px;
+        }
+       ul{
+            display: flex;
+            margin: 1px 0;
+            border: 1px solid #0C1244;
+       }
+       .tableTitle{
+           background-color: #F5F0DD;
+           color: #0C1244;
+           margin: 0;
+       }
+       li{
+           height: 40px;
+           line-height: 40px;
+           text-align: center;
+           button{
+               height: 30px;
+               text-align: center;
+               line-height: 30px;
+               background-color: #F5F0DD;
+               &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD
+                }
+           }
+       }
+    }
+    .pageList{
+        display: flex;
+        li{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            border: 1px solid #0C1244;
+            line-height: 20px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+            background-color: #0C1244;
+            color: #F5F0DD
+            }
+        }
+
+    }
+    .table>:not(:first-child) { //不明線條取消用
+        border-top: 0px solid currentColor;
+    }
+    
+
+}
+.formBody_00{
+    width: 800px;
+    height: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    // box-shadow: 3px 3px 3px#0C1244;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form{
+        display: flex;
+        justify-content: center;
+        span{
+            display: inline-block;
+            margin:15px 0;
+            text-align: center;
+            width: 70px;
+        }
+        .leftForm{
+            text-align: center;
+        }
+        .rightForm{
+            text-align: center;
+            &::before{
+                content:'';
+                background-color: #0C1244;
+                width: 2px;
+                height: 350px;
+                display: block;
+                position: absolute;
+                left: 400px;
+            }
+        }
+    }
+    .buttonBlock{
+        margin: 60px 0;
+        button{
+            height: 50px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_01{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form_01{
+        display: flex;
+        justify-content: center;
+        span{
+            display: inline-block;
+            margin:15px 0;
+            // text-align: center;
+            width: 70px;
+        }
+        .leftForm_01{
+            text-align: center;
+        }
+        .rightForm_01{
+            text-align: center;
+            &::before{
+                content:'';
+                background-color: #0C1244;
+                width: 2px;
+                height: 300px;
+                display: block;
+                position: absolute;
+                left: 400px;
+            }
+            button{
+                background-color: #F5F0DD;
+                color: #0C1244;
+                &:hover{
+                    background-color: #0C1244;
+                    color: #F5F0DD;
+                }
+            }
+        }
+    }
+    .buttonBlock_01{
+        margin: 60px 0;
+        button{
+            height: 50px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_02{
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form_02{
+        span{
+            display: inline-block;
+            // text-align: center;
+            width: 70px;
+            margin-bottom: 15px;
+        }
+    }
+    .buttonBlock_02{
+        margin: 30px 0;
+        button{
+            height: 30px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_03{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form_03{
+        display: flex;
+        justify-content: center;
+        span{
+            display: inline-block;
+            margin:15px 0;
+            // text-align: center;
+            width: 70px;
+        }
+        .leftForm_03{
+            text-align: center;
+        }
+        .rightForm_03{
+            text-align: center;
+            &::before{
+                content:'';
+                background-color: #0C1244;
+                width: 2px;
+                height: 300px;
+                display: block;
+                position: absolute;
+                left: 400px;
+            }
+        }
+    }
+    .buttonBlock_03{
+        margin: 60px 0;
+        button{
+            height: 50px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_04{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    h2{
+        text-align: center;
+        margin: 20px;
+    }
+    .Form_04{
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+        span{
+            display: inline-block;
+            margin:15px 0;
+            // text-align: center;
+            width: 70px;
+        }
+        textarea{
+            height: 100px;
+        }
+        
+    }
+    .buttonBlock_04{
+        margin: 40px 0;
+        button{
+            height: 50px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_05{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form_05{
+        span{
+            display: inline-block;
+            // text-align: center;
+            width: 70px;
+            margin-bottom: 15px;
+        }
+    }
+    .buttonBlock_05{
+        margin: 40px 0;
+        button{
+            height: 30px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}
+.formBody_06{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #F5F0DD;
+    display: none;
+    border-radius: 5%;
+    border: 1px solid #0C1244;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .Form_06{
+        display: flex;
+        justify-content: center;
+        span{
+            display: inline-block;
+            margin:15px 0;
+            text-align: center;
+            width: 70px;
+        }
+        .leftForm_06{
+            text-align: center;
+        }
+        .rightForm_06{
+            text-align: center;
+            &::before{
+                content:'';
+                background-color: #0C1244;
+                width: 2px;
+                height: 200px;
+                display: block;
+                position: absolute;
+                left: 400px;
+                }
+            button{
+                background-color: #F5F0DD;
+                color: #0C1244;
+                &:hover{
+                    background-color: #0C1244;
+                    color: #F5F0DD;
+                }
+            }
+        }
+    }
+    .buttonBlock_06{
+        margin: 60px 0;
+        button{
+            height: 60px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+            &:hover{
+                background-color: #0C1244;
+                color: #F5F0DD;
+            }
+        }
+    }
+}

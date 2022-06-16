@@ -1,6 +1,10 @@
 .set {
   background-color: #F5F0DD;
   color: #0C1244;
+  font-family: "Times New Roman", "Noto Sans TC", sans-serif;
+}
+.set header {
+  border-top: 0.1px solid #F5F0DD;
 }
 .set main {
   margin: 0 auto;
@@ -22,6 +26,49 @@
     width: 479px;
   }
 }
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs {
+    margin: 50px 0 20px 0;
+  }
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs a {
+    font-size: 24rem;
+    width: 185px;
+  }
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs span:first-child {
+    display: inline-block;
+    width: 185px;
+    height: 50px;
+    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
+    background-color: #F5F0DD;
+    color: #0C1244;
+    border: 1px solid #0C1244;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs span:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs span:last-child {
+    display: inline-block;
+    width: 185px;
+    height: 50px;
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
+    background-color: #0C1244;
+    color: #F5F0DD;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24rem;
+  }
+}
 .set main .wrapper a {
   display: inline-block;
   text-decoration: none;
@@ -37,12 +84,26 @@
 @media (max-width: 579px) {
   .set main h3 {
     font-size: 28rem;
+    display: none;
   }
 }
 .set main .setTopNav {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+@media (max-width: 579px) {
+  .set main .setTopNav {
+    margin-bottom: 50px;
+  }
+}
+.set main .setTopNav .none {
+  display: none;
+}
+@media (max-width: 579px) {
+  .set main .setTopNav .none {
+    display: block;
+  }
 }
 @media (max-width: 579px) {
   .set main .setTopNav {
@@ -60,22 +121,26 @@
   .set main .setTopNav li {
     margin-left: 0;
     margin-bottom: 20px;
+    margin-right: 40px;
   }
-  .set main .setTopNav li:nth-child(2) {
-    border: 1px solid rebeccapurple;
-    margin-right: 20px;
-    margin-left: 20px;
+  .set main .setTopNav li:nth-child(3n) {
+    margin-right: 0;
   }
-  .set main .setTopNav li:nth-child(5) {
-    border: 1px solid rebeccapurple;
-    margin-right: 20px;
-    margin-left: 20px;
+}
+@media (max-width: 579px) {
+  .set main .setTopNav li a h4 {
+    display: none;
   }
 }
 .set main .wrapper .setLogin {
   display: block;
   text-align: center;
   font-size: 24rem;
+}
+@media (max-width: 579px) {
+  .set main .wrapper .setLogin {
+    line-height: 30px;
+  }
 }
 .set main .wrapper .setLogin .setSpeaker {
   display: inline-block;
@@ -94,10 +159,12 @@
 }
 @media (max-width: 579px) {
   .set main .setMain {
+    margin-top: 50px;
     width: 476px;
-    height: 800px;
+    height: 810px;
     display: block;
     text-align: center;
+    border: 0;
     position: relative;
   }
 }
@@ -130,8 +197,9 @@
 }
 @media (max-width: 579px) {
   .set main .setMain .setText {
+    width: 430px;
     padding: 0;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-right: 10px;
     text-align: left;
   }
@@ -144,7 +212,7 @@
 @media (max-width: 579px) {
   .set main .setMain .setText .setTextPic {
     width: 80px;
-    right: 64px;
+    right: 20px;
     top: 30px;
   }
 }
@@ -197,19 +265,16 @@
 .set main .setMain .setText .setTextBotm .stbS p {
   margin: 0;
 }
-.set main .setMain .setText .setTextBotm .stbS a .stbSP {
-  margin-right: 10px;
-  position: relative;
-  right: 0;
-  top: 7px;
+.set main .setMain .setText .setTextBotm .stbS a i {
+  color: #0C1244;
 }
 @media (max-width: 579px) {
   .set main .setMain .setText .setTextBotm .stbS {
-    margin-right: 100px;
+    margin-right: 70px;
   }
 }
 .set main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #000;
+  border: 1px solid #0C1244;
   width: 140px;
   height: 50px;
   text-align: center;
@@ -220,6 +285,10 @@
 @media (max-width: 579px) {
   .set main .setMain .setText .setTextBotm .setBook {
     margin-right: 10px;
+    cursor: pointer;
+    color: #F5F0DD;
+    border: 1.5px solid #F5F0DD;
+    background-color: #0C1244;
   }
 }
 .set main .setMain .setText .setTextBotm .setBook:hover {
@@ -235,6 +304,10 @@
 .set_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+  font-family: "Times New Roman", "Noto Sans TC", sans-serif;
+}
+.set_moon header {
+  border-top: 0.1px solid #0C1244;
 }
 .set_moon main {
   margin: 0 auto;
@@ -242,9 +315,61 @@
   line-height: 1.6;
   letter-spacing: 3px;
 }
+@media (max-width: 579px) {
+  .set_moon main {
+    line-height: 24rem;
+  }
+}
 .set_moon main .wrapper {
   width: 1080px;
   margin: 0 auto;
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper {
+    width: 479px;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs {
+    margin: 50px 0 20px 0;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs a {
+    font-size: 24rem;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs span:first-child {
+    display: inline-block;
+    width: 185px;
+    height: 50px;
+    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
+    background-color: #0C1244;
+    color: #F5F0DD;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs span:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs span:last-child {
+    display: inline-block;
+    width: 185px;
+    height: 50px;
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
+    background-color: #F5F0DD;
+    color: #0C1244;
+    border: 1px solid #0C1244;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24rem;
+  }
 }
 .set_moon main .wrapper a {
   display: inline-block;
@@ -258,10 +383,29 @@
   margin-top: 62px;
   margin-bottom: 55px;
 }
+@media (max-width: 579px) {
+  .set_moon main h3 {
+    font-size: 28rem;
+    display: none;
+  }
+}
 .set_moon main .setTopNav {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+.set_moon main .setTopNav .none {
+  display: none;
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav .none {
+    display: block;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav {
+    flex-wrap: wrap;
+  }
 }
 .set_moon main .setTopNav li:first-child {
   margin-left: 0;
@@ -269,6 +413,21 @@
 .set_moon main .setTopNav li {
   text-align: center;
   margin-left: 50px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+  .set_moon main .setTopNav li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav li a h4 {
+    display: none;
+  }
 }
 .set_moon main .wrapper .setLogin {
   display: block;
@@ -290,11 +449,31 @@
   margin-bottom: 50px;
   justify-content: space-between;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain {
+    width: 476px;
+    height: 800px;
+    display: block;
+    text-align: center;
+    border: 0;
+    position: relative;
+  }
+}
 .set_moon main .setMain .setPic {
   padding: 65px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic {
+    padding: 10px;
+  }
+}
 .set_moon main .setMain .setPic > img {
   margin-bottom: 10px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic > img {
+    margin-bottom: 0;
+  }
 }
 .set_moon main .setMain .setPic .setPicS > img:nth-child(2) {
   margin: 0 7px;
@@ -307,14 +486,38 @@
   padding-left: 0;
   position: relative;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText {
+    width: 430px;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
 .set_moon main .setMain .setText .setTextPic {
   position: absolute;
   right: 64px;
   top: 130px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextPic {
+    width: 80px;
+    right: 20px;
+    top: 30px;
+  }
+}
 .set_moon main .setMain .setText h4 {
   text-align: left;
   margin-bottom: 20px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText h4 {
+    position: absolute;
+    right: 180px;
+    top: -280px;
+    font-weight: 800;
+  }
 }
 .set_moon main .setMain .setText h5 {
   margin-bottom: 20px;
@@ -323,9 +526,19 @@
   margin: 0;
   margin-bottom: 25px;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextTitle {
+    margin-bottom: 20px;
+  }
+}
 .set_moon main .setMain .setText .setTextWord {
   margin: 0;
   margin-bottom: 30px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextWord {
+    margin-bottom: 20px;
+  }
 }
 .set_moon main .setMain .setText .setTextWord2 {
   margin: 0;
@@ -335,23 +548,39 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm {
+    justify-content: start;
+  }
+}
 .set_moon main .setMain .setText .setTextBotm .stbS p {
   margin: 0;
 }
-.set_moon main .setMain .setText .setTextBotm .stbS a .stbSP {
-  margin-right: 10px;
-  position: relative;
-  right: 0;
-  top: 7px;
+.set_moon main .setMain .setText .setTextBotm .stbS a i {
+  color: #F5F0DD;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .stbS {
+    margin-right: 70px;
+  }
 }
 .set_moon main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #000;
+  border: 1px solid #F5F0DD;
   width: 140px;
   height: 50px;
   text-align: center;
   line-height: 50px;
   color: #F5F0DD;
   background-color: #0C1244;
+}
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .setBook {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0C1244;
+    border: 1.5px solid #0C1244;
+    background-color: #F5F0DD;
+  }
 }
 .set_moon main .setMain .setText .setTextBotm .setBook:hover {
   cursor: pointer;

@@ -1,3 +1,5 @@
+$sun : #F5F0DD;
+$moon :#0C1244;
 $h1 : 48px;
 $h2 : 40px;
 $h3 : 32px;
@@ -6,14 +8,19 @@ $h5 : 20px;
 $h6 : 12px;
 $p : 16px;
 
-$sun : #F5F0DD;
-$moon :#0C1244;
-
 .sea{
+    
     background-image: url('../img/sea/seapage2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 600px;
+
+    header .headerCenter {
+        position: absolute;
+        z-index: 100;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -38,6 +45,10 @@ main{
             text-align: center;
             line-height: 50px;
         }
+    }
+    // RWD專用起始線
+    .line0{
+        display: none;
     }
     // 線條一
     .line1{
@@ -734,29 +745,575 @@ main{
 
 
 //RWD(海遊)----------------------------------------------------------------------------
-.sea{
-    background-image: url('../img/sea/seapage2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 600px;
-}
-
-
-main{
-    // banner區塊
-    .banner{
-        position: relative;
-        height: 100vh;
-        width: 100%;
-        background-image: url('../img/sea/turtle.png');
+@media screen and (max-width : 575.98px){
+    
+    .sea{
+        $h1 : 40px;
+        $h2 : 36px;
+        $h3 : 28px;
+        $h4 : 24px;
+        $h5 : 20px;
+        $h6 : 12px;
+        $p : 16px;
+    
+        $sun : #F5F0DD;
+        $moon :#0C1244;
+        background-image: url('../img/sea/seapage2.png');
         background-size: cover;
         background-repeat: no-repeat;
-        outline: 1px solid red;
-        // 點點起始
-        .begin{
+        background-position-y: 600px;
+    }
+    
+    
+    main{
+        // banner區塊
+        .banner{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('../img/sea/turtle.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 35% center;
+            // 點點起始
+            .begin{
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $sun;
+                // text-align: center;
+                line-height: 30px;
+            }
+        }
+        // RWD專用線條
+            .line0{
+            display: block;
             position: absolute;
-            bottom: 60px;
-            left: calc(50% - 50px);
+            top: -132px;
+            left: 278px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        // 線條一
+        .line1{
+            position: absolute;
+            top: -89px;
+            left:400px;
+            display: none;
+        }
+        // 線條二
+        .line2{
+            position: absolute;
+            top: 380px;
+            left:480px;
+            z-index: -1;
+            display: none;
+        }
+        // 線條三
+        .line3{
+            position: absolute;
+            top: 820px;
+            left:475px;
+            z-index: -1;
+            display: none;
+        }
+        // 線條四
+        .line4{
+            position: absolute;
+            top: 1220px;
+            left:385px;
+            z-index: -1; 
+            display: none;   
+        }
+        // 線條五
+        .line5{
+            position: absolute;
+            top: 1655px;
+            left:385px;
+            z-index: -1;  
+            display: none;  
+        }
+        // 線條六
+        .line6{
+            position: absolute;
+            top: 2075px;
+            left:385px;
+            z-index: -1; 
+            display: none;  
+        }
+    
+        // 泡泡一
+        .bubble1{
+            position: absolute;
+            top: 75px;
+            left:550px; 
+            z-index: -1; 
+            display: none; 
+        }
+        // 泡泡二
+        .bubble2{
+            position: absolute;
+            top: 540px;
+            left:155px; 
+            z-index: -1;  
+            display: none;
+        }
+        // 泡泡三
+        .bubble3{
+            position: absolute;
+            top: 940px;
+            left:725px; 
+            z-index: -1;
+            display: none;  
+        }
+        // 泡泡四
+        .bubble4{
+            position: absolute;
+            top: 1375px;
+            left:150px; 
+            z-index: -1; 
+            display: none; 
+        }
+        // 泡泡五
+        .bubble5{
+            position: absolute;
+            top: 1795px;
+            left:500px; 
+            z-index: -1;  
+            display: none;
+        }
+        // 泡泡六
+        .bubble6{
+            position: absolute;
+            top: 2155px;
+            left:930px; 
+            z-index: -1;  
+            display: none;
+        }
+    
+         // 游泳的海龜
+         .seaturtle{
+            position: absolute;
+            top: 1095px;
+            left:715px; 
+            z-index: 0; 
+            display: none; 
+        }
+        // 多利
+        .dory{
+            position: absolute;
+            top: 2125px;
+            left:995px; 
+            z-index: 0; 
+            display: none; 
+        }
+        // 魚群
+        .fish{
+            position: absolute;
+            top: 2400px;
+            left:0px; 
+            z-index: 0; 
+            display: none; 
+        }
+    
+        // 海遊活動區塊
+        .activity{
+            // width: 100%;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            position: relative;
+            // 麵包屑
+            .bread{
+                color: $moon;
+                font-size: $p;
+                margin-top: 0px;
+                margin-left: 0px;
+                letter-spacing: 0px;
+            
+                a{
+                    text-decoration: none;
+                    color: $moon;
+                    margin-right: 10px;
+                }
+            }
+            // 活動1:潛水
+            .wrapper1{
+                display: flex;
+                flex-direction: column;
+                margin-top: 0px;
+                // align-items: center;
+                // justify-content: center;
+                .activity1_pic{
+                    .pic1{
+                        margin-top: 100px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 300px;
+                    }
+                }
+                .activity1{
+                    width: 305px;
+                    margin-left: 0px;
+                    h3{
+                        color: $sun;
+                        font-size: $h3;
+                        letter-spacing: 3px;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+                    p{
+                        color: $sun;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+    
+                    // 評論(下)
+                    .comment_top{
+                        display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        .fa-star{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-circle-plus{
+                            color: $sun;
+                        }
+                        .icon_top{
+                            display: flex;
+                            margin-left: auto;
+                        }
+                    }
+                    // 評論(上)
+                    .comment_bottom{
+                        display: flex;
+                        align-items: center;
+                        .fa-circle-plus{
+                            color: $sun;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: $sun;
+                            font-size: $p;
+                            letter-spacing: 3px;
+                            text-decoration: none;
+                        } 
+                        .icon_bottom{
+                            display: flex;
+                            margin-left: auto;
+                        }   
+                    }
+                }
+            }
+            // 活動2:遊艇
+            .wrapper2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+                // justify-content: center;
+                .activity2_pic{
+                    order: 1;
+                    .pic2{
+                        margin-left: 20px;
+                    }
+                }
+                .activity2{
+                    order: 2;
+                    width: 305px;
+                    margin-left: 0px;
+                    h3{
+                            color: $sun;
+                            font-size: $h3;
+                            letter-spacing: 3px;
+                            text-align: center;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                    }
+                    p{
+                        color: $sun;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+    
+                    // 評論(上)
+                    .comment_top{
+                        display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        .fa-star{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-circle-plus{
+                            color: $sun;
+                        }
+                        .icon_top{
+                            display: flex;
+                            margin-left: auto;
+                        }
+                    }
+                    // 評論(下)
+                    .comment_bottom{
+                        display: flex;
+                        align-items: center;
+                        .fa-circle-plus{
+                            color: $sun;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: $sun;
+                            font-size: $p;
+                            letter-spacing: 3px;
+                            text-decoration: none;
+                        } 
+                        .icon_bottom{
+                            display: flex;
+                            margin-left: auto;
+                        }   
+                    }
+                }
+            }
+            // 活動3:出海釣魚
+            .wrapper3{
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                align-items: center;
+                // justify-content: center;
+                .activity3_pic{
+                    .pic3{
+                        margin-left: 0px;
+                    }
+                }
+                .activity3{
+                    width: 305px;
+                    margin-left: 20px;
+                    h3{
+                        color: $sun;
+                        font-size: $h3;
+                        text-align: center;
+                        letter-spacing: 3px;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        color: $sun;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+    
+                    // 評論(上)
+                    .comment_top{
+                        display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        .fa-star{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-circle-plus{
+                            color: $sun;
+                        }
+                        .icon_top{
+                            display: flex;
+                            margin-left: auto;
+                        }
+                    }
+                    // 評論(上)
+                    .comment_bottom{
+                        display: flex;
+                        align-items: center;
+                        .fa-circle-plus{
+                            color: $sun;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: $sun;
+                            font-size: $p;
+                            letter-spacing: 3px;
+                            text-decoration: none;
+                        } 
+                        .icon_bottom{
+                            display: flex;
+                            margin-left: auto;
+                        }   
+                    }
+                }
+            }
+            // 活動4:浮潛
+            .wrapper4{
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                align-items: center;
+                // justify-content: center;
+                .activity4_pic{
+                    order: 1;
+                    .pic4{
+                        margin-left: 20px;
+                    }
+                }
+                .activity4{
+                    order: 2;
+                    width: 305px;
+                    margin-left: 0px;
+                    h3{
+                        color: $sun;
+                        font-size: $h3;
+                        letter-spacing: 3px;
+                        text-align: center;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        color: $sun;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+    
+                    // 評論(上)
+                    .comment_top{
+                        display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        .fa-star{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-circle-plus{
+                            color: $sun;
+                        }
+                        .icon_top{
+                            display: flex;
+                            margin-left: auto;
+                        }
+                    }
+                    // 評論(下)
+                    .comment_bottom{
+                        display: flex;
+                        align-items: center;
+                        .fa-circle-plus{
+                            color: $sun;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: $sun;
+                            font-size: $p;
+                            letter-spacing: 3px;
+                            text-decoration: none;
+                        } 
+                        .icon_bottom{
+                            display: flex;
+                            margin-left: auto;
+                        }   
+                    }
+                }
+            }
+            // 活動5:海岸SUP
+            .wrapper5{
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                align-items: center;
+                // justify-content: center;
+                .activity5_pic{
+                    .pic5{
+                        margin-left: 0px;
+                    }
+                }
+                .activity5{
+                    width: 305px;
+                    margin-left: 20px;
+                    h3{
+                        color: $sun;
+                        font-size: $h3;
+                        letter-spacing: 3px;
+                        text-align: center;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        color: $sun;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+    
+                    // 評論(上)
+                    .comment_top{
+                        display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        .fa-star{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-star-half-stroke{
+                            color: #FFBF44;
+                            letter-spacing: -5px;
+                        }
+                        .fa-circle-plus{
+                            color: $sun;
+                        }
+                        .icon_top{
+                            display: flex;
+                            margin-left: auto;
+                        }
+                    }
+                    // 評論(上)
+                    .comment_bottom{
+                        display: flex;
+                        align-items: center;
+                        .fa-circle-plus{
+                            color: $sun;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: $sun;
+                            font-size: $p;
+                            letter-spacing: 3px;
+                            text-decoration: none;
+                        } 
+                        .icon_bottom{
+                            display: flex;
+                            margin-left: auto;
+                        }   
+                    }
+                }
+            }
+        }
+        // 點點結束
+        .end{
+            display: none;
+            position: absolute;
+            bottom: -155px;
+            left: calc(50% - 40px);
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -764,698 +1321,249 @@ main{
             text-align: center;
             line-height: 50px;
         }
-    }
-    // 線條一
-    .line1{
-        position: absolute;
-        top: -89px;
-        left:400px;
-    }
-    // 線條二
-    .line2{
-        position: absolute;
-        top: 380px;
-        left:480px;
-        z-index: -1;
-    }
-    // 線條三
-    .line3{
-        position: absolute;
-        top: 820px;
-        left:475px;
-        z-index: -1;
-    }
-    // 線條四
-    .line4{
-        position: absolute;
-        top: 1220px;
-        left:385px;
-        z-index: -1;    
-    }
-    // 線條五
-    .line5{
-        position: absolute;
-        top: 1655px;
-        left:385px;
-        z-index: -1;    
-    }
-    // 線條六
-    .line6{
-        position: absolute;
-        top: 2075px;
-        left:385px;
-        z-index: -1;   
-    }
-
-    // 泡泡一
-    .bubble1{
-        position: absolute;
-        top: 75px;
-        left:550px; 
-        z-index: -1;  
-    }
-    // 泡泡二
-    .bubble2{
-        position: absolute;
-        top: 540px;
-        left:155px; 
-        z-index: -1;  
-    }
-    // 泡泡三
-    .bubble3{
-        position: absolute;
-        top: 940px;
-        left:725px; 
-        z-index: -1;  
-    }
-    // 泡泡四
-    .bubble4{
-        position: absolute;
-        top: 1375px;
-        left:150px; 
-        z-index: -1;  
-    }
-    // 泡泡五
-    .bubble5{
-        position: absolute;
-        top: 1795px;
-        left:500px; 
-        z-index: -1;  
-    }
-    // 泡泡六
-    .bubble6{
-        position: absolute;
-        top: 2155px;
-        left:930px; 
-        z-index: -1;  
-    }
-
-     // 游泳的海龜
-     .seaturtle{
-        position: absolute;
-        top: 1095px;
-        left:715px; 
-        z-index: 0;  
-    }
-    // 多利
-    .dory{
-        position: absolute;
-        top: 2125px;
-        left:995px; 
-        z-index: 0;  
-    }
-    // 魚群
-    .fish{
-        position: absolute;
-        top: 2400px;
-        left:0px; 
-        z-index: 0;  
-    }
-
-    // 海遊活動區塊
-    .activity{
-        width: 1180px;
-        margin: 0 auto;
-        position: relative;
-        // 麵包屑
-        .bread{
-            color: $moon;
-            font-size: $p;
-            margin-top: 25px;
-            // margin-bottom: 100px;
-            margin-left: 100px;
-            letter-spacing: 0px;
-        
-            a{
-                text-decoration: none;
-                color: $moon;
-                margin-right: 10px;
-            }
-        }
-        // 活動1:潛水
-        .wrapper1{
-            display: flex;
-            margin-top: 100px;
-            align-items: center;
-            // justify-content: center;
-            .activity1_pic{
-                .pic1{
-                    margin-left: 300px;
-                }
-            }
-            .activity1{
-                width: 305px;
-                margin-left: 20px;
-                h3{
-                        color: $sun;
-                        font-size: $h3;
-                        letter-spacing: 3px;
-                        margin-bottom: 30px;
-                }
-                p{
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                    line-height: 1.6;
-                }
-
-                // 評論(上)
-                .comment_top{
-                    display: flex;
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    .fa-star{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-circle-plus{
-                        color: $sun;
-                    }
-                    .icon_top{
-                        display: flex;
-                        margin-left: auto;
-                    }
-                }
-                // 評論(上)
-                .comment_bottom{
-                    display: flex;
-                    .fa-circle-plus{
-                        color: $sun;
-                        margin-right: 5px;
-                    }
-                    a{
-                        color: $sun;
-                        font-size: $p;
-                        letter-spacing: 3px;
-                        text-decoration: none;
-                    } 
-                    .icon_bottom{
-                        display: flex;
-                        margin-left: auto;
-                    }   
-                }
-            }
-        }
-        // 活動2:遊艇
-        .wrapper2{
-            display: flex;
-            align-items: center;
-            margin-top: 160px;
-            // justify-content: center;
-            .activity2_pic{
-                .pic2{
-                    margin-left: 20px;
-                }
-            }
-            .activity2{
-                width: 305px;
-                margin-left: 200px;
-                h3{
-                        color: $sun;
-                        font-size: $h3;
-                        letter-spacing: 3px;
-                        margin-bottom: 30px;
-                }
-                p{
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                    line-height: 1.6;
-                }
-
-                // 評論(上)
-                .comment_top{
-                    display: flex;
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    .fa-star{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-circle-plus{
-                        color: $sun;
-                    }
-                    .icon_top{
-                        display: flex;
-                        margin-left: auto;
-                    }
-                }
-                // 評論(上)
-                .comment_bottom{
-                    display: flex;
-                    .fa-circle-plus{
-                        color: $sun;
-                        margin-right: 5px;
-                    }
-                    a{
-                        color: $sun;
-                        font-size: $p;
-                        letter-spacing: 3px;
-                        text-decoration: none;
-                    } 
-                    .icon_bottom{
-                        display: flex;
-                        margin-left: auto;
-                    }   
-                }
-            }
-        }
-        // 活動3:出海釣魚
-        .wrapper3{
-            display: flex;
-            margin-top: 120px;
-            align-items: center;
-            // justify-content: center;
-            .activity3_pic{
-                .pic3{
-                    margin-left: 300px;
-                }
-            }
-            .activity3{
-                width: 305px;
-                margin-left: 20px;
-                h3{
-                        color: $sun;
-                        font-size: $h3;
-                        letter-spacing: 3px;
-                        margin-bottom: 30px;
-                }
-                p{
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                    line-height: 1.6;
-                }
-
-                // 評論(上)
-                .comment_top{
-                    display: flex;
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    .fa-star{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-circle-plus{
-                        color: $sun;
-                    }
-                    .icon_top{
-                        display: flex;
-                        margin-left: auto;
-                    }
-                }
-                // 評論(上)
-                .comment_bottom{
-                    display: flex;
-                    .fa-circle-plus{
-                        color: $sun;
-                        margin-right: 5px;
-                    }
-                    a{
-                        color: $sun;
-                        font-size: $p;
-                        letter-spacing: 3px;
-                        text-decoration: none;
-                    } 
-                    .icon_bottom{
-                        display: flex;
-                        margin-left: auto;
-                    }   
-                }
-            }
-        }
-        // 活動4:浮潛
-        .wrapper4{
-            display: flex;
-            margin-top: 160px;
-            align-items: center;
-            // justify-content: center;
-            .activity4_pic{
-                .pic4{
-                    margin-left: 20px;
-                }
-            }
-            .activity4{
-                width: 305px;
-                margin-left: 200px;
-                h3{
-                        color: $sun;
-                        font-size: $h3;
-                        letter-spacing: 3px;
-                        margin-bottom: 30px;
-                }
-                p{
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                    line-height: 1.6;
-                }
-
-                // 評論(上)
-                .comment_top{
-                    display: flex;
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    .fa-star{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-circle-plus{
-                        color: $sun;
-                    }
-                    .icon_top{
-                        display: flex;
-                        margin-left: auto;
-                    }
-                }
-                // 評論(上)
-                .comment_bottom{
-                    display: flex;
-                    .fa-circle-plus{
-                        color: $sun;
-                        margin-right: 5px;
-                    }
-                    a{
-                        color: $sun;
-                        font-size: $p;
-                        letter-spacing: 3px;
-                        text-decoration: none;
-                    } 
-                    .icon_bottom{
-                        display: flex;
-                        margin-left: auto;
-                    }   
-                }
-            }
-        }
-        // 活動5:海岸SUP
-        .wrapper5{
-            display: flex;
-            margin-top: 150px;
-            align-items: center;
-            // justify-content: center;
-            .activity5_pic{
-                .pic5{
-                    margin-left: 250px;
-                }
-            }
-            .activity5{
-                width: 305px;
-                margin-left: 20px;
-                h3{
-                        color: $sun;
-                        font-size: $h3;
-                        letter-spacing: 3px;
-                        margin-bottom: 30px;
-                }
-                p{
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                    line-height: 1.6;
-                }
-
-                // 評論(上)
-                .comment_top{
-                    display: flex;
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    .fa-star{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-star-half-stroke{
-                        color: #FFBF44;
-                        letter-spacing: -5px;
-                    }
-                    .fa-circle-plus{
-                        color: $sun;
-                    }
-                    .icon_top{
-                        display: flex;
-                        margin-left: auto;
-                    }
-                }
-                // 評論(上)
-                .comment_bottom{
-                    display: flex;
-                    .fa-circle-plus{
-                        color: $sun;
-                        margin-right: 5px;
-                    }
-                    a{
-                        color: $sun;
-                        font-size: $p;
-                        letter-spacing: 3px;
-                        text-decoration: none;
-                    } 
-                    .icon_bottom{
-                        display: flex;
-                        margin-left: auto;
-                    }   
-                }
-            }
-        }
-    }
-    // 點點結束
-    .end{
-        position: absolute;
-        bottom: -155px;
-        left: calc(50% - 40px);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: $sun;
-        text-align: center;
-        line-height: 50px;
-    }
-
-    // 生態活動區塊
-    .echotitle{
-        width: 1180px;
-        margin: 0 auto;
-
-        // 生態活動1(綠蠵龜)
-        .wrapper1{
-            width: 630px;
-            height: 380px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-            margin-top: 200px;
-            background-image: url("../img/sea/echo.png");
-            padding: 120px;
-            box-sizing: border-box;
-        }
-        h3{
-            color: $sun;
-            font-size: $h3;
-            letter-spacing: 3px;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-        p{
-            color: $sun;
-            font-size: $p;
-            letter-spacing: 3px;
-            line-height: 1.6;
-        }
-
-        .wrapper2{
-            width: 630px;
-            height: 280px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-            background-image: url("../img/sea/echo1.png");
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            .echo1{
-                width: 270px;
-                height: 200px;
-                padding: 25px;
-                box-sizing: border-box;
-                text-align: center;
-                background-color: $moon;
-                position: relative;
-                // 左上角框
-                &::before{
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    position: absolute;
-                    top: 7px;
-                    left: 7px;
-                    border-top: 2px solid $sun;
-                    border-left: 2px solid $sun;
-                }
-                // 右下角框
-                &::after{
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    position: absolute;
-                    bottom: 7px;
-                    right: 7px;
-                    border-bottom: 2px solid $sun;
-                    border-right: 2px solid $sun;
-                }
-                h5{
-                    color: $sun;
-                    font-size: $h5;
-                    text-align: center;
-                    margin-bottom: 10px;
-                }
-                p{
-                    margin-bottom: 5px;
-                }
-                .fa-star{
-                    color: #FFBF44;
-                    letter-spacing: -5px;
-                }
-                .fa-star-half-stroke{
-                    color: #FFBF44;
-                    letter-spacing: -5px
-                }
-                .fa-circle-plus{
-                    color: $sun;
-                    margin-right: 5px;
-                }
-                a{
-                    text-decoration: none;
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                }
-            }
-        }
-
-        // 生態活動2(珊瑚)
-        .wrapper3{
-            width: 630px;
-            height: 280px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-            background-image: url("../img/sea/echo2.png");
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            .echo2{
-                width: 270px;
-                height: 200px;
-                padding: 25px;
-                box-sizing: border-box;
-                text-align: center;
-                background-color: $moon;
-                position: relative;
-                // 左上角框
-                &::before{
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    position: absolute;
-                    top: 7px;
-                    left: 7px;
-                    border-top: 2px solid $sun;
-                    border-left: 2px solid $sun;
-                }
-                // 右下角框
-                &::after{
-                    content: "";
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    position: absolute;
-                    bottom: 7px;
-                    right: 7px;
-                    border-bottom: 2px solid $sun;
-                    border-right: 2px solid $sun;
-                }
-                h5{
-                    color: $sun;
-                    font-size: $h5;
-                    text-align: center;
-                    margin-bottom: 10px;
-                }
-                p{
-                    margin-bottom: 5px;
-                }
-                .fa-star{
-                    color: #FFBF44;
-                    letter-spacing: -5px;
-                }
-                .fa-star-half-stroke{
-                    color: #FFBF44;
-                    letter-spacing: -5px
-                }
-                .fa-circle-plus{
-                    color: $sun;
-                    margin-right: 5px;
-                }
-                a{
-                    text-decoration: none;
-                    color: $sun;
-                    font-size: $p;
-                    letter-spacing: 3px;
-                }
-            }
-        }
-    }
-        
-    // 照片區
-    .photo{
-        width: 1180px;
-        margin: 0 auto;
-        .wrapper1{
-            display: flex;
-            margin-bottom: 50px;
-            .ig{
-                border-radius: 50%;
-                animation-name: scale1;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-            }
-            // .ig1-6{
-            //     animation-name: ;
-            //     animation-duration: 10s;
-            //     animation-iteration-count: infinite;
-            //     position: absolute;
-            //     left: 0px;
-            // }
-           
-            
-        }
-        .wrapper2{
-            display: flex;
-            justify-content: space-around;
-            .ig{
-                border-radius: 50%;
-                animation-name: scale1;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-            }
-        }
-    }
     
+        // 生態活動區塊
+        .echotitle{
+            // width: 100%;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+    
+            .wrapper1{
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                margin-top: 50px;
+                background-image: url("../img/sea/echo.png");
+                padding-top: 50px;
+                padding-right: 50px;
+                padding-left: 50px;
+                box-sizing: border-box;
+            }
+            h3{
+                color: $sun;
+                font-size: $h3;
+                letter-spacing: 3px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            p{
+                color: $sun;
+                font-size: $p;
+                letter-spacing: 3px;
+                line-height: 1.6;
+            }
+            
+            // 生態活動1(綠蠵龜)
+            .wrapper2{
+                width: 80%;
+                height: 380px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                background-image: url("../img/sea/rwd_echo1.png");
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                 // 左上角框
+                 &::before{
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    border-top: 2px solid $moon;
+                    border-left: 2px solid $moon;
+                }
+                // 右下角框
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    bottom: 7px;
+                    right: 7px;
+                    border-bottom: 2px solid $moon;
+                    border-right: 2px solid $moon;
+                }
+                .echo1{
+                    width: 80%;
+                    height: 280px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    background-color: rgba(245,240,221,0.6);
+                    position: relative;
+                    &::before{
+                        display: none;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    h5{
+                        color: $moon;
+                        font-size: $h5;
+                        text-align: center;
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        margin-bottom: 5px;
+                        color: $moon;
+                        font-size: $p;
+                        margin-bottom: 10px;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    .fa-star{
+                        color: #FFBF44;
+                        letter-spacing: -5px;
+                    }
+                    .fa-star-half-stroke{
+                        color: #FFBF44;
+                        letter-spacing: -5px
+                    }
+                    .fa-circle-plus{
+                        color: $moon;
+                        margin-right: 5px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $moon;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+    
+            // 生態活動2(珊瑚)
+            .wrapper3{
+                position: relative;
+                width: 80%;
+                height: 380px;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                background-image: url("../img/sea/rwd_echo2.png");
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // 左上角框
+                &::before{
+                    display: block;
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    border-top: 2px solid $moon;
+                    border-left: 2px solid $moon;
+                }
+                   
+                // 右下角框
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    bottom: 7px;
+                    right: 7px;
+                    border-bottom: 2px solid $moon;
+                    border-right: 2px solid $moon;
+                }
+                .echo2{
+                    width: 80%;
+                    height: 280px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    background-color: rgba(245,240,221,0.6);
+                    position: relative;
+                    &::before{
+                        display: none;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    h5{
+                        color: $moon;
+                        font-size: $h5;
+                        text-align: center;
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        margin-bottom: 5px;
+                        color: $moon;
+                        margin-bottom: 10px;
+                        padding-left: 35px;
+                        padding-right: 35px;
+                        font-size: $p;
+                    }
+                    .fa-star{
+                        color: #FFBF44;
+                        letter-spacing: -5px;
+                    }
+                    .fa-star-half-stroke{
+                        color: #FFBF44;
+                        letter-spacing: -5px
+                    }
+                    .fa-circle-plus{
+                        color: $moon;
+                        margin-right: 5px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $moon;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+            
+        // 照片區
+        .photo{
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            .wrapper1{
+                display: flex;
+                margin-bottom: 50px;
+                .ig{
+                    border-radius: 50%;
+                    animation-name: scale1;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                }
+                // .ig1-6{
+                //     animation-name: ;
+                //     animation-duration: 10s;
+                //     animation-iteration-count: infinite;
+                //     position: absolute;
+                //     left: 0px;
+                // }
+               
+                
+            }
+            .wrapper2{
+                display: flex;
+                justify-content: space-around;
+                .ig{
+                    border-radius: 50%;
+                    animation-name: scale1;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+        
+    }
 }
 
 // 動畫效果

@@ -74,7 +74,7 @@ new Vue({
 
         //fetch
 
-        const url = '../src/php/information.php';
+        const url = './php/information.php';
         fetch(url)
             .then(response => {
                 if (response.ok) {

@@ -1,22 +1,24 @@
 @import 'base/var';
 
-
 @mixin mobile {
     @media(max-width:579px){
         @content
     }
 }
 
-
 .set{
     background-color: $sun_color;
     color: $moon_color;
+    font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
 
     main{
         // border: 1px solid firebrick;
         // width: 1280px;
         margin: 0 auto;
-        // background-color: #F5F0DD;
         box-sizing: border-box;
         line-height: 1.6;
         letter-spacing: 3px;
@@ -26,7 +28,6 @@
             
         }
 
-    
         .wrapper{
             // border: 1px solid black;
             width: 1080px;
@@ -38,10 +39,66 @@
                 
             }
         
+            .crumbs{
+                    @include mobile{
+                        // text-align: center;
+                        margin: 50px 0 20px 0;
+                    }
+
+                a{
+                    
+                    @include mobile{
+                        font-size: 24rem;
+                        width: 185px;
+                    }
+                    
+                }
+                
+                span:first-child{
+                    @include mobile{
+                        display: inline-block;
+                        width: 185px;
+                        height: 50px;
+                        clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
+                        background-color: $sun_color;
+                        color: $moon_color;
+                        border: 1px solid $moon_color;
+                        text-align: center;
+                        line-height: 50px;
+                    }
+                    
+                }
+
+                span:nth-child(2){
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
+                span:last-child{
+                    @include mobile{
+                        display: inline-block;
+                        width: 185px;
+                        height: 50px;
+                        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
+                        background-color: $moon_color;
+                        color: $sun_color;
+                        border: 1px solid $sun_color;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 24rem;
+
+                    }
+
+                }
+
+            }
+            
             a{
                 display: inline-block;
                 text-decoration: none;
                 color: $moon_color;
+                
             }
         }
         
@@ -59,7 +116,7 @@
 
             @include mobile{
                 font-size: 28rem;
-                
+                display: none;
             }
 
             
@@ -72,7 +129,22 @@
             margin-bottom: 100px;
 
             @include mobile{
+                margin-bottom: 50px;
+                
+            }
+
+            .none{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    
+                }
+            }
+
+            @include mobile{
                 flex-wrap: wrap;
+                // border: 1px solid red;
                 
             }
 
@@ -89,19 +161,15 @@
                 @include mobile{
                     margin-left: 0;
                     margin-bottom: 20px;
-                    
-                    &:nth-child(2){
-                        border: 1px solid rebeccapurple;
-                        margin-right: 20px;
-                        margin-left: 20px;
-                    }
+                    // border: 1px solid green;
+                    margin-right: 40px;
 
-                    &:nth-child(5){
-                        border: 1px solid rebeccapurple;
-                        margin-right: 20px;
-                        margin-left: 20px;
+                    &:nth-child(3n){
+                        // border: 1px solid rebeccapurple;
+                        margin-right: 0;
 
                     }
+
                 }
 
                 
@@ -113,6 +181,10 @@
                     }
         
                     h4{
+                        @include mobile{
+                            display: none;
+                            
+                        }
         
                     }
                 }
@@ -123,6 +195,11 @@
             display: block;
             text-align: center;
             font-size: 24rem;
+
+            @include mobile{
+                line-height: 30px;
+                
+            }
             
         
             .setSpeaker{
@@ -146,11 +223,12 @@
             justify-content: space-between;
 
             @include mobile{
+                margin-top: 50px;
                 width: 476px;
-                height: 800px;
+                height: 810px;
                 display: block;
                 text-align: center;
-                
+                border: 0;
                 position: relative;
             }
 
@@ -197,8 +275,9 @@
                 position: relative;
 
                 @include mobile{
+                    width: 430px;
                     padding: 0;
-                    padding-left: 10px;
+                    padding-left: 30px;
                     padding-right: 10px;
                     text-align: left;
                     
@@ -212,7 +291,7 @@
 
                     @include mobile{
                         width: 80px;
-                        right: 64px;
+                        right: 20px;
                         top: 30px;
     
                         
@@ -287,23 +366,24 @@
         
                         a{
 
-                            .stbSP{
-                                margin-right: 10px;
-                                position: relative;
-                                right: 0;
-                                top: 7px;
+                            i{
+                                // margin-right: 10px;
+                                // position: relative;
+                                // right: 0;
+                                // top: 7px;
+                                color: $moon_color;
                             }
                         }
 
                         @include mobile{
-                            margin-right: 100px;
+                            margin-right: 70px;
                         }
 
         
                     }
         
                     .setBook{
-                        border: $show_border;
+                        border: 1px solid $moon_color;
                         width: 140px;
                         height: 50px;
                         text-align: center;
@@ -313,6 +393,10 @@
                         
                         @include mobile{
                             margin-right: 10px;
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
                         }
 
         
@@ -341,26 +425,95 @@
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
+    font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
 
     main{
         // border: 1px solid firebrick;
         // width: 1280px;
         margin: 0 auto;
-        // background-color: #F5F0DD;
         box-sizing: border-box;
         line-height: 1.6;
         letter-spacing: 3px;
-    
+
+        @include mobile{
+            line-height: 24rem;
+            
+        }
+
         .wrapper{
             // border: 1px solid black;
             width: 1080px;
             margin: 0 auto;
             // display: flex;
+
+            @include mobile{
+                width: 479px;
+                
+            }
         
+            .crumbs{
+                    @include mobile{
+                        // text-align: center;
+                        margin: 50px 0 20px 0;
+                    }
+
+                a{
+                    
+                    @include mobile{
+                        font-size: 24rem;
+                    }
+                    
+                }
+                
+                span:first-child{
+                    @include mobile{
+                        display: inline-block;
+                        width: 185px;
+                        height: 50px;
+                        clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
+                        background-color: $sun_color;
+                        color: $moon_color;
+                        border: 1px solid $moon_color;
+                        text-align: center;
+                        line-height: 50px;
+                    }
+                    
+                }
+
+                span:nth-child(2){
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
+                span:last-child{
+                    @include mobile{
+                        display: inline-block;
+                        width: 185px;
+                        height: 50px;
+                        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
+                        background-color: $moon_color;
+                        color: $sun_color;
+                        border: 1px solid $sun_color;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 24rem;
+
+                    }
+
+                }
+
+            }
+            
             a{
                 display: inline-block;
                 text-decoration: none;
                 color: $moon_color;
+                
             }
         }
         
@@ -375,6 +528,12 @@
             margin-top: 62px;
             // margin-left: 100px;
             margin-bottom: 55px;
+
+            @include mobile{
+                font-size: 28rem;
+                display: none;
+            }
+
             
         }
         
@@ -383,6 +542,22 @@
             display: flex;
             justify-content: center;
             margin-bottom: 100px;
+
+            .none{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    
+                }
+            }
+
+            @include mobile{
+                flex-wrap: wrap;
+                // border: 1px solid red;
+                
+            }
+
         
             li:first-child{
                 margin-left: 0;
@@ -392,7 +567,23 @@
                 // border: 1px solid rebeccapurple;
                 text-align: center;
                 margin-left: 50px;
+
+                @include mobile{
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    // border: 1px solid green;
+                    margin-right: 40px;
+
+                    &:nth-child(3n){
+                        // border: 1px solid rebeccapurple;
+                        margin-right: 0;
+
+                    }
+
+                }
+
                 
+        
                 a{
         
                     img{
@@ -400,6 +591,10 @@
                     }
         
                     h4{
+                        @include mobile{
+                            display: none;
+                            
+                        }
         
                     }
                 }
@@ -410,6 +605,7 @@
             display: block;
             text-align: center;
             font-size: 24rem;
+            
         
             .setSpeaker{
                 display: inline-block;
@@ -417,6 +613,7 @@
                 left: 0;
                 top: 10px;
             }
+        
         
         }
         
@@ -429,14 +626,35 @@
             margin-bottom: 50px;
         
             justify-content: space-between;
+
+            @include mobile{
+                width: 476px;
+                height: 800px;
+                display: block;
+                text-align: center;
+                border: 0;
+                position: relative;
+            }
+
         
             .setPic{
                 // border: 1px solid green;
                 padding: 65px;
+
+                @include mobile{
+                    padding: 10px;
+                    
+                }
         
                 > img{
                     // border: 1px solid #000;
                     margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 0
+                        
+                    }
+
                 }
         
                 .setPicS{
@@ -459,16 +677,44 @@
                 padding-left: 0;
         
                 position: relative;
+
+                @include mobile{
+                    width: 430px;
+                    padding: 0;
+                    padding-left: 30px;
+                    padding-right: 10px;
+                    text-align: left;
+                    
+                }
+    
         
                 .setTextPic{
                     position: absolute;
                     right: 64px;
                     top: 130px;
+
+                    @include mobile{
+                        width: 80px;
+                        right: 20px;
+                        top: 30px;
+    
+                        
+                    }
+        
+    
                 }
         
                 h4{
                     text-align: left;
                     margin-bottom: 20px;
+
+                    @include mobile{
+                        position: absolute;
+                        right: 180px;
+                        top: -280px;
+                        font-weight: 800;
+                    }
+
                 }
         
                 h5{
@@ -479,12 +725,23 @@
                 .setTextTitle{
                     margin: 0;
                     margin-bottom: 25px;
-        
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
                 }
         
                 .setTextWord{
                     margin: 0;
                     margin-bottom: 30px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                        
+                    }
+
                 }
         
                 .setTextWord2{
@@ -496,36 +753,57 @@
                     // border: 1px solid royalblue;
                     display: flex;
                     justify-content: space-between;
+
+                    @include mobile{
+                         justify-content: start;   
+                            
+                    }
+
         
                     .stbS{
                         // border: 1px solid darkgreen;
                         
-        
                         p{
                             margin: 0;
         
                         }
         
                         a{
-        
-                            .stbSP{
-                                margin-right: 10px;
-                                position: relative;
-                                right: 0;
-                                top: 7px;
+
+                            i{
+                                // margin-right: 10px;
+                                // position: relative;
+                                // right: 0;
+                                // top: 7px;
+                                color: $moon_color;
                             }
                         }
+
+                        @include mobile{
+                            margin-right: 70px;
+                        }
+
         
                     }
         
                     .setBook{
-                        border: $show_border;
+                        border: 1px solid $moon_color;
                         width: 140px;
                         height: 50px;
                         text-align: center;
                         line-height: 50px;
                         color: $moon_color;
-                        background-color: $sun_color;
+                        background-color: $sun_color; 
+                        
+                        @include mobile{
+                            margin-right: 10px;
+                            cursor: pointer;
+                            color: $sun_color;
+                            border: 1.5px solid $sun_color;
+                            background-color: $moon_color;
+
+                        }
+
         
                         &:hover{
                             cursor: pointer;
@@ -545,5 +823,6 @@
         }
         
     }
-
+    
 }
+

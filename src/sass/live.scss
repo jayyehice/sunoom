@@ -13,12 +13,25 @@
         color: $moon_color;
     }
 
-    header .headerCenter {
-        position: absolute;
-        z-index: 100;
-        left: 50%;
-        transform: translateX(-50%);
+    header{
+        .one{
+            li{
+                a{
+
+                    color: $sun_color;
+                    
+                }
+            }
+        }
+
+        .headerCenter {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
+        
 
     main {
         .wrapper {
@@ -1521,7 +1534,7 @@
 
 
 
-header {
+.live_header {
     background-image: url(../img/live/live_main_bn.png);
     background-repeat: no-repeat;
     background-size: cover;
