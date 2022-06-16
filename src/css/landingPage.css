@@ -1,0 +1,69 @@
+.landingPage {
+  color: #0C1244;
+}
+.landingPage header {
+  position: relative;
+}
+.landingPage header img {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landingPage main {
+  display: flex;
+}
+.landingPage main div {
+  position: relative;
+  min-width: 50%;
+}
+.landingPage main div h1 {
+  position: absolute;
+}
+.landingPage main div a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.landingPage main div svg {
+  width: 100%;
+}
+.landingPage main .landingPage_left {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: #F5F0DD;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.landingPage main .landingPage_left div {
+  margin-right: 100px;
+}
+.landingPage main .landingPage_left div h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landingPage main .landingPage_right {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: #0C1244;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.landingPage main .landingPage_right div {
+  margin-left: 100px;
+}
+.landingPage main .landingPage_right div h1 {
+  color: #FFBF44;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=landingPage.css.map */

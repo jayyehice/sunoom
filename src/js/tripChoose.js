@@ -1,5 +1,17 @@
 
 $(function(){
+    
+    $(window).ready(function(){
+        $(window).resize(function(){
+            if(window.innerWidth < 576){
+                console.log(window.innerWidth);
+                window.location.href='tripChooseMobile.html';
+            }else{
+                window.location.href='tripChoose.html';
+            }
+        })
+    })
+
 
     //日曆
     $('#dateBooking').daterangepicker({
@@ -29,6 +41,9 @@ $(function(){
             })
             $('.bodyCover').css('display','block')
             $('#dateBooking').css('opacity','0.5')
+            $('.circle').css({
+                transform:'rotateZ(405deg)',
+            })
             $('.ListSmall').removeClass('on');
         }else{
             
@@ -36,10 +51,17 @@ $(function(){
                 width:"0px",
                 display:"none",
             })
+            $('.circle').css({
+                transform:'rotate(0deg)',
+            })
             $('#dateBooking').css('opacity','1')
             $('.bodyCover').css('display','none')
             $('.ListSmall').addClass('on');
         }
         
+    })
+
+    $('#NextPage').on('click',()=>{
+        window.location.href = './readyToPay.html'
     })
 })

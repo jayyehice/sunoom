@@ -5,11 +5,24 @@
     background-color: $sun_color;
     color: $moon_color;
     main{
-        // .breadcrumbs{
-        //     height: 140px;
-        //     box-sizing: border-box;
-        //     border: $show_border;
-        // }
+        .breadcrumbs{
+            .wrapper{
+                width: 1070px;
+                margin: 0 auto;
+                // border: $show_border;
+                ul{
+    
+                    height: 140px;
+                    box-sizing: border-box;
+                    // border: $show_border;
+                    display: flex;
+                    align-items: center;
+                    li{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
     
         .map{
     
@@ -50,6 +63,7 @@
                 svg{
                     display: block;
                     margin: 0 auto;
+                    color: $moon_color;
                 }
                 ul{
                     width: 1010px;
@@ -297,6 +311,7 @@
     
                         img{
                             margin-top: 10px;
+                            width: 100%;
                         }
                     }
                 }
@@ -414,7 +429,7 @@
                                 height: 5px;
                                 background-color: $sun_color;
                                 position: absolute;
-                                top: calc(50% - 2.5px);
+                                top: calc(40px - 2.5px);
                                 right: 30px;
                             }
     
@@ -497,6 +512,7 @@
                 svg{
                     display: block;
                     margin: 0 auto;
+                    color: $moon_color;
                 }
                 ul{
                     width: 1010px;
@@ -909,6 +925,14 @@
                         width: calc(100% - 40px);
                         li:first-child{
                             display: none;
+                            
+                        }
+
+                        li{
+                            flex-grow: 1;
+                            .big_btn{
+                                width: 100%;
+                            }
                         }
                     }
 
@@ -936,7 +960,8 @@
                             }
 
                             &:after{
-                                left: 67px;
+                                left: 50%;
+                                transform: translateX(-50%);
                             }
                         }
 
@@ -984,6 +1009,19 @@
                                 div:first-child{
                                     display: none;
                                 }
+                            }
+                        }
+
+                        .triangle_img{
+                            div{
+                                width: 100%;
+                            }
+
+                            &>div{
+                                width: 30%;
+                            }
+                            .triangle_left, .triangle_right{
+                                width: 40%;
                             }
                         }
                     }
@@ -1051,6 +1089,7 @@
                     ul{
                         flex-direction: column;
                         &>li{
+                            width: 100%;
                             .title{
                                 i{
                                     font-size: 30rem;
@@ -1074,6 +1113,9 @@
                     width: calc(100% - 40px);
                     ul{
                         li{
+                            h5{
+                                padding: 0 60px 0 20px;
+                            }
                             p{
                                 padding: 20px;
                             }

@@ -1,0 +1,560 @@
+.backgroundSystem {
+  color: #0C1244;
+}
+.backgroundSystem input {
+  border: 1px solid #0C1244;
+}
+.backgroundSystem textarea {
+  border: 1px solid #0C1244;
+}
+.backgroundSystem button {
+  border: 1px solid #0C1244;
+}
+
+header {
+  background-color: #F5F0DD;
+  height: 100px;
+}
+header .out {
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  align-self: center;
+}
+header .document {
+  font-size: 30px;
+  align-self: center;
+  color: #0C1244;
+  cursor: pointer;
+}
+header .mail {
+  font-size: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+header button {
+  background-color: #F5F0DD;
+  border-radius: 10%;
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.logo {
+  background-color: #0C1244;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.logo img {
+  margin: 10px 0;
+}
+
+.backwrapper {
+  display: flex;
+  padding: 0;
+  height: 100%;
+  color: #0C1244;
+}
+.backwrapper nav {
+  height: 85vh;
+}
+.backwrapper nav .leftNav {
+  display: flex;
+  flex-direction: column;
+  background-color: #0C1244;
+  height: 100%;
+}
+.backwrapper nav .leftNav .admin {
+  height: 100px;
+  background-color: #0C1244;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.backwrapper nav .leftNav .admin img {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+.backwrapper nav .leftNav .admin .user {
+  align-self: center;
+}
+.backwrapper nav .leftNav .admin h5 {
+  margin-left: 5px;
+  color: #F5F0DD;
+  font-size: 20px;
+}
+.backwrapper nav .leftNav .admin h6 {
+  font-size: 16px;
+  color: #F5F0DD;
+}
+.backwrapper nav .leftNav a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0C1244;
+  border-top: 1px solid #F5F0DD;
+  border-bottom: 1px solid #F5F0DD;
+  color: #F5F0DD;
+  cursor: pointer;
+}
+.backwrapper nav .leftNav a:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.backwrapper .listTitle {
+  margin: 20px;
+}
+.backwrapper .listTitle .Title {
+  display: flex;
+}
+.backwrapper .listTitle .Title h3 {
+  margin: 0 20px;
+  align-self: center;
+  color: 0C1244;
+  text-decoration: underline;
+}
+.backwrapper .listTitle .Title button {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.backwrapper .listTitle .Title button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .listTitle .checkList {
+  margin: 20px;
+  display: flex;
+}
+.backwrapper .listTitle .checkList h4 {
+  margin: 0 20px;
+  background-color: #F5F0DD;
+  align-self: center;
+  text-align: center;
+  color: 0C1244;
+}
+.backwrapper .listTitle .checkList h4:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .listTitle .checkList .addNew {
+  display: flex;
+}
+.backwrapper .listTitle .checkList .addNew i {
+  font-size: 20px;
+  align-self: center;
+}
+.backwrapper .listTitle .checkList .addNew i:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .listTitle .checkList .addNew span {
+  text-align: center;
+  line-height: 30px;
+  width: 60px;
+  height: 30px;
+  background-color: #F5F0DD;
+  border-radius: 10%;
+}
+.backwrapper .listTitle .checkList .addNew span:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .listTitle .table {
+  height: 100%;
+}
+.backwrapper .listTitle .tableBox {
+  border: 1px solid #0C1244;
+  padding: 0 12px;
+}
+.backwrapper .listTitle ul {
+  display: flex;
+  margin: 1px 0;
+  border: 1px solid #0C1244;
+}
+.backwrapper .listTitle .tableTitle {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin: 0;
+}
+.backwrapper .listTitle li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.backwrapper .listTitle li button {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #F5F0DD;
+}
+.backwrapper .listTitle li button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .pageList {
+  display: flex;
+}
+.backwrapper .pageList li {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #0C1244;
+  line-height: 20px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.backwrapper .pageList li:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.backwrapper .table > :not(:first-child) {
+  border-top: 0px solid currentColor;
+}
+
+.formBody_00 {
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_00 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_00 .Form {
+  display: flex;
+  justify-content: center;
+}
+.formBody_00 .Form span {
+  display: inline-block;
+  margin: 15px 0;
+  text-align: center;
+  width: 70px;
+}
+.formBody_00 .Form .leftForm {
+  text-align: center;
+}
+.formBody_00 .Form .rightForm {
+  text-align: center;
+}
+.formBody_00 .Form .rightForm::before {
+  content: "";
+  background-color: #0C1244;
+  width: 2px;
+  height: 350px;
+  display: block;
+  position: absolute;
+  left: 400px;
+}
+.formBody_00 .buttonBlock {
+  margin: 60px 0;
+}
+.formBody_00 .buttonBlock button {
+  height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_00 .buttonBlock button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_01 {
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_01 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_01 .Form_01 {
+  display: flex;
+  justify-content: center;
+}
+.formBody_01 .Form_01 span {
+  display: inline-block;
+  margin: 15px 0;
+  width: 70px;
+}
+.formBody_01 .Form_01 .leftForm_01 {
+  text-align: center;
+}
+.formBody_01 .Form_01 .rightForm_01 {
+  text-align: center;
+}
+.formBody_01 .Form_01 .rightForm_01::before {
+  content: "";
+  background-color: #0C1244;
+  width: 2px;
+  height: 300px;
+  display: block;
+  position: absolute;
+  left: 400px;
+}
+.formBody_01 .Form_01 .rightForm_01 button {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_01 .Form_01 .rightForm_01 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.formBody_01 .buttonBlock_01 {
+  margin: 60px 0;
+}
+.formBody_01 .buttonBlock_01 button {
+  height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_01 .buttonBlock_01 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_02 {
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_02 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_02 .Form_02 span {
+  display: inline-block;
+  width: 70px;
+  margin-bottom: 15px;
+}
+.formBody_02 .buttonBlock_02 {
+  margin: 30px 0;
+}
+.formBody_02 .buttonBlock_02 button {
+  height: 30px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_02 .buttonBlock_02 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_03 {
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_03 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_03 .Form_03 {
+  display: flex;
+  justify-content: center;
+}
+.formBody_03 .Form_03 span {
+  display: inline-block;
+  margin: 15px 0;
+  width: 70px;
+}
+.formBody_03 .Form_03 .leftForm_03 {
+  text-align: center;
+}
+.formBody_03 .Form_03 .rightForm_03 {
+  text-align: center;
+}
+.formBody_03 .Form_03 .rightForm_03::before {
+  content: "";
+  background-color: #0C1244;
+  width: 2px;
+  height: 300px;
+  display: block;
+  position: absolute;
+  left: 400px;
+}
+.formBody_03 .buttonBlock_03 {
+  margin: 60px 0;
+}
+.formBody_03 .buttonBlock_03 button {
+  height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_03 .buttonBlock_03 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_04 {
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_04 h2 {
+  text-align: center;
+  margin: 20px;
+}
+.formBody_04 .Form_04 {
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+}
+.formBody_04 .Form_04 span {
+  display: inline-block;
+  margin: 15px 0;
+  width: 70px;
+}
+.formBody_04 .Form_04 textarea {
+  height: 100px;
+}
+.formBody_04 .buttonBlock_04 {
+  margin: 40px 0;
+}
+.formBody_04 .buttonBlock_04 button {
+  height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_04 .buttonBlock_04 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_05 {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_05 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_05 .Form_05 span {
+  display: inline-block;
+  width: 70px;
+  margin-bottom: 15px;
+}
+.formBody_05 .buttonBlock_05 {
+  margin: 40px 0;
+}
+.formBody_05 .buttonBlock_05 button {
+  height: 30px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_05 .buttonBlock_05 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.formBody_06 {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  display: none;
+  border-radius: 5%;
+  border: 1px solid #0C1244;
+}
+.formBody_06 h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.formBody_06 .Form_06 {
+  display: flex;
+  justify-content: center;
+}
+.formBody_06 .Form_06 span {
+  display: inline-block;
+  margin: 15px 0;
+  text-align: center;
+  width: 70px;
+}
+.formBody_06 .Form_06 .leftForm_06 {
+  text-align: center;
+}
+.formBody_06 .Form_06 .rightForm_06 {
+  text-align: center;
+}
+.formBody_06 .Form_06 .rightForm_06::before {
+  content: "";
+  background-color: #0C1244;
+  width: 2px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  left: 400px;
+}
+.formBody_06 .Form_06 .rightForm_06 button {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_06 .Form_06 .rightForm_06 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+.formBody_06 .buttonBlock_06 {
+  margin: 60px 0;
+}
+.formBody_06 .buttonBlock_06 button {
+  height: 60px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.formBody_06 .buttonBlock_06 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+/*# sourceMappingURL=backgroundSystem.css.map */

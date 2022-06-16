@@ -10,6 +10,10 @@
     background-color: $sun_color;
     color: $moon_color;
 
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
+
     main{
         // border: 1px solid firebrick;
         // width: 1280px;
@@ -33,7 +37,14 @@
                 width: 479px;
                 
             }
-        
+
+            .crumbs{
+
+                @include mobile{
+                    display: none;
+                }
+            }
+            
             a{
                 display: inline-block;
                 text-decoration: none;
@@ -55,7 +66,7 @@
 
             @include mobile{
                 font-size: 28rem;
-                
+                margin-top: 50px;
             }
         }
         
@@ -70,6 +81,11 @@
             float: right;
             margin-bottom: 62px;
             color: $moon_color;
+
+            @include mobile{
+                margin-bottom: 50px;
+            }
+            
         
             &:hover{
                 cursor: pointer;
@@ -118,6 +134,10 @@
                 a{
                     display: block;
                     text-align: center;
+
+                    @include mobile{
+                        line-height: 54px;                    
+                    }
             
                 }
         
@@ -142,7 +162,7 @@
             // clear: both;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             text-align: center;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
@@ -153,10 +173,10 @@
 
             @include mobile{
                 width: 476px;
+                padding-top: 20px;
                 
             }
 
-        
             //先消失
             // display: none;
         
@@ -169,6 +189,23 @@
             }
             
             .memberForm{
+
+                @include mobile{
+                    // text-align: center;
+                }
+
+                > label{
+
+                    @include mobile{
+                        font-size: 25rem;
+                        margin-right: 40px;
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -140px;
+                        margin-bottom: 10px;
+                    }    
+
+                }
                 
             }
             
@@ -178,10 +215,12 @@
 
                 @include mobile{
                     font-size: 25rem;
-                    margin-right: 10px;
+                    margin-right: 40px;
                 }
 
             }
+
+
             
             input{
                 margin-bottom: 23px;
@@ -191,10 +230,11 @@
                 border: 1px solid $moon_color;
                 padding-left: 10px;
                 font-size: 24rem;
+                box-sizing: border-box;
 
                 @include mobile{
-                    width: 330px;
-                    
+                    width: 380px;
+                    height: 60px;
                 }
     
                 
@@ -213,7 +253,7 @@
                 cursor: pointer;
                 margin-right: 0;
                 position: relative;
-                top: -7px;
+                top: -8px;
                 width: 292px;
                 background-color: $moon_color;
                 color: $sun_color;
@@ -235,8 +275,13 @@
             }
         
             .sure{
-                margin-top: 51px;
+                margin-top: 50px;
                 margin-bottom: 10px;
+
+                @include mobile{
+                    margin: 20px 0 20px 0;
+
+                }
             }
         
             .btn{
@@ -248,12 +293,33 @@
                 text-align: center;
                 border: 1px solid $moon_color;
                 color: $moon_color;
+
+                @include mobile{
+                    // margin-bottom: 50px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    color: $sun_color;
+                    border: 1.5px solid $sun_color;
+                    background-color: $moon_color;
+                    font-size: 25rem;
+                }
             
                 &:hover{
                     cursor: pointer;
                     color: $sun_color;
                     border: 1.5px solid $sun_color;
                     background-color: $moon_color;
+                }
+            }
+
+            .no{
+                margin-bottom: 70px;
+
+                @include mobile{
+                    margin-bottom: 20px;
+
                 }
             }
         }
@@ -264,7 +330,7 @@
             text-align: center;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
             border-right: 1px solid $moon_color;
@@ -274,7 +340,7 @@
 
             @include mobile{
                 width: 476px;
-                
+                padding-top: 50px;
             }
 
         
@@ -284,11 +350,31 @@
                 label{
                     font-size: 24rem;
                     margin-right: 47px;
+
+                    &:first-child{
+                        // border: 1px solid red;
+                        margin-left: -26px;
+                    }
         
+                    @include mobile{
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -125px;
+
+                        &:first-child{
+                            // border: 1px solid red;
+                            left: -99px;
+                        }
+                    }
+                    
                 }
         
                 .pfSureText{
-                    margin-left: -24px;
+                    margin-left: -26px;
+
+                    @include mobile{
+                        margin-left: 27px;
+                    }
                 }
         
                 input{
@@ -299,6 +385,13 @@
                     border: 1px solid $moon_color;
                     padding-left: 10px;
                     font-size: 24rem;
+                    box-sizing: border-box;
+
+                    @include mobile{
+                        width: 380px;
+                        height: 60px;
+                        margin-bottom: 20px;
+                    }
                 }
         
                 .btn{
@@ -310,6 +403,20 @@
                     text-align: center;
                     border: 1px solid $moon_color;
                     color: $moon_color;
+
+                    @include mobile{
+                        // margin-bottom: 50px;
+                        width: 300px;
+                        height: 60px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                        font-size: 25rem;
+
+                    }
+
         
                     &:hover{
                         cursor: pointer;
@@ -322,14 +429,28 @@
                 .pfSure{
                     // margin-bottom: 0;
                     margin-bottom: 51px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
                 }
         
                 .pfYes{
                     margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .pfNo{
+                    margin-bottom: 70px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
                 }
             }
-        
-        
         
         }
         
@@ -338,7 +459,7 @@
             display: none;
             width: 1061px;
             margin: 0 auto;
-            height: 850px;
+            // height: 850px;
             border-radius: 0px 0px 46px 46px;
             border-left: 1px solid $moon_color;
             border-right: 1px solid $moon_color;
@@ -348,7 +469,8 @@
 
             @include mobile{
                 width: 476px;
-                
+                padding-top: 50px;
+                margin-bottom: 50px;
             }
 
         
@@ -357,10 +479,16 @@
                 width: 960px;
                 margin: 0 auto;
                 font-size: 20rem;
+                margin-bottom: 100px;
 
                 @include mobile{
-                    width: 476px;
-                    
+                    // width: 476px;
+                    width: 455px;
+                    margin-bottom: 50px;
+
+                    .none{
+                        display: none;
+                    }
                 }
     
         
@@ -376,15 +504,664 @@
                             }
                         }
 
-                        @include mobile{
-                            .none{
-                                display: none;
+                        
+                    }
+
+                    
+                }
+        
+                tbody{
+        
+                    tr{
+                        text-align: center;
+        
+                        td{
+                            // border: 1px solid #0C1244;
+                            line-height: 50px;
+                            @include mobile{
+                                line-height: 48px;                                
                             }
 
-                            
-                        }
         
+                            input{
+                                width: 80px;
+                                height: 30px;
+                                font-size: 12rem;
+                                background-color: $sun_color;
+                                border: 1px solid $moon_color;
+                                color: $moon_color;
+                                
+                                &:hover{
+                                    cursor: pointer;
+                                    color: $sun_color;
+                                    border: 1.5px solid $sun_color;
+                                    background-color: $moon_color;
+                                }
+                                
+                            }
+                        }
                     }
+                }
+                
+            }
+            
+            // 訂單明細彈窗 
+            .orderDetail{
+                // border-collapse:collapse;
+                border-spacing:0;
+                display: none;
+                margin-top: 20px;
+
+                h6{
+                    display: inline-block;
+                }
+
+                span{
+                    color: #FFAC0C;
+                }
+                
+                // thead
+                .odTitle{
+                    border-color:inherit;
+                    text-align:center;
+                    vertical-align:top;
+                    font-size: 0;
+
+                    position: relative;
+
+                    h5{
+                        background-color: $moon_color;
+                        color: $sun_color;
+                        width: 980px;
+                        height: 50px;
+
+                        @include mobile{
+                            // width: 300px;
+                        }
+                
+                    }
+
+                    i{
+                        // border: 1px solid red;
+                        display: inline-block;
+                        position: absolute;
+                        right: 30px;
+                        top: 25px;
+                        font-size: 20rem;
+                        color: $sun_color;
+                        cursor: pointer;
+                    }
+
+                    p{
+                        display: inline-block;
+                        font-weight: bold;
+                        
+                    }
+
+                    h6{
+                        display: inline-block;
+                    }
+                    
+                }
+
+                td{
+                    border:1px solid $moon_color;
+                    padding:10px 5px;
+                    vertical-align: middle;
+                }
+
+                th{
+                    border:1px solid $moon_color;
+                    padding:10px 5px;
+                }
+
+                .odTitle2{
+                    text-align:center;
+                }
+
+                // tfoot
+                .odFoot{
+                    text-align:right;
+                    vertical-align:top;
+ 
+                    .odFootLittle{
+                        // border: 1px solid teal;
+                        width: 270px;
+                        margin-left: auto;
+                        text-align: left;
+
+                        p{
+                            margin-left: 0;
+                        }
+                    }
+
+                    .footTitle{
+                        display: inline-block
+
+                    }
+
+                    span{
+                        letter-spacing: normal;
+                        
+                    }
+
+                    .discountCode{
+                        border: 1px solid $moon_color;
+                        color: $moon_color;
+                    }
+
+                    .discount{
+                        color: #FF4444;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.member_moon{
+    @import 'base/moonColorSwitch';
+    background-color: $sun_color;
+    color: $moon_color;
+
+    header{
+        border-top: 0.1px solid $sun_color;
+    }
+
+    main{
+        // border: 1px solid firebrick;
+        // width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        line-height: 1.6;
+        letter-spacing: 3px;
+
+        @include mobile{
+            line-height: 24rem;
+            
+        }
+    
+        .wrapper{
+            // border: 1px solid black;
+            width: 1080px;
+            margin: 0 auto;
+            // display: flex;
+
+            @include mobile{
+                width: 479px;
+                
+            }
+
+            .crumbs{
+                @include mobile{
+                    display: none;
+                }
+            }
+        
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: $moon_color;
+            }
+        }
+        
+        p{
+            margin-top: 17px;
+            // margin-left: 100px;
+        
+        }
+        
+        
+        h3{
+            margin-top: 62px;
+            text-align: center;
+            // margin-bottom: 48px;
+
+            @include mobile{
+                font-size: 28rem;
+                margin-top: 50px;
+            }
+        }
+        
+        .signOut{
+            background-color: $sun_color;
+            display: inline-block;
+            width: 140px;
+            height: 50px;
+            font-size: 20rem;
+            text-align: center;
+            border: 1px solid $moon_color;
+            float: right;
+            margin-bottom: 62px;
+            color: $moon_color;
+
+            @include mobile{
+                margin-bottom: 50px;
+            }
+            
+        
+            &:hover{
+                cursor: pointer;
+                color: $sun_color;
+                border: 1.5px solid $sun_color;
+                background-color: $moon_color;
+            }
+        
+        }
+        
+        // 主區塊
+        .memberPage{
+            // border: 1px solid #0C1244;
+            width: 1063px;
+            margin: 0 auto;
+        
+            clear: both;
+            display: flex;
+            // height: 900px;
+            border-radius: 0px 0px 46px 46px;
+
+            @include mobile{
+                width: 479px;
+                
+            }
+
+        
+            li{
+                font-size: 24rem;
+                width: 355px;
+                height: 100px;
+                border-radius: 29px 29px 0 0;
+                border: 1px solid $moon_color;
+                text-align: center;
+                line-height: 100px;
+                justify-items: center;
+                color: $moon_color;
+
+                @include mobile{
+                    width: 160px; 
+                    height: 54px;
+                    font-size: 20rem;
+                }
+    
+        
+                a{
+                    display: block;
+                    text-align: center;
+
+                    @include mobile{
+                        line-height: 54px;                    
+                    }
+            
+                }
+        
+                :hover{
+                    color: $sun_color;
+                    background-color: $moon_color;
+                    border-radius: 29px 29px 0 0;
+                }
+        
+            }
+        }
+        
+        .memberPage > li.active a{
+            color: $sun_color;
+            background-color: $moon_color;
+            border-radius: 29px 29px 0 0;
+        
+        }
+        
+        // 第1分頁
+        .basicData{
+            // clear: both;
+            width: 1061px;
+            margin: 0 auto;
+            // height: 850px;
+            text-align: center;
+            border-radius: 0px 0px 46px 46px;
+            border-left: 1px solid $moon_color;
+            border-right: 1px solid $moon_color;
+            border-bottom: 1px solid $moon_color;
+            padding-top: 100px;
+            margin-bottom: 100px;
+
+            @include mobile{
+                width: 476px;
+                padding-top: 20px;
+                
+            }
+
+            //先消失
+            // display: none;
+        
+            .memberPic{
+
+               @include mobile{
+                width: 150px;
+                
+            }
+            }
+            
+            .memberForm{
+
+                @include mobile{
+                    // text-align: center;
+                }
+
+                > label{
+
+                    @include mobile{
+                        font-size: 25rem;
+                        margin-right: 40px;
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -140px;
+                        margin-bottom: 10px;
+                    }    
+
+                }
+                
+            }
+            
+            label{
+                font-size: 24rem;
+                margin-right: 27px;
+
+                @include mobile{
+                    font-size: 25rem;
+                    margin-right: 40px;
+                }
+
+            }
+
+
+            
+            input{
+                margin-bottom: 23px;
+                width: 400px;
+                height: 50px;
+                background-color: $sun_color;
+                border: 1px solid $moon_color;
+                padding-left: 10px;
+                font-size: 24rem;
+                box-sizing: border-box;
+
+                @include mobile{
+                    width: 380px;
+                    height: 60px;
+                }
+    
+                
+            }
+        
+            input[type="file"] {
+                position: fixed;
+                right: 100%;
+                bottom: 100%;
+            }
+
+            .custom-file-upload {
+                // border: 1px solid #ccc;
+                display: inline-block;
+                // padding: 6px 12px;
+                cursor: pointer;
+                margin-right: 0;
+                position: relative;
+                top: -8px;
+                width: 292px;
+                background-color: $moon_color;
+                color: $sun_color;
+                margin-bottom: 50px;
+
+                @include mobile{
+                    width: 150px;
+                    margin-bottom: 20px;
+                    font-size: 20rem;
+                }
+            }
+            
+            .memberFile{
+                border: 0;
+            }
+        
+            .memberPhone{
+                margin-bottom: 0;
+            }
+        
+            .sure{
+                margin-top: 50px;
+                margin-bottom: 10px;
+
+                @include mobile{
+                    margin: 20px 0 20px 0;
+
+                }
+            }
+        
+            .btn{
+                background-color: $sun_color;
+                display: inline-block;
+                width: 140px;
+                height: 50px;
+                font-size: 16rem;
+                text-align: center;
+                border: 1px solid $moon_color;
+                color: $moon_color;
+
+                @include mobile{
+                    // margin-bottom: 50px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    color: $sun_color;
+                    border: 1.5px solid $sun_color;
+                    background-color: $moon_color;
+                    font-size: 25rem;
+                }
+            
+                &:hover{
+                    cursor: pointer;
+                    color: $sun_color;
+                    border: 1.5px solid $sun_color;
+                    background-color: $moon_color;
+                }
+            }
+
+            .no{
+                margin-bottom: 70px;
+
+                @include mobile{
+                    margin-bottom: 20px;
+
+                }
+            }
+        }
+        
+        // 第2分頁
+        .changePwd{
+            display: none;
+            text-align: center;
+            width: 1061px;
+            margin: 0 auto;
+            // height: 850px;
+            border-radius: 0px 0px 46px 46px;
+            border-left: 1px solid $moon_color;
+            border-right: 1px solid $moon_color;
+            border-bottom: 1px solid $moon_color;
+            padding-top: 100px;
+            margin-bottom: 100px;
+
+            @include mobile{
+                width: 476px;
+                padding-top: 50px;
+            }
+
+        
+            .pwdForm{
+        
+        
+                label{
+                    font-size: 24rem;
+                    margin-right: 47px;
+
+                    &:first-child{
+                        // border: 1px solid red;
+                        margin-left: -26px;
+                    }
+        
+                    @include mobile{
+                        // border: 1px solid red;
+                        position: relative;
+                        left: -125px;
+
+                        &:first-child{
+                            // border: 1px solid red;
+                            left: -99px;
+                        }
+                    }
+                    
+                }
+        
+                .pfSureText{
+                    margin-left: -26px;
+
+                    @include mobile{
+                        margin-left: 27px;
+                    }
+                }
+        
+                input{
+                    width: 400px;
+                    height: 50px;
+                    margin-bottom: 23px;
+                    background-color: $sun_color;
+                    border: 1px solid $moon_color;
+                    padding-left: 10px;
+                    font-size: 24rem;
+                    box-sizing: border-box;
+
+                    @include mobile{
+                        width: 380px;
+                        height: 60px;
+                        margin-bottom: 20px;
+                    }
+                }
+        
+                .btn{
+                    background-color: $sun_color;
+                    display: inline-block;
+                    width: 140px;
+                    height: 50px;
+                    font-size: 16rem;
+                    text-align: center;
+                    border: 1px solid $moon_color;
+                    color: $moon_color;
+
+                    @include mobile{
+                        // margin-bottom: 50px;
+                        width: 300px;
+                        height: 60px;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                        font-size: 25rem;
+
+                    }
+
+        
+                    &:hover{
+                        cursor: pointer;
+                        color: $sun_color;
+                        border: 1.5px solid $sun_color;
+                        background-color: $moon_color;
+                    }
+                }
+        
+                .pfSure{
+                    // margin-bottom: 0;
+                    margin-bottom: 51px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+        
+                .pfYes{
+                    margin-bottom: 10px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .pfNo{
+                    margin-bottom: 70px;
+
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        
+        }
+        
+        // 第3分頁
+        .orderCheck{
+            display: none;
+            width: 1061px;
+            margin: 0 auto;
+            // height: 850px;
+            border-radius: 0px 0px 46px 46px;
+            border-left: 1px solid $moon_color;
+            border-right: 1px solid $moon_color;
+            border-bottom: 1px solid $moon_color;
+            padding-top: 100px;
+            margin-bottom: 100px;
+
+            @include mobile{
+                width: 476px;
+                padding-top: 50px;
+                margin-bottom: 50px;
+            }
+
+        
+            table{
+                border: 1px solid $moon_color;
+                width: 960px;
+                margin: 0 auto;
+                font-size: 20rem;
+                margin-bottom: 100px;
+
+                @include mobile{
+                    // width: 476px;
+                    width: 455px;
+                    margin-bottom: 50px;
+
+                    .none{
+                        display: none;
+                    }
+                }
+    
+        
+                thead{
+                    tr{
+                        th{
+                            // border: 1px solid #0C1244;
+                            border-bottom: 1px solid $moon_color;
+                            line-height: 50px;
+
+                            @include mobile{
+                                line-height: 48px;                                
+                            }
+                        }
+
+                        
+                    }
+
+                    
                 }
         
                 tbody{
@@ -532,428 +1309,3 @@
     }
     
 }
-
-.member_moon{
-    @import 'base/moonColorSwitch';
-    background-color: $sun_color;
-    color: $moon_color;
-
-    main{
-        // border: 1px solid firebrick;
-        // width: 1280px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        line-height: 1.6;
-        letter-spacing: 3px;
-    
-        .wrapper{
-            // border: 1px solid black;
-            width: 1080px;
-            margin: 0 auto;
-            // display: flex;
-        
-            a{
-                display: inline-block;
-                text-decoration: none;
-                color: $moon_color;
-            }
-        }
-        
-        p{
-            margin-top: 17px;
-            // margin-left: 100px;
-        
-        }
-        
-        
-        h3{
-            margin-top: 62px;
-            text-align: center;
-            // margin-bottom: 48px;
-        }
-        
-        .signOut{
-            background-color: $sun_color;
-            display: inline-block;
-            width: 140px;
-            height: 50px;
-            font-size: 20rem;
-            text-align: center;
-            border: 1px solid $moon_color;
-            float: right;
-            margin-bottom: 62px;
-            color: $moon_color;
-        
-            &:hover{
-                cursor: pointer;
-                color: $sun_color;
-                border: 1.5px solid $sun_color;
-                background-color: $moon_color;
-            }
-        
-        }
-        
-        // 主區塊
-        .memberPage{
-            // border: 1px solid #0C1244;
-            width: 1063px;
-            margin: 0 auto;
-        
-            clear: both;
-            display: flex;
-            // height: 900px;
-            border-radius: 0px 0px 46px 46px;
-        
-            li{
-                font-size: 24rem;
-                width: 355px;
-                height: 100px;
-                border-radius: 29px 29px 0 0;
-                border: 1px solid $moon_color;
-                text-align: center;
-                line-height: 100px;
-                justify-items: center;
-                color: $moon_color;
-        
-                a{
-                    display: block;
-                    text-align: center;
-            
-                }
-        
-                :hover{
-                    color: $sun_color;
-                    background-color: $moon_color;
-                    border-radius: 29px 29px 0 0;
-                }
-        
-            }
-        }
-        
-        .memberPage > li.active a{
-            color: $sun_color;
-            background-color: $moon_color;
-            border-radius: 29px 29px 0 0;
-        
-        }
-        
-        // 第1分頁
-        .basicData{
-            // clear: both;
-            width: 1061px;
-            margin: 0 auto;
-            height: 850px;
-            text-align: center;
-            border-radius: 0px 0px 46px 46px;
-            border-left: 1px solid $moon_color;
-            border-right: 1px solid $moon_color;
-            border-bottom: 1px solid $moon_color;
-            padding-top: 100px;
-            margin-bottom: 100px;
-        
-            //先消失
-            // display: none;
-        
-            .memberPic{
-               
-            }
-            
-            .memberForm{
-                
-            }
-            
-            label{
-                font-size: 24rem;
-                margin-right: 27px;
-                
-            }
-            
-            input{
-                margin-bottom: 23px;
-                width: 400px;
-                height: 50px;
-                background-color: $sun_color;
-                border: 1px solid $moon_color;
-                padding-left: 10px;
-                font-size: 24rem;
-                
-            }
-        
-            input[type="file"] {
-                position: fixed;
-                right: 100%;
-                bottom: 100%;
-            }
-
-            .custom-file-upload {
-                border: 1px solid #ccc;
-                display: inline-block;
-                // padding: 6px 12px;
-                cursor: pointer;
-                margin-right: 0;
-                position: relative;
-                top: -7px;
-                width: 290px;
-                background-color: $moon_color;
-                color: $sun_color;
-                margin-bottom: 50px;
-            }
-            
-            .memberFile{
-                border: 0;
-            }
-        
-            .memberPhone{
-                margin-bottom: 0;
-            }
-        
-            .sure{
-                margin-top: 51px;
-                margin-bottom: 10px;
-            }
-        
-            .btn{
-                background-color: $sun_color;
-                display: inline-block;
-                width: 140px;
-                height: 50px;
-                font-size: 16rem;
-                text-align: center;
-                border: 1px solid $moon_color;
-                color: $moon_color;
-            
-                &:hover{
-                    cursor: pointer;
-                    color: $sun_color;
-                    border: 1.5px solid $sun_color;
-                    background-color: $moon_color;
-                }
-            }
-        }
-        
-        // 第2分頁
-        .changePwd{
-            display: none;
-            text-align: center;
-            width: 1061px;
-            margin: 0 auto;
-            height: 850px;
-            border-radius: 0px 0px 46px 46px;
-            border-left: 1px solid $moon_color;
-            border-right: 1px solid $moon_color;
-            border-bottom: 1px solid $moon_color;
-            padding-top: 100px;
-            margin-bottom: 100px;
-        
-            .pwdForm{
-        
-        
-                label{
-                    font-size: 24rem;
-                    margin-right: 47px;
-        
-                }
-        
-                .pfSureText{
-                    margin-left: -24px;
-                }
-        
-                input{
-                    width: 400px;
-                    height: 50px;
-                    margin-bottom: 23px;
-                    background-color: $sun_color;
-                    border: 1px solid $moon_color;
-                    padding-left: 10px;
-                    font-size: 24rem;
-                }
-        
-                .btn{
-                    background-color: $sun_color;
-                    display: inline-block;
-                    width: 140px;
-                    height: 50px;
-                    font-size: 16rem;
-                    text-align: center;
-                    border: 1px solid $moon_color;
-                    color: $moon_color;
-        
-                    &:hover{
-                        cursor: pointer;
-                        color: $sun_color;
-                        border: 1.5px solid $sun_color;
-                        background-color: $moon_color;
-                    }
-                }
-        
-                .pfSure{
-                    // margin-bottom: 0;
-                    margin-bottom: 51px;
-                }
-        
-                .pfYes{
-                    margin-bottom: 10px;
-                }
-            }
-        
-        
-        
-        }
-        
-        // 第3分頁
-        .orderCheck{
-            display: none;
-            width: 1061px;
-            margin: 0 auto;
-            height: 850px;
-            border-radius: 0px 0px 46px 46px;
-            border-left: 1px solid $moon_color;
-            border-right: 1px solid $moon_color;
-            border-bottom: 1px solid $moon_color;
-            padding-top: 100px;
-            margin-bottom: 100px;
-        
-            table{
-                border: 1px solid $moon_color;
-                width: 960px;
-                margin: 0 auto;
-                font-size: 20rem;
-        
-                thead{
-                    tr{
-                        th{
-                            // border: 1px solid #0C1244;
-                            border-bottom: 1px solid $moon_color;
-                            line-height: 50px;
-                        }
-                    }
-                }
-        
-                tbody{
-        
-                    tr{
-                        text-align: center;
-        
-                        td{
-                            // border: 1px solid #0C1244;
-                            line-height: 50px;
-        
-                            input{
-                                width: 80px;
-                                height: 30px;
-                                font-size: 12rem;
-                                background-color: $sun_color;
-                                border: 1px solid $moon_color;
-                                color: $moon_color;
-                                
-                                &:hover{
-                                    cursor: pointer;
-                                    color: $sun_color;
-                                    border: 1.5px solid $sun_color;
-                                    background-color: $moon_color;
-                                }
-                                
-                            }
-                        }
-                    }
-                }
-                
-            }
-            
-            // 訂單明細彈窗 
-            .orderDetail{
-                // border-collapse:collapse;
-                border-spacing:0;
-                
-
-                h6{
-                    display: inline-block;
-                }
-
-                span{
-                    color: #FFAC0C;
-                }
-                
-                // thead
-                .odTitle{
-                    border-color:inherit;
-                    text-align:center;
-                    vertical-align:top;
-                    font-size: 0;
-
-                    h5{
-                        background-color: $moon_color;
-                        color: $sun_color;
-                        width: 980px;
-                        height: 50px;
-
-                    }
-
-                    p{
-                        display: inline-block;
-                        font-weight: bold;
-                        
-                    }
-
-                    h6{
-                        display: inline-block;
-                    }
-                    
-                }
-
-                td{
-                    border:1px solid $moon_color;
-                    padding:10px 5px;
-                    vertical-align: middle;
-                }
-
-                th{
-                    border:1px solid $moon_color;
-                    padding:10px 5px;
-                }
-
-                .odTitle2{
-                    text-align:center;
-                }
-
-                // tfoot
-                .odFoot{
-                    text-align:right;
-                    vertical-align:top;
- 
-                    .odFootLittle{
-                        // border: 1px solid teal;
-                        width: 270px;
-                        margin-left: auto;
-                        text-align: left;
-
-                        p{
-                            margin-left: 0;
-                        }
-                    }
-
-                    .footTitle{
-                        display: inline-block
-
-                    }
-
-                    span{
-                        letter-spacing: normal;
-                        
-                    }
-
-                    .discountCode{
-                        border: 1px solid $moon_color;
-                        color: $moon_color;
-                    }
-
-                    .discount{
-                        color: #FF4444;
-                    }
-                }
-            }
-        }
-    }
-    
-}
-

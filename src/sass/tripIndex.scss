@@ -12,7 +12,7 @@
     
 };
 @mixin pad{
-    @media(min-width:768px) and (max-width:992px){
+    @media(min-width:577px) and (max-width:992px){
         @content
     }
     
@@ -36,16 +36,25 @@
         @include mobile{
             display: none;
         }
+
+    }
+    .mobileimg{
+        @include pad{
+            display: none;
+        }
     }
     h5{
         @include noteBookBig{
             font-size: 16rem;
         }
         @include noteBook{
-            font-size: 12rem;
+            font-size: 14rem;
         }
         @include mobile{
             font-size: 16rem;
+        }
+        @include pad{
+            
         }
     }
     span{
@@ -59,7 +68,7 @@
             font-size: 70rem;
         }
         @include pad{
-            font-size: 50rem;
+            font-size: 70rem;
         }
     }
     .SeaItinerary{
@@ -78,6 +87,9 @@
                 @include mobile{
                     display: none;
                 }
+                @include pad{
+                    display: none;
+                }
             }
         }
         img{
@@ -85,6 +97,10 @@
            @include mobile{
             width: auto;
             height: 100%;
+            }
+            @include pad{
+                width: 100%;
+                height: auto;
             }
         }
         video{
@@ -105,13 +121,17 @@
         }
         span{
             position: absolute;
-            top: 30%;
-            right: 10%;
+            top: 35%;
+            right: 17%;
             color: #fff;
-            
+            transform: translate(-20%,-35%);
             @include mobile{
-                top: 20%;
+                top: 25%;
                 right: 25%;
+            }            
+            @include pad{
+                right: 10%;
+                top: 36%;
             }
         }
         h5{
@@ -147,16 +167,22 @@
                 @include mobile{
                     display: none;
                 }
+                @include pad{
+                    display: none;
+                }
             }
         }
         img{
             width: 100%;
-            display: block;
             margin: 0;
             padding: 0;
             @include mobile{
                 width: auto;
                 height: 100%;
+            }
+            @include pad{
+                width: 100%;
+                height: auto;
             }
         }
         video{
@@ -164,6 +190,9 @@
            display: none;
            @include mobile{
             display: none;
+            }
+            @include pad{
+                display: none;
             }
         }
         @include mobile{
@@ -178,13 +207,20 @@
         
         span{
             position: absolute;
-            top: 30%;
-            left: 10%;
+            top: 35%;
+            left: 20%;
+            transform: translate(-20%,-35%);
             color: #fff;
             @include mobile{
-                top: 20%;
-                right: 25%;
+                top: 25%;
+                right: 10%;
+                transform: translate(-10%,-25%);
             }
+            @include pad{
+                top: 36%;
+                left: 15%;
+            }
+            
         }
         h5{
             position: absolute;
@@ -196,6 +232,7 @@
             }
             @include pad{
                 top: 36%;
+                left: 34%;
             }
             @include mobile{
                 top: 35%;
@@ -224,6 +261,9 @@
                 @include mobile{
                     display: none;
                 }
+                @include pad{
+                    display: none;
+                }
             }
         }
         @include noteBook{
@@ -234,14 +274,20 @@
         video{
             width: 100%;
             display: none;
+            @include pad{
+                display: none;
+            }
         }
-
         .mobileimg{
             height: 100%;
+            width: 100%;
         }
         img{
             width: 100%;
-
+            @include pad{
+                width: 100%;
+                height: auto;
+            }
         }
         .Pagebox{
             position: relative;
@@ -250,48 +296,52 @@
             
             span{
                 position: absolute;
-                top: 20%;
-                left: 46.5%;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-40%);
                 color: #fff;
                 
-                @include noteBook{
-                    left: 47%;
-                }
+                // @include noteBook{
+                //     left: 47%;
+                // }
                 @include pad{
-                    left: 46.5%;
-                }
-                @include mobile{
-                    left: 37.5%;
                     top: 35%;
                 }
+                // @include mobile{
+                //     left: 37.5%;
+                //     top: 35%;
+                // }
             }
             h5{
                 position: absolute;
                 top: 60%;
-                left: 44%;
+                left: 50%;
+                transform: translate(-50%,-60%);
                 color: #fff;
                 font-weight:bolder;
-                @include noteBook{
-                    left: 45%;
-                }
-                @include pad{
-                    left: 41%;
-                }
-                @include mobile{
-                    left: 20%;
-                    top: 64%;
-                }
+                // @include noteBook{
+                //     left: 45%;
+                // }
+                // @include pad{
+                //     left: 41%;
+                // }
+                // @include mobile{
+                //     left: 20%;
+                //     top: 64%;
+                // }
             }
             h5:nth-Child(3){
                 top: 70%;
                 left: 56%;
+                transform: translate(-56%,-70%);
                 @include pad{
                     left: 57%;
                     top: 78%;
                 }
                 @include mobile{
-                    left: 70%;
+                    left: 75%;
                     top: 70%;
+                    transform: translate(-75%,-70%);
                 }
             }
             

@@ -147,6 +147,7 @@ if($data["success"] == "true"){
     //天氣icon
     $rain = (int)((int)$data[0]['time'][0]['elementValue'][0]['value']/20);
     array_push($today_weather, $sun[$rain].$moon[$rain]);
+    // array_push($today_weather, $moon[$rain]);
 
     //溫度
     array_push($today_weather, ((int)$data[1]['time'][0]['elementValue'][0]['value']).'°');
@@ -172,6 +173,7 @@ if($data["success"] == "true"){
         $rain = (int)((int)$data[0]['time'][$i]['elementValue'][0]['value']/20);
         array_push($temp, $sun[$rain].$moon[$rain]);
 
+
         array_push($temp, ((int)$data[1]['time'][$i]['elementValue'][0]['value']).'°');
         
         // echo "<br>";
@@ -185,7 +187,9 @@ if($data["success"] == "true"){
     $weather["today"] = $today_weather;
     $weather["future"] = $future_weather;
     
-    print_r($weather);
+    // print_r($weather["today"]);
+
+    echo json_encode($weather);
 }else{
     echo "獲取天氣資料失敗";
 }
