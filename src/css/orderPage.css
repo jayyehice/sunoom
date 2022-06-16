@@ -179,6 +179,12 @@
   .orderPage .selectDate li {
     height: 80px;
   }
+  .orderPage .selectDate li #beginDate {
+    font-size: 12rem;
+  }
+  .orderPage .selectDate li #endDate {
+    font-size: 12rem;
+  }
 }
 .orderPage .selectDate li #numberOfPeople {
   width: 50px;
