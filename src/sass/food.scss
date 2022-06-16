@@ -14,6 +14,15 @@ $p : 16px;
 //網頁版(日島)
 .food{
     background-color: $sun_color;
+
+    //header
+    header .headerCenter {
+        position: absolute;
+        z-index: 100;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     // banner區塊
     .banner{
         position: relative;
@@ -22,6 +31,8 @@ $p : 16px;
         background-image: url('../img/food/banner.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+
+
    }
     main{
         width: 1280px;
