@@ -1,4 +1,89 @@
 
+
+Vue.component('memberuse',{
+    // props:['member_list'],
+    template:
+        `<ul class="tableList" v-for="member in member_list">
+            <li class="col">{{member[0]}}</li>
+            <li class="col">隆哥</li>
+            <li class="col-2">xxxx@gmail.com</li>
+            <li class="col">0</li>
+            <li class="col">一般會員</li>
+            <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+        </ul>`
+})
+
+Vue.component('membermangement',{
+    // props:[member_list],
+    template:
+    `<div>
+            <div class="listTitle col-8">
+            <!-- 表單抬頭 -->
+            <div class="Title">
+                <h3>會員管理</h3>
+                <input type="text" name="" id="">
+                <button>搜尋</button>
+            </div>
+            <!-- 表單細分類 -->
+            <div class="checkList">
+                <h4 class="col-2">正常</h4>
+                <h4 class="col-2">已停權</h4>
+                <div class="addNew col-2 offset-5">
+                <i class="fa-solid fa-circle-plus"></i>
+                <span>新增</span>
+            </div>
+            </div>
+            <!-- 表身 -->
+            <div class="tableBox container-fluid">
+                <div class="row">
+                    <ul class="tableTitle">
+                        <li class="col">編號</li>
+                        <li class="col">姓名</li>
+                        <li class="col-2">信箱</li>
+                        <li class="col">違規次數</li>
+                        <li class="col">會員狀態</li>
+                        <li class="col"></li>
+                    </ul>
+                    <memberuse></memberuse>
+                    <ul class="tableList">
+                        <li class="col">1</li>
+                        <li class="col">隆哥</li>
+                        <li class="col">xxxx@gmail.com</li>
+                        <li class="col">0</li>
+                        <li class="col">一般會員</li>
+                        <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="pageList col-2 offset-7">
+                    <li class=""><</li>
+                    <li class="nowPage">1</li>
+                    <li>></li>
+                </ul>
+            </div>
+        </div> 
+    </div>`
+    ,
+})
+
+let vm = new Vue({  // vue instance (實例)
+    el: '#app',
+    data: { 
+        countent:'membermangement',
+        member_list:[], 
+    },
+    methods: {},
+    created() {
+        const url = './php/backgroundSystem.php';
+        fetch(url)
+            .then(response => response.json())
+            .then(member => this.member_list = member);
+    },          
+});
+
 window.addEventListener("load",function(){
     
     let table = this.document.getElementsByClassName("table")[0];
@@ -342,64 +427,64 @@ window.addEventListener("load",function(){
                     </div>
                 </div>`
     })
-    $("#MemberMangement").on("click",function(){
-        table.innerHTML = 
-        `<div class="listTitle col-8">
-                    <!-- 表單抬頭 -->
-                    <div class="Title">
-                        <h3>會員管理</h3>
-                        <input type="text" name="" id="">
-                        <button>搜尋</button>
-                    </div>
-                    <!-- 表單細分類 -->
-                    <div class="checkList">
-                        <h4 class="col-2">正常</h4>
-                        <h4 class="col-2">已停權</h4>
-                        <div class="addNew col-2 offset-5">
-                        <i class="fa-solid fa-circle-plus"></i>
-                        <span>新增</span>
-                    </div>
-                    </div>
-                    <!-- 表身 -->
-                    <div class="tableBox container-fluid">
-                        <div class="row">
-                            <ul class="tableTitle">
-                                <li class="col">編號</li>
-                                <li class="col">姓名</li>
-                                <li class="col">信箱</li>
-                                <li class="col">違規次數</li>
-                                <li class="col">會員狀態</li>
-                                <li class="col"></li>
-                            </ul>
-                            <ul class="tableList">
-                                <li class="col">1</li>
-                                <li class="col">隆哥</li>
-                                <li class="col">xxxx@gmail.com</li>
-                                <li class="col">0</li>
-                                <li class="col">一般會員</li>
-                                <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-                            </ul>
-                            <ul class="tableList">
-                                <li class="col">1</li>
-                                <li class="col">隆哥</li>
-                                <li class="col">xxxx@gmail.com</li>
-                                <li class="col">0</li>
-                                <li class="col">一般會員</li>
-                                <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <ul class="pageList col-2 offset-7">
-                            <li class=""><</li>
-                            <li class="nowPage">1</li>
-                            <li>></li>
-                        </ul>
-                    </div>
-                </div>`
-    })
+    // $("#MemberMangement").on("click",function(){
+    //     table.innerHTML = 
+    //     `<div class="listTitle col-8">
+    //                 <!-- 表單抬頭 -->
+    //                 <div class="Title">
+    //                     <h3>會員管理</h3>
+    //                     <input type="text" name="" id="">
+    //                     <button>搜尋</button>
+    //                 </div>
+    //                 <!-- 表單細分類 -->
+    //                 <div class="checkList">
+    //                     <h4 class="col-2">正常</h4>
+    //                     <h4 class="col-2">已停權</h4>
+    //                     <div class="addNew col-2 offset-5">
+    //                     <i class="fa-solid fa-circle-plus"></i>
+    //                     <span>新增</span>
+    //                 </div>
+    //                 </div>
+    //                 <!-- 表身 -->
+    //                 <div class="tableBox container-fluid">
+    //                     <div class="row">
+    //                         <ul class="tableTitle">
+    //                             <li class="col">編號</li>
+    //                             <li class="col">姓名</li>
+    //                             <li class="col-2">信箱</li>
+    //                             <li class="col">違規次數</li>
+    //                             <li class="col">會員狀態</li>
+    //                             <li class="col"></li>
+    //                         </ul>
+    //                         <ul class="tableList" v-for="member in member_lst">
+    //                             <li class="col">{{member[0]}}</li>
+    //                             <li class="col">隆哥</li>
+    //                             <li class="col-2">xxxx@gmail.com</li>
+    //                             <li class="col">0</li>
+    //                             <li class="col">一般會員</li>
+    //                             <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+    //                         </ul>
+    //                         <ul class="tableList">
+    //                             <li class="col">1</li>
+    //                             <li class="col">隆哥</li>
+    //                             <li class="col">xxxx@gmail.com</li>
+    //                             <li class="col">0</li>
+    //                             <li class="col">一般會員</li>
+    //                             <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+    //                         </ul>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //             <div class="container-fluid">
+    //                 <div class="row">
+    //                     <ul class="pageList col-2 offset-7">
+    //                         <li class=""><</li>
+    //                         <li class="nowPage">1</li>
+    //                         <li>></li>
+    //                     </ul>
+    //                 </div>
+    //             </div>`
+    // })
    
 })
 //彈窗事件綁定

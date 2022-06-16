@@ -314,9 +314,9 @@
             }
             h5{
                 position: absolute;
-                top: 60%;
+                top: 70%;
                 left: 50%;
-                transform: translate(-50%,-60%);
+                transform: translate(-50%,-70%);
                 color: #fff;
                 font-weight:bolder;
                 // @include noteBook{
@@ -331,9 +331,9 @@
                 // }
             }
             h5:nth-Child(3){
-                top: 70%;
+                top: 80%;
                 left: 56%;
-                transform: translate(-56%,-70%);
+                transform: translate(-56%,-80%);
                 @include pad{
                     left: 57%;
                     top: 78%;
