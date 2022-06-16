@@ -39,56 +39,22 @@ new Vue({
     watch: {},
 
     beforeCreate() {
-        
-        // ----------------------ajax---------------------
-    
-        // let xmlHTTP;
-    
-        // function $_xmlHttpRequest()
-        // {   
-        //     if(window.ActiveXObject)
-        //     {
-        //         xmlHTTP=new ActiveXObject("Microsoft.XMLHTTP");
-        //     }
-        //     else if(window.XMLHttpRequest)
-        //     {
-        //         xmlHTTP=new XMLHttpRequest();
-        //     }
-        // }
-    
-        // $_xmlHttpRequest();
-        // xmlHTTP.open("GET","../src/php/information.php",true);
-    
-        // xmlHTTP.onreadystatechange= e =>{
-        //     if(xmlHTTP.readyState == 4)
-        //     {
-        //         if(xmlHTTP.status == 200)
-        //         {
-        //             this.faq_list = JSON.parse(xmlHTTP.responseText);
-        //         }
-        //     }
-        // }
-        // xmlHTTP.send(null);
-
-
 
         //fetch
 
-        const url = './php/information.php';
+        //const url = './php/information.php';
+        //期中報告用information_tmp.php
+        const url = './php/information_tmp.php';
         fetch(url)
             .then(response => {
                 if (response.ok) {
                     return response.json();
-                    // this.faq_list = response.json();
                 } else {
                     const { status, statusText } = response;
                  throw Error(`${status}: ${statusText}`);
                 }
             })
             .then(text => this.faq_list = text);
-
-
-
 
     },
 
@@ -108,37 +74,3 @@ new Vue({
 
 
 
-
-
-
-// ajax
-
-// var xmlHTTP;
-
-// function $_xmlHttpRequest()
-// {   
-//     if(window.ActiveXObject)
-//     {
-//         xmlHTTP=new ActiveXObject("Microsoft.XMLHTTP");
-//     }
-//     else if(window.XMLHttpRequest)
-//     {
-//         xmlHTTP=new XMLHttpRequest();
-//     }
-// }
-
-// $_xmlHttpRequest();
-// xmlHTTP.open("GET","../src/php/information.php",true);
-
-// xmlHTTP.onreadystatechange=function check_user()
-// {
-//     if(xmlHTTP.readyState == 4)
-//     {
-//         if(xmlHTTP.status == 200)
-//         {
-//             // var str=xmlHTTP.responseText;
-//             console.log(JSON.parse(xmlHTTP.responseText));
-//         }
-//     }
-// }
-// xmlHTTP.send(null);
