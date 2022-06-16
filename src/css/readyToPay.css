@@ -5,10 +5,12 @@
 .readyToPay select {
   border: 1px solid #0C1244;
   color: #0C1244;
+  background-color: #F5F0DD;
 }
 .readyToPay input {
   border: 1px solid #0C1244;
   color: #0C1244;
+  background-color: #F5F0DD;
 }
 .readyToPay button {
   color: #0C1244;
@@ -255,6 +257,9 @@
 .readyToPay .bigList table ul li {
   margin: 7px;
   text-align: center;
+}
+.readyToPay .bigList table ul li i {
+  margin-left: 5px;
 }
 .readyToPay .bigList table ul li:last-child {
   color: #FFBF44;
