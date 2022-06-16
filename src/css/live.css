@@ -142,20 +142,20 @@
   letter-spacing: 0px;
 }
 .live main .wrapper .siteLayout .siteLayoutwp .wood1 {
-  right: 165px;
-  top: 135px;
+  right: 18%;
+  top: 16%;
 }
 .live main .wrapper .siteLayout .siteLayoutwp .wood11 {
-  right: 160px;
-  bottom: 100px;
+  right: 18%;
+  bottom: 14%;
 }
 .live main .wrapper .siteLayout .siteLayoutwp .wood2 {
-  left: 230px;
-  top: 90px;
+  left: 25%;
+  top: 12%;
 }
 .live main .wrapper .siteLayout .siteLayoutwp .wood3 {
-  left: 90px;
-  bottom: 190px;
+  left: 10%;
+  bottom: 25%;
 }
 .live main .wrapper .siteLayout .siteLayoutInf01 {
   display: none;
@@ -480,20 +480,20 @@
   letter-spacing: 0px;
 }
 .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
-  right: 422px;
-  top: 85px;
+  right: 40%;
+  top: 18%;
 }
 .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
-  right: 422px;
-  bottom: 230px;
+  right: 40%;
+  bottom: 46%;
 }
 .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
-  right: 422px;
-  bottom: 70px;
+  right: 40%;
+  bottom: 14%;
 }
 .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
-  left: 277px;
-  bottom: 230px;
+  left: 30%;
+  bottom: 46%;
 }
 .live main .wrapper .villaSiteLayout .villaInf01 {
   display: none;
@@ -751,20 +751,20 @@
   letter-spacing: 0px;
 }
 .live_moon main .wrapper .siteLayout .siteLayoutwp .wood1 {
-  right: 165px;
-  top: 135px;
+  right: 18%;
+  top: 16%;
 }
 .live_moon main .wrapper .siteLayout .siteLayoutwp .wood11 {
-  right: 160px;
-  bottom: 100px;
+  right: 18%;
+  bottom: 14%;
 }
 .live_moon main .wrapper .siteLayout .siteLayoutwp .wood2 {
-  left: 230px;
-  top: 90px;
+  left: 25%;
+  top: 12%;
 }
 .live_moon main .wrapper .siteLayout .siteLayoutwp .wood3 {
-  left: 90px;
-  bottom: 190px;
+  left: 10%;
+  bottom: 25%;
 }
 .live_moon main .wrapper .siteLayout .siteLayoutInf01 {
   display: none;
@@ -1080,20 +1080,20 @@
   letter-spacing: 0px;
 }
 .live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
-  right: 422px;
-  top: 85px;
+  right: 40%;
+  top: 18%;
 }
 .live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
-  right: 422px;
-  bottom: 230px;
+  right: 40%;
+  bottom: 46%;
 }
 .live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
-  right: 422px;
-  bottom: 70px;
+  right: 40%;
+  bottom: 14%;
 }
 .live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
-  left: 277px;
-  bottom: 230px;
+  left: 30%;
+  bottom: 46%;
 }
 .live_moon main .wrapper .villaSiteLayout .villaInf01 {
   display: none;
@@ -1353,20 +1353,20 @@ main .wrapper .siteLayout .siteLayoutwp .wood {
   letter-spacing: 0px;
 }
 main .wrapper .siteLayout .siteLayoutwp .wood1 {
-  right: 165px;
-  top: 135px;
+  right: 18%;
+  top: 16%;
 }
 main .wrapper .siteLayout .siteLayoutwp .wood11 {
-  right: 160px;
-  bottom: 100px;
+  right: 18%;
+  bottom: 14%;
 }
 main .wrapper .siteLayout .siteLayoutwp .wood2 {
-  left: 230px;
-  top: 90px;
+  left: 25%;
+  top: 12%;
 }
 main .wrapper .siteLayout .siteLayoutwp .wood3 {
-  left: 90px;
-  bottom: 190px;
+  left: 10%;
+  bottom: 25%;
 }
 main .wrapper .siteLayout .siteLayoutInf01 {
   display: none;
@@ -1682,20 +1682,20 @@ main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
   letter-spacing: 0px;
 }
 main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
-  right: 422px;
-  top: 85px;
+  right: 40%;
+  top: 18%;
 }
 main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
-  right: 422px;
-  bottom: 230px;
+  right: 40%;
+  bottom: 46%;
 }
 main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
-  right: 422px;
-  bottom: 70px;
+  right: 40%;
+  bottom: 14%;
 }
 main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
-  left: 277px;
-  bottom: 230px;
+  left: 30%;
+  bottom: 46%;
 }
 main .wrapper .villaSiteLayout .villaInf01 {
   display: none;
@@ -1820,18 +1820,17 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
 
 @media screen and (max-width: 575.98px) {
   .live main .wrapper {
-    width: 100%;
+    width: calc(100% - 40px);
   }
   .live main .wrapper .logCabin {
     margin-bottom: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .live main .wrapper .logCabin .logCabinLeft {
-    width: 192px;
+    width: 28%;
     margin-top: 50px;
   }
   .live main .wrapper .logCabin .logCabinLeft .logCabinText {
-    width: 190px;
     margin: 0px 10px 20px 0px;
     display: flex;
     flex-direction: column;
@@ -1854,11 +1853,11 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
     width: 192px;
   }
   .live main .wrapper .logCabin .logCabinRight {
-    width: 333px;
+    width: 60%;
     margin-top: 50px;
   }
   .live main .wrapper .logCabin .logCabinRight .logCabinImg {
-    width: 330px;
+    width: 100%;
   }
   .live main .wrapper .logCabin .logCabinRight .rightTextArea {
     width: 100%;
@@ -1897,21 +1896,6 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
   .live main .wrapper .siteLayout .siteLayoutwp .wood {
     width: 32px;
     line-height: 32px;
-  }
-  .live main .wrapper .siteLayout .siteLayoutwp .wood1 {
-    right: 85px;
-    top: 75px;
-  }
-  .live main .wrapper .siteLayout .siteLayoutwp .wood11 {
-    right: 80px;
-    bottom: 62px;
-  }
-  .live main .wrapper .siteLayout .siteLayoutwp .wood2 {
-    left: 120px;
-    top: 50px;
-  }
-  .live main .wrapper .siteLayout .siteLayoutwp .wood3 {
-    left: 140px;
   }
   .live main .wrapper .siteLayout .siteLayoutInf01 {
     width: 312px;
@@ -1988,11 +1972,11 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
     color: #F5F0DD;
   }
   .live main .wrapper .campingTents {
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
   .live main .wrapper .campingTents .campingTentsLeft {
-    width: 192px;
+    width: 28%;
     margin-top: 50px;
   }
   .live main .wrapper .campingTents .campingTentsLeft .campingTentsText {
@@ -2022,7 +2006,7 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
     width: 192px;
   }
   .live main .wrapper .campingTents .campingTentsRight {
-    width: 333px;
+    width: 60%;
     margin-top: 50px;
   }
   .live main .wrapper .campingTents .campingTentsRight .campingImg {
@@ -2159,22 +2143,6 @@ main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
   .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
     width: 30px;
     line-height: 30px;
-  }
-  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
-    right: 220px;
-    top: 55px;
-  }
-  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
-    right: 220px;
-    bottom: 140px;
-  }
-  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
-    right: 220px;
-    bottom: 40px;
-  }
-  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
-    left: 155px;
-    bottom: 142px;
   }
   .live main .wrapper .villaSiteLayout .villaInf01 {
     width: 250px;
