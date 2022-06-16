@@ -1,20 +1,20 @@
 
 
-Vue.component('memberuse',{
-    // props:['member_list'],
-    template:
-        `<ul class="tableList" v-for="member in member_list">
-            <li class="col">{{member[0]}}</li>
-            <li class="col">隆哥</li>
-            <li class="col-2">xxxx@gmail.com</li>
-            <li class="col">0</li>
-            <li class="col">一般會員</li>
-            <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-        </ul>`
-})
+// Vue.component('memberuse',{
+//     // props:['member_list'],
+//     template:
+//         `<ul class="tableList" v-for="member in member_list">
+//             <li class="col">{{member[0]}}</li>
+//             <li class="col">隆哥</li>
+//             <li class="col-2">xxxx@gmail.com</li>
+//             <li class="col">0</li>
+//             <li class="col">一般會員</li>
+//             <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+//         </ul>`
+// })
 
 Vue.component('membermangement',{
-    // props:[member_list],
+    props:['list'],
     template:
     `<div>
             <div class="listTitle col-8">
@@ -44,7 +44,14 @@ Vue.component('membermangement',{
                         <li class="col">會員狀態</li>
                         <li class="col"></li>
                     </ul>
-                    <memberuse></memberuse>
+                    <ul class="tableList" v-for="member in list">
+                        <li class="col">{{member[0]}}</li>
+                        <li class="col">{{member[1]}}</li>
+                        <li class="col-2">{{member[2]}}</li>
+                        <li class="col">{{member[7]}}</li>
+                        <li class="col">{{member[6]}}</li>
+                        <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    </ul>
                     <ul class="tableList">
                         <li class="col">1</li>
                         <li class="col">隆哥</li>
