@@ -25,7 +25,7 @@ button.hamburger_icon {
   /* 最上面那條線的樣式 */
   /* 最下面那條線的樣式 */
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   button.hamburger_icon {
     left: 20px;
     top: 20px;
@@ -87,7 +87,7 @@ button.btn2 {
   /* 最上面那條線的樣式 */
   /* 最下面那條線的樣式 */
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   button.btn2 {
     left: 20px;
     top: 20px;
@@ -143,7 +143,7 @@ header {
 header a {
   display: block;
   text-decoration: none;
-  color: #ccc;
+  color: #fff;
 }
 header nav {
   position: fixed;
@@ -168,7 +168,7 @@ header .one {
   margin-left: 411px;
   padding-top: 133px;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .one {
     margin: 0 auto;
   }
@@ -181,21 +181,33 @@ header .ham_logo {
   left: 190px;
   top: 180px;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .ham_logo {
-    left: 0px;
+    left: 10px;
     top: 100px;
   }
 }
 header .ham_pay {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 50px;
+  top: 50px;
+}
+@media (max-width: 576px) {
+  header .ham_pay {
+    right: 20px;
+    top: 20px;
+  }
 }
 header .ham_member {
   position: absolute;
-  right: 130px;
-  top: 30px;
+  right: 150px;
+  top: 50px;
+}
+@media (max-width: 576px) {
+  header .ham_member {
+    right: 120px;
+    top: 20px;
+  }
 }
 header .ham_social {
   display: flex;
@@ -204,20 +216,35 @@ header .ham_social {
   z-index: 1;
   position: relative;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .ham_social {
-    left: -190px;
+    left: -188px;
     top: 0;
   }
 }
 header .ham_ig {
   margin-right: 50px;
 }
+@media (max-width: 576px) {
+  header .ham_ig {
+    margin-right: 25px;
+  }
+}
 header .ham_ytb {
   margin-right: 50px;
 }
+@media (max-width: 576px) {
+  header .ham_ytb {
+    margin-right: 25px;
+  }
+}
 header .ham_fb {
   margin-right: 50px;
+}
+@media (max-width: 576px) {
+  header .ham_fb {
+    margin-right: 25px;
+  }
 }
 header .headerCenter {
   padding-top: 77px;
@@ -233,13 +260,13 @@ header .headerRight {
   top: 50px;
   z-index: 100;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .headerRight {
     right: -10px;
     top: 40px;
   }
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .headerRight .sunPay {
     display: none !important;
   }
@@ -247,7 +274,7 @@ header .headerRight {
 header .headerRight .moonPay {
   display: none;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .headerRight .moonPay {
     display: none !important;
   }
@@ -255,7 +282,7 @@ header .headerRight .moonPay {
 header .headerRight .switch #sunSwitch {
   cursor: pointer;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .headerRight .switch #sunSwitch {
     transform: rotate(-90deg);
   }
@@ -264,7 +291,7 @@ header .headerRight .switch #moonSwitch {
   cursor: pointer;
   display: none;
 }
-@media (max-width: 579px) {
+@media (max-width: 576px) {
   header .headerRight .switch #moonSwitch {
     transform: rotate(-90deg);
   }
