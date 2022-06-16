@@ -1,9 +1,13 @@
 @charset "UTF-8";
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1;
+}
+
 .sea {
   background-image: url("../img/sea/seapage2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 600px;
+  background-position-y: 300px;
 }
 .sea header .headerCenter {
   position: absolute;
@@ -650,7 +654,7 @@ main .photo .wrapper2 .ig {
     background-image: url("../img/sea/seapage2.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 600px;
+    background-position-y: 300px;
   }
   main .banner {
     position: relative;
