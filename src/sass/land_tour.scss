@@ -104,6 +104,13 @@
                     li{
                         margin-right: 10px;
                         margin-top: 15px;
+                        a{
+                            text-decoration: none;
+
+                            &:link{
+                                color: $moon_color;
+                            }
+                        }
                     }
                 }
             }
@@ -607,9 +614,30 @@
         }
 
         .breadcrumbs{
-            height: 140px;
-            box-sizing: border-box;
-            border: $show_border;
+            .wrapper{
+                width: 1070px;
+                margin: 0 auto;
+                // border: $show_border;
+                ul{
+    
+                    height: 140px;
+                    box-sizing: border-box;
+                    // border: $show_border;
+                    display: flex;
+                    // align-items: flex-start;
+                    li{
+                        margin-right: 10px;
+                        margin-top: 15px;
+                        a{
+                            text-decoration: none;
+
+                            &:link{
+                                color: $moon_color;
+                            }
+                        }
+                    }
+                }
+            }
         }
     
         .slogan_banner{
@@ -1028,6 +1056,11 @@
 @media screen and (max-width: 575.98px){
     .land_tour{
         main{
+            .breadcrumbs{
+                .wrapper{
+                    width: 100%;
+                }
+            }
             .slogan_banner{
                 padding-top: 170px;
                 height: 335px;

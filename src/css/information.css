@@ -15,6 +15,12 @@
 .information main .breadcrumbs .wrapper ul li {
   margin-right: 10px;
 }
+.information main .breadcrumbs .wrapper ul li a {
+  text-decoration: none;
+}
+.information main .breadcrumbs .wrapper ul li a:link {
+  color: #0C1244;
+}
 .information main .map .wrapper {
   width: 1070px;
   margin: 0 auto;
@@ -368,6 +374,25 @@
   background-color: #0C1244;
   color: #F5F0DD;
 }
+.information_moon main .breadcrumbs .wrapper {
+  width: 1070px;
+  margin: 0 auto;
+}
+.information_moon main .breadcrumbs .wrapper ul {
+  height: 140px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.information_moon main .breadcrumbs .wrapper ul li {
+  margin-right: 10px;
+}
+.information_moon main .breadcrumbs .wrapper ul li a {
+  text-decoration: none;
+}
+.information_moon main .breadcrumbs .wrapper ul li a:link {
+  color: #F5F0DD;
+}
 .information_moon main .map .wrapper {
   width: 1070px;
   margin: 0 auto;
@@ -456,7 +481,6 @@
 .information_moon main .island_intro .wrapper {
   width: 1100px;
   margin: 0 auto;
-  border: 1px solid #000;
 }
 .information_moon main .island_intro .wrapper .origin {
   margin-bottom: 100px;
@@ -604,6 +628,7 @@
 }
 .information_moon main .contact .wrapper ul li img {
   margin-top: 10px;
+  width: 100%;
 }
 .information_moon main .traffic {
   margin-top: 70px;
@@ -700,7 +725,7 @@
   height: 5px;
   background-color: #0C1244;
   position: absolute;
-  top: calc(50% - 2.5px);
+  top: 37.5px;
   right: 30px;
 }
 .information_moon main #faq .wrapper ul li h5::after {
@@ -718,6 +743,9 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .information main .breadcrumbs .wrapper {
+    width: 100%;
+  }
   .information main .map .wrapper {
     width: calc(100% - 40px);
   }

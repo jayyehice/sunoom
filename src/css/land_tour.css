@@ -75,6 +75,12 @@
   margin-right: 10px;
   margin-top: 15px;
 }
+.land_tour main .breadcrumbs .wrapper ul li a {
+  text-decoration: none;
+}
+.land_tour main .breadcrumbs .wrapper ul li a:link {
+  color: #0C1244;
+}
 .land_tour main .slogan_banner {
   box-sizing: border-box;
   padding-top: 310px;
@@ -437,10 +443,24 @@
   border-radius: 50%;
   margin-right: 20px;
 }
-.land_tour_moon main .breadcrumbs {
+.land_tour_moon main .breadcrumbs .wrapper {
+  width: 1070px;
+  margin: 0 auto;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul {
   height: 140px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  display: flex;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li a {
+  text-decoration: none;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li a:link {
+  color: #F5F0DD;
 }
 .land_tour_moon main .slogan_banner {
   box-sizing: border-box;
@@ -749,6 +769,9 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .land_tour main .breadcrumbs .wrapper {
+    width: 100%;
+  }
   .land_tour main .slogan_banner {
     padding-top: 170px;
     height: 335px;
