@@ -403,7 +403,22 @@
                                 }
                             }
 
+                        }
+                        .viewButton_RWD {
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: block;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+                            display: none;
 
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
                         }
                     }
                 }
@@ -532,7 +547,7 @@
                     justify-content: space-between;
 
                     &>li {
-                        width: 565px;
+                        width: 100%;
                         box-sizing: border-box;
                         border: 1.5px solid $moon_color;
 
@@ -771,6 +786,22 @@
 
 
                         }
+                        .viewButton_RWD {
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: none;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+                            display: none;
+
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
+                        }
                     }
                 }
 
@@ -892,6 +923,23 @@
 
 
 
+                        }
+
+                        .viewButton_RWD {
+                            border: 1.5px solid $moon_color;
+                            width: 140px;
+                            height: 50px;
+                            text-align: center;
+                            display: none;
+                            text-decoration: none;
+                            line-height: 50px;
+                            color: $moon_color;
+                            display: none;
+
+                            &:hover {
+                                background-color: $moon_color;
+                                color: $sun_color;
+                            }
                         }
                     }
                 }
@@ -1019,7 +1067,7 @@
                     justify-content: space-between;
 
                     &>li {
-                        width: 565px;
+                        width: 100%;
                         box-sizing: border-box;
                         border: 1.5px solid $moon_color;
 
@@ -1221,19 +1269,19 @@
 
                             .viewButton_RWD {
                                 margin-top: 20px;
-                                border: 1.5px solid $moon_color;
-                                width: 380px;
+                                width: 100%;
                                 height: 60px;
-                                text-align: center;
                                 display: block;
-                                text-decoration: none;
-                                line-height: 50px;
-                                color: $moon_color;
+                                // border: 1.5px solid $moon_color;
+                                // text-align: center;
+                                // text-decoration: none;
+                                // line-height: 50px;
+                                // color: $moon_color;
                                 font-size: 20px;
 
                                 &:hover {
-                                    background-color: $moon_color;
-                                    color: $sun_color;
+                                    // background-color: $moon_color;
+                                    // color: $sun_color;
                                 }
                             }
                         }
@@ -1305,19 +1353,19 @@
 
                             .viewButton_RWD {
                                 margin-top: 20px;
-                                border: 1.5px solid $moon_color;
-                                width: 380px;
+                                width: 100%;
                                 height: 60px;
-                                text-align: center;
                                 display: block;
-                                text-decoration: none;
-                                line-height: 50px;
-                                color: $moon_color;
+                                // border: 1.5px solid $moon_color;
+                                // text-align: center;
+                                // text-decoration: none;
+                                // line-height: 50px;
+                                // color: $moon_color;
                                 font-size: 20px;
 
                                 &:hover {
-                                    background-color: $moon_color;
-                                    color: $sun_color;
+                                    // background-color: $moon_color;
+                                    // color: $sun_color;
                                 }
                             }
                         }
