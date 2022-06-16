@@ -194,23 +194,23 @@
                     }
 
                     .wood1 {
-                        right: 165px;
-                        top: 135px;
+                        right: 18%;
+                        top: 16%;
                     }
 
                     .wood11 {
-                        right: 160px;
-                        bottom: 100px;
+                        right: 18%;
+                        bottom: 14%;
                     }
 
                     .wood2 {
-                        left: 230px;
-                        top: 90px;
+                        left: 25%;
+                        top: 12%;
                     }
 
                     .wood3 {
-                        left: 90px;
-                        bottom: 190px;
+                        left: 10%;
+                        bottom: 25%;
                     }
                 }
 
@@ -619,23 +619,23 @@
                     }
 
                     .sea1 {
-                        right: 422px;
-                        top: 85px;
+                        right: 40%;
+                        top: 18%;
                     }
 
                     .sea2 {
-                        right: 422px;
-                        bottom: 230px;
+                        right: 40%;
+                        bottom: 46%;
                     }
 
                     .sea3 {
-                        right: 422px;
-                        bottom: 70px;
+                        right: 40%;
+                        bottom: 14%;
                     }
 
                     .sea4 {
-                        left: 277px;
-                        bottom: 230px;
+                        left: 30%;
+                        bottom: 46%;
                     }
                 }
 
@@ -955,23 +955,23 @@
                     }
 
                     .wood1 {
-                        right: 165px;
-                        top: 135px;
+                        right: 18%;
+                        top: 16%;
                     }
 
                     .wood11 {
-                        right: 160px;
-                        bottom: 100px;
+                        right: 18%;
+                        bottom: 14%;
                     }
 
                     .wood2 {
-                        left: 230px;
-                        top: 90px;
+                        left: 25%;
+                        top: 12%;
                     }
 
                     .wood3 {
-                        left: 90px;
-                        bottom: 190px;
+                        left: 10%;
+                        bottom: 25%;
                     }
                 }
 
@@ -1367,23 +1367,23 @@
                     }
 
                     .sea1 {
-                        right: 422px;
-                        top: 85px;
+                        right: 40%;
+                        top: 18%;
                     }
 
                     .sea2 {
-                        right: 422px;
-                        bottom: 230px;
+                        right: 40%;
+                        bottom: 46%;
                     }
 
                     .sea3 {
-                        right: 422px;
-                        bottom: 70px;
+                        right: 40%;
+                        bottom: 14%;
                     }
 
                     .sea4 {
-                        left: 277px;
-                        bottom: 230px;
+                        left: 30%;
+                        bottom: 46%;
                     }
                 }
 
@@ -1705,23 +1705,23 @@ main {
                 }
 
                 .wood1 {
-                    right: 165px;
-                    top: 135px;
+                    right: 18%;
+                    top: 16%;
                 }
 
                 .wood11 {
-                    right: 160px;
-                    bottom: 100px;
+                    right: 18%;
+                    bottom: 14%;
                 }
 
                 .wood2 {
-                    left: 230px;
-                    top: 90px;
+                    left: 25%;
+                    top: 12%;
                 }
 
                 .wood3 {
-                    left: 90px;
-                    bottom: 190px;
+                    left: 10%;
+                    bottom: 25%;
                 }
             }
 
@@ -2117,23 +2117,23 @@ main {
                 }
 
                 .sea1 {
-                    right: 422px;
-                    top: 85px;
+                    right: 40%;
+                    top: 18%;
                 }
 
                 .sea2 {
-                    right: 422px;
-                    bottom: 230px;
+                    right: 40%;
+                    bottom: 46%;
                 }
 
                 .sea3 {
-                    right: 422px;
-                    bottom: 70px;
+                    right: 40%;
+                    bottom: 14%;
                 }
 
                 .sea4 {
-                    left: 277px;
-                    bottom: 230px;
+                    left: 30%;
+                    bottom: 46%;
                 }
             }
 
@@ -2286,19 +2286,19 @@ main {
 
         main {
             .wrapper {
-                width: 100%;
+                width: calc(100% - 40px);
 
                 .logCabin {
                     margin-bottom: 20px;
-                    justify-content: space-around;
+                    justify-content: space-between;
 
                     .logCabinLeft {
-                        width: 192px;
+                        width: 28%;
                         margin-top: 50px;
 
 
                         .logCabinText {
-                            width: 190px;
+                            // width: 180px;
                             margin: 0px 10px 20px 0px;
                             display: flex;
                             flex-direction: column;
@@ -2330,11 +2330,11 @@ main {
                     }
 
                     .logCabinRight {
-                        width: 333px;
+                        width: 60%;
                         margin-top: 50px;
 
                         .logCabinImg {
-                            width: 330px;
+                            width: 100%;
                         }
 
                         .rightTextArea {
@@ -2389,24 +2389,7 @@ main {
                             line-height: 32px;
                         }
 
-                        .wood1 {
-                            right: 85px;
-                            top: 75px;
-                        }
 
-                        .wood11 {
-                            right: 80px;
-                            bottom: 62px;
-                        }
-
-                        .wood2 {
-                            left: 120px;
-                            top: 50px;
-                        }
-
-                        .wood3 {
-                            left: 140px;
-                        }
                     }
 
                     .siteLayoutInf01 {
@@ -2505,11 +2488,11 @@ main {
                 }
 
                 .campingTents {
-                    justify-content: space-around;
+                    justify-content: space-between;
                     margin-bottom: 20px;
 
                     .campingTentsLeft {
-                        width: 192px;
+                        width: 28%;
                         margin-top: 50px;
 
 
@@ -2549,7 +2532,7 @@ main {
                     }
 
                     .campingTentsRight {
-                        width: 333px;
+                        width: 60%;
                         margin-top: 50px;
 
                         .campingImg {
@@ -2732,26 +2715,7 @@ main {
                             line-height: 30px;
                         }
 
-                        .sea1 {
-                            right: 220px;
-                            top: 55px;
-                        }
-
                         
-                        .sea2 {
-                            right: 220px;
-                            bottom: 140px;
-                        }
-                        
-                        .sea3 {
-                            right: 220px;
-                            bottom: 40px;
-                            
-                        }
-                        .sea4 {
-                            left: 155px;
-                            bottom: 142px;
-                        }
                     }
 
                     .villaInf01 {
@@ -2880,4 +2844,8 @@ main {
             }
         }
     }
+}
+
+@media screen and (max-width: 414px) {
+
 }

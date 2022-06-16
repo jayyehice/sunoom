@@ -251,6 +251,16 @@
   font-size: 20px;
   color: #0C1244;
 }
+
+.discuss .article_list .content .star{
+  /* border:1px solid red; */
+  width: 85px;
+  position: relative;
+  left: 555px;
+  bottom: 25px;
+  color:#FFBF44
+}
+
 .discuss .article_list .content .comment {
   /* border: 1px solid red; */
   margin-top: 10px;
@@ -1359,10 +1369,9 @@
     margin: 0 auto;
   }
   
-  .wrapper{
+  .discuss .wrapper{
       margin: 0 auto;
-      /* width:100%;
-      padding: 0; */
+      width:100%;
   }
 
   /* 討論區大標題 */
@@ -1373,12 +1382,13 @@
   }
 
   /* 麵包屑區塊的css */
-  .breadcrumb {
+  .discuss .breadcrumb {
     /* border:1px solid red;  */
     padding: 5px 10px;
+    width:100%;
   }
 
-  .breadcrumb-list {
+  .discuss .breadcrumb-list {
     /* border:1px solid red; */
     list-style: none;
   }
@@ -1908,10 +1918,10 @@
   .discuss .article .article_type ul .li-5 {
     border: 1px solid #0C1244;
     border-radius: 50%;
-    margin-left: 170px;
+    margin-left: 0px;
     position: relative;
     bottom: 100px;
-    right: 270px;
+    right: 100px;
     width: 60px;
     height: 60px;
   }

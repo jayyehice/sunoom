@@ -327,6 +327,21 @@
   background-color: #0C1244;
   color: #F5F0DD;
 }
+.index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  display: none;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
 .index main .instagram {
   padding-bottom: 30px;
 }
@@ -422,7 +437,7 @@
   justify-content: space-between;
 }
 .index main .traffic .wrapper ul > li {
-  width: 565px;
+  width: 100%;
   box-sizing: border-box;
   border: 1.5px solid #0C1244;
 }
@@ -613,6 +628,21 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.index_moon main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD {
+  border: 1.5px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: none;
+  text-decoration: none;
+  line-height: 50px;
+  color: #F5F0DD;
+  display: none;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
 .index_moon main .category .wrapper .LiveLand {
   height: 600px;
   position: relative;
@@ -715,6 +745,21 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.index_moon main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
+  border: 1.5px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: none;
+  text-decoration: none;
+  line-height: 50px;
+  color: #F5F0DD;
+  display: none;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
 .index_moon main .instagram {
   padding-bottom: 250px;
 }
@@ -809,7 +854,7 @@
   justify-content: space-between;
 }
 .index_moon main .traffic .wrapper ul > li {
-  width: 565px;
+  width: 100%;
   box-sizing: border-box;
   border: 1.5px solid #F5F0DD;
 }
@@ -948,19 +993,10 @@
   }
   .index main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD {
     margin-top: 20px;
-    border: 1.5px solid #0C1244;
-    width: 380px;
+    width: 100%;
     height: 60px;
-    text-align: center;
     display: block;
-    text-decoration: none;
-    line-height: 50px;
-    color: #0C1244;
     font-size: 20px;
-  }
-  .index main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD:hover {
-    background-color: #0C1244;
-    color: #F5F0DD;
   }
   .index main .category .wrapper .LiveLand {
     margin-top: 200px;
@@ -1013,19 +1049,10 @@
   }
   .index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
     margin-top: 20px;
-    border: 1.5px solid #0C1244;
-    width: 380px;
+    width: 100%;
     height: 60px;
-    text-align: center;
     display: block;
-    text-decoration: none;
-    line-height: 50px;
-    color: #0C1244;
     font-size: 20px;
-  }
-  .index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD:hover {
-    background-color: #0C1244;
-    color: #F5F0DD;
   }
   .index main .instagram {
     padding-bottom: 0px;

@@ -105,6 +105,9 @@
         height: 100px;
         margin: 0px auto;
         @include mobile{
+
+        };
+        @include mobile{
             width: 90%;
             height: 80px;
         }
@@ -121,6 +124,12 @@
             line-height: 40px;
             @include mobile{
                 height: 80px;
+                #beginDate{
+                    font-size: 12rem;
+                }
+                #endDate{
+                    font-size: 12rem;
+                }
             }
             #numberOfPeople{
                 width: 50px;
@@ -169,6 +178,7 @@
         }
         
     }//選擇內容區塊結束
+    
     .datePickerBox{
         width: 700px;
         height: 360px;
