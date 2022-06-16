@@ -251,6 +251,16 @@
   font-size: 20px;
   color: #0C1244;
 }
+
+.discuss .article_list .content .star{
+  /* border:1px solid red; */
+  width: 85px;
+  position: relative;
+  left: 555px;
+  bottom: 25px;
+  color:#FFBF44
+}
+
 .discuss .article_list .content .comment {
   /* border: 1px solid red; */
   margin-top: 10px;

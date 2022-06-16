@@ -301,6 +301,15 @@
         font-size:20px;
         color:$moon_color;
     }
+
+    .discuss .article_list .content .star{
+        /* border:1px solid red; */
+        width: 85px;
+        position: relative;
+        left: 555px;
+        bottom: 25px;
+        color:#FFBF44
+      }
     
     .article_list .content .comment{
         /* border: 1px solid red; */
