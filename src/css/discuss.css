@@ -170,7 +170,7 @@
 }
 .discuss h2 {
   /* border:1px solid red; */
-  width: 105px;
+  width: 120px;
   font-size: 24px;
   color: #0C1244;
   margin-left: 100px;
@@ -198,13 +198,25 @@
   border-radius: 15px 15px 0px 0px;
   cursor: pointer;
 }
+
 .discuss .article .article_type ul li a {
+  /* border:1px solid red; */
   color: #0C1244;
   text-decoration: none;
   padding: 36px;
   position: relative;
   top: 40px;
 }
+
+.discuss .article .article_type ul li:hover{
+  /* border:1px solid red; */
+  background-color:#ebca56;
+  box-shadow: 0 -2px 2px 0 gray inset;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  
+}
+
 .discuss .article .article_type ul .li-5 {
   margin-left: 170px;
 }
@@ -381,6 +393,7 @@
   width: 802px;
   margin-left: 37px;
   margin-bottom: 40px;
+  display: flex;
 }
 .discuss .pop-up .discuss-region .comment-region {
   border: 1px solid #0C1244;
@@ -857,7 +870,7 @@
 }
 .discuss_moon h2 {
   /* border:1px solid red; */
-  width: 105px;
+  width: 120px;
   font-size: 24px;
   color: #F5F0DD;
   margin-left: 100px;
@@ -1476,7 +1489,7 @@
   }
 
   .discuss .official_article .banner_1 a {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-decoration: none;
     height: 0px;
   }
@@ -1598,12 +1611,12 @@
     width: 536px;
     position: relative;
     bottom: 208px;
-    right: 363px;
+    right: 0px;
     }
 
     .discuss h2 {
       /* border:1px solid red; */
-      width: 105px;
+      width: 120px;
       font-size: 24px;
       color: #0C1244;
       margin-left: 100px;
