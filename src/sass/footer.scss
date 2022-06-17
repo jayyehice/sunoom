@@ -1,9 +1,14 @@
 @import 'base/var';
 
+
+
 footer{
     background-color: $sun_color;
     color: $moon_color;
     
+    .moon_icon{
+        display: none;
+    }
 
     section{
         position: sticky;
@@ -35,7 +40,7 @@ footer{
                
                 .icon{
                     position: absolute;
-                    top: 390px;
+                    top: 60vh;
                     right: 30px;
                     z-index: 100;
                     display: flex;
@@ -54,11 +59,10 @@ footer{
                 border:3px solid $moon_color;
                 box-sizing: border-box;
 
-                padding-top: 50px;
+                // padding-top: 50px;
+                padding-top: 7vh;
 
-                .moon_icon{
-                    display: none;
-                }
+                
 
                 &>p{
                     line-height: 40px;
@@ -70,8 +74,8 @@ footer{
 
                 .today_weather{
                     display: flex;
-                    margin-top: 40px;
-                    padding: 0 50px;
+                    margin-top: 5vh;
+                    padding: 0 10%;
 
                     div{
                         flex-basis: 0;
@@ -84,7 +88,7 @@ footer{
 
                     .today_weather_left{
                         h1{
-                            margin-bottom: 30px;
+                            margin-bottom: 2.5vh;
                             
                         }
                         h1:first-child{
@@ -99,7 +103,7 @@ footer{
 
                         svg{
                             width: 100%;
-                            margin-top: 45px;
+                            margin-top: 6vh;
                             // color: #ccc;
                         }
 
@@ -110,11 +114,11 @@ footer{
 
                         h1:first-child{
                             font-size: 80px;
-                            margin-bottom: 65px;
+                            margin-bottom: 9vh;
                         }
 
                         div{
-                            margin-bottom: 10px;
+                            margin-bottom: 1.5vh;
                             display: flex;
                             align-items: center;
                             justify-content: flex-end;
@@ -135,7 +139,7 @@ footer{
 
                 .wave{
                     position: relative;
-                    margin-top: 10px;
+                    margin-top: 1.5vh;
                     height: 10px;
                     svg{
                         width: 100%;
@@ -149,18 +153,21 @@ footer{
                 }
 
                 .week_weather{
-                    margin-top: 50px;
+                    margin-top: 4vh;
                     display: flex;
-                    padding: 0 75px;
+                    padding: 0 10%;
                     &>li{
                         flex-basis: 0;
                         flex-grow: 1;
                         text-align: center;
-
-                        svg{
-                            width: 50%;
-                            height: 95px;
-                            margin: 0 auto;
+                        
+                        div{
+                            height: 15vh;
+                            svg{
+                                width: 50%;
+                                height: 100%;
+                                margin: 0 auto;
+                            }
                         }
 
 
@@ -183,7 +190,8 @@ footer{
             // margin: $margin_center;
             position: absolute;
             top: 0px;
-            left: calc( (100% - 1180px) / 2 );
+            // left: calc( (100% - 1180px) / 2 );
+            left: calc( (50% - 400px) / 2 );
             // transform: translateX(-50%);
 
             #content{
@@ -200,20 +208,20 @@ footer{
                     
 
                     .info{
-                        margin-top: 130px;
+                        margin-top: 15vh;
                         // border: $show_border;
                         width: 100%;
 
                         h5{
-                            margin-bottom: 20px;
+                            margin-bottom: 4vh;
                         }
 
                         .subscribe{
-                            margin-top: 55px;
-                            margin-bottom: 10px;
+                            margin-top: 7.5vh;
+                            margin-bottom: 1.5vh;
 
                             p{
-                                margin-bottom: 10px;
+                                margin-bottom: 1.5vh;
                             }
 
                             input{
@@ -237,6 +245,7 @@ footer{
                                 color: $moon_color;
                                 &:hover{
                                     cursor: pointer;
+                                    background-color: $sun_color;
                                 }
                             }
                         }
@@ -266,6 +275,13 @@ footer{
 moon 底下
 有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")
 以及天氣icon
+                    .sun_icon{
+                        display: none;
+                    }
+
+                    .moon_icon{
+                        display: block;
+                    }
 */
 .moon{
     @import 'base/moonColorSwitch';
@@ -273,6 +289,13 @@ moon 底下
         background-color: $sun_color;
         color: $moon_color;
         
+        .sun_icon{
+            display: none;
+        }
+
+        .moon_icon{
+            display: block;
+        }
     
         section{
             position: sticky;
@@ -298,13 +321,13 @@ moon 底下
     
                 &>li:first-child{
                     width: 100%;
-                    background-image: url("../img/footer/moon/footer_bg_01.jpg");
+                    background-image: url("../img/footer/moon/footer_bg_01-2.jpg");
                     background-size: cover;
                     position: relative;
                    
                     .icon{
                         position: absolute;
-                        top: 390px;
+                        top: 60vh;
                         right: 30px;
                         z-index: 100;
                         display: flex;
@@ -323,15 +346,12 @@ moon 底下
                     border:3px solid $moon_color;
                     box-sizing: border-box;
     
-                    padding-top: 50px;
+                    // padding-top: 50px;
+                    padding-top: 7vh;
+    
+                    
 
-                    .sun_icon{
-                        display: none;
-                    }
-
-                    .moon_icon{
-                        display: block;
-                    }
+                    
     
                     &>p{
                         line-height: 40px;
@@ -343,8 +363,8 @@ moon 底下
     
                     .today_weather{
                         display: flex;
-                        margin-top: 40px;
-                        padding: 0 50px;
+                        margin-top: 5vh;
+                        padding: 0 10%;
     
                         div{
                             flex-basis: 0;
@@ -357,7 +377,7 @@ moon 底下
     
                         .today_weather_left{
                             h1{
-                                margin-bottom: 30px;
+                                margin-bottom: 2.5vh;
                                 
                             }
                             h1:first-child{
@@ -372,7 +392,7 @@ moon 底下
     
                             svg{
                                 width: 100%;
-                                margin-top: 45px;
+                                margin-top: 6vh;
                                 // color: #ccc;
                             }
     
@@ -383,13 +403,13 @@ moon 底下
     
                             h1:first-child{
                                 font-size: 80px;
-                                margin-bottom: 65px;
+                                margin-bottom: 9vh;
                             }
     
                             div{
-                                margin-bottom: 10px;
+                                margin-bottom: 1.5vh;
                                 display: flex;
-                                // align-items: center;
+                                align-items: center;
                                 justify-content: flex-end;
     
                                 svg{
@@ -398,6 +418,7 @@ moon 底下
                                     // border: $show_border;
                                     margin-right: 10px;
                                     // color: $moon_color;
+                                    
                                 }
     
                             }
@@ -407,7 +428,7 @@ moon 底下
     
                     .wave{
                         position: relative;
-                        margin-top: 10px;
+                        margin-top: 1.5vh;
                         height: 10px;
                         svg{
                             width: 100%;
@@ -421,23 +442,21 @@ moon 底下
                     }
     
                     .week_weather{
-                        margin-top: 50px;
+                        margin-top: 4vh;
                         display: flex;
-                        padding: 0 75px;
+                        padding: 0 10%;
                         &>li{
                             flex-basis: 0;
                             flex-grow: 1;
                             text-align: center;
-    
-                            svg{
-                                width: 50%;
-                                height: 95px;
-                                margin: 0 auto;
-                            }
-
-                            &>div{
-                                // width: 100%;
-                                
+                            
+                            div{
+                                height: 15vh;
+                                svg{
+                                    width: 50%;
+                                    height: 100%;
+                                    margin: 0 auto;
+                                }
                             }
     
     
@@ -460,7 +479,8 @@ moon 底下
                 // margin: $margin_center;
                 position: absolute;
                 top: 0px;
-                left: calc( (100% - 1180px) / 2 );
+                // left: calc( (100% - 1180px) / 2 );
+                left: calc( (50% - 400px) / 2 );
                 // transform: translateX(-50%);
     
                 #content{
@@ -477,20 +497,20 @@ moon 底下
                         
     
                         .info{
-                            margin-top: 130px;
+                            margin-top: 15vh;
                             // border: $show_border;
                             width: 100%;
     
                             h5{
-                                margin-bottom: 20px;
+                                margin-bottom: 4vh;
                             }
     
                             .subscribe{
-                                margin-top: 55px;
-                                margin-bottom: 10px;
+                                margin-top: 7.5vh;
+                                margin-bottom: 1.5vh;
     
                                 p{
-                                    margin-bottom: 10px;
+                                    margin-bottom: 1.5vh;
                                 }
     
                                 input{
@@ -514,6 +534,7 @@ moon 底下
                                     color: $moon_color;
                                     &:hover{
                                         cursor: pointer;
+                                        background-color: $sun_color;
                                     }
                                 }
                             }

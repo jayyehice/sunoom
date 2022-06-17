@@ -1,10 +1,13 @@
 @charset "UTF-8";
+
 .sea {
   background-image: url("../img/sea/seapage2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 600px;
+
 }
+
 .sea header .headerCenter {
   position: absolute;
   z-index: 100;
