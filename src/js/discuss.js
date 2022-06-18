@@ -5,8 +5,6 @@ window.addEventListener("load", function () {
     let active4 = this.document.getElementsByClassName("article_text4")[0];
     let active5 = this.document.getElementsByClassName("article_text5")[0];
 
-
-
     $("#active").on("click", function () {
         active.innerHTML =
             `
@@ -476,12 +474,31 @@ window.addEventListener("load", function () {
 
 });
 
-// function showEdit(nums){
-//     console.log(nums);
-//     $(`.article_list${nums}`).css('display','block')
-// }
 
-// function closeBlock(nums){
-//     $(`.article_text a${nums}`).css('display','none')
-//     console.log(aaa)
-// }
+
+//頁籤點擊的顏色變換
+$(".active").click(function(){
+    $(this).css("background-color","#ebca56");
+    // $(this).parent().find('.active').css("background-color","#33CC33");
+
+    $(this).siblings('.active').css("background-color",'#F5F0DD');
+});
+
+// $("#active2").click(function(){
+//     $("#active2").css("background-color","#33CC33");
+// })
+
+// $("#active3").click(function(){
+//     $("#active3").css("background-color","#33CC33");
+// })
+
+// $("#active4").click(function(){
+//     $("#active4").css("background-color","#33CC33");
+// })
+
+// $("#active5").click(function(){
+//     $("#active5").css("background-color","#33CC33");
+// })
+
+
+//
