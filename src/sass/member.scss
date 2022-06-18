@@ -116,11 +116,11 @@
             li{
                 font-size: 24rem;
                 width: 355px;
-                height: 100px;
+                // height: 100px;
                 border-radius: 29px 29px 0 0;
                 border: 1px solid $moon_color;
                 text-align: center;
-                line-height: 100px;
+                line-height: 80px;
                 justify-items: center;
                 color: $moon_color;
 
@@ -552,6 +552,11 @@
                 display: none;
                 margin-top: 20px;
 
+                @include mobile{
+                    display: none !important; 
+                }
+
+
                 h6{
                     display: inline-block;
                 }
@@ -655,6 +660,163 @@
                     }
                 }
             }
+
+            // grid
+            .orderDetailRwd{
+                width: 280px;
+                margin: 0 auto;
+                display: grid;
+                grid-auto-columns: 280px;
+                display: none;
+                border: 1px solid $moon_color;
+
+                @include mobile{
+                    display: grid;
+                }
+
+                div{
+                    border-bottom: solid 1px $moon_color;
+                    
+                }
+
+                h5{
+                    width: 260px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: $moon_color;
+                    color: $sun_color;
+                    margin: 13px auto;
+                    
+                }
+
+                i{
+                    // border: 1px solid red;
+                    color: $sun_color;
+                    position: relative;
+                    right: -240px;
+                    top: -50px;
+                    cursor: pointer;
+                }
+
+                p{
+                    margin-top: 0;
+                    margin-left: 16px;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                h6{
+                    margin-left: 35px;
+                }
+
+                .orderMainRwd{
+
+                    p{
+                        font-weight: bold;
+                    }
+
+                    > p{
+                        margin-top: 10px;
+                    }
+
+                    .date{
+                        font-size: 12rem;
+                    }
+
+                    ul{
+                        display: flex;
+                        margin-left: 35px;
+                    }
+
+                    ul:last-child{
+                        margin-bottom: 6px;
+                    }
+
+                    li{
+                        width: 90px;
+                        margin-bottom: 10px;
+                    }
+
+                    li:nth-child(2){
+                        width: 40px;
+                        // border: 1px solid red;
+                        margin: 0 auto;
+                    }
+
+                    li:last-child{
+                        color: #FFBF44;
+                        font-weight: bold;
+                    }
+
+                    h6{
+                        display: inline-block
+                    }
+
+                    img{
+
+                    }
+                }
+
+                .rwdTotal{
+
+                    ul{
+                        display: flex;
+                        margin-left: 16px;
+                        margin-bottom: 15px;
+                        justify-content: space-around;
+                    }
+
+                    ul:first-child{
+                        margin-top: 15px;
+                    }
+
+                    li{
+                        display: inline-block;
+                    }
+
+                    .rTtitle{
+                        font-size: 16rem;
+                        font-weight: bold;
+                    }
+
+                    .rTvalue{
+                        font-size: 20px;
+                        margin-left: auto;
+                        margin-right: 24px;
+                        color: #FFBF44;
+                        font-weight: bold;
+                    }
+
+                    .rTcode{
+                        margin-left: auto;
+                        border: 1px solid $moon_color;
+                        margin-right: 6px;
+                        padding: 5px;
+                    }
+
+                    .rTdiscount{
+                        color: #FF4444;
+                    }
+
+                    .rTpay{
+                        color: $moon_color;
+                    }
+
+                }
+
+                .deleteRwd{
+                    text-align: center;
+                    p{
+                        margin: 0;
+                        line-height: 50px;
+                        background-color: $moon_color;
+                        color: $sun_color;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+                
         }
     }
     
@@ -694,11 +856,12 @@
             }
 
             .crumbs{
+
                 @include mobile{
                     display: none;
                 }
             }
-        
+            
             a{
                 display: inline-block;
                 text-decoration: none;
@@ -1206,6 +1369,11 @@
                 display: none;
                 margin-top: 20px;
 
+                @include mobile{
+                    display: none !important; 
+                }
+
+
                 h6{
                     display: inline-block;
                 }
@@ -1229,6 +1397,10 @@
                         width: 980px;
                         height: 50px;
 
+                        @include mobile{
+                            // width: 300px;
+                        }
+                
                     }
 
                     i{
@@ -1305,7 +1477,165 @@
                     }
                 }
             }
+
+            // grid
+            .orderDetailRwd{
+                width: 280px;
+                margin: 0 auto;
+                display: grid;
+                grid-auto-columns: 280px;
+                display: none;
+                border: 1px solid $moon_color;
+
+                @include mobile{
+                    display: grid;
+                }
+
+                div{
+                    border-bottom: solid 1px $moon_color;
+                    
+                }
+
+                h5{
+                    width: 260px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: $moon_color;
+                    color: $sun_color;
+                    margin: 13px auto;
+                    
+                }
+
+                i{
+                    // border: 1px solid red;
+                    color: $sun_color;
+                    position: relative;
+                    right: -240px;
+                    top: -50px;
+                    cursor: pointer;
+                }
+
+                p{
+                    margin-top: 0;
+                    margin-left: 16px;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                h6{
+                    margin-left: 35px;
+                }
+
+                .orderMainRwd{
+
+                    p{
+                        font-weight: bold;
+                    }
+
+                    > p{
+                        margin-top: 10px;
+                    }
+
+                    .date{
+                        font-size: 12rem;
+                    }
+
+                    ul{
+                        display: flex;
+                        margin-left: 35px;
+                    }
+
+                    ul:last-child{
+                        margin-bottom: 6px;
+                    }
+
+                    li{
+                        width: 90px;
+                        margin-bottom: 10px;
+                    }
+
+                    li:nth-child(2){
+                        width: 40px;
+                        // border: 1px solid red;
+                        margin: 0 auto;
+                    }
+
+                    li:last-child{
+                        color: #FFBF44;
+                        font-weight: bold;
+                    }
+
+                    h6{
+                        display: inline-block
+                    }
+
+                    img{
+
+                    }
+                }
+
+                .rwdTotal{
+
+                    ul{
+                        display: flex;
+                        margin-left: 16px;
+                        margin-bottom: 15px;
+                        justify-content: space-around;
+                    }
+
+                    ul:first-child{
+                        margin-top: 15px;
+                    }
+
+                    li{
+                        display: inline-block;
+                    }
+
+                    .rTtitle{
+                        font-size: 16rem;
+                        font-weight: bold;
+                    }
+
+                    .rTvalue{
+                        font-size: 20px;
+                        margin-left: auto;
+                        margin-right: 24px;
+                        color: #FFBF44;
+                        font-weight: bold;
+                    }
+
+                    .rTcode{
+                        margin-left: auto;
+                        border: 1px solid $moon_color;
+                        margin-right: 6px;
+                        padding: 5px;
+                    }
+
+                    .rTdiscount{
+                        color: #FF4444;
+                    }
+
+                    .rTpay{
+                        color: $moon_color;
+                    }
+
+                }
+
+                .deleteRwd{
+                    text-align: center;
+                    p{
+                        margin: 0;
+                        line-height: 50px;
+                        background-color: $moon_color;
+                        color: $sun_color;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+                
         }
     }
     
 }
+
