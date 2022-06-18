@@ -21,6 +21,15 @@
 .information main .breadcrumbs .wrapper ul li a:link {
   color: #0C1244;
 }
+.information main .breadcrumbs .wrapper ul li a:visited {
+  color: #0C1244;
+}
+.information main .breadcrumbs .wrapper ul li a:hover {
+  color: #0C1244;
+}
+.information main .breadcrumbs .wrapper ul li a:active {
+  color: #0C1244;
+}
 .information main .map .wrapper {
   width: 1070px;
   margin: 0 auto;
@@ -391,6 +400,15 @@
   text-decoration: none;
 }
 .information_moon main .breadcrumbs .wrapper ul li a:link {
+  color: #F5F0DD;
+}
+.information_moon main .breadcrumbs .wrapper ul li a:visited {
+  color: #F5F0DD;
+}
+.information_moon main .breadcrumbs .wrapper ul li a:hover {
+  color: #F5F0DD;
+}
+.information_moon main .breadcrumbs .wrapper ul li a:active {
   color: #F5F0DD;
 }
 .information_moon main .map .wrapper {
