@@ -149,15 +149,15 @@ exports.all = parallel(includeHTML , sassstyle, miniJs);// 同步
 
 // 監看
 
-function watchfile(){
-  // watch(['','',''] , callback)
-  watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle)// sass
-  watch(['./src/*.html' , './src/layout/*.html'] , includeHTML) // html
-  watch('./src/js/*.js' , miniJs) // js
-  watch(['./src/images/*.*','./src/images/**/*.*'],  mvimages)
-}
+// function watchfile(){
+//   // watch(['','',''] , callback)
+//   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle)// sass
+//   watch(['./src/*.html' , './src/layout/*.html'] , includeHTML) // html
+//   watch('./src/js/*.js' , miniJs) // js
+//   watch(['./src/images/*.*','./src/images/**/*.*'],  mvimages)
+// }
 
-exports.w = series(parallel(sassstyle, includeHTML , miniJs ,mvimages), watchfile) 
+// exports.w = series(parallel(sassstyle, includeHTML , miniJs ,mvimages), watchfile) 
 // 先執行sass/ html/ js /images編譯  在執行warchfile監看
 
 
@@ -185,6 +185,24 @@ function browser(done) {
 
 
 // exports.default =  series(parallel(sassstyle, includeHTML , miniJs ,mvimages), browser) 
+
+
+
+
+function watchfile(){
+    // watch(['','',''] , callback)
+    watch('src/css/*.*' , mvallcss)// sass
+    watch(['./src/*.html' , './src/layout/*.html'] , includeHTML) // html
+    watch('./src/js/*.js' , mvjavascript) // js
+    watch(['./src/img/*.*','./src/img/**/*.*'] , mvimages) //img
+    watch('./src/movies/*.*' , mvallmovies) //movie
+    watch('./src/php/*.php' , mvallphp) //php
+}
+
+// exports.watch = series(parallel(sassstyle, includeHTML , miniJs ,mvimages), watchfile) 
+exports.watch = series(parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp), watchfile)
+
+
 
 exports.default =  parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp)
 
