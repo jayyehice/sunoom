@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "打包測試": "gulp default",
+    "打包+watchSrc": "gulp watch",
+    "單純打包": "gulp default",
     "安裝套件": "npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

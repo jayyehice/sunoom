@@ -198,7 +198,7 @@
     
     h2{
         /* border:1px solid red; */
-        width:105px;
+        width:120px;
         font-size: 24px;
         color:$moon_color;
         margin-left: 100px;
@@ -234,10 +234,13 @@
     
     .article .article_type ul li a{
         color:$moon_color;
+        display: flex;
+        color: #0C1244;
         text-decoration: none;
-        padding:36px;
+        padding: 37px;
+        padding-left: 70px;
         position: relative;
-        top: 40px;
+        top: 0px;
     }
     
     .article .article_type ul .li-5{
@@ -456,6 +459,7 @@
         width:802px;
         margin-left: 37px;
         margin-bottom: 40px;
+        display: flex;
     }
     
     .pop-up .discuss-region .comment-region{
@@ -1865,7 +1869,7 @@
   
       .discuss h2 {
         /* border:1px solid red; */
-        width: 105px;
+        width: 120px;
         font-size: 24px;
         color: #0C1244;
         margin-left: 100px;
@@ -1898,6 +1902,7 @@
         border-radius: 15px 15px 0px 0px;
         cursor: pointer;
       }
+
       .discuss .article .article_type ul li a {
         color: #0C1244;
         text-decoration: none;

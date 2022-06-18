@@ -170,7 +170,7 @@
 }
 .discuss h2 {
   /* border:1px solid red; */
-  width: 105px;
+  width: 120px;
   font-size: 24px;
   color: #0C1244;
   margin-left: 100px;
@@ -198,13 +198,26 @@
   border-radius: 15px 15px 0px 0px;
   cursor: pointer;
 }
+
 .discuss .article .article_type ul li a {
+  /* border:1px solid red; */
+  display: flex;
   color: #0C1244;
   text-decoration: none;
-  padding: 36px;
+  padding: 37px;
+  padding-left: 70px;
   position: relative;
-  top: 40px;
+  top: 0px;
 }
+
+.discuss .article .article_type ul li:hover{
+  /* border:1px solid red; */
+  background-color:#ebca56;
+  box-shadow: 0 0px 2px 2px rgb(107, 107, 107) inset;
+  color: white;
+  /* text-shadow: 1px 1px 1px black; */
+}
+
 .discuss .article .article_type ul .li-5 {
   margin-left: 170px;
 }
@@ -381,6 +394,7 @@
   width: 802px;
   margin-left: 37px;
   margin-bottom: 40px;
+  display: flex;
 }
 .discuss .pop-up .discuss-region .comment-region {
   border: 1px solid #0C1244;
@@ -857,7 +871,7 @@
 }
 .discuss_moon h2 {
   /* border:1px solid red; */
-  width: 105px;
+  width: 120px;
   font-size: 24px;
   color: #F5F0DD;
   margin-left: 100px;
@@ -1364,12 +1378,14 @@
 /* RWD 576px以下字型大小 */
 @media screen and (max-width: 575.98px) {
   .discuss {
+  /* border:1px solid red; */
     font-family: Noto Sans CJK;
     background-color: #F5F0DD;
     margin: 0 auto;
   }
   
   .discuss .wrapper{
+  /* border:1px solid red; */
       margin: 0 auto;
       width:100%;
   }
@@ -1378,14 +1394,14 @@
   .big-title {
     /* border:1px solid red; */
     display: block;
-    width: 570px;
+    width: 553px;
   }
 
   /* 麵包屑區塊的css */
   .discuss .breadcrumb {
     /* border:1px solid red;  */
     padding: 5px 10px;
-    width:100%;
+    width:520px;
   }
 
   .discuss .breadcrumb-list {
@@ -1409,6 +1425,7 @@
   }
 
   .breadcrumb-list > li:first-child::before {
+  /* border:1px solid red; */
     content: "";
     margin-right: 0;
   }
@@ -1458,6 +1475,7 @@
   }
 
   .discuss .official_article .banner_1 .line1 {
+    /* border:1px solid red; */
     border: 2px solid white;
     height: 40px;
     width: 1px;
@@ -1476,12 +1494,14 @@
   }
 
   .discuss .official_article .banner_1 a {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-decoration: none;
     height: 0px;
   }
 
   .discuss .official_article .banner_1 .text_1 {
+    /* border:1px solid red; */
+    width: 335px;
     position: relative;
     bottom: 260px;
     left: 100px;
@@ -1496,6 +1516,7 @@
   }
 
   .discuss .official_article .banner_2 .line2 {
+    /* border:1px solid red; */
     border: 1px solid white;
     height: 25px;
     width: 1px;
@@ -1521,6 +1542,7 @@
 
   .discuss .official_article .banner_2 .photo_1 a {
     text-decoration: none;
+    /* border:1px solid red; */
   }
 
   .discuss .official_article .banner_2 .photo_1 .text_2 {
@@ -1542,6 +1564,7 @@
   }
 
   .discuss .official_article .banner_2 .photo_2 .line3 {
+    /* border:1px solid red; */
     border: 1px solid white;
     height: 25px;
     width: 1px;
@@ -1558,12 +1581,13 @@
   }
 
   .discuss .official_article .banner_2 .photo_2 a {
+    /* border:1px solid red; */
     text-decoration: none;
   }
 
   .discuss .official_article .banner_2 .photo_2 .text_3 {
     /* border:1px solid red; */
-    width: 390px;
+    width: 220px;
     font-size: 16px;
     color: white;
     position: relative;
@@ -1572,6 +1596,7 @@
   }
 
   .discuss .official_article .banner_2 .more {
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     width: 140px;
     height: 40px;
@@ -1583,27 +1608,30 @@
   }
 
   .discuss .official_article .banner_2 .more a {
+    /* border:1px solid red; */
     text-decoration: none;
     padding: 20px 30px 20px 30px;
     display: none;
   }
 
   .discuss .official_article .banner_2 .more .text_4 {
+    /* border:1px solid red; */
     color: #0C1244;
     font-size: 16px;
     display: none;
   }
 
   .discuss hr {
+    /* border:1px solid red; */
     width: 536px;
     position: relative;
     bottom: 208px;
-    right: 363px;
+    right: 0px;
     }
 
     .discuss h2 {
       /* border:1px solid red; */
-      width: 105px;
+      width: 120px;
       font-size: 24px;
       color: #0C1244;
       margin-left: 100px;
@@ -1621,7 +1649,6 @@
 
     .discuss .article .article_type {
       /* border:1px solid red; */
-      width: 1080px;
       margin-left: 100px;
       width: 450px;
     }
@@ -1651,6 +1678,7 @@
       padding: 0px;
       position: relative;
       top: 30px;
+      margin-left: 45px;
     }
     .discuss .article .article_type ul .li-5 {
       /* border:1px solid red; */
@@ -1673,6 +1701,7 @@
       /* border:1px solid red; */
       position:relative;
       bottom: 11px;
+      right:27px;
     }
 
     .discuss .article_list {
@@ -1807,7 +1836,7 @@
 
   .discuss .article .article_type {
     /* border:1px solid red; */
-    width: 1080px;
+    width: 450px;
     margin-left: 100px;
   }
 
@@ -1815,7 +1844,7 @@
       /* border:1px solid red; */
       position: relative;
       bottom: 1420px;
-      width: 560px;
+      width: 550px;
     }
     .discuss .pop-up {
       /* border:1px solid red; */
@@ -1885,6 +1914,7 @@
       margin-bottom: 40px;
     }
     .discuss .pop-up .discuss-region .comment-region {
+      /* border:1px solid red; */
       border: 1px solid #0C1244;
       /* border:1px solid red; */
       margin-top: 20px;
@@ -1893,6 +1923,7 @@
       padding: 10px;
     }
     .discuss .pop-up .discuss-region img {
+      /* border:1px solid red; */
       width: 448px;
       height: 100%;
     }
@@ -1916,6 +1947,7 @@
     }
 
   .discuss .article .article_type ul .li-5 {
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     border-radius: 50%;
     margin-left: 0px;
@@ -1927,6 +1959,7 @@
   }
 
   .discuss .article .article_type ul .li-5 .word {
+    /* border:1px solid red; */
     display: none;
   }
 
@@ -1937,6 +1970,7 @@
   }
 
   .discuss .article_list {
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     width: 542px;
     height: 860px;
@@ -1956,6 +1990,7 @@
   }
 
   .discuss .article_list .img_1 img {
+    /* border:1px solid red; */
     width: 100%;
     height: 93.39px;
     margin-top: 38px;
@@ -2011,12 +2046,14 @@
   }
 
   .discuss .article_list .content .icons .icon-1 img {
+    /* border:1px solid red; */
     width: 18px;
     height: 17;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-1 .span1 {
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
@@ -2029,12 +2066,14 @@
   }
 
   .discuss .article_list .content .icons .icon-2 img {
+    /* border:1px solid red; */
     width: 18px;
     height: 18;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-2 .span2 {
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
@@ -2046,22 +2085,26 @@
   }
 
   .discuss .article_list .content .icons .icon-3 img {
+    /* border:1px solid red; */
     width: 18px;
     height: 18;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-3 .span3 {
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
   }
 
   .discuss .hr1 {
+    /* border:1px solid red; */
     display: none;
   }
 
   .discuss .hr2 {
+    /* border:1px solid red; */
     width: 878px;
     display: none;
   }
@@ -2073,6 +2116,7 @@
   }
 
   .discuss .pop-up {
+    /* border:1px solid red; */
     border: 1px solid rgb(170, 170, 170);
     padding-top: 20px;
     padding-bottom: 80px;
@@ -2094,37 +2138,42 @@
   .discuss .pop-up .icons {
     /* border:1px solid red; */
     display: flex;
-    width: 802px;
+    width: width: 490px;
     margin-left: 37px;
   }
 
   .discuss .pop-up .icons .icon-1 {
+    /* border:1px solid red; */
     display: flex;
     margin-right: 20px;
   }
 
   .discuss .pop-up .icons .icon-1 .span1 {
+    /* border:1px solid red; */
     margin-left: 5px;
     padding-top: 5px;
   }
 
   .discuss .pop-up .icons .icon-2 {
+    /* border:1px solid red; */
     display: flex;
   }
 
   .discuss .pop-up .icons .icon-2 .span2 {
+    /* border:1px solid red; */
     margin-left: 5px;
     padding-top: 5px;
   }
 
   .discuss .hr1 {
+    /* border:1px solid red; */
     width: 802px;
   }
 
   .discuss .pop-up .icons2 {
     /* border:1px solid red; */
     display: flex;
-    width: 802px;
+    width: 497px;
     margin-left: 37px;
     margin-bottom: 10px;
   }
@@ -2144,6 +2193,7 @@
   }
 
   .discuss .pop-up .discuss-region .comment-region {
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     margin-top: 20px;
     margin-left: 0px;
@@ -2152,6 +2202,7 @@
   }
 
   .discuss .pop-up .discuss-region img {
+    /* border:1px solid red; */
     width: 448px;
     height: 100%;
   }
@@ -2177,6 +2228,7 @@
   /* 發表新文章區塊(表單) */
   .discuss .form_region {
     /* border:1px solid $moon_color; */
+    /* border:1px solid red; */
     background-color: #F5F0DD;
     z-index: 3;
     padding-top: 20px;
@@ -2198,6 +2250,7 @@
   }
 
   .discuss .form_region .absolute {
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     background-color: #F5F0DD;
     position: absolute;
@@ -2215,10 +2268,12 @@
   }
 
   .discuss .form_region .form_region1 .name1 {
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
   .discuss .form_region .form_region1 .write1 {
+    /* border:1px solid red; */
     height: 60px;
     width: 310px;
     font-size: 24px;
@@ -2238,6 +2293,7 @@
   }
 
   .discuss .form_region .form_region2 .choose {
+    /* border:1px solid red; */
     height: 50px;
     width: 318px;
     font-size: 24px;
@@ -2286,6 +2342,7 @@
   }
 
   .discuss .form_region .form_region5 .button {
+    /* border:1px solid red; */
     width: 300px;
     height: 50px;
     font-size: 20px;
@@ -2299,6 +2356,7 @@
   }
 
   .discuss .form_region .form_region6 {
+    /* border:1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -2306,6 +2364,7 @@
   }
 
   .discuss .form_region .form_region6 .name6 {
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
@@ -2318,6 +2377,7 @@
     /* border:1px solid red; */
     color: #FFBF44;
   }
+
 }
 
 /*# sourceMappingURL=discuss.css.map */

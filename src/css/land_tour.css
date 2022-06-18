@@ -81,6 +81,15 @@
 .land_tour main .breadcrumbs .wrapper ul li a:link {
   color: #0C1244;
 }
+.land_tour main .breadcrumbs .wrapper ul li a:visited {
+  color: #0C1244;
+}
+.land_tour main .breadcrumbs .wrapper ul li a:hover {
+  color: #0C1244;
+}
+.land_tour main .breadcrumbs .wrapper ul li a:active {
+  color: #0C1244;
+}
 .land_tour main .slogan_banner {
   box-sizing: border-box;
   padding-top: 310px;
@@ -460,6 +469,15 @@
   text-decoration: none;
 }
 .land_tour_moon main .breadcrumbs .wrapper ul li a:link {
+  color: #F5F0DD;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li a:visited {
+  color: #F5F0DD;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li a:hover {
+  color: #F5F0DD;
+}
+.land_tour_moon main .breadcrumbs .wrapper ul li a:active {
   color: #F5F0DD;
 }
 .land_tour_moon main .slogan_banner {

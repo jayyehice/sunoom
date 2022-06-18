@@ -42,9 +42,9 @@ new Vue({
 
         //fetch
 
-        //const url = './php/information.php';
+        const url = './php/information.php';
         //期中報告用information_tmp.php
-        const url = './php/information_tmp.php';
+        // const url = './php/information_tmp.php';
         fetch(url)
             .then(response => {
                 if (response.ok) {
