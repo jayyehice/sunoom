@@ -188,6 +188,9 @@ footer section .wrapper #content .info .icon img {
   height: 40px;
   margin-right: 40px;
 }
+footer section .wrapper #content .icon {
+  display: none;
+}
 
 /*
 moon 底下
@@ -421,6 +424,7 @@ moon 底下
     transform: translateX(0%);
     background-image: url("../img/footer/sun/footer_bg_01.jpg");
     background-size: cover;
+    overflow: hidden;
   }
   footer section .wrapper #content {
     padding-left: 0;
@@ -430,6 +434,12 @@ moon 底下
   }
   footer section .wrapper #content .info {
     width: 100%;
+    margin-top: 10vh;
+  }
+  footer section .wrapper #content .icon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15vh;
   }
 
   .moon footer {
@@ -451,7 +461,7 @@ moon 底下
     position: static;
     width: 100%;
     transform: translateX(0%);
-    background-image: url("../img/footer/moon/footer_bg_01.jpg");
+    background-image: url("../img/footer/moon/footer_bg_01-2.jpg");
     background-size: cover;
   }
   .moon footer section .wrapper #content {
@@ -462,6 +472,7 @@ moon 底下
   }
   .moon footer section .wrapper #content .info {
     width: 100%;
+    margin-top: 10vh;
   }
 }
 

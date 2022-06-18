@@ -207,67 +207,73 @@ footer{
                     
                     
 
-                    .info{
-                        margin-top: 15vh;
-                        // border: $show_border;
-                        width: 100%;
+                .info{
+                    margin-top: 15vh;
+                    // border: $show_border;
+                    width: 100%;
 
-                        h5{
-                            margin-bottom: 4vh;
-                        }
+                    h5{
+                        margin-bottom: 4vh;
+                    }
 
-                        .subscribe{
-                            margin-top: 7.5vh;
+                    .subscribe{
+                        margin-top: 7.5vh;
+                        margin-bottom: 1.5vh;
+
+                        p{
                             margin-bottom: 1.5vh;
-
-                            p{
-                                margin-bottom: 1.5vh;
-                            }
-
-                            input{
-                                width: 300px;
-                                height: 30px;
-                                background-color: $moon_color;
-                                box-sizing: border-box;
-                                border: 0;
-                                font-family: 'Noto Sans TC';
-                                color: $sun_color;
-                                font-size: 16rem;
-                                font-weight: normal;
-                            }
-
-                            button{
-                                width: 80px;
-                                height: 30px;
-                                box-sizing: border-box;
-                                background-color: transparent;
-                                border: 1px solid $moon_color;
-                                color: $moon_color;
-                                &:hover{
-                                    cursor: pointer;
-                                    background-color: $sun_color;
-                                }
-                            }
                         }
 
-                        & > p{
-                            line-height: 1.6;
+                        input{
+                            width: 300px;
+                            height: 30px;
+                            background-color: $moon_color;
+                            box-sizing: border-box;
+                            border: 0;
+                            font-family: 'Noto Sans TC';
+                            color: $sun_color;
+                            font-size: 16rem;
+                            font-weight: normal;
                         }
 
-                        .icon{
-                            margin-top: 60px;
-                            img{
-                                // border: $show_border;
-                                // display: block;
-                                height: 40px;
-                                margin-right: 40px;
+                        button{
+                            width: 80px;
+                            height: 30px;
+                            box-sizing: border-box;
+                            background-color: transparent;
+                            border: 1px solid $moon_color;
+                            color: $moon_color;
+                            &:hover{
+                                cursor: pointer;
+                                background-color: $sun_color;
                             }
                         }
                     }
+
+                    & > p{
+                        line-height: 1.6;
+                    }
+
+                    .icon{
+                        margin-top: 60px;
+                        img{
+                            // border: $show_border;
+                            // display: block;
+                            height: 40px;
+                            margin-right: 40px;
+                        }
+                    }
                 }
+                .icon{
+                    display: none;
+                }
+            }
+
 
         }
     }
+
+
 
 }
 
@@ -595,6 +601,7 @@ moon 底下
                 transform:translateX(0%);
                 background-image: url("../img/footer/sun/footer_bg_01.jpg");
                 background-size: cover;
+                overflow: hidden;
 
                 #content{
                     padding-left: 0;
@@ -604,8 +611,18 @@ moon 底下
 
                     .info{
                         width: 100%;
+                        margin-top: 10vh;
+                    }
+
+                    .icon{
+                        // display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 15vh;
+    
                     }
                 }
+
             }
 
         }
@@ -636,7 +653,7 @@ moon 底下
                     position: static;
                     width: 100%;
                     transform:translateX(0%);
-                    background-image: url("../img/footer/moon/footer_bg_01.jpg");
+                    background-image: url("../img/footer/moon/footer_bg_01-2.jpg");
                     background-size: cover;
     
                     #content{
@@ -647,8 +664,11 @@ moon 底下
     
                         .info{
                             width: 100%;
+                            margin-top: 10vh;
                         }
                     }
+
+                    
                 }
     
             }

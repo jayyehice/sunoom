@@ -110,6 +110,16 @@
                             &:link{
                                 color: $moon_color;
                             }
+
+                            &:visited {
+                                color: $moon_color;
+                            }
+                            &:hover {
+                                color: $moon_color;
+                            }
+                            &:active {
+                                color: $moon_color;
+                            }
                         }
                     }
                 }
@@ -632,6 +642,15 @@
                             text-decoration: none;
 
                             &:link{
+                                color: $moon_color;
+                            }
+                            &:visited {
+                                color: $moon_color;
+                            }
+                            &:hover {
+                                color: $moon_color;
+                            }
+                            &:active {
                                 color: $moon_color;
                             }
                         }
