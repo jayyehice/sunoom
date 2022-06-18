@@ -9,15 +9,16 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: no-repeat;
   background-position-y: 300px;
 }
-
+.sea .line0 {
+  display: none;
+}
 .sea header .headerCenter {
   position: absolute;
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
 }
-
-main .banner {
+.sea main .banner {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -25,7 +26,7 @@ main .banner {
   background-size: cover;
   background-repeat: no-repeat;
 }
-main .banner .begin {
+.sea main .banner .begin {
   position: absolute;
   bottom: 60px;
   left: calc(50% - 50px);
@@ -36,421 +37,418 @@ main .banner .begin {
   text-align: center;
   line-height: 50px;
 }
-main .line0 {
-  display: none;
-}
-main .line1 {
+.sea main .line1 {
   position: absolute;
   top: -89px;
   left: 400px;
 }
-main .line2 {
+.sea main .line2 {
   position: absolute;
   top: 380px;
   left: 480px;
   z-index: -1;
 }
-main .line3 {
+.sea main .line3 {
   position: absolute;
   top: 820px;
   left: 475px;
   z-index: -1;
 }
-main .line4 {
+.sea main .line4 {
   position: absolute;
   top: 1220px;
   left: 385px;
   z-index: -1;
 }
-main .line5 {
+.sea main .line5 {
   position: absolute;
   top: 1655px;
   left: 385px;
   z-index: -1;
 }
-main .line6 {
+.sea main .line6 {
   position: absolute;
   top: 2075px;
   left: 385px;
   z-index: -1;
 }
-main .bubble1 {
+.sea main .bubble1 {
   position: absolute;
   top: 75px;
   left: 550px;
   z-index: -1;
 }
-main .bubble2 {
+.sea main .bubble2 {
   position: absolute;
   top: 540px;
   left: 155px;
   z-index: -1;
 }
-main .bubble3 {
+.sea main .bubble3 {
   position: absolute;
   top: 940px;
   left: 725px;
   z-index: -1;
 }
-main .bubble4 {
+.sea main .bubble4 {
   position: absolute;
   top: 1375px;
   left: 150px;
   z-index: -1;
 }
-main .bubble5 {
+.sea main .bubble5 {
   position: absolute;
   top: 1795px;
   left: 500px;
   z-index: -1;
 }
-main .bubble6 {
+.sea main .bubble6 {
   position: absolute;
   top: 2155px;
   left: 930px;
   z-index: -1;
 }
-main .seaturtle {
+.sea main .seaturtle {
   position: absolute;
   top: 1095px;
   left: 715px;
   z-index: 0;
 }
-main .dory {
+.sea main .dory {
   position: absolute;
   top: 2125px;
   left: 995px;
   z-index: 0;
 }
-main .fish {
+.sea main .fish {
   position: absolute;
   top: 2400px;
   left: 0px;
   z-index: 0;
 }
-main .activity {
+.sea main .activity {
   width: 1180px;
   margin: 0 auto;
   position: relative;
 }
-main .activity .bread {
+.sea main .activity .bread {
   color: #0C1244;
   font-size: 16px;
   margin-top: 25px;
   margin-left: 100px;
   letter-spacing: 0px;
 }
-main .activity .bread a {
+.sea main .activity .bread a {
   text-decoration: none;
   color: #0C1244;
   margin-right: 10px;
 }
-main .activity .wrapper1 {
+.sea main .activity .wrapper1 {
   display: flex;
   margin-top: 100px;
   align-items: center;
 }
-main .activity .wrapper1 .activity1_pic .pic1 {
+.sea main .activity .wrapper1 .activity1_pic .pic1 {
   margin-left: 300px;
 }
-main .activity .wrapper1 .activity1 {
+.sea main .activity .wrapper1 .activity1 {
   width: 305px;
   margin-left: 20px;
 }
-main .activity .wrapper1 .activity1 h3 {
+.sea main .activity .wrapper1 .activity1 h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
-main .activity .wrapper1 .activity1 p {
+.sea main .activity .wrapper1 .activity1 p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .activity .wrapper1 .activity1 .comment_top {
+.sea main .activity .wrapper1 .activity1 .comment_top {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .activity .wrapper1 .activity1 .comment_top .fa-star {
+.sea main .activity .wrapper1 .activity1 .comment_top .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
+.sea main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
+.sea main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
   color: #F5F0DD;
 }
-main .activity .wrapper1 .activity1 .comment_top .icon_top {
+.sea main .activity .wrapper1 .activity1 .comment_top .icon_top {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper1 .activity1 .comment_bottom {
+.sea main .activity .wrapper1 .activity1 .comment_bottom {
   display: flex;
 }
-main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
+.sea main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .activity .wrapper1 .activity1 .comment_bottom a {
+.sea main .activity .wrapper1 .activity1 .comment_bottom a {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   text-decoration: none;
 }
-main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
+.sea main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper2 {
+.sea main .activity .wrapper2 {
   display: flex;
   align-items: center;
   margin-top: 160px;
 }
-main .activity .wrapper2 .activity2_pic .pic2 {
+.sea main .activity .wrapper2 .activity2_pic .pic2 {
   margin-left: 20px;
 }
-main .activity .wrapper2 .activity2 {
+.sea main .activity .wrapper2 .activity2 {
   width: 305px;
   margin-left: 200px;
 }
-main .activity .wrapper2 .activity2 h3 {
+.sea main .activity .wrapper2 .activity2 h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
-main .activity .wrapper2 .activity2 p {
+.sea main .activity .wrapper2 .activity2 p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .activity .wrapper2 .activity2 .comment_top {
+.sea main .activity .wrapper2 .activity2 .comment_top {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .activity .wrapper2 .activity2 .comment_top .fa-star {
+.sea main .activity .wrapper2 .activity2 .comment_top .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
+.sea main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
+.sea main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
   color: #F5F0DD;
 }
-main .activity .wrapper2 .activity2 .comment_top .icon_top {
+.sea main .activity .wrapper2 .activity2 .comment_top .icon_top {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper2 .activity2 .comment_bottom {
+.sea main .activity .wrapper2 .activity2 .comment_bottom {
   display: flex;
 }
-main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
+.sea main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .activity .wrapper2 .activity2 .comment_bottom a {
+.sea main .activity .wrapper2 .activity2 .comment_bottom a {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   text-decoration: none;
 }
-main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
+.sea main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper3 {
+.sea main .activity .wrapper3 {
   display: flex;
   margin-top: 120px;
   align-items: center;
 }
-main .activity .wrapper3 .activity3_pic .pic3 {
+.sea main .activity .wrapper3 .activity3_pic .pic3 {
   margin-left: 300px;
 }
-main .activity .wrapper3 .activity3 {
+.sea main .activity .wrapper3 .activity3 {
   width: 305px;
   margin-left: 20px;
 }
-main .activity .wrapper3 .activity3 h3 {
+.sea main .activity .wrapper3 .activity3 h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
-main .activity .wrapper3 .activity3 p {
+.sea main .activity .wrapper3 .activity3 p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .activity .wrapper3 .activity3 .comment_top {
+.sea main .activity .wrapper3 .activity3 .comment_top {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .activity .wrapper3 .activity3 .comment_top .fa-star {
+.sea main .activity .wrapper3 .activity3 .comment_top .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
+.sea main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
+.sea main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
   color: #F5F0DD;
 }
-main .activity .wrapper3 .activity3 .comment_top .icon_top {
+.sea main .activity .wrapper3 .activity3 .comment_top .icon_top {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper3 .activity3 .comment_bottom {
+.sea main .activity .wrapper3 .activity3 .comment_bottom {
   display: flex;
 }
-main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
+.sea main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .activity .wrapper3 .activity3 .comment_bottom a {
+.sea main .activity .wrapper3 .activity3 .comment_bottom a {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   text-decoration: none;
 }
-main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
+.sea main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper4 {
+.sea main .activity .wrapper4 {
   display: flex;
   margin-top: 160px;
   align-items: center;
 }
-main .activity .wrapper4 .activity4_pic .pic4 {
+.sea main .activity .wrapper4 .activity4_pic .pic4 {
   margin-left: 20px;
 }
-main .activity .wrapper4 .activity4 {
+.sea main .activity .wrapper4 .activity4 {
   width: 305px;
   margin-left: 200px;
 }
-main .activity .wrapper4 .activity4 h3 {
+.sea main .activity .wrapper4 .activity4 h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
-main .activity .wrapper4 .activity4 p {
+.sea main .activity .wrapper4 .activity4 p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .activity .wrapper4 .activity4 .comment_top {
+.sea main .activity .wrapper4 .activity4 .comment_top {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .activity .wrapper4 .activity4 .comment_top .fa-star {
+.sea main .activity .wrapper4 .activity4 .comment_top .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
+.sea main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
+.sea main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
   color: #F5F0DD;
 }
-main .activity .wrapper4 .activity4 .comment_top .icon_top {
+.sea main .activity .wrapper4 .activity4 .comment_top .icon_top {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper4 .activity4 .comment_bottom {
+.sea main .activity .wrapper4 .activity4 .comment_bottom {
   display: flex;
 }
-main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
+.sea main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .activity .wrapper4 .activity4 .comment_bottom a {
+.sea main .activity .wrapper4 .activity4 .comment_bottom a {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   text-decoration: none;
 }
-main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
+.sea main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper5 {
+.sea main .activity .wrapper5 {
   display: flex;
   margin-top: 150px;
   align-items: center;
 }
-main .activity .wrapper5 .activity5_pic .pic5 {
+.sea main .activity .wrapper5 .activity5_pic .pic5 {
   margin-left: 250px;
 }
-main .activity .wrapper5 .activity5 {
+.sea main .activity .wrapper5 .activity5 {
   width: 305px;
   margin-left: 20px;
 }
-main .activity .wrapper5 .activity5 h3 {
+.sea main .activity .wrapper5 .activity5 h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
-main .activity .wrapper5 .activity5 p {
+.sea main .activity .wrapper5 .activity5 p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .activity .wrapper5 .activity5 .comment_top {
+.sea main .activity .wrapper5 .activity5 .comment_top {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main .activity .wrapper5 .activity5 .comment_top .fa-star {
+.sea main .activity .wrapper5 .activity5 .comment_top .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
+.sea main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
+.sea main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
   color: #F5F0DD;
 }
-main .activity .wrapper5 .activity5 .comment_top .icon_top {
+.sea main .activity .wrapper5 .activity5 .comment_top .icon_top {
   display: flex;
   margin-left: auto;
 }
-main .activity .wrapper5 .activity5 .comment_bottom {
+.sea main .activity .wrapper5 .activity5 .comment_bottom {
   display: flex;
 }
-main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
+.sea main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .activity .wrapper5 .activity5 .comment_bottom a {
+.sea main .activity .wrapper5 .activity5 .comment_bottom a {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   text-decoration: none;
 }
-main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
+.sea main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
   display: flex;
   margin-left: auto;
 }
-main .end {
+.sea main .end {
   position: absolute;
   bottom: -155px;
   left: calc(50% - 40px);
@@ -461,11 +459,11 @@ main .end {
   text-align: center;
   line-height: 50px;
 }
-main .echotitle {
+.sea main .echotitle {
   width: 1180px;
   margin: 0 auto;
 }
-main .echotitle .wrapper1 {
+.sea main .echotitle .wrapper1 {
   width: 630px;
   height: 380px;
   margin: 0 auto;
@@ -475,7 +473,7 @@ main .echotitle .wrapper1 {
   padding: 120px;
   box-sizing: border-box;
 }
-main .echotitle h3 {
+.sea main .echotitle h3 {
   color: #F5F0DD;
   font-size: 32px;
   letter-spacing: 3px;
@@ -483,13 +481,13 @@ main .echotitle h3 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-main .echotitle p {
+.sea main .echotitle p {
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-main .echotitle .wrapper2 {
+.sea main .echotitle .wrapper2 {
   width: 630px;
   height: 280px;
   margin: 0 auto;
@@ -499,7 +497,7 @@ main .echotitle .wrapper2 {
   align-items: center;
   justify-content: flex-end;
 }
-main .echotitle .wrapper2 .echo1 {
+.sea main .echotitle .wrapper2 .echo1 {
   width: 270px;
   height: 200px;
   padding: 25px;
@@ -508,7 +506,7 @@ main .echotitle .wrapper2 .echo1 {
   background-color: #0C1244;
   position: relative;
 }
-main .echotitle .wrapper2 .echo1::before {
+.sea main .echotitle .wrapper2 .echo1::before {
   content: "";
   display: block;
   width: 40px;
@@ -519,7 +517,7 @@ main .echotitle .wrapper2 .echo1::before {
   border-top: 2px solid #F5F0DD;
   border-left: 2px solid #F5F0DD;
 }
-main .echotitle .wrapper2 .echo1::after {
+.sea main .echotitle .wrapper2 .echo1::after {
   content: "";
   display: block;
   width: 40px;
@@ -530,34 +528,34 @@ main .echotitle .wrapper2 .echo1::after {
   border-bottom: 2px solid #F5F0DD;
   border-right: 2px solid #F5F0DD;
 }
-main .echotitle .wrapper2 .echo1 h5 {
+.sea main .echotitle .wrapper2 .echo1 h5 {
   color: #F5F0DD;
   font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
 }
-main .echotitle .wrapper2 .echo1 p {
+.sea main .echotitle .wrapper2 .echo1 p {
   margin-bottom: 5px;
 }
-main .echotitle .wrapper2 .echo1 .fa-star {
+.sea main .echotitle .wrapper2 .echo1 .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
+.sea main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .echotitle .wrapper2 .echo1 .fa-circle-plus {
+.sea main .echotitle .wrapper2 .echo1 .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .echotitle .wrapper2 .echo1 a {
+.sea main .echotitle .wrapper2 .echo1 a {
   text-decoration: none;
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
 }
-main .echotitle .wrapper3 {
+.sea main .echotitle .wrapper3 {
   width: 630px;
   height: 280px;
   margin: 0 auto;
@@ -567,7 +565,7 @@ main .echotitle .wrapper3 {
   align-items: center;
   justify-content: flex-start;
 }
-main .echotitle .wrapper3 .echo2 {
+.sea main .echotitle .wrapper3 .echo2 {
   width: 270px;
   height: 200px;
   padding: 25px;
@@ -576,7 +574,7 @@ main .echotitle .wrapper3 .echo2 {
   background-color: #0C1244;
   position: relative;
 }
-main .echotitle .wrapper3 .echo2::before {
+.sea main .echotitle .wrapper3 .echo2::before {
   content: "";
   display: block;
   width: 40px;
@@ -587,7 +585,7 @@ main .echotitle .wrapper3 .echo2::before {
   border-top: 2px solid #F5F0DD;
   border-left: 2px solid #F5F0DD;
 }
-main .echotitle .wrapper3 .echo2::after {
+.sea main .echotitle .wrapper3 .echo2::after {
   content: "";
   display: block;
   width: 40px;
@@ -598,52 +596,697 @@ main .echotitle .wrapper3 .echo2::after {
   border-bottom: 2px solid #F5F0DD;
   border-right: 2px solid #F5F0DD;
 }
-main .echotitle .wrapper3 .echo2 h5 {
+.sea main .echotitle .wrapper3 .echo2 h5 {
   color: #F5F0DD;
   font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
 }
-main .echotitle .wrapper3 .echo2 p {
+.sea main .echotitle .wrapper3 .echo2 p {
   margin-bottom: 5px;
 }
-main .echotitle .wrapper3 .echo2 .fa-star {
+.sea main .echotitle .wrapper3 .echo2 .fa-star {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
+.sea main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
   color: #FFBF44;
   letter-spacing: -5px;
 }
-main .echotitle .wrapper3 .echo2 .fa-circle-plus {
+.sea main .echotitle .wrapper3 .echo2 .fa-circle-plus {
   color: #F5F0DD;
   margin-right: 5px;
 }
-main .echotitle .wrapper3 .echo2 a {
+.sea main .echotitle .wrapper3 .echo2 a {
   text-decoration: none;
   color: #F5F0DD;
   font-size: 16px;
   letter-spacing: 3px;
 }
-main .photo {
+.sea main .photo {
   width: 1180px;
   margin: 0 auto;
 }
-main .photo .wrapper1 {
+.sea main .photo .wrapper1 {
   display: flex;
   margin-bottom: 50px;
 }
-main .photo .wrapper1 .ig {
+.sea main .photo .wrapper1 .ig {
   border-radius: 50%;
   animation-name: scale1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-main .photo .wrapper2 {
+.sea main .photo .wrapper2 {
   display: flex;
   justify-content: space-around;
 }
-main .photo .wrapper2 .ig {
+.sea main .photo .wrapper2 .ig {
+  border-radius: 50%;
+  animation-name: scale1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.sea_moon {
+  background-image: url("../img/sea/seapage_moon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 300px;
+}
+.sea_moon .line0 {
+  display: none;
+}
+.sea_moon header .headerCenter {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sea_moon main .banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/sea/turtle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sea_moon main .banner .begin {
+  position: absolute;
+  bottom: 60px;
+  left: calc(50% - 50px);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+}
+.sea_moon main .line1 {
+  position: absolute;
+  top: -89px;
+  left: 400px;
+}
+.sea_moon main .line2 {
+  position: absolute;
+  top: 380px;
+  left: 480px;
+  z-index: -1;
+}
+.sea_moon main .line3 {
+  position: absolute;
+  top: 820px;
+  left: 475px;
+  z-index: -1;
+}
+.sea_moon main .line4 {
+  position: absolute;
+  top: 1220px;
+  left: 385px;
+  z-index: -1;
+}
+.sea_moon main .line5 {
+  position: absolute;
+  top: 1655px;
+  left: 385px;
+  z-index: -1;
+}
+.sea_moon main .line6 {
+  position: absolute;
+  top: 2075px;
+  left: 385px;
+  z-index: -1;
+}
+.sea_moon main .bubble1 {
+  position: absolute;
+  top: 75px;
+  left: 550px;
+  z-index: -1;
+}
+.sea_moon main .bubble2 {
+  position: absolute;
+  top: 540px;
+  left: 155px;
+  z-index: -1;
+}
+.sea_moon main .bubble3 {
+  position: absolute;
+  top: 940px;
+  left: 725px;
+  z-index: -1;
+}
+.sea_moon main .bubble4 {
+  position: absolute;
+  top: 1375px;
+  left: 150px;
+  z-index: -1;
+}
+.sea_moon main .bubble5 {
+  position: absolute;
+  top: 1795px;
+  left: 500px;
+  z-index: -1;
+}
+.sea_moon main .bubble6 {
+  position: absolute;
+  top: 2155px;
+  left: 930px;
+  z-index: -1;
+}
+.sea_moon main .seaturtle {
+  position: absolute;
+  top: 1095px;
+  left: 715px;
+  z-index: 0;
+}
+.sea_moon main .dory {
+  position: absolute;
+  top: 2125px;
+  left: 995px;
+  z-index: 0;
+}
+.sea_moon main .fish {
+  position: absolute;
+  top: 2400px;
+  left: 0px;
+  z-index: 0;
+}
+.sea_moon main .activity {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+.sea_moon main .activity .bread {
+  color: #0C1244;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-left: 100px;
+  letter-spacing: 0px;
+}
+.sea_moon main .activity .bread a {
+  text-decoration: none;
+  color: #0C1244;
+  margin-right: 10px;
+}
+.sea_moon main .activity .wrapper1 {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+}
+.sea_moon main .activity .wrapper1 .activity1_pic .pic1 {
+  margin-left: 300px;
+}
+.sea_moon main .activity .wrapper1 .activity1 {
+  width: 305px;
+  margin-left: 20px;
+}
+.sea_moon main .activity .wrapper1 .activity1 h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.sea_moon main .activity .wrapper1 .activity1 p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_top {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
+  color: #F5F0DD;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_top .icon_top {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_bottom {
+  display: flex;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_bottom a {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.sea_moon main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper2 {
+  display: flex;
+  align-items: center;
+  margin-top: 160px;
+}
+.sea_moon main .activity .wrapper2 .activity2_pic .pic2 {
+  margin-left: 20px;
+}
+.sea_moon main .activity .wrapper2 .activity2 {
+  width: 305px;
+  margin-left: 200px;
+}
+.sea_moon main .activity .wrapper2 .activity2 h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.sea_moon main .activity .wrapper2 .activity2 p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_top {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
+  color: #F5F0DD;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_top .icon_top {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_bottom {
+  display: flex;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_bottom a {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.sea_moon main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper3 {
+  display: flex;
+  margin-top: 120px;
+  align-items: center;
+}
+.sea_moon main .activity .wrapper3 .activity3_pic .pic3 {
+  margin-left: 300px;
+}
+.sea_moon main .activity .wrapper3 .activity3 {
+  width: 305px;
+  margin-left: 20px;
+}
+.sea_moon main .activity .wrapper3 .activity3 h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.sea_moon main .activity .wrapper3 .activity3 p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_top {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
+  color: #F5F0DD;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_top .icon_top {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_bottom {
+  display: flex;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_bottom a {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.sea_moon main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper4 {
+  display: flex;
+  margin-top: 160px;
+  align-items: center;
+}
+.sea_moon main .activity .wrapper4 .activity4_pic .pic4 {
+  margin-left: 20px;
+}
+.sea_moon main .activity .wrapper4 .activity4 {
+  width: 305px;
+  margin-left: 200px;
+}
+.sea_moon main .activity .wrapper4 .activity4 h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.sea_moon main .activity .wrapper4 .activity4 p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_top {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
+  color: #F5F0DD;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_top .icon_top {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_bottom {
+  display: flex;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_bottom a {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.sea_moon main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper5 {
+  display: flex;
+  margin-top: 150px;
+  align-items: center;
+}
+.sea_moon main .activity .wrapper5 .activity5_pic .pic5 {
+  margin-left: 250px;
+}
+.sea_moon main .activity .wrapper5 .activity5 {
+  width: 305px;
+  margin-left: 20px;
+}
+.sea_moon main .activity .wrapper5 .activity5 h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.sea_moon main .activity .wrapper5 .activity5 p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_top {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
+  color: #F5F0DD;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_top .icon_top {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_bottom {
+  display: flex;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_bottom a {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.sea_moon main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
+  display: flex;
+  margin-left: auto;
+}
+.sea_moon main .end {
+  position: absolute;
+  bottom: -155px;
+  left: calc(50% - 40px);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+}
+.sea_moon main .echotitle {
+  width: 1180px;
+  margin: 0 auto;
+}
+.sea_moon main .echotitle .wrapper1 {
+  width: 630px;
+  height: 380px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 200px;
+  background-image: url("../img/sea/echo.png");
+  padding: 120px;
+  box-sizing: border-box;
+}
+.sea_moon main .echotitle h3 {
+  color: #F5F0DD;
+  font-size: 32px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sea_moon main .echotitle p {
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.sea_moon main .echotitle .wrapper2 {
+  width: 630px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  background-image: url("../img/sea/echo1.png");
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 {
+  width: 270px;
+  height: 200px;
+  padding: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #0C1244;
+  position: relative;
+}
+.sea_moon main .echotitle .wrapper2 .echo1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  border-top: 2px solid #F5F0DD;
+  border-left: 2px solid #F5F0DD;
+}
+.sea_moon main .echotitle .wrapper2 .echo1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  border-bottom: 2px solid #F5F0DD;
+  border-right: 2px solid #F5F0DD;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 h5 {
+  color: #F5F0DD;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 p {
+  margin-bottom: 5px;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .echotitle .wrapper2 .echo1 a {
+  text-decoration: none;
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.sea_moon main .echotitle .wrapper3 {
+  width: 630px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  background-image: url("../img/sea/echo2.png");
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 {
+  width: 270px;
+  height: 200px;
+  padding: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #0C1244;
+  position: relative;
+}
+.sea_moon main .echotitle .wrapper3 .echo2::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  border-top: 2px solid #F5F0DD;
+  border-left: 2px solid #F5F0DD;
+}
+.sea_moon main .echotitle .wrapper3 .echo2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  border-bottom: 2px solid #F5F0DD;
+  border-right: 2px solid #F5F0DD;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 h5 {
+  color: #F5F0DD;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 p {
+  margin-bottom: 5px;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 .fa-star {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
+  color: #FFBF44;
+  letter-spacing: -5px;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 .fa-circle-plus {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.sea_moon main .echotitle .wrapper3 .echo2 a {
+  text-decoration: none;
+  color: #F5F0DD;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.sea_moon main .photo {
+  width: 1180px;
+  margin: 0 auto;
+}
+.sea_moon main .photo .wrapper1 {
+  display: flex;
+  margin-bottom: 50px;
+}
+.sea_moon main .photo .wrapper1 .ig {
+  border-radius: 50%;
+  animation-name: scale1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.sea_moon main .photo .wrapper2 {
+  display: flex;
+  justify-content: space-around;
+}
+.sea_moon main .photo .wrapper2 .ig {
   border-radius: 50%;
   animation-name: scale1;
   animation-duration: 5s;
@@ -657,7 +1300,7 @@ main .photo .wrapper2 .ig {
     background-repeat: no-repeat;
     background-position-y: 300px;
   }
-  main .banner {
+  .sea main .banner {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -666,7 +1309,7 @@ main .photo .wrapper2 .ig {
     background-repeat: no-repeat;
     background-position: 35% center;
   }
-  main .banner .begin {
+  .sea main .banner .begin {
     position: absolute;
     bottom: 100px;
     left: 50%;
@@ -677,7 +1320,7 @@ main .photo .wrapper2 .ig {
     background-color: #F5F0DD;
     line-height: 30px;
   }
-  main .line0 {
+  .sea main .line0 {
     display: block;
     position: absolute;
     top: -132px;
@@ -685,463 +1328,463 @@ main .photo .wrapper2 .ig {
     left: 50%;
     transform: translateX(-50%);
   }
-  main .line1 {
+  .sea main .line1 {
     position: absolute;
     top: -89px;
     left: 400px;
     display: none;
   }
-  main .line2 {
+  .sea main .line2 {
     position: absolute;
     top: 380px;
     left: 480px;
     z-index: -1;
     display: none;
   }
-  main .line3 {
+  .sea main .line3 {
     position: absolute;
     top: 820px;
     left: 475px;
     z-index: -1;
     display: none;
   }
-  main .line4 {
+  .sea main .line4 {
     position: absolute;
     top: 1220px;
     left: 385px;
     z-index: -1;
     display: none;
   }
-  main .line5 {
+  .sea main .line5 {
     position: absolute;
     top: 1655px;
     left: 385px;
     z-index: -1;
     display: none;
   }
-  main .line6 {
+  .sea main .line6 {
     position: absolute;
     top: 2075px;
     left: 385px;
     z-index: -1;
     display: none;
   }
-  main .bubble1 {
+  .sea main .bubble1 {
     position: absolute;
     top: 75px;
     left: 550px;
     z-index: -1;
     display: none;
   }
-  main .bubble2 {
+  .sea main .bubble2 {
     position: absolute;
     top: 540px;
     left: 155px;
     z-index: -1;
     display: none;
   }
-  main .bubble3 {
+  .sea main .bubble3 {
     position: absolute;
     top: 940px;
     left: 725px;
     z-index: -1;
     display: none;
   }
-  main .bubble4 {
+  .sea main .bubble4 {
     position: absolute;
     top: 1375px;
     left: 150px;
     z-index: -1;
     display: none;
   }
-  main .bubble5 {
+  .sea main .bubble5 {
     position: absolute;
     top: 1795px;
     left: 500px;
     z-index: -1;
     display: none;
   }
-  main .bubble6 {
+  .sea main .bubble6 {
     position: absolute;
     top: 2155px;
     left: 930px;
     z-index: -1;
     display: none;
   }
-  main .seaturtle {
+  .sea main .seaturtle {
     position: absolute;
     top: 1095px;
     left: 715px;
     z-index: 0;
     display: none;
   }
-  main .dory {
+  .sea main .dory {
     position: absolute;
     top: 2125px;
     left: 995px;
     z-index: 0;
     display: none;
   }
-  main .fish {
+  .sea main .fish {
     position: absolute;
     top: 2400px;
     left: 0px;
     z-index: 0;
     display: none;
   }
-  main .activity {
+  .sea main .activity {
     width: calc(100% - 40px);
     margin: 0 auto;
     position: relative;
   }
-  main .activity .bread {
+  .sea main .activity .bread {
     color: #0C1244;
     font-size: 16px;
     margin-top: 0px;
     margin-left: 0px;
     letter-spacing: 0px;
   }
-  main .activity .bread a {
+  .sea main .activity .bread a {
     text-decoration: none;
     color: #0C1244;
     margin-right: 10px;
   }
-  main .activity .wrapper1 {
+  .sea main .activity .wrapper1 {
     display: flex;
     flex-direction: column;
     margin-top: 0px;
   }
-  main .activity .wrapper1 .activity1_pic .pic1 {
+  .sea main .activity .wrapper1 .activity1_pic .pic1 {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
   }
-  main .activity .wrapper1 .activity1 {
+  .sea main .activity .wrapper1 .activity1 {
     width: 305px;
     margin-left: 0px;
   }
-  main .activity .wrapper1 .activity1 h3 {
+  .sea main .activity .wrapper1 .activity1 h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
   }
-  main .activity .wrapper1 .activity1 p {
+  .sea main .activity .wrapper1 .activity1 p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .activity .wrapper1 .activity1 .comment_top {
+  .sea main .activity .wrapper1 .activity1 .comment_top {
     display: flex;
     margin-top: 20px;
     margin-bottom: 15px;
   }
-  main .activity .wrapper1 .activity1 .comment_top .fa-star {
+  .sea main .activity .wrapper1 .activity1 .comment_top .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
+  .sea main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
+  .sea main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
     color: #F5F0DD;
   }
-  main .activity .wrapper1 .activity1 .comment_top .icon_top {
+  .sea main .activity .wrapper1 .activity1 .comment_top .icon_top {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper1 .activity1 .comment_bottom {
+  .sea main .activity .wrapper1 .activity1 .comment_bottom {
     display: flex;
     align-items: center;
   }
-  main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
+  .sea main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
     color: #F5F0DD;
     margin-right: 5px;
   }
-  main .activity .wrapper1 .activity1 .comment_bottom a {
+  .sea main .activity .wrapper1 .activity1 .comment_bottom a {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     text-decoration: none;
   }
-  main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
+  .sea main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper2 {
+  .sea main .activity .wrapper2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
   }
-  main .activity .wrapper2 .activity2_pic {
+  .sea main .activity .wrapper2 .activity2_pic {
     order: 1;
   }
-  main .activity .wrapper2 .activity2_pic .pic2 {
+  .sea main .activity .wrapper2 .activity2_pic .pic2 {
     margin-left: 20px;
   }
-  main .activity .wrapper2 .activity2 {
+  .sea main .activity .wrapper2 .activity2 {
     order: 2;
     width: 305px;
     margin-left: 0px;
   }
-  main .activity .wrapper2 .activity2 h3 {
+  .sea main .activity .wrapper2 .activity2 h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  main .activity .wrapper2 .activity2 p {
+  .sea main .activity .wrapper2 .activity2 p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .activity .wrapper2 .activity2 .comment_top {
+  .sea main .activity .wrapper2 .activity2 .comment_top {
     display: flex;
     margin-top: 20px;
     margin-bottom: 15px;
   }
-  main .activity .wrapper2 .activity2 .comment_top .fa-star {
+  .sea main .activity .wrapper2 .activity2 .comment_top .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
+  .sea main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
+  .sea main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
     color: #F5F0DD;
   }
-  main .activity .wrapper2 .activity2 .comment_top .icon_top {
+  .sea main .activity .wrapper2 .activity2 .comment_top .icon_top {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper2 .activity2 .comment_bottom {
+  .sea main .activity .wrapper2 .activity2 .comment_bottom {
     display: flex;
     align-items: center;
   }
-  main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
+  .sea main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
     color: #F5F0DD;
     margin-right: 5px;
   }
-  main .activity .wrapper2 .activity2 .comment_bottom a {
+  .sea main .activity .wrapper2 .activity2 .comment_bottom a {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     text-decoration: none;
   }
-  main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
+  .sea main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper3 {
+  .sea main .activity .wrapper3 {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     align-items: center;
   }
-  main .activity .wrapper3 .activity3_pic .pic3 {
+  .sea main .activity .wrapper3 .activity3_pic .pic3 {
     margin-left: 0px;
   }
-  main .activity .wrapper3 .activity3 {
+  .sea main .activity .wrapper3 .activity3 {
     width: 305px;
     margin-left: 20px;
   }
-  main .activity .wrapper3 .activity3 h3 {
+  .sea main .activity .wrapper3 .activity3 h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     letter-spacing: 3px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  main .activity .wrapper3 .activity3 p {
+  .sea main .activity .wrapper3 .activity3 p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .activity .wrapper3 .activity3 .comment_top {
+  .sea main .activity .wrapper3 .activity3 .comment_top {
     display: flex;
     margin-top: 20px;
     margin-bottom: 15px;
   }
-  main .activity .wrapper3 .activity3 .comment_top .fa-star {
+  .sea main .activity .wrapper3 .activity3 .comment_top .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
+  .sea main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
+  .sea main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
     color: #F5F0DD;
   }
-  main .activity .wrapper3 .activity3 .comment_top .icon_top {
+  .sea main .activity .wrapper3 .activity3 .comment_top .icon_top {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper3 .activity3 .comment_bottom {
+  .sea main .activity .wrapper3 .activity3 .comment_bottom {
     display: flex;
     align-items: center;
   }
-  main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
+  .sea main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
     color: #F5F0DD;
     margin-right: 5px;
   }
-  main .activity .wrapper3 .activity3 .comment_bottom a {
+  .sea main .activity .wrapper3 .activity3 .comment_bottom a {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     text-decoration: none;
   }
-  main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
+  .sea main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper4 {
+  .sea main .activity .wrapper4 {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     align-items: center;
   }
-  main .activity .wrapper4 .activity4_pic {
+  .sea main .activity .wrapper4 .activity4_pic {
     order: 1;
   }
-  main .activity .wrapper4 .activity4_pic .pic4 {
+  .sea main .activity .wrapper4 .activity4_pic .pic4 {
     margin-left: 20px;
   }
-  main .activity .wrapper4 .activity4 {
+  .sea main .activity .wrapper4 .activity4 {
     order: 2;
     width: 305px;
     margin-left: 0px;
   }
-  main .activity .wrapper4 .activity4 h3 {
+  .sea main .activity .wrapper4 .activity4 h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  main .activity .wrapper4 .activity4 p {
+  .sea main .activity .wrapper4 .activity4 p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .activity .wrapper4 .activity4 .comment_top {
+  .sea main .activity .wrapper4 .activity4 .comment_top {
     display: flex;
     margin-top: 20px;
     margin-bottom: 15px;
   }
-  main .activity .wrapper4 .activity4 .comment_top .fa-star {
+  .sea main .activity .wrapper4 .activity4 .comment_top .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
+  .sea main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
+  .sea main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
     color: #F5F0DD;
   }
-  main .activity .wrapper4 .activity4 .comment_top .icon_top {
+  .sea main .activity .wrapper4 .activity4 .comment_top .icon_top {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper4 .activity4 .comment_bottom {
+  .sea main .activity .wrapper4 .activity4 .comment_bottom {
     display: flex;
     align-items: center;
   }
-  main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
+  .sea main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
     color: #F5F0DD;
     margin-right: 5px;
   }
-  main .activity .wrapper4 .activity4 .comment_bottom a {
+  .sea main .activity .wrapper4 .activity4 .comment_bottom a {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     text-decoration: none;
   }
-  main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
+  .sea main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper5 {
+  .sea main .activity .wrapper5 {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     align-items: center;
   }
-  main .activity .wrapper5 .activity5_pic .pic5 {
+  .sea main .activity .wrapper5 .activity5_pic .pic5 {
     margin-left: 0px;
   }
-  main .activity .wrapper5 .activity5 {
+  .sea main .activity .wrapper5 .activity5 {
     width: 305px;
     margin-left: 20px;
   }
-  main .activity .wrapper5 .activity5 h3 {
+  .sea main .activity .wrapper5 .activity5 h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  main .activity .wrapper5 .activity5 p {
+  .sea main .activity .wrapper5 .activity5 p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .activity .wrapper5 .activity5 .comment_top {
+  .sea main .activity .wrapper5 .activity5 .comment_top {
     display: flex;
     margin-top: 20px;
     margin-bottom: 15px;
   }
-  main .activity .wrapper5 .activity5 .comment_top .fa-star {
+  .sea main .activity .wrapper5 .activity5 .comment_top .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
+  .sea main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
+  .sea main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
     color: #F5F0DD;
   }
-  main .activity .wrapper5 .activity5 .comment_top .icon_top {
+  .sea main .activity .wrapper5 .activity5 .comment_top .icon_top {
     display: flex;
     margin-left: auto;
   }
-  main .activity .wrapper5 .activity5 .comment_bottom {
+  .sea main .activity .wrapper5 .activity5 .comment_bottom {
     display: flex;
     align-items: center;
   }
-  main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
+  .sea main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
     color: #F5F0DD;
     margin-right: 5px;
   }
-  main .activity .wrapper5 .activity5 .comment_bottom a {
+  .sea main .activity .wrapper5 .activity5 .comment_bottom a {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     text-decoration: none;
   }
-  main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
+  .sea main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
     display: flex;
     margin-left: auto;
   }
-  main .end {
+  .sea main .end {
     display: none;
     position: absolute;
     bottom: -155px;
@@ -1153,11 +1796,11 @@ main .photo .wrapper2 .ig {
     text-align: center;
     line-height: 50px;
   }
-  main .echotitle {
+  .sea main .echotitle {
     width: calc(100% - 40px);
     margin: 0 auto;
   }
-  main .echotitle .wrapper1 {
+  .sea main .echotitle .wrapper1 {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -1168,20 +1811,20 @@ main .photo .wrapper2 .ig {
     padding-left: 50px;
     box-sizing: border-box;
   }
-  main .echotitle h3 {
+  .sea main .echotitle h3 {
     color: #F5F0DD;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 40px;
   }
-  main .echotitle p {
+  .sea main .echotitle p {
     color: #F5F0DD;
     font-size: 16px;
     letter-spacing: 3px;
     line-height: 1.6;
   }
-  main .echotitle .wrapper2 {
+  .sea main .echotitle .wrapper2 {
     width: 80%;
     height: 380px;
     margin: 0 auto;
@@ -1193,7 +1836,7 @@ main .photo .wrapper2 .ig {
     justify-content: center;
     position: relative;
   }
-  main .echotitle .wrapper2::before {
+  .sea main .echotitle .wrapper2::before {
     content: "";
     display: block;
     width: 40px;
@@ -1204,7 +1847,7 @@ main .photo .wrapper2 .ig {
     border-top: 2px solid #0C1244;
     border-left: 2px solid #0C1244;
   }
-  main .echotitle .wrapper2::after {
+  .sea main .echotitle .wrapper2::after {
     content: "";
     display: block;
     width: 40px;
@@ -1215,7 +1858,7 @@ main .photo .wrapper2 .ig {
     border-bottom: 2px solid #0C1244;
     border-right: 2px solid #0C1244;
   }
-  main .echotitle .wrapper2 .echo1 {
+  .sea main .echotitle .wrapper2 .echo1 {
     width: 80%;
     height: 280px;
     padding: 0px;
@@ -1224,20 +1867,20 @@ main .photo .wrapper2 .ig {
     background-color: rgba(245, 240, 221, 0.6);
     position: relative;
   }
-  main .echotitle .wrapper2 .echo1::before {
+  .sea main .echotitle .wrapper2 .echo1::before {
     display: none;
   }
-  main .echotitle .wrapper2 .echo1::after {
+  .sea main .echotitle .wrapper2 .echo1::after {
     display: none;
   }
-  main .echotitle .wrapper2 .echo1 h5 {
+  .sea main .echotitle .wrapper2 .echo1 h5 {
     color: #0C1244;
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  main .echotitle .wrapper2 .echo1 p {
+  .sea main .echotitle .wrapper2 .echo1 p {
     margin-bottom: 5px;
     color: #0C1244;
     font-size: 16px;
@@ -1245,25 +1888,25 @@ main .photo .wrapper2 .ig {
     padding-left: 40px;
     padding-right: 40px;
   }
-  main .echotitle .wrapper2 .echo1 .fa-star {
+  .sea main .echotitle .wrapper2 .echo1 .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
+  .sea main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .echotitle .wrapper2 .echo1 .fa-circle-plus {
+  .sea main .echotitle .wrapper2 .echo1 .fa-circle-plus {
     color: #0C1244;
     margin-right: 5px;
   }
-  main .echotitle .wrapper2 .echo1 a {
+  .sea main .echotitle .wrapper2 .echo1 a {
     text-decoration: none;
     color: #0C1244;
     font-size: 16px;
     letter-spacing: 3px;
   }
-  main .echotitle .wrapper3 {
+  .sea main .echotitle .wrapper3 {
     position: relative;
     width: 80%;
     height: 380px;
@@ -1275,7 +1918,7 @@ main .photo .wrapper2 .ig {
     align-items: center;
     justify-content: center;
   }
-  main .echotitle .wrapper3::before {
+  .sea main .echotitle .wrapper3::before {
     display: block;
     content: "";
     width: 40px;
@@ -1286,7 +1929,7 @@ main .photo .wrapper2 .ig {
     border-top: 2px solid #0C1244;
     border-left: 2px solid #0C1244;
   }
-  main .echotitle .wrapper3::after {
+  .sea main .echotitle .wrapper3::after {
     display: block;
     content: "";
     width: 40px;
@@ -1297,7 +1940,7 @@ main .photo .wrapper2 .ig {
     border-bottom: 2px solid #0C1244;
     border-right: 2px solid #0C1244;
   }
-  main .echotitle .wrapper3 .echo2 {
+  .sea main .echotitle .wrapper3 .echo2 {
     width: 80%;
     height: 280px;
     padding: 0px;
@@ -1306,20 +1949,20 @@ main .photo .wrapper2 .ig {
     background-color: rgba(245, 240, 221, 0.6);
     position: relative;
   }
-  main .echotitle .wrapper3 .echo2::before {
+  .sea main .echotitle .wrapper3 .echo2::before {
     display: none;
   }
-  main .echotitle .wrapper3 .echo2::after {
+  .sea main .echotitle .wrapper3 .echo2::after {
     display: none;
   }
-  main .echotitle .wrapper3 .echo2 h5 {
+  .sea main .echotitle .wrapper3 .echo2 h5 {
     color: #0C1244;
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  main .echotitle .wrapper3 .echo2 p {
+  .sea main .echotitle .wrapper3 .echo2 p {
     margin-bottom: 5px;
     color: #0C1244;
     margin-bottom: 10px;
@@ -1327,44 +1970,765 @@ main .photo .wrapper2 .ig {
     padding-right: 35px;
     font-size: 16px;
   }
-  main .echotitle .wrapper3 .echo2 .fa-star {
+  .sea main .echotitle .wrapper3 .echo2 .fa-star {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
+  .sea main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
     color: #FFBF44;
     letter-spacing: -5px;
   }
-  main .echotitle .wrapper3 .echo2 .fa-circle-plus {
+  .sea main .echotitle .wrapper3 .echo2 .fa-circle-plus {
     color: #0C1244;
     margin-right: 5px;
   }
-  main .echotitle .wrapper3 .echo2 a {
+  .sea main .echotitle .wrapper3 .echo2 a {
     text-decoration: none;
     color: #0C1244;
     font-size: 16px;
     letter-spacing: 3px;
   }
-  main .photo {
+  .sea main .photo {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
   }
-  main .photo .wrapper1 {
+  .sea main .photo .wrapper1 {
     display: flex;
     margin-bottom: 50px;
   }
-  main .photo .wrapper1 .ig {
+  .sea main .photo .wrapper1 .ig {
     border-radius: 50%;
     animation-name: scale1;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
-  main .photo .wrapper2 {
+  .sea main .photo .wrapper2 {
     display: flex;
     justify-content: space-around;
   }
-  main .photo .wrapper2 .ig {
+  .sea main .photo .wrapper2 .ig {
+    border-radius: 50%;
+    animation-name: scale1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .sea_moon {
+    background-image: url("../img/sea/seapage2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 300px;
+  }
+  .sea_moon main .banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/sea/turtle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% center;
+  }
+  .sea_moon main .banner .begin {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F5F0DD;
+    line-height: 30px;
+  }
+  .sea_moon main .line0 {
+    display: block;
+    position: absolute;
+    top: -132px;
+    left: 278px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sea_moon main .line1 {
+    position: absolute;
+    top: -89px;
+    left: 400px;
+    display: none;
+  }
+  .sea_moon main .line2 {
+    position: absolute;
+    top: 380px;
+    left: 480px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .line3 {
+    position: absolute;
+    top: 820px;
+    left: 475px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .line4 {
+    position: absolute;
+    top: 1220px;
+    left: 385px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .line5 {
+    position: absolute;
+    top: 1655px;
+    left: 385px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .line6 {
+    position: absolute;
+    top: 2075px;
+    left: 385px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble1 {
+    position: absolute;
+    top: 75px;
+    left: 550px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble2 {
+    position: absolute;
+    top: 540px;
+    left: 155px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble3 {
+    position: absolute;
+    top: 940px;
+    left: 725px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble4 {
+    position: absolute;
+    top: 1375px;
+    left: 150px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble5 {
+    position: absolute;
+    top: 1795px;
+    left: 500px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .bubble6 {
+    position: absolute;
+    top: 2155px;
+    left: 930px;
+    z-index: -1;
+    display: none;
+  }
+  .sea_moon main .seaturtle {
+    position: absolute;
+    top: 1095px;
+    left: 715px;
+    z-index: 0;
+    display: none;
+  }
+  .sea_moon main .dory {
+    position: absolute;
+    top: 2125px;
+    left: 995px;
+    z-index: 0;
+    display: none;
+  }
+  .sea_moon main .fish {
+    position: absolute;
+    top: 2400px;
+    left: 0px;
+    z-index: 0;
+    display: none;
+  }
+  .sea_moon main .activity {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    position: relative;
+  }
+  .sea_moon main .activity .bread {
+    color: #0C1244;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-left: 0px;
+    letter-spacing: 0px;
+  }
+  .sea_moon main .activity .bread a {
+    text-decoration: none;
+    color: #0C1244;
+    margin-right: 10px;
+  }
+  .sea_moon main .activity .wrapper1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1_pic .pic1 {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 {
+    width: 305px;
+    margin-left: 0px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_top {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_top .fa-circle-plus {
+    color: #F5F0DD;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_top .icon_top {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_bottom {
+    display: flex;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_bottom .fa-circle-plus {
+    color: #F5F0DD;
+    margin-right: 5px;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_bottom a {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  .sea_moon main .activity .wrapper1 .activity1 .comment_bottom .icon_bottom {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2_pic {
+    order: 1;
+  }
+  .sea_moon main .activity .wrapper2 .activity2_pic .pic2 {
+    margin-left: 20px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 {
+    order: 2;
+    width: 305px;
+    margin-left: 0px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_top {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_top .fa-circle-plus {
+    color: #F5F0DD;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_top .icon_top {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_bottom {
+    display: flex;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_bottom .fa-circle-plus {
+    color: #F5F0DD;
+    margin-right: 5px;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_bottom a {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  .sea_moon main .activity .wrapper2 .activity2 .comment_bottom .icon_bottom {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper3 .activity3_pic .pic3 {
+    margin-left: 0px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 {
+    width: 305px;
+    margin-left: 20px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_top {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_top .fa-circle-plus {
+    color: #F5F0DD;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_top .icon_top {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_bottom {
+    display: flex;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_bottom .fa-circle-plus {
+    color: #F5F0DD;
+    margin-right: 5px;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_bottom a {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  .sea_moon main .activity .wrapper3 .activity3 .comment_bottom .icon_bottom {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper4 .activity4_pic {
+    order: 1;
+  }
+  .sea_moon main .activity .wrapper4 .activity4_pic .pic4 {
+    margin-left: 20px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 {
+    order: 2;
+    width: 305px;
+    margin-left: 0px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_top {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_top .fa-circle-plus {
+    color: #F5F0DD;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_top .icon_top {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_bottom {
+    display: flex;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_bottom .fa-circle-plus {
+    color: #F5F0DD;
+    margin-right: 5px;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_bottom a {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  .sea_moon main .activity .wrapper4 .activity4 .comment_bottom .icon_bottom {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper5 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper5 .activity5_pic .pic5 {
+    margin-left: 0px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 {
+    width: 305px;
+    margin-left: 20px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_top {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_top .fa-circle-plus {
+    color: #F5F0DD;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_top .icon_top {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_bottom {
+    display: flex;
+    align-items: center;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_bottom .fa-circle-plus {
+    color: #F5F0DD;
+    margin-right: 5px;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_bottom a {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  .sea_moon main .activity .wrapper5 .activity5 .comment_bottom .icon_bottom {
+    display: flex;
+    margin-left: auto;
+  }
+  .sea_moon main .end {
+    display: none;
+    position: absolute;
+    bottom: -155px;
+    left: calc(50% - 40px);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F5F0DD;
+    text-align: center;
+    line-height: 50px;
+  }
+  .sea_moon main .echotitle {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+  .sea_moon main .echotitle .wrapper1 {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    background-image: url("../img/sea/echo.png");
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
+  .sea_moon main .echotitle h3 {
+    color: #F5F0DD;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .sea_moon main .echotitle p {
+    color: #F5F0DD;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+  }
+  .sea_moon main .echotitle .wrapper2 {
+    width: 80%;
+    height: 380px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-image: url("../img/sea/rwd_echo1.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .sea_moon main .echotitle .wrapper2::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    border-top: 2px solid #0C1244;
+    border-left: 2px solid #0C1244;
+  }
+  .sea_moon main .echotitle .wrapper2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    border-bottom: 2px solid #0C1244;
+    border-right: 2px solid #0C1244;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 {
+    width: 80%;
+    height: 280px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(245, 240, 221, 0.6);
+    position: relative;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1::before {
+    display: none;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1::after {
+    display: none;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 h5 {
+    color: #0C1244;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 p {
+    margin-bottom: 5px;
+    color: #0C1244;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 .fa-circle-plus {
+    color: #0C1244;
+    margin-right: 5px;
+  }
+  .sea_moon main .echotitle .wrapper2 .echo1 a {
+    text-decoration: none;
+    color: #0C1244;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .sea_moon main .echotitle .wrapper3 {
+    position: relative;
+    width: 80%;
+    height: 380px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url("../img/sea/rwd_echo2.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sea_moon main .echotitle .wrapper3::before {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    border-top: 2px solid #0C1244;
+    border-left: 2px solid #0C1244;
+  }
+  .sea_moon main .echotitle .wrapper3::after {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    border-bottom: 2px solid #0C1244;
+    border-right: 2px solid #0C1244;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 {
+    width: 80%;
+    height: 280px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(245, 240, 221, 0.6);
+    position: relative;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2::before {
+    display: none;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2::after {
+    display: none;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 h5 {
+    color: #0C1244;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 p {
+    margin-bottom: 5px;
+    color: #0C1244;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 16px;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 .fa-star {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 .fa-star-half-stroke {
+    color: #FFBF44;
+    letter-spacing: -5px;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 .fa-circle-plus {
+    color: #0C1244;
+    margin-right: 5px;
+  }
+  .sea_moon main .echotitle .wrapper3 .echo2 a {
+    text-decoration: none;
+    color: #0C1244;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .sea_moon main .photo {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .sea_moon main .photo .wrapper1 {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .sea_moon main .photo .wrapper1 .ig {
+    border-radius: 50%;
+    animation-name: scale1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  .sea_moon main .photo .wrapper2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .sea_moon main .photo .wrapper2 .ig {
     border-radius: 50%;
     animation-name: scale1;
     animation-duration: 5s;
@@ -1436,7 +2800,7 @@ main .photo .wrapper2 .ig {
     left: 2000px;
   }
 }
-#background-wrap {
+#background-bubble {
   bottom: 0;
   left: 0;
   position: fixed;
@@ -1605,17 +2969,18 @@ main .photo .wrapper2 .ig {
   transform: scale(0.3);
 }
 
-/* OBJECTS */
+/* OBJECTS(網頁版) */
+/* OBJECTS(RWD) */
 .bubble {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
-  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
-  height: 200px;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
+  -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
+  height: 100px;
   position: absolute;
-  width: 200px;
+  width: 100px;
 }
 
 .bubble:after {
@@ -1629,14 +2994,14 @@ main .photo .wrapper2 .ig {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
   content: "";
-  height: 180px;
-  left: 10px;
+  height: 90px;
+  left: 5px;
   position: absolute;
-  width: 180px;
+  width: 90px;
 }
 
 /*# sourceMappingURL=sea.css.map */
