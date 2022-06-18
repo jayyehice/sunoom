@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/tripChoose.css">
+    <script src="./js/vue.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/tripChoose.js"></script>
+    <script src='./js/v_calendar.js'></script>
     @@include('./layout/header_footer_css_link.html')
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -22,7 +24,7 @@
     <div class="bodyCover"></div>
     <!-- <header></header> -->
     <article>
-        <section>
+        <section id="app">
             <h2>訂購流程</h2>
             <div class="shoppingProcess">
                 <div class="chooseAdate">
@@ -50,6 +52,13 @@
                 <div class="dateTitle">
                     <p>旅程規劃(<span id="bookingDays"></span>)</p>
                 </div>
+                <v-calendar   
+                :value="null"
+                color="red"
+                is-dark
+                is-range
+                v-model="range"></v-calendar>
+                <v-date-picker v-model='selectedDate'/>
                 <div class="pickerBox" >
                     <input type="text" name="dates" id="dateBooking">
                     <!-- <calendar v-model ="value" show-date-only :disabled-days-of-week ="disabled" :format ="format" :clear-button ="clear" :placeholder ="placeholder" :lang ="lang" :position ="position" :on-day-click ="dayClick" > </calendar > -->
@@ -126,165 +135,141 @@
                             <option value="">NewMember</option>
                         </select><br>
                         <span id="couponPrice">-$16,093</span><br>
-                        <span>$16,093</span><br>
+                        <span>$16,093</span><br> 
                     </div>
                 </div>
             </div>
 
             <!-- 選購區塊 -->
-            <div class="tripChooseBlock">
+            <div class="tripChooseBlock" >
                     <div class="itineraryTitle">
                         <h4>遊</h4>
                         <h4 class="chooseDate">2022/07/16</h4>
                     </div>
-                    <div class="morningItineraryA">
+                    <!-- 上午行程 -->
+                    <div class="morningItineraryA" >
                         <img class="morningTime" src="./img/orderPage/sun/morning.png" alt="">
                         <div class="morningBlockA">
-                            <img id="morningImg" src="./img/orderPage/sea.png" alt="">
+                            <img id="morningImg" :src="morningtripImg" alt="">
                             <div class="morningBlockB">
                                 <div class="optionBlockA">
-                                    <select name="" id="">
-                                        <option value="">釣魚(日)</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" @change="morningChange($event.target.value)">
+                                        <option value="">開始選購您的行程</option>
+                                        <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
-                                    <span id="tripPriceA">$1999/人</span>
+                                    <span id="tripPriceA">${{morningtripPrice}}/人</span>
                                 </div>
-                                <p id="itineraryText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="itineraryText">{{morningtriptext}}</p>
                             </div>
                         </div>
                         <img id="addItineraryM" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-
+                    <!-- 下午行程 -->
                     <div class="noonItinerary">
                         <img src="./img/orderPage/sun/afternoon.png" alt="">
                         <div class="noonBlockA">
-                            <img id="noonImg" src="./img/orderPage/rock.png" alt="">
+                            <img id="noonImg" :src="noontripImg" alt="">
                             <div class="noonBlockB">
                                 <div class="optionBlockB">
-                                    <select name="" id="">
-                                        <option value="">釣魚(日)</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" @change="noonChange($event.target.value)">
+                                        <option value="">開始選購您的行程</option>
+                                        <option  v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
-                                    <span id="tripPriceB">$1999/人</span>
+                                    <span id="tripPriceB">${{noontripPrice}}/人</span>
                                 </div>
-                                <p id="itineraryTextB">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="itineraryTextB">{{noontriptext}}</p>
                             </div>
                         </div>
                         <img id="addItineraryN" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-                    
+                    <!-- 晚上行程 -->
                     <div class="eveningItinerary">
                         <img src="./img/orderPage/sun/night.png" alt="">
                         <div class="eveningBlockA">
-                            <img id="eveningImg" src="./img/orderPage/sun/NoChooseimg.png" alt="">
+                            <img id="eveningImg" :src="eveningtripImg" alt="">
                             <div class="eveningBlockB">
                                 <div class="optionBlockC">
-                                    <select name="" id="">
-                                        <option value="">不需選購</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" @change="eveningChange($event.target.value)">
+                                        <option value="">開始選購您的行程</option>
+                                        <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
-                                    <span id="tripPriceC">$0/人</span>
+                                    <span id="tripPriceC">${{eveningtripPrice}}/人</span>
                                 </div>
-                                <p id="itineraryTextC">點擊加入您的專屬旅行</p>
+                                <p id="itineraryTextC">{{eveningtriptext}}</p>
                             </div>
                         </div>
                         <img id="addItineraryE" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
                     
                 </div>
+                <!-- 餐廳選擇區 -->
                 <div class="foodChooseBlock">
                     <div class="foodTitle">
                         <h4>食</h4>
                         <h4 class="chooseDate">2022/07/16</h4>
                     </div>
+                    <!-- 早餐 -->
                     <div class="morningFood">
                         <img src="./img/orderPage/sun/morningFood.png" alt="">
                         <div class="morningFoodA">
-                            <img id="morningFoodImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 5.png" alt="">
+                            <img id="morningFoodImg" :src="morningFoodImg" alt="">
                             <div class="morningFoodB">
                                 <div class="foodOptionBlockA">
-                                    <select name="" id="">
-                                        <option value="">Buffet(日)</option>
-                                        <option value="">Buffet(月)</option>
-                                        <option value="">BBQ(日)</option>
-                                        <option value="">BBQ(月)</option>
+                                    <select name="" @change="morningFoodChange($event.target.value)">
+                                        <option value="">請選擇您的早餐</option>
+                                        <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
-                                    <span id="foodPriceA">$1999/人</span>
+                                    <span id="foodPriceA">${{morningFoodPrice}}/人</span>
                                 </div>
-                                <p id="foodTextA">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="foodTextA">{{morningFoodtext}}</p>
                             </div>
                         </div>
                         <img id="addFoodM" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-
+                    <!-- 午餐 -->
                     <div class="noonFood">
                         <img src="./img/orderPage/sun/noonFood.png" alt="">
                         <div class="noonFoodA">
-                            <img id="noonFoodImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 6.png" alt="">
+                            <img id="noonFoodImg" :src="noonFoodImg" alt="">
                             <div class="noonFoodB">
                                 <div class="foodoptionBlockB">
-                                    <select name="" id="">
-                                        <option value="">漢堡(日)</option>
-                                        <option value="">漢堡(月)</option>
-                                        <option value="">Buffet(日)</option>
-                                        <option value="">Buffet(月)</option>
-                                        <option value="">BBQ(日)</option>
-                                        <option value="">BBQ(月)</option>
+                                    <select name="" @change="noonFoodChange($event.target.value)">
+                                        <option value="">請選擇您的午餐</option>
+                                        <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
-                                    <span id="foodPriceB">$1999/人</span>
+                                    <span id="foodPriceB">${{noonFoodPrice}}/人</span>
                                 </div>
-                                <p id="foodTextB">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="foodTextB">{{noonFoodtext}}</p>
                             </div>
                         </div>
                         <img id="addFoodN" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-                    
+                    <!-- 晚餐 -->
                     <div class="eveningFood">
                         <img src="./img/orderPage/sun/eveningFood.png" alt="">
                         <div class="eveningFoodA">
-                            <img id="eveningFoodImg" src="./img/orderPage/sun/NoChooseimg.png" alt="">
+                            <img id="eveningFoodImg" :src="eveningFoodImg" alt="">
                             <div class="eveningFoodB">
                                 <div class="foodoptionBlockC">
-                                    <select name="" id="">
-                                        <option value="">漢堡(日)</option>
-                                        <option value="">漢堡(月)</option>
-                                        <option value="">BBQ(日)</option>
-                                        <option value="">BBQ(月)</option>
+                                    <select name="" @change="eveningFoodChange($event.target.value)">
+                                        <option value="">請選擇您的晚餐</option>
+                                        <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
-                                    <span id="foodPriceC">$1999/人</span>
+                                    <span id="foodPriceC">${{eveningFoodPrice}}/人</span>
                                 </div>
-                                <p id="foodTextC">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="foodTextC">{{eveningFoodtext}}</p>
                             </div>
                         </div>
                         <img id="addFoodE" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>  
                 </div>
+                <!-- 住宿選擇區 -->
                 <div class="stayChooseBlock">
                     <div class="stayTitle">
                         <h4>宿</h4>
                         <h4 class="chooseDate">2022/07/16</h4>
                     </div>
+                    <!-- 小木屋 -->
                     <div class="cabin">
                         <div class="cabinTitle">
                             <h4>森林木屋</h4>
@@ -292,21 +277,21 @@
                         </div>
                         <input type="radio" name="stayChoose" id="cabinButton">
                         <div class="cabinBlockA">
-                            <img id="cabinImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 5.png" alt="">
+                            <img id="cabinImg" src="./img/orderPage/cabin.jpg" alt="">
                             <div class="cabinBlockB">
                                 <div class="cabinOption">
-                                    <select name="" id="">
-                                        <option value="">日島</option>
-                                        <option value="">月島</option>
+                                    <select name="" id="cabinOption">
+                                        <option value="1">日島</option>
+                                        <option value="2">月島</option>
                                     </select>
-                                    <span id="cabinPrice">$1999/人</span>
+                                    <span id="cabinPrice">$2999/人</span>
                                 </div>
-                                <p id="cabinText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="cabinText">循著山路走進這裡，就彷彿進入了童話故事之中，挑高的屋頂設計讓整體空間感相當舒適，一點也不壓迫，這麼大間的小木屋，入住一晚的價格卻相當實惠，CP值真的太高啦！。</p>
                             </div>
                         </div>
                         <img id="addcabin" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-
+                    <!-- 露營 -->
                     <div class="camping">
                         <div class="campingTitle">
                             <h4>帳篷露營</h4>
@@ -314,21 +299,21 @@
                         </div>
                         <input type="radio" name="stayChoose" id="campingButton">
                         <div class="campingBlockA">
-                            <img id="campingImg" src="./img/orderPage/MeWe_ The best chat & group app with privacy you trust_ 6.png" alt="">
+                            <img id="campingImg" :src="campingimg" alt="">
                             <div class="campingBlockB">
                                 <div class="campingOption">
-                                    <select name="" id="">
-                                        <option value="">日島</option>
-                                        <option value="">月島</option>
+                                    <select name="" id="" @change="stayimgChange($event.target.value)">
+                                        <option value="1">日島</option>
+                                        <option value="2">月島</option>
                                     </select>
                                     <span id="campingPrice">$1999/人</span>
                                 </div>
-                                <p id="campingText">風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島及月島東南邊沙灘；由專業教練帶領，幸運的話還能與海龜共遊。</p>
+                                <p id="campingText">全包式懶人露營營區，不但有幫旅客搭好的超美帳篷，甚至提供餐點、陸上活動與生態導覽等等，讓您只要準備好衣物攜帶相機，及準備好拍美照的心情就可以出發。</p>
                             </div>
                         </div>
                         <img id="addCamping" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
-                    
+                    <!-- 海上度假村 -->
                     <div class="villa">
                         <div class="villaTitle">
                             <h4>海上Villa</h4>
@@ -336,22 +321,22 @@
                         </div>
                         <input type="radio" name="stayChoose" id="villaButton">
                         <div class="villaBlockA">
-                            <img id="villaImg" src="./img/orderPage/sun/NoChooseimg.png" alt="">
+                            <img id="villaImg" src="./img/orderPage/villa.jpg" alt="">
                             <div class="villaBlockB">
                                 <div class="villaOption">
-                                    <select name="" id="">
-                                        <option value="">不需選購</option>
-                                        <option value="">日島</option>
-                                        <option value="">月島</option>
+                                    <select name="" id="villaChoose">
+                                        <option value="1">日島</option>
+                                        <option value="2">月島</option>
                                     </select>
-                                    <span id="villaPrice">$0/人</span>
+                                    <span id="villaPrice">$3999/人</span>
                                 </div>
-                                <p id="villaText">點擊加入您的專屬旅行</p>
+                                <p id="villaText">每一間房間都有私人泳池，設施及活動應有盡有，有餐廳、酒吧、水上活動、沙灘活動應有盡有，吃喝玩樂一站全包，面對著壯闊的海洋美景，真的會覺得人生如此，夫復何求？</p>
                             </div>
                         </div>
                         <img id="addVilla" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>  
                 </div>
+                <!-- 下一頁按鈕 -->
             <button id="NextPage">Next</button>
         </section>
     </article>

@@ -1,17 +1,5 @@
 
 
-// Vue.component('memberuse',{
-//     // props:['member_list'],
-//     template:
-//         `<ul class="tableList" v-for="member in member_list">
-//             <li class="col">{{member[0]}}</li>
-//             <li class="col">隆哥</li>
-//             <li class="col-2">xxxx@gmail.com</li>
-//             <li class="col">0</li>
-//             <li class="col">一般會員</li>
-//             <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-//         </ul>`
-// })
 
 Vue.component('membermangement',{
     props:['list'],
@@ -80,7 +68,7 @@ let vm = new Vue({  // vue instance (實例)
     el: '#app',
     data: { 
         countent:'membermangement',
-        member_list:[], 
+        member_list:[],
     },
     methods: {},
     created() {

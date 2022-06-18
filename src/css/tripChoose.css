@@ -278,7 +278,7 @@
 }
 .tripChoose .tripChooseBlock {
   width: 1000px;
-  height: 616px;
+  height: 676px;
   border: 2px solid #0C1244;
   margin: 50px auto;
   border-top-left-radius: 22px;
@@ -310,26 +310,28 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB {
   margin: 0px auto;
 }
 .tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA {
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: center;
   margin: 10px;
 }
 .tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA select {
-  width: 140px;
+  width: 210px;
   height: 35px;
   border-radius: 22px;
   background-color: #F5F0DD;
@@ -338,7 +340,7 @@
 }
 .tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA #tripPriceA {
   border: 1px solid #0C1244;
-  width: 140px;
+  width: 170px;
   height: 35px;
   border-radius: 22px;
   text-align: center;
@@ -366,26 +368,28 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB {
   margin: 0 auto;
 }
 .tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB {
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: center;
   margin: 10px;
 }
 .tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB select {
-  width: 140px;
+  width: 210px;
   height: 35px;
   border-radius: 22px;
   background-color: #F5F0DD;
@@ -394,7 +398,7 @@
 }
 .tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB #tripPriceB {
   border: 1px solid #0C1244;
-  width: 140px;
+  width: 170px;
   height: 35px;
   border-radius: 22px;
   text-align: center;
@@ -422,26 +426,28 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB {
   margin: 0 auto;
 }
 .tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC {
   display: flex;
-  width: 300px;
+  width: 400px;
   justify-content: center;
   margin: 10px;
 }
 .tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC select {
-  width: 140px;
+  width: 210px;
   height: 35px;
   border-radius: 22px;
   background-color: #F5F0DD;
@@ -466,7 +472,7 @@
 }
 .tripChoose .foodChooseBlock {
   width: 1000px;
-  height: 616px;
+  height: 676px;
   border: 2px solid #0C1244;
   margin: 0 auto;
   border-top-left-radius: 22px;
@@ -501,14 +507,16 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB {
   margin: 0 auto;
@@ -557,14 +565,16 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB {
   margin: 0 auto;
@@ -613,14 +623,16 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB {
   margin: 0 auto;
@@ -657,7 +669,7 @@
 }
 .tripChoose .stayChooseBlock {
   width: 1000px;
-  height: 616px;
+  height: 676px;
   border: 2px solid #0C1244;
   margin: 50px auto;
   border-top-left-radius: 22px;
@@ -693,11 +705,12 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .stayChooseBlock .cabin .cabinBlockA #cabinImg {
-  margin: 15px;
+  margin: 24px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
@@ -753,8 +766,9 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .stayChooseBlock .camping .campingBlockA #campingImg {
   margin: 15px;
@@ -813,14 +827,16 @@
   border: 1px solid #0C1244;
   display: flex;
   width: 700px;
-  height: 150px;
+  height: 170px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose .stayChooseBlock .villa .villaBlockA #villaImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB {
   margin: 0 auto;
@@ -1566,12 +1582,14 @@
   width: 700px;
   height: 150px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA #cabinImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB {
   margin: 0 auto;
@@ -1626,12 +1644,14 @@
   width: 700px;
   height: 150px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA #campingImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB {
   margin: 0 auto;
@@ -1686,12 +1706,14 @@
   width: 700px;
   height: 150px;
   border-radius: 22px;
+  align-items: center;
 }
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA #villaImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
+  border-radius: 21px;
 }
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB {
   margin: 0 auto;
