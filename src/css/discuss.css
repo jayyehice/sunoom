@@ -1960,13 +1960,13 @@
   }
 
   .discuss .article .article_type ul .li-5 img {
-    border:1px solid red;
+    /* border:1px solid red; */
     position: relative;
     bottom: 11px;
   }
 
   .discuss .article_list {
-    border:1px solid red;
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     width: 542px;
     height: 860px;
@@ -1977,7 +1977,7 @@
   }
 
   .discuss .article_list .img_1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 305px;
     height: 97px;
     margin-left: 36px;
@@ -1986,7 +1986,7 @@
   }
 
   .discuss .article_list .img_1 img {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 100%;
     height: 93.39px;
     margin-top: 38px;
@@ -1994,12 +1994,12 @@
   }
 
   .discuss .article_list .content {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 800px;
   }
 
   .discuss .article_list .content .title {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 368px;
     margin-top: 40px;
     margin-left: 0px;
@@ -2011,7 +2011,7 @@
   }
 
   .discuss .article_list .content .star {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 85px;
     position: relative;
     left: 249px;
@@ -2020,7 +2020,7 @@
   }
 
   .discuss .article_list .content .comment {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 10px;
     margin-left: 25px;
     width: 305px;
@@ -2029,90 +2029,90 @@
   }
 
   .discuss .article_list .content .icons {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     margin-top: 10px;
     margin-left: 25px;
   }
 
   .discuss .article_list .content .icons .icon-1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     margin-right: 20px;
   }
 
   .discuss .article_list .content .icons .icon-1 img {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 18px;
     height: 17;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-1 .span1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
   }
 
   .discuss .article_list .content .icons .icon-2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     margin-right: 20px;
   }
 
   .discuss .article_list .content .icons .icon-2 img {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 18px;
     height: 18;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-2 .span2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
   }
 
   .discuss .article_list .content .icons .icon-3 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
   }
 
   .discuss .article_list .content .icons .icon-3 img {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 18px;
     height: 18;
     margin-right: 5px;
   }
 
   .discuss .article_list .content .icons .icon-3 .span3 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-top: 3px;
     font-size: 16px;
     color: #0C1244;
   }
 
   .discuss .hr1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: none;
   }
 
   .discuss .hr2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 878px;
     display: none;
   }
 
   .discuss .pop-up-out {
-    border:1px solid red;
+    /* border:1px solid red; */
     position: relative;
     bottom: 1420px;
   }
 
   .discuss .pop-up {
-    border:1px solid red;
+    /* border:1px solid red; */
     border: 1px solid rgb(170, 170, 170);
     padding-top: 20px;
     padding-bottom: 80px;
@@ -2127,47 +2127,47 @@
   }
 
   .discuss .pop-up .disappear {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 485px;
   }
 
   .discuss .pop-up .icons {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     width: width: 490px;
     margin-left: 37px;
   }
 
   .discuss .pop-up .icons .icon-1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     margin-right: 20px;
   }
 
   .discuss .pop-up .icons .icon-1 .span1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 5px;
     padding-top: 5px;
   }
 
   .discuss .pop-up .icons .icon-2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
   }
 
   .discuss .pop-up .icons .icon-2 .span2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 5px;
     padding-top: 5px;
   }
 
   .discuss .hr1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 802px;
   }
 
   .discuss .pop-up .icons2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     width: 497px;
     margin-left: 37px;
@@ -2175,13 +2175,13 @@
   }
 
   .discuss .pop-up .icons2 .span3 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 5px;
     font-size: 20px;
   }
 
   .discuss .pop-up .discuss-region {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 447px;
     flex-direction: column;
     margin-left: 37px;
@@ -2189,7 +2189,7 @@
   }
 
   .discuss .pop-up .discuss-region .comment-region {
-    border:1px solid red;
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     margin-top: 20px;
     margin-left: 0px;
@@ -2198,13 +2198,13 @@
   }
 
   .discuss .pop-up .discuss-region img {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 448px;
     height: 100%;
   }
 
   .discuss .task_container .task_add_block .task_add {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: inline-block;
     width: 380px;
     height: 60px;
@@ -2224,7 +2224,7 @@
   /* 發表新文章區塊(表單) */
   .discuss .form_region {
     /* border:1px solid $moon_color; */
-    border:1px solid red;
+    /* border:1px solid red; */
     background-color: #F5F0DD;
     z-index: 3;
     padding-top: 20px;
@@ -2238,7 +2238,7 @@
   }
 
   .discuss .form_region .title2 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 32px;
     color: #0C1244;
     margin-left: 0px;
@@ -2246,7 +2246,7 @@
   }
 
   .discuss .form_region .absolute {
-    border:1px solid red;
+    /* border:1px solid red; */
     border: 1px solid #0C1244;
     background-color: #F5F0DD;
     position: absolute;
@@ -2256,7 +2256,7 @@
   }
 
   .discuss .form_region .form_region1 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -2264,19 +2264,19 @@
   }
 
   .discuss .form_region .form_region1 .name1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
   .discuss .form_region .form_region1 .write1 {
-    border:1px solid red;
+    /* border:1px solid red; */
     height: 60px;
     width: 310px;
     font-size: 24px;
   }
 
   .discuss .form_region .form_region2 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -2284,19 +2284,19 @@
   }
 
   .discuss .form_region .form_region2 .name2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
   .discuss .form_region .form_region2 .choose {
-    border:1px solid red;
+    /* border:1px solid red; */
     height: 50px;
     width: 318px;
     font-size: 24px;
   }
 
   .discuss .form_region .form_region3 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -2304,26 +2304,26 @@
   }
 
   .discuss .form_region .form_region3 .name3 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
   .discuss .form_region .form_region4 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
   }
 
   .discuss .form_region .form_region4 .name4 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-right: 25px;
     margin-bottom: 10px;
     font-size: 24px;
   }
 
   .discuss .form_region .form_region4 .write2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     height: 470px;
     width: 476px;
     max-height: 470px;
@@ -2333,12 +2333,12 @@
   }
 
   .discuss .form_region .form_region5 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 125px;
   }
 
   .discuss .form_region .form_region5 .button {
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 300px;
     height: 50px;
     font-size: 20px;
@@ -2346,13 +2346,13 @@
   }
 
   .discuss .form_region .disappear2 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-top: 20px;
     margin-left: 475px;
   }
 
   .discuss .form_region .form_region6 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -2360,17 +2360,17 @@
   }
 
   .discuss .form_region .form_region6 .name6 {
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-right: 25px;
   }
 
   .discuss .form_region .form_region6 .fa-star {
-    border:1px solid red;
+    /* border:1px solid red; */
     color: #FFBF44;
   }
 
   .discuss .form_region .form_region6 .fa-star-half-stroke {
-    border:1px solid red;
+    /* border:1px solid red; */
     color: #FFBF44;
   }
 }
