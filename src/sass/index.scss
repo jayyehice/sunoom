@@ -151,8 +151,8 @@
 
                     .cloud01 {
                         position: absolute;
-                        top: 0;
-                        right: 0;
+                        top: -2%;
+                        right: 2%;
                     }
 
                     .foodSeaText {
@@ -670,8 +670,8 @@
 
                     .cloud01 {
                         position: absolute;
-                        top: 0;
-                        right: 0;
+                        top: -2%;
+                        right: 2%;
                     }
 
                     .foodSeaText {
@@ -811,6 +811,12 @@
                     display: flex;
                     flex-direction: row-reverse;
                     margin-bottom: 220px;
+
+                    .cloud02{
+                       position: absolute;
+                       left: 0;
+                       top: 5%;
+                    }
 
                     .LiveLandText {
                         width: 630px;
@@ -1279,10 +1285,7 @@
                                 // color: $moon_color;
                                 font-size: 20px;
 
-                                &:hover {
-                                    // background-color: $moon_color;
-                                    // color: $sun_color;
-                                }
+                                
                             }
                         }
                     }
@@ -1363,10 +1366,6 @@
                                 // color: $moon_color;
                                 font-size: 20px;
 
-                                &:hover {
-                                    // background-color: $moon_color;
-                                    // color: $sun_color;
-                                }
                             }
                         }
                     }
@@ -1383,12 +1382,13 @@
                     .instagramPhoto {
                         width: 500px;
 
-                        .ig_img01 {
-                            width: 160px;
-                        }
-
+                        
                         .ig_img {
                             width: 110px;
+                        }
+                        
+                        .ig_img01 {
+                            width: 160px;
                         }
 
                         .ig_img02 {

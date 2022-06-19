@@ -111,6 +111,7 @@
   border: 1px solid #0C1244;
   margin-bottom: 10px;
   font-size: 16rem;
+  color: #0C1244;
 }
 @media (max-width: 579px) {
   .forgotPwd main .forgotMain .forgotForm .forgotFormBtn {
@@ -270,6 +271,7 @@
   border: 1px solid #F5F0DD;
   margin-bottom: 10px;
   font-size: 16rem;
+  color: #F5F0DD;
 }
 @media (max-width: 579px) {
   .forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn {

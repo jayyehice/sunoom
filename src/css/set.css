@@ -29,44 +29,53 @@
 @media (max-width: 579px) {
   .set main .wrapper .crumbs {
     margin: 50px 0 20px 0;
+    position: relative;
   }
 }
 @media (max-width: 579px) {
   .set main .wrapper .crumbs a {
+    text-align: center;
     font-size: 24rem;
     width: 185px;
+    line-height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
   }
 }
+.set main .wrapper .crumbs .setCrumbs1 {
+  display: none;
+}
 @media (max-width: 579px) {
-  .set main .wrapper .crumbs span:first-child {
+  .set main .wrapper .crumbs .setCrumbs1 {
     display: inline-block;
-    width: 185px;
-    height: 50px;
-    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
-    background-color: #F5F0DD;
-    color: #0C1244;
-    border: 1px solid #0C1244;
-    text-align: center;
-    line-height: 50px;
+  }
+}
+.set main .wrapper .crumbs .setCrumbs2 {
+  display: none;
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs .setCrumbs2 {
+    display: inline-block;
+    position: relative;
+  }
+}
+.set main .wrapper .crumbs .setCrumbs2Text {
+  display: inline-block;
+}
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs .setCrumbs2Text {
+    font-size: 24rem;
+    display: inline-block;
+    color: #F5F0DD;
+    position: absolute;
+    left: 230px;
+    top: 7px;
   }
 }
 @media (max-width: 579px) {
   .set main .wrapper .crumbs span:nth-child(2) {
     display: none;
-  }
-}
-@media (max-width: 579px) {
-  .set main .wrapper .crumbs span:last-child {
-    display: inline-block;
-    width: 185px;
-    height: 50px;
-    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
-    background-color: #0C1244;
-    color: #F5F0DD;
-    border: 1px solid #F5F0DD;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24rem;
   }
 }
 .set main .wrapper a {
@@ -332,43 +341,53 @@
 @media (max-width: 579px) {
   .set_moon main .wrapper .crumbs {
     margin: 50px 0 20px 0;
+    position: relative;
   }
 }
 @media (max-width: 579px) {
   .set_moon main .wrapper .crumbs a {
+    text-align: center;
     font-size: 24rem;
+    width: 185px;
+    line-height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
   }
 }
+.set_moon main .wrapper .crumbs .setCrumbs1 {
+  display: none;
+}
 @media (max-width: 579px) {
-  .set_moon main .wrapper .crumbs span:first-child {
+  .set_moon main .wrapper .crumbs .setCrumbs1 {
     display: inline-block;
-    width: 185px;
-    height: 50px;
-    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 0 49%, 0% 0%);
-    background-color: #0C1244;
-    color: #F5F0DD;
-    border: 1px solid #F5F0DD;
-    text-align: center;
-    line-height: 50px;
+  }
+}
+.set_moon main .wrapper .crumbs .setCrumbs2 {
+  display: none;
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs .setCrumbs2 {
+    display: inline-block;
+    position: relative;
+  }
+}
+.set_moon main .wrapper .crumbs .setCrumbs2Text {
+  display: inline-block;
+}
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs .setCrumbs2Text {
+    font-size: 24rem;
+    display: inline-block;
+    color: #0C1244;
+    position: absolute;
+    left: 230px;
+    top: 7px;
   }
 }
 @media (max-width: 579px) {
   .set_moon main .wrapper .crumbs span:nth-child(2) {
     display: none;
-  }
-}
-@media (max-width: 579px) {
-  .set_moon main .wrapper .crumbs span:last-child {
-    display: inline-block;
-    width: 185px;
-    height: 50px;
-    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 20% 50%, 0 0);
-    background-color: #F5F0DD;
-    color: #0C1244;
-    border: 1px solid #0C1244;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24rem;
   }
 }
 .set_moon main .wrapper a {
@@ -393,6 +412,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+@media (max-width: 579px) {
+  .set_moon main .setTopNav {
+    margin-bottom: 50px;
+  }
 }
 .set_moon main .setTopNav .none {
   display: none;
@@ -434,6 +458,11 @@
   text-align: center;
   font-size: 24rem;
 }
+@media (max-width: 579px) {
+  .set_moon main .wrapper .setLogin {
+    line-height: 30px;
+  }
+}
 .set_moon main .wrapper .setLogin .setSpeaker {
   display: inline-block;
   position: relative;
@@ -451,8 +480,9 @@
 }
 @media (max-width: 579px) {
   .set_moon main .setMain {
+    margin-top: 50px;
     width: 476px;
-    height: 800px;
+    height: 810px;
     display: block;
     text-align: center;
     border: 0;
