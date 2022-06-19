@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>討論區</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="./js/vue.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -66,20 +67,20 @@
             <hr>
 
 
-            <div class="article">
+            <div class="article" id="article">
                 <h4>文章列表</h4>
                 <div class="article_type">
                     <ul class="tab-title">
-                        <li id="active" class="active">
-                            <a  class="-on">全部</a>
+                        <li id="active" class="active" @click="render_li(all)">
+                            <a>全部</a>
                         </li>
-                        <li id="active2" class="active">
+                        <li id="active2" class="active" @click="render_li(live)">
                             <a>食</a>
                         </li>
-                        <li id="active3" class="active">
+                        <li id="active3" class="active" @click="render_li(food)">
                             <a>住</a>
                         </li>
-                        <li id="active4" class="active">
+                        <li id="active4" class="active" @click="render_li(tour)">
                             <a>遊</a>
                         </li>
                     </ul>
@@ -94,15 +95,15 @@
 
                 <div class="article_list">
                     <ul>
-                        <li class="solid">
+                        <li class="solid" v-for="render in render_list">
                             <div class="article_text">
                                 <a href="#" class="article1">
                                     <div class="img_1">
-                                        <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
+                                        <img :src="render[6]" alt="">
                                     </div>
                                     <div class="content">
                                         <div class="title">
-                                            <h5>明島旅遊景點 - 壯觀巨石陣</h5>
+                                            <h5>{{render[3]}}</h5>
 
                                             <div class="star">
                                                 <i class="fa-solid fa-star"></i>
@@ -114,7 +115,7 @@
                                         </div>
                                         
                                         <div class="comment">
-                                            <p>聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</p>
+                                            <p>{{render[4]}}..........</p>
                                             
                                         </div>
                                         <div class="icons">
@@ -128,7 +129,7 @@
                                                 <div>
                                                     <img src="img/cartoon-eyes.png" alt="">
                                                 </div>
-                                                <span class="span2">16800</span>
+                                                <span class="span2">{{render[7]}}</span>
                                             </div>
                                             <div class="icon-3">
                                                 <div>
@@ -141,7 +142,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="article_text article_text2">
                                 <a href="#" class="article1">
                                     <div class="img_1">
@@ -303,7 +304,7 @@
                                     </div>
                                 </a>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="more">
                         <a href="#">
@@ -320,7 +321,7 @@
         </main>
         <!-- <footer></footer> -->
     </div>
-    
+
     <!-- 彈窗 -->
     <div class="pop-up-out">
         <div class="pop-up">

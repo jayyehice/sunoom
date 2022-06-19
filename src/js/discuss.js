@@ -1,3 +1,134 @@
+window.addEventListener("load", function(){
+
+
+    new Vue({
+        el: '#article',
+    
+        data: {     // 變數放這裡！           
+            // articleList: [],
+            offical:[],
+            live:[],
+            food:[],
+            tour:[],
+            all:[],
+            render_list:[],
+        },
+        methods: {
+            render_li(list){
+                this.render_list = list;
+            },
+        },
+        computed: {},
+        watch: {},
+        created() {
+            const url = './php/discuss.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => {
+                    this.offical = text["offical"];
+                    this.live = text["live"];
+                    this.food = text["food"];
+                    this.tour = text["tour"];
+                    let temp = text["live"].concat(text["food"]);
+                    temp = temp.concat(text["tour"]);
+                    this.all = temp;
+                    this.render_list = temp;
+                })
+        },
+        mounted() {},
+        updated() {
+            // 彈窗事件綁定
+            // 開啟的函式
+
+            $('.img1').click(function(e){
+                console.log('img1')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+            });
+
+            $('.img2').click(function(e){
+                console.log('img2')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+            });
+
+            $('.img3').click(function(e){
+                console.log('img3')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+            });
+
+            // 關閉的函式
+            $('.img10').click(function(e){
+                console.log('img10')
+                e.preventDefault();
+                $('.pop-up-out').css('display','none')
+            });
+
+            // 討論區-彈窗-發表新文章的js
+            // 開啟
+            $('.discussion').click(function(e){
+                console.log('discussion')
+                e.preventDefault();
+                $('.form_region').css('display','block')
+            });
+
+
+            // 討論區文章圖片更換(開啟)
+            $('.article1').click(function(e){
+                console.log('article1')
+                e.preventDefault();
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
+                $('.pop-up-out').css('display','block')
+                console.log($(this).children('.img_1').children('img').attr("src"))
+            });
+
+            $('.img1').click(function(e){
+                console.log('img1')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+                //console.log($(this).children('img').attr("src"))
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                
+            });
+
+            $('.img2').click(function(e){
+                console.log('img2')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+                //console.log($(this).children('img').attr("src"))
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                
+            });
+
+            $('.img3').click(function(e){
+                console.log('img3')
+                e.preventDefault();
+                $('.pop-up-out').css('display','block')
+                //console.log($(this).children('img').attr("src"))
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                
+            });
+
+
+            // 關閉
+            $('.png1').click(function(e){
+                console.log('png1')
+                e.preventDefault();
+                $('.form_region').css('display','none')
+            });
+        },
+    })
+});
+
+
+
+
+
+
+
+
+/*
 window.addEventListener("load", function () {
     let active = this.document.getElementsByClassName("article_text")[0];
     let active2 = this.document.getElementsByClassName("article_text2")[0];
@@ -473,7 +604,7 @@ window.addEventListener("load", function () {
     });
 
 });
-
+*/
 
 
 //頁籤點擊的顏色變換
