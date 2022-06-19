@@ -112,8 +112,8 @@
 }
 .index main .category .wrapper .FoodSea .cloud01 {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2%;
+  right: 2%;
 }
 .index main .category .wrapper .FoodSea .foodSeaText {
   width: 630px;
@@ -530,8 +530,8 @@
 }
 .index_moon main .category .wrapper .FoodSea .cloud01 {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2%;
+  right: 2%;
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText {
   width: 630px;
@@ -649,6 +649,11 @@
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 220px;
+}
+.index_moon main .category .wrapper .LiveLand .cloud02 {
+  position: absolute;
+  left: 0;
+  top: 5%;
 }
 .index_moon main .category .wrapper .LiveLand .LiveLandText {
   width: 630px;
