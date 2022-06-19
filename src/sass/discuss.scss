@@ -6,402 +6,524 @@
     background-color: $sun_color;
     margin: 0 auto; 
     
-
-    
-    .wrapper{
-        margin: 0 auto;
-        width:1280px;
-        padding: 0;
-    }
-
+    // add by jay
     footer section .wrapper{
         width: 400px;
     }
 
     
-    
-    h1{
-        /* border:1px solid red; */
-        text-align: center;
-        font-size: 32px;
-        color:$moon_color;
-        // margin-top: 90px;
-    }
+    .wrapper{
+        margin: 0 auto;
+        width:1080px;
+        padding: 0;
+        // border: 1px solid #000;
 
-    main{
-        h1{
-            padding-top: 90px;
+        main{
+            h3{
+                text-align: center;
+                // border: 1px solid #000;
+                margin-top: 100px;
+            }
+            /* 麵包屑區塊的css */
+            .breadcrumb{
+                /* border:1px solid red; */
+                // background-color: #D9D9D9;
+                padding:20px 0px;
+                width: 1080px;
+                margin: 0 auto;
+                
+            }
+            .breadcrumb-list{
+                /* border:1px solid red; */
+                list-style: none;
+            }
+            
+            .breadcrumb-list > li{
+                /* border:1px solid red; */
+                display:inline-block;
+                margin-right: 10px;
+                color:$moon_color;
+            }
+            
+            .breadcrumb-list > li::before{
+                /* border:1px solid red; */
+                content:"/";
+                color:$moon_color;
+                margin-right: 12px;
+                font-size: 16px;
+            }
+            
+            .breadcrumb-list > li:first-child::before{
+                content:"";
+                margin-right: 0;
+            }
+            
+            .breadcrumb-list > li a{
+                text-decoration: none;
+                display:inline-block;
+                color:$moon_color;
+            }
+            
+            .breadcrumb-list > li a:hover{
+                color:$moon_color;
+            }
+
+
+
+
+
+
+            /* 官方文章區塊 */
+            /* banner_1圖片部分 */
+            .official_article{
+                /* border:1px solid red; */
+                display: flex;
+                width:100%;
+                height: 520px;
+                justify-content: space-between;
+                border: 1px solid #000;
+
+                
+            }
+            .official_article .banner_1{
+                /* border:1px solid red; */
+                width:calc(50% - 20px);
+                // margin: 0px 40px 0px 100px;
+                position: relative;
+            }
+            
+            .official_article .banner_1 a{
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                // border: 1px solid #000;
+            }
+
+            .official_article .banner_1 img{
+                height: 100%;
+                object-fit: fill;
+            }
+
+            .official_article .banner_1 .text_1{
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #F5F0DD;
+                font-size:32px;
+                width: 70%;
+                text-align: center;
+                // border: 1px solid #000;
+                // vertical-align: middle;
+  
+            }
+
+
+
+
+            
+            /* banner_2圖片區域 */
+            .official_article .banner_2{
+                /* border:1px solid red; */
+                width: calc(50% - 20px);
+
+            }
+            
+            .official_article .banner_2 a{
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .official_article .banner_2 img{
+                // height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+
+            /* photo_1區域 */
+            .official_article .banner_2 .photo_1{
+                /* border:1px solid red; */
+                width: 100%;
+                height: calc(50% - 20px);
+                margin-bottom: 40px;
+                position: relative;
+            }
+            
+            
+            
+            .official_article .banner_2 .photo_1 .text_2{
+                /* border:1px solid red; */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #F5F0DD;
+                font-size:32px;
+                width: 70%;
+                text-align: center;
+            }
+            
+            /* photo_2區域 */
+            .official_article .banner_2 .photo_2{
+                /* border:1px solid red; */
+                width:100%;
+                height: calc(50% - 20px);
+                position: relative;
+            }
+            
+            
+            .official_article .banner_2 .photo_2 .text_3{
+                /* border:1px solid red; */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #F5F0DD;
+                font-size:32px;
+                width: 70%;
+                text-align: center;
+            }
+
+
+            
+            .more{
+                margin-top: 40px;
+                margin-left: auto;
+                margin-bottom:50px;
+                width: 140px;
+                a{
+                    border: 1px solid $moon_color;
+                    text-decoration: none;
+                    // padding:20px 30px 20px 30px;
+                    color:$moon_color;
+                    font-size: 16px;
+                    display: block;
+                    box-sizing: border-box;
+                    
+                    p{
+                        width: 140px;
+                        text-align: center;
+                        line-height: 50px;
+                        // border: 1px solid $moon_color;
+                    }
+
+                    &:hover{
+                        background-color: $moon_color;
+                        color: $sun_color;
+                    }
+                    
+
+
+                }
+            }
+            
+            
+
+
+
+            /* --------------------------文章列表區域-------------------------- */
+            hr{
+                width: 1080px;
+            }
+
+            /* 文章列表上半部 */
+            .article{
+                margin-bottom: 50px;
+                &>h4{
+                    line-height: 63px;
+                    margin-bottom: 90px;
+                }
+            }
+            
+            .article .article_type{
+                
+                width:1080px;
+                display: flex;
+            }
+            
+            .article .article_type ul{
+                /* border:1px solid red; */
+                display: flex;
+            }
+            
+            .article .article_type ul li{
+                border:1px solid $moon_color;
+                width:180px;
+                height:100px;
+                border-radius: 15px 15px 0px 0px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
+            .article .article_type ul li a{
+                text-align: center;
+                line-height: 100px;
+                color:$moon_color;
+                display: block;
+                text-decoration: none;
+            }
+            
+            .article .article_type .li-5{
+                margin-left: auto;
+                .discussion{
+                    border:1px solid $moon_color;
+                    width:180px;
+                    height:100px;
+                    border-radius: 15px 15px 0px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    h4{
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+            /* --------------------------文章列表下半部-------------------------- */
+            
+            /* 以下是第一項的css */
+            /* .solid{ */
+                /* border:1px solid red; */
+                /* display: none; */
+            /* } */
+            
+            .article_list{
+                border:1px solid $moon_color;
+                width:1080px;
+                box-sizing: border-box;
+                ul{
+                    li{
+                        border-bottom: 1px solid $moon_color;
+                    }
+
+                    li:last-child{
+                        border-bottom: 0px;
+                    }
+                }
+
+                .more{
+                    margin-top: 10px;
+                    margin-left: auto;
+                    margin-bottom:25px;
+                    width: 140px;
+                    a{
+                        border: 1px solid $moon_color;
+                        text-decoration: none;
+                        // padding:20px 30px 20px 30px;
+                        color:$moon_color;
+                        font-size: 16px;
+                        display: block;
+                        box-sizing: border-box;
+                        
+                        p{
+                            width: 140px;
+                            text-align: center;
+                            line-height: 50px;
+                            // border: 1px solid $moon_color;
+                        }
+    
+                        &:hover{
+                            background-color: $moon_color;
+                            color: $sun_color;
+                        }
+                        
+    
+    
+                    }
+                }
+            }
+            
+            .article_text{
+
+                // height:164px;
+
+            }
+            
+            .article_text a{
+
+                display: flex;
+                // height:164px;
+                text-decoration: none;
+                // border: 1px solid #000;
+                padding: 15px 0;
+                padding-left: 25px;
+                padding-right: 40px;
+ 
+            }
+            
+            .article_list .img_1{
+                /* border:1px solid red; */
+                width:161px;
+                height:97px;
+                // margin-left:36px;
+                // margin-top: 30px;
+                /* display:none; */
+            }
+            
+            .article_list .img_1 img{
+                width:100%;
+                // height:97px;
+                /* display:none; */
+            }
+            
+            .article_list .content{
+                /* border:1px solid red; */
+                width:800px;
+                margin-left: 45px;
+                // flex-grow: 1;
+            }
+            
+            .article_list .content .title{
+                /* border:1px solid red; */
+                // margin-top: 40px;
+                // margin-left: 25px;
+                // font-size:20px;
+                color:$moon_color;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+
+                .star{
+                    /* border:1px solid red; */
+                    // width: 85px;
+                    // position: relative;
+                    // left: 555px;
+                    // bottom: 25px;
+                    color:#FFBF44
+                  }
+            }
+        
+            
+            .article_list .content .comment{
+                /* border: 1px solid red; */
+                // margin-top: 10px;
+                // margin-left: 25px;
+                font-size: 16px;
+                color:$moon_color;
+                margin-bottom: 5px;
+            }
+            
+            .article_list .content .icons{
+                /* border:1px solid red; */
+                display: flex;
+                // margin-top: 10px;
+                // margin-left: 25px;
+                justify-content: space-between;
+            }
+            
+            .article_list .content .icons .icon-1{
+                /* border:1px solid red; */
+                display: flex;
+                margin-right: 630px;
+            }
+            
+            .article_list .content .icons .icon-1 img{
+                width:18px;
+                height:17;
+                margin-right:5px;
+            }
+            
+            .article_list .content .icons .icon-1 .span1{
+                margin-top: 3px;
+                font-size: 16px;
+                color:$moon_color;
+            }
+            
+            .article_list .content .icons .icon-2{
+                /* border:1px solid red; */
+                display: flex;
+                margin-right: 20px;
+            }
+            
+            .article_list .content .icons .icon-2 img{
+                width:18px;
+                height:18;
+                margin-right:5px;
+            }
+            
+            .article_list .content .icons .icon-2 .span2{
+                margin-top: 3px;
+                font-size: 16px;
+                color:$moon_color;
+            }
+            
+            .article_list .content .icons .icon-3{
+                /* border:1px solid red; */
+                display: flex;
+            }
+            
+            .article_list .content .icons .icon-3 img{
+                width:18px;
+                height:18;
+                margin-right:5px;
+            }
+            
+            .article_list .content .icons .icon-3 .span3{
+                margin-top: 3px;
+                font-size: 16px;
+                color: $moon_color;
+            }
+
+
+
+
+
+
+
+
+
+
         }
     }
-    
-    
-    /* 麵包屑區塊的css */
-    .breadcrumb{
-        /* border:1px solid red; */
-        // background-color: #D9D9D9;
-        padding:20px 0px;
-        width: 1080px;
-        margin: 0 auto;
-        
-    }
-    
-    .breadcrumb-list{
-        /* border:1px solid red; */
-        list-style: none;
-    }
-    
-    .breadcrumb-list > li{
-        /* border:1px solid red; */
-        display:inline-block;
-        margin-right: 10px;
-        color:#000000;
-    }
-    
-    .breadcrumb-list > li::before{
-        /* border:1px solid red; */
-        content:"/";
-        color:black;
-        margin-right: 12px;
-        font-size: 16px;
-    }
-    
-    .breadcrumb-list > li:first-child::before{
-        content:"";
-        margin-right: 0;
-    }
-    
-    .breadcrumb-list > li a{
-        text-decoration: none;
-        display:inline-block;
-        color:#000000;
-    }
-    
-    .breadcrumb-list > li a:hover{
-        color:#000000;
-    }
-    
-    /* 官方文章區塊 */
-    /* banner_1圖片部分 */
-    .official_article{
-        /* border:1px solid red; */
-        display: flex;
-        width:100%;
-        
-    }
-    .official_article .banner_1{
-        /* border:1px solid red; */
-        width:520px;
-        margin: 0px 40px 0px 100px;
-    }
-    
-    .official_article .banner_1 img{
-        /* border:1px solid red; */
-        width: 100%;
-        height:519px;
-    }
-    
-    .official_article .banner_1 a{
-        text-decoration: none;
-    }
-    
-    .official_article .banner_1 .text_1{
-        position: relative;
-        bottom: 260px;
-        left: 100px;
-        color:white;
-        font-size:32px;
-        height:0px;
-    }
-    
-    /* banner_2圖片區域 */
-    .official_article .banner_2{
-        /* border:1px solid red; */
-        width:525px;
-    }
-    
-    /* photo_1區域 */
-    .official_article .banner_2 .photo_1{
-        /* border:1px solid red; */
-        width: 520px;
-    }
-    
-    .official_article .banner_2 .photo_1 img{
-        /* border:1px solid red; */
-        width:100%;
-        height:240px;
-    }
-    
-    .official_article .banner_2 .photo_1 a{
-        text-decoration: none;
-    }
-    
-    .official_article .banner_2 .photo_1 .text_2{
-        /* border:1px solid red; */
-        width: 300px;
-        position: relative;
-        bottom: 135px;
-        left: 110px;
-        font-size: 32px;
-        color:white;
-    }
-    
-    /* photo_2區域 */
-    .official_article .banner_2 .photo_2{
-        /* border:1px solid red; */
-        width:520px;
-    }
-    
-    .official_article .banner_2 .photo_2 img{
-        /* border:1px solid red; */
-        width:100%;
-        height:240px;
-    }
-    
-    .official_article .banner_2 .photo_2 a{
-        text-decoration: none;
-    }
-    
-    .official_article .banner_2 .photo_2 .text_3{
-        /* border:1px solid red; */
-        width:300px;
-        font-size: 32px;
-        color:white;
-        position:relative;
-        bottom: 140px;
-        left:165px
-    }
-    
-    .official_article .banner_2 .more{
-        border: 1px solid $moon_color;
-        width: 140px;
-        height: 40px;
-        text-align: center;
-        padding-top: 20px;
-        margin-left: 378px;
-        margin-bottom:50px;
-    }
-    
-    .official_article .banner_2 .more a{
-        text-decoration: none;
-        padding:20px 30px 20px 30px;
-    }
-    
-    .official_article .banner_2 .more .text_4{
-        color:$moon_color;
-        font-size: 16px;
-    }
-    
-    /* 文章列表區域 */
-    hr{
-        width: 1080px;
-    }
-    
-    h2{
-        /* border:1px solid red; */
-        width:120px;
-        font-size: 24px;
-        color:$moon_color;
-        margin-left: 100px;
-        margin-top: 25px;
-        margin-bottom: 50px;
-    }
-    
-    /* 文章列表上半部 */
-    .article{
-        margin-bottom: 50px;
-    }
-    
-    .article .article_type{
-        /* border:1px solid red; */
-        width:1080px;
-        margin-left:100px;
-    }
-    
-    .article .article_type ul{
-        /* border:1px solid red; */
-        display: flex;
-    }
-    
-    .article .article_type ul li{
-        border:1px solid $moon_color;
-        width:180px;
-        height:100px;
-        text-align: center;
-        font-size: 24px;
-        border-radius: 15px 15px 0px 0px;
-        cursor: pointer;
-    }
-    
-    .article .article_type ul li a{
-        color:$moon_color;
-        display: flex;
-        color: #0C1244;
-        text-decoration: none;
-        padding: 37px;
-        padding-left: 70px;
-        position: relative;
-        top: 0px;
-    }
-    
-    .article .article_type ul .li-5{
-    margin-left: 170px;
-    }
-    
-    /* 文章列表下半部 */
-    
-    /* 以下是第一項的css */
-    /* .solid{ */
-        /* border:1px solid red; */
-        /* display: none; */
-    /* } */
-    
-    .article_list{
-        border:1px solid $moon_color;
-        width:1080px;
-        margin-left: 100px;
-        /* display: block; */
-    }
-    
-    .article_text{
-        /* border: 1px solid $moon_color; */
-        /* border-bottom: 1px solid $moon_color; */
-        height:164px;
-        /* display:none; */
-    }
-    
-    .article_text a{
-        /* border: 1px solid red; */
-        display: flex;
-        height:164px;
-        text-decoration: none;
-        /* display:none; */
-    }
-    
-    .article_list .img_1{
-        /* border:1px solid red; */
-        width:161px;
-        height:97px;
-        margin-left:36px;
-        margin-top: 30px;
-        /* display:none; */
-    }
-    
-    .article_list .img_1 img{
-        width:100%;
-        height:97px;
-        /* display:none; */
-    }
-    
-    .article_list .content{
-        /* border:1px solid red; */
-        width:800px;
-    }
-    
-    .article_list .content .title{
-        /* border:1px solid red; */
-        margin-top: 40px;
-        margin-left: 25px;
-        font-size:20px;
-        color:$moon_color;
-    }
 
-    .discuss .article_list .content .star{
-        /* border:1px solid red; */
-        width: 85px;
-        position: relative;
-        left: 555px;
-        bottom: 25px;
-        color:#FFBF44
-      }
     
-    .article_list .content .comment{
-        /* border: 1px solid red; */
-        margin-top: 10px;
-        margin-left: 25px;
-        font-size: 16px;
-        color:$moon_color;
-    }
-    
-    .article_list .content .icons{
-        /* border:1px solid red; */
-        display: flex;
-        margin-top: 10px;
-        margin-left: 25px;
-    }
-    
-    .article_list .content .icons .icon-1{
-        /* border:1px solid red; */
-        display: flex;
-        margin-right: 445px;
-    }
-    
-    .article_list .content .icons .icon-1 img{
-        width:18px;
-        height:17;
-        margin-right:5px;
-    }
-    
-    .article_list .content .icons .icon-1 .span1{
-        margin-top: 3px;
-        font-size: 16px;
-        color:$moon_color;
-    }
-    
-    .article_list .content .icons .icon-2{
-        /* border:1px solid red; */
-        display: flex;
-        margin-right: 20px;
-    }
-    
-    .article_list .content .icons .icon-2 img{
-        width:18px;
-        height:18;
-        margin-right:5px;
-    }
-    
-    .article_list .content .icons .icon-2 .span2{
-        margin-top: 3px;
-        font-size: 16px;
-        color:$moon_color;
-    }
-    
-    .article_list .content .icons .icon-3{
-        /* border:1px solid red; */
-        display: flex;
-    }
-    
-    .article_list .content .icons .icon-3 img{
-        width:18px;
-        height:18;
-        margin-right:5px;
-    }
-    
-    .article_list .content .icons .icon-3 .span3{
-        margin-top: 3px;
-        font-size: 16px;
-        color: $moon_color;
-    }
-    
+
     /* 彈窗部分的CSS */
     
     .pop-up-out{
         /* border:1px solid red; */
-        position: relative;
-        bottom: 1420px;
+        position: fixed;
+        // bottom: 1420px;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
     }
     
     .pop-up{
+        
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+
         border:1px solid rgb(170, 170, 170);
+        box-sizing: border-box;
+        
         padding-top: 20px;
         padding-bottom: 80px;
-        position: absolute;
-        margin-top: 0px;
-        margin-left: 200px;
-        width:880px;
+        height: 70vh;
         z-index: 3;
         background-color: $sun_color;
-        display: none;
-        /* display:block */
+        overflow-y: auto;
+
     }
     
     .pop-up .disappear{
@@ -478,6 +600,11 @@
         width:878px;
     }
     
+
+
+
+
+
     /* 評論區的css */
     .task_container{
         /* border:1px solid red; */
@@ -832,6 +959,15 @@
     }
 }
 
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------------
 .discuss_moon{
     @import 'base/moonColorSwitch';
     font-family: Noto Sans CJK;

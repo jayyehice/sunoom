@@ -281,32 +281,35 @@ document.addEventListener("click", function (e) {
     }
 });
 
+
+
+
 // 彈窗事件綁定
 // 開啟的函式
 
 $('.img1').click(function(e){
     console.log('img1')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
 });
 
 $('.img2').click(function(e){
     console.log('img2')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
 });
 
 $('.img3').click(function(e){
     console.log('img3')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
 });
 
 // 關閉的函式
 $('.img10').click(function(e){
     console.log('img10')
     e.preventDefault();
-    $('.pop-up').css('display','none')
+    $('.pop-up-out').css('display','none')
 });
 
 // 討論區-彈窗-發表新文章的js
@@ -323,14 +326,14 @@ $('.article1').click(function(e){
     console.log('article1')
     e.preventDefault();
     $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
     console.log($(this).children('.img_1').children('img').attr("src"))
 });
 
 $('.img1').click(function(e){
     console.log('img1')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
     //console.log($(this).children('img').attr("src"))
     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
     
@@ -339,7 +342,7 @@ $('.img1').click(function(e){
 $('.img2').click(function(e){
     console.log('img2')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
     //console.log($(this).children('img').attr("src"))
     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
     
@@ -348,7 +351,7 @@ $('.img2').click(function(e){
 $('.img3').click(function(e){
     console.log('img3')
     e.preventDefault();
-    $('.pop-up').css('display','block')
+    $('.pop-up-out').css('display','block')
     //console.log($(this).children('img').attr("src"))
     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
     

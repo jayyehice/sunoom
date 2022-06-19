@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>討論區 - 頁籤效果測試</title>
+    <title>討論區</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="./js/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
@@ -17,7 +17,8 @@
     <div class="wrapper">
         <!-- <header></header> -->
         <main>
-            <h1 class="big-title">討論區</h1>
+            <h3>討論區</h3>
+            <!-- <h1 class="big-title"></h1> -->
             <!-- 麵包屑區域 -->
             <div class="breadcrumb">
                 <ol class="breadcrumb-list">
@@ -25,62 +26,72 @@
                     <li class="text">討論區</li>
                 </ol>
             </div>
+
+
+
             <!-- 官方文章區域 -->
             <div class="official_article">
                 <div class="banner_1">
                     <a href="#" class="img1">
                         <img src="img/beach-g80f906823_1920.jpg" alt="">
-                        <div class="line1"></div>
-                        <div class="text_1">明島推薦   純海洋行程</div>
+                        <!-- <div class="line1"></div> -->
+                        <div class="text_1">明島推薦 ~ 純海洋行程</div>
                     </a>
                 </div>
+
                 <div class="banner_2">
                     <div class="photo_1">
                         <a href="#" class="img2">
                             <img src="img/autumn-g3dcd77c2a_1280.jpg" alt="">
-                            <div class="line2"></div>
+                            <!-- <div class="line2"></div> -->
                             <div class="text_2">蜜月旅行  極致浪漫~</div>
                         </a>
                     </div>
                     <div class="photo_2">
                         <a href="#" class="img3">
                             <img src="img/bora-bora-gbd69eae9d_1280.jpg" alt="">
-                            <div class="line3"></div>
+                            <!-- <div class="line3"></div> -->
                             <div class="text_3">就是有『鬆』 通體舒暢</div>
-                        </a>
-                    </div>
-                    <div class="more">
-                        <a href="#">
-                            <span class="text_4">Read More</span>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="more">
+                <a href="#">
+                    <p>Read More</p>
+                </a>
+            </div>
+
+
             <hr>
-            <h2>文章列表</h2>
+
+
             <div class="article">
+                <h4>文章列表</h4>
                 <div class="article_type">
                     <ul class="tab-title">
                         <li id="active" class="active">
-                            <a  class="-on">食</a>
+                            <a  class="-on">全部</a>
                         </li>
                         <li id="active2" class="active">
-                            <a>住</a>
+                            <a>食</a>
                         </li>
                         <li id="active3" class="active">
-                            <a>遊</a>
+                            <a>住</a>
                         </li>
                         <li id="active4" class="active">
-                            <a>全部</a>
-                        </li>
-                        <li id="active5" class="active li-5">
-                            <a class="discussion">
-                                <img src="img/pen.png" alt="">
-                                <p class="word">評論</p>
-                            </a>
+                            <a>遊</a>
                         </li>
                     </ul>
+
+                    <div id="active5" class="active li-5">
+                        <a class="discussion">
+                            <img src="img/pen.png" alt="">
+                            <h4 class="word">評論</h4>
+                        </a>
+                    </div>
                 </div>
+
                 <div class="article_list">
                     <ul>
                         <li class="solid">
@@ -90,7 +101,9 @@
                                         <img src="img/pexels-aleksandr-neplokhov-2495411 1.jpg" alt="">
                                     </div>
                                     <div class="content">
-                                        <div class="title" >明島旅遊景點 - 壯觀巨石陣</div>
+                                        <div class="title">
+                                            <h5>明島旅遊景點 - 壯觀巨石陣</h5>
+
                                             <div class="star">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -98,8 +111,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star-half-stroke"></i>
                                            </div>
+                                        </div>
                                         
-                                        <div class="comment">聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</div>
+                                        <div class="comment">
+                                            <p>聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</p>
+                                            
+                                        </div>
                                         <div class="icons">
                                             <div class="icon-1">
                                                 <div>
@@ -131,14 +148,17 @@
                                         <img src="img/pexels-matt-hill-9910577 1.jpg" alt="">
                                     </div>
                                     <div class="content">
-                                        <div class="title">明島旅遊景點 - 壯觀巨石陣</div>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star-half-stroke"></i>
-                                       </div>
+                                        <div class="title">
+                                            <h5>明島旅遊景點 - 壯觀巨石陣</h5>
+
+                                            <div class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star-half-stroke"></i>
+                                           </div>
+                                        </div>
                                         <div class="comment">聽說日島有巨石陣，身為遺跡迷怎麼能錯過呢，立刻飛來明島一日遊。巨石陣的臉..........</div>
                                         <div class="icons">
                                             <div class="icon-1">
@@ -285,111 +305,121 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-
-            <!-- 以下是表單 -->
-            <div class="pop-up-out">
-                <div class="pop-up">
-                    <div class="disappear">
-                        <a href="#" class="img10">
-                            <img src="img/x-mark.png" alt="">
+                    <div class="more">
+                        <a href="#">
+                            <p>Read More</p>
                         </a>
-                    </div>
-                    <h1>就是有『鬆』</h1>
-                    <div class="icons">
-                        <div class="icon-1">
-                            <div>
-                                <img src="img/cartoon-eyes.png" alt="">
-                            </div>
-                            <span class="span1">16800</span>
-                        </div>
-                        <div class="icon-2">
-                            <div>
-                                <img src="img/speech-bubble.png" alt="">
-                            </div>
-                            <span class="span2">5</span>
-                        </div>
-                    </div>
-                    <hr class="hr1">
-                    <div class="icons2">
-                        <div><img src="img/sunoomlogo-20 1.png" alt=""></div>
-                        <span class="span3">Sunoom</span>
-                    </div>
-                    <div class="discuss-region">
-                        <div><img src="img/Rectangle 634.png" alt=""></div>
-                        <div class="comment-region">
-                            <p>
-                            這次去明島已經是第二次了，純海洋行程豐富卻還蠻慢節奏的，確實有顧到對海上運動不熟悉的人。
-                            如果是新手，非常推薦從立槳開始！而且晚上還蠻漂亮的。
-                            </p>
-                        </div>
-                    </div>
-                    <hr class="hr2">
-                    <div class="task_container">
-                        <p class="title1">評論:</p>
-    
-                        <div class="task_add_block">
-                            <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
-                            <button type="button" class="task_add">新增評論</button>
-                        </div>
-    
-                        <div class="task_list_parent">
-                            <ul class="task_list">
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
 
-            <!-- 發表新文章的區塊 -->
-            <div class="form_region">
-                <form action="" method="post" class="absolute">
-                    <div class="disappear2">
-                        <a href="#" class="png1">
-                            <img src="img/x-mark.png" alt="">
-                        </a>
-                    </div>
-                    <p class="title2">發表新文章</p>
-                    <div class="form_region1">
-                        <span class="name1">標題名稱</span>
-                        <input type="text" class="write1">
-                    </div>
-                    <div class="form_region2">
-                        <span class="name2">文章類別</span>
-                        <select name="" id="" class="choose">
-                            <option value="">請選擇</option>
-                            <option value="">食</option>
-                            <option value="">住</option>
-                            <option value="">遊</option>
-                            <option value="">全部</option>
-                        </select>
-                    </div>
-                    <div class="form_region6">
-                        <span class="name6">推薦指數</span>
-                        <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke">
-                        </i>
-                    </div>
-                    <div class="form_region3">
-                        <span class="name3">文章圖片</span>
-                        <input type="file" name="saffron_file">
-                    </div>
-                    <div class="form_region4">
-                        <p class="name4">文章內容</p>
-                        <textarea name="" id="" cols="30" rows="10" class="write2"></textarea>
-                    </div>
-                    <div class="form_region5">
-                        <input type="submit" value="發表文章" class="button">
-                    </div>
-                </form>
-            </div>
+
+
+
         </main>
         <!-- <footer></footer> -->
+    </div>
+    
+    <!-- 彈窗 -->
+    <div class="pop-up-out">
+        <div class="pop-up">
+            <div class="disappear">
+                <a href="#" class="img10">
+                    <img src="img/x-mark.png" alt="">
+                </a>
+            </div>
+            <h1>就是有『鬆』</h1>
+            <div class="icons">
+                <div class="icon-1">
+                    <div>
+                        <img src="img/cartoon-eyes.png" alt="">
+                    </div>
+                    <span class="span1">16800</span>
+                </div>
+                <div class="icon-2">
+                    <div>
+                        <img src="img/speech-bubble.png" alt="">
+                    </div>
+                    <span class="span2">5</span>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="icons2">
+                <div><img src="img/sunoomlogo-20 1.png" alt=""></div>
+                <span class="span3">Sunoom</span>
+            </div>
+            <div class="discuss-region">
+                <div><img src="img/Rectangle 634.png" alt=""></div>
+                <div class="comment-region">
+                    <p>
+                    這次去明島已經是第二次了，純海洋行程豐富卻還蠻慢節奏的，確實有顧到對海上運動不熟悉的人。
+                    如果是新手，非常推薦從立槳開始！而且晚上還蠻漂亮的。
+                    </p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="task_container">
+                <p class="title1">評論:</p>
+
+                <div class="task_add_block">
+                    <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
+                    <button type="button" class="task_add">新增評論</button>
+                </div>
+
+                <div class="task_list_parent">
+                    <ul class="task_list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 發表新文章的區塊 -->
+    <div class="form_region">
+        <form action="" method="post" class="absolute">
+            <div class="disappear2">
+                <a href="#" class="png1">
+                    <img src="img/x-mark.png" alt="">
+                </a>
+            </div>
+            <p class="title2">發表新文章</p>
+            <div class="form_region1">
+                <span class="name1">標題名稱</span>
+                <input type="text" class="write1">
+            </div>
+            <div class="form_region2">
+                <span class="name2">文章類別</span>
+                <select name="" id="" class="choose">
+                    <option value="">請選擇</option>
+                    <option value="">食</option>
+                    <option value="">住</option>
+                    <option value="">遊</option>
+                    <option value="">全部</option>
+                </select>
+            </div>
+            <div class="form_region6">
+                <span class="name6">推薦指數</span>
+                <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke">
+                </i>
+            </div>
+            <div class="form_region3">
+                <span class="name3">文章圖片</span>
+                <input type="file" name="saffron_file">
+            </div>
+            <div class="form_region4">
+                <p class="name4">文章內容</p>
+                <textarea name="" id="" cols="30" rows="10" class="write2"></textarea>
+            </div>
+            <div class="form_region5">
+                <input type="submit" value="發表文章" class="button">
+            </div>
+        </form>
     </div>
     @@include('./layout/footer.html')
 
