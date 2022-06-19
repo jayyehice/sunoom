@@ -742,6 +742,46 @@ h1, h2, h3, h4, h5, h6, p{
             }
             
         }
+        /* OBJECTS(網頁版) */
+
+    .bubble {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+        
+        height: 200px;
+        position: absolute;
+        width: 200px;
+    }
+
+    .bubble:after {
+        background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+        background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+        background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+        background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+        background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        
+        -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+        -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+        box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+        
+        content: "";
+        height: 180px;
+        left: 10px;
+        position: absolute;
+        width: 180px;
+    }
+
 }
 
   //網頁版(海遊-月島)
@@ -750,7 +790,7 @@ h1, h2, h3, h4, h5, h6, p{
     background-image: url('../img/sea/seapage_moon.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 300px;
+    background-position-y: 200px;
     .line0{
         display: none;
     }
@@ -2296,6 +2336,45 @@ h1, h2, h3, h4, h5, h6, p{
             }
             
         }
+        /* OBJECTS(RWD) */
+    
+        .bubble {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            
+            -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
+            
+            height: 100px;
+            position: absolute;
+            width: 100px;
+        }
+    
+        .bubble:after {
+            background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+            background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            
+            -webkit-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
+            -moz-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
+            
+            content: "";
+            height: 90px;
+            left: 5px;
+            position: absolute;
+            width: 90px;
+        }
     }
 }
 
@@ -2317,7 +2396,7 @@ h1, h2, h3, h4, h5, h6, p{
             background-image: url('../img/sea/seapage2.png');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position-y: 300px;
+            background-position-y: 200px;
             main{
                 // banner區塊
                 .banner{
@@ -3343,85 +3422,7 @@ h1, h2, h3, h4, h5, h6, p{
 	transform: scale(0.3);
 }
 
-/* OBJECTS(網頁版) */
-
-// .bubble {
-//     -webkit-border-radius: 50%;
-// 	-moz-border-radius: 50%;
-// 	border-radius: 50%;
-	
-//     -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-// 	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-// 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-	
-//     height: 200px;
-// 	position: absolute;
-// 	width: 200px;
-// }
-
-// .bubble:after {
-//     background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
-//     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-//     background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
-//     background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
-//     background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
-//     background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-// 	-webkit-border-radius: 50%;
-// 	-moz-border-radius: 50%;
-// 	border-radius: 50%;
-	
-//     -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-// 	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-// 	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-	
-// 	content: "";
-//     height: 180px;
-// 	left: 10px;
-// 	position: absolute;
-// 	width: 180px;
-// }
 
 
-/* OBJECTS(RWD) */
-
-.bubble {
-    -webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	
-    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
-	-moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
-	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgba(255, 255, 255, 1);
-	
-    height: 100px;
-	position: absolute;
-	width: 100px;
-}
-
-.bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	
-    -webkit-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
-	-moz-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
-	
-	content: "";
-    height: 90px;
-	left: 5px;
-	position: absolute;
-	width: 90px;
-}
 
 
