@@ -16,13 +16,21 @@ $(document).ready(function(){
     $("#checkOrder").click(function(){
         // alert("t")
         // 出現明細
-        $(".orderDetail").show();
+        // $(".orderDetail").show();
+        $(".orderDetailRwd").show();
     });
 
     $("#i").click(function(){
         // alert("t")
         $(".orderDetail").hide();
+        $(".orderDetailRwd").hide();
     });
+
+    $("#i2").click(function(){
+        // alert("t")
+        $(".orderDetailRwd").hide();
+    });
+
 
     $("#cancel").click(function(){
         confirm("您確定要取消訂單嗎？")

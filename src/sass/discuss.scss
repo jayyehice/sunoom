@@ -234,10 +234,13 @@
     
     .article .article_type ul li a{
         color:$moon_color;
+        display: flex;
+        color: #0C1244;
         text-decoration: none;
-        padding:36px;
+        padding: 37px;
+        padding-left: 70px;
         position: relative;
-        top: 40px;
+        top: 0px;
     }
     
     .article .article_type ul .li-5{

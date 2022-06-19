@@ -86,11 +86,10 @@
 .member main .memberPage li {
   font-size: 24rem;
   width: 355px;
-  height: 100px;
   border-radius: 29px 29px 0 0;
   border: 1px solid #0C1244;
   text-align: center;
-  line-height: 100px;
+  line-height: 80px;
   justify-items: center;
   color: #0C1244;
 }
@@ -435,6 +434,11 @@
   display: none;
   margin-top: 20px;
 }
+@media (max-width: 579px) {
+  .member main .orderCheck .orderDetail {
+    display: none !important;
+  }
+}
 .member main .orderCheck .orderDetail h6 {
   display: inline-block;
 }
@@ -506,6 +510,122 @@
 }
 .member main .orderCheck .orderDetail .odFoot .discount {
   color: #FF4444;
+}
+.member main .orderCheck .orderDetailRwd {
+  width: 280px;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 280px;
+  display: none;
+  border: 1px solid #0C1244;
+}
+@media (max-width: 579px) {
+  .member main .orderCheck .orderDetailRwd {
+    display: grid;
+  }
+}
+.member main .orderCheck .orderDetailRwd div {
+  border-bottom: solid 1px #0C1244;
+}
+.member main .orderCheck .orderDetailRwd h5 {
+  width: 260px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin: 13px auto;
+}
+.member main .orderCheck .orderDetailRwd i {
+  color: #F5F0DD;
+  position: relative;
+  right: -240px;
+  top: -50px;
+  cursor: pointer;
+}
+.member main .orderCheck .orderDetailRwd p {
+  margin-top: 0;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetailRwd h6 {
+  margin-left: 35px;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd p {
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd > p {
+  margin-top: 10px;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd .date {
+  font-size: 12rem;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd ul {
+  display: flex;
+  margin-left: 35px;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd ul:last-child {
+  margin-bottom: 6px;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd li {
+  width: 90px;
+  margin-bottom: 10px;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd li:nth-child(2) {
+  width: 40px;
+  margin: 0 auto;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd li:last-child {
+  color: #FFBF44;
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetailRwd .orderMainRwd h6 {
+  display: inline-block;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal ul {
+  display: flex;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  justify-content: space-around;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal ul:first-child {
+  margin-top: 15px;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal li {
+  display: inline-block;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal .rTtitle {
+  font-size: 16rem;
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal .rTvalue {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 24px;
+  color: #FFBF44;
+  font-weight: bold;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal .rTcode {
+  margin-left: auto;
+  border: 1px solid #0C1244;
+  margin-right: 6px;
+  padding: 5px;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal .rTdiscount {
+  color: #FF4444;
+}
+.member main .orderCheck .orderDetailRwd .rwdTotal .rTpay {
+  color: #0C1244;
+}
+.member main .orderCheck .orderDetailRwd .deleteRwd {
+  text-align: center;
+}
+.member main .orderCheck .orderDetailRwd .deleteRwd p {
+  margin: 0;
+  line-height: 50px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  cursor: pointer;
 }
 
 .member_moon {
@@ -945,6 +1065,11 @@
   display: none;
   margin-top: 20px;
 }
+@media (max-width: 579px) {
+  .member_moon main .orderCheck .orderDetail {
+    display: none !important;
+  }
+}
 .member_moon main .orderCheck .orderDetail h6 {
   display: inline-block;
 }
@@ -1016,6 +1141,122 @@
 }
 .member_moon main .orderCheck .orderDetail .odFoot .discount {
   color: #FF4444;
+}
+.member_moon main .orderCheck .orderDetailRwd {
+  width: 280px;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 280px;
+  display: none;
+  border: 1px solid #F5F0DD;
+}
+@media (max-width: 579px) {
+  .member_moon main .orderCheck .orderDetailRwd {
+    display: grid;
+  }
+}
+.member_moon main .orderCheck .orderDetailRwd div {
+  border-bottom: solid 1px #F5F0DD;
+}
+.member_moon main .orderCheck .orderDetailRwd h5 {
+  width: 260px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin: 13px auto;
+}
+.member_moon main .orderCheck .orderDetailRwd i {
+  color: #0C1244;
+  position: relative;
+  right: -240px;
+  top: -50px;
+  cursor: pointer;
+}
+.member_moon main .orderCheck .orderDetailRwd p {
+  margin-top: 0;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetailRwd h6 {
+  margin-left: 35px;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd p {
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd > p {
+  margin-top: 10px;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd .date {
+  font-size: 12rem;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd ul {
+  display: flex;
+  margin-left: 35px;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd ul:last-child {
+  margin-bottom: 6px;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd li {
+  width: 90px;
+  margin-bottom: 10px;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd li:nth-child(2) {
+  width: 40px;
+  margin: 0 auto;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd li:last-child {
+  color: #FFBF44;
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetailRwd .orderMainRwd h6 {
+  display: inline-block;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal ul {
+  display: flex;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  justify-content: space-around;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal ul:first-child {
+  margin-top: 15px;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal li {
+  display: inline-block;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal .rTtitle {
+  font-size: 16rem;
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal .rTvalue {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 24px;
+  color: #FFBF44;
+  font-weight: bold;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal .rTcode {
+  margin-left: auto;
+  border: 1px solid #F5F0DD;
+  margin-right: 6px;
+  padding: 5px;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal .rTdiscount {
+  color: #FF4444;
+}
+.member_moon main .orderCheck .orderDetailRwd .rwdTotal .rTpay {
+  color: #F5F0DD;
+}
+.member_moon main .orderCheck .orderDetailRwd .deleteRwd {
+  text-align: center;
+}
+.member_moon main .orderCheck .orderDetailRwd .deleteRwd p {
+  margin: 0;
+  line-height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=member.css.map */

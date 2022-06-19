@@ -132,6 +132,7 @@
                     border: 1px solid $moon_color;
                     margin-bottom: 10px;
                     font-size: 16rem;
+                    color: $moon_color;
 
                     @include mobile{
                         margin-bottom: 50px;
@@ -310,6 +311,7 @@
                     border: 1px solid $moon_color;
                     margin-bottom: 10px;
                     font-size: 16rem;
+                    color: $moon_color;
 
                     @include mobile{
                         margin-bottom: 50px;
