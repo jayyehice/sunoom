@@ -1068,11 +1068,11 @@
   .index main .instagram .wrapper .instagramPhoto {
     width: 500px;
   }
-  .index main .instagram .wrapper .instagramPhoto .ig_img01 {
-    width: 160px;
-  }
   .index main .instagram .wrapper .instagramPhoto .ig_img {
     width: 110px;
+  }
+  .index main .instagram .wrapper .instagramPhoto .ig_img01 {
+    width: 160px;
   }
   .index main .instagram .wrapper .instagramPhoto .ig_img02 {
     width: 142px;
