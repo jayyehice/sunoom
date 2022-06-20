@@ -349,26 +349,30 @@
 }
 .discuss .pop-up-out {
   /* border:1px solid red; */
+  padding-top: 10px;
+  box-sizing: border-box;
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
 }
 .discuss .pop-up {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
   border: 1px solid rgb(170, 170, 170);
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 80px;
-  height: 70vh;
-  z-index: 3;
+  height: calc(100vh - 20px);
+  width: 880px;
+  margin: 0 auto;
   background-color: #F5F0DD;
-  overflow-y: auto;
+  overflow: auto;
+}
+.discuss .pop-up h3 {
+  text-align: center;
+}
+.discuss .pop-up .hr2 {
+  width: calc(100% - 2px);
 }
 .discuss .pop-up .disappear {
   /* border: 1px solid red; */
@@ -378,7 +382,8 @@
   /* border:1px solid red; */
   display: flex;
   width: 802px;
-  margin-left: 37px;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 .discuss .pop-up .icons .icon-1 {
   display: flex;
@@ -387,6 +392,8 @@
 .discuss .pop-up .icons .icon-1 .span1 {
   margin-left: 5px;
   padding-top: 5px;
+  font-size: 16rem;
+  letter-spacing: 3rem;
 }
 .discuss .pop-up .icons .icon-2 {
   display: flex;
@@ -394,6 +401,8 @@
 .discuss .pop-up .icons .icon-2 .span2 {
   margin-left: 5px;
   padding-top: 5px;
+  font-size: 16rem;
+  letter-spacing: 3rem;
 }
 .discuss .hr1 {
   width: 802px;
@@ -402,7 +411,8 @@
   /* border:1px solid red; */
   display: flex;
   width: 802px;
-  margin-left: 37px;
+  margin: 0 auto;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .discuss .pop-up .icons2 .span3 {
@@ -421,14 +431,13 @@
   border: 1px solid #0C1244;
   margin-left: 30px;
   border-radius: 10px;
+}
+.discuss .pop-up .discuss-region .comment-region p {
   padding: 10px;
 }
 .discuss .pop-up .discuss-region img {
   width: 220px;
   height: 100%;
-}
-.discuss .hr2 {
-  width: 878px;
 }
 .discuss .task_container {
   /* border:1px solid red; */
@@ -440,7 +449,8 @@
 }
 .discuss .task_container .task_add_block {
   /* border:1px solid red; */
-  margin-left: 35px;
+  width: 802px;
+  margin: 0 auto;
   margin-top: 10px;
   font-size: 0;
   transition: transform 0.5s, box-shadow 0.5s;
@@ -452,12 +462,13 @@
 }
 .discuss .task_container .task_add_block .task_name {
   /* border:1px solid red; */
-  width: calc(100% - 60px);
+  width: 100%;
   border: 1px solid lightgray;
   border-radius: 3px 0 0 3px;
   height: 120px;
   font-size: 20px;
   padding: 5px 10px;
+  box-sizing: border-box;
   outline: none;
   display: inline-block;
   vertical-align: top;
@@ -467,10 +478,10 @@
 }
 .discuss .task_container .task_add_block .task_add {
   /* border: 1px solid red; */
-  display: inline-block;
+  display: block;
   width: 141px;
   height: 52px;
-  margin-left: 666px;
+  margin-left: auto;
   margin-top: 20px;
   vertical-align: top;
   border: 1px solid lightgray;

@@ -487,31 +487,44 @@
     
     .pop-up-out{
         /* border:1px solid red; */
+        padding-top: 10px;
+        box-sizing: border-box;
         position: fixed;
         // bottom: 1420px;
         width: 100vw;
         height: 100vh;
         top: 0;
         background-color: rgba(0, 0, 0, .5);
-        display: none;
+        // display: none;
+        // overflow-y: auto;
     }
     
     .pop-up{
         
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // top: 10%;
+        // left: 50%;
+        // transform: translateX(-50%);
 
         border:1px solid rgb(170, 170, 170);
         box-sizing: border-box;
 
         padding-top: 20px;
         padding-bottom: 80px;
-        height: 70vh;
-        z-index: 3;
+        height: calc(100vh - 20px);
+        width: 880px;
+        margin: 0 auto;
+        // z-index: 3;
         background-color: $sun_color;
-        overflow-y: auto;
+        overflow: auto;
+
+        h3{
+            text-align: center;
+        }
+
+        .hr2{
+            width:calc(100% - 2px);
+        }
 
     }
     
@@ -524,7 +537,9 @@
         /* border:1px solid red; */
         display: flex;
         width: 802px;
-        margin-left: 37px;
+        // margin-left: 37px;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
     
     .pop-up .icons .icon-1{
@@ -535,6 +550,8 @@
     .pop-up .icons .icon-1 .span1{
         margin-left: 5px;
         padding-top: 5px;
+        font-size: 16rem;
+        letter-spacing: 3rem;
     }
     
     .pop-up .icons .icon-2{
@@ -544,6 +561,8 @@
     .pop-up .icons .icon-2 .span2{
         margin-left: 5px;
         padding-top: 5px;
+        font-size: 16rem;
+        letter-spacing: 3rem;
     }
     
     .hr1{
@@ -554,7 +573,8 @@
         /* border:1px solid red; */
         display: flex;
         width: 802px;
-        margin-left: 37px;
+        margin: 0 auto;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
     
@@ -577,7 +597,11 @@
         border:1px solid $moon_color;
         margin-left: 30px;
         border-radius: 10px;
-        padding: 10px;
+        
+        p{
+            padding: 10px;
+
+        }
     }
 
     .pop-up .discuss-region img{
@@ -585,9 +609,7 @@
         height:100%;
     }
     
-    .hr2{
-        width:878px;
-    }
+    
     
 
 
@@ -607,7 +629,8 @@
     
     .task_container .task_add_block{
         /* border:1px solid red; */
-        margin-left: 35px;
+        width: 802px;
+        margin: 0 auto;
         margin-top: 10px;
         font-size: 0;
         transition: transform .5s, box-shadow .5s;
@@ -621,12 +644,13 @@
     
     .task_container .task_add_block .task_name{
         /* border:1px solid red; */
-        width: calc(100% - 60px);
+        width: 100%;
         border: 1px solid lightgray;
         border-radius: 3px 0 0 3px;
         height: 120px;
         font-size: 20px;
         padding: 5px 10px;
+        box-sizing: border-box;
         outline: none;
         display: inline-block;
         vertical-align: top;
@@ -638,10 +662,10 @@
     
     .task_container .task_add_block .task_add{
         /* border: 1px solid red; */
-        display: inline-block;
+        display: block;
         width: 141px;
         height: 52px;
-        margin-left: 666px;
+        margin-left: auto;
         margin-top: 20px;
         vertical-align: top;
         border: 1px solid lightgray;

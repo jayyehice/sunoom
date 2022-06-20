@@ -41,29 +41,58 @@ window.addEventListener("load", function(){
             // 開啟的函式
 
             $('.img1').click(function(e){
-                console.log('img1')
+                // console.log('img1')
                 e.preventDefault();
                 $('.pop-up-out').css('display','block')
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                $('html').attr("style","overflow: hidden");
             });
 
             $('.img2').click(function(e){
-                console.log('img2')
+                // console.log('img2')
                 e.preventDefault();
                 $('.pop-up-out').css('display','block')
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                $('html').attr("style","overflow: hidden");
             });
 
             $('.img3').click(function(e){
-                console.log('img3')
+                // console.log('img3')
                 e.preventDefault();
                 $('.pop-up-out').css('display','block')
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                $('html').attr("style","overflow: hidden");
             });
 
-            // 關閉的函式
+
+
+
+            // 關閉pop-up-out彈窗
+            // 叉叉按鈕
             $('.img10').click(function(e){
                 console.log('img10')
                 e.preventDefault();
-                $('.pop-up-out').css('display','none')
+                $('.pop-up-out').removeAttr("style");
+                $('html').removeAttr("style");
             });
+
+            $('.pop-up-out').click(function(){
+                $(this).removeAttr("style");
+                $('html').removeAttr("style");
+            })
+
+            $('.pop-up').click(function(e){
+                e.stopPropagation();
+            })
+
+
+
+
+
+
+
+
+
 
             // 討論區-彈窗-發表新文章的js
             // 開啟
@@ -83,32 +112,7 @@ window.addEventListener("load", function(){
                 console.log($(this).children('.img_1').children('img').attr("src"))
             });
 
-            $('.img1').click(function(e){
-                console.log('img1')
-                e.preventDefault();
-                $('.pop-up-out').css('display','block')
-                //console.log($(this).children('img').attr("src"))
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-                
-            });
-
-            $('.img2').click(function(e){
-                console.log('img2')
-                e.preventDefault();
-                $('.pop-up-out').css('display','block')
-                //console.log($(this).children('img').attr("src"))
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-                
-            });
-
-            $('.img3').click(function(e){
-                console.log('img3')
-                e.preventDefault();
-                $('.pop-up-out').css('display','block')
-                //console.log($(this).children('img').attr("src"))
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-                
-            });
+            
 
 
             // 關閉
