@@ -1520,8 +1520,7 @@ h1, h2, h3, h4, h5, h6, p{
     
     
 //RWD(海遊-日島)----------------------------------------------------------------------------
-@media screen and (max-width : 575.98px){
-    
+@media screen and (max-width : 575.98px){   
 .sea{
         $h1 : 40px;
         $h2 : 36px;
@@ -2379,8 +2378,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 //RWD(海遊-月島)----------------------------------------------------------------------------
-@media screen and (max-width : 575.98px){
-    
+@media screen and (max-width : 575.98px){  
     .sea_moon{
             @import 'base/moonColorSwitch';
             $h1 : 40px;
