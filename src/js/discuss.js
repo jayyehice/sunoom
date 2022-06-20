@@ -1,3 +1,5 @@
+// const { cleanData } = require("jquery");
+
 window.addEventListener("load", function(){
 
 
@@ -40,29 +42,62 @@ window.addEventListener("load", function(){
             // 彈窗事件綁定
             // 開啟的函式
 
-            $('.img1').click(function(e){
-                // console.log('img1')
+            $('.official_article_a').click(function(e){
                 e.preventDefault();
                 $('.pop-up-out').css('display','block')
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"));
+                $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
+                $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
+                $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
+                $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
+                $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
                 $('html').attr("style","overflow: hidden");
             });
 
-            $('.img2').click(function(e){
-                // console.log('img2')
+            // $('.img2').click(function(e){
+            //     // console.log('img2')
+            //     e.preventDefault();
+            //     $('.pop-up-out').css('display','block')
+            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+            //     $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
+            //     $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
+            //     $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
+            //     $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
+            //     $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
+            //     $('html').attr("style","overflow: hidden");
+            // });
+
+            // $('.img3').click(function(e){
+            //     // console.log('img3')
+            //     e.preventDefault();
+            //     $('.pop-up-out').css('display','block')
+            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+            //     $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
+            //     $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
+            //     $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
+            //     $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
+            //     $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
+            //     $('html').attr("style","overflow: hidden");
+            // });
+
+
+            // 討論區文章內容更換(開啟)
+            $('.article1').click(function(e){
+                // console.log('article1')
                 e.preventDefault();
+                $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
+                $('.pop-up').find('.span1')[0].innerText = $(this).find('.span2')[0].innerText;//觀看次數
+                $('.pop-up').find('.span2')[0].innerText = $(this).find('.span3')[0].innerText;//評論次數
+                $('.pop-up > h3')[0].innerText=$(this).find('.title > h5')[0].innerText;//標題
+                $('.pop-up').find('.comment-region > p')[0].innerText=$(this).find('.comment > p')[0].innerText;//內文
+                $('.pop-up').find('.span3')[0].innerText=$(this).find('.span1')[0].innerText;//作者
+                $('.pop-up').find('.icons2 img').attr("src",$(this).find('.icon-1 img').attr("src"))//作者頭像
+                // console.log($(this).find('.comment > p')[0].innerText);
                 $('.pop-up-out').css('display','block')
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
+                // console.log($(this).children('.img_1').children('img').attr("src"))
                 $('html').attr("style","overflow: hidden");
             });
 
-            $('.img3').click(function(e){
-                // console.log('img3')
-                e.preventDefault();
-                $('.pop-up-out').css('display','block')
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-                $('html').attr("style","overflow: hidden");
-            });
 
 
 
@@ -70,7 +105,7 @@ window.addEventListener("load", function(){
             // 關閉pop-up-out彈窗
             // 叉叉按鈕
             $('.img10').click(function(e){
-                console.log('img10')
+                // console.log('img10')
                 e.preventDefault();
                 $('.pop-up-out').removeAttr("style");
                 $('html').removeAttr("style");
@@ -96,31 +131,29 @@ window.addEventListener("load", function(){
 
             // 討論區-彈窗-發表新文章的js
             // 開啟
-            $('.discussion').click(function(e){
-                console.log('discussion')
-                e.preventDefault();
+            $('#post_new_article').click(function(){
+                // console.log('discussion')
+                // e.preventDefault();
                 $('.form_region').css('display','block')
+                $('html').attr("style","overflow: hidden");
             });
-
-
-            // 討論區文章圖片更換(開啟)
-            $('.article1').click(function(e){
-                console.log('article1')
-                e.preventDefault();
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-                $('.pop-up-out').css('display','block')
-                console.log($(this).children('.img_1').children('img').attr("src"))
-            });
-
-            
-
 
             // 關閉
             $('.png1').click(function(e){
-                console.log('png1')
+                // console.log('png1')
                 e.preventDefault();
-                $('.form_region').css('display','none')
+                $('.form_region').removeAttr("style");
+                $('html').removeAttr("style");
             });
+
+            $('.form_region').click(function(){
+                $(this).removeAttr("style");
+                $('html').removeAttr("style");
+            })
+
+            $('.absolute').click(function(e){
+                e.stopPropagation();
+            })
         },
     })
 });

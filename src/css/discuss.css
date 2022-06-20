@@ -34,7 +34,7 @@
   /* display: none; */
   /* } */
 }
-.discuss .wrapper main h3 {
+.discuss .wrapper main > h3 {
   text-align: center;
   margin-top: 100px;
 }
@@ -79,7 +79,6 @@
   width: 100%;
   height: 520px;
   justify-content: space-between;
-  border: 1px solid #000;
 }
 .discuss .wrapper main .official_article .banner_1 {
   /* border:1px solid red; */
@@ -103,9 +102,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #F5F0DD;
-  font-size: 32px;
   width: 70%;
   text-align: center;
+}
+.discuss .wrapper main .official_article .banner_1 .text_1 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss .wrapper main .official_article .banner_1 .text_1 > div svg {
+  margin-right: 5px;
+}
+.discuss .wrapper main .official_article .banner_1 .text_1 > div p:nth-child(2) {
+  margin-right: 25px;
 }
 .discuss .wrapper main .official_article .banner_2 {
   /* border:1px solid red; */
@@ -136,9 +145,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #F5F0DD;
-  font-size: 32px;
   width: 70%;
   text-align: center;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_1 .text_2 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_1 .text_2 > div svg {
+  margin-right: 5px;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_1 .text_2 > div p:nth-child(2) {
+  margin-right: 25px;
 }
 .discuss .wrapper main .official_article .banner_2 .photo_2 {
   /* border:1px solid red; */
@@ -153,9 +172,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #F5F0DD;
-  font-size: 32px;
   width: 70%;
   text-align: center;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_2 .text_3 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_2 .text_3 > div svg {
+  margin-right: 5px;
+}
+.discuss .wrapper main .official_article .banner_2 .photo_2 .text_3 > div p:nth-child(2) {
+  margin-right: 25px;
 }
 .discuss .wrapper main .more {
   margin-top: 40px;
@@ -228,6 +257,9 @@
 .discuss .wrapper main .article .article_type .li-5 .discussion h4 {
   margin-left: 10px;
 }
+.discuss .wrapper main .article .article_type .li-5 .discussion:hover {
+  cursor: pointer;
+}
 .discuss .wrapper main .article_list {
   border: 1px solid #0C1244;
   width: 1080px;
@@ -269,11 +301,14 @@
   padding: 15px 0;
   padding-left: 25px;
   padding-right: 40px;
+  align-items: center;
 }
 .discuss .wrapper main .article_list .img_1 {
   /* border:1px solid red; */
   width: 161px;
   height: 97px;
+  display: flex;
+  align-items: center;
   /* display:none; */
 }
 .discuss .wrapper main .article_list .img_1 img {
@@ -348,7 +383,6 @@
   color: #0C1244;
 }
 .discuss .pop-up-out {
-  /* border:1px solid red; */
   padding-top: 10px;
   box-sizing: border-box;
   position: fixed;
@@ -356,6 +390,7 @@
   height: 100vh;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 .discuss .pop-up {
   border: 1px solid rgb(170, 170, 170);
@@ -431,9 +466,11 @@
   border: 1px solid #0C1244;
   margin-left: 30px;
   border-radius: 10px;
+  flex-grow: 1;
 }
 .discuss .pop-up .discuss-region .comment-region p {
   padding: 10px;
+  width: 100%;
 }
 .discuss .pop-up .discuss-region img {
   width: 220px;
@@ -616,34 +653,32 @@
   display: none;
 }
 .discuss .form_region {
-  /* border:1px solid $moon_color; */
-  background-color: #F5F0DD;
-  z-index: 3;
-  padding-top: 20px;
-  padding-bottom: 80px;
-  margin-top: 0px;
-  margin-left: 200px;
-  width: 880px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
-  position: relative;
-  bottom: 820px;
-}
-.discuss .form_region .title2 {
-  /* border: 1px solid red; */
-  font-size: 32px;
-  color: #0C1244;
-  margin-left: 20px;
 }
 .discuss .form_region .absolute {
-  border: 1px solid #0C1244;
+  border: 1px solid rgb(170, 170, 170);
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  height: calc(100vh - 20px);
+  width: 880px;
+  margin: 0 auto;
   background-color: #F5F0DD;
-  position: absolute;
-  height: 950px;
-  width: 879px;
-  left: 0px;
+  overflow: auto;
+  color: #0C1244;
+}
+.discuss .form_region .title2 {
+  font-size: 32px;
+  margin-left: 30px;
 }
 .discuss .form_region .form_region1 {
-  /* border: 1px solid red; */
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -679,10 +714,21 @@
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 24px;
+  display: flex;
 }
 .discuss .form_region .form_region3 .name3 {
   /* border:1px solid red; */
   margin-right: 25px;
+}
+.discuss .form_region .form_region3 .upload_img {
+  display: flex;
+  align-items: flex-end;
+}
+.discuss .form_region .form_region3 .upload_img > div {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #0C1244;
+  margin-right: 15px;
 }
 .discuss .form_region .form_region4 {
   /* border: 1px solid red; */
@@ -733,676 +779,6 @@
   color: #FFBF44;
 }
 .discuss .form_region .form_region6 .fa-star-half-stroke {
-  /* border:1px solid red; */
-  color: #FFBF44;
-}
-
-.discuss_moon {
-  font-family: Noto Sans CJK;
-  background-color: #0C1244;
-  margin: 0 auto;
-  /* 麵包屑區塊的css */
-  /* 官方文章區塊 */
-  /* banner_1圖片部分 */
-  /* banner_2圖片區域 */
-  /* photo_1區域 */
-  /* photo_2區域 */
-  /* 文章列表區域 */
-  /* 文章列表上半部 */
-  /* 文章列表下半部 */
-  /* 以下是第一項的css */
-  /* .solid{ */
-  /* border:1px solid red; */
-  /* display: none; */
-  /* } */
-  /* 彈窗部分的CSS */
-  /* 評論區的css */
-  /* ===== 討論列表 ===== */
-  /* 討論區-彈窗-發表新文章 */
-  /* 表單部分 */
-}
-.discuss_moon .wrapper {
-  margin: 0 auto;
-  width: 1280px;
-  padding: 0;
-}
-.discuss_moon footer section .wrapper {
-  width: 400px;
-}
-.discuss_moon h1 {
-  /* border:1px solid red; */
-  text-align: center;
-  font-size: 32px;
-  color: #F5F0DD;
-}
-.discuss_moon .breadcrumb {
-  /* border:1px solid red; */
-  background-color: #D9D9D9;
-  padding: 5px 10px;
-}
-.discuss_moon .breadcrumb-list {
-  /* border:1px solid red; */
-  list-style: none;
-}
-.discuss_moon .breadcrumb-list > li {
-  /* border:1px solid red; */
-  display: inline-block;
-  margin-right: 10px;
-  color: #000000;
-}
-.discuss_moon .breadcrumb-list > li::before {
-  /* border:1px solid red; */
-  content: "/";
-  color: black;
-  margin-right: 12px;
-  font-size: 16px;
-}
-.discuss_moon .breadcrumb-list > li:first-child::before {
-  content: "";
-  margin-right: 0;
-}
-.discuss_moon .breadcrumb-list > li a {
-  text-decoration: none;
-  display: inline-block;
-  color: #000000;
-}
-.discuss_moon .breadcrumb-list > li a:hover {
-  color: #000000;
-}
-.discuss_moon .official_article {
-  /* border:1px solid red; */
-  display: flex;
-  width: 100%;
-}
-.discuss_moon .official_article .banner_1 {
-  /* border:1px solid red; */
-  width: 520px;
-  margin: 0px 40px 0px 100px;
-}
-.discuss_moon .official_article .banner_1 img {
-  /* border:1px solid red; */
-  width: 100%;
-  height: 519px;
-}
-.discuss_moon .official_article .banner_1 a {
-  text-decoration: none;
-}
-.discuss_moon .official_article .banner_1 .text_1 {
-  position: relative;
-  bottom: 260px;
-  left: 100px;
-  color: white;
-  font-size: 32px;
-  height: 0px;
-}
-.discuss_moon .official_article .banner_2 {
-  /* border:1px solid red; */
-  width: 525px;
-}
-.discuss_moon .official_article .banner_2 .photo_1 {
-  /* border:1px solid red; */
-  width: 520px;
-}
-.discuss_moon .official_article .banner_2 .photo_1 img {
-  /* border:1px solid red; */
-  width: 100%;
-  height: 240px;
-}
-.discuss_moon .official_article .banner_2 .photo_1 a {
-  text-decoration: none;
-}
-.discuss_moon .official_article .banner_2 .photo_1 .text_2 {
-  /* border:1px solid red; */
-  width: 300px;
-  position: relative;
-  bottom: 135px;
-  left: 110px;
-  font-size: 32px;
-  color: white;
-}
-.discuss_moon .official_article .banner_2 .photo_2 {
-  /* border:1px solid red; */
-  width: 520px;
-}
-.discuss_moon .official_article .banner_2 .photo_2 img {
-  /* border:1px solid red; */
-  width: 100%;
-  height: 240px;
-}
-.discuss_moon .official_article .banner_2 .photo_2 a {
-  text-decoration: none;
-}
-.discuss_moon .official_article .banner_2 .photo_2 .text_3 {
-  /* border:1px solid red; */
-  width: 300px;
-  font-size: 32px;
-  color: white;
-  position: relative;
-  bottom: 140px;
-  left: 165px;
-}
-.discuss_moon .official_article .banner_2 .more {
-  border: 1px solid #F5F0DD;
-  width: 140px;
-  height: 40px;
-  text-align: center;
-  padding-top: 20px;
-  margin-left: 378px;
-  margin-bottom: 50px;
-}
-.discuss_moon .official_article .banner_2 .more a {
-  text-decoration: none;
-  padding: 20px 30px 20px 30px;
-}
-.discuss_moon .official_article .banner_2 .more .text_4 {
-  color: #F5F0DD;
-  font-size: 16px;
-}
-.discuss_moon hr {
-  width: 1080px;
-}
-.discuss_moon h2 {
-  /* border:1px solid red; */
-  width: 105px;
-  font-size: 24px;
-  color: #F5F0DD;
-  margin-left: 100px;
-  margin-top: 25px;
-  margin-bottom: 50px;
-}
-.discuss_moon .article .article_type {
-  /* border:1px solid red; */
-  width: 1080px;
-  margin-left: 100px;
-}
-.discuss_moon .article .article_type ul {
-  /* border:1px solid red; */
-  display: flex;
-}
-.discuss_moon .article .article_type ul li {
-  border: 1px solid #F5F0DD;
-  width: 180px;
-  height: 100px;
-  text-align: center;
-  font-size: 24px;
-  border-radius: 15px 15px 0px 0px;
-  cursor: pointer;
-}
-.discuss_moon .article .article_type ul li a {
-  color: #F5F0DD;
-  text-decoration: none;
-  padding: 36px;
-  position: relative;
-  top: 40px;
-}
-.discuss_moon .article .article_type ul .li-5 {
-  margin-left: 170px;
-}
-.discuss_moon .article_list {
-  border: 1px solid #F5F0DD;
-  width: 1080px;
-  margin-left: 100px;
-  /* display: block; */
-}
-.discuss_moon .article_text {
-  /* border: 1px solid $moon_color; */
-  /* border-bottom: 1px solid $moon_color; */
-  height: 164px;
-  /* display:none; */
-}
-.discuss_moon .article_text a {
-  /* border: 1px solid red; */
-  display: flex;
-  height: 164px;
-  text-decoration: none;
-  /* display:none; */
-}
-.discuss_moon .article_list .img_1 {
-  /* border:1px solid red; */
-  width: 161px;
-  height: 97px;
-  margin-left: 36px;
-  margin-top: 30px;
-  /* display:none; */
-}
-.discuss_moon .article_list .img_1 img {
-  width: 100%;
-  height: 97px;
-  /* display:none; */
-}
-.discuss_moon .article_list .content {
-  /* border:1px solid red; */
-  width: 800px;
-}
-.discuss_moon .article_list .content .title {
-  /* border:1px solid red; */
-  margin-top: 40px;
-  margin-left: 25px;
-  font-size: 20px;
-  color: #F5F0DD;
-}
-.discuss_moon .article_list .content .comment {
-  /* border: 1px solid red; */
-  margin-top: 10px;
-  margin-left: 25px;
-  font-size: 16px;
-  color: #F5F0DD;
-}
-.discuss_moon .article_list .content .icons {
-  /* border:1px solid red; */
-  display: flex;
-  margin-top: 10px;
-  margin-left: 25px;
-}
-.discuss_moon .article_list .content .icons .icon-1 {
-  /* border:1px solid red; */
-  display: flex;
-  margin-right: 445px;
-}
-.discuss_moon .article_list .content .icons .icon-1 img {
-  width: 18px;
-  height: 17;
-  margin-right: 5px;
-}
-.discuss_moon .article_list .content .icons .icon-1 .span1 {
-  margin-top: 3px;
-  font-size: 16px;
-  color: #F5F0DD;
-}
-.discuss_moon .article_list .content .icons .icon-2 {
-  /* border:1px solid red; */
-  display: flex;
-  margin-right: 20px;
-}
-.discuss_moon .article_list .content .icons .icon-2 img {
-  width: 18px;
-  height: 18;
-  margin-right: 5px;
-}
-.discuss_moon .article_list .content .icons .icon-2 .span2 {
-  margin-top: 3px;
-  font-size: 16px;
-  color: #F5F0DD;
-}
-.discuss_moon .article_list .content .icons .icon-3 {
-  /* border:1px solid red; */
-  display: flex;
-}
-.discuss_moon .article_list .content .icons .icon-3 img {
-  width: 18px;
-  height: 18;
-  margin-right: 5px;
-}
-.discuss_moon .article_list .content .icons .icon-3 .span3 {
-  margin-top: 3px;
-  font-size: 16px;
-  color: #F5F0DD;
-}
-.discuss_moon .pop-up-out {
-  /* border:1px solid red; */
-  position: relative;
-  bottom: 1420px;
-}
-.discuss_moon .pop-up {
-  border: 1px solid rgb(170, 170, 170);
-  padding-top: 20px;
-  padding-bottom: 80px;
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 200px;
-  width: 880px;
-  z-index: 3;
-  background-color: #0C1244;
-  display: none;
-  /* display:block */
-}
-.discuss_moon .pop-up .disappear {
-  /* border: 1px solid red; */
-  margin-left: 835px;
-}
-.discuss_moon .pop-up .icons {
-  /* border:1px solid red; */
-  display: flex;
-  width: 802px;
-  margin-left: 37px;
-}
-.discuss_moon .pop-up .icons .icon-1 {
-  display: flex;
-  margin-right: 20px;
-}
-.discuss_moon .pop-up .icons .icon-1 .span1 {
-  margin-left: 5px;
-  padding-top: 5px;
-}
-.discuss_moon .pop-up .icons .icon-2 {
-  display: flex;
-}
-.discuss_moon .pop-up .icons .icon-2 .span2 {
-  margin-left: 5px;
-  padding-top: 5px;
-}
-.discuss_moon .hr1 {
-  width: 802px;
-}
-.discuss_moon .pop-up .icons2 {
-  /* border:1px solid red; */
-  display: flex;
-  width: 802px;
-  margin-left: 37px;
-  margin-bottom: 10px;
-}
-.discuss_moon .pop-up .icons2 .span3 {
-  /* border:1px solid red; */
-  margin-left: 5px;
-  font-size: 20px;
-}
-.discuss_moon .pop-up .discuss-region {
-  /* border:1px solid red; */
-  width: 802px;
-  margin-left: 37px;
-  margin-bottom: 40px;
-}
-.discuss_moon .pop-up .discuss-region .comment-region {
-  border: 1px solid #F5F0DD;
-  margin-left: 30px;
-  border-radius: 10px;
-  padding: 10px;
-}
-.discuss_moon .hr2 {
-  width: 878px;
-}
-.discuss_moon .task_container {
-  /* border:1px solid red; */
-}
-.discuss_moon .task_container .title1 {
-  font-size: 24px;
-  margin-top: 25px;
-  margin-left: 35px;
-}
-.discuss_moon .task_container .task_add_block {
-  /* border:1px solid red; */
-  margin-left: 35px;
-  margin-top: 10px;
-  font-size: 0;
-  transition: transform 0.5s, box-shadow 0.5s;
-}
-.discuss_moon .task_container .task_add_block .-on {
-  box-shadow: 0 0 5px gray;
-  transform: scale(1.01);
-  transform-origin: center center;
-}
-.discuss_moon .task_container .task_add_block .task_name {
-  /* border:1px solid red; */
-  width: calc(100% - 60px);
-  border: 1px solid lightgray;
-  border-radius: 3px 0 0 3px;
-  height: 120px;
-  font-size: 20px;
-  padding: 5px 10px;
-  outline: none;
-  display: inline-block;
-  vertical-align: top;
-}
-.discuss_moon .task_container .task_add_block .task_name::placeholder {
-  color: lightgray;
-}
-.discuss_moon .task_container .task_add_block .task_add {
-  /* border: 1px solid red; */
-  display: inline-block;
-  width: 141px;
-  height: 52px;
-  margin-left: 666px;
-  margin-top: 20px;
-  vertical-align: top;
-  border: 1px solid lightgray;
-  border-left: 0;
-  background-color: white;
-  box-shadow: none;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 0 3px 3px 0;
-}
-.discuss_moon .task_container .task_add_block .task_add:active {
-  box-shadow: 1px 1px 3px lightgray inset, -1px -1px 3px lightgray inset;
-  background-color: #fcfcfc;
-  /* font-size: 1.5rem; */
-}
-.discuss_moon .task_container .task_list_parent {
-  /* border:1px solid red; */
-  margin-top: 30px;
-  margin-left: 35px;
-}
-.discuss_moon .task_container .task_list_parent .task_list {
-  /* border:1px solid red; */
-  margin: 0;
-  margin-right: 42px;
-  padding: 0;
-  list-style: none;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li {
-  /* border:1px solid red; */
-  margin-bottom: 20px;
-  border-bottom: 1px solid gray;
-  padding-bottom: 20px;
-  opacity: 1;
-  transition: opacity 1s;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li.fade_out {
-  opacity: 0;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li:first-child {
-  border-top: 1px solid black;
-  padding-top: 20px;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li:first-child button.btn_up {
-  /* border:1px solid red; */
-  background-color: lightgray !important;
-  cursor: not-allowed !important;
-  color: gray;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li:last-child button.btn_down {
-  /* border:1px solid red; */
-  background-color: lightgray !important;
-  cursor: not-allowed !important;
-  color: gray;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex {
-  /* border:1px solid red; */
-  display: flex;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > div {
-  /* border: 1px solid blue; */
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .left_block {
-  /* border:1px solid red; */
-  width: 0px;
-  flex-shrink: 0;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex {
-  display: flex;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex > button {
-  flex-grow: 1;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-  background: none;
-  background-color: white;
-  border: 0;
-  cursor: pointer;
-  border: 1px solid #eee;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .middle_block {
-  font-size: 1.8rem;
-  flex-grow: 1;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
-  margin: 0;
-  font-size: 16px;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
-  width: 100px;
-  flex-shrink: 0;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex {
-  display: flex;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button {
-  flex-grow: 1;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-  background: none;
-  background-color: #faeab1;
-  border: 0;
-  cursor: pointer;
-  border: 1px solid #eee;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
-  /* border:1px solid red; */
-  width: 100%;
-  border: 1px solid lightgray;
-  border-radius: 3px 0 0 3px;
-  height: 40px;
-  font-size: 16px;
-  padding: 5px 10px;
-  outline: none;
-}
-.discuss_moon .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
-  color: lightgray;
-}
-.discuss_moon .-none {
-  display: none;
-}
-.discuss_moon .form_region {
-  /* border:1px solid $moon_color; */
-  background-color: #0C1244;
-  z-index: 3;
-  padding-top: 20px;
-  padding-bottom: 80px;
-  margin-top: 0px;
-  margin-left: 200px;
-  width: 880px;
-  display: none;
-  position: relative;
-  bottom: 820px;
-}
-.discuss_moon .form_region .title2 {
-  /* border: 1px solid red; */
-  font-size: 32px;
-  color: #F5F0DD;
-  margin-left: 20px;
-}
-.discuss_moon .form_region .absolute {
-  border: 1px solid #F5F0DD;
-  background-color: #0C1244;
-  position: absolute;
-  height: 950px;
-  width: 879px;
-  left: 0px;
-}
-.discuss_moon .form_region .form_region1 {
-  /* border: 1px solid red; */
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region1 .name1 {
-  margin-right: 25px;
-}
-.discuss_moon .form_region .form_region1 .write1 {
-  height: 50px;
-  width: 662px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region2 {
-  /* border: 1px solid red; */
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region2 .name2 {
-  /* border:1px solid red; */
-  margin-right: 25px;
-}
-.discuss_moon .form_region .form_region2 .choose {
-  height: 50px;
-  width: 251px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region3 {
-  /* border: 1px solid red; */
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region3 .name3 {
-  /* border:1px solid red; */
-  margin-right: 25px;
-}
-.discuss_moon .form_region .form_region4 {
-  /* border: 1px solid red; */
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-.discuss_moon .form_region .form_region4 .name4 {
-  /* border:1px solid red; */
-  margin-right: 25px;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region4 .write2 {
-  /* border:1px solid red; */
-  height: 470px;
-  width: 801px;
-  max-height: 470px;
-  max-width: 801px;
-  resize: none;
-  font-size: 20px;
-}
-.discuss_moon .form_region .form_region5 {
-  /* border:1px solid red; */
-  margin-left: 697px;
-}
-.discuss_moon .form_region .form_region5 .button {
-  width: 140px;
-  height: 50px;
-  font-size: 20px;
-}
-.discuss_moon .form_region .disappear2 {
-  /* border:1px solid red; */
-  margin-top: 20px;
-  margin-left: 832px;
-}
-.discuss_moon .form_region .form_region6 {
-  margin-left: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-.discuss_moon .form_region .form_region6 .name6 {
-  margin-right: 25px;
-}
-.discuss_moon .form_region .form_region6 .fa-star {
-  /* border:1px solid red; */
-  color: #FFBF44;
-}
-.discuss_moon .form_region .form_region6 .fa-star-half-stroke {
   /* border:1px solid red; */
   color: #FFBF44;
 }
