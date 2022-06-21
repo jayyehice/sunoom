@@ -18,6 +18,7 @@ new Vue({
         // const url = './php/information_tmp.php';
         fetch(url)
             .then(response => response.json())
+            // .then(text => console.log(text));
             .then(text => this.set_list = text);
 
     },
