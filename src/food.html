@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 @@include('./layout/header_footer_css_link.html')
     <title>食</title>
 </head>
@@ -292,14 +293,19 @@
         <div class="wrapper_bottom">
             <h3>日島美食地圖 | Sunoom Map</h3>
             
-            <!-- <img class="map" src="images/food/sunmap.png" alt=""> -->
+            <!-- 美食地圖 -->
             <div class="map">
                 <img class="juice" src="img/food/juice.png" alt="">
                 <img class="lobster" src="img/food/lobster.png" alt="">
                 <img class="bbq" src="img/food/bbq.png" alt="">
                 <img class="hamberger" src="img/food/hamberger.png" alt="">
+
+                <!-- 燈箱開啟時的深色背景 -->
+                <div class="backdrop"></div>
+                <!-- 地圖燈箱 -->
                 <div class="iconBox">
-                    <i class="fa-solid fa-circle-xmark"></i>
+                    <!-- 燈箱關閉按鈕 -->
+                    <i class="fa-solid fa-circle-xmark close"></i>
                     <img src="img/food/hamberger.png" alt="">
                     <p>Buger Shop</p>
                     <p class="iconBoxtime">営業時間: 12:00-20:00</p>
@@ -311,5 +317,6 @@
     </main>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
+    <script src="./js/food.js"></script>
 </body>
 </html> 

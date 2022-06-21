@@ -1843,7 +1843,7 @@
     .discuss .pop-up-out {
       /* border:1px solid red; */
       position: relative;
-      bottom: 1420px;
+      bottom: 1550px;
       width: 550px;
     }
     .discuss .pop-up {
@@ -2238,7 +2238,7 @@
     width: 530px;
     display: none;
     position: relative;
-    bottom: 1040px;
+    bottom: 1187px;
   }
 
   .discuss .form_region .title2 {

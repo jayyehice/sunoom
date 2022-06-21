@@ -111,7 +111,7 @@
 }
 .land_tour main .slogan_banner .deer {
   bottom: 0px;
-  left: 0px;
+  left: -300px;
 }
 .land_tour main .slogan_banner .slogan {
   box-sizing: border-box;
@@ -148,9 +148,17 @@
 .land_tour main .ecotourism ul li {
   flex-basis: 0;
   flex-grow: 1;
+  overflow: hidden;
+  transition: all 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 540px;
+}
+.land_tour main .ecotourism ul li:hover {
+  flex-grow: 2;
 }
 .land_tour main .ecotourism ul li img {
-  width: 100%;
+  height: 100%;
 }
 .land_tour main .ecotourism .intro_word {
   width: 300px;
@@ -217,8 +225,8 @@
 }
 .land_tour main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
-  top: -100px;
-  right: 120px;
+  top: 0px;
+  right: -480px;
 }
 .land_tour main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
   position: absolute;
@@ -237,8 +245,8 @@
 }
 .land_tour main .activity_intro ul li:nth-child(2) #butterfly_01 {
   position: absolute;
-  top: 80px;
-  left: 220px;
+  top: 0px;
+  left: -80px;
 }
 .land_tour main .activity_intro ul li:nth-child(2) #branch_01 {
   position: absolute;
@@ -337,9 +345,12 @@
 }
 .land_tour main .instagram .wrapper ul li img {
   margin-bottom: 20px;
+  opacity: 0.7;
 }
 .land_tour main .instagram .wrapper ul li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .land_tour main .instagram #ig_pop_up {
   display: none;
@@ -501,7 +512,7 @@
 }
 .land_tour_moon main .slogan_banner .deer {
   bottom: 0px;
-  left: 0px;
+  left: -300px;
 }
 .land_tour_moon main .slogan_banner .slogan {
   box-sizing: border-box;
@@ -538,9 +549,17 @@
 .land_tour_moon main .ecotourism ul li {
   flex-basis: 0;
   flex-grow: 1;
+  overflow: hidden;
+  transition: all 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 540px;
+}
+.land_tour_moon main .ecotourism ul li:hover {
+  flex-grow: 2;
 }
 .land_tour_moon main .ecotourism ul li img {
-  width: 100%;
+  height: 100%;
 }
 .land_tour_moon main .ecotourism .intro_word {
   width: 300px;
@@ -607,8 +626,8 @@
 }
 .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
-  top: -100px;
-  right: 120px;
+  top: 0px;
+  right: -480px;
 }
 .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #cloud_01 {
   position: absolute;
@@ -627,8 +646,8 @@
 }
 .land_tour_moon main .activity_intro ul li:nth-child(2) #butterfly_01 {
   position: absolute;
-  top: 80px;
-  left: 220px;
+  top: 0px;
+  left: -80px;
 }
 .land_tour_moon main .activity_intro ul li:nth-child(2) #branch_01 {
   position: absolute;
@@ -727,9 +746,12 @@
 }
 .land_tour_moon main .instagram .wrapper ul li img {
   margin-bottom: 20px;
+  opacity: 0.7;
 }
 .land_tour_moon main .instagram .wrapper ul li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .land_tour_moon main .instagram #ig_pop_up {
   display: none;
@@ -802,6 +824,7 @@
   }
   .land_tour main .slogan_banner .deer {
     width: 63%;
+    left: -10px;
   }
   .land_tour main .slogan_banner .slogan {
     width: 50%;
@@ -812,7 +835,7 @@
   }
   .land_tour main .slogan_banner .slogan .slogan_h5 {
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
   }
   .land_tour main .slogan_banner .slogan .slogan_h5 h5 {
@@ -830,6 +853,9 @@
   }
   .land_tour main .ecotourism ul {
     order: 1;
+  }
+  .land_tour main .ecotourism ul li {
+    height: 259px;
   }
   .land_tour main .ecotourism .intro_word {
     position: static;
@@ -1006,6 +1032,232 @@
     width: 100%;
   }
   .land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+    width: 40px;
+  }
+
+  .land_tour_moon main .breadcrumbs .wrapper {
+    width: 100%;
+  }
+  .land_tour_moon main .slogan_banner {
+    padding-top: 170px;
+    height: 335px;
+  }
+  .land_tour_moon main .slogan_banner .leaf_left {
+    width: 25%;
+  }
+  .land_tour_moon main .slogan_banner .leaf_right {
+    width: 63%;
+  }
+  .land_tour_moon main .slogan_banner .deer {
+    width: 63%;
+    left: -10px;
+  }
+  .land_tour_moon main .slogan_banner .slogan {
+    width: 50%;
+    margin-left: 35%;
+  }
+  .land_tour_moon main .slogan_banner .slogan h3:first-child {
+    display: none;
+  }
+  .land_tour_moon main .slogan_banner .slogan .slogan_h5 {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .land_tour_moon main .slogan_banner .slogan .slogan_h5 h5 {
+    margin-left: 0px;
+  }
+  .land_tour_moon main .slogan_banner .slogan .slogan_h5 h5:first-child {
+    margin-bottom: 30px;
+  }
+  .land_tour_moon main .ecotourism {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .land_tour_moon main .ecotourism ul {
+    order: 1;
+  }
+  .land_tour_moon main .ecotourism ul li {
+    height: 259px;
+  }
+  .land_tour_moon main .ecotourism .intro_word {
+    position: static;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transform: translate(0, 0);
+    border: 1px solid #0C1244;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+  }
+  .land_tour_moon main .ecotourism .intro_word h3 {
+    margin-bottom: 30px;
+  }
+  .land_tour_moon main .activity_intro {
+    margin-top: 50px;
+  }
+  .land_tour_moon main .activity_intro ul {
+    padding-top: 0px;
+  }
+  .land_tour_moon main .activity_intro ul li {
+    margin-bottom: 50px;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper {
+    width: calc(100% - 100px);
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div {
+    width: 65%;
+    text-align: left;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div img {
+    width: 100%;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div > p {
+    width: 100%;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment {
+    width: 170px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 20px;
+    line-height: 1;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment .star_block, .land_tour_moon main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper #cloud_01 {
+    display: none;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
+    width: 150px;
+    top: 150px;
+    right: 30px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #cloud_02 {
+    top: 370px;
+    left: -260px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(2) .wrapper > div {
+    margin-left: auto;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(2) #branch_01 {
+    width: 230px;
+    left: -86px;
+    top: 145px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(2) #butterfly_01 {
+    width: 50px;
+    top: 177px;
+    left: 88px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(3) {
+    margin-bottom: 50px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(3) #branch_02 {
+    width: 150px;
+    top: 40px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(4) {
+    margin-bottom: 50px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(4) .wrapper > div {
+    margin-left: auto;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(4) #branch_03 {
+    width: 150px;
+    top: 80px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(5) {
+    margin-bottom: 200px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(5) .wrapper > div #butter_02 {
+    width: 50px;
+    top: 130px;
+    right: -50px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(5) .wrapper > div #flower_01 {
+    width: 100px;
+    top: 120px;
+    right: -50px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(5) #branch_04 {
+    width: 150px;
+    top: -40px;
+    right: -13px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(5) #branch_05 {
+    width: 150px;
+    top: -8px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(6) #bear_01 {
+    width: 270px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(6) #branch_06 {
+    width: 150px;
+    top: -80px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(6) #branch_07 {
+    display: block;
+    position: absolute;
+    width: 150px;
+    top: -190px;
+    right: -7px;
+  }
+  .land_tour_moon main .activity_intro ul li:nth-child(6) #branch_08 {
+    display: block;
+    position: absolute;
+    width: 150px;
+    top: -156px;
+    right: -6px;
+  }
+  .land_tour_moon main .instagram .wrapper {
+    width: calc(100% - 100px);
+  }
+  .land_tour_moon main .instagram .wrapper .title img {
+    width: 36px;
+    margin-right: 13px;
+  }
+  .land_tour_moon main .instagram .wrapper .title h3 {
+    font-size: 24px;
+  }
+  .land_tour_moon main .instagram .wrapper ul li {
+    width: 49%;
+  }
+  .land_tour_moon main .instagram .wrapper ul li img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .land_tour_moon main .instagram .wrapper ul li:nth-child(1) img:nth-child(2), .land_tour_moon main .instagram .wrapper ul li:nth-child(1) img:nth-child(3), .land_tour_moon main .instagram .wrapper ul li:nth-child(3) img:nth-child(2), .land_tour_moon main .instagram .wrapper ul li:nth-child(3) img:nth-child(3) {
+    width: 48%;
+  }
+  .land_tour_moon main .instagram .wrapper ul li:nth-child(2) img:nth-child(2), .land_tour_moon main .instagram .wrapper ul li:nth-child(2) img:nth-child(1), .land_tour_moon main .instagram .wrapper ul li:nth-child(4) img:nth-child(2), .land_tour_moon main .instagram .wrapper ul li:nth-child(4) img:nth-child(1) {
+    width: 48%;
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content {
+    flex-direction: column;
+    width: calc(100% - 100px);
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+    width: 100%;
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+    max-width: calc(100% - 40px);
+    margin-top: 20px;
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+    line-height: 40px;
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+    width: 100%;
+  }
+  .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
     width: 40px;
   }
 }
