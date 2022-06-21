@@ -158,6 +158,19 @@ function imgSwitch(){
 
   });
 
+$(function(){
+
+  $("#hamL").click(function(e){
+    alert("tt");
+    $("#hamL").hide;
+    $("#hamO").show;
+    e.preventDefault();
+
+  })
+
+})
+
+
 // $(function(){
   
 //     // 按鈕狀態的切換
