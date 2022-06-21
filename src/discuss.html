@@ -256,7 +256,7 @@
 
     <!-- 發表新文章的區塊 -->
     <div class="form_region">
-        <form action="" method="post" class="absolute">
+        <form action="./php/discuss_new_article.php" method="post" enctype="multipart/form-data" class="absolute">
             <div class="disappear2">
                 <a href="#" class="png1">
                     <img src="img/discuss/x-mark.png" alt="">
@@ -266,7 +266,7 @@
             <p class="title2">發表新文章</p>
             <div class="form_region1">
                 <span class="name1">標題名稱</span>
-                <input type="text" class="write1">
+                <input type="text" class="write1" name="title">
             </div>
             <div class="form_region2">
                 <span class="name2">文章類別</span>
@@ -292,12 +292,12 @@
                     <div>
                         <img src="" alt="">
                     </div>
-                    <input type="file" name="saffron_file">
+                    <input type="file" name="article_img">
                 </div>
             </div>
             <div class="form_region4">
                 <p class="name4">文章內容</p>
-                <textarea name="" id="" cols="30" rows="10" class="write2"></textarea>
+                <textarea name="article_content" id="" cols="30" rows="10" class="write2"></textarea>
             </div>
             <div class="form_region5">
                 <input type="submit" value="發表文章" class="button">
