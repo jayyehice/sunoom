@@ -5,8 +5,6 @@
   background-color: #F5F0DD;
   margin: 0 auto;
   /* 彈窗部分的CSS */
-  /* 評論區的css */
-  /* ===== 討論列表 ===== */
   /* 討論區-彈窗-發表新文章 */
   /* 表單部分 */
 }
@@ -391,8 +389,10 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  /* 評論區的css */
+  /* ===== 討論列表 ===== */
 }
-.discuss .pop-up {
+.discuss .pop-up-out .pop-up {
   border: 1px solid rgb(170, 170, 170);
   box-sizing: border-box;
   padding-top: 20px;
@@ -403,46 +403,46 @@
   background-color: #F5F0DD;
   overflow: auto;
 }
-.discuss .pop-up h3 {
+.discuss .pop-up-out .pop-up h3 {
   text-align: center;
 }
-.discuss .pop-up .hr2 {
+.discuss .pop-up-out .pop-up .hr2 {
   width: calc(100% - 2px);
 }
-.discuss .pop-up .disappear {
+.discuss .pop-up-out .pop-up .disappear {
   /* border: 1px solid red; */
   margin-left: 835px;
 }
-.discuss .pop-up .icons {
+.discuss .pop-up-out .pop-up .icons {
   /* border:1px solid red; */
   display: flex;
   width: 802px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.discuss .pop-up .icons .icon-1 {
+.discuss .pop-up-out .pop-up .icons .icon-1 {
   display: flex;
   margin-right: 20px;
 }
-.discuss .pop-up .icons .icon-1 .span1 {
+.discuss .pop-up-out .pop-up .icons .icon-1 .span1 {
   margin-left: 5px;
   padding-top: 5px;
   font-size: 16rem;
   letter-spacing: 3rem;
 }
-.discuss .pop-up .icons .icon-2 {
+.discuss .pop-up-out .pop-up .icons .icon-2 {
   display: flex;
 }
-.discuss .pop-up .icons .icon-2 .span2 {
+.discuss .pop-up-out .pop-up .icons .icon-2 .span2 {
   margin-left: 5px;
   padding-top: 5px;
   font-size: 16rem;
   letter-spacing: 3rem;
 }
-.discuss .hr1 {
+.discuss .pop-up-out .hr1 {
   width: 802px;
 }
-.discuss .pop-up .icons2 {
+.discuss .pop-up-out .pop-up .icons2 {
   /* border:1px solid red; */
   display: flex;
   width: 802px;
@@ -450,41 +450,41 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.discuss .pop-up .icons2 .span3 {
+.discuss .pop-up-out .pop-up .icons2 .span3 {
   /* border:1px solid red; */
   margin-left: 5px;
   font-size: 20px;
 }
-.discuss .pop-up .discuss-region {
+.discuss .pop-up-out .pop-up .discuss-region {
   /* border:1px solid red; */
   width: 802px;
   margin-left: 37px;
   margin-bottom: 40px;
   display: flex;
 }
-.discuss .pop-up .discuss-region .comment-region {
+.discuss .pop-up-out .pop-up .discuss-region .comment-region {
   border: 1px solid #0C1244;
   margin-left: 30px;
   border-radius: 10px;
   flex-grow: 1;
 }
-.discuss .pop-up .discuss-region .comment-region p {
+.discuss .pop-up-out .pop-up .discuss-region .comment-region p {
   padding: 10px;
   width: 100%;
 }
-.discuss .pop-up .discuss-region img {
+.discuss .pop-up-out .pop-up .discuss-region img {
   width: 220px;
   height: 100%;
 }
-.discuss .task_container {
+.discuss .pop-up-out .task_container {
   /* border:1px solid red; */
 }
-.discuss .task_container .title1 {
+.discuss .pop-up-out .task_container .title1 {
   font-size: 24px;
   margin-top: 25px;
   margin-left: 35px;
 }
-.discuss .task_container .task_add_block {
+.discuss .pop-up-out .task_container .task_add_block {
   /* border:1px solid red; */
   width: 802px;
   margin: 0 auto;
@@ -492,12 +492,12 @@
   font-size: 0;
   transition: transform 0.5s, box-shadow 0.5s;
 }
-.discuss .task_container .task_add_block .-on {
+.discuss .pop-up-out .task_container .task_add_block .-on {
   box-shadow: 0 0 5px gray;
   transform: scale(1.01);
   transform-origin: center center;
 }
-.discuss .task_container .task_add_block .task_name {
+.discuss .pop-up-out .task_container .task_add_block .task_name {
   /* border:1px solid red; */
   width: 100%;
   border: 1px solid lightgray;
@@ -510,10 +510,10 @@
   display: inline-block;
   vertical-align: top;
 }
-.discuss .task_container .task_add_block .task_name::placeholder {
+.discuss .pop-up-out .task_container .task_add_block .task_name::placeholder {
   color: lightgray;
 }
-.discuss .task_container .task_add_block .task_add {
+.discuss .pop-up-out .task_container .task_add_block .task_add {
   /* border: 1px solid red; */
   display: block;
   width: 141px;
@@ -530,24 +530,24 @@
   outline: none;
   border-radius: 0 3px 3px 0;
 }
-.discuss .task_container .task_add_block .task_add:active {
+.discuss .pop-up-out .task_container .task_add_block .task_add:active {
   box-shadow: 1px 1px 3px lightgray inset, -1px -1px 3px lightgray inset;
   background-color: #fcfcfc;
   /* font-size: 1.5rem; */
 }
-.discuss .task_container .task_list_parent {
+.discuss .pop-up-out .task_container .task_list_parent {
   /* border:1px solid red; */
   margin-top: 30px;
   margin-left: 35px;
 }
-.discuss .task_container .task_list_parent .task_list {
+.discuss .pop-up-out .task_container .task_list_parent .task_list {
   /* border:1px solid red; */
   margin: 0;
   margin-right: 42px;
   padding: 0;
   list-style: none;
 }
-.discuss .task_container .task_list_parent .task_list > li {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li {
   /* border:1px solid red; */
   margin-bottom: 20px;
   border-bottom: 1px solid gray;
@@ -555,45 +555,45 @@
   opacity: 1;
   transition: opacity 1s;
 }
-.discuss .task_container .task_list_parent .task_list > li.fade_out {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li.fade_out {
   opacity: 0;
 }
-.discuss .task_container .task_list_parent .task_list > li:first-child {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li:first-child {
   border-top: 1px solid black;
   padding-top: 20px;
 }
-.discuss .task_container .task_list_parent .task_list > li:first-child button.btn_up {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li:first-child button.btn_up {
   /* border:1px solid red; */
   background-color: lightgray !important;
   cursor: not-allowed !important;
   color: gray;
 }
-.discuss .task_container .task_list_parent .task_list > li:last-child {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li:last-child {
   margin-bottom: 0;
   border-bottom: 0;
 }
-.discuss .task_container .task_list_parent .task_list > li:last-child button.btn_down {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li:last-child button.btn_down {
   /* border:1px solid red; */
   background-color: lightgray !important;
   cursor: not-allowed !important;
   color: gray;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex {
   /* border:1px solid red; */
   display: flex;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > div {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > div {
   /* border: 1px solid blue; */
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .left_block {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block {
   /* border:1px solid red; */
   width: 0px;
   flex-shrink: 0;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex {
   display: flex;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex > button {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex > button {
   flex-grow: 1;
   outline: none;
   height: 40px;
@@ -606,24 +606,24 @@
   cursor: pointer;
   border: 1px solid #eee;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .middle_block {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block {
   font-size: 1.8rem;
   flex-grow: 1;
   padding-left: 10px;
   padding-right: 10px;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
   margin: 0;
   font-size: 16px;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
   width: 100px;
   flex-shrink: 0;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex {
   display: flex;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button {
   flex-grow: 1;
   outline: none;
   height: 40px;
@@ -636,7 +636,7 @@
   cursor: pointer;
   border: 1px solid #eee;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
   /* border:1px solid red; */
   width: 100%;
   border: 1px solid lightgray;
@@ -646,10 +646,10 @@
   padding: 5px 10px;
   outline: none;
 }
-.discuss .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
   color: lightgray;
 }
-.discuss .-none {
+.discuss .pop-up-out .-none {
   display: none;
 }
 .discuss .form_region {
@@ -674,41 +674,57 @@
   overflow: auto;
   color: #0C1244;
 }
-.discuss .form_region .title2 {
-  font-size: 32px;
+.discuss .form_region .absolute .title2 {
   margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.discuss .form_region .form_region1 {
+.discuss .form_region .absolute .title2 .author_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.discuss .form_region .absolute .title2 .author_data img {
+  height: 21px;
+  margin-right: 10px;
+}
+.discuss .form_region .absolute .title2 .author_data h4 {
+  line-height: 1;
+  height: 21px;
+}
+.discuss .form_region .absolute .form_region1 {
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 24px;
 }
-.discuss .form_region .form_region1 .name1 {
+.discuss .form_region .absolute .form_region1 .name1 {
   margin-right: 25px;
 }
-.discuss .form_region .form_region1 .write1 {
+.discuss .form_region .absolute .form_region1 .write1 {
   height: 50px;
   width: 662px;
   font-size: 24px;
 }
-.discuss .form_region .form_region2 {
+.discuss .form_region .absolute .form_region2 {
   /* border: 1px solid red; */
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 24px;
 }
-.discuss .form_region .form_region2 .name2 {
+.discuss .form_region .absolute .form_region2 .name2 {
   /* border:1px solid red; */
   margin-right: 25px;
 }
-.discuss .form_region .form_region2 .choose {
+.discuss .form_region .absolute .form_region2 .choose {
   height: 50px;
   width: 251px;
   font-size: 24px;
 }
-.discuss .form_region .form_region3 {
+.discuss .form_region .absolute .form_region3 {
   /* border: 1px solid red; */
   margin-left: 30px;
   margin-top: 25px;
@@ -716,33 +732,40 @@
   font-size: 24px;
   display: flex;
 }
-.discuss .form_region .form_region3 .name3 {
+.discuss .form_region .absolute .form_region3 .name3 {
   /* border:1px solid red; */
   margin-right: 25px;
 }
-.discuss .form_region .form_region3 .upload_img {
+.discuss .form_region .absolute .form_region3 .upload_img {
   display: flex;
   align-items: flex-end;
 }
-.discuss .form_region .form_region3 .upload_img > div {
+.discuss .form_region .absolute .form_region3 .upload_img > div {
   width: 250px;
   height: 250px;
   border: 1px solid #0C1244;
   margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.discuss .form_region .form_region4 {
+.discuss .form_region .absolute .form_region3 .upload_img > div img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.discuss .form_region .absolute .form_region4 {
   /* border: 1px solid red; */
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.discuss .form_region .form_region4 .name4 {
+.discuss .form_region .absolute .form_region4 .name4 {
   /* border:1px solid red; */
   margin-right: 25px;
   margin-bottom: 10px;
   font-size: 24px;
 }
-.discuss .form_region .form_region4 .write2 {
+.discuss .form_region .absolute .form_region4 .write2 {
   /* border:1px solid red; */
   height: 470px;
   width: 801px;
@@ -751,34 +774,46 @@
   resize: none;
   font-size: 20px;
 }
-.discuss .form_region .form_region5 {
+.discuss .form_region .absolute .form_region5 {
   /* border:1px solid red; */
   margin-left: 697px;
 }
-.discuss .form_region .form_region5 .button {
+.discuss .form_region .absolute .form_region5 #new_article_btn {
+  margin-top: 30px;
+  color: #0C1244;
+  text-align: center;
+  line-height: 50px;
   width: 140px;
-  height: 50px;
-  font-size: 20px;
+  border: 1px solid #0C1244;
+  box-sizing: border-box;
 }
-.discuss .form_region .disappear2 {
+.discuss .form_region .absolute .form_region5 #new_article_btn:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+  cursor: pointer;
+}
+.discuss .form_region .absolute .form_region5 #new_article_submit_btn, .discuss .form_region .absolute .form_region5 #authorID {
+  display: none;
+}
+.discuss .form_region .absolute .disappear2 {
   /* border:1px solid red; */
   margin-top: 20px;
   margin-left: 832px;
 }
-.discuss .form_region .form_region6 {
+.discuss .form_region .absolute .form_region6 {
   margin-left: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
   font-size: 24px;
 }
-.discuss .form_region .form_region6 .name6 {
+.discuss .form_region .absolute .form_region6 .name6 {
   margin-right: 25px;
 }
-.discuss .form_region .form_region6 .fa-star {
+.discuss .form_region .absolute .form_region6 .fa-star {
   /* border:1px solid red; */
   color: #FFBF44;
 }
-.discuss .form_region .form_region6 .fa-star-half-stroke {
+.discuss .form_region .absolute .form_region6 .fa-star-half-stroke {
   /* border:1px solid red; */
   color: #FFBF44;
 }
@@ -1329,7 +1364,7 @@
   }
 
   /* 發表新文章區塊(表單) */
-  .discuss .form_region {
+  .discuss {
     /* border:1px solid $moon_color; */
     background-color: #F5F0DD;
     z-index: 3;
@@ -1338,12 +1373,11 @@
     margin-top: 0px;
     margin-left: 10px;
     width: 530px;
-    display: none;
     position: relative;
     bottom: 1040px;
   }
 
-  .discuss .form_region .title2 {
+  .discuss .title2 {
     /* border: 1px solid red; */
     font-size: 32px;
     color: #0C1244;
@@ -1351,7 +1385,7 @@
     text-align: center;
   }
 
-  .discuss .form_region .absolute {
+  .discuss .absolute {
     border: 1px solid #0C1244;
     background-color: #F5F0DD;
     position: absolute;
@@ -1360,7 +1394,7 @@
     left: 0px;
   }
 
-  .discuss .form_region .form_region1 {
+  .discuss .form_region1 {
     /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
@@ -1368,17 +1402,17 @@
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region1 .name1 {
+  .discuss .form_region1 .name1 {
     margin-right: 25px;
   }
 
-  .discuss .form_region .form_region1 .write1 {
+  .discuss .form_region1 .write1 {
     height: 60px;
     width: 310px;
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region2 {
+  .discuss .form_region2 {
     /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
@@ -1386,18 +1420,18 @@
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region2 .name2 {
+  .discuss .form_region2 .name2 {
     /* border:1px solid red; */
     margin-right: 25px;
   }
 
-  .discuss .form_region .form_region2 .choose {
+  .discuss .form_region2 .choose {
     height: 50px;
     width: 318px;
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region3 {
+  .discuss .form_region3 {
     /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
@@ -1405,26 +1439,26 @@
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region3 .name3 {
+  .discuss .form_region3 .name3 {
     /* border:1px solid red; */
     margin-right: 25px;
   }
 
-  .discuss .form_region .form_region4 {
+  .discuss .form_region4 {
     /* border: 1px solid red; */
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
   }
 
-  .discuss .form_region .form_region4 .name4 {
+  .discuss .form_region4 .name4 {
     /* border:1px solid red; */
     margin-right: 25px;
     margin-bottom: 10px;
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region4 .write2 {
+  .discuss .form_region4 .write2 {
     /* border:1px solid red; */
     height: 470px;
     width: 476px;
@@ -1434,41 +1468,41 @@
     font-size: 20px;
   }
 
-  .discuss .form_region .form_region5 {
+  .discuss .form_region5 {
     /* border:1px solid red; */
     margin-left: 125px;
   }
 
-  .discuss .form_region .form_region5 .button {
+  .discuss .form_region5 .button {
     width: 300px;
     height: 50px;
     font-size: 20px;
     border-radius: 30px;
   }
 
-  .discuss .form_region .disappear2 {
+  .discuss .disappear2 {
     /* border:1px solid red; */
     margin-top: 20px;
     margin-left: 475px;
   }
 
-  .discuss .form_region .form_region6 {
+  .discuss .form_region6 {
     margin-left: 30px;
     margin-top: 25px;
     margin-bottom: 15px;
     font-size: 24px;
   }
 
-  .discuss .form_region .form_region6 .name6 {
+  .discuss .form_region6 .name6 {
     margin-right: 25px;
   }
 
-  .discuss .form_region .form_region6 .fa-star {
+  .discuss .form_region6 .fa-star {
     /* border:1px solid red; */
     color: #FFBF44;
   }
 
-  .discuss .form_region .form_region6 .fa-star-half-stroke {
+  .discuss .form_region6 .fa-star-half-stroke {
     /* border:1px solid red; */
     color: #FFBF44;
   }

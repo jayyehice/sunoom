@@ -18,7 +18,7 @@
     @@include('./layout/header.html')
     <div class="wrapper">
         <!-- <header></header> -->
-        <main>
+        <main id="article">
             <h3>討論區</h3>
             <!-- <h1 class="big-title"></h1> -->
             <!-- 麵包屑區域 -->
@@ -111,7 +111,7 @@
             <hr>
 
 
-            <div class="article" id="article">
+            <div class="article">
                 <h4>文章列表</h4>
                 <div class="article_type">
                     <ul class="tab-title">
@@ -256,14 +256,20 @@
 
     <!-- 發表新文章的區塊 -->
     <div class="form_region">
-        <form action="./php/discuss_new_article.php" method="post" enctype="multipart/form-data" class="absolute">
+        <form class="absolute" action="./php/discuss_new_article.php" method="post" enctype="multipart/form-data">
             <div class="disappear2">
                 <a href="#" class="png1">
                     <img src="img/discuss/x-mark.png" alt="">
                 </a>
             </div>
             
-            <p class="title2">發表新文章</p>
+            <div class="title2">
+                <h3>發表新文章</h3>
+                <div class="author_data">
+                    <img id="authorImg" src="./img/common/member/1.jpg" alt="">
+                    <h4 id="author">慶記</h4>
+                </div>
+            </div>
             <div class="form_region1">
                 <span class="name1">標題名稱</span>
                 <input type="text" class="write1" name="title">
@@ -292,7 +298,7 @@
                     <div>
                         <img src="" alt="">
                     </div>
-                    <input type="file" name="article_img">
+                    <input id="upload_img" type="file" name="article_img">
                 </div>
             </div>
             <div class="form_region4">
@@ -300,7 +306,9 @@
                 <textarea name="article_content" id="" cols="30" rows="10" class="write2"></textarea>
             </div>
             <div class="form_region5">
-                <input type="submit" value="發表文章" class="button">
+                <p id="new_article_btn">發表文章</p>
+                <input type="text" id="authorID" name="authorID" value="1">
+                <input id="new_article_submit_btn" type="submit" value="發表文章" class="button">
             </div>
         </form>
     </div>

@@ -1,6 +1,7 @@
 // const { cleanData } = require("jquery");
 
 window.addEventListener("load", function(){
+    
 
 
     new Vue({
@@ -36,11 +37,21 @@ window.addEventListener("load", function(){
                     this.all = temp;
                     this.render_list = temp;
                 })
+
+                
+
+            
         },
-        mounted() {},
+        mounted() {
+            // 取消所有a的預設行為
+            $('a').click(function(e){
+                e.preventDefault();
+                
+            });
+        },
         updated() {
-            // 彈窗事件綁定
-            // 開啟的函式
+            
+            // ------------------------------開啟pop-up-out彈窗------------------------------
 
             $('.official_article_a').click(function(e){
                 e.preventDefault();
@@ -53,33 +64,6 @@ window.addEventListener("load", function(){
                 $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
                 $('html').attr("style","overflow: hidden");
             });
-
-            // $('.img2').click(function(e){
-            //     // console.log('img2')
-            //     e.preventDefault();
-            //     $('.pop-up-out').css('display','block')
-            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-            //     $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
-            //     $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
-            //     $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
-            //     $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
-            //     $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
-            //     $('html').attr("style","overflow: hidden");
-            // });
-
-            // $('.img3').click(function(e){
-            //     // console.log('img3')
-            //     e.preventDefault();
-            //     $('.pop-up-out').css('display','block')
-            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-            //     $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
-            //     $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
-            //     $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
-            //     $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
-            //     $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
-            //     $('html').attr("style","overflow: hidden");
-            // });
-
 
             // 討論區文章內容更換(開啟)
             $('.article1').click(function(e){
@@ -98,11 +82,7 @@ window.addEventListener("load", function(){
                 $('html').attr("style","overflow: hidden");
             });
 
-
-
-
-
-            // 關閉pop-up-out彈窗
+            // ------------------------------關閉pop-up-out彈窗------------------------------
             // 叉叉按鈕
             $('.img10').click(function(e){
                 // console.log('img10')
@@ -122,14 +102,7 @@ window.addEventListener("load", function(){
 
 
 
-
-
-
-
-
-
-
-            // 討論區-彈窗-發表新文章的js
+            // ------------------------------發表新文章------------------------------
             // 開啟
             $('#post_new_article').click(function(){
                 // console.log('discussion')
@@ -154,6 +127,25 @@ window.addEventListener("load", function(){
             $('.absolute').click(function(e){
                 e.stopPropagation();
             })
+
+            //上傳圖片，顯示縮圖
+            $('#upload_img').change(function(){
+                // console.log($(this).prev().find('img')[0]);
+                //預覽圖
+                let reader = new FileReader();
+                reader.readAsDataURL(this.files[0]);
+                reader.addEventListener("load", function(){
+                    $('#upload_img').prev().find('img').attr('src',this.result);
+                });
+            });
+
+            // 發表文章按鈕
+            $('#new_article_btn').click(function(){
+                let r = confirm('確認是否送出文章?');
+                if(r){
+                    document.getElementById('new_article_submit_btn').click();
+                }
+            });
         },
     })
 });
