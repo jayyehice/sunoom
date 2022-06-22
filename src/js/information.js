@@ -33,6 +33,7 @@ new Vue({
 
     data: {     // 變數放這裡！           
         faq_list: [],
+        office_list: [],    // office的
     },
     methods: {},
     computed: {},
@@ -55,6 +56,17 @@ new Vue({
                 }
             })
             .then(text => this.faq_list = text);
+        
+
+        //fetch
+
+        const url2 = './php/information_contact.php';
+        //期中報告用information_tmp.php
+        // const url = './php/information_tmp.php';
+        fetch(url2)
+            .then(response => response.json())
+            .then(text => this.office_list = text);
+        
 
     },
 
@@ -72,5 +84,42 @@ new Vue({
     destroyed() {},
 })
 
+new Vue({
+    el: '#office',
+
+    data: {     // 變數放這裡！           
+        office_list: [],    // office的
+    },
+    methods: {},
+    computed: {},
+    watch: {},
+
+    beforeCreate() {
+
+        //fetch
+
+        const url2 = './php/information_contact.php';
+        //期中報告用information_tmp.php
+        // const url = './php/information_tmp.php';
+        fetch(url2)
+            .then(response => response.json())
+            .then(text => this.office_list = text);
+        
+
+    },
+
+    created() {},
+
+    beforeMount() {},
+
+    mounted() {},
+
+    beforeUpdate() {},
+    updated() {
+        // faq_click();
+    },
+    beforeDestroy() {},
+    destroyed() {},
+})
 
 
