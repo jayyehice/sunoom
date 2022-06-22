@@ -1,10 +1,10 @@
 <?php
     include("connection.php");
 
-    //建立sql語法
-    $sql = "SELECT * FROM activity";
+    // 建立sql語法
+    $sql = "SELECT * FROM ig";
 
-    //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchall、fetchall等方式取得資料
+    // 執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchall、fetchall等方式取得資料
     $statement = $pdo->query($sql);
 
     //抓出全部且依照順序封裝成一個二為陣列
@@ -26,5 +26,4 @@
 
     //print_r($process_data[0]);
     echo json_encode($process_data);
-
 ?>
