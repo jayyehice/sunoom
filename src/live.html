@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     @@include('./layout/header_footer_css_link.html')
@@ -26,37 +27,37 @@
             <h1>Enjoy the natural luxury with us</h1>
         </div>
     </header>
-    <main>
+    <main id="live">
         <div class="wrapper">
             <!-- breadcrumb -->
             <p class="breadcrumb"><a href="#">首頁</a> / 住</p>
             <!-- lagCabin小木屋 -->
-            <section>
+            <section v-if="live_list[0]">
                 <!-- lagCabin小木屋 leftsection -->
                 <div class="logCabin">
                     <div class="logCabinLeft">
                         <div class="logCabinText">
-                            <h4 class="t1">自由之丘
-                                <br>森林小木屋</h4>
+                            <h4 class="t1">{{live_list[0][1]}}
+                                <br>{{live_list[0][2]}}</h4>
                             <div class="forestBorder t2">
-                                <span class="forest">森</span>
+                                <span class="forest">{{live_list[0][3]}}</span>
                             </div>
-                            <h4 class="t3">Log Cabin</h4>
+                            <h4 class="t3">{{live_list[0][4]}}</h4>
                         </div>
                         <div class="">
-                            <img class="forestImg" src="./img/live/logcabin_img02.png" alt="">
+                            <img class="forestImg" :src="live_list[0][6]" alt="">
                         </div>
                     </div>
                     <!-- lagCabin小木屋 rightsection -->
                     <div class="logCabinRight">
-                        <img class="logCabinImg" src="./img/live/logcabin_img01.png" alt="">
+                        <img class="logCabinImg" :src="live_list[0][5]" alt="">
                         <div class="rightTextArea">
                             <div class="logCabinText02">
-                                <h4>Premium Log Cabin</h4>
-                                <p class="text">循著山路走進這裡，就彷彿進入了童話故事之中，挑高的屋頂設計讓整體空間感相當舒適，一點也不壓迫，這麼大間的小木屋，入住一晚的價格卻相當實惠，CP值真的太高啦。</p>
+                                <h4>{{live_list[0][7]}}</h4>
+                                <p class="text">{{live_list[0][8]}}</p>
                                 <div class="logCbinList">
                                     <div class="iconArea">
-                                        <p><img class="iconbed" src="./img/live/iconbed.png">2beds</p>
+                                        <p><img class="iconbed" src="./img/live/iconbed.png">{{live_list[0][9]}}</p>
                                     </div>
                                     <div class="comments_area">
                                         <div>
@@ -78,7 +79,7 @@
                 </div>
                 <!-- lagCabin小木屋內裝介紹 siteLayout -->
                 <div class="siteLayout">
-                    <h3>木屋內裝介紹</h3>
+                    <h3>{{live_list[0][11]}}</h3>
                     <div class="siteLayoutwp">
                         <img class="layOutImg" src="./img/live/logcabin_img03.png">
                         <h3 class="wood wood1">1</h3>
@@ -136,12 +137,12 @@
                                 Camping Tents</h4>
                             <h4 class="t3_RWD">Camping Tents</h4>
                         </div>
-                            <img class="mountainImg" src="./img/live/camping_img02.png" alt="">
+                            <img class="mountainImg" src="./img/live/sun/camping_img02.png" alt="">
                     </div>
 
                     <!-- Camping Tents 露營帳篷 rightsection -->
                     <div class="campingTentsRight">
-                        <img class="campingImg" src="./img/live/camping_img01.png" alt="">
+                        <img class="campingImg" src="./img/live/sun/camping_img01.png" alt="">
                         <div class="rightTextArea">
                             <div class="campingTentsText02">
                                 <h4>Luxury Camping Tents</h4>
@@ -195,11 +196,11 @@
                             <h4 class="t3">Premium Water Cottages</h4>
                             <h4 class="t3_RWD">Water Cottages</h4>
                         </div>
-                            <img class="oceanImg" src="./img/live/ocean_img02.png" alt="">
+                            <img class="oceanImg" src="./img/live/sun/ocean_img02.png" alt="">
                     </div>
                     <!-- Villa waterCottage 渡假村 rightsection -->
                     <div class="villaRight">
-                        <img class="villaImg" src="./img/live/ocean_img01.png" alt="">
+                        <img class="villaImg" src="./img/live/sun/ocean_img01.png" alt="">
                         <div class="rightTextArea">
                             <div class="villaText02">
                                 <h4>Premium Water Cottages</h4>
@@ -207,7 +208,7 @@
                                 <div class="villaList">
                                     <div class="iconArea">
                                         <p><img class="iconbed" src="./img/live/iconbed.png">1bed</p>
-                                        <p><img class="iconpool" src="./img/live/iconpool.png">1ppol</p>
+                                        <p><img class="iconpool" src="./img/live/iconpool.png">1pool</p>
                                     </div>
                                     <div class="comments_area">
                                         <div>
@@ -239,7 +240,7 @@
                     </div>
                     <!-- villa彈窗 siteLayout  -->
                     <div class="villaInf01">
-                        <img class="viila_img" src="./img/live/villa_livingroom.jpg" alt="">
+                        <img class="viila_img" src="./img/live/sun/villa_livingroom.jpg" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">1</h3>
                             <div>
@@ -249,11 +250,11 @@
                         </div>
                     </div>
                     <div class="villaInf02">
-                        <img class="viila_img" src="./img/live/villa_room.jpg" alt="">
+                        <img class="viila_img" src="./img/live/sun/villa_room.jpg" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">2</h3>
                             <div>
-                                <h4 class="">房間Room</h4>
+                                <h4 class="">房間</h4>
                                 <p>Villa寬敞海景房間</p>
                             </div>
                         </div>
@@ -269,11 +270,11 @@
                         </div>
                     </div>
                     <div class="villaInf04">
-                        <img class="viila_img" src="./img/live/villa_pool.png" alt="">
+                        <img class="viila_img" src="./img/live/sun/villa_pool.png" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">4</h3>
                             <div>
-                                <h4 class="">露天泳池Pool</h4>
+                                <h4 class="">露天泳池</h4>
                                 <p>Villa無邊際泳游池</p>
                             </div>
                         </div>
@@ -285,6 +286,7 @@
     </main>
     @@include('./layout/footer.html')
     @@include('./layout/header_footer_script_link.html')
+    <script src="./js/live.js"></script>
 
 </body>
 
