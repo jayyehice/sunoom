@@ -390,6 +390,7 @@
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   /* 評論區的css */
@@ -610,14 +611,13 @@
   border: 1px solid #eee;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block {
-  font-size: 1.8rem;
   flex-grow: 1;
   padding-left: 10px;
   padding-right: 10px;
+  box-sizing: border-box;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
-  margin: 0;
-  font-size: 16px;
+  line-height: 40px;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
   width: 100px;
@@ -641,13 +641,14 @@
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
   /* border:1px solid red; */
-  width: 100%;
+  width: 95%;
   border: 1px solid lightgray;
   border-radius: 3px 0 0 3px;
   height: 40px;
   font-size: 16px;
   padding: 5px 10px;
   outline: none;
+  box-sizing: border-box;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
   color: lightgray;
@@ -662,6 +663,7 @@
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }

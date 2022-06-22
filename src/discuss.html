@@ -16,9 +16,9 @@
 </head>
 <body class="discuss">
     @@include('./layout/header.html')
-    <div class="wrapper">
+    <div class="wrapper" id="discuss">
         <!-- <header></header> -->
-        <main id="article">
+        <main>
             <h3>討論區</h3>
             <!-- <h1 class="big-title"></h1> -->
             <!-- 麵包屑區域 -->
@@ -141,7 +141,7 @@
                     <ul>
                         <li class="solid" v-for="render in render_list">
                             <div class="article_text">
-                                <a href="#" class="article1">
+                                <a href="#" class="article1" :data-articleid="render[0]">
                                     <h5 class="rwd_title">{{render[3]}}</h5>
                                     <div class="img_1">
                                         <img :src="render[6]" alt="">
@@ -198,126 +198,127 @@
 
         </main>
         <!-- <footer></footer> -->
-    </div>
-
-    <!-- 文章彈窗 -->
-    <div class="pop-up-out">
-        <div class="pop-up">
-            <div class="disappear">
-                <a href="#" class="img10">
-                    <img src="img/discuss/x-mark.png" alt="">
-                </a>
-            </div>
-            <h3>111111111111</h3>
-            <div class="icons">
-                <div class="icon-1">
-                    <div>
-                        <img src="img/cartoon-eyes.png" alt="">
+        <!-- 文章彈窗 -->
+        <div class="pop-up-out">
+            <div class="pop-up">
+                <div class="disappear">
+                    <a href="#" class="img10">
+                        <img src="img/discuss/x-mark.png" alt="">
+                    </a>
+                </div>
+                <h3>111111111111</h3>
+                <div class="icons">
+                    <div class="icon-1">
+                        <div>
+                            <img src="img/cartoon-eyes.png" alt="">
+                        </div>
+                        <span class="span1"></span>
                     </div>
-                    <span class="span1"></span>
-                </div>
-                <div class="icon-2">
-                    <div>
-                        <img src="img/speech-bubble.png" alt="">
+                    <div class="icon-2">
+                        <div>
+                            <img src="img/speech-bubble.png" alt="">
+                        </div>
+                        <span class="span2"></span>
                     </div>
-                    <span class="span2"></span>
                 </div>
-            </div>
-            <hr class="hr1">
-            <div class="icons2">
-                <div><img src="img/discuss/sunoomlogo_author.png" alt=""></div>
-                <span class="span3">Sunoom</span>
-            </div>
-            <div class="discuss-region">
-                <div><img src="img/Rectangle 634.png" alt=""></div>
-                <div class="comment-region">
-                    <p>
-                    <!-- 這次去明島已經是第二次了，純海洋行程豐富卻還蠻慢節奏的 ， 確實有顧到對海上運動不熟悉的人。
-                    如果是新手，非常推薦從立槳開始！而且晚上還蠻漂亮的。 -->
-                    </p>
+                <hr class="hr1">
+                <div class="icons2">
+                    <div><img src="img/discuss/sunoomlogo_author.png" alt=""></div>
+                    <span class="span3">Sunoom</span>
                 </div>
-            </div>
-            <hr class="hr2">
-            <div class="task_container">
-                <p class="title1">評論:</p>
-
-                <div class="task_add_block">
-                    <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
-                    <button type="button" class="task_add">新增評論</button>
+                <div class="discuss-region">
+                    <div><img src="img/Rectangle 634.png" alt=""></div>
+                    <div class="comment-region">
+                        <p>
+                        <!-- 這次去明島已經是第二次了，純海洋行程豐富卻還蠻慢節奏的 ， 確實有顧到對海上運動不熟悉的人。
+                        如果是新手，非常推薦從立槳開始！而且晚上還蠻漂亮的。 -->
+                        </p>
+                    </div>
                 </div>
-
-                <div class="task_list_parent">
-                    <ul class="task_list">
-                    </ul>
+                <hr class="hr2">
+                <div class="task_container" id="article_comment">
+                    <p class="title1">評論:</p>
+    
+                    <div class="task_add_block">
+                        <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
+                        <button type="button" class="task_add">新增評論</button>
+                    </div>
+    
+                    <!-- 評論區 -->
+                    <div class="task_list_parent">
+                        <ul class="task_list">
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- 發表新文章的區塊 -->
-    <div class="form_region">
-        <form class="absolute" action="./php/discuss_new_article.php" method="post" enctype="multipart/form-data">
-            <div class="disappear2">
-                <a href="#" class="png1">
-                    <img src="img/discuss/x-mark.png" alt="">
-                </a>
-            </div>
-            
-            <div class="title2">
-                <h3>發表新文章</h3>
-                <div class="author_data">
-                    <img id="authorImg" src="./img/common/member/1.jpg" alt="">
-                    <h4 id="author">慶記</h4>
+    
+    
+        <!-- 發表新文章的區塊 -->
+        <div class="form_region">
+            <form class="absolute" action="./php/discuss_new_article.php" method="post" enctype="multipart/form-data">
+                <div class="disappear2">
+                    <a href="#" class="png1">
+                        <img src="img/discuss/x-mark.png" alt="">
+                    </a>
                 </div>
-            </div>
-            <div class="form_region1">
-                <span class="name1">標題名稱</span>
-                <input type="text" class="write1" name="title">
-            </div>
-            <div class="form_region2">
-                <span class="name2">文章類別</span>
-                <input type="radio" name="article_type" value="food" checked>
-                <label for="food">食</label>
-                <input type="radio" name="article_type" value="live">
-                <label for="live">住</label>
-                <input type="radio" name="article_type" value="tour">
-                <label for="tour">遊</label>
-            </div>
-            <div class="form_region6">
-                <span class="name6">推薦指數</span>
-                <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke">
-                </i>
-            </div>
-            <div class="form_region3">
-                <span class="name3">文章圖片</span>
-                <div class="upload_img">
-                    <div>
-                        <img src="" alt="">
+                
+                <div class="title2">
+                    <h3>發表新文章</h3>
+                    <div class="author_data">
+                        <img id="authorImg" src="./img/common/member/1.jpg" alt="">
+                        <h4 id="author">慶記</h4>
                     </div>
-                    <input id="upload_img" type="file" name="article_img">
                 </div>
-            </div>
-            <div class="form_region4">
-                <p class="name4">文章內容</p>
-                <textarea name="article_content" id="" cols="30" rows="10" class="write2"></textarea>
-            </div>
-            <div class="form_region5">
-                <p id="new_article_btn">發表文章</p>
-                <input type="text" id="authorID" name="authorID" value="1">
-                <input id="new_article_submit_btn" type="submit" value="發表文章" class="button">
-            </div>
-        </form>
+                <div class="form_region1">
+                    <span class="name1">標題名稱</span>
+                    <input type="text" class="write1" name="title">
+                </div>
+                <div class="form_region2">
+                    <span class="name2">文章類別</span>
+                    <input type="radio" name="article_type" value="food" checked>
+                    <label for="food">食</label>
+                    <input type="radio" name="article_type" value="live">
+                    <label for="live">住</label>
+                    <input type="radio" name="article_type" value="tour">
+                    <label for="tour">遊</label>
+                </div>
+                <div class="form_region6">
+                    <span class="name6">推薦指數</span>
+                    <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke">
+                    </i>
+                </div>
+                <div class="form_region3">
+                    <span class="name3">文章圖片</span>
+                    <div class="upload_img">
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                        <input id="upload_img" type="file" name="article_img">
+                    </div>
+                </div>
+                <div class="form_region4">
+                    <p class="name4">文章內容</p>
+                    <textarea name="article_content" id="" cols="30" rows="10" class="write2"></textarea>
+                </div>
+                <div class="form_region5">
+                    <p id="new_article_btn">發表文章</p>
+                    <input type="text" id="authorID" name="authorID" value="1">
+                    <input id="new_article_submit_btn" type="submit" value="發表文章" class="button">
+                </div>
+            </form>
+        </div>
     </div>
+
     @@include('./layout/footer.html')
 
     
     <script src="./js/discuss.js"></script>
-    <script src="./js/discuss_list.js"></script>
+    <!-- <script src="./js/discuss_list.js"></script> -->
     @@include('./layout/header_footer_script_link.html')
 </body>
 </html>

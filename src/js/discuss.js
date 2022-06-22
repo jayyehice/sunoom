@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
 
 
     new Vue({
-        el: '#article',
+        el: '#discuss',
     
         data: {     // 變數放這裡！           
             // articleList: [],
@@ -15,14 +15,26 @@ window.addEventListener("load", function(){
             tour:[],
             all:[],
             render_list:[],
+            articleid:0,
+            comment_list:[],
         },
         methods: {
             render_li(list){
                 this.render_list = list;
             },
         },
-        computed: {},
-        watch: {},
+        computed: {
+        },
+        watch: {
+            articleid: function(newValue){
+                // console.log('change', newValue);
+                const url = `./php/discuss_get_comment.php?articleid=${newValue}`;
+                fetch(url)
+                .then(response => response.json())
+                .then(text => console.log(text))
+
+            }
+        },
         created() {
             const url = './php/discuss.php';
             fetch(url)
@@ -38,9 +50,6 @@ window.addEventListener("load", function(){
                     this.render_list = temp;
                 })
 
-                
-
-            
         },
         mounted() {
             // 取消所有a的預設行為
@@ -52,9 +61,10 @@ window.addEventListener("load", function(){
         updated() {
             
             // ------------------------------開啟pop-up-out彈窗------------------------------
-
+            // let articleid = '';
             $('.official_article_a').click(function(e){
                 e.preventDefault();
+                
                 $('.pop-up-out').css('display','block')
                 $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"));
                 $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
@@ -66,21 +76,48 @@ window.addEventListener("load", function(){
             });
 
             // 討論區文章內容更換(開啟)
-            $('.article1').click(function(e){
-                // console.log('article1')
-                e.preventDefault();
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-                $('.pop-up').find('.span1')[0].innerText = $(this).find('.span2')[0].innerText;//觀看次數
-                $('.pop-up').find('.span2')[0].innerText = $(this).find('.span3')[0].innerText;//評論次數
-                $('.pop-up > h3')[0].innerText=$(this).find('.title > h5')[0].innerText;//標題
-                $('.pop-up').find('.comment-region > p')[0].innerText=$(this).find('.comment > p')[0].innerText;//內文
-                $('.pop-up').find('.span3')[0].innerText=$(this).find('.span1')[0].innerText;//作者
-                $('.pop-up').find('.icons2 img').attr("src",$(this).find('.icon-1 img').attr("src"))//作者頭像
-                // console.log($(this).find('.comment > p')[0].innerText);
-                $('.pop-up-out').css('display','block')
-                // console.log($(this).children('.img_1').children('img').attr("src"))
-                $('html').attr("style","overflow: hidden");
-            });
+            // $('.article1').click(function(e){
+            //     // console.log('article1')
+            //     e.preventDefault();
+            //     // console.log($(this).data("articleid"));
+            //     // let articleid = $(this).data("articleid");
+            //     // $('.pop-up')[0].dataset.articleid = $(this).data("articleid");
+            //     articleid = $(this).data("articleid");
+            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
+            //     $('.pop-up').find('.span1')[0].innerText = $(this).find('.span2')[0].innerText;//觀看次數
+            //     $('.pop-up').find('.span2')[0].innerText = $(this).find('.span3')[0].innerText;//評論次數
+            //     $('.pop-up > h3')[0].innerText=$(this).find('.title > h5')[0].innerText;//標題
+            //     $('.pop-up').find('.comment-region > p')[0].innerText=$(this).find('.comment > p')[0].innerText;//內文
+            //     $('.pop-up').find('.span3')[0].innerText=$(this).find('.span1')[0].innerText;//作者
+            //     $('.pop-up').find('.icons2 img').attr("src",$(this).find('.icon-1 img').attr("src"))//作者頭像
+            //     // console.log($(this).find('.comment > p')[0].innerText);
+            //     $('.pop-up-out').css('display','block')
+            //     // console.log($(this).children('.img_1').children('img').attr("src"))
+            //     $('html').attr("style","overflow: hidden");
+            // });
+
+            let article1 = document.getElementsByClassName('article1');
+            for(let i=0; i<article1.length; i++){
+                article1[i].addEventListener("click", e => {
+                    e.preventDefault();
+                    this.articleid = $(article1[i]).data("articleid");
+                    $('.discuss-region').children('div').children('img').attr("src", $(article1[i]).children('.img_1').children('img').attr("src"))
+                    $('.pop-up').find('.span1')[0].innerText = $(article1[i]).find('.span2')[0].innerText;//觀看次數
+                    $('.pop-up').find('.span2')[0].innerText = $(article1[i]).find('.span3')[0].innerText;//評論次數
+                    $('.pop-up > h3')[0].innerText=$(article1[i]).find('.title > h5')[0].innerText;//標題
+                    $('.pop-up').find('.comment-region > p')[0].innerText=$(article1[i]).find('.comment > p')[0].innerText;//內文
+                    $('.pop-up').find('.span3')[0].innerText=$(article1[i]).find('.span1')[0].innerText;//作者
+                    $('.pop-up').find('.icons2 img').attr("src",$(article1[i]).find('.icon-1 img').attr("src"))//作者頭像
+                    $('.pop-up-out').css('display','block')
+                    $('html').attr("style","overflow: hidden");
+
+                })
+            }
+
+            
+
+            // this.articleid = articleid;
+            // console.log(articleid);
 
             // ------------------------------關閉pop-up-out彈窗------------------------------
             // 叉叉按鈕
@@ -98,7 +135,173 @@ window.addEventListener("load", function(){
 
             $('.pop-up').click(function(e){
                 e.stopPropagation();
+
+                //移除評論
+                if (e.target.classList.contains("btn_delete")) {
+                    let r = confirm("確認移除？");
+                    if (r) {
+            
+                        let item_id = e.target.closest("li").getAttribute("data-id");
+                        let tasks = JSON.parse(localStorage.getItem("tasks"));
+                        let updated_tasks = [];
+                        tasks.forEach(function (task, i) {
+                            if (item_id != task.item_id) {
+                                updated_tasks.push(task);
+                            }
+                        });
+                        localStorage.setItem("tasks", JSON.stringify(updated_tasks));
+            
+                        e.target.closest("li").classList.add("fade_out");
+                        setTimeout(function () {
+                            e.target.closest("li").remove();
+                        }, 1000);
+                    }
+            
+                }
+
+                //更新評論
+                if (e.target.classList.contains("btn_update")) {
+                    if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
+            
+                        e.target.setAttribute("data-edit", true);
+                        let li_el = e.target.closest("li");
+                        li_el.querySelector("p.para").classList.toggle("-none");
+                        li_el.querySelector("input.task_name_update").classList.toggle("-none");
+            
+                    } else {
+                        let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
+            
+                        if (update_task_name == "") {
+                            alert("請輸入待辦事項");
+                        } else {
+                            let p_el = e.target.closest("li").querySelector("p.para");
+                            p_el.innerHTML = update_task_name;
+                            p_el.classList.toggle("-none");
+            
+                            let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
+                            input_update_el.value = update_task_name;
+                            input_update_el.classList.toggle("-none");
+            
+                            e.target.removeAttribute("data-edit");
+            
+            
+                            let item_id = e.target.closest("li").getAttribute("data-id");
+                            let tasks = JSON.parse(localStorage.getItem("tasks"));
+                            tasks.forEach(function (task, i) {
+                                if (item_id == task.item_id) {
+                                    tasks[i].name = update_task_name;
+                                }
+                            });
+                            localStorage.setItem("tasks", JSON.stringify(tasks));
+            
+                        }
+                    }
+            
+                }
             })
+
+            //------------------------------- 評論區 -------------------------------
+            //渲染
+            function get_tasks() {
+                let tasks = JSON.parse(localStorage.getItem("tasks"));
+                if (tasks) {
+                    let list_html = "";
+                    tasks.forEach(function (item, i) {
+                        list_html += `
+                        <li data-id="${item.item_id}">
+                          <div class="item_flex">
+                            <div class="left_block">
+                            </div>
+                            <div class="middle_block">
+                              <p class="para">${item.name}</p>
+                              <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${item.name}">
+                            </div>
+                            <div class="right_block">
+                              <div class="btn_flex">
+                                <button type="button" class="btn_update">更新</button>
+                                <button type="button" class="btn_delete">移除</button>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      `;
+                    });
+            
+                    let ul_task_list = document.getElementsByClassName("task_list")[0];
+                    ul_task_list.innerHTML = list_html;
+            
+                }
+            }
+
+
+            //新增評論
+            get_tasks();
+            var input_task_name = document.getElementsByClassName("task_name")[0];
+
+            input_task_name.addEventListener("focus", function () {
+                this.closest("div.task_add_block").classList.add("-on");
+            });
+            input_task_name.addEventListener("blur", function () {
+                this.closest("div.task_add_block").classList.remove("-on");
+            });
+
+            input_task_name.addEventListener("keyup", function (e) {
+                console.log(e.which);
+                if (e.which == 13) {
+                    let button_task_add = document.getElementsByClassName("task_add")[0];
+                    button_task_add.click();
+                }
+            });
+
+            var button_task_add = document.getElementsByClassName("task_add")[0];
+            button_task_add.addEventListener("click", function () {
+                let task_text = (input_task_name.value).trim();
+                // let task_text = input_task_name.value;
+                if (task_text != "") {
+
+                    let item_id = Date.now();
+
+
+                    let list_html = `
+                <li data-id="${item_id}">
+                    <div class="item_flex">
+                    <div class="left_block">
+                    </div>
+                    <div class="middle_block">
+                        <p class="para">` + task_text + `</p>
+                        <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${task_text}">
+                    </div>
+                    <div class="right_block">
+                        <div class="btn_flex">
+                        <button type="button" class="btn_update">更新</button>
+                        <button type="button" class="btn_delete">移除</button>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+                `;
+
+                    let ul_task_list = document.getElementsByClassName("task_list")[0];
+                    ul_task_list.insertAdjacentHTML("afterbegin", list_html);
+                    input_task_name.value = "";
+
+                    let task = {
+                        "item_id": item_id,
+                        "name": task_text,
+                        "star": 0
+                    };
+                    let tasks = JSON.parse(localStorage.getItem("tasks"));
+                    console.log(tasks);
+
+                    if (tasks) {
+                        tasks.unshift(task); // [{}, {}]
+                    } else {
+                        tasks = [task];
+                    }
+                    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+                }
+            });
 
 
 
