@@ -50,18 +50,9 @@
             <h3>2.選擇行程</h3>
             <div class="datePickerBox">
                 <div class="dateTitle">
-                    <p>旅程規劃(<span id="bookingDays"></span>)</p>
                 </div>
-                <v-calendar   
-                :value="null"
-                color="red"
-                is-dark
-                is-range
-                v-model="range"></v-calendar>
-                <v-date-picker v-model='selectedDate'/>
                 <div class="pickerBox" >
-                    <input type="text" name="dates" id="dateBooking">
-                    <!-- <calendar v-model ="value" show-date-only :disabled-days-of-week ="disabled" :format ="format" :clear-button ="clear" :placeholder ="placeholder" :lang ="lang" :position ="position" :on-day-click ="dayClick" > </calendar > -->
+                    <button @click="countent='ChooseBlock0';day(date);chooseFunction(date);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt=""></button>
                 </div>
             </div>
             <!-- 小訂單明細 -->
@@ -69,7 +60,7 @@
                 <h5>訂單明細 </h5><div class="circle">+</div>
             </div>
             <!-- 明細彈窗 -->
-            <div class="BigList">
+            <div class="BigList" >
                 <div class="ListTitle">
                     <h5>訂單明細</h5>
                 </div>
@@ -80,12 +71,13 @@
                     <p>Check out:</p>
                     <input type="date" name="" id="" value="2022-07-16">
                 </div>
-                <div class="tripList">
-                    <p>遊</p>
-                    <h6>2022/07/16</h6>
+                <p>遊</p>
+                <div  class="tripList" v-for="(date,index) in dateArray">
+                    <h6 class="tripTitle">{{date}}</h6>
+                    <triplist1 :activity_list="activity_list"></tripList1>
                     <ul>
-                        <li>潛水(日)</li>
-                        <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >6<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>
+                        <li >{{chooseData}}</li>
+                        <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>
                         <li>$11,994</li>
                         <li><img  class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
@@ -97,9 +89,9 @@
                     </ul>
 
                 </div>
-                <div class="FoodList">
+                <div class="FoodList" >
                     <p>食</p>
-                    <h6>2022/07/16</h6>
+                    <h6 v-for="(date,index) in dateArray">{{date}}</h6>
                     <ul>
                         <li>BBQ(日)</li>
                         <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >6<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>                        <li>$3,000</li>
@@ -111,9 +103,9 @@
                         <li><img  class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                 </div>
-                <div class="StayList">
+                <div class="StayList" >
                     <p>宿</p>
-                    <h6>2022/07/16</h6>
+                    <h6 v-for="(date,index) in dateArray">{{date}}</h6>
                     <ul>
                         <li>帳篷露營(月)</li>
                         <li>6</li>
@@ -141,7 +133,11 @@
             </div>
 
             <!-- 選購區塊 -->
-            <div class="tripChooseBlock" >
+            <keep-alive>
+                <component  :is="countent" :activity_list="activity_list" :food_list="food_list" :day="newDay"></component>
+            </keep-alive>
+
+            <div class="tripChooseBlock">
                     <div class="itineraryTitle">
                         <h4>遊</h4>
                         <h4 class="chooseDate">2022/07/16</h4>
