@@ -72,8 +72,9 @@
                     <input type="date" name="" id="" value="2022-07-16">
                 </div>
                 <p>遊</p>
-                <div @sync="cda" class="tripList" v-for="(date,index) in dateArray">
+                <div  class="tripList" v-for="(date,index) in dateArray">
                     <h6 class="tripTitle">{{date}}</h6>
+                    <triplist1 :activity_list="activity_list"></tripList1>
                     <ul>
                         <li >{{chooseData}}</li>
                         <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>
@@ -137,7 +138,6 @@
             </keep-alive>
 
             <div class="tripChooseBlock">
-                    
                     <div class="itineraryTitle">
                         <h4>遊</h4>
                         <h4 class="chooseDate">2022/07/16</h4>

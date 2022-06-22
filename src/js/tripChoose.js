@@ -1,6 +1,56 @@
 
 window.addEventListener('load',function(){
+    const bus = new Vue();
 
+    Vue.component('triplist1',{
+        props:['activity_list'],
+        data() {
+            return {
+                chooseData:'',
+                choosePrice:'',
+                pepoleNums:0,
+                newPrice: 0,
+
+            }
+        },
+        template:
+        `
+        <ul v-if="activity_list[chooseData]">
+            <li>{{activity_list[chooseData][1]}}</li>
+            <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+            <li va\-model='newPrice'>\${{newPrice}}</li>
+            <li><img class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+        </ul>
+        `,
+        methods:{
+            dpnums(){
+                if(this.pepoleNums > 1){
+                    this.pepoleNums -=1
+                }
+                
+            },
+            apnums(){
+                if(this.pepoleNums < JSON.parse(localStorage.getItem('pepoleNums'))){
+                    this.pepoleNums +=1
+                }
+            }
+        },
+        computed:{
+        },
+        mounted() {
+                this.pepoleNums = JSON.parse(localStorage.getItem('pepoleNums'));
+                bus.$on('sync',nums => this.chooseData = nums)
+                bus.$on('sync1',nums => this.choosePrice = nums)
+                console.log(this.chooseData);
+            
+        },
+        updated() {
+            this.newPrice =  parseInt(this.choosePrice * this.pepoleNums);
+            this.pepoleNums = parseInt(this.pepoleNums)
+            console.log(typeof(this.pepoleNums));
+        },
+
+    })
     Vue.component('ChooseBlock0',{
         props:["activity_list","food_list","day"],
         data() {
@@ -96,7 +146,7 @@ window.addEventListener('load',function(){
             },
             sync(){
                 // console.log(this.chooseValue);
-                this.$emit('sync',this.choosevalue)
+                
             },
         },   
             
@@ -113,8 +163,15 @@ window.addEventListener('load',function(){
             console.log(x);
             
             this.dateBox = x;
+
+            let morningChoose = document.getElementById('morningChoose');
+
         },
         updated() {
+            bus.$emit('sync',this.choosevalue)
+            bus.$emit('sync1',this.morningtripPrice)
+
+            console.log(morningChoose.target);
         },
         template:
         `<div>
@@ -130,7 +187,7 @@ window.addEventListener('load',function(){
                             <img id="morningImg" :src="morningtripImg" alt="">
                             <div class="morningBlockB">
                                 <div class="optionBlockA">
-                                    <select name="" @change="morningChange($event.target.value)">
+                                    <select id="morningChoose" @change="morningChange($event.target.value)">
                                         <option value="">開始選購您的行程</option>
                                         <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
@@ -314,7 +371,7 @@ window.addEventListener('load',function(){
                     </div>  
                 </div>
         </div>
-        `
+        `,
     })
     new Vue({
         el:'#app',
@@ -375,9 +432,6 @@ window.addEventListener('load',function(){
                 let chooseDate = document.getElementsByClassName('chooseDate')[0];
                 console.log(day);
                 
-            },
-            cda(val){
-                this.chooseData = val;
             },
 
             //上午行程
@@ -442,6 +496,7 @@ window.addEventListener('load',function(){
             
         },
         mounted() {
+            bus.$on('sync',nums => this.chooseData = nums)
                 this.pepoleNums = JSON.parse(localStorage.getItem('pepoleNums'));
                 
                 let senDays = JSON.parse(localStorage.getItem('sendDays'))
@@ -553,7 +608,7 @@ window.addEventListener('load',function(){
             
         },
         updated(){
-
+            
         },
         
     });
