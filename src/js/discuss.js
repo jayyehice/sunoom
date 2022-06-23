@@ -66,6 +66,7 @@ window.addEventListener("load", function(){
                         let li_el = e.target.closest("li");
                         li_el.querySelector("p.para").classList.toggle("-none");
                         li_el.querySelector("input.task_name_update").classList.toggle("-none");
+                        li_el.querySelector("button.btn_delete").disabled = true;
             
                     } else {
                         let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
@@ -86,7 +87,7 @@ window.addEventListener("load", function(){
                             let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
                             input_update_el.value = update_task_name;
                             input_update_el.classList.toggle("-none");
-                            
+                            e.target.closest("li").querySelector("button.btn_delete").disabled = false;
                             e.target.removeAttribute("data-edit");
             
                         }
@@ -133,19 +134,33 @@ window.addEventListener("load", function(){
         updated() {
             
             // ------------------------------開啟pop-up-out彈窗------------------------------
-            // let articleid = '';
-            $('.official_article_a').click(function(e){
-                e.preventDefault();
-                
-                $('.pop-up-out').css('display','block')
-                $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"));
-                $('.pop-up').find('.span1')[0].innerText=$(this).find('p')[0].innerText;
-                $('.pop-up').find('.span2')[0].innerText=$(this).find('p')[1].innerText;
-                $('.pop-up > h3')[0].innerText=$(this).find('h3')[0].innerText;
-                $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
-                $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
-                $('html').attr("style","overflow: hidden");
-            });
+
+            let official_article_a = document.getElementsByClassName('official_article_a');
+            for(let i=0; i<official_article_a.length; i++){
+                official_article_a[i].addEventListener("click", e => {
+                    e.preventDefault();
+                    // console.log(official_article_a[i].dataset.articleid);
+                    this.articleid = official_article_a[i].dataset.articleid;
+
+                    
+                    $('.pop-up-out').css('display','block')
+                    $('.discuss-region').children('div').children('img').attr("src", $(official_article_a[i]).children('img').attr("src"));
+                    $('.pop-up').find('.span1')[0].innerText=$(official_article_a[i]).find('p')[0].innerText;//觀看次數
+                    $('.pop-up').find('.span2')[0].innerText=$(official_article_a[i]).find('p')[1].innerText;//評論次數
+                    $('.pop-up > h3')[0].innerText=$(official_article_a[i]).find('h3')[0].innerText;//標題
+
+                    for(let j=0; j<this.offical.length; j++){
+                        if(this.offical[j][0] == official_article_a[i].dataset.articleid){
+
+                            $('.pop-up').find('.comment-region > p')[0].innerText=this.offical[j][4];//內文
+                        }
+                    }
+                    
+                    $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
+                    $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
+                    $('html').attr("style","overflow: hidden");
+                })
+            }
 
             // 討論區文章內容更換(開啟)
 

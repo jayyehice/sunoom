@@ -34,7 +34,7 @@
             <!-- 官方文章區域 -->
             <div class="official_article">
                 <div class="banner_1">
-                    <a href="#" class="img1 official_article_a" v-if="offical[0]">
+                    <a href="#" class="img1 official_article_a" v-if="offical[0]" :data-articleid="offical[0][0]">
                         <img :src="offical[0][6]" alt="">
                         <!-- <div class="line1"></div> -->
                         <div class="text_1">
@@ -58,7 +58,7 @@
 
                 <div class="banner_2">
                     <div class="photo_1">
-                        <a href="#" class="img2 official_article_a"  v-if="offical[1]">
+                        <a href="#" class="img2 official_article_a"  v-if="offical[1]" :data-articleid="offical[1][0]">
                             <img :src="offical[1][6]" alt="">
                             <!-- <div class="line2"></div> -->
                             <div class="text_2">
@@ -79,7 +79,7 @@
                         </a>
                     </div>
                     <div class="photo_2">
-                        <a href="#" class="img3 official_article_a" v-if="offical[2]">
+                        <a href="#" class="img3 official_article_a" v-if="offical[2]"  :data-articleid="offical[2][0]">
                             <img :src="offical[2][6]" alt="">
                             <!-- <div class="line3"></div> -->
                             <div class="text_3">

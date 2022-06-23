@@ -423,6 +423,7 @@
   width: 802px;
   margin: 0 auto;
   margin-bottom: 10px;
+  justify-content: end;
 }
 .discuss .pop-up-out .pop-up .icons .icon-1 {
   display: flex;
