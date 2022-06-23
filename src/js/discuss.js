@@ -7,28 +7,25 @@ window.addEventListener("load", function(){
     new Vue({
         el: '#discuss',
     
-        data: {     // 變數放這裡！           
-            // articleList: [],
+        data: {
+            origin_article:[],
             offical:[],
-            live:[],
-            food:[],
-            tour:[],
-            all:[],
+            // live:[],
+            // food:[],
+            // tour:[],
+            // all:[],
             render_list:[],
             articleid:0,
             comment_list:[],
             memberid:1,
         },
         methods: {
-            render_li(list){
-                this.render_list = list;
+            render_li(e){
+                // console.log(e.target.closest('li'));
+                this.render_list = this.origin_article[e.target.closest('li').dataset.category];
             },
             add_new_comment(e){
-                // console.log('object');
                 let input_task_name = document.getElementsByClassName("task_name")[0];
-                // console.log(this.articleid);
-                // console.log(this.memberid);
-                // console.log(input_task_name.value);
 
                 // 新增評論至DB
                 let url = `./php/discuss_new_comment.php?articleid=${this.articleid}&authorid=${this.memberid}&content=${input_task_name.value}`;
@@ -77,8 +74,6 @@ window.addEventListener("load", function(){
                             alert("請輸入評論");
                         } else {
 
-                            // console.log(update_task_name);
-                            // console.log(e.target.closest("li").dataset.commentid);
                             let url = `./php/discuss_update_comment.php?commentid=${e.target.closest("li").dataset.commentid}&content=${update_task_name}`;
                             fetch(url)
                             
@@ -93,45 +88,19 @@ window.addEventListener("load", function(){
                             input_update_el.classList.toggle("-none");
                             
                             e.target.removeAttribute("data-edit");
-                            
-                            // this.update_comment_list(this.articleid)  
-
-                            
-            
-                            // let item_id = e.target.closest("li").getAttribute("data-id");
-                            // let tasks = JSON.parse(localStorage.getItem("tasks"));
-                            // tasks.forEach(function (task, i) {
-                            //     if (item_id == task.item_id) {
-                            //         tasks[i].name = update_task_name;
-                            //     }
-                            // });
-                            // localStorage.setItem("tasks", JSON.stringify(tasks));
             
                         }
                     }
 
                 }
 
-
-                // let r = confirm("確認更新？");
-                // if (r) {
-                //     // let url = `./php/discuss_delete_comment.php?commentid=${id}`;
-                //     // fetch(url)
-                    
-                //     // this.update_comment_list(this.articleid)  
-                // }
             }
         },
         computed: {
         },
         watch: {
             articleid: function(newValue){
-                // console.log(newValue);
-                // let url = `./php/discuss_get_comment.php?articleid=${newValue}`;
-                // fetch(url)
-                //     .then(response => response.json())
-                //     // .then(text => console.log(text))
-                //     .then(text => this.comment_list = text)
+
                 this.update_comment_list(newValue)
 
             }
@@ -141,14 +110,16 @@ window.addEventListener("load", function(){
             fetch(url)
                 .then(response => response.json())
                 .then(text => {
+                    this.origin_article = text;
                     this.offical = text["offical"];
-                    this.live = text["live"];
-                    this.food = text["food"];
-                    this.tour = text["tour"];
-                    let temp = text["live"].concat(text["food"]);
-                    temp = temp.concat(text["tour"]);
-                    this.all = temp;
-                    this.render_list = temp;
+                    // this.live = text["live"];
+                    // this.food = text["food"];
+                    // this.tour = text["tour"];
+                    // let temp = text["live"].concat(text["food"]);
+                    // temp = temp.concat(text["tour"]);
+                    // this.all = text["all"];
+                    this.render_list = text["all"];
+
                 })
 
         },
@@ -197,10 +168,6 @@ window.addEventListener("load", function(){
             }
 
             
-
-            // this.articleid = articleid;
-            // console.log(articleid);
-
             // ------------------------------關閉pop-up-out彈窗------------------------------
             // 叉叉按鈕
             $('.img10').click(function(e){
@@ -217,76 +184,12 @@ window.addEventListener("load", function(){
 
             $('.pop-up').click(function(e){
                 e.stopPropagation();
-
-                //移除評論
-                // if (e.target.classList.contains("btn_delete")) {
-                //     e.stopPropagation();
-                //     let r = confirm("確認移除？");
-                //     if (r) {
-                //         console.log('test');
-                //         // let item_id = e.target.closest("li").getAttribute("data-id");
-                //         // let tasks = JSON.parse(localStorage.getItem("tasks"));
-                //         // let updated_tasks = [];
-                //         // tasks.forEach(function (task, i) {
-                //         //     if (item_id != task.item_id) {
-                //         //         updated_tasks.push(task);
-                //         //     }
-                //         // });
-                //         // //localStorage.setItem("tasks", JSON.stringify(updated_tasks));
-            
-                //         // e.target.closest("li").classList.add("fade_out");
-                //         // setTimeout(function () {
-                //         //     e.target.closest("li").remove();
-                //         // }, 1000);
-                //     }
-            
-                // }
-
-                //更新評論
-                // if (e.target.classList.contains("btn_update")) {
-                //     if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
-            
-                //         e.target.setAttribute("data-edit", true);
-                //         let li_el = e.target.closest("li");
-                //         li_el.querySelector("p.para").classList.toggle("-none");
-                //         li_el.querySelector("input.task_name_update").classList.toggle("-none");
-            
-                //     } else {
-                //         let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
-            
-                //         if (update_task_name == "") {
-                //             alert("請輸入待辦事項");
-                //         } else {
-                //             let p_el = e.target.closest("li").querySelector("p.para");
-                //             p_el.innerHTML = update_task_name;
-                //             p_el.classList.toggle("-none");
-            
-                //             let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
-                //             input_update_el.value = update_task_name;
-                //             input_update_el.classList.toggle("-none");
-            
-                //             e.target.removeAttribute("data-edit");
-            
-            
-                //             let item_id = e.target.closest("li").getAttribute("data-id");
-                //             let tasks = JSON.parse(localStorage.getItem("tasks"));
-                //             tasks.forEach(function (task, i) {
-                //                 if (item_id == task.item_id) {
-                //                     tasks[i].name = update_task_name;
-                //                 }
-                //             });
-                //             localStorage.setItem("tasks", JSON.stringify(tasks));
-            
-                //         }
-                //     }
-            
-                // }
             })
 
             //------------------------------- 評論區 -------------------------------
 
-            //新增評論
-            // get_tasks();
+            //新增評論CSS，改變class
+            
             var input_task_name = document.getElementsByClassName("task_name")[0];
 
             input_task_name.addEventListener("focus", function () {
@@ -295,68 +198,6 @@ window.addEventListener("load", function(){
             input_task_name.addEventListener("blur", function () {
                 this.closest("div.task_add_block").classList.remove("-on");
             });
-
-            // input_task_name.addEventListener("keyup", function (e) {
-            //     // console.log(e.which);
-            //     if (e.which == 13) {
-            //         let button_task_add = document.getElementsByClassName("task_add")[0];
-            //         button_task_add.click();
-            //     }
-            // });
-
-            // var button_task_add = document.getElementById("task_add");
-            // button_task_add.addEventListener("click", e => {
-            //     e.stopPropagation();
-            //     console.log(button_task_add);
-            //     let task_text = (input_task_name.value).trim();
-            //     if (task_text != "") {
-            //         console.log(this.articleid);
-            //         console.log(this.memberid);
-            //         console.log(input_task_name.value);
-                //     let item_id = Date.now();
-
-
-                //     let list_html = `
-                // <li data-id="${item_id}">
-                //     <div class="item_flex">
-                //     <div class="left_block">
-                //     </div>
-                //     <div class="middle_block">
-                //         <p class="para">` + task_text + `</p>
-                //         <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${task_text}">
-                //     </div>
-                //     <div class="right_block">
-                //         <div class="btn_flex">
-                //         <button type="button" class="btn_update">更新</button>
-                //         <button type="button" class="btn_delete">移除</button>
-                //         </div>
-                //     </div>
-                //     </div>
-                // </li>
-                // `;
-
-                //     let ul_task_list = document.getElementsByClassName("task_list")[0];
-                //     ul_task_list.insertAdjacentHTML("afterbegin", list_html);
-                //     input_task_name.value = "";
-
-                //     let task = {
-                //         "item_id": item_id,
-                //         "name": task_text,
-                //         "star": 0
-                //     };
-                //     let tasks = JSON.parse(localStorage.getItem("tasks"));
-                //     console.log(tasks);
-
-                //     if (tasks) {
-                //         tasks.unshift(task); // [{}, {}]
-                //     } else {
-                //         tasks = [task];
-                //     }
-                //     localStorage.setItem("tasks", JSON.stringify(tasks));
-
-            //     }
-            // });
-
 
 
             // ------------------------------發表新文章------------------------------

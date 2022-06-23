@@ -57,7 +57,7 @@
 
     //INSERT INTO `sunoom`.`article` (`id`, `official`, `category`, `title`, `content`, `author`, `image`, `watch`) VALUES ('11', '2', 'live', '111', '111', '1', '111', '1');
     //建立SQL語法
-    $sql = "INSERT INTO article(official, category, title, content, author, image, watch) VALUES ( 2, ?, ?, ?, ?, ?, 0);";
+    $sql = "INSERT INTO article(official, category, title, content, author, image, watch, comment, date) VALUES ( 2, ?, ?, ?, ?, ?, 0, 0, now());";
 
     //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
     $statement = $pdo->prepare($sql);
