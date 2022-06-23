@@ -3,19 +3,16 @@
        include("connection.php");
 
        $sql = "
-       SELECT c.*, UNIX_TIMESTAMP(c.date), m.name 
-       FROM 
-              comment c
-       join member m
-                     on c.author_id = m.id
-       WHERE c.article_id = ?
-       ORDER BY c.date;
+       INSERT INTO comment (article_id, author_id, content, date) 
+       VALUES (?, ?, ?, now());
        ";
        
-       $articleid = $_GET['articleid'];
+       // $articleid = $_GET['articleid'];
        
        $statement = $pdo->prepare($sql);
-       $statement->bindParam(1, $articleid);
+       $statement->bindParam(1, $_GET['articleid']);
+       $statement->bindParam(2, $_GET['authorid']);
+       $statement->bindParam(3, $_GET['content']);
        $statement->execute();
        $data = $statement->fetchAll();
 

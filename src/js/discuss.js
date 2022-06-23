@@ -17,21 +17,45 @@ window.addEventListener("load", function(){
             render_list:[],
             articleid:0,
             comment_list:[],
+            memberid:1,
         },
         methods: {
             render_li(list){
                 this.render_list = list;
+            },
+            add_new_comment(e){
+                // console.log('object');
+                let input_task_name = document.getElementsByClassName("task_name")[0];
+                console.log(this.articleid);
+                console.log(this.memberid);
+                console.log(input_task_name.value);
+
+                // 新增評論至DB
+                const url = `./php/discuss_new_comment.php?articleid=${this.articleid}&authorid=${this.memberid}&content=${input_task_name.value}`;
+                fetch(url)
+
+                //重新抓評論list
+                setTimeout(e => {
+                    const url02 = `./php/discuss_get_comment.php?articleid=${this.articleid}`;
+                    fetch(url02)
+                        .then(response => response.json())
+                        // .then(text => console.log(text))
+                        .then(text => this.comment_list = text)
+                },500)
+
+                input_task_name.value = "";
             },
         },
         computed: {
         },
         watch: {
             articleid: function(newValue){
-                // console.log('change', newValue);
+                // console.log(newValue);
                 const url = `./php/discuss_get_comment.php?articleid=${newValue}`;
                 fetch(url)
-                .then(response => response.json())
-                .then(text => console.log(text))
+                    .then(response => response.json())
+                    // .then(text => console.log(text))
+                    .then(text => this.comment_list = text)
 
             }
         },
@@ -76,25 +100,6 @@ window.addEventListener("load", function(){
             });
 
             // 討論區文章內容更換(開啟)
-            // $('.article1').click(function(e){
-            //     // console.log('article1')
-            //     e.preventDefault();
-            //     // console.log($(this).data("articleid"));
-            //     // let articleid = $(this).data("articleid");
-            //     // $('.pop-up')[0].dataset.articleid = $(this).data("articleid");
-            //     articleid = $(this).data("articleid");
-            //     $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-            //     $('.pop-up').find('.span1')[0].innerText = $(this).find('.span2')[0].innerText;//觀看次數
-            //     $('.pop-up').find('.span2')[0].innerText = $(this).find('.span3')[0].innerText;//評論次數
-            //     $('.pop-up > h3')[0].innerText=$(this).find('.title > h5')[0].innerText;//標題
-            //     $('.pop-up').find('.comment-region > p')[0].innerText=$(this).find('.comment > p')[0].innerText;//內文
-            //     $('.pop-up').find('.span3')[0].innerText=$(this).find('.span1')[0].innerText;//作者
-            //     $('.pop-up').find('.icons2 img').attr("src",$(this).find('.icon-1 img').attr("src"))//作者頭像
-            //     // console.log($(this).find('.comment > p')[0].innerText);
-            //     $('.pop-up-out').css('display','block')
-            //     // console.log($(this).children('.img_1').children('img').attr("src"))
-            //     $('html').attr("style","overflow: hidden");
-            // });
 
             let article1 = document.getElementsByClassName('article1');
             for(let i=0; i<article1.length; i++){
@@ -201,41 +206,9 @@ window.addEventListener("load", function(){
             })
 
             //------------------------------- 評論區 -------------------------------
-            //渲染
-            function get_tasks() {
-                let tasks = JSON.parse(localStorage.getItem("tasks"));
-                if (tasks) {
-                    let list_html = "";
-                    tasks.forEach(function (item, i) {
-                        list_html += `
-                        <li data-id="${item.item_id}">
-                          <div class="item_flex">
-                            <div class="left_block">
-                            </div>
-                            <div class="middle_block">
-                              <p class="para">${item.name}</p>
-                              <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${item.name}">
-                            </div>
-                            <div class="right_block">
-                              <div class="btn_flex">
-                                <button type="button" class="btn_update">更新</button>
-                                <button type="button" class="btn_delete">移除</button>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      `;
-                    });
-            
-                    let ul_task_list = document.getElementsByClassName("task_list")[0];
-                    ul_task_list.innerHTML = list_html;
-            
-                }
-            }
-
 
             //新增評論
-            get_tasks();
+            // get_tasks();
             var input_task_name = document.getElementsByClassName("task_name")[0];
 
             input_task_name.addEventListener("focus", function () {
@@ -245,63 +218,66 @@ window.addEventListener("load", function(){
                 this.closest("div.task_add_block").classList.remove("-on");
             });
 
-            input_task_name.addEventListener("keyup", function (e) {
-                console.log(e.which);
-                if (e.which == 13) {
-                    let button_task_add = document.getElementsByClassName("task_add")[0];
-                    button_task_add.click();
-                }
-            });
+            // input_task_name.addEventListener("keyup", function (e) {
+            //     // console.log(e.which);
+            //     if (e.which == 13) {
+            //         let button_task_add = document.getElementsByClassName("task_add")[0];
+            //         button_task_add.click();
+            //     }
+            // });
 
-            var button_task_add = document.getElementsByClassName("task_add")[0];
-            button_task_add.addEventListener("click", function () {
-                let task_text = (input_task_name.value).trim();
-                // let task_text = input_task_name.value;
-                if (task_text != "") {
+            // var button_task_add = document.getElementById("task_add");
+            // button_task_add.addEventListener("click", e => {
+            //     e.stopPropagation();
+            //     console.log(button_task_add);
+            //     let task_text = (input_task_name.value).trim();
+            //     if (task_text != "") {
+            //         console.log(this.articleid);
+            //         console.log(this.memberid);
+            //         console.log(input_task_name.value);
+                //     let item_id = Date.now();
 
-                    let item_id = Date.now();
 
+                //     let list_html = `
+                // <li data-id="${item_id}">
+                //     <div class="item_flex">
+                //     <div class="left_block">
+                //     </div>
+                //     <div class="middle_block">
+                //         <p class="para">` + task_text + `</p>
+                //         <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${task_text}">
+                //     </div>
+                //     <div class="right_block">
+                //         <div class="btn_flex">
+                //         <button type="button" class="btn_update">更新</button>
+                //         <button type="button" class="btn_delete">移除</button>
+                //         </div>
+                //     </div>
+                //     </div>
+                // </li>
+                // `;
 
-                    let list_html = `
-                <li data-id="${item_id}">
-                    <div class="item_flex">
-                    <div class="left_block">
-                    </div>
-                    <div class="middle_block">
-                        <p class="para">` + task_text + `</p>
-                        <input type="text" class="task_name_update -none" placeholder="更新待辦事項…" value="${task_text}">
-                    </div>
-                    <div class="right_block">
-                        <div class="btn_flex">
-                        <button type="button" class="btn_update">更新</button>
-                        <button type="button" class="btn_delete">移除</button>
-                        </div>
-                    </div>
-                    </div>
-                </li>
-                `;
+                //     let ul_task_list = document.getElementsByClassName("task_list")[0];
+                //     ul_task_list.insertAdjacentHTML("afterbegin", list_html);
+                //     input_task_name.value = "";
 
-                    let ul_task_list = document.getElementsByClassName("task_list")[0];
-                    ul_task_list.insertAdjacentHTML("afterbegin", list_html);
-                    input_task_name.value = "";
+                //     let task = {
+                //         "item_id": item_id,
+                //         "name": task_text,
+                //         "star": 0
+                //     };
+                //     let tasks = JSON.parse(localStorage.getItem("tasks"));
+                //     console.log(tasks);
 
-                    let task = {
-                        "item_id": item_id,
-                        "name": task_text,
-                        "star": 0
-                    };
-                    let tasks = JSON.parse(localStorage.getItem("tasks"));
-                    console.log(tasks);
+                //     if (tasks) {
+                //         tasks.unshift(task); // [{}, {}]
+                //     } else {
+                //         tasks = [task];
+                //     }
+                //     localStorage.setItem("tasks", JSON.stringify(tasks));
 
-                    if (tasks) {
-                        tasks.unshift(task); // [{}, {}]
-                    } else {
-                        tasks = [task];
-                    }
-                    localStorage.setItem("tasks", JSON.stringify(tasks));
-
-                }
-            });
+            //     }
+            // });
 
 
 

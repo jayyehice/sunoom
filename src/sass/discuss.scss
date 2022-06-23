@@ -675,26 +675,28 @@
             transition: transform .5s, box-shadow .5s;
         }
         
-        .task_container .task_add_block .-on{
+        
+        .task_container .task_add_block .task_name{
+          /* border:1px solid red; */
+          width: 100%;
+          border: 1px solid lightgray;
+          border-radius: 3px 0 0 3px;
+          height: 120px;
+          font-size: 20px;
+          padding: 5px 10px;
+          box-sizing: border-box;
+          outline: none;
+          display: inline-block;
+          vertical-align: top;
+        }
+        
+        .task_container .task_add_block.-on{
+          .task_name{
             box-shadow: 0 0 5px gray;
             transform: scale(1.01);
             transform-origin: center center;
+          }
         }
-        
-        .task_container .task_add_block .task_name{
-            /* border:1px solid red; */
-            width: 100%;
-            border: 1px solid lightgray;
-            border-radius: 3px 0 0 3px;
-            height: 120px;
-            font-size: 20px;
-            padding: 5px 10px;
-            box-sizing: border-box;
-            outline: none;
-            display: inline-block;
-            vertical-align: top;
-        }
-        
         .task_container .task_add_block .task_name::placeholder{
             color: lightgray;
         }
@@ -818,28 +820,42 @@
             box-sizing: border-box;
 
             .para{
-              line-height: 40px;
+              line-height: 60px;
             }
 
         }
         
         
         .task_container .task_list_parent .task_list > li >.item_flex > .right_block{
-            width: 100px;
+            // border: 1px solid #000;
+            width: 27%;
             flex-shrink: 0;
+            height: 60px;
+
+            .comment_author{
+              display: flex;
+              justify-content: end;
+              // height: 30px;
+              p{
+                margin-left: 10px;
+                line-height: 30px;
+              }
+            }
         }
         
         .task_container .task_list_parent .task_list > li >.item_flex > .right_block .btn_flex{
             display: flex;
+            justify-content: end;
         }
         
         .task_container .task_list_parent .task_list > li >.item_flex > .right_block .btn_flex > button{
-            flex-grow: 1;
+            // flex-grow: 1;
             outline: none;
-            height: 40px;
+            height: 30px;
             font-size: 16px;
-            padding: 0;
-            margin: 0;
+            padding: 0 10px;
+            
+            margin-left: 10px;
           
             background: none;
             background-color:#faeab1;
@@ -850,10 +866,10 @@
         
         .task_container .task_list_parent .task_list > li >.item_flex > .middle_block .task_name_update{
             /* border:1px solid red; */
-            width: 95%;
+            width: 100%;
             border: 1px solid lightgray;
             border-radius: 3px 0 0 3px;
-            height: 40px;
+            height: 60px;
             font-size: 16px;
             padding: 5px 10px;
             outline: none;

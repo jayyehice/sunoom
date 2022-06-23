@@ -496,11 +496,6 @@
   font-size: 0;
   transition: transform 0.5s, box-shadow 0.5s;
 }
-.discuss .pop-up-out .task_container .task_add_block .-on {
-  box-shadow: 0 0 5px gray;
-  transform: scale(1.01);
-  transform-origin: center center;
-}
 .discuss .pop-up-out .task_container .task_add_block .task_name {
   /* border:1px solid red; */
   width: 100%;
@@ -513,6 +508,11 @@
   outline: none;
   display: inline-block;
   vertical-align: top;
+}
+.discuss .pop-up-out .task_container .task_add_block.-on .task_name {
+  box-shadow: 0 0 5px gray;
+  transform: scale(1.01);
+  transform-origin: center center;
 }
 .discuss .pop-up-out .task_container .task_add_block .task_name::placeholder {
   color: lightgray;
@@ -617,22 +617,31 @@
   box-sizing: border-box;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
-  line-height: 40px;
+  line-height: 60px;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
-  width: 100px;
+  width: 27%;
   flex-shrink: 0;
+  height: 60px;
+}
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .comment_author {
+  display: flex;
+  justify-content: end;
+}
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .comment_author p {
+  margin-left: 10px;
+  line-height: 30px;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex {
   display: flex;
+  justify-content: end;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button {
-  flex-grow: 1;
   outline: none;
-  height: 40px;
+  height: 30px;
   font-size: 16px;
-  padding: 0;
-  margin: 0;
+  padding: 0 10px;
+  margin-left: 10px;
   background: none;
   background-color: #faeab1;
   border: 0;
@@ -641,10 +650,10 @@
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
   /* border:1px solid red; */
-  width: 95%;
+  width: 100%;
   border: 1px solid lightgray;
   border-radius: 3px 0 0 3px;
-  height: 40px;
+  height: 60px;
   font-size: 16px;
   padding: 5px 10px;
   outline: none;

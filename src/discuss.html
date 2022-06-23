@@ -110,7 +110,7 @@
 
             <hr>
 
-
+            <!-- 發表文章 -->
             <div class="article">
                 <h4>文章列表</h4>
                 <div class="article_type">
@@ -241,12 +241,30 @@
     
                     <div class="task_add_block">
                         <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
-                        <button type="button" class="task_add">新增評論</button>
+                        <button type="button" class="task_add" id="task_add" @click="add_new_comment">新增評論</button>
                     </div>
     
                     <!-- 評論區 -->
                     <div class="task_list_parent">
                         <ul class="task_list">
+                            <li :data-commentid="comment[0]" v-for="comment in comment_list">
+                                <div class="item_flex">
+                                  <div class="middle_block">
+                                    <p class="para">{{comment[3]}}</p>
+                                    <input type="text" class="task_name_update -none" placeholder="更新評論內容…" :value="comment[3]">
+                                  </div>
+                                  <div class="right_block">
+                                    <div class="btn_flex">
+                                      <button type="button" class="btn_update">更新</button>
+                                      <button type="button" class="btn_delete">移除</button>
+                                    </div>
+                                    <div class="comment_author">
+                                        <p class="name" :data-memberid="comment[2]">{{comment[6]}}</p>
+                                        <p class="time">{{comment[5]}}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
                         </ul>
                     </div>
                 </div>
