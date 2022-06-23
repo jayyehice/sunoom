@@ -52,7 +52,7 @@
                 <div class="dateTitle">
                 </div>
                 <div class="pickerBox" >
-                    <button @click="countent='ChooseBlock0';day(date);chooseFunction(date);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt=""></button>
+                    <button @click="countent='ChooseBlock0';day(date,index);chooseFunction(date);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt=""></button>
                 </div>
             </div>
             <!-- 小訂單明細 -->
@@ -72,21 +72,29 @@
                     <input type="date" name="" id="" value="2022-07-16">
                 </div>
                 <p>遊</p>
-                <div  class="tripList" v-for="(date,index) in dateArray">
+                <div class="tripList" v-for="(date,index) in dateArray" >
                     <h6 class="tripTitle">{{date}}</h6>
-                    <triplist1 :activity_list="activity_list"></tripList1>
+                    <!-- <triplist1 :date="newDay" :activity_list="activity_list"></tripList1> -->
                     <ul>
-                        <li >{{chooseData}}</li>
-                        <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>
-                        <li>$11,994</li>
+                        <li class="tripMorningName" ></li>
+                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums"src="./img/orderPage/sun/right_button.png"></li>
+                        <li class="tripMorningPrice">{{newPrice}}</li>
                         <li><img  class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
-                    <ul>
-                        <li>巨石陣(日)</li>
-                        <li><img class="leftButton" src="./img/orderPage/sun/left_button.png" >2<img class="rightButton" src="./img/orderPage/sun/right_button.png"></li>
-                        <li>$3,998</li>
-                        <li><img  class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+
+                    <!-- <ul>
+                        <li >{{tirpMorning}}</li>
+                        <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li >${{tirpMorningPrice}}</li>
+                        <li><img @click="deleteChoose()" class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
+
+                    <ul>
+                        <li >{{tirpMorning}}</li>
+                        <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li >${{tirpMorningPrice}}</li>
+                        <li><img @click="deleteChoose()" class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                    </ul> -->
 
                 </div>
                 <div class="FoodList" >
@@ -133,14 +141,14 @@
             </div>
 
             <!-- 選購區塊 -->
-            <keep-alive>
-                <component  :is="countent" :activity_list="activity_list" :food_list="food_list" :day="newDay"></component>
-            </keep-alive>
+            <!-- <keep-alive>
+                <component  :is="countent" :activity_list="activity_list" :food_list="food_list" :day="newDay" :dayindex="dayindex"></component>
+            </keep-alive> -->
 
             <div class="tripChooseBlock">
                     <div class="itineraryTitle">
                         <h4>遊</h4>
-                        <h4 class="chooseDate">2022/07/16</h4>
+                        <h4 class="chooseDate">{{newDay}}</h4>
                     </div>
                     <!-- 上午行程 -->
                     <div class="morningItineraryA" >
@@ -158,7 +166,7 @@
                                 <p id="itineraryText">{{morningtriptext}}</p>
                             </div>
                         </div>
-                        <img id="addItineraryM" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
+                        <img id="addItineraryM"  src="./img/orderPage/sun/shopping-cart-add.png" alt="">
                     </div>
                     <!-- 下午行程 -->
                     <div class="noonItinerary">
@@ -202,7 +210,7 @@
                 <div class="foodChooseBlock">
                     <div class="foodTitle">
                         <h4>食</h4>
-                        <h4 class="chooseDate">2022/07/16</h4>
+                        <h4 class="chooseDate">{{newDay}}</h4>
                     </div>
                     <!-- 早餐 -->
                     <div class="morningFood">
@@ -263,7 +271,7 @@
                 <div class="stayChooseBlock">
                     <div class="stayTitle">
                         <h4>宿</h4>
-                        <h4 class="chooseDate">2022/07/16</h4>
+                        <h4 class="chooseDate">{{newDay}}</h4>
                     </div>
                     <!-- 小木屋 -->
                     <div class="cabin">
