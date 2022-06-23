@@ -294,23 +294,32 @@
         <div class="wrapper_bottom">
             <h3>日島美食地圖 | Sunoom Map</h3>
             
-            <!-- 美食地圖 -->
-            <div class="map" id="map">
-                <img class="foodicon bbq" v-if="map_list[2]" :src="map_list[2][3]" alt="">
-                <img class="foodicon lobster" src="img/food/lobster.png" alt="">
-                <img class="foodicon juice" src="img/food/juice.png" alt="">
-                <img class="foodicon hamberger" src="img/food/hamberger.png" alt="">
+             <!-- 美食地圖ICON*4 -->
+             <div class="map" id="map">
+                <img class="foodicon bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="">
+                <img class="foodicon lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="">
+                <img class="foodicon juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="">
+                <img class="foodicon hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="">
 
                 <!-- 燈箱開啟時的深色背景 -->
                 <div class="backdrop"></div>
                 <!-- 地圖燈箱 -->
-                <div class="iconBox">
+                <div class="iconBox" v-if="boxContent">
                     <!-- 燈箱關閉按鈕 -->
                     <i class="fa-solid fa-circle-xmark close"></i>
-                    <img src="img/food/hamberger.png" alt="">
-                    <p v-if="map_list[3]">{{map_list[3][4]}}</p>
-                    <p class="iconBoxtime">営業時間: 12:00-20:00</p>
-                    <p>最道地的美式漢堡店，每天現烤的堡包，再用奶油煎過外酥內軟，搭配新鮮番茄蔬菜，現點現煎，保持肉品鮮嫩多汁。
+                    <!-- 燈箱店家icon -->
+                    <img  :src="boxContent[3]" alt="">
+                    <!-- 燈箱店名 -->
+                    <p>
+                        {{boxContent[4]}}
+                    </p>
+                    <!-- 燈箱營業時間 -->
+                    <p class="iconBoxtime">
+                        {{boxContent[5]}}
+                    </p>
+                    <!-- 燈箱店家簡介 -->
+                    <p>
+                        {{boxContent[6]}}
                     </p>
                 </div>
             </div>

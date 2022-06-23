@@ -9,7 +9,9 @@ $(document).ready(function(){
         el: '#map',
         data: {     // 變數放這裡！           
             map_list: [],
-            test:"123",
+
+            //燈箱內容
+            boxContent:[],
         },
         methods: {},
         computed: {},
@@ -22,14 +24,48 @@ $(document).ready(function(){
         },
         created() {
         },
-        mounted() {
-            //點擊icon打開燈箱e
-            $(".hamberger").click(function(){
+        mounted() {   
+        },
+        updated() {
+            //燈箱function
+            function boxShow(){
                 $(".iconBox").fadeIn();
                 //燈箱開啟時的深色背景
                 $(".backdrop").animate({"opacity" : "0.5"} , 300);
                 $(".backdrop").css({"display": "block"});
+            }
+
+            //hamberger
+            document.getElementsByClassName("hamberger")[0].addEventListener("click", e => {
+                this.boxContent = this.map_list[4];
+                boxShow();
             });
+
+            //juice
+            document.getElementsByClassName("juice")[0].addEventListener("click", e => {
+                this.boxContent = this.map_list[6];
+                boxShow();
+            });
+
+            //bbq
+            document.getElementsByClassName("bbq")[0].addEventListener("click", e => {
+                this.boxContent = this.map_list[0];
+                boxShow();
+            });
+
+            //juice
+            document.getElementsByClassName("lobster")[0].addEventListener("click", e => {
+                this.boxContent = this.map_list[2];
+                boxShow();
+            });
+            
+            // //點擊icon打開燈箱e
+            // $(".hamberger").click(function(){
+            //     $(".iconBox").fadeIn();
+            //     //燈箱開啟時的深色背景
+            //     $(".backdrop").animate({"opacity" : "0.5"} , 300);
+            //     $(".backdrop").css({"display": "block"});
+            // });
     
     
             //點擊 X 或 其他地方 關閉燈箱
@@ -39,9 +75,6 @@ $(document).ready(function(){
                 $(".backdrop").animate({"opacity" : "0"} , 300);
                 $(".backdrop").css({"display": "none"});
             });
-            
-        },
-        updated() {
         },
         
     })

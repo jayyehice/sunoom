@@ -250,14 +250,17 @@
 .food main .wrapper_mid .restaurant1 {
   display: flex;
   margin-bottom: 120px;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 280px);
+  margin-left: auto;
+  margin-right: auto;
 }
 .food main .wrapper_mid .restaurant1 .restaurant1_left .restaurant1_pic1 {
-  margin-left: 100px;
   border: 1px solid #0C1244;
 }
 .food main .wrapper_mid .restaurant1 .restaurant1_right {
   border-top: 1px solid #0C1244;
-  margin-right: 180px;
 }
 .food main .wrapper_mid .restaurant1 .restaurant1_right h3 {
   color: #0C1244;
@@ -267,7 +270,7 @@
   letter-spacing: 3px;
 }
 .food main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-left: 40px;
   box-sizing: border-box;
 }
@@ -336,7 +339,7 @@
   width: 900px;
   height: 700px;
   margin: 0 auto;
-  background-image: url("../img/food/sunmap.png");
+  background-image: url("../img/food/sun/sunmap.png");
   background-size: cover;
   position: relative;
   border: 1px solid #0C1244;
@@ -652,6 +655,9 @@
   font-size: 16px;
   display: inline-block;
 }
+.food_moon main .wrapper_mid {
+  margin: 0 auto;
+}
 .food_moon main .wrapper_mid h2 {
   color: #F5F0DD;
   font-size: 40px;
@@ -670,15 +676,18 @@
 }
 .food_moon main .wrapper_mid .restaurant1 {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 120px;
+  width: calc(100% - 280px);
+  margin-left: auto;
+  margin-right: auto;
 }
 .food_moon main .wrapper_mid .restaurant1 .restaurant1_left .restaurant1_pic1 {
-  margin-left: 100px;
   border: 1px solid #F5F0DD;
 }
 .food_moon main .wrapper_mid .restaurant1 .restaurant1_right {
   border-top: 1px solid #F5F0DD;
-  margin-right: 180px;
 }
 .food_moon main .wrapper_mid .restaurant1 .restaurant1_right h3 {
   color: #F5F0DD;
@@ -688,7 +697,7 @@
   letter-spacing: 3px;
 }
 .food_moon main .wrapper_mid .restaurant1 .restaurant1_right .restaurant1_right_top {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-left: 40px;
   box-sizing: border-box;
 }
@@ -757,7 +766,7 @@
   width: 900px;
   height: 700px;
   margin: 0 auto;
-  background-image: url("../img/food/sunmap.png");
+  background-image: url("../img/food/moon/moonmap.png");
   background-size: cover;
   position: relative;
   border: 1px solid #F5F0DD;
@@ -768,26 +777,26 @@
   animation-iteration-count: infinite;
 }
 .food_moon main .wrapper_bottom .map .juice {
-  top: 180px;
-  left: 120px;
+  top: 425px;
+  left: 730px;
   position: absolute;
   cursor: pointer;
 }
 .food_moon main .wrapper_bottom .map .bbq {
-  top: 540px;
-  left: 255px;
+  top: 210px;
+  left: 275px;
   position: absolute;
   cursor: pointer;
 }
 .food_moon main .wrapper_bottom .map .hamberger {
-  top: 380px;
-  left: 410px;
+  top: 130px;
+  left: 575px;
   position: absolute;
   cursor: pointer;
 }
 .food_moon main .wrapper_bottom .map .lobster {
-  top: 260px;
-  left: 520px;
+  top: 275px;
+  left: 415px;
   position: absolute;
   cursor: pointer;
 }

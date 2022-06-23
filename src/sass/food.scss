@@ -290,15 +290,20 @@ $p : 16px;
             .restaurant1{
                 display: flex;
                 margin-bottom: 120px;
+                align-items: center;
+                justify-content: center;
+                width: calc(100% - 280px);
+                margin-left: auto;
+                margin-right: auto;
                 .restaurant1_left{
                     .restaurant1_pic1{
-                        margin-left: 100px;
+                        // margin-left: 100px;
                         border: 1px solid $moon_color;
                     }
                 }
                 .restaurant1_right{
                 border-top: 1px solid $moon_color;
-                margin-right: 180px;
+                // margin-right: 180px;
                     h3{
                         color: $moon_color;
                         font-size: $h3;
@@ -307,7 +312,7 @@ $p : 16px;
                         letter-spacing: 3px;
                     }
                     .restaurant1_right_top{
-                        padding-top: 80px;
+                        padding-top: 50px;
                         padding-left: 40px;
                         box-sizing: border-box;
                         p{
@@ -382,7 +387,7 @@ $p : 16px;
                 width: 900px;
                 height: 700px;
                 margin: 0 auto;
-                background-image: url("../img/food/sunmap.png");
+                background-image: url("../img/food/sun/sunmap.png");
                 background-size: cover;
                 position: relative;
                 border: 1px solid $moon_color;
@@ -731,6 +736,7 @@ $p : 16px;
     
         // 餐廳介紹
         .wrapper_mid{
+            margin: 0 auto;
             h2{
                 color: $moon_color;
                 font-size: $h2;
@@ -751,16 +757,21 @@ $p : 16px;
             // 四個餐廳共用Css
             .restaurant1{
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 margin-bottom: 120px;
+                width: calc(100% - 280px);
+                margin-left: auto;
+                margin-right: auto;
                 .restaurant1_left{
                     .restaurant1_pic1{
-                        margin-left: 100px;
+                        // margin-left: 100px;
                         border: 1px solid $moon_color;
                     }
                 }
                 .restaurant1_right{
                 border-top: 1px solid $moon_color;
-                margin-right: 180px;
+                // margin-right: 180px;
                     h3{
                         color: $moon_color;
                         font-size: $h3;
@@ -769,7 +780,7 @@ $p : 16px;
                         letter-spacing: 3px;
                     }
                     .restaurant1_right_top{
-                        padding-top: 80px;
+                        padding-top: 50px;
                         padding-left: 40px;
                         box-sizing: border-box;
                         p{
@@ -844,7 +855,7 @@ $p : 16px;
                 width: 900px;
                 height: 700px;
                 margin: 0 auto;
-                background-image: url("../img/food/sunmap.png");
+                background-image: url("../img/food/moon/moonmap.png");
                 background-size: cover;
                 position: relative;
                 border: 1px solid $moon_color;
@@ -854,26 +865,26 @@ $p : 16px;
                     animation-iteration-count: infinite;
                 }
                 .juice{
-                    top:180px;
-                    left: 120px;
+                    top:425px;
+                    left: 730px;
                     position: absolute;
                     cursor: pointer;
                 }
                 .bbq{
-                    top:540px;
-                    left: 255px;
+                    top:210px;
+                    left: 275px;
                     position: absolute;
                     cursor: pointer;
                 }
                 .hamberger{
-                    top:380px;
-                    left: 410px;
+                    top:130px;
+                    left: 575px;
                     position: absolute;
                     cursor: pointer;
                 }
                 .lobster{
-                    top:260px;
-                    left: 520px;
+                    top:275px;
+                    left: 415px;
                     position: absolute;
                     cursor: pointer;
                 }
