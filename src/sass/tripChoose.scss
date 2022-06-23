@@ -186,10 +186,11 @@
             font-weight: bolder;
             margin-left: 10px;
         }
+
         .leftButton{
             width: 8px;
             height: 8px;
-            margin-right: 5px;
+            margin-right: 0px;
             cursor: pointer;
         }
         .rightButton{
@@ -236,9 +237,13 @@
             li:first-Child{
                 text-align: center;
                 width: 80px;
+                overflow: auto;
             }
             li:nth-Child(2){
                 width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
             }
             li:nth-Child(3){

@@ -189,7 +189,7 @@
 .tripChoose .BigList .leftButton {
   width: 8px;
   height: 8px;
-  margin-right: 5px;
+  margin-right: 0px;
   cursor: pointer;
 }
 .tripChoose .BigList .rightButton {
@@ -236,9 +236,13 @@
 .tripChoose .BigList ul li:first-Child {
   text-align: center;
   width: 80px;
+  overflow: auto;
 }
 .tripChoose .BigList ul li:nth-Child(2) {
   width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .tripChoose .BigList ul li:nth-Child(3) {
