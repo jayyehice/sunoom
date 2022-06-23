@@ -255,8 +255,8 @@
                                   </div>
                                   <div class="right_block">
                                     <div class="btn_flex">
-                                      <button type="button" class="btn_update">更新</button>
-                                      <button type="button" class="btn_delete">移除</button>
+                                      <button v-if="memberid == comment[2]" type="button" class="btn_update" @click="update_comment">更新</button>
+                                      <button v-if="memberid == comment[2]" type="button" class="btn_delete" @click="delete_comment(comment[0])">移除</button>
                                     </div>
                                     <div class="comment_author">
                                         <p class="name" :data-memberid="comment[2]">{{comment[6]}}</p>

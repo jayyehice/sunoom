@@ -26,36 +26,113 @@ window.addEventListener("load", function(){
             add_new_comment(e){
                 // console.log('object');
                 let input_task_name = document.getElementsByClassName("task_name")[0];
-                console.log(this.articleid);
-                console.log(this.memberid);
-                console.log(input_task_name.value);
+                // console.log(this.articleid);
+                // console.log(this.memberid);
+                // console.log(input_task_name.value);
 
                 // 新增評論至DB
-                const url = `./php/discuss_new_comment.php?articleid=${this.articleid}&authorid=${this.memberid}&content=${input_task_name.value}`;
+                let url = `./php/discuss_new_comment.php?articleid=${this.articleid}&authorid=${this.memberid}&content=${input_task_name.value}`;
                 fetch(url)
 
                 //重新抓評論list
+                this.update_comment_list(this.articleid)
+                    
+
+                input_task_name.value = "";
+            },
+            update_comment_list(id){
                 setTimeout(e => {
-                    const url02 = `./php/discuss_get_comment.php?articleid=${this.articleid}`;
-                    fetch(url02)
+                    let url = `./php/discuss_get_comment.php?articleid=${id}`;
+                    fetch(url)
                         .then(response => response.json())
                         // .then(text => console.log(text))
                         .then(text => this.comment_list = text)
                 },500)
-
-                input_task_name.value = "";
             },
+            delete_comment(id){
+                // console.log(id);
+                let r = confirm("確認移除？");
+                if (r) {
+                    let url = `./php/discuss_delete_comment.php?commentid=${id}`;
+                    fetch(url)
+                    
+                    this.update_comment_list(this.articleid)  
+                }
+            },
+            update_comment(e){
+                // console.log(e.target);
+
+                if (e.target.classList.contains("btn_update")) {
+                    if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
+            
+                        e.target.setAttribute("data-edit", true);
+                        let li_el = e.target.closest("li");
+                        li_el.querySelector("p.para").classList.toggle("-none");
+                        li_el.querySelector("input.task_name_update").classList.toggle("-none");
+            
+                    } else {
+                        let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
+            
+                        if (update_task_name == "") {
+                            alert("請輸入評論");
+                        } else {
+
+                            // console.log(update_task_name);
+                            // console.log(e.target.closest("li").dataset.commentid);
+                            let url = `./php/discuss_update_comment.php?commentid=${e.target.closest("li").dataset.commentid}&content=${update_task_name}`;
+                            fetch(url)
+                            
+                            
+                            //恢復原狀
+                            let p_el = e.target.closest("li").querySelector("p.para");
+                            p_el.innerHTML = update_task_name;
+                            p_el.classList.toggle("-none");
+                            
+                            let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
+                            input_update_el.value = update_task_name;
+                            input_update_el.classList.toggle("-none");
+                            
+                            e.target.removeAttribute("data-edit");
+                            
+                            // this.update_comment_list(this.articleid)  
+
+                            
+            
+                            // let item_id = e.target.closest("li").getAttribute("data-id");
+                            // let tasks = JSON.parse(localStorage.getItem("tasks"));
+                            // tasks.forEach(function (task, i) {
+                            //     if (item_id == task.item_id) {
+                            //         tasks[i].name = update_task_name;
+                            //     }
+                            // });
+                            // localStorage.setItem("tasks", JSON.stringify(tasks));
+            
+                        }
+                    }
+
+                }
+
+
+                // let r = confirm("確認更新？");
+                // if (r) {
+                //     // let url = `./php/discuss_delete_comment.php?commentid=${id}`;
+                //     // fetch(url)
+                    
+                //     // this.update_comment_list(this.articleid)  
+                // }
+            }
         },
         computed: {
         },
         watch: {
             articleid: function(newValue){
                 // console.log(newValue);
-                const url = `./php/discuss_get_comment.php?articleid=${newValue}`;
-                fetch(url)
-                    .then(response => response.json())
-                    // .then(text => console.log(text))
-                    .then(text => this.comment_list = text)
+                // let url = `./php/discuss_get_comment.php?articleid=${newValue}`;
+                // fetch(url)
+                //     .then(response => response.json())
+                //     // .then(text => console.log(text))
+                //     .then(text => this.comment_list = text)
+                this.update_comment_list(newValue)
 
             }
         },
@@ -142,67 +219,68 @@ window.addEventListener("load", function(){
                 e.stopPropagation();
 
                 //移除評論
-                if (e.target.classList.contains("btn_delete")) {
-                    let r = confirm("確認移除？");
-                    if (r) {
+                // if (e.target.classList.contains("btn_delete")) {
+                //     e.stopPropagation();
+                //     let r = confirm("確認移除？");
+                //     if (r) {
+                //         console.log('test');
+                //         // let item_id = e.target.closest("li").getAttribute("data-id");
+                //         // let tasks = JSON.parse(localStorage.getItem("tasks"));
+                //         // let updated_tasks = [];
+                //         // tasks.forEach(function (task, i) {
+                //         //     if (item_id != task.item_id) {
+                //         //         updated_tasks.push(task);
+                //         //     }
+                //         // });
+                //         // //localStorage.setItem("tasks", JSON.stringify(updated_tasks));
             
-                        let item_id = e.target.closest("li").getAttribute("data-id");
-                        let tasks = JSON.parse(localStorage.getItem("tasks"));
-                        let updated_tasks = [];
-                        tasks.forEach(function (task, i) {
-                            if (item_id != task.item_id) {
-                                updated_tasks.push(task);
-                            }
-                        });
-                        localStorage.setItem("tasks", JSON.stringify(updated_tasks));
+                //         // e.target.closest("li").classList.add("fade_out");
+                //         // setTimeout(function () {
+                //         //     e.target.closest("li").remove();
+                //         // }, 1000);
+                //     }
             
-                        e.target.closest("li").classList.add("fade_out");
-                        setTimeout(function () {
-                            e.target.closest("li").remove();
-                        }, 1000);
-                    }
-            
-                }
+                // }
 
                 //更新評論
-                if (e.target.classList.contains("btn_update")) {
-                    if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
+                // if (e.target.classList.contains("btn_update")) {
+                //     if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
             
-                        e.target.setAttribute("data-edit", true);
-                        let li_el = e.target.closest("li");
-                        li_el.querySelector("p.para").classList.toggle("-none");
-                        li_el.querySelector("input.task_name_update").classList.toggle("-none");
+                //         e.target.setAttribute("data-edit", true);
+                //         let li_el = e.target.closest("li");
+                //         li_el.querySelector("p.para").classList.toggle("-none");
+                //         li_el.querySelector("input.task_name_update").classList.toggle("-none");
             
-                    } else {
-                        let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
+                //     } else {
+                //         let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
             
-                        if (update_task_name == "") {
-                            alert("請輸入待辦事項");
-                        } else {
-                            let p_el = e.target.closest("li").querySelector("p.para");
-                            p_el.innerHTML = update_task_name;
-                            p_el.classList.toggle("-none");
+                //         if (update_task_name == "") {
+                //             alert("請輸入待辦事項");
+                //         } else {
+                //             let p_el = e.target.closest("li").querySelector("p.para");
+                //             p_el.innerHTML = update_task_name;
+                //             p_el.classList.toggle("-none");
             
-                            let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
-                            input_update_el.value = update_task_name;
-                            input_update_el.classList.toggle("-none");
+                //             let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
+                //             input_update_el.value = update_task_name;
+                //             input_update_el.classList.toggle("-none");
             
-                            e.target.removeAttribute("data-edit");
+                //             e.target.removeAttribute("data-edit");
             
             
-                            let item_id = e.target.closest("li").getAttribute("data-id");
-                            let tasks = JSON.parse(localStorage.getItem("tasks"));
-                            tasks.forEach(function (task, i) {
-                                if (item_id == task.item_id) {
-                                    tasks[i].name = update_task_name;
-                                }
-                            });
-                            localStorage.setItem("tasks", JSON.stringify(tasks));
+                //             let item_id = e.target.closest("li").getAttribute("data-id");
+                //             let tasks = JSON.parse(localStorage.getItem("tasks"));
+                //             tasks.forEach(function (task, i) {
+                //                 if (item_id == task.item_id) {
+                //                     tasks[i].name = update_task_name;
+                //                 }
+                //             });
+                //             localStorage.setItem("tasks", JSON.stringify(tasks));
             
-                        }
-                    }
+                //         }
+                //     }
             
-                }
+                // }
             })
 
             //------------------------------- 評論區 -------------------------------
