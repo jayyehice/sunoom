@@ -158,14 +158,12 @@ function imgSwitch(){
 
   });
 
+// 登入登出切換
 $(function(){
 
-  $("#hamL").click(function(e){
-    alert("tt");
-    $("#hamL").hide;
-    $("#hamO").show;
-    e.preventDefault();
-
+  $("#hamL").click(function(){
+    // alert("tt");
+    // 要改到login.js那裡判斷
   })
 
 })

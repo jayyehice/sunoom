@@ -264,17 +264,17 @@ header{
     top: 120px;
     @include mobile{
       right: 20px;
-      top: 20px;
+      top: 70px;
     }
   }
   
   .ham_member{
     // border: 1px solid teal;
     position: absolute;
-    right: 50px;
+    right: 100px;
     top: 50px;
     @include mobile{
-      right: 120px;
+      right: 70px;
       top: 20px;
     }
   
@@ -284,14 +284,21 @@ header{
     border: 1px solid red;
     color: #fff;
     position: absolute;
-    right: 100px;
+    right: 50px;
     top: 60px;
+
+    @include mobile{
+      right: 20px;
+      top: 30px;
+    }
+
 
 
     #hamL{
       // position: absolute;
       // right: 50px;
       // top: 0;
+      display: block;
   
     }
 
