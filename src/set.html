@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="./js/vue.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -16,7 +16,7 @@
 <body class="set">
     @@include('./layout/header.html')
 
-    <main>
+    <main id="set">
         <div class="wrapper">
 
             <p class="crumbs">
@@ -87,8 +87,50 @@
                 會員享有滿額免運與會員促銷價！請按此登入
             </a>
 
-             <!-- 第1個 -->
+            <!-- 第1個 測試 -->
              <section id="adventure" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[0][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[0][10]" alt="活動小圖">
+                        <img :src="set_list[0][11]" alt="活動小圖">
+                        <img :src="set_list[0][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_1.png" alt="探險線條圖">
+
+                    <h4>{{set_list[0][4]}}</h4>
+                    <h5>{{set_list[0][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[0][6]}}<br>集合地點：{{set_list[0][7]}}<br>活動內容：{{set_list[0][8]}}
+                    </p>
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
+                                <!-- <img class="stbSP" src="./img/set/set_more.png" alt="加號圖"> -->
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
+             </section>
+
+             <!-- 第1個 -->
+             <!-- <section id="adventure" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_1_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -115,7 +157,48 @@
                         <div class="stbS">
                             <p>156名網友在討論此方案</p>
                             <a href="discuss.html">
-                                <!-- <img class="stbSP" src="./img/set/set_more.png" alt="加號圖"> -->
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
+             </section> -->
+
+            <!-- 第2個 測試 -->
+             <section id="family" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[1][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[1][10]" alt="活動小圖">
+                        <img :src="set_list[1][11]" alt="活動小圖">
+                        <img :src="set_list[1][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_2.png" alt="親子線條圖">
+
+                    <h4>{{set_list[1][4]}}</h4>
+                    <h5>{{set_list[1][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[1][6]}}<br>集合地點：{{set_list[1][7]}}<br>活動內容：{{set_list[1][8]}}
+                    </p>
+            
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
                                 <i class="fas fa-plus-circle"></i>
                                 Read More
                             </a>
@@ -130,7 +213,7 @@
              </section>
 
              <!-- 第2個 -->
-             <section id="family" class="setMain">
+             <!-- <section id="family" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_2_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -169,10 +252,51 @@
 
                 </article>
                  
+             </section> -->
+
+            <!-- 第3個 測試 -->
+             <section id="relax" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[2][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[2][10]" alt="活動小圖">
+                        <img :src="set_list[2][11]" alt="活動小圖">
+                        <img :src="set_list[2][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_3.png" alt="度假線條圖">
+
+                    <h4>{{set_list[2][4]}}</h4>
+                    <h5>{{set_list[2][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[2][6]}}<br>集合地點：{{set_list[2][7]}}<br>活動內容：{{set_list[2][8]}}
+                    </p>
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
              </section>
 
              <!-- 第3個 -->
-             <section id="relax" class="setMain">
+             <!-- <section id="relax" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_3_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -210,10 +334,51 @@
 
                 </article>
                  
+             </section> -->
+
+            <!-- 第4個 測試 -->
+             <section id="couple" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[3][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[3][10]" alt="活動小圖">
+                        <img :src="set_list[3][11]" alt="活動小圖">
+                        <img :src="set_list[3][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_4.png" alt="蜜月線條圖">
+
+                    <h4>{{set_list[3][4]}}</h4>
+                    <h5>{{set_list[3][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[3][6]}}<br>集合地點：{{set_list[3][7]}}<br>活動內容：{{set_list[3][8]}}
+                    </p>
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
              </section>
 
              <!-- 第4個 -->
-             <section id="couple" class="setMain">
+             <!-- <section id="couple" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_4_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -251,10 +416,51 @@
 
                 </article>
                  
+             </section> -->
+
+            <!-- 第5個 測試 -->
+             <section id="sea" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[4][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[4][10]" alt="活動小圖">
+                        <img :src="set_list[4][11]" alt="活動小圖">
+                        <img :src="set_list[4][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_5.png" alt="海洋線條圖">
+
+                    <h4>{{set_list[4][4]}}</h4>
+                    <h5>{{set_list[4][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[4][6]}}<br>集合地點：{{set_list[4][7]}}<br>活動內容：{{set_list[4][8]}}
+                    </p>
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
              </section>
 
              <!-- 第5個 -->
-             <section id="sea" class="setMain">
+             <!-- <section id="sea" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_5_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -292,10 +498,51 @@
 
                 </article>
                  
+             </section> -->
+
+             <!-- 第6個 測試 -->
+             <section id="ecology" class="setMain">
+                <article class="setPic">
+                    <img :src="set_list[5][9]" alt="活動大圖">
+                    <div class="setPicS">
+                        <img :src="set_list[5][10]" alt="活動小圖">
+                        <img :src="set_list[5][11]" alt="活動小圖">
+                        <img :src="set_list[5][12]" alt="活動小圖">
+                    </div>
+                </article>
+
+                <article class="setText">
+                    <img class="setTextPic" src="./img/set/sun/set_icon_1_6.png" alt="海龜線條圖">
+
+                    <h4>{{set_list[5][4]}}</h4>
+                    <h5>{{set_list[5][5]}}</h5>
+                    <p class="setTextTitle">行程資訊</p>
+                    <p class="setTextWord">
+                        集合時間：{{set_list[5][6]}} <br>集合地點：{{set_list[5][7]}}<br>活動內容：{{set_list[5][8]}}
+                    </p>
+                    <p class="setTextWord2">
+                        機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
+                    </p>
+
+                    <div class="setTextBotm">
+                        <div class="stbS">
+                            <p>156名網友在討論此方案</p>
+                            <a href="discuss.html">
+                                <i class="fas fa-plus-circle"></i>
+                                Read More
+                            </a>
+                        </div>
+                        <a class="setBook" href="orderPage.html">
+                            Book Now
+                        </a>
+                    </div>
+
+                </article>
+                 
              </section>
 
              <!-- 第6個 -->
-             <section id="ecology" class="setMain">
+             <!-- <section id="ecology" class="setMain">
                 <article class="setPic">
                     <img src="./img/set/sun/set_6_1.png" alt="活動大圖">
                     <div class="setPicS">
@@ -333,7 +580,7 @@
 
                 </article>
                  
-             </section>
+             </section> -->
 
         </div>
     </main>
@@ -341,5 +588,6 @@
     @@include('./layout/footer.html')
 
 @@include('./layout/header_footer_script_link.html')
+    <script src="./js/set.js"></script>
 </body>
 </html>
