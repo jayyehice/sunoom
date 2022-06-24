@@ -24,6 +24,25 @@
 .tripChoose button {
   color: #0C1244;
 }
+.tripChoose .addfadein {
+  width: 12vw;
+  height: 10vh;
+  position: fixed;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  border: 1px solid #0C1244;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 10vh;
+  font-size: 16px;
+  border-radius: 22px;
+  opacity: 0;
+}
+.tripChoose .addfadein .fa-regular {
+  margin-left: 10px;
+}
 .tripChoose span {
   font-size: 16px;
 }
@@ -111,7 +130,7 @@
 }
 .tripChoose .datePickerBox {
   width: 700px;
-  height: 360px;
+  height: 120px;
   margin: 50px auto;
   border: 1px solid #0C1244;
   position: relative;
@@ -305,8 +324,8 @@
 }
 .tripChoose .tripChooseBlock .itineraryTitle .chooseDate {
   position: absolute;
-  right: 10%;
-  top: 30%;
+  right: 30%;
+  top: 25%;
 }
 .tripChoose .tripChooseBlock .morningItineraryA {
   display: flex;

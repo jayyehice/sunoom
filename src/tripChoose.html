@@ -22,6 +22,9 @@
 <body class="tripChoose">
     @@include('./layout/header.html')
     <div class="bodyCover"></div>
+    <div class="addfadein">
+        已加入您的訂單中<i class="fa-regular fa-circle-check"></i>
+    </div>
     <!-- <header></header> -->
     <article>
         <section id="app">
@@ -76,25 +79,25 @@
                     <h6 class="tripTitle">{{date}}</h6>
                     <!-- <triplist1 :date="newDay" :activity_list="activity_list"></tripList1> -->
                     <ul>
-                        <li class="tripMorningName" ></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums"src="./img/orderPage/sun/right_button.png"></li>
+                        <li class="tripMorningName"></li>
+                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripMorningPrice">{{newPrice}}</li>
-                        <li><img  class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
-                    </ul>
-
-                    <!-- <ul>
-                        <li >{{tirpMorning}}</li>
-                        <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
-                        <li >${{tirpMorningPrice}}</li>
-                        <li><img @click="deleteChoose()" class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" class="morningTripDeleteButton" @click="morningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                     <ul>
-                        <li >{{tirpMorning}}</li>
-                        <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
-                        <li >${{tirpMorningPrice}}</li>
-                        <li><img @click="deleteChoose()" class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
-                    </ul> -->
+                        <li class="tripNoonName"></li>
+                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li class="tripNoonPrice">{{newPrice}}</li>
+                        <li><img :data-deleteindex="index" class="noonTripDeleteButton" @click="noonTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                    </ul>
+
+                    <ul>
+                        <li class="tripEveningName"></li>
+                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li class="tripEveningPrice">{{newPrice}}</li>
+                        <li><img :data-deleteindex="index" class="eveningTripDeleteButton" @click="eveningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                    </ul>
 
                 </div>
                 <div class="FoodList" >
@@ -149,6 +152,9 @@
                     <div class="itineraryTitle">
                         <h4>遊</h4>
                         <h4 class="chooseDate">{{newDay}}</h4>
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
                     </div>
                     <!-- 上午行程 -->
                     <div class="morningItineraryA" >

@@ -32,6 +32,7 @@
     display: none;
     top: 0;
 }
+
 .tripChoose{
     background-color:$sun_color;
     color: $moon_color;
@@ -46,6 +47,26 @@
     }
     button{
         color: $moon_color;
+    }
+    .addfadein{
+        width: 12vw;
+        height: 10vh;
+        position:fixed;
+        background-color: $moon_color;
+        color: $sun_color ;
+        border: 1px solid $moon_color;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        line-height: 10vh;
+        font-size: 16px;
+        border-radius: 22px;
+        opacity: 0;
+        .fa-regular{
+            margin-left: 10px;
+        }
+        
     }
     @mixin circle{
         width: 150px;
@@ -106,7 +127,7 @@
     //日期區塊
     .datePickerBox{
         width: 700px;
-        height: 360px;
+        height: 120px;
         margin: 50px auto;
         border: 1px solid $moon_color;
         position: relative;
@@ -308,8 +329,8 @@
             align-items: center;
             .chooseDate{
                 position: absolute;
-                right: 10%;
-                top: 30%;
+                right: 30%;
+                top: 25%;
             }
         }
         .morningItineraryA{
@@ -925,6 +946,8 @@
             border:1px solid $sun_color;
         }
     }
+
+
 }
 
 .tripChoose_moon{

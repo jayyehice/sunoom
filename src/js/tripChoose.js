@@ -445,8 +445,10 @@ window.addEventListener('load',function(){
             //訂單明細總表
             //上午
             tripMorningNameValue:'',
-            // tirpMorning:'',
-            // tirpMorningPrice:0,
+            //下午
+            tripNoonNameValue:'',
+            //晚間
+            tripEveningNameValue:'',
             
             
             //上午行程
@@ -496,18 +498,18 @@ window.addEventListener('load',function(){
                 // console.log(day);
                 
             },
-            dpnums(){
-                if(this.pepoleNums > 1){
-                    this.pepoleNums -=1
+            // dpnums(){
+            //     if(this.pepoleNums > 1){
+            //         this.pepoleNums -=1
 
-                }
+            //     }
                 
-            },
-            apnums(){
-                if(this.pepoleNums < JSON.parse(localStorage.getItem('pepoleNums'))){
-                    this.pepoleNums +=1
-                }
-            },
+            // },
+            // apnums(){
+            //     if(this.pepoleNums < JSON.parse(localStorage.getItem('pepoleNums'))){
+            //         this.pepoleNums +=1
+            //     }
+            // },
             //上午的行程選擇
             // addItineraryM(){
             //     let tripTitle = document.getElementsByClassName("tripTitle");
@@ -532,12 +534,14 @@ window.addEventListener('load',function(){
                 this.noontriptext=this.activity_list[value][2]
                 this.noontripPrice=this.activity_list[value][3]
                 this.noontripImg=this.activity_list[value][5]
+                this.tripNoonNameValue = value
             },
             //晚上行程
             eveningChange(value){
                 this.eveningtriptext=this.activity_list[value][2]
                 this.eveningtripPrice=this.activity_list[value][3]
                 this.eveningtripImg=this.activity_list[value][5]
+                this.tripEveningNameValue = value
             },
             //早餐
             morningFoodChange(value){
@@ -566,6 +570,69 @@ window.addEventListener('load',function(){
                 }
             },
 
+            dpnums(e){
+                // console.log(typeof(eg.nextElementSibling.innerHTML));
+                let eg = e.target;
+                // console.log(eg);
+                if(eg.nextElementSibling.innerText > 1){
+                    let newNums= eg.nextElementSibling.innerText 
+                    let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / newNums)
+
+                    eg.nextElementSibling.innerText--
+                    newNums--
+                    let newPrice = (oldPrice * newNums)
+            
+                    eg.parentElement.nextElementSibling.innerHTML = newPrice
+                    // console.log(newNums, oldPrice, newPrice);
+                }
+            },
+            apnums(e){
+                // console.log(eg.parentElement.nextElementSibling.innerText);
+                // console.log($('#ccc').innerHTML);
+                let eg = e.target;
+                if(eg.previousElementSibling.innerText < JSON.parse(localStorage.getItem('pepoleNums'))){
+                    // for(let i = 0 ; i <= tripMorningPrice.length; i++){
+                        //     if(eg.parentElement.nextElementSibling[i] = i){
+                            //         console.log(eg.parentElement.nextElementSibling[i]);
+                            //     }
+                    let newNums= eg.previousElementSibling.innerText
+                    let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / newNums)
+
+                    eg.previousElementSibling.innerText++
+                    newNums++
+
+                    let newPrice = (oldPrice * newNums)
+            
+                    eg.parentElement.nextElementSibling.innerHTML = newPrice
+                    // console.log(newNums, oldPrice, newPrice);
+                    }
+            
+                
+            },
+            morningTripDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('tirpMorningChooseList'+[eg.dataset.deleteindex])
+                
+
+            },
+            noonTripDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('tripNoonChooseList'+[eg.dataset.deleteindex])
+            },
+            eveningTripDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('tripEveningChooseList'+[eg.dataset.deleteindex])
+            },     
+                
+
+            
+
         },
 
         created() {
@@ -580,6 +647,12 @@ window.addEventListener('load',function(){
             fetch(url1)
             .then(response => response.json())
             .then(food => this.food_list = food);
+            //取套餐資料表
+            const url2 = './php/foodChoose.php'
+            fetch(url2)
+            .then(response => response.json())
+            .then(food => this.food_list = food);
+
             
         },
         mounted() {
@@ -620,7 +693,7 @@ window.addEventListener('load',function(){
                 let tripMorningName = document.getElementsByClassName('tripMorningName');
                 let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
 
-                
+                //上午行程選擇器
                 addItineraryM.addEventListener('click',()=>{
                     for(let i = 0; i <= this.dateArray.length ;i++ ){
                         if(this.dayindex == i){
@@ -630,12 +703,52 @@ window.addEventListener('load',function(){
                             let tirpMorningChooseList = [];
                             tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
                             localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+
+                            $('.addfadein').fadeTo(1,0.9)
+                            $('.addfadein').fadeOut(2000)
                             
                         }  
                     }
                 })
-                
-                
+
+                let addItineraryN = document.getElementById('addItineraryN');
+                let tripNoonName = document.getElementsByClassName('tripNoonName');
+                let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
+                //下午行程選擇器
+                addItineraryN.addEventListener('click',()=>{
+                    for(let i = 0; i <= this.dateArray.length ;i++ ){
+                        if(this.dayindex == i){
+                            tripNoonName[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
+                            tripNoonPrice[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+
+                            let tripNoonChooseList = [];
+                            tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                            localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                            
+                            $('.addfadein').fadeTo(1,0.9)
+                            $('.addfadein').fadeOut(2000)
+                        }  
+                    }
+                })
+                let addItineraryE = document.getElementById('addItineraryE');
+                let tripEveningName = document.getElementsByClassName('tripEveningName');
+                let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
+                //晚間行程選擇器
+                addItineraryE.addEventListener('click',()=>{
+                    for(let i = 0; i <= this.dateArray.length ;i++ ){
+                        if(this.dayindex == i){
+                            tripEveningName[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
+                            tripEveningPrice[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+
+                            let tripEveningChooseList = [];
+                            tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                            localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                            
+                            $('.addfadein').fadeTo(1,0.9)
+                            $('.addfadein').fadeOut(2000)
+                        }  
+                    }
+                })
                 //RWD
                 $(window).ready(function(){
                     $(window).resize(function(){
@@ -725,39 +838,43 @@ window.addEventListener('load',function(){
             this.newPrice =  parseInt(this.choosePrice * this.pepoleNums);
             this.pepoleNums = parseInt(this.pepoleNums)
 
+            let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+            // function apnums(eg){
+            //     // console.log(eg.parentElement.nextElementSibling.innerText);
+            //     // console.log($('#ccc').innerHTML);
+            //     if(eg.previousElementSibling.innerText < JSON.parse(localStorage.getItem('pepoleNums'))){
+            //         eg.previousElementSibling.innerText ++
+            //         // for(let i = 0 ; i <= tripMorningPrice.length; i++){
+            //         //     if(eg.parentElement.nextElementSibling[i] = i){
+            //         //         console.log(eg.parentElement.nextElementSibling[i]);
+            //         //     }
+            //         let newNums= eg.previousElementSibling.innerText
+            //         let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / newNums)
+            //         let newPrice = (oldPrice * newNums)
+            
+            //         eg.parentElement.nextElementSibling.innerHTML = newPrice
+            //         console.log(newNums, oldPrice, newPrice);
+            //         }
+            
+                
+            // }
+            // function dpnums(eg){
+            //     // console.log(typeof(eg.nextElementSibling.innerHTML));
+            //     if(eg.nextElementSibling.innerText > 1){
+            //         eg.nextElementSibling.innerHTML --
+            //         let newNums= eg.nextElementSibling.innerText 
+            //         let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / newNums)
+            //         let newPrice = (oldPrice * newNums)
+            
+            //         eg.parentElement.nextElementSibling.innerHTML = newPrice
+            //         console.log(newPrice);
+            //     }
+            // }
         },
         
     });
+
+
+
 })
-let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
-function apnums(eg){
-    // console.log(eg.parentElement.nextElementSibling.innerText);
-    // console.log($('#ccc').innerHTML);
-    if(eg.previousElementSibling.innerText < JSON.parse(localStorage.getItem('pepoleNums'))){
-        eg.previousElementSibling.innerText ++
-        // for(let i = 0 ; i <= tripMorningPrice.length; i++){
-        //     if(eg.parentElement.nextElementSibling[i] = i){
-        //         console.log(eg.parentElement.nextElementSibling[i]);
-        //     }
-        let newNums= eg.previousElementSibling.innerText
-        let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / JSON.parse(localStorage.getItem('pepoleNums')))
-        
 
-        eg.parentElement.nextElementSibling.innerHTML += oldPrice
-        }
-
-        // console.log(newPrice);
-    
-}
-// function dpnums(eg){
-//     // console.log(typeof(eg.nextElementSibling.innerHTML));
-//     if(eg.nextElementSibling.innerText > 1){
-//         eg.nextElementSibling.innerHTML --
-//         let newNums= eg.nextElementSibling.innerText
-//         let oldPrice = (eg.parentElement.nextElementSibling.innerHTML / JSON.parse(localStorage.getItem('pepoleNums')))
-//         // let newPrice = parseInt(newNums * oldPrice)
-//         console.log(oldPrice);
-//         eg.parentElement.nextElementSibling.innerHTML  -= oldPrice
-//         // console.log(newPrice);
-//     }
-// }
