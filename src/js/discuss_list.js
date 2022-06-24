@@ -32,42 +32,42 @@ function get_tasks() {
 }
 
 // 更新 localStorage 中的排序
-function items_sort(item_id, direction) {
-    let tasks = JSON.parse(localStorage.getItem("tasks"));
+// function items_sort(item_id, direction) {
+//     let tasks = JSON.parse(localStorage.getItem("tasks"));
 
-    if (direction == "up") {
-        let current_li_index;
-        let current_li_data;
-        let before_li_data;
+//     if (direction == "up") {
+//         let current_li_index;
+//         let current_li_data;
+//         let before_li_data;
 
-        tasks.forEach(function (task, i) {
-            if (item_id == task.item_id) {
-                current_li_index = i;
-                current_li_data = task;
-                before_li_data = tasks[i - 1];
-            }
-        })
-        tasks[current_li_index - 1] = current_li_data;
-        tasks[current_li_index] = before_li_data;
-    }
+//         tasks.forEach(function (task, i) {
+//             if (item_id == task.item_id) {
+//                 current_li_index = i;
+//                 current_li_data = task;
+//                 before_li_data = tasks[i - 1];
+//             }
+//         })
+//         tasks[current_li_index - 1] = current_li_data;
+//         tasks[current_li_index] = before_li_data;
+//     }
 
-    if (direction == "down") {
-        let current_li_index;
-        let current_li_data;
-        let after_li_data;
+//     if (direction == "down") {
+//         let current_li_index;
+//         let current_li_data;
+//         let after_li_data;
 
-        tasks.forEach(function (task, i) {
-            if (item_id == task.item_id) {
-                current_li_index = i;
-                current_li_data = task;
-                after_li_data = tasks[i + 1];
-            }
-        })
-        tasks[current_li_index + 1] = current_li_data;
-        tasks[current_li_index] = after_li_data;
-    }
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+//         tasks.forEach(function (task, i) {
+//             if (item_id == task.item_id) {
+//                 current_li_index = i;
+//                 current_li_data = task;
+//                 after_li_data = tasks[i + 1];
+//             }
+//         })
+//         tasks[current_li_index + 1] = current_li_data;
+//         tasks[current_li_index] = after_li_data;
+//     }
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     get_tasks();
@@ -139,225 +139,125 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("click", function (e) {
-    //console.log(e);
-    //if(e.target.getAttribute("id") == "abc"){
-    if (e.target.classList.contains("btn_delete")) {
-        let r = confirm("確認移除？");
-        if (r) {
+// document.addEventListener("click", function (e) {
+//     console.log('test');
+//     if (e.target.classList.contains("btn_delete")) {
+//         let r = confirm("確認移除？");
+//         if (r) {
 
-            let item_id = e.target.closest("li").getAttribute("data-id");
-            let tasks = JSON.parse(localStorage.getItem("tasks"));
-            let updated_tasks = [];
-            tasks.forEach(function (task, i) {
-                if (item_id != task.item_id) {
-                    updated_tasks.push(task);
-                }
-            });
-            localStorage.setItem("tasks", JSON.stringify(updated_tasks));
+//             let item_id = e.target.closest("li").getAttribute("data-id");
+//             let tasks = JSON.parse(localStorage.getItem("tasks"));
+//             let updated_tasks = [];
+//             tasks.forEach(function (task, i) {
+//                 if (item_id != task.item_id) {
+//                     updated_tasks.push(task);
+//                 }
+//             });
+//             localStorage.setItem("tasks", JSON.stringify(updated_tasks));
 
-            e.target.closest("li").classList.add("fade_out");
-            setTimeout(function () {
-                e.target.closest("li").remove();
-            }, 1000);
-        }
-
-    }
-});
-
-// var button_btn_empty = document.getElementsByClassName("btn_empty")[0];
-// button_btn_empty.addEventListener("click", function () {
-//     let r = confirm("確認清空？")
-//     if (r) {
-
-//         localStorage.clear();
-
-
-//         let ul_task_list = document.getElementsByClassName("task_list")[0];
-//         for (let i = 0; i < ul_task_list.children.length; i++) {
-//             ul_task_list.children[i].classList.add("fade_out");
+//             e.target.closest("li").classList.add("fade_out");
+//             setTimeout(function () {
+//                 e.target.closest("li").remove();
+//             }, 1000);
 //         }
-//         setTimeout(function () {
-//             ul_task_list.innerHTML = "";
-//         }, 1000);
 
 //     }
 // });
 
-document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("btn_update")) {
-        if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
+// document.addEventListener("click", function (e) {
+//     if (e.target.classList.contains("btn_update")) {
+//         if (e.target.getAttribute("data-edit") == undefined) { // 進入編輯狀態
 
-            e.target.setAttribute("data-edit", true);
-            let li_el = e.target.closest("li");
-            li_el.querySelector("p.para").classList.toggle("-none");
-            li_el.querySelector("input.task_name_update").classList.toggle("-none");
+//             e.target.setAttribute("data-edit", true);
+//             let li_el = e.target.closest("li");
+//             li_el.querySelector("p.para").classList.toggle("-none");
+//             li_el.querySelector("input.task_name_update").classList.toggle("-none");
 
-        } else {
-            let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
+//         } else {
+//             let update_task_name = (e.target.closest("li").querySelector("input.task_name_update").value).trim();
 
-            if (update_task_name == "") {
-                alert("請輸入待辦事項");
-            } else {
-                let p_el = e.target.closest("li").querySelector("p.para");
-                p_el.innerHTML = update_task_name;
-                p_el.classList.toggle("-none");
+//             if (update_task_name == "") {
+//                 alert("請輸入待辦事項");
+//             } else {
+//                 let p_el = e.target.closest("li").querySelector("p.para");
+//                 p_el.innerHTML = update_task_name;
+//                 p_el.classList.toggle("-none");
 
-                let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
-                input_update_el.value = update_task_name;
-                input_update_el.classList.toggle("-none");
+//                 let input_update_el = e.target.closest("li").querySelector("input.task_name_update");
+//                 input_update_el.value = update_task_name;
+//                 input_update_el.classList.toggle("-none");
 
-                e.target.removeAttribute("data-edit");
-
-
-                let item_id = e.target.closest("li").getAttribute("data-id");
-                let tasks = JSON.parse(localStorage.getItem("tasks"));
-                tasks.forEach(function (task, i) {
-                    if (item_id == task.item_id) {
-                        tasks[i].name = update_task_name;
-                    }
-                });
-                localStorage.setItem("tasks", JSON.stringify(tasks));
-
-            }
-        }
-
-    }
-});
-
-document.addEventListener("click", function (e) {
-    //console.log( e.target.closest("li").previousElementSibling );
-    if (e.target.classList.contains("btn_up") && e.target.closest("li").previousElementSibling) {
-        let li_el = e.target.closest("li");
-        let item_id = li_el.getAttribute("data-id");
-        let clone_html = li_el.outerHTML; // <li>...</li>
-        li_el.previousElementSibling.insertAdjacentHTML("beforebegin", clone_html);
-        li_el.remove();
-
-        items_sort(item_id, "up");
-    }
-
-    if (e.target.classList.contains("btn_down") && e.target.closest("li").nextElementSibling) {
-        let li_el = e.target.closest("li");
-        let item_id = li_el.getAttribute("data-id");
-        let clone_html = li_el.outerHTML; // <li>...</li>
-        li_el.nextElementSibling.insertAdjacentHTML("afterend", clone_html);
-        li_el.remove();
-
-        items_sort(item_id, "down");
-    }
-});
-
-document.addEventListener("click", function (e) {
-    //console.log(e.target);
-    if (e.target.closest("span")) {
-        let span_el = e.target.closest("span");
-        if (span_el.classList.contains("star")) {
-
-            let current_star = parseInt(span_el.getAttribute("data-star"));
-            let star_span = span_el.closest("div.star_block").querySelectorAll("span.star");
-            //console.log(star_span);
-            // [span, span, span, span, span]
-            star_span.forEach(function (star_item, i) {
-
-                if (parseInt(star_item.getAttribute("data-star")) <= current_star) {
-                    star_span[i].classList.add("-on");
-                } else {
-                    star_span[i].classList.remove("-on");
-                }
-
-            });
-
-            let item_id = span_el.closest("li").getAttribute("data-id");
-            let tasks = JSON.parse(localStorage.getItem("tasks"));
-            tasks.forEach(function (task, i) {
-                if (item_id == task.item_id) {
-                    tasks[i].star = current_star;
-                }
-            });
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-
-        }
-    }
-});
-
-// 彈窗事件綁定
-// 開啟的函式
-
-$('.img1').click(function(e){
-    console.log('img1')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-});
-
-$('.img2').click(function(e){
-    console.log('img2')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-});
-
-$('.img3').click(function(e){
-    console.log('img3')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-});
-
-// 關閉的函式
-$('.img10').click(function(e){
-    console.log('img10')
-    e.preventDefault();
-    $('.pop-up').css('display','none')
-});
-
-// 討論區-彈窗-發表新文章的js
-// 開啟
-$('.discussion').click(function(e){
-    console.log('discussion')
-    e.preventDefault();
-    $('.form_region').css('display','block')
-});
+//                 e.target.removeAttribute("data-edit");
 
 
-// 討論區文章圖片更換(開啟)
-$('.article1').click(function(e){
-    console.log('article1')
-    e.preventDefault();
-    $('.discuss-region').children('div').children('img').attr("src", $(this).children('.img_1').children('img').attr("src"))
-    $('.pop-up').css('display','block')
-    console.log($(this).children('.img_1').children('img').attr("src"))
-});
+//                 let item_id = e.target.closest("li").getAttribute("data-id");
+//                 let tasks = JSON.parse(localStorage.getItem("tasks"));
+//                 tasks.forEach(function (task, i) {
+//                     if (item_id == task.item_id) {
+//                         tasks[i].name = update_task_name;
+//                     }
+//                 });
+//                 localStorage.setItem("tasks", JSON.stringify(tasks));
 
-$('.img1').click(function(e){
-    console.log('img1')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-    //console.log($(this).children('img').attr("src"))
-    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-    
-});
+//             }
+//         }
 
-$('.img2').click(function(e){
-    console.log('img2')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-    //console.log($(this).children('img').attr("src"))
-    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-    
-});
+//     }
+// });
 
-$('.img3').click(function(e){
-    console.log('img3')
-    e.preventDefault();
-    $('.pop-up').css('display','block')
-    //console.log($(this).children('img').attr("src"))
-    $('.discuss-region').children('div').children('img').attr("src", $(this).children('img').attr("src"))
-    
-});
+// document.addEventListener("click", function (e) {
+//     //console.log( e.target.closest("li").previousElementSibling );
+//     if (e.target.classList.contains("btn_up") && e.target.closest("li").previousElementSibling) {
+//         let li_el = e.target.closest("li");
+//         let item_id = li_el.getAttribute("data-id");
+//         let clone_html = li_el.outerHTML; // <li>...</li>
+//         li_el.previousElementSibling.insertAdjacentHTML("beforebegin", clone_html);
+//         li_el.remove();
 
+//         items_sort(item_id, "up");
+//     }
 
-// 關閉
-$('.png1').click(function(e){
-    console.log('png1')
-    e.preventDefault();
-    $('.form_region').css('display','none')
-});
+//     if (e.target.classList.contains("btn_down") && e.target.closest("li").nextElementSibling) {
+//         let li_el = e.target.closest("li");
+//         let item_id = li_el.getAttribute("data-id");
+//         let clone_html = li_el.outerHTML; // <li>...</li>
+//         li_el.nextElementSibling.insertAdjacentHTML("afterend", clone_html);
+//         li_el.remove();
+
+//         items_sort(item_id, "down");
+//     }
+// });
+
+// document.addEventListener("click", function (e) {
+//     //console.log(e.target);
+//     if (e.target.closest("span")) {
+//         let span_el = e.target.closest("span");
+//         if (span_el.classList.contains("star")) {
+
+//             let current_star = parseInt(span_el.getAttribute("data-star"));
+//             let star_span = span_el.closest("div.star_block").querySelectorAll("span.star");
+//             //console.log(star_span);
+//             // [span, span, span, span, span]
+//             star_span.forEach(function (star_item, i) {
+
+//                 if (parseInt(star_item.getAttribute("data-star")) <= current_star) {
+//                     star_span[i].classList.add("-on");
+//                 } else {
+//                     star_span[i].classList.remove("-on");
+//                 }
+
+//             });
+
+//             let item_id = span_el.closest("li").getAttribute("data-id");
+//             let tasks = JSON.parse(localStorage.getItem("tasks"));
+//             tasks.forEach(function (task, i) {
+//                 if (item_id == task.item_id) {
+//                     tasks[i].star = current_star;
+//                 }
+//             });
+//             localStorage.setItem("tasks", JSON.stringify(tasks));
+
+//         }
+//     }
+// });
+

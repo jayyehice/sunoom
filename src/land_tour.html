@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/land_tour.css">
 @@include('./layout/header_footer_css_link.html')
 </head>
-<body class="land_tour">
+<body class="land_tour" >
     <!-- <header>header</header> -->
     @@include('./layout/header.html')
 
@@ -124,15 +124,15 @@
             </div>
         </section>
 
-        <section class="activity_intro">
+        <section class="activity_intro" id="land_tour">
             <ul>
                 <li>
                     
-                    <div class="wrapper">
+                    <div class="wrapper" v-if="land_tour_list[0]">
                         <div>
                             <img src="./img/land_tour/activity_mountain_climbing.jpg" alt="">
-                            <h3>登山</h3>
-                            <p>嚴選登山嚮導團隊，規劃簡易明瞭的登山路線分級，新手也能一步一步完登你心中的那座大山。</p>
+                            <h3  >{{land_tour_list[0][1]}}</h3>
+                            <p>{{land_tour_list[0][2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -160,11 +160,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper">
+                    <div class="wrapper" v-if="land_tour_list[1]">
                         <div>
                             <img src="./img/land_tour/activity_rafting.jpg" alt="">
-                            <h3>日月溪泛舟</h3>
-                            <p>日山溪全年水量豐沛，一年四季都可體驗的刺激活動，多種舟艇可選擇，適合團體好友一起同樂。</p>
+                            <h3>{{land_tour_list[1][1]}}</h3>
+                            <p>{{land_tour_list[1][2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -189,11 +189,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper">
+                    <div class="wrapper" v-if="land_tour_list[2]">
                         <div>
                             <img src="./img/land_tour/activity_beach_chariot.jpg" alt="">
-                            <h3>沙灘戰車</h3>
-                            <p>開著特製越野戰車，盡情奔馳在明島沙灘上，用車上的沙球機槍與對手來場海灘對決吧。</p>
+                            <h3>{{land_tour_list[2][1]}}</h3>
+                            <p>{{land_tour_list[2][2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -212,11 +212,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper">
+                    <div class="wrapper" v-if="land_tour_list[3]">
                         <div>
                             <img src="./img/land_tour/activity_horse_riding.jpg" alt="">
-                            <h3>騎馬體驗</h3>
-                            <p>讓專業馬術師帶領您騎乘我們明島特斯拉，盡情奔馳在壯闊的美景中耳邊彷彿傳來動力火車的”當”。</p>
+                            <h3>{{land_tour_list[3][1]}}</h3>
+                            <p>{{land_tour_list[3][2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -235,11 +235,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper">
+                    <div class="wrapper" v-if="land_tour_list[4]">
                         <div>
                             <img src="./img/land_tour/activity_stonehenge.jpg" alt="">
-                            <h3>巨石陣</h3>
-                            <p>明島本為無人島嶼，故巨石陣被廣大網友懷疑是外星人所造，進而添加許多神秘感及傳說。</p>
+                            <h3>{{land_tour_list[4][1]}}</h3>
+                            <p>{{land_tour_list[4][2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -273,7 +273,7 @@
             </ul>
         </section>
 
-        <section class="instagram">
+        <section class="instagram" id="ig">
             <div class="wrapper">
                 <div class="title">
                     <img src="./img/land_tour/instagram_icon.png" alt="">
@@ -282,21 +282,21 @@
 
                 <ul>
                     <li>
-                        <img class="ig_img" src="./img/land_tour/instagram_1_1.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_1_2.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_1_3.jpg" alt="">
+                        <img class="ig_img" :src="ig_list[1][1]" alt="">
+                        <img class="ig_img" :src="ig_list[2][1]" alt="">
+                        <img class="ig_img" :src="ig_list[3][1]" alt="">
                     </li>
 
                     <li>
-                        <img class="ig_img" src="./img/land_tour/instagram_2_1.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_2_2.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_2_3.jpg" alt="">
+                        <img class="ig_img" :src="ig_list[4][1]" alt="">
+                        <img class="ig_img" :src="ig_list[5][1]" alt="">
+                        <img class="ig_img" :src="ig_list[6][1]" alt="">
                     </li>
 
                     <li>
-                        <img class="ig_img" src="./img/land_tour/instagram_3_1.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_3_2.jpg" alt="">
-                        <img class="ig_img" src="./img/land_tour/instagram_3_3.jpg" alt="">
+                        <img class="ig_img" :src="ig_list[7][1]" alt="">
+                        <img class="ig_img" :src="ig_list[8][1]" alt="">
+                        <img class="ig_img" :src="ig_list[9][1]" alt="">
                     </li>
 
                     <li>
@@ -330,11 +330,10 @@
             </div>
         </section>
     </main>
-
     <footer></footer>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
-    <script src="./js/instagram_pop_up.js"></script>
+    <!-- <script src="./js/instagram_pop_up.js"></script> -->
     <script src="./js/progress_ring.js"></script>
     <script src="./js/land_tour.js"></script>
 </body>

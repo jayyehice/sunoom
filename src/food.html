@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 @@include('./layout/header_footer_css_link.html')
     <title>食</title>
 </head>
@@ -141,7 +143,7 @@
             <section class="restaurant1">
                 <!-- 第一家餐廳左區 -->
                 <article class="restaurant1_left">
-                    <img class="restaurant1_pic1" src="img/food/restaurant1.png" alt="">
+                    <img class="restaurant1_pic1" src="img/food/sun/restaurant1.png" alt="">
                 </article>
                 <!-- 第一家餐廳右區 -->
                 <article class="restaurant1_right">
@@ -178,7 +180,7 @@
             <section class="restaurant1">
                  <!-- 第二家餐廳左區 -->
                  <article class="restaurant1_left">
-                    <img class="restaurant1_pic1" src="img/food/restaurant2.png" alt="">
+                    <img class="restaurant1_pic1" src="img/food/sun/restaurant2.png" alt="">
                 </article>
                 <!-- 第二家餐廳右區 -->
                 <article class="restaurant1_right">
@@ -215,7 +217,7 @@
             <section class="restaurant1">
                 <!-- 第三家餐廳左區 -->
                 <article class="restaurant1_left">
-                    <img class="restaurant1_pic1" src="img/food/restaurant3.png" alt="">
+                    <img class="restaurant1_pic1" src="img/food/sun/restaurant3.png" alt="">
                 </article>
                 <!-- 第三家餐廳右區 -->
                 <article class="restaurant1_right">
@@ -253,7 +255,7 @@
             <section class="restaurant1">
                 <!-- 第四家餐廳左區 -->
                 <article class="restaurant1_left">
-                    <img class="restaurant1_pic1" src="img/food/restaurant4.png" alt="">
+                    <img class="restaurant1_pic1" src="img/food/sun/restaurant4.png" alt="">
                 </article>
                 <!-- 第四家餐廳右區 -->
                 <article class="restaurant1_right">
@@ -292,24 +294,41 @@
         <div class="wrapper_bottom">
             <h3>日島美食地圖 | Sunoom Map</h3>
             
-            <!-- <img class="map" src="images/food/sunmap.png" alt=""> -->
-            <div class="map">
-                <img class="juice" src="img/food/juice.png" alt="">
-                <img class="lobster" src="img/food/lobster.png" alt="">
-                <img class="bbq" src="img/food/bbq.png" alt="">
-                <img class="hamberger" src="img/food/hamberger.png" alt="">
-                <div class="iconBox">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                    <img src="img/food/hamberger.png" alt="">
-                    <p>Buger Shop</p>
-                    <p class="iconBoxtime">営業時間: 12:00-20:00</p>
-                    <p>最道地的美式漢堡店，每天現烤的堡包，再用奶油煎過外酥內軟，搭配新鮮番茄蔬菜，現點現煎，保持肉品鮮嫩多汁。
+             <!-- 美食地圖ICON*4 -->
+             <div class="map" id="map">
+                <img class="foodicon bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="">
+                <img class="foodicon lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="">
+                <img class="foodicon juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="">
+                <img class="foodicon hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="">
+
+                <!-- 燈箱開啟時的深色背景 -->
+                <div class="backdrop"></div>
+                <!-- 地圖燈箱 -->
+                <div class="iconBox" v-if="boxContent">
+                    <!-- 燈箱關閉按鈕 -->
+                    <i class="fa-solid fa-circle-xmark close"></i>
+                    <!-- 燈箱店家icon -->
+                    <img  :src="boxContent[3]" alt="">
+                    <!-- 燈箱店名 -->
+                    <p>
+                        {{boxContent[4]}}
+                    </p>
+                    <!-- 燈箱營業時間 -->
+                    <p class="iconBoxtime">
+                        {{boxContent[5]}}
+                    </p>
+                    <!-- 燈箱店家簡介 -->
+                    <p>
+                        {{boxContent[6]}}
                     </p>
                 </div>
             </div>
         </div>
+
+        
     </main>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
+    <script src="./js/food.js"></script>
 </body>
 </html> 

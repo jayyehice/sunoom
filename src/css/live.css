@@ -35,7 +35,7 @@
 .live main .wrapper .logCabin .logCabinLeft .logCabinText {
   width: 202px;
   text-align: center;
-  margin: 190px 0 105px 110px;
+  margin: 190px 0 93px 110px;
 }
 .live main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
   border: 1px solid #0C1244;
@@ -1220,7 +1220,7 @@
 }
 
 .live_header {
-  background-image: url(../img/live/live_main_bn.png);
+  background-image: url(../img/live/sun/live_main_bn.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -1249,7 +1249,7 @@ main .wrapper .logCabin .logCabinLeft {
 main .wrapper .logCabin .logCabinLeft .logCabinText {
   width: 202px;
   text-align: center;
-  margin: 190px 0 105px 110px;
+  margin: 190px 0 93px 110px;
 }
 main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
   border: 1px solid #0C1244;
