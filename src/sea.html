@@ -61,21 +61,23 @@
                 <!-- 魚群 -->
                 <img class="fish" src="img/sea/fish.png" alt="">
 
+                
                 <!-- 麵包屑 -->
                 <p class="bread">
                     <a href="index.html">首頁</a>/ 
                     <a href="index.html">遊</a>/
                     海遊
                 </p>
+                <button id="changeButton" @click="testChange">臨時測試</button>
 
                 <!-- 活動1:潛水 -->
-                <div class="wrapper1">
+                <div class="wrapper1" v-if="activity1">
                     <div class="activity1_pic">
-                        <img class="pic1" v-if="seaActivity_list[12]" :src="seaActivity_list[12][7]" alt="">
+                        <img class="pic1" :src="activity1[7]" alt="">
                     </div>
                     <article class="activity1">
-                        <h3 v-if="seaActivity_list[12]">{{seaActivity_list[12][1]}}</h3>
-                        <p v-if="seaActivity_list[12]">{{seaActivity_list[12][2]}}</p>
+                        <h3>{{activity1[1]}}</h3>
+                        <p>{{activity1[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -105,10 +107,10 @@
 
 
                 <!-- 活動2:遊艇 -->
-                <div class="wrapper2">
+                <div class="wrapper2" v-if="activity2">
                     <article class="activity2">
-                        <h3 v-if="seaActivity_list[13]">{{seaActivity_list[13][1]}}</h3>
-                        <p v-if="seaActivity_list[13]">{{seaActivity_list[13][2]}}</p>
+                        <h3>{{activity2[1]}}</h3>
+                        <p>{{activity2[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -135,17 +137,17 @@
                         </div>
                     </article>
                     <div class="activity2_pic">
-                        <img class="pic2" v-if="seaActivity_list[13]" :src="seaActivity_list[13][7]" alt="">
+                        <img class="pic2" :src="activity2[7]" alt="">
                     </div>
                 </div>
                 <!-- 活動3:出海釣魚 -->
-                <div class="wrapper3">
+                <div class="wrapper3" v-if="activity3">
                     <div class="activity3_pic">
-                        <img class="pic3" v-if="seaActivity_list[14]" :src="seaActivity_list[14][7]" alt="">
+                        <img class="pic3" :src="activity3[7]" alt="">
                     </div>
                     <article class="activity3">
-                        <h3 v-if="seaActivity_list[14]">{{seaActivity_list[14][1]}}</h3>
-                        <p v-if="seaActivity_list[14]">{{seaActivity_list[14][2]}}</p>
+                        <h3>{{activity3[1]}}</h3>
+                        <p>{{activity3[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -173,10 +175,10 @@
                     </article>
                 </div>
                 <!-- 活動4:浮潛 -->
-                <div class="wrapper4">
+                <div class="wrapper4" v-if="activity4">
                     <article class="activity4">
-                        <h3 v-if="seaActivity_list[15]">{{seaActivity_list[15][1]}}</h3>
-                        <p v-if="seaActivity_list[15]">{{seaActivity_list[15][2]}}</p>
+                        <h3>{{activity4[1]}}</h3>
+                        <p>{{activity4[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -203,17 +205,17 @@
                         </div>
                     </article>
                     <div class="activity4_pic">
-                        <img class="pic4" v-if="seaActivity_list[15]" :src="seaActivity_list[15][7]" alt="">
+                        <img class="pic4" :src="activity4[7]" alt="">
                     </div>
                 </div>
                 <!-- 活動5:海岸SUP -->
-                <div class="wrapper5">
+                <div class="wrapper5" v-if="activity5">
                     <div class="activity5_pic">
-                        <img class="pic5" v-if="seaActivity_list[16]" :src="seaActivity_list[16][7]" alt="">
+                        <img class="pic5" :src="activity5[7]" alt="">
                     </div>
                     <article class="activity5">
-                        <h3 v-if="seaActivity_list[16]">{{seaActivity_list[16][1]}}</h3>
-                        <p v-if="seaActivity_list[16]">{{seaActivity_list[16][2]}}</p>
+                        <h3>{{activity5[1]}}</h3>
+                        <p>{{activity5[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
