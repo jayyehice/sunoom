@@ -11,6 +11,13 @@ $p : 16px;
 h1, h2, h3, h4, h5, h6, p{
     line-height: 1;
   }
+
+#changeButton{
+    position: fixed;
+    top: 200px;
+    right: 200px;
+    cursor: pointer;
+}
   
   //網頁版(海遊-日島)
   .sea{      
