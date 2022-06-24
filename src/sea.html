@@ -23,6 +23,7 @@
                 <!-- 點點起始 -->
                 <div class="begin"></div>
             </section>
+            <button id="changeButton">臨時測試</button>
             <!-- 海遊活動區塊 -->
             <section class="activity" id="seaActivity">
 
@@ -68,7 +69,7 @@
                     <a href="index.html">遊</a>/
                     海遊
                 </p>
-                <button id="changeButton" @click="testChange">臨時測試</button>
+                <!-- <button id="changeButton" @click="testChange">臨時測試</button> -->
 
                 <!-- 活動1:潛水 -->
                 <div class="wrapper1" v-if="activity1">
@@ -248,17 +249,17 @@
             </section>
 
         <!-- 生態活動區塊 -->
-        <section class="echotitle">
+        <section id="echoTitle">
             <div class="wrapper1">
                 <h3>生態活動</h3>
                 <p>實際觀察體驗與海洋生物的零距離接觸，讓您更親近海洋，進而了解海洋生態保育之觀念。</p>
             </div>
 
             <!-- 生態活動1(綠蠵龜) -->
-            <div class="wrapper2">
+            <div class="wrapper2" v-if="echo1">
                 <article class="echo1">
-                    <h5>綠蠵龜回岸產卵</h5>
-                    <p>日島海岸是綠蠵龜產卵的家鄉，保持距離守候佳音。</p>
+                    <h5>{{echo1[1]}}</h5>
+                    <p>{{echo1[2]}}</p>
                     <p>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -273,10 +274,10 @@
             </div>
 
             <!-- 生態活動2(珊瑚) -->
-            <div class="wrapper3">
+            <div class="wrapper3" v-if="echo2">
                 <article class="echo2">
-                    <h5>珊瑚種植復育</h5>
-                    <p>色彩斑斕的珊瑚需要你我的守護，歡迎一起參與復育活動。</p>
+                    <h5>{{echo2[1]}}</h5>
+                    <p>{{echo2[2]}}</p>
                     <p>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -294,7 +295,7 @@
         <!-- 照片區 -->
         <section class="photo">
             <div class="wrapper1">
-                <img class="ig ig1-1" src="img/sea/ig1-1.png" alt="">
+                <img class="ig ig1-1" src="img/sea/ig1-1.jpg" alt="">
                 <!-- <img class="ig ig1-1" src="img/sea/pic1.png" alt=""> -->
                 <img class="ig ig1-2" src="img/sea/ig1-2.png" alt="">
                 <img class="ig ig1-3" src="img/sea/ig1-3.png" alt="">

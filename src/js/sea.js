@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     //資料庫渲染到前端
-    new Vue({
+    let v_activity = new Vue({
         el: '#seaActivity',
         data: {     // 變數放這裡！               
             seaActivity_list: [],
@@ -16,7 +16,7 @@ $(document).ready(function(){
             testChange(){
                 // console.log(this.activity1[4]);
 
-                if(this.activity1[4] == 1){
+                if( this.activity1[4] == 1){
                     this.activity1=this.seaActivity_list[19];
                     this.activity2=this.seaActivity_list[20];
                     this.activity3=this.seaActivity_list[21];
@@ -55,7 +55,55 @@ $(document).ready(function(){
         },   
     })
 
+    //生態活動資料串接
+    let v_echo = new Vue({
+        el: '#echoTitle',
+        data: {     // 變數放這裡！               
+            seaActivity_list: [],
+            echo1:[],
+            echo2:[],
+        },
+        methods: {
+            testChange(){
+                console.log(this.echo1[4]);
+
+    
+                if( this.echo1[4] == 1){
+                    this.echo1=this.seaActivity_list[24];
+                    this.echo2=this.seaActivity_list[25];
+                }else{
+                    this.echo1=this.seaActivity_list[17];
+                    this.echo2=this.seaActivity_list[18];
+                }
+            }
+        },
+        computed: {},
+        watch: {},
+        beforeCreate() {
+            const url = './php/sea.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => {
+                    this.seaActivity_list = text;
+                    this.echo1=this.seaActivity_list[17];
+                    this.echo2=this.seaActivity_list[18];
+                });
+        },
+        created() {
+        },
+        mounted() {
+        },
+        updated() {          
+        },   
+    })
+
+    $('#changeButton').click(function(){
+        v_activity.testChange();
+        v_echo.testChange();
+        console('test')
+    });
 })
+
 
 // setTimeout(function(){
 //     $('#testButton')[0].click();
