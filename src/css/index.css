@@ -168,7 +168,7 @@
 }
 .index main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #0C1244;
-  width: 65%;
+  width: 0%;
   height: 5px;
   position: absolute;
   top: 0;
@@ -436,7 +436,6 @@
   display: none;
   position: fixed;
   top: 0;
-  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
   width: 100%;
@@ -654,7 +653,7 @@
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #F5F0DD;
-  width: 65%;
+  width: 0%;
   height: 5px;
   position: absolute;
   top: 0;
