@@ -1,10 +1,25 @@
 Vue.component('member',{
     props:['list'],
+    data(){
+        return{
+            content:'',
+            page:0,
+        }
+    },
     methods: {
         addClass(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
             $(e.target).addClass('on'); 
-        }
+        },
+        changePage(e){
+            this.page = e.target.dataset.page;
+            // console.log(e.target.dataset.page);
+            $(e.target.closest('ul')).find('li.on').removeClass('on');
+            $(e.target).addClass('on');
+        },
+    },
+    mounted() {
+        $('#pageList > li:nth-child(2)').addClass('on');
     },
     template:
     `
@@ -45,7 +60,7 @@ Vue.component('member',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list">
+                <ul class="tableList" v-for="(item, index) in list[page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[7]}}</p></li>
                     <li class="col-2"><p>{{item[8]}}</p></li>
@@ -62,9 +77,9 @@ Vue.component('member',{
     
         <div class="container-fluid">
             <div class="row pages">
-                <ul class="pageList col-2 offset-7">
+                <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage">1</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>

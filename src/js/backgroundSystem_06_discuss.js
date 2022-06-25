@@ -3,15 +3,51 @@ Vue.component('discuss',{
     data(){
         return{
             content:'article',
+            page:0,
         }
     },
     methods:{
         changeContent(e){
             // console.log(e.target.dataset.type);
             this.content = e.target.dataset.type;
-            $(e.target.closest('div')).find('h5').removeClass('on');
+            this.page = 0;
+            $(e.target.closest('div')).find('h5.on').removeClass('on');
             $(e.target).addClass('on'); 
         },
+        changeCatagory(catagory){
+            switch(catagory){
+                case 'tour':
+                    return '遊';
+                    break;
+            
+                case 'live':
+                    return '宿';
+                    break;
+
+                case 'food':
+                    return '食';
+                    break;
+                
+                case 'offical':
+                    return '官方';
+                    break;
+
+                default:
+                    return '未知';
+            }
+        },
+        changePage(e){
+            this.page = e.target.dataset.page;
+            // console.log(e.target.dataset.page);
+            $(e.target.closest('ul')).find('li.on').removeClass('on');
+            $(e.target).addClass('on');
+
+            // console.log($('#pageList li:nth-child(2)'));
+        }
+    },
+    computed:{},
+    mounted() {
+        $('#pageList > li:nth-child(2)').addClass('on');
     },
     template:
     `
@@ -45,19 +81,19 @@ Vue.component('discuss',{
                 <ul class="tableTitle">
                     <li class="col"><p>編號</p></li>
                     <li class="col"><p>類別</p></li>
-                    <li class="col-2"><p>標題</p></li>
+                    <li class="col-4"><p>標題</p></li>
                     <li class="col"><p>作者</p></li>
-                    <li class="col"><p>日期</p></li>
+                    <li class="col-2"><p>日期</p></li>
                     
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[content]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[2]}}</p></li>
-                    <li class="col-2"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{changeCatagory(item[2])}}</p></li>
+                    <li class="col-4"><p>{{item[3]}}</p></li>
                     <li class="col"><p>{{item[5]}}</p></li>
-                    <li class="col"><p>{{item[9]}}</p></li>
+                    <li class="col-2"><p>{{item[9]}}</p></li>
                     
                     <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
                 </ul>
@@ -75,7 +111,7 @@ Vue.component('discuss',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[content]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[1]}}</p></li>
                     <li class="col"><p>{{item[3]}}</p></li>
@@ -90,9 +126,10 @@ Vue.component('discuss',{
     
         <div class="container-fluid">
             <div class="row pages">
-                <ul class="pageList col-2 offset-7">
+                <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage">1</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
+                    
                     <li>></li>
                 </ul>
             </div>

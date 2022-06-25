@@ -281,9 +281,14 @@ main{
                     background-color: #F5F0DD;
                     color: #0C1244;
                     &:hover{
-                    background-color: #0C1244;
-                    color: #F5F0DD
+                        background-color: #0C1244;
+                        color: #F5F0DD;
+                        cursor: pointer;
                     }
+                }
+                li.on{
+                    background-color: #0C1244;
+                    color: #F5F0DD;
                 }
         
             }

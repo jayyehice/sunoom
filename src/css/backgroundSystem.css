@@ -250,6 +250,11 @@ main .listTitle .pages .pageList li {
 main .listTitle .pages .pageList li:hover {
   background-color: #0C1244;
   color: #F5F0DD;
+  cursor: pointer;
+}
+main .listTitle .pages .pageList li.on {
+  background-color: #0C1244;
+  color: #F5F0DD;
 }
 main .table > :not(:first-child) {
   border-top: 0px solid currentColor;
