@@ -1,5 +1,11 @@
 Vue.component('discount_code',{
     props:['list'],
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        }
+    },
     template:
     `
 
@@ -15,8 +21,8 @@ Vue.component('discount_code',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>進行中</h5>
-                <h5>已結束</h5>
+                <h5 @click="addClass" class="on">進行中</h5>
+                <h5 @click="addClass">已結束</h5>
 
             </div>
             <!-- 
@@ -31,9 +37,9 @@ Vue.component('discount_code',{
             <div class="row">
                 <ul class="tableTitle">
                     <li class="col"><p>編號</p></li>
-                    <li class="col"><p>關鍵字</p></li>
-                    <li class="col"><p>開始時間</p></li>
-                    <li class="col"><p>結束時間</p></li>
+                    <li class="col-3"><p>關鍵字</p></li>
+                    <li class="col-3"><p>開始時間</p></li>
+                    <li class="col-3"><p>結束時間</p></li>
                     <li class="col"><p>已使用次數</p></li>
                     
                     <li class="col"></li>
@@ -41,10 +47,10 @@ Vue.component('discount_code',{
                 
                 <ul class="tableList" v-for="(item, index) in list">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col-3"><p>{{item[1]}}</p></li>
+                    <li class="col-3"><p>{{item[2]}}</p></li>
+                    <li class="col-3"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{item[4]}}</p></li>
                     
                     <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
                 </ul>

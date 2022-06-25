@@ -159,6 +159,11 @@ main .listTitle .checkList .select_button h5 {
 main .listTitle .checkList .select_button h5:hover {
   background-color: #0C1244;
   color: #F5F0DD;
+  cursor: pointer;
+}
+main .listTitle .checkList .select_button h5.on {
+  background-color: #0C1244;
+  color: #F5F0DD;
 }
 main .listTitle .checkList .addNew {
   display: flex;

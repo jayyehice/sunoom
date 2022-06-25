@@ -1,12 +1,18 @@
 Vue.component('shop',{
     props:['list'],
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        }
+    },
     template:
     `
 
     <div class="listTitle col-10">
         <!-- 表單抬頭 -->
         <div class="Title">
-            <h3>店家管理</h3>
+            <h3>餐廳管理</h3>
             <!-- 
             <input type="text" name="" id="">
             <button>搜尋</button>
@@ -15,8 +21,8 @@ Vue.component('shop',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>營運中</h5>
-                <h5>未營運</h5>
+                <h5 @click="addClass" class="on">營運中</h5>
+                <h5 @click="addClass">未營運</h5>
 
             </div>
             <!-- 
@@ -31,7 +37,8 @@ Vue.component('shop',{
             <div class="row">
                 <ul class="tableTitle">
                     <li class="col"><p>編號</p></li>
-                    <li class="col"><p>店名</p></li>
+                    <li class="col"><p>種類</p></li>
+                    <li class="col"><p>價格</p></li>
                     <li class="col"><p>位置</p></li>
                     <li class="col"><p>負責人</p></li>
                     
@@ -40,9 +47,10 @@ Vue.component('shop',{
                 
                 <ul class="tableList" v-for="(item, index) in list">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col"><p>{{item[2]}}</p></li>
+                    <li class="col"><p>{{item[9]}}</p></li>
+                    <li class="col"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{item[4]}}</p></li>
                     
                     <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
                 </ul>

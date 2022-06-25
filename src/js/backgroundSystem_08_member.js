@@ -1,5 +1,11 @@
 Vue.component('member',{
     props:['list'],
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        }
+    },
     template:
     `
 
@@ -15,8 +21,8 @@ Vue.component('member',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>正常</h5>
-                <h5>已停權</h5>
+                <h5 @click="addClass" class="on">正常</h5>
+                <h5 @click="addClass">已停權</h5>
 
             </div>
             <!-- 

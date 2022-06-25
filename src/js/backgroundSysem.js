@@ -6,13 +6,6 @@ let vm = new Vue({  // vue instance (實例)
         content:'',
         data_list:[],
         render_list:[],
-        // order_list:[],
-        // activity_list:[],
-        // shop_list:[],
-        // product_list:[],
-        // discuss_list:[],
-        // coupon_list:[],
-        // member_list:[],
     },
     methods: {
         navClick(e){
@@ -21,10 +14,16 @@ let vm = new Vue({  // vue instance (實例)
             $(e.target.closest('nav')).find('a.on').removeClass('on');
             e.target.classList.add("on");
 
-            if(nav_name != 'discuss'){
+            if(nav_name === 'discuss'){
+                let temp = {};
+                temp['article']=this.data_list['article'];
+                temp['comment']=this.data_list['comment'];
+                this.render_list = temp;
+            }else{
                 this.render_list = this.data_list[nav_name];
             }
         },
+        
     },
     created() {
         const url = './php/backgroundSystem.php';

@@ -1,5 +1,11 @@
 Vue.component('activity',{
     props:['list'],
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        }
+    },
     template:
     `
 
@@ -15,8 +21,8 @@ Vue.component('activity',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>進行中</h5>
-                <h5>已結束</h5>
+                <h5 @click="addClass" class="on">進行中</h5>
+                <h5 @click="addClass">已結束</h5>
 
             </div>
             <!-- 
@@ -41,10 +47,10 @@ Vue.component('activity',{
                 
                 <ul class="tableList" v-for="(item, index) in list">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col"><p>{{item[8]}}</p></li>
+                    <li class="col"><p>{{item[1]}}</p></li>
+                    <li class="col"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{item[9]}}</p></li>
                     
                     <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
                 </ul>

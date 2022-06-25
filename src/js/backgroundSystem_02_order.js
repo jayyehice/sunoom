@@ -1,5 +1,11 @@
 Vue.component('order_table',{
     props:['list'],
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        }
+    },
 
     template:
     `
@@ -16,9 +22,9 @@ Vue.component('order_table',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>未完成</h5>
-                <h5>已完成</h5>
-                <h5>已取消</h5>
+                <h5 @click="addClass" class="on">未完成</h5>
+                <h5 @click="addClass">已完成</h5>
+                <h5 @click="addClass">已取消</h5>
 
             </div>
             <!-- 

@@ -178,8 +178,15 @@ main{
                     margin-right: 30px;
                     &:hover{
                         background-color: #0C1244;
-                        color: #F5F0DD
-                        }
+                        color: #F5F0DD;
+                        
+                        cursor: pointer;
+                    }
+                }
+
+                h5.on{
+                    background-color: #0C1244;
+                    color: #F5F0DD
                 }
             }
             .addNew{
