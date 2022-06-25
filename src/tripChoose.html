@@ -55,9 +55,13 @@
                 <div class="dateTitle">
                 </div>
                 <div class="pickerBox" >
-                    <button @click="day(date,index);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt=""><select @change="setChoose($event.target.value)">
-                        <option v-for="(set,index) in set_list" :value="index">{{set[4]}}</option>
-                    </select>
+                    <button @click="day(date,index);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt="">
+                        <select class="setChooseList" @change="setChoose($event.target.value)">
+                            <option value="">請選擇您的套裝組合</option>
+                            <option value="-1">自由選擇</option>
+                            <option v-for="(set,index) in set_list" :value="index">{{set[4]}}</option>
+                        </select>
+                        <input class="SendChoose" type="submit" value="選擇此套裝行程">
                     </button>
                 </div>
             </div>
@@ -174,7 +178,7 @@
                             <div class="morningBlockB">
                                 <div class="optionBlockA">
                                     <select id="tripMchoose"  @change="morningChange($event.target.value)">
-                                        <option value="">開始選購您的行程</option>
+                                        <option value="-1">開始選購您的行程</option>
                                         <option  v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
                                     <span id="tripPriceA">${{morningtripPrice}}/人</span>
@@ -192,7 +196,7 @@
                             <div class="noonBlockB">
                                 <div class="optionBlockB">
                                     <select id="tripNchoose"  @change="noonChange($event.target.value)">
-                                        <option value="">開始選購您的行程</option>
+                                        <option value="-1">開始選購您的行程</option>
                                         <option  v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
                                     <span id="tripPriceB">${{noontripPrice}}/人</span>
@@ -210,7 +214,7 @@
                             <div class="eveningBlockB">
                                 <div class="optionBlockC">
                                     <select id="tripEchoose" @change="eveningChange($event.target.value)">
-                                        <option value="">開始選購您的行程</option>
+                                        <option value="-1">開始選購您的行程</option>
                                         <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
                                     </select>
                                     <span id="tripPriceC">${{eveningtripPrice}}/人</span>
@@ -236,7 +240,7 @@
                             <div class="morningFoodB">
                                 <div class="foodOptionBlockA">
                                     <select id="FoodMchoose" @change="morningFoodChange($event.target.value)">
-                                        <option value="">請選擇您的早餐</option>
+                                        <option value="-1">請選擇您的早餐</option>
                                         <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
                                     <span id="foodPriceA">${{morningFoodPrice}}/人</span>
@@ -254,7 +258,7 @@
                             <div class="noonFoodB">
                                 <div class="foodoptionBlockB">
                                     <select id="FoodNchoose" @change="noonFoodChange($event.target.value)">
-                                        <option value="">請選擇您的午餐</option>
+                                        <option value="-1">請選擇您的午餐</option>
                                         <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
                                     <span id="foodPriceB">${{noonFoodPrice}}/人</span>
@@ -272,7 +276,7 @@
                             <div class="eveningFoodB">
                                 <div class="foodoptionBlockC">
                                     <select id="FoodEchoose" @change="eveningFoodChange($event.target.value)">
-                                        <option value="">請選擇您的晚餐</option>
+                                        <option value="-1">請選擇您的晚餐</option>
                                         <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
                                     </select>
                                     <span id="foodPriceC">${{eveningFoodPrice}}/人</span>
@@ -357,7 +361,7 @@
                     </div>  
                 </div>
                 <!-- 下一頁按鈕 -->
-            <button id="NextPage">Next</button>
+            <button id="NextPage">前往結帳</button>
         </section>
     </article>
     @@include('./layout/footer.html')

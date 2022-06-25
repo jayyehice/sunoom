@@ -24,6 +24,7 @@
 
 
 .bodyCover{
+    
     height: 100vh;
     width: 100vw;
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -31,6 +32,13 @@
     position: fixed;
     display: none;
     top: 0;
+}
+
+.ChooseMove{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    
 }
 
 .tripChoose{
@@ -153,9 +161,14 @@
             display: flex;
             flex-wrap: wrap;
             .daysbutton{
+                display: inline-block;
                 width: 130px;
                 margin: 5px;
                 font-size: 16px;
+                transition: all 2s;
+                .SendChoose{
+                    display: none;
+                }
                 img{
                     width: 90px;
                 }
@@ -965,6 +978,7 @@
             transition: all 1s;
         }
     }
+
     #NextPage{
         display: block;
         width: 140px;

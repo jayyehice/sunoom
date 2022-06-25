@@ -496,6 +496,7 @@ window.addEventListener('load',function(){
 
             chooseData:'',
 
+            SetChooseAndDay:''
         },
         methods: { 
             day(val,index){
@@ -511,8 +512,12 @@ window.addEventListener('load',function(){
                 
             // },
             setChoose(val){
-                // console.log(val);
+                let eg = event.target
+                
+                if($(eg).parent().text().substring(0,4) == this.newDay && val != -1 && val != '' ){
+                    $(eg).parent().addClass('ChooseMove');
 
+                }
                 let tripMchoose = document.getElementById('tripMchoose');
                 let tripNchoose = document.getElementById('tripNchoose');
                 let tripEchoose = document.getElementById('tripEchoose');
@@ -534,6 +539,42 @@ window.addEventListener('load',function(){
                 let villaImg = document.getElementById('villaImg');
                 // console.log(tripMchoose.querySelectorAll('option')[3]);
                 switch (val) {
+                    case '-1':
+                        //上午行程
+                        tripMchoose.value = -1
+                        this.morningtriptext= '請點選上方選單列，開始安排您的旅程吧!'
+                        this.morningtripPrice='0'
+                        this.morningtripImg='./img/orderPage/welcome.jpg'
+                        //下午行程
+                        tripNchoose.value =-1
+                        this.noontriptext='請點選上方選單列，開始安排您的旅程吧!'
+                        this.noontripPrice='0'
+                        this.noontripImg='./img/orderPage/welcome.jpg'
+                        //晚上行程
+                        tripEchoose.value = -1
+                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!'
+                        this.eveningtripPrice='0'
+                        this.eveningtripImg='./img/orderPage/welcome.jpg'
+                
+                        //早餐
+                        FoodMchoose.value = -1
+                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!'
+                        this.morningFoodPrice='0'
+                        this.morningFoodImg='./img/orderPage/welcome.jpg'
+                        //午餐
+                        FoodNchoose.value = -1 
+                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!'
+                        this.noonFoodPrice='0'
+                        this.noonFoodImg='./img/orderPage/welcome.jpg'
+                        //晚餐
+                        FoodEchoose.value = -1
+                        this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!'
+                        this.eveningFoodPrice='0'
+                        this.eveningFoodImg='./img/orderPage/welcome.jpg'
+                        cabinButton.checked = false
+                        campingButton.checked = false
+                        villaButton.checked = false
+                        break;
                     case '0':
                         //上午行程
                         tripMchoose.value = 2;
@@ -1241,6 +1282,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#addItineraryM').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                        tripMchoose.value = '-1'
+                        this.morningtriptext ='請點選上方選單列，開始安排您的旅程吧!'
+                        this.morningtripPrice='0'
+                        this.morningtripImg='./img/orderPage/welcome.jpg'
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1275,6 +1324,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#addItineraryN').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                        tripNchoose.value = -1
+                        this.noontriptext='請點選上方選單列，開始安排您的旅程吧!'
+                        this.noontripPrice='0'
+                        this.noontripImg='./img/orderPage/welcome.jpg'
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1308,6 +1365,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#addItineraryE').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                        tripEchoose.value = -1
+                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!',
+                        this.eveningtripPrice='0',
+                        this.eveningtripImg='./img/orderPage/welcome.jpg',
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1343,6 +1408,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#addFoodM').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                        FoodMchoose.value = -1
+                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!',
+                        this.morningFoodPrice='0',
+                        this.morningFoodImg='./img/orderPage/welcome.jpg',
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1377,6 +1450,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#addFoodN').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                        FoodNchoose.value = -1 
+                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!',
+                        this.noonFoodPrice='0',
+                        this.noonFoodImg='./img/orderPage/welcome.jpg',
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1416,6 +1497,14 @@ window.addEventListener('load',function(){
                         })
                     }else{
                             alert('請先選擇日期')
+                            $('#addFoodE').css({
+                                opacity:'0.1',
+                                cursor:'not-allowed',
+                            })
+                            FoodEchoose.value = -1
+                            this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!',
+                            this.eveningFoodPrice='0',
+                            this.eveningFoodImg='./img/orderPage/welcome.jpg',
                             $('html,body').animate({
                                 scrollTop: 0
                             }, 1000);
@@ -1463,6 +1552,12 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        $('#cabinButton').removeClass('check');
+                        cabinButton.checked = false
+                        $('#addcabin').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        }) 
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1502,6 +1597,12 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                     }else{
+                        campingButton.checked =false
+                        $('#campingButton').removeClass('check');
+                        $('#addCamping').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
                         alert('請先選擇日期')
                         $('html,body').animate({
                             scrollTop: 0
@@ -1543,6 +1644,12 @@ window.addEventListener('load',function(){
                         })
                     }else{
                         alert('請先選擇日期')
+                        villaButton.checked = false
+                        $('#villaButton').removeClass('check');
+                        $('#addVilla').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
                         $('html,body').animate({
                             scrollTop: 0
                         }, 1000);
@@ -1582,7 +1689,16 @@ window.addEventListener('load',function(){
                         })
                     }
                 })
-
+                
+                $(window).scroll(()=>{
+                    console.log($(window).scrollTop());
+                    if($(window).scrollTop() > 2000){
+                        $('.ChooseMove').find('input').css('display','block')
+                    }
+                    if($(window).scrollTop() < 250){
+                        $('.daysbutton').removeClass('ChooseMove')
+                    }
+                })
 
 
                 //RWD
@@ -1691,6 +1807,7 @@ window.addEventListener('load',function(){
             this.FoodEveningNameValue = FoodEchoose.value;
 
 
+            
 
 
 
