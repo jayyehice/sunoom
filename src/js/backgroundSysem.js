@@ -1,6 +1,6 @@
 
 
-
+/*
 Vue.component('membermangement',{
     props:['list'],
     template:
@@ -63,6 +63,9 @@ Vue.component('membermangement',{
     </div>`
     ,
 })
+*/
+
+
 
 let vm = new Vue({  // vue instance (實例)
     el: '#app',
@@ -74,7 +77,7 @@ let vm = new Vue({  // vue instance (實例)
     methods: {
         navClick(e){
             // console.log('object');
-            // this.content='membermangement'; 
+            this.content='membermangement'; 
             // console.log(e.target.closest('nav').querySelectorAll('a'));
             $(e.target.closest('nav')).find('a.on').removeClass('on');
             e.target.classList.add("on");
