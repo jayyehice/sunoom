@@ -81,40 +81,40 @@
                 <div class="siteLayout">
                     <h3>{{live_list[0][11]}}</h3>
                     <div class="siteLayoutwp">
-                        <img class="layOutImg" src="./img/live/logcabin_img03.png">
-                        <h3 class="wood wood1">1</h3>
-                        <h3 class="wood wood11">1</h3>
-                        <h3 class="wood wood2">2</h3>
-                        <h3 class="wood wood3">3</h3>
+                        <img class="layOutImg":src="live_list[0][12]">
+                        <h3 @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf01" class="wood wood1">1</h3>
+                        <h3 @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf01" class="wood wood11">1</h3>
+                        <h3 @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf02" class="wood wood2">2</h3>
+                        <h3 @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf03" class="wood wood3">3</h3>
                     </div>
                     <!-- 彈窗 siteLayout  -->
                     <div class="siteLayoutInf01">
-                        <img class="room_img" src="./img/live/sitelayout_room.png" alt="">
+                        <img class="room_img" :src="live_list[0][17]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">1</h3>
                             <div class="text">
-                                <h4>房間Room</h4>
-                                <p>溫馨舒適自然檜木製房間</p>
+                                <h4>{{live_list[0][15]}}</h4>
+                                <p>{{live_list[0][16]}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="siteLayoutInf02">
-                        <img class="room_img" src="./img/live/sitelayout_kitchen.png" alt="">
+                        <img class="room_img" :src="live_list[0][20]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">2</h3>
                             <div class="text">
-                                <h4 class="">廚房Kitchen</h4>
-                                <p>美國自然檜木制大理石廚房</p>
+                                <h4 class="">{{live_list[0][18]}}</h4>
+                                <p>{{live_list[0][19]}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="siteLayoutInf03">
-                        <img class="room_img" src="./img/live/sitelayout_livingroom.png" alt="">
+                        <img class="room_img" :src="live_list[0][23]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">3</h3>
                             <div class="text">
-                                <h4 class="">客廳LivingRoom</h4>
-                                <p>簡單檜木制小木屋客廳</p>
+                                <h4 class="">{{live_list[0][21]}}</h4>
+                                <p>{{live_list[0][22]}}</p>
                             </div>
                         </div>
                     </div>
@@ -123,34 +123,33 @@
             </section>
 
             <!-- Camping Tents 露營帳篷 -->
-            <section>
+            <section v-if="live_list[1]">
                 <!-- Camping Tents 露營帳篷 leftsection -->
                 <div class="campingTents">
                     <div class="campingTentsLeft">
                         <div class="campingTentsText">
-                            <h4 class="t1">山嶺之巔 
-                                <br>森美露營區</h4>
+                            <h4 class="t1">{{live_list[1][1]}} 
+                                <br>{{live_list[1][2]}}</h4>
                             <div class="mountainBorder t2">
-                                <span class="mountain">山</span>
+                                <span class="mountain">{{live_list[1][3]}}</span>
                             </div>
-                            <h4 class="t3">Luxury
-                                Camping Tents</h4>
+                            <h4 class="t3">{{live_list[1][4]}}</h4>
                             <h4 class="t3_RWD">Camping Tents</h4>
                         </div>
-                            <img class="mountainImg" src="./img/live/sun/camping_img02.png" alt="">
+                            <img class="mountainImg" :src="live_list[1][6]" alt="">
                     </div>
 
                     <!-- Camping Tents 露營帳篷 rightsection -->
                     <div class="campingTentsRight">
-                        <img class="campingImg" src="./img/live/sun/camping_img01.png" alt="">
+                        <img class="campingImg" :src="live_list[1][5]" alt="">
                         <div class="rightTextArea">
                             <div class="campingTentsText02">
-                                <h4>Luxury Camping Tents</h4>
-                                <p class="text">全包式懶人露營營區，不但有幫旅客搭好的超美帳篷，甚至提供餐點、陸上活動與生態導覽等等，讓您只要準備好衣物攜帶相機，及準備好拍美照的心情就可以出發。</p>
+                                <h4>{{live_list[1][7]}}</h4>
+                                <p class="text">{{live_list[1][8]}}</p>
                                 <div class="campingTentsList">
                                     <div class="iconArea">
-                                        <p class="iconTextbed"><img class="iconbed" src="./img/live/iconbed.png">2beds</p>
-                                        <p class="iconText"><img class="iconbed" src="./img/live/iconlamp.png">1oil lamp</p>
+                                        <p class="iconTextbed"><img class="iconbed" src="./img/live/iconbed.png">{{live_list[1][9]}}</p>
+                                        <p class="iconText"><img class="iconbed" src="./img/live/iconlamp.png">{{live_list[1][10]}}</p>
                                     </div>
                                     <div class="comments_area">
                                         <div>
@@ -173,42 +172,42 @@
                 </div>
                 <!-- Camping Tents SiteLayout 內裝帳篷  -->
                 <div class="campingSiteLayout">
-                    <h3>帳篷內裝</h3>
+                    <h3>{{live_list[1][11]}}</h3>
                     <div class="campingsiteLayoutwp">
-                        <img class="campingLayout_img" src="./img/live/camping_img03.png">
-                        <img class="campingLayout_img" src="./img/live/camping_img04.png" alt="">
+                        <img class="campingLayout_img" :src="live_list[1][12]">
+                        <img class="campingLayout_img" :src="live_list[1][17]" alt="">
                     </div>
                 </div>
                 <a class="bookButton_RWD" href="#">Book Now</a>
             </section>
 
             <!-- Villa waterCottage 渡假村 -->
-            <section>
+            <section v-if="live_list[2]">
                 <!-- Villa waterCottage 渡假村 leftsection -->
                 <div class="villa">
                     <div class="villaLeft">
                         <div class="villaText">
-                            <h4 class="t1">潮汐之境 
-                                <br>日月星VILLA</h4>
+                            <h4 class="t1">{{live_list[2][1]}} 
+                                <br>{{live_list[2][2]}}</h4>
                             <div class="oceanBorder t2">
-                                <span class="ocean">海</span>
+                                <span class="ocean">{{live_list[2][3]}}</span>
                             </div>
-                            <h4 class="t3">Premium Water Cottages</h4>
+                            <h4 class="t3">{{live_list[2][4]}}</h4>
                             <h4 class="t3_RWD">Water Cottages</h4>
                         </div>
-                            <img class="oceanImg" src="./img/live/sun/ocean_img02.png" alt="">
+                            <img class="oceanImg" :src="live_list[2][6]" alt="">
                     </div>
                     <!-- Villa waterCottage 渡假村 rightsection -->
                     <div class="villaRight">
-                        <img class="villaImg" src="./img/live/sun/ocean_img01.png" alt="">
+                        <img class="villaImg" :src="live_list[2][5]" alt="">
                         <div class="rightTextArea">
                             <div class="villaText02">
-                                <h4>Premium Water Cottages</h4>
-                                <p class="text">房間都有私人泳池，設施活動應有盡有，有餐廳、酒吧、水上活動、沙灘活動應有盡有，吃喝玩樂全包，面對著壯闊的海洋美景，覺得人生如此，夫復何求？</p>
+                                <h4>{{live_list[2][7]}}</h4>
+                                <p class="text">{{live_list[2][8]}}</p>
                                 <div class="villaList">
                                     <div class="iconArea">
-                                        <p><img class="iconbed" src="./img/live/iconbed.png">1bed</p>
-                                        <p><img class="iconpool" src="./img/live/iconpool.png">1pool</p>
+                                        <p><img class="iconbed" src="./img/live/iconbed.png">{{live_list[2][9]}}</p>
+                                        <p><img class="iconpool" src="./img/live/iconpool.png">{{live_list[2][10]}}</p>
                                     </div>
                                     <div class="comments_area">
                                         <div>
@@ -230,9 +229,9 @@
                 </div>
                 <!-- Villa 渡假村內裝介紹 siteLayout -->
                 <div class="villaSiteLayout">
-                    <h3>海屋內裝介紹</h3>
+                    <h3>{{live_list[2][11]}}</h3>
                     <div class="villaSiteLayoutwp">
-                        <img class="layOutImg" src="./img/live/ocean_img03.png">
+                        <img class="layOutImg" :src="live_list[2][12]">
                         <h3 class="sea sea1">1</h3>
                         <h3 class="sea sea2">2</h3>
                         <h3 class="sea sea3">3</h3>
@@ -240,42 +239,42 @@
                     </div>
                     <!-- villa彈窗 siteLayout  -->
                     <div class="villaInf01">
-                        <img class="viila_img" src="./img/live/sun/villa_livingroom.jpg" alt="">
+                        <img class="viila_img" :src="live_list[2][17]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">1</h3>
                             <div>
-                                <h4 class="">客廳</h4>
-                                <p>蔚藍落地窗海景客廳</p>
+                                <h4 class="">{{live_list[2][15]}}</h4>
+                                <p>{{live_list[2][16]}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="villaInf02">
-                        <img class="viila_img" src="./img/live/sun/villa_room.jpg" alt="">
+                        <img class="viila_img" :src="live_list[2][20]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">2</h3>
                             <div>
-                                <h4 class="">房間</h4>
-                                <p>Villa寬敞海景房間</p>
+                                <h4 class="">{{live_list[2][18]}}</h4>
+                                <p>{{live_list[2][19]}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="villaInf03">
-                        <img class="viila_img" src="./img/live/villa_bathrrom.png" alt="">
+                        <img class="viila_img" :src="live_list[2][23]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">3</h3>
                             <div>
-                                <h4 class="">浴室</h4>
-                                <p>乾濕分離岩浴衛生間</p>
+                                <h4 class="">{{live_list[2][21]}}</h4>
+                                <p>{{live_list[2][22]}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="villaInf04">
-                        <img class="viila_img" src="./img/live/sun/villa_pool.png" alt="">
+                        <img class="viila_img" :src="live_list[2][26]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">4</h3>
                             <div>
-                                <h4 class="">露天泳池</h4>
-                                <p>Villa無邊際泳游池</p>
+                                <h4 class="">{{live_list[2][24]}}</h4>
+                                <p>{{live_list[2][25]}}</p>
                             </div>
                         </div>
                     </div>
