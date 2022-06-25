@@ -2,31 +2,32 @@
 
        include("connection.php");
 
-       //建立SQL語法
-       $sql = "SELECT * FROM member";
+       $all_list = [];
 
-       //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
-       $statement = $pdo->query($sql);
+       $tables = ['order_table', 'activity', 'shop', 'live', 'discount_code', 'member', 'article', 'comment'];
 
-       //抓出全部且依照順序封裝成一個二維陣列
-       $data = $statement->fetchAll();
 
-       // print_r($data);
+       foreach($tables as $idx => $table){
 
-       $process_data = [];
-       //將二維陣列取出顯示其值
-       foreach($data as $index => $row){
-              $temp = [];
+              $sql = "SELECT * FROM $table";
+              $statement = $pdo->query($sql);
+              $data = $statement->fetchAll();
 
-              for($i=0; $i<(count($row)/2); $i++){
-                     
-                     array_push($temp, $row[$i]);
+              $process_data = [];
+              
+              foreach($data as $index => $row){
+                     $temp = [];
+                     for($i=0; $i<(count($row)/2); $i++){
+                            array_push($temp, $row[$i]);
+                     }
+                     array_push($process_data, $temp);
               }
 
-              array_push($process_data, $temp);
+              $all_list[$table] = $process_data;
        }
 
-       // print_r($process_data[0]);
-       echo json_encode($process_data);
+
+       
+       echo json_encode($all_list);
 
 ?>
