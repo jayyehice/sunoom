@@ -438,6 +438,8 @@ window.addEventListener('load',function(){
             activity_list:[],
             //餐廳資料表
             food_list:[],
+            //套餐資料表
+            set_list:[],
             //選擇日期
             newDay:'',
             dayindex:'',
@@ -449,6 +451,16 @@ window.addEventListener('load',function(){
             tripNoonNameValue:'',
             //晚間
             tripEveningNameValue:'',
+
+            //早餐
+            FoodMorningNameValue:'',
+            //午餐
+            FoodNoonNameValue:'',
+            //晚餐
+            FoodEveningNameValue:'',
+
+            //住宿
+            StayNameValue:'',
             
             
             //上午行程
@@ -489,14 +501,468 @@ window.addEventListener('load',function(){
             day(val,index){
                 this.newDay = val;
                 this.dayindex = index;
-                console.log(this.dayindex);
+                // console.log(this.dayindex);
                 // this.countent='ChooseBlock[${i}]';
             },
 
-            chooseFunction(day){
-                let chooseDate = document.getElementsByClassName('chooseDate')[0];
-                // console.log(day);
+            // chooseFunction(day){
+            //     let chooseDate = document.getElementsByClassName('chooseDate')[0];
+            //     // console.log(day);
                 
+            // },
+            setChoose(val){
+                // console.log(val);
+
+                let tripMchoose = document.getElementById('tripMchoose');
+                let tripNchoose = document.getElementById('tripNchoose');
+                let tripEchoose = document.getElementById('tripEchoose');
+
+                let FoodMchoose = document.getElementById('FoodMchoose');
+                let FoodNchoose = document.getElementById('FoodNchoose');
+                let FoodEchoose = document.getElementById('FoodEchoose');
+
+                let cabinButton = document.getElementById('cabinButton');
+                let campingButton = document.getElementById('campingButton');
+                let villaButton = document.getElementById('villaButton');
+
+                let cabinOption = document.getElementById('cabinOption');
+                let campingChoose = document.getElementById('campingChoose');
+                let villaChoose = document.getElementById('villaChoose');
+
+                let cabinImg = document.getElementById('cabinImg');
+                let campingImg = document.getElementById('campingImg');
+                let villaImg = document.getElementById('villaImg');
+                // console.log(tripMchoose.querySelectorAll('option')[3]);
+                switch (val) {
+                    case '0':
+                        //上午行程
+                        tripMchoose.value = 2;
+                        this.morningtriptext=this.activity_list[2][2]
+                        this.morningtripPrice=this.activity_list[2][3]
+                        this.morningtripImg=this.activity_list[2][5]
+                        //下午行程
+                        tripNchoose.value = 1
+                        this.noontriptext=this.activity_list[1][2]
+                        this.noontripPrice=this.activity_list[1][3]
+                        this.noontripImg=this.activity_list[1][5]
+                        //夜間行程
+                        tripEchoose.value = 0
+                        this.eveningtriptext=this.activity_list[0][2]
+                        this.eveningtripPrice=this.activity_list[0][3]
+                        this.eveningtripImg=this.activity_list[0][5]
+                        //早餐
+                        FoodMchoose.value = 5
+                        this.morningFoodtext=this.food_list[5][2]
+                        this.morningFoodPrice=this.food_list[5][1]
+                        this.morningFoodImg=this.food_list[5][3]
+                        //午餐
+                        FoodNchoose.value = 1
+                        this.noonFoodtext=this.food_list[1][2]
+                        this.noonFoodPrice=this.food_list[1][1]
+                        this.noonFoodImg=this.food_list[1][3]
+                        //晚餐
+                        FoodEchoose.value = 3
+                        this.eveningFoodtext=this.food_list[3][2]
+                        this.eveningFoodPrice=this.food_list[3][1]
+                        this.eveningFoodImg=this.food_list[3][3]
+                        //住宿選項
+                        campingButton.checked = true;
+                        campingChoose.value = 1;
+                        break;
+                    case '1':
+                        //上午行程
+                        tripMchoose.value = 1;
+                        this.morningtriptext=this.activity_list[1][2]
+                        this.morningtripPrice=this.activity_list[1][3]
+                        this.morningtripImg=this.activity_list[1][5]
+                        //下午行程
+                        tripNchoose.value = 0
+                        this.noontriptext=this.activity_list[0][2]
+                        this.noontripPrice=this.activity_list[0][3]
+                        this.noontripImg=this.activity_list[0][5]
+                        //夜間行程
+                        tripEchoose.value = 12
+                        this.eveningtriptext=this.activity_list[12][2]
+                        this.eveningtripPrice=this.activity_list[12][3]
+                        this.eveningtripImg=this.activity_list[12][5]
+                        //早餐
+                        FoodMchoose.value = 5
+                        this.morningFoodtext=this.food_list[5][2]
+                        this.morningFoodPrice=this.food_list[5][1]
+                        this.morningFoodImg=this.food_list[5][3]
+                        //午餐
+                        FoodNchoose.value = 1
+                        this.noonFoodtext=this.food_list[1][2]
+                        this.noonFoodPrice=this.food_list[1][1]
+                        this.noonFoodImg=this.food_list[1][3]
+                        //晚餐
+                        FoodEchoose.value = 3
+                        this.eveningFoodtext=this.food_list[3][2]
+                        this.eveningFoodPrice=this.food_list[3][1]
+                        this.eveningFoodImg=this.food_list[3][3]
+                        //住宿選項
+                        cabinButton.checked = true;
+                        cabinOption.value = 1;
+                        break;
+                    case '2':
+                        //上午行程
+                        tripMchoose.value = 4;
+                        this.morningtriptext=this.activity_list[4][2]
+                        this.morningtripPrice=this.activity_list[4][3]
+                        this.morningtripImg=this.activity_list[4][5]
+                        //下午行程
+                        tripNchoose.value = 5
+                        this.noontriptext=this.activity_list[5][2]
+                        this.noontripPrice=this.activity_list[5][3]
+                        this.noontripImg=this.activity_list[5][5]
+                        //夜間行程
+                        tripEchoose.value = 13
+                        this.eveningtriptext=this.activity_list[13][2]
+                        this.eveningtripPrice=this.activity_list[13][3]
+                        this.eveningtripImg=this.activity_list[13][5]
+                        //早餐
+                        FoodMchoose.value = 5
+                        this.morningFoodtext=this.food_list[5][2]
+                        this.morningFoodPrice=this.food_list[5][1]
+                        this.morningFoodImg=this.food_list[5][3]
+                        //午餐
+                        FoodNchoose.value = 3
+                        this.noonFoodtext=this.food_list[3][2]
+                        this.noonFoodPrice=this.food_list[3][1]
+                        this.noonFoodImg=this.food_list[3][3]
+                        //晚餐
+                        FoodEchoose.value = 1
+                        this.eveningFoodtext=this.food_list[1][2]
+                        this.eveningFoodPrice=this.food_list[1][1]
+                        this.eveningFoodImg=this.food_list[1][3]
+                        //住宿選項
+                        villaButton.checked = true;
+                        villaChoose.value = 1;
+                        break;
+                    case '3':
+                            //上午行程
+                            tripMchoose.value = 13;
+                            this.morningtriptext=this.activity_list[13][2]
+                            this.morningtripPrice=this.activity_list[13][3]
+                            this.morningtripImg=this.activity_list[13][5]
+                            //下午行程
+                            tripNchoose.value = 3
+                            this.noontriptext=this.activity_list[3][2]
+                            this.noontripPrice=this.activity_list[3][3]
+                            this.noontripImg=this.activity_list[3][5]
+                            //夜間行程
+                            tripEchoose.value = 2
+                            this.eveningtriptext=this.activity_list[2][2]
+                            this.eveningtripPrice=this.activity_list[2][3]
+                            this.eveningtripImg=this.activity_list[2][5]
+                            //早餐
+                            FoodMchoose.value = 3
+                            this.morningFoodtext=this.food_list[3][2]
+                            this.morningFoodPrice=this.food_list[3][1]
+                            this.morningFoodImg=this.food_list[3][3]
+                            //午餐
+                            FoodNchoose.value = 1
+                            this.noonFoodtext=this.food_list[1][2]
+                            this.noonFoodPrice=this.food_list[1][1]
+                            this.noonFoodImg=this.food_list[1][3]
+                            //晚餐
+                            FoodEchoose.value = 6
+                            this.eveningFoodtext=this.food_list[6][2]
+                            this.eveningFoodPrice=this.food_list[6][1]
+                            this.eveningFoodImg=this.food_list[6][3]
+                            //住宿選項
+                            villaButton.checked = true;
+                            villaChoose.value = 1;
+                        break;
+                        case '4':
+                            //上午行程
+                            tripMchoose.value = 13;
+                            this.morningtriptext=this.activity_list[13][2]
+                            this.morningtripPrice=this.activity_list[13][3]
+                            this.morningtripImg=this.activity_list[13][5]
+                            //下午行程
+                            tripNchoose.value = 12
+                            this.noontriptext=this.activity_list[12][2]
+                            this.noontripPrice=this.activity_list[12][3]
+                            this.noontripImg=this.activity_list[12][5]
+                            //夜間行程
+                            tripEchoose.value = 16
+                            this.eveningtriptext=this.activity_list[16][2]
+                            this.eveningtripPrice=this.activity_list[16][3]
+                            this.eveningtripImg=this.activity_list[16][5]
+                            //早餐
+                            FoodMchoose.value = 5
+                            this.morningFoodtext=this.food_list[5][2]
+                            this.morningFoodPrice=this.food_list[5][1]
+                            this.morningFoodImg=this.food_list[5][3]
+                            //午餐
+                            FoodNchoose.value = 3
+                            this.noonFoodtext=this.food_list[3][2]
+                            this.noonFoodPrice=this.food_list[3][1]
+                            this.noonFoodImg=this.food_list[3][3]
+                            //晚餐
+                            FoodEchoose.value = 1
+                            this.eveningFoodtext=this.food_list[1][2]
+                            this.eveningFoodPrice=this.food_list[1][1]
+                            this.eveningFoodImg=this.food_list[1][3]
+                            //住宿選項
+                            villaButton.checked = true;
+                            villaChoose.value = 1;
+                        break;
+                        case '5':
+                            //上午行程
+                            tripMchoose.value = 5;
+                            this.morningtriptext=this.activity_list[5][2]
+                            this.morningtripPrice=this.activity_list[5][3]
+                            this.morningtripImg=this.activity_list[5][5]
+                            //下午行程
+                            tripNchoose.value = 18
+                            this.noontriptext=this.activity_list[18][2]
+                            this.noontripPrice=this.activity_list[18][3]
+                            this.noontripImg=this.activity_list[18][5]
+                            //夜間行程
+                            tripEchoose.value = 12
+                            this.eveningtriptext=this.activity_list[12][2]
+                            this.eveningtripPrice=this.activity_list[12][3]
+                            this.eveningtripImg=this.activity_list[12][5]
+                            //早餐
+                            FoodMchoose.value = 5
+                            this.morningFoodtext=this.food_list[5][2]
+                            this.morningFoodPrice=this.food_list[5][1]
+                            this.morningFoodImg=this.food_list[5][3]
+                            //午餐
+                            FoodNchoose.value = 3
+                            this.noonFoodtext=this.food_list[3][2]
+                            this.noonFoodPrice=this.food_list[3][1]
+                            this.noonFoodImg=this.food_list[3][3]
+                            //晚餐
+                            FoodEchoose.value = 1
+                            this.eveningFoodtext=this.food_list[1][2]
+                            this.eveningFoodPrice=this.food_list[1][1]
+                            this.eveningFoodImg=this.food_list[1][3]
+                            //住宿選項
+                            campingButton.checked = true;
+                            campingChoose.value = 1;
+                        break;
+                        case '6':
+                            //上午行程
+                            tripMchoose.value = 9;
+                            this.morningtriptext=this.activity_list[9][2]
+                            this.morningtripPrice=this.activity_list[9][3]
+                            this.morningtripImg=this.activity_list[9][5]
+                            //下午行程
+                            tripNchoose.value = 6
+                            this.noontriptext=this.activity_list[6][2]
+                            this.noontripPrice=this.activity_list[6][3]
+                            this.noontripImg=this.activity_list[6][5]
+                            //夜間行程
+                            tripEchoose.value = 10
+                            this.eveningtriptext=this.activity_list[10][2]
+                            this.eveningtripPrice=this.activity_list[10][3]
+                            this.eveningtripImg=this.activity_list[10][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 2
+                            this.noonFoodtext=this.food_list[2][2]
+                            this.noonFoodPrice=this.food_list[2][1]
+                            this.noonFoodImg=this.food_list[2][3]
+                            //晚餐
+                            FoodEchoose.value = 4
+                            this.eveningFoodtext=this.food_list[4][2]
+                            this.eveningFoodPrice=this.food_list[4][1]
+                            this.eveningFoodImg=this.food_list[4][3]
+                            //住宿選項
+                            campingButton.checked = true;
+                            campingChoose.value = 2;
+                            this.campingimg = './img/orderPage/campingnight.jpg'
+                        break;
+                        case '7':
+                            //上午行程
+                            tripMchoose.value = 6;
+                            this.morningtriptext=this.activity_list[6][2]
+                            this.morningtripPrice=this.activity_list[6][3]
+                            this.morningtripImg=this.activity_list[6][5]
+                            //下午行程
+                            tripNchoose.value = 20
+                            this.noontriptext=this.activity_list[20][2]
+                            this.noontripPrice=this.activity_list[20][3]
+                            this.noontripImg=this.activity_list[20][5]
+                            //夜間行程
+                            tripEchoose.value = 9
+                            this.eveningtriptext=this.activity_list[9][2]
+                            this.eveningtripPrice=this.activity_list[9][3]
+                            this.eveningtripImg=this.activity_list[9][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 2
+                            this.noonFoodtext=this.food_list[2][2]
+                            this.noonFoodPrice=this.food_list[2][1]
+                            this.noonFoodImg=this.food_list[2][3]
+                            //晚餐
+                            FoodEchoose.value = 4
+                            this.eveningFoodtext=this.food_list[4][2]
+                            this.eveningFoodPrice=this.food_list[4][1]
+                            this.eveningFoodImg=this.food_list[4][3]
+                            //住宿選項
+                            cabinButton.checked = true;
+                            cabinOption.value = 2;
+                            cabinImg.src = './img/orderPage/cabinnight.jpg'
+                        break;
+                        case '8':
+                            //上午行程
+                            tripMchoose.value = 10;
+                            this.morningtriptext=this.activity_list[10][2]
+                            this.morningtripPrice=this.activity_list[10][3]
+                            this.morningtripImg=this.activity_list[10][5]
+                            //下午行程
+                            tripNchoose.value = 22
+                            this.noontriptext=this.activity_list[22][2]
+                            this.noontripPrice=this.activity_list[22][3]
+                            this.noontripImg=this.activity_list[22][5]
+                            //夜間行程
+                            tripEchoose.value = 23
+                            this.eveningtriptext=this.activity_list[23][2]
+                            this.eveningtripPrice=this.activity_list[23][3]
+                            this.eveningtripImg=this.activity_list[23][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 4
+                            this.noonFoodtext=this.food_list[4][2]
+                            this.noonFoodPrice=this.food_list[4][1]
+                            this.noonFoodImg=this.food_list[4][3]
+                            //晚餐
+                            FoodEchoose.value = 2
+                            this.eveningFoodtext=this.food_list[2][2]
+                            this.eveningFoodPrice=this.food_list[2][1]
+                            this.eveningFoodImg=this.food_list[2][3]
+                            //住宿選項
+                            villaButton.checked = true;
+                            villaChoose.value = 2;
+                            villaImg.src = './img/orderPage/villanight.jpg'
+                        break;
+                        case '9':
+                            //上午行程
+                            tripMchoose.value = 11;
+                            this.morningtriptext=this.activity_list[11][2]
+                            this.morningtripPrice=this.activity_list[11][3]
+                            this.morningtripImg=this.activity_list[11][5]
+                            //下午行程
+                            tripNchoose.value = 8
+                            this.noontriptext=this.activity_list[8][2]
+                            this.noontripPrice=this.activity_list[8][3]
+                            this.noontripImg=this.activity_list[8][5]
+                            //夜間行程
+                            tripEchoose.value = 24
+                            this.eveningtriptext=this.activity_list[24][2]
+                            this.eveningtripPrice=this.activity_list[24][3]
+                            this.eveningtripImg=this.activity_list[24][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 4
+                            this.noonFoodtext=this.food_list[4][2]
+                            this.noonFoodPrice=this.food_list[4][1]
+                            this.noonFoodImg=this.food_list[4][3]
+                            //晚餐
+                            FoodEchoose.value = 2
+                            this.eveningFoodtext=this.food_list[2][2]
+                            this.eveningFoodPrice=this.food_list[2][1]
+                            this.eveningFoodImg=this.food_list[2][3]
+                            //住宿選項
+                            campingButton.checked = true;
+                            campingChoose.value = 2;
+                            this.campingimg = './img/orderPage/campingnight.jpg'
+                        break;
+                        case '10':
+                            //上午行程
+                            tripMchoose.value = 21;
+                            this.morningtriptext=this.activity_list[21][2]
+                            this.morningtripPrice=this.activity_list[21][3]
+                            this.morningtripImg=this.activity_list[21][5]
+                            //下午行程
+                            tripNchoose.value = 19
+                            this.noontriptext=this.activity_list[19][2]
+                            this.noontripPrice=this.activity_list[19][3]
+                            this.noontripImg=this.activity_list[19][5]
+                            //夜間行程
+                            tripEchoose.value = 23
+                            this.eveningtriptext=this.activity_list[23][2]
+                            this.eveningtripPrice=this.activity_list[23][3]
+                            this.eveningtripImg=this.activity_list[23][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 4
+                            this.noonFoodtext=this.food_list[4][2]
+                            this.noonFoodPrice=this.food_list[4][1]
+                            this.noonFoodImg=this.food_list[4][3]
+                            //晚餐
+                            FoodEchoose.value = 2
+                            this.eveningFoodtext=this.food_list[2][2]
+                            this.eveningFoodPrice=this.food_list[2][1]
+                            this.eveningFoodImg=this.food_list[2][3]
+                            //住宿選項
+                            villaButton.checked = true;
+                            villaChoose.value = 2;
+                            villaImg.src = './img/orderPage/villanight.jpg'
+                        break;
+                        case '11':
+                            //上午行程
+                            tripMchoose.value = 17;
+                            this.morningtriptext=this.activity_list[17][2]
+                            this.morningtripPrice=this.activity_list[17][3]
+                            this.morningtripImg=this.activity_list[17][5]
+                            //下午行程
+                            tripNchoose.value = 24
+                            this.noontriptext=this.activity_list[24][2]
+                            this.noontripPrice=this.activity_list[24][3]
+                            this.noontripImg=this.activity_list[24][5]
+                            //夜間行程
+                            tripEchoose.value = 11
+                            this.eveningtriptext=this.activity_list[1][2]
+                            this.eveningtripPrice=this.activity_list[11][3]
+                            this.eveningtripImg=this.activity_list[11][5]
+                            //早餐
+                            FoodMchoose.value = 6
+                            this.morningFoodtext=this.food_list[6][2]
+                            this.morningFoodPrice=this.food_list[6][1]
+                            this.morningFoodImg=this.food_list[6][3]
+                            //午餐
+                            FoodNchoose.value = 4
+                            this.noonFoodtext=this.food_list[4][2]
+                            this.noonFoodPrice=this.food_list[4][1]
+                            this.noonFoodImg=this.food_list[4][3]
+                            //晚餐
+                            FoodEchoose.value = 2
+                            this.eveningFoodtext=this.food_list[2][2]
+                            this.eveningFoodPrice=this.food_list[2][1]
+                            this.eveningFoodImg=this.food_list[2][3]
+                            //住宿選項
+                            campingButton.checked = true;
+                            campingChoose.value = 2;
+                            this.campingimg = './img/orderPage/campingnight.jpg'
+                        break;
+                    default:
+                        break;
+                }
             },
             // dpnums(){
             //     if(this.pepoleNums > 1){
@@ -528,6 +994,11 @@ window.addEventListener('load',function(){
                 this.morningtripPrice=this.activity_list[value][3]
                 this.morningtripImg=this.activity_list[value][5]
                 this.tripMorningNameValue = value
+                // console.log(addItineraryM);
+                $('#addItineraryM').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //下午行程
             noonChange(value){
@@ -535,6 +1006,10 @@ window.addEventListener('load',function(){
                 this.noontripPrice=this.activity_list[value][3]
                 this.noontripImg=this.activity_list[value][5]
                 this.tripNoonNameValue = value
+                $('#addItineraryN').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //晚上行程
             eveningChange(value){
@@ -542,24 +1017,43 @@ window.addEventListener('load',function(){
                 this.eveningtripPrice=this.activity_list[value][3]
                 this.eveningtripImg=this.activity_list[value][5]
                 this.tripEveningNameValue = value
+                $('#addItineraryE').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //早餐
             morningFoodChange(value){
                 this.morningFoodtext=this.food_list[value][2]
                 this.morningFoodPrice=this.food_list[value][1]
                 this.morningFoodImg=this.food_list[value][3]
+                FoodMorningNameValue = value
+                $('#addFoodM').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //午餐
             noonFoodChange(value){
                 this.noonFoodtext=this.food_list[value][2]
                 this.noonFoodPrice=this.food_list[value][1]
                 this.noonFoodImg=this.food_list[value][3]
+                FoodNoonNameValue = value
+                $('#addFoodN').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //晚餐
             eveningFoodChange(value){
                 this.eveningFoodtext=this.food_list[value][2]
                 this.eveningFoodPrice=this.food_list[value][1]
                 this.eveningFoodImg=this.food_list[value][3]
+                FoodEveningNameValue = value
+                $('#addFoodE').css({
+                    opacity:'1',
+                    cursor: 'pointer',
+                })
             },
             //住宿換圖
             stayimgChange(value){
@@ -609,13 +1103,13 @@ window.addEventListener('load',function(){
             
                 
             },
+
+            //行程刪除按鈕
             morningTripDeleteButton(e){
                 let eg = e.target;
                 eg.parentElement.previousElementSibling.innerHTML = '0';
                 eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
                 localStorage.removeItem('tirpMorningChooseList'+[eg.dataset.deleteindex])
-                
-
             },
             noonTripDeleteButton(e){
                 let eg = e.target;
@@ -629,9 +1123,31 @@ window.addEventListener('load',function(){
                 eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
                 localStorage.removeItem('tripEveningChooseList'+[eg.dataset.deleteindex])
             },     
-                
-
-            
+            //餐點刪除按鈕
+            morningFoodDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('FoodMorningChooseList'+[eg.dataset.deleteindex])
+            },
+            noonFoodDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('FoodNoonChooseList'+[eg.dataset.deleteindex])
+            },
+            eveningFoodDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('FoodEveningChooseList'+[eg.dataset.deleteindex])
+            },     
+            StayDeleteButton(e){
+                let eg = e.target;
+                eg.parentElement.previousElementSibling.innerHTML = '0';
+                eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
+                localStorage.removeItem('StayDeleteButton'+[eg.dataset.deleteindex])
+            },    
 
         },
 
@@ -648,10 +1164,19 @@ window.addEventListener('load',function(){
             .then(response => response.json())
             .then(food => this.food_list = food);
             //取套餐資料表
-            const url2 = './php/foodChoose.php'
+            const url2 = './php/set.php'
             fetch(url2)
             .then(response => response.json())
-            .then(food => this.food_list = food);
+            .then(set => this.set_list = set)
+            .then(()=>{
+                this.set_list.forEach(element => {
+                    if(element[2] == 1){
+                       element[4] = element[4] + '(日)';
+                    }else{
+                        element[4] = element[4] + '(月)';
+                    }
+                })
+            })
 
             
         },
@@ -688,67 +1213,378 @@ window.addEventListener('load',function(){
 
                 };
 
-
+                //上午行程選擇器
                 let addItineraryM = document.getElementById('addItineraryM');
                 let tripMorningName = document.getElementsByClassName('tripMorningName');
                 let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
 
-                //上午行程選擇器
                 addItineraryM.addEventListener('click',()=>{
-                    for(let i = 0; i <= this.dateArray.length ;i++ ){
-                        if(this.dayindex == i){
-                            tripMorningName[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
-                            tripMorningPrice[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
+                    console.log(this.newDay);
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i ){
+                                tripMorningName[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
+                                tripMorningPrice[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
+    
+                                let tirpMorningChooseList = [];
+                                tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
+                                localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+                                
+                            }
+                        }
+                        $('#addItineraryM').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    }  
 
-                            let tirpMorningChooseList = [];
-                            tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
-                            localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
-
-                            $('.addfadein').fadeTo(1,0.9)
-                            $('.addfadein').fadeOut(2000)
-                            
-                        }  
-                    }
                 })
-
+                //下午行程選擇器
                 let addItineraryN = document.getElementById('addItineraryN');
                 let tripNoonName = document.getElementsByClassName('tripNoonName');
                 let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
-                //下午行程選擇器
+                
                 addItineraryN.addEventListener('click',()=>{
-                    for(let i = 0; i <= this.dateArray.length ;i++ ){
-                        if(this.dayindex == i){
-                            tripNoonName[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
-                            tripNoonPrice[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+                    if(this.newDay !== ''){
 
-                            let tripNoonChooseList = [];
-                            tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
-                            localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
-                            
-                            $('.addfadein').fadeTo(1,0.9)
-                            $('.addfadein').fadeOut(2000)
-                        }  
-                    }
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i ){
+                                tripNoonName[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
+                                tripNoonPrice[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+    
+                                let tripNoonChooseList = [];
+                                tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                                localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                                
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+                            }
+                        }
+                        $('#addItineraryN').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    }  
+                    
                 })
+                //晚間行程選擇器
                 let addItineraryE = document.getElementById('addItineraryE');
                 let tripEveningName = document.getElementsByClassName('tripEveningName');
                 let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
-                //晚間行程選擇器
+                
                 addItineraryE.addEventListener('click',()=>{
-                    for(let i = 0; i <= this.dateArray.length ;i++ ){
-                        if(this.dayindex == i){
-                            tripEveningName[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
-                            tripEveningPrice[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i ){
+                                tripEveningName[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
+                                tripEveningPrice[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+    
+                                let tripEveningChooseList = [];
+                                tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                                localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                                
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+                            } 
+                        }
+                        $('#addItineraryE').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    } 
 
-                            let tripEveningChooseList = [];
-                            tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
-                            localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                })
+
+                //早餐選擇器
+                let addFoodM = document.getElementById('addFoodM');
+                let FoodMorningName = document.getElementsByClassName('FoodMorningName');
+                let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');
+                
+                addFoodM.addEventListener('click',()=>{
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i && this.newDay != ''){
+                                FoodMorningName[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
+                                FoodMorningPrice[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
+    
+                                let FoodMorningChooseList = [];
+                                FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
+                                localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+                                
+                            } 
+                        }
+                        $('#addFoodM').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    } 
+
+                })
+                //午餐選擇器
+                let addFoodN = document.getElementById('addFoodN');
+                let FoodNoonName = document.getElementsByClassName('FoodNoonName');
+                let FoodNoonPrice = document.getElementsByClassName('FoodNoonPrice');
+
+                addFoodN.addEventListener('click',()=>{
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i ){
+                                FoodNoonName[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
+                                FoodNoonPrice[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
+    
+                                let FoodNoonChooseList = [];
+                                FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
+                                localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+                                
+                            } 
+                        }
+                        $('#addFoodN').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    } 
+
+                })
+                //晚餐選擇器
+                let addFoodE = document.getElementById('addFoodE');
+                let FoodEveningName = document.getElementsByClassName('FoodEveningName');
+                let FoodEveningPrice = document.getElementsByClassName('FoodEveningPrice');
+
+                addFoodE.addEventListener('click',()=>{
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i && this.newDay != ''){
+                                FoodEveningName[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
+                                FoodEveningPrice[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
+    
+                                let FoodEveningChooseList = [];
+                                FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
+                                localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(2000)
+    
+                                $('#addFoodE').css({
+                                    opacity:'0.1',
+                                    cursor:'not-allowed',
+                                })
+                                
+                            }
+                        }
+                        $('#addFoodE').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                            alert('請先選擇日期')
+                            $('html,body').animate({
+                                scrollTop: 0
+                            }, 1000);
                             
-                            $('.addfadein').fadeTo(1,0.9)
-                            $('.addfadein').fadeOut(2000)
-                        }  
+                        }
+
+
+                })
+                //住宿選擇
+                  //小木屋
+                let addcabin = document.getElementById('addcabin');
+                let StayChooseName = document.getElementsByClassName('StayChooseName');
+                let StayChoosePrice = document.getElementsByClassName('StayChoosePrice');
+                let cabinOption = document.getElementById('cabinOption');
+                addcabin.addEventListener('click',(e)=>{
+                    if(this.newDay !== ''){
+                        if($('#cabinButton').hasClass('check')){
+                            for(let i = 0; i <= this.dateArray.length ;i++ ){
+                                if(this.dayindex == i && this.newDay != ''){
+                                    let thisStayName = $(e.target).parent().find('h4').text()
+                                    let thisPrice = $(e.target).prev().find('span').text().substring(1,5);
+                                    console.log(cabinOption.value);
+                                    if(cabinOption.value == 1){
+                                       thisStayName = thisStayName + '(日)';
+                                    }else{
+                                        thisStayName = thisStayName + '(月)';
+                                    }
+                                    StayChooseName[i].innerHTML = thisStayName;
+                                    StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
+        
+                                    let stayChooseList = [];
+                                    stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                    localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+        
+                                    $('.addfadein').fadeTo(1,0.9)
+                                    $('.addfadein').fadeOut(3000)
+                                    
+                                }
+                            }
+                        }
+                        $('#cabinButton').removeClass('check');
+                        $('#addcabin').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    }  
+
+                })
+                //露營選擇
+                let addCamping = document.getElementById('addCamping');
+                addCamping.addEventListener('click',(e)=>{
+                    // console.log(e.target);
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i && $('#campingButton').hasClass('check') && this.newDay != ''){
+                                let thisStayName = $(e.target).parent().find('h4').text()
+                                let thisPrice = $(e.target).prev().find('span').text().substring(1,5);
+                                if(campingChoose.value == 1){
+                                    thisStayName = thisStayName + '(日)';
+                                 }else{
+                                     thisStayName = thisStayName + '(月)';
+                                 }
+                                StayChooseName[i].innerHTML = thisStayName;
+                                StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
+    
+                                let stayChooseList = [];
+                                stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(3000)
+                                
+                            }  
+                        }
+                        $('#campingButton').removeClass('check');
+                        $('#addCamping').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    }  
+
+                })
+                //Villa選擇
+                let addVilla = document.getElementById('addVilla');
+                addVilla.addEventListener('click',(e)=>{
+                    // console.log(e.target);
+                    if(this.newDay !== ''){
+                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                            if(this.dayindex == i && $('#villaButton').hasClass('check') && this.newDay != ''){
+                                let thisStayName = $(e.target).parent().find('h4').text()
+                                let thisPrice = $(e.target).prev().find('span').text().substring(1,5);
+                                if(villaChoose.value == 1){
+                                    thisStayName = thisStayName + '(日)';
+                                 }else{
+                                     thisStayName = thisStayName + '(月)';
+                                 }
+                                StayChooseName[i].innerHTML = thisStayName;
+                                StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
+    
+                                let stayChooseList = [];
+                                stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+    
+                                $('.addfadein').fadeTo(1,0.9)
+                                $('.addfadein').fadeOut(3000)
+                                
+                            }   
+                        }
+                        $('#villaButton').removeClass('check');
+                        $('#addVilla').css({
+                            opacity:'0.1',
+                            cursor:'not-allowed',
+                        })
+                    }else{
+                        alert('請先選擇日期')
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        
+                    } 
+
+                })  
+
+                //住宿判斷
+                $('#villaButton').click(()=>{
+                    // console.log($('#villaButton').addClass('check'));
+                    $('#villaButton').addClass('check')
+                    if( $('#villaButton').hasClass('check')){
+                        $('#addVilla').css({
+                            opacity:'1',
+                            cursor: 'pointer',
+                        })
+                    }
+                });
+                $('#cabinButton').click(()=>{
+                    // console.log($('#villaButton').addClass('check'));
+                    $('#cabinButton').addClass('check')
+                    if( $('#cabinButton').hasClass('check')){
+                        $('#addcabin').css({
+                            opacity:'1',
+                            cursor: 'pointer',
+                        })
+                    }
+                });
+                $('#campingButton').click(()=>{
+                    // console.log($('#villaButton').addClass('check'));
+                    $('#campingButton').addClass('check')
+                    if( $('#campingButton').hasClass('check')){
+                        $('#addCamping').css({
+                            opacity:'1',
+                            cursor: 'pointer',
+                        })
                     }
                 })
+
+
+
                 //RWD
                 $(window).ready(function(){
                     $(window).resize(function(){
@@ -838,7 +1674,26 @@ window.addEventListener('load',function(){
             this.newPrice =  parseInt(this.choosePrice * this.pepoleNums);
             this.pepoleNums = parseInt(this.pepoleNums)
 
-            let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+            let tripMchoose = document.getElementById('tripMchoose');
+            let tripNchoose = document.getElementById('tripNchoose');
+            let tripEchoose = document.getElementById('tripEchoose');
+
+            let FoodMchoose = document.getElementById('FoodMchoose');
+            let FoodNchoose = document.getElementById('FoodNchoose');
+            let FoodEchoose = document.getElementById('FoodEchoose');
+
+            this.tripMorningNameValue = tripMchoose.value;
+            this.tripNoonNameValue = tripNchoose.value;
+            this.tripEveningNameValue = tripEchoose.value;
+
+            this.FoodMorningNameValue = FoodMchoose.value;
+            this.FoodNoonNameValue = FoodNchoose.value;
+            this.FoodEveningNameValue = FoodEchoose.value;
+
+
+
+
+
             // function apnums(eg){
             //     // console.log(eg.parentElement.nextElementSibling.innerText);
             //     // console.log($('#ccc').innerHTML);

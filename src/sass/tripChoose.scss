@@ -126,10 +126,10 @@
     }
     //日期區塊
     .datePickerBox{
-        width: 700px;
-        height: 120px;
+        width:980px;
+        height: auto;
         margin: 50px auto;
-        border: 1px solid $moon_color;
+        // border: 1px solid $moon_color;
         position: relative;
 
         .dateTitle{
@@ -149,14 +149,20 @@
         .pickerBox{
             text-align: center;
             width: 100%;
-            border-top: 1px solid $moon_color;
+            // border-top: 1px solid $moon_color;
             display: flex;
             flex-wrap: wrap;
             .daysbutton{
-                width: 100px;
+                width: 130px;
+                margin: 5px;
+                font-size: 16px;
                 img{
                     width: 90px;
                 }
+                select{
+                    width: 115px;
+                }
+                
             }
         }
 
@@ -217,7 +223,7 @@
         .rightButton{
             width: 8px;
             height: 8px;
-            margin-left: 5px;
+            margin-left: 6px;
             cursor: pointer;
         }
         .deleteButton{
@@ -257,7 +263,7 @@
             }
             li:first-Child{
                 text-align: center;
-                width: 80px;
+                width: 150px;
                 overflow: auto;
             }
             li:nth-Child(2){
@@ -268,8 +274,16 @@
                 text-align: center;
             }
             li:nth-Child(3){
-                width: 100px;
+                width: 60px;
                 text-align: center;
+            }
+            li:nth-Child(4){
+                width: 50px;
+                text-align: center;
+                img{
+                    width: 20px;
+                    cursor: pointer;
+                }
             }
         }
         .tripList{
@@ -329,8 +343,16 @@
             align-items: center;
             .chooseDate{
                 position: absolute;
-                right: 30%;
+                right: 10%;
                 top: 25%;
+            }
+            select{
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                height: 35px;
+                border-radius: 22px;
+                text-align: center;
             }
         }
         .morningItineraryA{
@@ -349,16 +371,16 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+
                 #morningImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .morningBlockB{
-                    margin: 0px auto;
+                    margin: 5px auto;
 
                     .optionBlockA{
                         display: flex;
@@ -366,8 +388,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -391,7 +413,9 @@
             #addItineraryM{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .noonItinerary{
@@ -409,24 +433,24 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #noonImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .noonBlockB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .optionBlockB{
                         display: flex;
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -450,7 +474,9 @@
             #addItineraryN{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .eveningItinerary{
@@ -468,24 +494,24 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #eveningImg{
-                    margin: 15px;
+                    margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;  
                     border-radius: 21px;
                 }
                 .eveningBlockB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .optionBlockC{
                         display: flex;
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -493,7 +519,7 @@
                         }
                         #tripPriceC{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -510,7 +536,9 @@
         #addItineraryE{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
 
@@ -551,24 +579,25 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #morningFoodImg{
-                    margin: 15px;
+                    margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .morningFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodOptionBlockA{
                         display: flex;
                         width: 300px;
+                        justify-items: center;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -576,7 +605,7 @@
                         }
                         #foodPriceA{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -592,7 +621,9 @@
             #addFoodM{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .noonFood{
@@ -610,24 +641,23 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
                 #noonFoodImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .noonFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodoptionBlockB{
                         display: flex;
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -635,7 +665,7 @@
                         }
                         #foodPriceB{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -651,7 +681,9 @@
             #addFoodN{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .eveningFood{
@@ -669,7 +701,7 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+;
                 #eveningFoodImg{
                     margin: 15px;
                     width: 170px;
@@ -678,15 +710,15 @@
                     border-radius: 21px;
                 }
                 .eveningFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodoptionBlockC{
                         display: flex;
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -694,7 +726,7 @@
                         }
                         #foodPriceC{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -711,7 +743,9 @@
         #addFoodE{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
 
@@ -769,8 +803,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -778,7 +812,7 @@
                         }
                         #cabinPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -794,7 +828,9 @@
             #addcabin{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .camping{
@@ -832,8 +868,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -841,7 +877,7 @@
                         }
                         #campingPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -857,7 +893,9 @@
             #addCamping{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .villa{
@@ -896,8 +934,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -905,7 +943,7 @@
                         }
                         #villaPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -922,7 +960,9 @@
         #addVilla{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
     #NextPage{
@@ -965,6 +1005,26 @@
     }
     button{
         color: $moon_color;
+    }
+    .addfadein{
+        width: 12vw;
+        height: 10vh;
+        position:fixed;
+        background-color: $moon_color;
+        color: $sun_color ;
+        border: 1px solid $moon_color;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        line-height: 10vh;
+        font-size: 16px;
+        border-radius: 22px;
+        opacity: 0;
+        .fa-regular{
+            margin-left: 10px;
+        }
+        
     }
     @mixin circle{
         width: 150px;
@@ -1024,10 +1084,10 @@
     }
     //日期區塊
     .datePickerBox{
-        width: 700px;
-        height: 360px;
+        width:980px;
+        height: auto;
         margin: 50px auto;
-        border: 1px solid $moon_color;
+        // border: 1px solid $moon_color;
         position: relative;
 
         .dateTitle{
@@ -1047,7 +1107,21 @@
         .pickerBox{
             text-align: center;
             width: 100%;
-            border-top: 1px solid $moon_color;
+            // border-top: 1px solid $moon_color;
+            display: flex;
+            flex-wrap: wrap;
+            .daysbutton{
+                width: 130px;
+                margin: 5px;
+                font-size: 16px;
+                img{
+                    width: 90px;
+                }
+                select{
+                    width: 115px;
+                }
+                
+            }
         }
 
     }
@@ -1097,16 +1171,17 @@
             font-weight: bolder;
             margin-left: 10px;
         }
+
         .leftButton{
             width: 8px;
             height: 8px;
-            margin-right: 5px;
+            margin-right: 0px;
             cursor: pointer;
         }
         .rightButton{
             width: 8px;
             height: 8px;
-            margin-left: 5px;
+            margin-left: 6px;
             cursor: pointer;
         }
         .deleteButton{
@@ -1146,15 +1221,27 @@
             }
             li:first-Child{
                 text-align: center;
-                width: 80px;
+                width: 150px;
+                overflow: auto;
             }
             li:nth-Child(2){
                 width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
             }
             li:nth-Child(3){
-                width: 100px;
+                width: 60px;
                 text-align: center;
+            }
+            li:nth-Child(4){
+                width: 50px;
+                text-align: center;
+                img{
+                    width: 20px;
+                    cursor: pointer;
+                }
             }
         }
         .tripList{
@@ -1215,7 +1302,15 @@
             .chooseDate{
                 position: absolute;
                 right: 10%;
-                top: 30%;
+                top: 25%;
+            }
+            select{
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                height: 35px;
+                border-radius: 22px;
+                text-align: center;
             }
         }
         .morningItineraryA{
@@ -1234,16 +1329,16 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+
                 #morningImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .morningBlockB{
-                    margin: 0px auto;
+                    margin: 5px auto;
 
                     .optionBlockA{
                         display: flex;
@@ -1251,8 +1346,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1276,7 +1371,9 @@
             #addItineraryM{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .noonItinerary{
@@ -1294,24 +1391,24 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #noonImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .noonBlockB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .optionBlockB{
                         display: flex;
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1335,7 +1432,9 @@
             #addItineraryN{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .eveningItinerary{
@@ -1353,24 +1452,24 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #eveningImg{
-                    margin: 15px;
+                    margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;  
                     border-radius: 21px;
                 }
                 .eveningBlockB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .optionBlockC{
                         display: flex;
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 210px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1378,7 +1477,7 @@
                         }
                         #tripPriceC{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1395,7 +1494,9 @@
         #addItineraryE{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
 
@@ -1436,24 +1537,25 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+                
                 #morningFoodImg{
-                    margin: 15px;
+                    margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .morningFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodOptionBlockA{
                         display: flex;
                         width: 300px;
+                        justify-items: center;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1461,7 +1563,7 @@
                         }
                         #foodPriceA{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1477,7 +1579,9 @@
             #addFoodM{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .noonFood{
@@ -1495,24 +1599,23 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
                 #noonFoodImg{
-                    margin: 15px;
+                    margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
                 }
                 .noonFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodoptionBlockB{
                         display: flex;
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1520,7 +1623,7 @@
                         }
                         #foodPriceB{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1536,7 +1639,9 @@
             #addFoodN{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .eveningFood{
@@ -1554,7 +1659,7 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                align-items: center;
+;
                 #eveningFoodImg{
                     margin: 15px;
                     width: 170px;
@@ -1563,15 +1668,15 @@
                     border-radius: 21px;
                 }
                 .eveningFoodB{
-                    margin: 0 auto;
+                    margin: 5px auto;
                     .foodoptionBlockC{
                         display: flex;
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1579,7 +1684,7 @@
                         }
                         #foodPriceC{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1596,7 +1701,9 @@
         #addFoodE{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
 
@@ -1654,8 +1761,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1663,7 +1770,7 @@
                         }
                         #cabinPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1679,7 +1786,9 @@
             #addcabin{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .camping{
@@ -1717,8 +1826,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1726,7 +1835,7 @@
                         }
                         #campingPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1742,7 +1851,9 @@
             #addCamping{
                 width: 35px;
                 height: 35px;
-                cursor: pointer;
+                opacity: 0.1;
+                cursor: not-allowed;
+                transition: all 1s;
             }
         }
         .villa{
@@ -1781,8 +1892,8 @@
                         justify-content: center;
                         margin: 10px;
                         select{
-                            width: 140px;
-                            height: 35px;
+                            width: 180px;
+                            height: 38px;
                             border-radius: 22px;
                             background-color: $sun_color;
                             margin-right: 20px;
@@ -1790,7 +1901,7 @@
                         }
                         #villaPrice{
                             border: 1px solid $moon_color;
-                            width: 140px;
+                            width: 170px;
                             height: 35px;
                             border-radius: 22px;
                             text-align: center;
@@ -1807,7 +1918,9 @@
         #addVilla{
             width: 35px;
             height: 35px;
-            cursor: pointer;
+            opacity: 0.1;
+            cursor: not-allowed;
+            transition: all 1s;
         }
     }
     #NextPage{
@@ -1831,4 +1944,6 @@
             border:1px solid $sun_color;
         }
     }
+
+
 }
