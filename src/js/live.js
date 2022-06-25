@@ -4,7 +4,27 @@ new Vue({
     data: {     // 變數放這裡！           
         live_list: [],
     },
-    methods: {},
+    methods: {
+        h3Mouseenter(e){
+            // let box = document.getElementsByClassName('wood');
+            let boxclass = e.target.dataset.boxclass;
+            let box = e.target.closest('div.siteLayout').querySelector(`div.${boxclass}`);
+            box.setAttribute("style","display:block;");
+            // console.log();
+            // console.log(e.target.closest('div.siteLayout').querySelector(`div.${boxclass}`));
+            // box.setAttribute("style","display:block;");
+        },
+
+        h3Mouseleave(e){
+            // let box = document.getElementsByClassName('wood');
+            let boxclass = e.target.dataset.boxclass;
+            let box = e.target.closest('div.siteLayout').querySelector(`div.${boxclass}`);
+            box.removeAttribute("style");
+            // console.log();
+            // console.log(e.target.closest('div.siteLayout').querySelector(`div.${boxclass}`));
+            // box.setAttribute("style","display:block;");
+        },
+    },
     computed: {},
     watch: {},
 

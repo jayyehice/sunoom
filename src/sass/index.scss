@@ -99,6 +99,7 @@
 
             .muntain01 {
                 width: 100%;
+                top: 0;
             }
 
             img {
@@ -153,6 +154,22 @@
                         position: absolute;
                         top: -2%;
                         right: 2%;
+                        animation:cloudMove01 5s infinite alternate; /*IE*/
+                        -moz-animation:cloudMove01 5s infinite alternate; /*FireFox*/
+                        -webkit-animation:cloudMove01 5s infinite alternate; /*Chrome, Safari*/
+                    }
+
+                    @keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
+                    }
+                    @-moz-keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
+                    }
+                    @-webkit-keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
                     }
 
                     .foodSeaText {
@@ -184,6 +201,7 @@
                             position: absolute;
                             top: 0;
                             left: 0;
+                            transition: width;
                         }
 
                         .draw02 {
@@ -293,6 +311,28 @@
                     display: flex;
                     flex-direction: row-reverse;
                     margin-bottom: 220px;
+
+                    .cloud02{
+                       position: absolute;
+                       left: 2%;
+                       top: 5%;
+                       animation:cloudMove02 5s infinite alternate; /*IE*/
+                       -moz-animation:cloudMove02 5s infinite alternate; /*FireFox*/
+                       -webkit-animation:cloudMove02 5s infinite alternate; /*Chrome, Safari*/
+                    }
+
+                    @keyframes cloudMove02{
+                        from {top:5%;}
+                        to {top:-25%;}
+                    }
+                    @-moz-keyframes cloudMove02{
+                        from {top:5%;}
+                        to {top:-25%;}
+                    }
+                    @-webkit-keyframes cloudMove02{
+                        from {top:5%;}
+                        to {top:-25%;}
+                    }
 
                     .LiveLandText {
                         width: 630px;
@@ -462,6 +502,7 @@
                 display: none;
                 position: fixed;
                 top: 0;
+                transform: translate(-50%, -50%);
                 background-color: rgba(0, 0, 0, .4);
                 height: 100vh;
                 width: 100%;
@@ -628,6 +669,7 @@
 
             .muntain01 {
                 width: 100%;
+                top: 0;
             }
         }
 
@@ -672,6 +714,22 @@
                         position: absolute;
                         top: -2%;
                         right: 2%;
+                        animation:cloudMove01 5s infinite alternate; /*IE*/
+                        -moz-animation:cloudMove01 5s infinite alternate; /*FireFox*/
+                        -webkit-animation:cloudMove01 5s infinite alternate; /*Chrome, Safari*/
+                    }
+
+                    @keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
+                    }
+                    @-moz-keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
+                    }
+                    @-webkit-keyframes cloudMove01{
+                        from {right:2%;}
+                        to {right:15%;}
                     }
 
                     .foodSeaText {
@@ -814,7 +872,7 @@
 
                     .cloud02{
                        position: absolute;
-                       left: 0;
+                       left: 10%;
                        top: 5%;
                     }
 
@@ -1397,9 +1455,11 @@
 
                     }
 
-                    .cloud03 {
-                        display: none;
-                    }
+                }
+                .cloud03 {
+                    position: relative;
+                    left: 5%;
+                    bottom: 2%;
                 }
 
             }
