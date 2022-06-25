@@ -1,21 +1,18 @@
-$(document).ready(function(){
-    
-    $(".registerBtn").click(function(e){
-        // alert("hello")
-        $(".member_left").hide();
-        $(".member_right").show();
-        // 停止預設行為
-        e.preventDefault();
+let login=document.getElementById('login');
+let register=document.getElementById('register');
+let form_box=document.getElementsByClassName('form-box')[0];
+let register_box=document.getElementsByClassName('register-box')[0];
+let login_box=document.getElementsByClassName('login-box')[0];
 
+register.addEventListener('click',()=>{
+    form_box.style.transform='translateX(105%)';
+    login_box.classList.add('hidden');
+    register_box.classList.remove('hidden');
+})
 
-    });
+login.addEventListener('click',()=>{
+    form_box.style.transform='translateX(-5%)';
+    register_box.classList.add('hidden');
+    login_box.classList.remove('hidden');
+})
 
-    $(".loginBtn").click(function(e){
-        // alert("hello")
-        $(".member_right").hide();
-        $(".member_left").show();
-        // 停止預設行為
-        e.preventDefault();
-    });
-
-});
