@@ -158,6 +158,17 @@ function imgSwitch(){
 
   });
 
+// 登入登出切換
+$(function(){
+
+  $("#hamL").click(function(){
+    // alert("tt");
+    // 要改到login.js那裡判斷
+  })
+
+})
+
+
 // $(function(){
   
 //     // 按鈕狀態的切換

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/sea.css">
     @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <title>海遊</title>
 </head>
 <body class="sea">
@@ -22,8 +23,9 @@
                 <!-- 點點起始 -->
                 <div class="begin"></div>
             </section>
+            <button id="changeButton">臨時測試</button>
             <!-- 海遊活動區塊 -->
-            <section class="activity">
+            <section class="activity" id="seaActivity">
 
                 <!-- RWD專用起始線 -->
                 <img class="line0" src="img/sea/line0.png" alt="">
@@ -60,22 +62,23 @@
                 <!-- 魚群 -->
                 <img class="fish" src="img/sea/fish.png" alt="">
 
+                
                 <!-- 麵包屑 -->
                 <p class="bread">
                     <a href="index.html">首頁</a>/ 
                     <a href="index.html">遊</a>/
                     海遊
                 </p>
+                <!-- <button id="changeButton" @click="testChange">臨時測試</button> -->
 
                 <!-- 活動1:潛水 -->
-                <div class="wrapper1">
+                <div class="wrapper1" v-if="activity1">
                     <div class="activity1_pic">
-                        <img class="pic1" src="img/sea/pic1.png" alt="">
+                        <img class="pic1" :src="activity1[7]" alt="">
                     </div>
                     <article class="activity1">
-                        <h3>潛水</h3>
-                        <p>風格迥異的日、月島都有潛水點，分別在日島西邊小鹿島以及月島東南邊沙灘；擁有令人驚豔的透明度、色彩斑斕的珊瑚礁，幸運的話還能與海龜共遊，由專業教練帶領讓您一來就愛上。
-                        </p>
+                        <h3>{{activity1[1]}}</h3>
+                        <p>{{activity1[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -105,12 +108,10 @@
 
 
                 <!-- 活動2:遊艇 -->
-                <div class="wrapper2">
+                <div class="wrapper2" v-if="activity2">
                     <article class="activity2">
-                        <h3>遊艇</h3>
-                        <p>平價與豪華絕不衝突！<br>
-                            遊艇編號XW001，110呎的船身，超群穩定性、豪華舒適座椅與席夢思床的夢幻組合搭配海上全景視野，美景盡收眼底。
-                        </p>
+                        <h3>{{activity2[1]}}</h3>
+                        <p>{{activity2[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -137,18 +138,17 @@
                         </div>
                     </article>
                     <div class="activity2_pic">
-                        <img class="pic2" src="img/sea/pic2.png" alt="">
+                        <img class="pic2" :src="activity2[7]" alt="">
                     </div>
                 </div>
                 <!-- 活動3:出海釣魚 -->
-                <div class="wrapper3">
+                <div class="wrapper3" v-if="activity3">
                     <div class="activity3_pic">
-                        <img class="pic3"src="img/sea/pic3.png" alt="">
+                        <img class="pic3" :src="activity3[7]" alt="">
                     </div>
                     <article class="activity3">
-                        <h3>出海釣魚</h3>
-                        <p>在明島釣魚不只是單一選擇，您可以乘上XW001距離月島東邊30公里附近，在那裡有機會釣到壽司四大天王的冰見寒鰤，或是日島周遭有午魚現蹤，大自然的餽贈等您來收穫。
-                        </p>
+                        <h3>{{activity3[1]}}</h3>
+                        <p>{{activity3[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -176,11 +176,10 @@
                     </article>
                 </div>
                 <!-- 活動4:浮潛 -->
-                <div class="wrapper4">
+                <div class="wrapper4" v-if="activity4">
                     <article class="activity4">
-                        <h3>浮潛</h3>
-                        <p>在日島，浮潛絕對是熱門活動，豐富的海洋生態，讓潛水愛好者沉浸在繽紛燦爛的海底世界，享受大自然的海底奇觀
-                        </p>
+                        <h3>{{activity4[1]}}</h3>
+                        <p>{{activity4[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -207,18 +206,17 @@
                         </div>
                     </article>
                     <div class="activity4_pic">
-                        <img class="pic4" src="img/sea/pic4.png" alt="">
+                        <img class="pic4" :src="activity4[7]" alt="">
                     </div>
                 </div>
                 <!-- 活動5:海岸SUP -->
-                <div class="wrapper5">
+                <div class="wrapper5" v-if="activity5">
                     <div class="activity5_pic">
-                        <img class="pic5" src="img/sea/pic5.png" alt="">
+                        <img class="pic5" :src="activity5[7]" alt="">
                     </div>
                     <article class="activity5">
-                        <h3>海岸SUP</h3>
-                        <p>划SUP是非常好的運動，能使用到的平時不太鍛鍊到的肌肉，同時也是與親朋好友遊玩的好選擇。
-                        </p>
+                        <h3>{{activity5[1]}}</h3>
+                        <p>{{activity5[2]}}</p>
                         <!-- 評論(上) -->
                         <div class="comment_top">
                             <p>
@@ -251,17 +249,17 @@
             </section>
 
         <!-- 生態活動區塊 -->
-        <section class="echotitle">
+        <section id="echoTitle">
             <div class="wrapper1">
                 <h3>生態活動</h3>
                 <p>實際觀察體驗與海洋生物的零距離接觸，讓您更親近海洋，進而了解海洋生態保育之觀念。</p>
             </div>
 
             <!-- 生態活動1(綠蠵龜) -->
-            <div class="wrapper2">
+            <div class="wrapper2" v-if="echo1">
                 <article class="echo1">
-                    <h5>綠蠵龜回岸產卵</h5>
-                    <p>日島海岸是綠蠵龜產卵的家鄉，保持距離守候佳音。</p>
+                    <h5>{{echo1[1]}}</h5>
+                    <p>{{echo1[2]}}</p>
                     <p>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -276,10 +274,10 @@
             </div>
 
             <!-- 生態活動2(珊瑚) -->
-            <div class="wrapper3">
+            <div class="wrapper3" v-if="echo2">
                 <article class="echo2">
-                    <h5>珊瑚種植復育</h5>
-                    <p>色彩斑斕的珊瑚需要你我的守護，歡迎一起參與復育活動。</p>
+                    <h5>{{echo2[1]}}</h5>
+                    <p>{{echo2[2]}}</p>
                     <p>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -297,7 +295,7 @@
         <!-- 照片區 -->
         <section class="photo">
             <div class="wrapper1">
-                <img class="ig ig1-1" src="img/sea/ig1-1.png" alt="">
+                <img class="ig ig1-1" src="img/sea/ig1-1.jpg" alt="">
                 <!-- <img class="ig ig1-1" src="img/sea/pic1.png" alt=""> -->
                 <img class="ig ig1-2" src="img/sea/ig1-2.png" alt="">
                 <img class="ig ig1-3" src="img/sea/ig1-3.png" alt="">
@@ -333,5 +331,6 @@
     
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
+<script src="./js/sea.js"></script>
 </body>
 </html>

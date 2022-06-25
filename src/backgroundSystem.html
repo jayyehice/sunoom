@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>backEndSystem</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/backgroundSystem.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/vue.js"></script>
+    <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/backgroundSystem.css">
 </head>
 <body class="backgroundSystem">
     <header>
@@ -18,51 +19,49 @@
                 <div class="logo col-2">
                 <img src="./img/backsystem/sunoomLOGO_white 2.svg" alt="">
                 </div>
-                <div class="col-6"></div>
+                <div class="col-7"></div>
+                
                 <i class="document fa-regular fa-file-lines col-1"></i>
                 <i class="mail fa-regular fa-envelope col-1"></i>
                 <button class="out col-1">登出</button>
             </div>
         </div>
     </header>
-    <article>
-        <section>
-           <!-- 表單區域 -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="backwrapper"  id="app">
-                         <!-- 左Nav區塊 -->
-                        <nav class="col-2" >
-                            <div class="leftNav">
-                                <div class="admin">
-                                    <img src="./img/backsystem/Rectangle418.png" alt="">
-                                    <div class="user">
-                                        <h5>LongBoy<br>
-                                            <h6>Admin</h6>
-                                        </h5>
-                                    </div>
+    <main>
+
+        <!-- 表單區域 -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="backwrapper"  id="app">
+                        <!-- 左Nav區塊 -->
+                    <nav class="col-2" >
+                        <div class="leftNav">
+                            <div class="admin">
+                                <img src="./img/backsystem/Rectangle418.png" alt="">
+                                <div class="user">
+                                    <h5>LongBoy<br>
+                                        <h6>Admin</h6>
+                                    </h5>
                                 </div>
-                                <a href="">總覽</a>
-                                <a id="orderManagement">訂單管理</a>
-                                <a id="eventManagement">活動管理</a>
-                                <a id="StoreManagement">店家管理</a>
-                                <a id="productManagement">商品管理</a>
-                                <a id="communityMangement">討論區管理</a>
-                                <a id="CouponMangement">優惠卷管理</a>
-                                <a id="MemberMangement" @click="countent='membermangement'">會員管理</a>
                             </div>
-                        </nav>
-                        <!-- 間隔區域 -->
-                        <div class="col-1"></div>
-                        <!-- 表單區域 -->
-                        <div class="table col">
-                            <component :is="countent" :list="member_list"></component>
+                            <a id="overview" data-type="overview" @click="navClick">總覽</a>
+                            <a id="order" data-type="order_table" @click="navClick">訂單管理</a>
+                            <a id="activity" data-type="activity" @click="navClick">活動管理</a>
+                            <a id="shop" data-type="shop" @click="navClick">店家管理</a>
+                            <a id="live" data-type="live" @click="navClick">住宿管理</a>
+                            <a id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
+                            <a id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
+                            <a id="member" data-type="member" @click="navClick">會員管理</a>
                         </div>
-                    </div>
+                    </nav>
+                    
+                    <component :is="content" :list="render_list"></component>
+                        
                 </div>
             </div>
-        </section>
-    </article>
+        </div>
+
+    </main>
     <div class="formBody_00">
         <h2>訂單資訊</h2>
         <form class="Form col" action="">
@@ -222,8 +221,16 @@
             <button class="b3 col-2">停權該會員</button>
         </div>
      </div>
-    <footer></footer>
+    <!-- <footer></footer> -->
+    <script src="./js/backgroundSystem_01_overview.js"></script>
+    <script src="./js/backgroundSystem_02_order.js"></script>
+    <script src="./js/backgroundSystem_03_activity.js"></script>
+    <script src="./js/backgroundSystem_04_shop.js"></script>
+    <script src="./js/backgroundSystem_05_live.js"></script>
+    <script src="./js/backgroundSystem_06_discuss.js"></script>
+    <script src="./js/backgroundSystem_07_discount.js"></script>
+    <script src="./js/backgroundSystem_08_member.js"></script>
     <script src="./js/backgroundSysem.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>

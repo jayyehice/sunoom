@@ -88,4 +88,108 @@ window.addEventListener("load", e => {
                 }
         });
     }
+
+
+    let vm = new Vue({
+        el:'#land_tour',
+    
+        data:{     //變數放這裡
+            land_tour_list: [],
+            // ig_list:[],
+        },
+        method:{},
+        compute:{},
+        watch:{},
+    
+        //fetch
+        created(){
+            let url = './php/land_tour.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => this.land_tour_list = text);
+    
+            // const url_ig = './php/land_tour_ig.php';
+            // fetch(url_ig)
+            //     .then(response => response.json())
+            //     .then(text => console.log(text));
+            //     // console.log(this.land_tour)
+        },
+    
+        // beforeMount() {},
+    
+        mounted(){},
+    
+        // beforeUpdate() {},
+    
+        // updated(){
+        //     // land_tour();
+        // },
+    
+        // beforeDestroy() {},  
+        destroyed(){},
+    })
+
+
+
+
+    new Vue({
+        el:'#ig',
+    
+        data:{     //變數放這裡
+            ig_list: [],
+        },
+        method:{},
+        compute:{},
+        watch:{},
+    
+        //fetch
+        created(){
+            let url = './php/land_tour_ig.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => this.ig_list = text);
+    
+        },
+    
+        // beforeMount() {},
+    
+        mounted(){},
+    
+        // beforeUpdate() {},
+    
+        updated(){
+            // land_tour();
+            let ig_img = document.getElementsByClassName("ig_img");
+            let ig_pop_up = document.getElementById("ig_pop_up");
+            let ig_pop_up_img = document.getElementById("ig_pop_up_img");
+            let ig_pop_up_content = document.getElementById("ig_pop_up_content");
+
+            for(let i=0; i<ig_img.length; i++){
+                ig_img[i].addEventListener("click", function(){
+                    console.log(this.getAttribute("src"));
+                    ig_pop_up.setAttribute("style", "display:block;");
+                    ig_pop_up_img.src = this.getAttribute("src");
+                });
+            }
+
+            ig_pop_up.addEventListener("click", function(){
+                this.removeAttribute("style");
+            });
+
+            ig_pop_up_content.addEventListener("click", function(e){
+                e.stopPropagation();
+            });
+        },
+    
+        // beforeDestroy() {},
+    
+    
+        destroyed(){},
+    })
+    
 })
+
+
+
+
+
