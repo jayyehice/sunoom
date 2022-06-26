@@ -28,5 +28,7 @@ $statement->execute();
 
 // echo $last_name;
 // $pdo->exec($sql);
+
+header("Location:../new-login.html");
 ?>
 
