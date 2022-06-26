@@ -1,90 +1,36 @@
 
 
-
-Vue.component('membermangement',{
-    props:['list'],
-    template:
-    `<div>
-            <div class="listTitle col-10">
-            <!-- 表單抬頭 -->
-            <div class="Title">
-                <h3>會員管理</h3>
-                <input type="text" name="" id="">
-                <button>搜尋</button>
-            </div>
-            <!-- 表單細分類 -->
-            <div class="checkList">
-                <h4 class="col-2">正常</h4>
-                <h4 class="col-2">已停權</h4>
-                <div class="addNew col-2 offset-5">
-                <i class="fa-solid fa-circle-plus"></i>
-                <span>新增</span>
-            </div>
-            </div>
-            <!-- 表身 -->
-            <div class="tableBox container-fluid">
-                <div class="row">
-                    <ul class="tableTitle">
-                        <li class="col">編號</li>
-                        <li class="col">姓名</li>
-                        <li class="col-2">信箱</li>
-                        <li class="col">違規次數</li>
-                        <li class="col">會員狀態</li>
-                        <li class="col"></li>
-                    </ul>
-                    <ul class="tableList" v-for="member in list">
-                        <li class="col">{{member[0]}}</li>
-                        <li class="col">{{member[1]}}</li>
-                        <li class="col-2">{{member[2]}}</li>
-                        <li class="col">{{member[7]}}</li>
-                        <li class="col">{{member[6]}}</li>
-                        <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-                    </ul>
-                    <ul class="tableList">
-                        <li class="col">1</li>
-                        <li class="col">隆哥</li>
-                        <li class="col">xxxx@gmail.com</li>
-                        <li class="col">0</li>
-                        <li class="col">一般會員</li>
-                        <li class="col"><button onclick="showEdit(6)">編輯/查看</button></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <ul class="pageList col-2 offset-7">
-                    <li class=""><</li>
-                    <li class="nowPage">1</li>
-                    <li>></li>
-                </ul>
-            </div>
-        </div> 
-    </div>`
-    ,
-})
-
 let vm = new Vue({  // vue instance (實例)
     el: '#app',
     data: { 
-        countent:'membermangement',
-        member_list:[],
         content:'',
+        data_list:[],
+        render_list:[],
     },
     methods: {
         navClick(e){
-            // console.log('object');
-            // this.content='membermangement'; 
-            // console.log(e.target.closest('nav').querySelectorAll('a'));
+            let nav_name = e.target.dataset.type;
+            this.content = nav_name;
             $(e.target.closest('nav')).find('a.on').removeClass('on');
             e.target.classList.add("on");
+
+            if(nav_name === 'discuss'){
+                let temp = {};
+                temp['article']=this.data_list['article'];
+                temp['comment']=this.data_list['comment'];
+                this.render_list = temp;
+            }else{
+                this.render_list = this.data_list[nav_name];
+            }
         },
+        
     },
     created() {
         const url = './php/backgroundSystem.php';
         fetch(url)
             .then(response => response.json())
-            .then(member => this.member_list = member);
+            // .then(text => console.log(text))
+            .then(text => this.data_list = text)
     },
               
 });

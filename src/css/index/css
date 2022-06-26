@@ -69,7 +69,6 @@
 }
 .index main .parallax .muntain01 {
   width: 100%;
-  top: 0;
 }
 .index main .parallax img {
   position: absolute;
@@ -115,36 +114,6 @@
   position: absolute;
   top: -2%;
   right: 2%;
-  animation: cloudMove01 5s infinite alternate;
-  /*IE*/
-  -moz-animation: cloudMove01 5s infinite alternate;
-  /*FireFox*/
-  -webkit-animation: cloudMove01 5s infinite alternate;
-  /*Chrome, Safari*/
-}
-@keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-moz-keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-webkit-keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
 }
 .index main .category .wrapper .FoodSea .foodSeaText {
   width: 630px;
@@ -168,12 +137,11 @@
 }
 .index main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #0C1244;
-  width: 0%;
+  width: 65%;
   height: 5px;
   position: absolute;
   top: 0;
   left: 0;
-  transition: width;
 }
 .index main .category .wrapper .FoodSea .foodSeaText .draw02 {
   background-color: #0C1244;
@@ -263,41 +231,6 @@
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 220px;
-}
-.index main .category .wrapper .LiveLand .cloud02 {
-  position: absolute;
-  left: 2%;
-  top: 5%;
-  animation: cloudMove02 5s infinite alternate;
-  /*IE*/
-  -moz-animation: cloudMove02 5s infinite alternate;
-  /*FireFox*/
-  -webkit-animation: cloudMove02 5s infinite alternate;
-  /*Chrome, Safari*/
-}
-@keyframes cloudMove02 {
-  from {
-    top: 5%;
-  }
-  to {
-    top: -25%;
-  }
-}
-@-moz-keyframes cloudMove02 {
-  from {
-    top: 5%;
-  }
-  to {
-    top: -25%;
-  }
-}
-@-webkit-keyframes cloudMove02 {
-  from {
-    top: 5%;
-  }
-  to {
-    top: -25%;
-  }
 }
 .index main .category .wrapper .LiveLand .LiveLandText {
   width: 630px;
@@ -563,7 +496,6 @@
 }
 .index_moon main .parallax .muntain01 {
   width: 100%;
-  top: 0;
 }
 .index_moon main .news {
   display: flex;
@@ -600,36 +532,6 @@
   position: absolute;
   top: -2%;
   right: 2%;
-  animation: cloudMove01 5s infinite alternate;
-  /*IE*/
-  -moz-animation: cloudMove01 5s infinite alternate;
-  /*FireFox*/
-  -webkit-animation: cloudMove01 5s infinite alternate;
-  /*Chrome, Safari*/
-}
-@keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-moz-keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-webkit-keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText {
   width: 630px;
@@ -653,7 +555,7 @@
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #F5F0DD;
-  width: 0%;
+  width: 65%;
   height: 5px;
   position: absolute;
   top: 0;
@@ -750,7 +652,7 @@
 }
 .index_moon main .category .wrapper .LiveLand .cloud02 {
   position: absolute;
-  left: 10%;
+  left: 0;
   top: 5%;
 }
 .index_moon main .category .wrapper .LiveLand .LiveLandText {
@@ -1175,10 +1077,8 @@
   .index main .instagram .wrapper .instagramPhoto .ig_img02 {
     width: 142px;
   }
-  .index main .instagram .cloud03 {
-    position: relative;
-    left: 5%;
-    bottom: 2%;
+  .index main .instagram .wrapper .cloud03 {
+    display: none;
   }
   .index main .traffic .wrapper {
     width: 100%;
@@ -1188,4 +1088,4 @@
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=css.map */

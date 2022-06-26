@@ -8,6 +8,12 @@
   top: 0;
 }
 
+.ChooseMove {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+}
+
 .tripChoose {
   background-color: #F5F0DD;
   color: #0C1244;
@@ -151,9 +157,14 @@
   flex-wrap: wrap;
 }
 .tripChoose .datePickerBox .pickerBox .daysbutton {
+  display: inline-block;
   width: 130px;
   margin: 5px;
   font-size: 16px;
+  transition: all 2s;
+}
+.tripChoose .datePickerBox .pickerBox .daysbutton .SendChoose {
+  display: none;
 }
 .tripChoose .datePickerBox .pickerBox .daysbutton img {
   width: 90px;
