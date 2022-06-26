@@ -8,6 +8,7 @@
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/vue.js"></script>
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/backgroundSystem.css">
@@ -55,7 +56,11 @@
                         </div>
                     </nav>
                     
+                    <!-- vue 組件 -->
                     <component :is="content" :list="render_list"></component>
+
+                    
+
                         
                 </div>
             </div>
@@ -222,6 +227,7 @@
         </div>
      </div>
     <!-- <footer></footer> -->
+
     <script src="./js/backgroundSystem_01_overview.js"></script>
     <script src="./js/backgroundSystem_02_order.js"></script>
     <script src="./js/backgroundSystem_03_activity.js"></script>
