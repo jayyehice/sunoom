@@ -114,6 +114,12 @@ main .backwrapper nav .leftNav a.on {
   background-color: #F5F0DD;
   color: #0C1244;
 }
+main .backwrapper .pieChart {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  flex-grow: 1;
+}
 main .listTitle {
   padding: 30px 50px;
   box-sizing: border-box;

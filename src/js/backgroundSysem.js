@@ -3,7 +3,7 @@
 let vm = new Vue({  // vue instance (實例)
     el: '#app',
     data: { 
-        content:'',
+        content:'overview',
         data_list:[],
         render_list:[],
     },
@@ -32,6 +32,7 @@ let vm = new Vue({  // vue instance (實例)
             // .then(text => console.log(text))
             .then(text => this.data_list = text)
     },
+    
               
 });
 

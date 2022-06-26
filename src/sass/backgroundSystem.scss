@@ -131,6 +131,15 @@ main{
                 }
             }
         }
+
+        .pieChart{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            flex-grow: 1;
+
+
+        }
     }
 
     .listTitle{
