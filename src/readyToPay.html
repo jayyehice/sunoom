@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
 @@include('./layout/header_footer_css_link.html')
 </head>
@@ -330,7 +331,7 @@
             <button id="FinishPage">完成結帳</button> -->
             
             <!-- 改成form表單 -->
-            <form action="./php/pay.php" class="payBlock">
+            <form action="./php/pay.php" class="payBlock" method="post">
                 <h4>PayMent</h4>
                 <div class="mailAndPhone">
                     <div class="email">
@@ -394,8 +395,9 @@
                     </div>
                     <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
                 </div>
-                <!-- <button id="FinishPage">完成結帳</button> -->
-                <input id="FinishPage" type="button" value="完成結帳">
+                <button id="FinishPage" type="submit">完成結帳</button>
+                <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
+
             </form>
         
         </section>

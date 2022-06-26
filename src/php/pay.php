@@ -5,7 +5,7 @@
     
     //載入SDK(路徑可依系統規劃自行調整)
     // include('ECPay.Payment.Integration.php');
-    include('../AioSDK/sdk/ECPay.Payment.Integration.php');
+    include("../AioSDK/sdk/ECPay.Payment.Integration.php");
 
     try {
         
