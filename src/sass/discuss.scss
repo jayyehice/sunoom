@@ -11,6 +11,13 @@
         width: 400px;
     }
 
+    header .headerCenter {
+      // position: absolute;
+      // z-index: 100;
+      // left: 50%;
+      // transform: translateX(-50%);
+    }
+
     
     .wrapper{
         margin: 0 auto;
@@ -271,7 +278,8 @@
 
             /* --------------------------文章列表區域-------------------------- */
             hr{
-                width: 1080px;
+              margin: 50px 0 ;
+              width: 1080px;
             }
 
             /* 文章列表上半部 */
@@ -279,7 +287,7 @@
                 margin-bottom: 50px;
                 &>h4{
                     line-height: 63px;
-                    margin-bottom: 90px;
+                    margin-bottom: 30px;
                 }
             }
             
@@ -292,24 +300,33 @@
             .article .article_type ul{
                 /* border:1px solid red; */
                 display: flex;
+
+                li{
+                    border:1px solid $moon_color;
+                    width:180px;
+                    height:100px;
+                    border-radius: 15px 15px 0px 0px;
+                    font-size: 24px;
+                    cursor: pointer;
+                    a{
+                        text-align: center;
+                        line-height: 100px;
+                        color:$moon_color;
+                        display: block;
+                        text-decoration: none;
+                    }
+                }
+
+                li.on{
+                  background-color: $moon_color;
+                  a{
+                    color: $sun_color;
+
+                  }
+                }
             }
             
-            .article .article_type ul li{
-                border:1px solid $moon_color;
-                width:180px;
-                height:100px;
-                border-radius: 15px 15px 0px 0px;
-                font-size: 24px;
-                cursor: pointer;
-            }
             
-            .article .article_type ul li a{
-                text-align: center;
-                line-height: 100px;
-                color:$moon_color;
-                display: block;
-                text-decoration: none;
-            }
             
             .article .article_type .li-5{
                 margin-left: auto;
@@ -421,9 +438,12 @@
             .article_list .img_1{
                 /* border:1px solid red; */
                 width:161px;
-                height:97px;
+                height:100px;
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                
+                overflow: hidden;
 
                 // margin-left:36px;
                 // margin-top: 30px;
@@ -431,7 +451,9 @@
             }
             
             .article_list .img_1 img{
-                width:100%;
+                min-width:100%;
+                min-height: 100%;
+                // max-height: 100px;
                 // height:97px;
                 /* display:none; */
             }

@@ -101,11 +101,11 @@
                     </div>
                 </div>
             </div>
-            <div class="more">
+            <!-- <div class="more">
                 <a href="#">
                     <p>Read More</p>
                 </a>
-            </div>
+            </div> -->
 
 
             <hr>
@@ -115,7 +115,7 @@
                 <h4>文章列表</h4>
                 <div class="article_type">
                     <ul class="tab-title">
-                        <li id="active" class="active" data-category="all" @click="render_li">
+                        <li id="active" class="active on" data-category="all" @click="render_li">
                             <a>全部</a>
                         </li>
                         <li id="active2" class="active" data-category="food" @click="render_li">
@@ -188,11 +188,11 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="more">
+                    <!-- <div class="more">
                         <a href="#">
                             <p>Read More</p>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -324,7 +324,7 @@
                     <textarea name="article_content" id="" cols="30" rows="10" class="write2"></textarea>
                 </div>
                 <div class="form_region5">
-                    <p id="new_article_btn">發表文章</p>
+                    <p id="new_article_btn" @click="newArticleBtn">發表文章</p>
                     <input type="text" id="authorID" name="authorID" value="1">
                     <input id="new_article_submit_btn" type="submit" value="發表文章" class="button">
                 </div>

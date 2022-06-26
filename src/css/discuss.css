@@ -208,6 +208,7 @@
   color: #F5F0DD;
 }
 .discuss .wrapper main hr {
+  margin: 50px 0;
   width: 1080px;
 }
 .discuss .wrapper main .article {
@@ -215,7 +216,7 @@
 }
 .discuss .wrapper main .article > h4 {
   line-height: 63px;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
 }
 .discuss .wrapper main .article .article_type {
   width: 1080px;
@@ -239,6 +240,12 @@
   color: #0C1244;
   display: block;
   text-decoration: none;
+}
+.discuss .wrapper main .article .article_type ul li.on {
+  background-color: #0C1244;
+}
+.discuss .wrapper main .article .article_type ul li.on a {
+  color: #F5F0DD;
 }
 .discuss .wrapper main .article .article_type .li-5 {
   margin-left: auto;
@@ -307,13 +314,16 @@
 .discuss .wrapper main .article_list .img_1 {
   /* border:1px solid red; */
   width: 161px;
-  height: 97px;
+  height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
   /* display:none; */
 }
 .discuss .wrapper main .article_list .img_1 img {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   /* display:none; */
 }
 .discuss .wrapper main .article_list .content {
