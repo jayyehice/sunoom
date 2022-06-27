@@ -32,6 +32,7 @@
     position: fixed;
     display: none;
     top: 0;
+    z-index: 2;
 }
 
 .ChooseMove{
@@ -71,6 +72,7 @@
         font-size: 16px;
         border-radius: 22px;
         opacity: 0;
+        z-index: -999;
         .fa-regular{
             margin-left: 10px;
         }
@@ -102,6 +104,7 @@
             text-align: center;
             margin: 50px 0;
         }
+
     }
     .shoppingProcess{
         width: 1180px;
@@ -134,50 +137,65 @@
     }
     //日期區塊
     .datePickerBox{
-        width:980px;
-        height: auto;
-        margin: 50px auto;
-        // border: 1px solid $moon_color;
-        position: relative;
-
-        .dateTitle{
-            p{
-                margin: 20px;
-                
-            }
-            i{
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                right: 20px;
-                top: 20px;
-                
-            }
-        }
-        .pickerBox{
+        width:1280px;
+        margin: 0px auto;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        .daysbutton{
+            display: inline-block;
+            width: 160px;
+            margin: 10px;
+            font-size: 16px;
+            transition: all 2s;
             text-align: center;
-            width: 100%;
-            // border-top: 1px solid $moon_color;
             display: flex;
-            flex-wrap: wrap;
-            .daysbutton{
-                display: inline-block;
-                width: 130px;
-                margin: 5px;
-                font-size: 16px;
-                transition: all 2s;
-                .SendChoose{
-                    display: none;
-                }
-                img{
-                    width: 90px;
-                }
-                select{
-                    width: 115px;
-                }
-                
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            border: 1px solid $moon_color;
+            background-color: $sun_color;
+            .SendChoose{
+                width: 160px;
+                height: 30px;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                font-size: 16rem;
+                cursor: pointer;
             }
-        }
+            select{
+                width: 160px;
+                height: 30px;
+                font-size: 16rem;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                cursor: pointer;
+            }
+            .DateAndWeek{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                h3{
+                    margin: 0px;
+                }
+                .weekCircular{
+                    width: 30px;
+                    height:30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                    border-radius: 999em;
+                    border: 1px solid $moon_color;
+                    margin-right: 5px;
+                }
+            }
+            p{
+                letter-spacing: 4px;
+                cursor: pointer;
+            }
+
+        } 
 
     }
     .ListSmall{
@@ -194,6 +212,7 @@
         top: 10%;
         font-size: 20px;
         text-align: center;
+        z-index: 3;
         cursor: pointer;
         .circle{
             width: 20px;
@@ -217,7 +236,7 @@
         top: 0%;
         position: fixed;
         display: none;
-        z-index: 1;
+        z-index: 3;
         overflow-y: auto;
         span{
             font-weight: bolder;
@@ -318,6 +337,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                line-height: 25px;
                 span{
                     font-size: 16px;
                 }
@@ -327,14 +347,20 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                line-height: 20.5px;
+                line-height: 0px;
                 text-align: center;
+                line-height: 25px;
                 span{
                     font-size: 20px;
                     color: #FFBF44;
+                    // padding-top: 8px;
+                }
+                select{
+                    text-align: center;
                 }
                 #couponPrice{
                     color: #FF4444;
+                    
                 }
             }
         }
@@ -354,6 +380,7 @@
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
@@ -426,7 +453,7 @@
             #addItineraryM{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -487,7 +514,7 @@
             #addItineraryN{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -549,8 +576,7 @@
         #addItineraryE{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
-            cursor: not-allowed;
+            opacity: 0;
             transition: all 1s;
         }
     }
@@ -634,7 +660,7 @@
             #addFoodM{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -694,7 +720,7 @@
             #addFoodN{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -756,7 +782,7 @@
         #addFoodE{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
+            opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
         }
@@ -841,7 +867,7 @@
             #addcabin{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -906,7 +932,7 @@
             #addCamping{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -973,7 +999,7 @@
         #addVilla{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
+            opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
         }
