@@ -114,11 +114,72 @@ main .backwrapper nav .leftNav a.on {
   background-color: #F5F0DD;
   color: #0C1244;
 }
-main .backwrapper .pieChart {
+main .backwrapper .overview {
+  padding: 30px;
+}
+main .backwrapper .overview .number {
+  display: flex;
+}
+main .backwrapper .overview .number .analysis {
+  box-sizing: border-box;
+}
+main .backwrapper .overview .number .analysis > h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .number .analysis > h1 {
+  text-align: center;
+  color: red;
+  font-size: 64rem;
+  margin: 40rem 0;
+}
+main .backwrapper .overview .number .analysis .wrapper {
+  width: 65%;
+  margin: 0 auto;
+}
+main .backwrapper .overview .number .analysis .wrapper .week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .backwrapper .overview .number .analysis .wrapper .week .count {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .backwrapper .overview .number .analysis .wrapper .week .count h5:last-child {
+  margin-left: 10px;
+}
+main .backwrapper .overview .number .bar-chart {
+  border-left: 2px solid #0C1244;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+main .backwrapper .overview .number .bar-chart > h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .number .bar-chart .card-body {
+  padding: 20px;
+  margin-top: 10px;
+}
+main .backwrapper .overview .border-hr {
+  width: 100%;
+  height: 1px;
+  background-color: #0C1244;
+  margin: 30px 0;
+}
+main .backwrapper .overview .pie-chart-container {
   display: flex;
   justify-content: space-between;
   margin: 0;
   flex-grow: 1;
+}
+main .backwrapper .overview .pie-chart-container h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .pie-chart-container .pieChart {
+  border: 1px solid #000;
+  box-sizing: border-box;
 }
 main .listTitle {
   padding: 30px 50px;
