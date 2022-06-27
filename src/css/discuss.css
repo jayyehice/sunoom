@@ -3,6 +3,7 @@
 .discuss {
   font-family: Noto Sans CJK;
   background-color: #F5F0DD;
+  color: #0C1244;
   margin: 0 auto;
   /* 彈窗部分的CSS */
   /* 討論區-彈窗-發表新文章 */
@@ -241,6 +242,12 @@
   display: block;
   text-decoration: none;
 }
+.discuss .wrapper main .article .article_type ul li:hover {
+  background-color: #0C1244;
+}
+.discuss .wrapper main .article .article_type ul li:hover a {
+  color: #F5F0DD;
+}
 .discuss .wrapper main .article .article_type ul li.on {
   background-color: #0C1244;
 }
@@ -264,6 +271,8 @@
 }
 .discuss .wrapper main .article .article_type .li-5 .discussion:hover {
   cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
 }
 .discuss .wrapper main .article_list {
   border: 1px solid #0C1244;
@@ -353,21 +362,27 @@
 .discuss .wrapper main .article_list .content .icons .icon-1 {
   display: flex;
   margin-right: 630px;
+  align-items: center;
 }
 .discuss .wrapper main .article_list .content .icons .icon-1 img {
-  width: 18px;
-  height: 17;
+  height: 16px;
   margin-right: 5px;
+  border-radius: 50%;
+  border: 0.5px solid #0C1244;
 }
 .discuss .wrapper main .article_list .content .icons .icon-1 .span1 {
-  margin-top: 3px;
   font-size: 16px;
   color: #0C1244;
 }
 .discuss .wrapper main .article_list .content .icons .icon-2 {
   /* border:1px solid red; */
   display: flex;
-  margin-right: 20px;
+  align-items: center;
+}
+.discuss .wrapper main .article_list .content .icons .icon-2 svg {
+  color: #0C1244;
+  margin-right: 5px;
+  height: 16px;
 }
 .discuss .wrapper main .article_list .content .icons .icon-2 img {
   width: 18px;
@@ -375,13 +390,17 @@
   margin-right: 5px;
 }
 .discuss .wrapper main .article_list .content .icons .icon-2 .span2 {
-  margin-top: 3px;
   font-size: 16px;
   color: #0C1244;
 }
 .discuss .wrapper main .article_list .content .icons .icon-3 {
   /* border:1px solid red; */
   display: flex;
+  align-items: center;
+}
+.discuss .wrapper main .article_list .content .icons .icon-3 svg {
+  color: #0C1244;
+  margin-right: 5px;
 }
 .discuss .wrapper main .article_list .content .icons .icon-3 img {
   width: 18px;
@@ -389,7 +408,6 @@
   margin-right: 5px;
 }
 .discuss .wrapper main .article_list .content .icons .icon-3 .span3 {
-  margin-top: 3px;
   font-size: 16px;
   color: #0C1244;
 }
@@ -438,24 +456,25 @@
 .discuss .pop-up-out .pop-up .icons .icon-1 {
   display: flex;
   margin-right: 20px;
+  align-items: center;
 }
 .discuss .pop-up-out .pop-up .icons .icon-1 .span1 {
   margin-left: 5px;
-  padding-top: 5px;
   font-size: 16rem;
   letter-spacing: 3rem;
 }
 .discuss .pop-up-out .pop-up .icons .icon-2 {
   display: flex;
+  align-items: center;
 }
 .discuss .pop-up-out .pop-up .icons .icon-2 .span2 {
   margin-left: 5px;
-  padding-top: 5px;
   font-size: 16rem;
   letter-spacing: 3rem;
 }
 .discuss .pop-up-out .hr1 {
   width: 802px;
+  color: #0C1244;
 }
 .discuss .pop-up-out .pop-up .icons2 {
   /* border:1px solid red; */
@@ -464,6 +483,12 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  align-items: center;
+}
+.discuss .pop-up-out .pop-up .icons2 img {
+  height: 20px;
+  border-radius: 50%;
+  border: 0.5px solid #0C1244;
 }
 .discuss .pop-up-out .pop-up .icons2 .span3 {
   /* border:1px solid red; */
@@ -574,7 +599,7 @@
   opacity: 0;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li:first-child {
-  border-top: 1px solid black;
+  border-top: 1px solid #0C1244;
   padding-top: 20px;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li:first-child button.btn_up {
@@ -655,10 +680,15 @@
   padding: 0 10px;
   margin-left: 10px;
   background: none;
-  background-color: #faeab1;
+  background-color: #F5F0DD;
   border: 0;
   cursor: pointer;
-  border: 1px solid #eee;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
   /* border:1px solid red; */
@@ -844,6 +874,879 @@
   color: #FFBF44;
 }
 
+.discuss_moon {
+  font-family: Noto Sans CJK;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin: 0 auto;
+  /* 彈窗部分的CSS */
+  /* 討論區-彈窗-發表新文章 */
+  /* 表單部分 */
+}
+.discuss_moon footer section .wrapper {
+  width: 400px;
+}
+.discuss_moon .wrapper {
+  margin: 0 auto;
+  width: 1080px;
+  padding: 0;
+}
+.discuss_moon .wrapper main {
+  /* 麵包屑區塊的css */
+  /* 官方文章區塊 */
+  /* banner_1圖片部分 */
+  /* banner_2圖片區域 */
+  /* photo_1區域 */
+  /* photo_2區域 */
+  /* --------------------------文章列表區域-------------------------- */
+  /* 文章列表上半部 */
+  /* --------------------------文章列表下半部-------------------------- */
+  /* 以下是第一項的css */
+  /* .solid{ */
+  /* border:1px solid red; */
+  /* display: none; */
+  /* } */
+}
+.discuss_moon .wrapper main > h3 {
+  text-align: center;
+  margin-top: 100px;
+}
+.discuss_moon .wrapper main .breadcrumb {
+  /* border:1px solid red; */
+  padding: 20px 0px;
+  width: 1080px;
+  margin: 0 auto;
+}
+.discuss_moon .wrapper main .breadcrumb-list {
+  /* border:1px solid red; */
+  list-style: none;
+}
+.discuss_moon .wrapper main .breadcrumb-list > li {
+  /* border:1px solid red; */
+  display: inline-block;
+  margin-right: 10px;
+  color: #F5F0DD;
+}
+.discuss_moon .wrapper main .breadcrumb-list > li::before {
+  /* border:1px solid red; */
+  content: "/";
+  color: #F5F0DD;
+  margin-right: 12px;
+  font-size: 16px;
+}
+.discuss_moon .wrapper main .breadcrumb-list > li:first-child::before {
+  content: "";
+  margin-right: 0;
+}
+.discuss_moon .wrapper main .breadcrumb-list > li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #F5F0DD;
+}
+.discuss_moon .wrapper main .breadcrumb-list > li a:hover {
+  color: #F5F0DD;
+}
+.discuss_moon .wrapper main .official_article {
+  /* border:1px solid red; */
+  display: flex;
+  width: 100%;
+  height: 520px;
+  justify-content: space-between;
+}
+.discuss_moon .wrapper main .official_article .banner_1 {
+  /* border:1px solid red; */
+  width: calc(50% - 20px);
+  position: relative;
+}
+.discuss_moon .wrapper main .official_article .banner_1 a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.discuss_moon .wrapper main .official_article .banner_1 img {
+  height: 100%;
+  object-fit: fill;
+}
+.discuss_moon .wrapper main .official_article .banner_1 .text_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F5F0DD;
+  width: 70%;
+  text-align: center;
+}
+.discuss_moon .wrapper main .official_article .banner_1 .text_1 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss_moon .wrapper main .official_article .banner_1 .text_1 > div svg {
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .official_article .banner_1 .text_1 > div p:nth-child(2) {
+  margin-right: 25px;
+}
+.discuss_moon .wrapper main .official_article .banner_2 {
+  /* border:1px solid red; */
+  width: calc(50% - 20px);
+}
+.discuss_moon .wrapper main .official_article .banner_2 a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.discuss_moon .wrapper main .official_article .banner_2 img {
+  width: 100%;
+  object-fit: fill;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_1 {
+  /* border:1px solid red; */
+  width: 100%;
+  height: calc(50% - 20px);
+  margin-bottom: 40px;
+  position: relative;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_1 .text_2 {
+  /* border:1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F5F0DD;
+  width: 70%;
+  text-align: center;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_1 .text_2 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_1 .text_2 > div svg {
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_1 .text_2 > div p:nth-child(2) {
+  margin-right: 25px;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_2 {
+  /* border:1px solid red; */
+  width: 100%;
+  height: calc(50% - 20px);
+  position: relative;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_2 .text_3 {
+  /* border:1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F5F0DD;
+  width: 70%;
+  text-align: center;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_2 .text_3 > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_2 .text_3 > div svg {
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .official_article .banner_2 .photo_2 .text_3 > div p:nth-child(2) {
+  margin-right: 25px;
+}
+.discuss_moon .wrapper main .more {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-bottom: 50px;
+  width: 140px;
+}
+.discuss_moon .wrapper main .more a {
+  border: 1px solid #F5F0DD;
+  text-decoration: none;
+  color: #F5F0DD;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+.discuss_moon .wrapper main .more a p {
+  width: 140px;
+  text-align: center;
+  line-height: 50px;
+}
+.discuss_moon .wrapper main .more a:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.discuss_moon .wrapper main hr {
+  margin: 50px 0;
+  width: 1080px;
+}
+.discuss_moon .wrapper main .article {
+  margin-bottom: 50px;
+}
+.discuss_moon .wrapper main .article > h4 {
+  line-height: 63px;
+  margin-bottom: 30px;
+}
+.discuss_moon .wrapper main .article .article_type {
+  width: 1080px;
+  display: flex;
+}
+.discuss_moon .wrapper main .article .article_type ul {
+  /* border:1px solid red; */
+  display: flex;
+}
+.discuss_moon .wrapper main .article .article_type ul li {
+  border: 1px solid #F5F0DD;
+  width: 180px;
+  height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.discuss_moon .wrapper main .article .article_type ul li a {
+  text-align: center;
+  line-height: 100px;
+  color: #F5F0DD;
+  display: block;
+  text-decoration: none;
+}
+.discuss_moon .wrapper main .article .article_type ul li:hover {
+  background-color: #F5F0DD;
+}
+.discuss_moon .wrapper main .article .article_type ul li:hover a {
+  color: #0C1244;
+}
+.discuss_moon .wrapper main .article .article_type ul li.on {
+  background-color: #F5F0DD;
+}
+.discuss_moon .wrapper main .article .article_type ul li.on a {
+  color: #0C1244;
+}
+.discuss_moon .wrapper main .article .article_type .li-5 {
+  margin-left: auto;
+}
+.discuss_moon .wrapper main .article .article_type .li-5 .discussion {
+  border: 1px solid #F5F0DD;
+  width: 180px;
+  height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discuss_moon .wrapper main .article .article_type .li-5 .discussion h4 {
+  margin-left: 10px;
+}
+.discuss_moon .wrapper main .article .article_type .li-5 .discussion:hover {
+  cursor: pointer;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.discuss_moon .wrapper main .article_list {
+  border: 1px solid #F5F0DD;
+  width: 1080px;
+  box-sizing: border-box;
+}
+.discuss_moon .wrapper main .article_list ul li {
+  border-bottom: 1px solid #F5F0DD;
+}
+.discuss_moon .wrapper main .article_list ul li:last-child {
+  border-bottom: 0px;
+}
+.discuss_moon .wrapper main .article_list .more {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-bottom: 25px;
+  width: 140px;
+}
+.discuss_moon .wrapper main .article_list .more a {
+  border: 1px solid #F5F0DD;
+  text-decoration: none;
+  color: #F5F0DD;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+.discuss_moon .wrapper main .article_list .more a p {
+  width: 140px;
+  text-align: center;
+  line-height: 50px;
+}
+.discuss_moon .wrapper main .article_list .more a:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.discuss_moon .wrapper main .article_text .rwd_title {
+  display: none;
+}
+.discuss_moon .wrapper main .article_text a {
+  display: flex;
+  text-decoration: none;
+  padding: 15px 0;
+  padding-left: 25px;
+  padding-right: 40px;
+  align-items: center;
+}
+.discuss_moon .wrapper main .article_list .img_1 {
+  /* border:1px solid red; */
+  width: 161px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* display:none; */
+}
+.discuss_moon .wrapper main .article_list .img_1 img {
+  min-width: 100%;
+  min-height: 100%;
+  /* display:none; */
+}
+.discuss_moon .wrapper main .article_list .content {
+  /* border:1px solid red; */
+  width: 800px;
+  margin-left: 45px;
+}
+.discuss_moon .wrapper main .article_list .content .title {
+  color: #F5F0DD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.discuss_moon .wrapper main .article_list .content .title .star {
+  color: #FFBF44;
+}
+.discuss_moon .wrapper main .article_list .content .comment {
+  font-size: 16px;
+  color: #F5F0DD;
+  margin-bottom: 5px;
+}
+.discuss_moon .wrapper main .article_list .content .icons {
+  display: flex;
+  justify-content: space-between;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-1 {
+  display: flex;
+  margin-right: 630px;
+  align-items: center;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-1 img {
+  height: 16px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 0.5px solid #F5F0DD;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-1 .span1 {
+  font-size: 16px;
+  color: #F5F0DD;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-2 {
+  /* border:1px solid red; */
+  display: flex;
+  align-items: center;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-2 svg {
+  color: #F5F0DD;
+  margin-right: 5px;
+  height: 16px;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-2 img {
+  width: 18px;
+  height: 18;
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-2 .span2 {
+  font-size: 16px;
+  color: #F5F0DD;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-3 {
+  /* border:1px solid red; */
+  display: flex;
+  align-items: center;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-3 svg {
+  color: #F5F0DD;
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-3 img {
+  width: 18px;
+  height: 18;
+  margin-right: 5px;
+}
+.discuss_moon .wrapper main .article_list .content .icons .icon-3 .span3 {
+  font-size: 16px;
+  color: #F5F0DD;
+}
+.discuss_moon .pop-up-out {
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  /* 評論區的css */
+  /* ===== 討論列表 ===== */
+}
+.discuss_moon .pop-up-out .pop-up {
+  border: 1px solid rgb(170, 170, 170);
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  height: calc(100vh - 20px);
+  width: 880px;
+  margin: 0 auto;
+  background-color: #0C1244;
+  overflow: auto;
+}
+.discuss_moon .pop-up-out .pop-up h3 {
+  text-align: center;
+}
+.discuss_moon .pop-up-out .pop-up .hr2 {
+  width: calc(100% - 2px);
+}
+.discuss_moon .pop-up-out .pop-up .disappear {
+  /* border: 1px solid red; */
+  margin-left: 835px;
+}
+.discuss_moon .pop-up-out .pop-up .icons {
+  /* border:1px solid red; */
+  display: flex;
+  width: 802px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  justify-content: end;
+}
+.discuss_moon .pop-up-out .pop-up .icons .icon-1 {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.discuss_moon .pop-up-out .pop-up .icons .icon-1 .span1 {
+  margin-left: 5px;
+  font-size: 16rem;
+  letter-spacing: 3rem;
+}
+.discuss_moon .pop-up-out .pop-up .icons .icon-2 {
+  display: flex;
+  align-items: center;
+}
+.discuss_moon .pop-up-out .pop-up .icons .icon-2 .span2 {
+  margin-left: 5px;
+  font-size: 16rem;
+  letter-spacing: 3rem;
+}
+.discuss_moon .pop-up-out .hr1 {
+  width: 802px;
+  color: #F5F0DD;
+}
+.discuss_moon .pop-up-out .pop-up .icons2 {
+  /* border:1px solid red; */
+  display: flex;
+  width: 802px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.discuss_moon .pop-up-out .pop-up .icons2 img {
+  height: 20px;
+  border-radius: 50%;
+  border: 0.5px solid #F5F0DD;
+}
+.discuss_moon .pop-up-out .pop-up .icons2 .span3 {
+  /* border:1px solid red; */
+  margin-left: 5px;
+  font-size: 20px;
+}
+.discuss_moon .pop-up-out .pop-up .discuss-region {
+  /* border:1px solid red; */
+  width: 802px;
+  margin-left: 37px;
+  margin-bottom: 40px;
+  display: flex;
+}
+.discuss_moon .pop-up-out .pop-up .discuss-region .comment-region {
+  border: 1px solid #F5F0DD;
+  margin-left: 30px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.discuss_moon .pop-up-out .pop-up .discuss-region .comment-region p {
+  padding: 10px;
+  width: 100%;
+}
+.discuss_moon .pop-up-out .pop-up .discuss-region img {
+  width: 220px;
+  height: 100%;
+}
+.discuss_moon .pop-up-out .task_container {
+  /* border:1px solid red; */
+}
+.discuss_moon .pop-up-out .task_container .title1 {
+  font-size: 24px;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block {
+  /* border:1px solid red; */
+  width: 802px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 0;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block .task_name {
+  /* border:1px solid red; */
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 3px 0 0 3px;
+  height: 120px;
+  font-size: 20px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block.-on .task_name {
+  box-shadow: 0 0 5px gray;
+  transform: scale(1.01);
+  transform-origin: center center;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block .task_name::placeholder {
+  color: lightgray;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block .task_add {
+  /* border: 1px solid red; */
+  display: block;
+  width: 141px;
+  height: 52px;
+  margin-left: auto;
+  margin-top: 20px;
+  vertical-align: top;
+  border: 1px solid lightgray;
+  border-left: 0;
+  background-color: white;
+  box-shadow: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0 3px 3px 0;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block .task_add:active {
+  box-shadow: 1px 1px 3px lightgray inset, -1px -1px 3px lightgray inset;
+  background-color: #fcfcfc;
+  /* font-size: 1.5rem; */
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent {
+  /* border:1px solid red; */
+  margin-top: 30px;
+  margin-left: 35px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list {
+  /* border:1px solid red; */
+  margin: 0;
+  margin-right: 42px;
+  padding: 0;
+  list-style: none;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li {
+  /* border:1px solid red; */
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li.fade_out {
+  opacity: 0;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li:first-child {
+  border-top: 1px solid #F5F0DD;
+  padding-top: 20px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li:first-child button.btn_up {
+  /* border:1px solid red; */
+  background-color: lightgray !important;
+  cursor: not-allowed !important;
+  color: gray;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li:last-child button.btn_down {
+  /* border:1px solid red; */
+  background-color: lightgray !important;
+  cursor: not-allowed !important;
+  color: gray;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex {
+  /* border:1px solid red; */
+  display: flex;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > div {
+  /* border: 1px solid blue; */
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block {
+  /* border:1px solid red; */
+  width: 0px;
+  flex-shrink: 0;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex {
+  display: flex;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .left_block .btn_flex > button {
+  flex-grow: 1;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block {
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .para {
+  line-height: 60px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block {
+  width: 27%;
+  flex-shrink: 0;
+  height: 60px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .comment_author {
+  display: flex;
+  justify-content: end;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .comment_author p {
+  margin-left: 10px;
+  line-height: 30px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex {
+  display: flex;
+  justify-content: end;
+  height: 30px;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button {
+  outline: none;
+  height: 30px;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-left: 10px;
+  background-color: #0C1244;
+  border: 0;
+  cursor: pointer;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .right_block .btn_flex > button:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update {
+  /* border:1px solid red; */
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 3px 0 0 3px;
+  height: 60px;
+  font-size: 16px;
+  padding: 5px 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
+  color: lightgray;
+}
+.discuss_moon .pop-up-out .-none {
+  display: none;
+}
+.discuss_moon .form_region {
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.discuss_moon .form_region .absolute {
+  border: 1px solid rgb(170, 170, 170);
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  height: calc(100vh - 20px);
+  width: 880px;
+  margin: 0 auto;
+  background-color: #0C1244;
+  overflow: auto;
+  color: #F5F0DD;
+}
+.discuss_moon .form_region .absolute .title2 {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.discuss_moon .form_region .absolute .title2 .author_data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.discuss_moon .form_region .absolute .title2 .author_data img {
+  height: 21px;
+  margin-right: 10px;
+}
+.discuss_moon .form_region .absolute .title2 .author_data h4 {
+  line-height: 1;
+  height: 21px;
+}
+.discuss_moon .form_region .absolute .form_region1 {
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region1 .name1 {
+  margin-right: 25px;
+}
+.discuss_moon .form_region .absolute .form_region1 .write1 {
+  height: 50px;
+  width: 662px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region2 {
+  /* border: 1px solid red; */
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region2 .name2 {
+  /* border:1px solid red; */
+  margin-right: 25px;
+}
+.discuss_moon .form_region .absolute .form_region2 .choose {
+  height: 50px;
+  width: 251px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region3 {
+  /* border: 1px solid red; */
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  display: flex;
+}
+.discuss_moon .form_region .absolute .form_region3 .name3 {
+  /* border:1px solid red; */
+  margin-right: 25px;
+}
+.discuss_moon .form_region .absolute .form_region3 .upload_img {
+  display: flex;
+  align-items: flex-end;
+}
+.discuss_moon .form_region .absolute .form_region3 .upload_img > div {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #F5F0DD;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discuss_moon .form_region .absolute .form_region3 .upload_img > div img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.discuss_moon .form_region .absolute .form_region4 {
+  /* border: 1px solid red; */
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.discuss_moon .form_region .absolute .form_region4 .name4 {
+  /* border:1px solid red; */
+  margin-right: 25px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region4 .write2 {
+  /* border:1px solid red; */
+  height: 470px;
+  width: 801px;
+  max-height: 470px;
+  max-width: 801px;
+  resize: none;
+  font-size: 20px;
+}
+.discuss_moon .form_region .absolute .form_region5 {
+  /* border:1px solid red; */
+  margin-left: 697px;
+}
+.discuss_moon .form_region .absolute .form_region5 #new_article_btn {
+  margin-top: 30px;
+  color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+  width: 140px;
+  border: 1px solid #F5F0DD;
+  box-sizing: border-box;
+}
+.discuss_moon .form_region .absolute .form_region5 #new_article_btn:hover {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  cursor: pointer;
+}
+.discuss_moon .form_region .absolute .form_region5 #new_article_submit_btn, .discuss_moon .form_region .absolute .form_region5 #authorID {
+  display: none;
+}
+.discuss_moon .form_region .absolute .disappear2 {
+  /* border:1px solid red; */
+  margin-top: 20px;
+  margin-left: 832px;
+}
+.discuss_moon .form_region .absolute .form_region6 {
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.discuss_moon .form_region .absolute .form_region6 .name6 {
+  margin-right: 25px;
+}
+.discuss_moon .form_region .absolute .form_region6 .fa-star {
+  /* border:1px solid red; */
+  color: #FFBF44;
+}
+.discuss_moon .form_region .absolute .form_region6 .fa-star-half-stroke {
+  /* border:1px solid red; */
+  color: #FFBF44;
+}
+
 /* RWD 576px以下字型大小 */
 @media screen and (max-width: 575.98px) {
   .discuss .wrapper {
@@ -960,7 +1863,9 @@
   .discuss .wrapper main .article_list .img_1 {
     display: inline-block;
     width: 35%;
-    height: 100%;
+  }
+  .discuss .wrapper main .article_list .img_1 img {
+    width: 100%;
   }
   .discuss .wrapper main .article_text a {
     display: block;
@@ -1037,6 +1942,203 @@
     width: 95%;
   }
   .discuss .form_region .absolute .form_region5 {
+    width: 140px;
+    margin: 0 auto;
+  }
+
+  .discuss_moon .wrapper {
+    width: 100%;
+  }
+  .discuss_moon .wrapper main hr {
+    width: 90%;
+  }
+  .discuss_moon .wrapper main .breadcrumb {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .discuss_moon .wrapper main .official_article {
+    display: block;
+    width: 82%;
+    margin: 0 auto;
+  }
+  .discuss_moon .wrapper main .official_article .banner_1 {
+    width: 100%;
+  }
+  .discuss_moon .wrapper main .official_article .banner_1 img {
+    width: 100%;
+  }
+  .discuss_moon .wrapper main .official_article .banner_1 h3 {
+    font-size: 24px;
+  }
+  .discuss_moon .wrapper main .official_article .banner_2 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0px;
+  }
+  .discuss_moon .wrapper main .official_article .banner_2 h3 {
+    font-size: 16px;
+  }
+  .discuss_moon .wrapper main .official_article .banner_2 .photo_1 {
+    width: 50%;
+    height: 110px;
+  }
+  .discuss_moon .wrapper main .official_article .banner_2 .photo_2 {
+    width: 50%;
+    height: 110px;
+  }
+  .discuss_moon .wrapper main .official_article .banner_2 img {
+    width: 130%;
+  }
+  .discuss_moon .wrapper main .more {
+    width: 82%;
+    margin: 0;
+    margin: 0 auto;
+    display: none;
+  }
+  .discuss_moon .wrapper main .article h4 {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    line-height: 1;
+    margin-top: 40px;
+  }
+  .discuss_moon .wrapper main .article .article_type {
+    width: 100%;
+    position: relative;
+  }
+  .discuss_moon .wrapper main .article .article_type ul {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .discuss_moon .wrapper main .article .article_type ul li {
+    flex-grow: 1;
+  }
+  .discuss_moon .wrapper main .article .article_type .li-5 {
+    position: absolute;
+    top: -80px;
+    right: 55px;
+  }
+  .discuss_moon .wrapper main .article .article_type .li-5 .discussion {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .discuss_moon .wrapper main .article .article_type .li-5 .discussion h4 {
+    display: none;
+  }
+  .discuss_moon .wrapper main .article_list {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .discuss_moon .wrapper main .article_list .content .title h5 {
+    display: none;
+  }
+  .discuss_moon .wrapper main .article_list .content {
+    width: 63%;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+  }
+  .discuss_moon .wrapper main .article_list .content .icons {
+    width: 60%;
+    margin-left: 15px;
+  }
+  .discuss_moon .wrapper main .article_list .content .icons .icon-1 {
+    margin-right: 0;
+  }
+  .discuss_moon .wrapper main .article_list .content .icons .icon-2 {
+    margin-right: 0;
+  }
+  .discuss_moon .wrapper main .article_list .content .title {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .discuss_moon .wrapper main .article_list .content .comment {
+    margin-left: 15px;
+  }
+  .discuss_moon .wrapper main .article_list .img_1 {
+    display: inline-block;
+    width: 35%;
+  }
+  .discuss_moon .wrapper main .article_list .img_1 img {
+    width: 100%;
+  }
+  .discuss_moon .wrapper main .article_text a {
+    display: block;
+    padding: 10px;
+  }
+  .discuss_moon .wrapper main .article_text .rwd_title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #F5F0DD;
+    line-height: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .discuss_moon .pop-up-out .hr1 {
+    width: calc(100% - 2px);
+  }
+  .discuss_moon .pop-up-out .pop-up {
+    width: 90%;
+  }
+  .discuss_moon .pop-up-out .pop-up .icons, .discuss_moon .pop-up-out .pop-up .icons2 {
+    width: 90%;
+  }
+  .discuss_moon .pop-up-out .pop-up .icons {
+    justify-content: flex-end;
+  }
+  .discuss_moon .pop-up-out .pop-up .disappear {
+    margin-left: 93%;
+  }
+  .discuss_moon .pop-up-out .pop-up .discuss-region {
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+  }
+  .discuss_moon .pop-up-out .pop-up .discuss-region img {
+    height: auto;
+    width: 100%;
+  }
+  .discuss_moon .pop-up-out .pop-up .discuss-region .comment-region {
+    margin-left: 0;
+  }
+  .discuss_moon .pop-up-out .pop-up .discuss-region div {
+    margin-bottom: 20px;
+  }
+  .discuss_moon .pop-up-out .task_container .task_add_block {
+    width: 90%;
+  }
+  .discuss_moon .form_region .absolute {
+    width: 90%;
+  }
+  .discuss_moon .form_region .absolute .disappear2 {
+    margin-left: 90%;
+    margin-bottom: 20px;
+  }
+  .discuss_moon .form_region .absolute .form_region1 .write1 {
+    width: 68%;
+  }
+  .discuss_moon .form_region .absolute .form_region3 .upload_img {
+    width: 70%;
+    position: relative;
+  }
+  .discuss_moon .form_region .absolute .form_region3 .upload_img > div {
+    margin-right: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .discuss_moon .form_region .absolute .form_region3 .upload_img input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 190px;
+  }
+  .discuss_moon .form_region .absolute .form_region4 .write2 {
+    width: 95%;
+  }
+  .discuss_moon .form_region .absolute .form_region5 {
     width: 140px;
     margin: 0 auto;
   }
