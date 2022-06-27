@@ -26,6 +26,6 @@ if(count($data) > 0){
     echo"帳號或密碼錯誤";
 }
 
-header("Location:../new-login.html");
+header("Location:../member.html");
 
 ?>
