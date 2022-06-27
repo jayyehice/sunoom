@@ -6,6 +6,7 @@
   position: fixed;
   display: none;
   top: 0;
+  z-index: 2;
 }
 
 .ChooseMove {
@@ -45,6 +46,7 @@
   font-size: 16px;
   border-radius: 22px;
   opacity: 0;
+  z-index: -999;
 }
 .tripChoose .addfadein .fa-regular {
   margin-left: 10px;
@@ -135,42 +137,64 @@
   margin-bottom: 20px;
 }
 .tripChoose .datePickerBox {
-  width: 980px;
-  height: auto;
-  margin: 50px auto;
-  position: relative;
-}
-.tripChoose .datePickerBox .dateTitle p {
-  margin: 20px;
-}
-.tripChoose .datePickerBox .dateTitle i {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  right: 20px;
-  top: 20px;
-}
-.tripChoose .datePickerBox .pickerBox {
-  text-align: center;
-  width: 100%;
+  width: 1280px;
+  margin: 0px auto;
+  position: sticky;
+  top: 0px;
   display: flex;
-  flex-wrap: wrap;
 }
-.tripChoose .datePickerBox .pickerBox .daysbutton {
+.tripChoose .datePickerBox .daysbutton {
   display: inline-block;
-  width: 130px;
-  margin: 5px;
+  width: 160px;
+  margin: 10px;
   font-size: 16px;
   transition: all 2s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #0C1244;
+  background-color: #F5F0DD;
 }
-.tripChoose .datePickerBox .pickerBox .daysbutton .SendChoose {
-  display: none;
+.tripChoose .datePickerBox .daysbutton .SendChoose {
+  width: 160px;
+  height: 30px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  font-size: 16rem;
+  cursor: pointer;
 }
-.tripChoose .datePickerBox .pickerBox .daysbutton img {
-  width: 90px;
+.tripChoose .datePickerBox .daysbutton select {
+  width: 160px;
+  height: 30px;
+  font-size: 16rem;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  cursor: pointer;
 }
-.tripChoose .datePickerBox .pickerBox .daysbutton select {
-  width: 115px;
+.tripChoose .datePickerBox .daysbutton .DateAndWeek {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.tripChoose .datePickerBox .daysbutton .DateAndWeek h3 {
+  margin: 0px;
+}
+.tripChoose .datePickerBox .daysbutton .DateAndWeek .weekCircular {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 999em;
+  border: 1px solid #0C1244;
+  margin-right: 5px;
+}
+.tripChoose .datePickerBox .daysbutton p {
+  letter-spacing: 4px;
+  cursor: pointer;
 }
 .tripChoose .ListSmall {
   display: flex;
@@ -186,6 +210,7 @@
   top: 10%;
   font-size: 20px;
   text-align: center;
+  z-index: 3;
   cursor: pointer;
 }
 .tripChoose .ListSmall .circle {
@@ -209,7 +234,7 @@
   top: 0%;
   position: fixed;
   display: none;
-  z-index: 1;
+  z-index: 3;
   overflow-y: auto;
 }
 .tripChoose .BigList span {
@@ -310,6 +335,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  line-height: 25px;
 }
 .tripChoose .BigList .totalBlock .totalTitle span {
   font-size: 16px;
@@ -319,12 +345,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  line-height: 20.5px;
+  line-height: 0px;
   text-align: center;
+  line-height: 25px;
 }
 .tripChoose .BigList .totalBlock .totalPrice span {
   font-size: 20px;
   color: #FFBF44;
+}
+.tripChoose .BigList .totalBlock .totalPrice select {
+  text-align: center;
 }
 .tripChoose .BigList .totalBlock .totalPrice #couponPrice {
   color: #FF4444;
@@ -343,6 +373,7 @@
   position: relative;
   height: 66px;
   align-items: center;
+  z-index: -1;
 }
 .tripChoose .tripChooseBlock .itineraryTitle .chooseDate {
   position: absolute;
@@ -412,7 +443,7 @@
 .tripChoose .tripChooseBlock .morningItineraryA #addItineraryM {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -471,7 +502,7 @@
 .tripChoose .tripChooseBlock .noonItinerary #addItineraryN {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -530,8 +561,7 @@
 .tripChoose .tripChooseBlock #addItineraryE {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
-  cursor: not-allowed;
+  opacity: 0;
   transition: all 1s;
 }
 .tripChoose .foodChooseBlock {
@@ -613,7 +643,7 @@
 .tripChoose .foodChooseBlock .morningFood #addFoodM {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -672,7 +702,7 @@
 .tripChoose .foodChooseBlock .noonFood #addFoodN {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -731,7 +761,7 @@
 .tripChoose .foodChooseBlock #addFoodE {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -815,7 +845,7 @@
 .tripChoose .stayChooseBlock .cabin #addcabin {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -879,7 +909,7 @@
 .tripChoose .stayChooseBlock .camping #addCamping {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }
@@ -943,7 +973,7 @@
 .tripChoose .stayChooseBlock #addVilla {
   width: 35px;
   height: 35px;
-  opacity: 0.1;
+  opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
 }

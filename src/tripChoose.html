@@ -52,34 +52,35 @@
             </div>
             <h3>2.選擇行程</h3>
             <div class="datePickerBox">
-                <div class="dateTitle">
-                </div>
-                <div class="pickerBox" >
-                    <button @click="day(date,index);" class="daysbutton" v-for="(date,index) in dateArray">{{date}}<img src="./img/orderPage/sun/island.png" alt="">
-                        <select class="setChooseList" @change="setChoose($event.target.value)">
-                            <option value="">請選擇您的套裝組合</option>
-                            <option value="-1">自由選擇</option>
-                            <option v-for="(set,index) in set_list" :value="index">{{set[4]}}</option>
-                        </select>
-                        <input class="SendChoose" type="submit" value="選擇此套裝行程">
-                    </button>
+                <div @click="day(date,index);ChooseReturn(index,$event)" class="daysbutton" v-for="(date,index) in dateArray"> 
+                    <select class="setChooseList" @change="setChoose($event.target.value,$event)" @click ="setChoose($event.target.value,$event)">
+                        <option value="">選擇行程</option>
+                        <option value="-1">自由選擇</option>
+                        <option v-for="(set,index,event) in set_list" :value="index">{{set[4]}}</option>
+                    </select>
+                    <div class="DateAndWeek" @click="day(date,index)">
+                        <div class="weekCircular">{{Chooseweek[index]}}</div>
+                        <h3>DAY{{index + 1}}</h3>
+                    </div>
+                    <p @click="day(date,index)">{{date}}</p>
+                    <input class="SendChoose" type="submit" value="確認送出" @click="sendChoose(index,$event)">
                 </div>
             </div>
             <!-- 小訂單明細 -->
-            <div class="ListSmall">
+            <div class="ListSmall" @click="total">
                 <h5>訂單明細 </h5><div class="circle">+</div>
             </div>
             <!-- 明細彈窗 -->
             <div class="BigList" >
-                <div class="ListTitle">
+                <div class="ListTitle" >
                     <h5>訂單明細</h5>
                 </div>
                 <div class="tripAndDate">
                     <p>自由行</p>
                     <p>Check In:</p>
-                    <input type="date" name="" id="" value="2022-07-16">
+                    <h6>{{startDay}}</h6>
                     <p>Check out:</p>
-                    <input type="date" name="" id="" value="2022-07-16">
+                    <h6>{{endDay}}</h6>
                 </div>
                 
                 <div class="tripList" v-for="(date,index) in dateArray" >
@@ -88,21 +89,21 @@
                     <!-- <triplist1 :date="newDay" :activity_list="activity_list"></tripList1> -->
                     <ul>
                         <li class="tripMorningName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total();" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripMorningPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="morningTripDeleteButton" @click="morningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                     <ul>
                         <li class="tripNoonName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripNoonPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="noonTripDeleteButton" @click="noonTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                     <ul>
                         <li class="tripEveningName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripEveningPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="eveningTripDeleteButton" @click="eveningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
@@ -113,19 +114,19 @@
                     <h6>{{date}}</h6>
                     <ul>
                         <li class="FoodMorningName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodMorningPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="morningFoodDeleteButton" @click="morningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                     <ul>
                         <li class="FoodNoonName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodNoonPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="noonFoodDeleteButton" @click="noonFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                     <ul>
                         <li class="FoodEveningName"></li>
-                        <li id="ccc"><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
+                        <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodEveningPrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="eveningFoodDeleteButton" @click="eveningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
@@ -136,7 +137,7 @@
                     <h6>{{date}}</h6>
                     <ul>
                         <li class="StayChooseName"></li>
-                        <li id="ccc"><h6>{{pepoleNums}}</h6></li>
+                        <li ><h6>{{pepoleNums}}</h6></li>
                         <li class="StayChoosePrice">{{newPrice}}</li>
                         <li><img :data-deleteindex="index" class="StayDeleteButton" @click="StayDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
@@ -145,17 +146,16 @@
                     <div class="totalTitle">
                         <span>小計：</span><br>
                         <span>折扣碼：</span><br>
-                        <span>折扣金額：</span><br>
+                        <span>折扣：</span><br>
                         <span>總金額：</span><br>
                     </div>
                     <div class="totalPrice">
-                        <span>$32,186</span><br>
-                        <select name="" id="">
-                            <option value="">Long_bro_only_9453</option>
-                            <option value="">NewMember</option>
+                        <span id="totalPrice" >{{minorTotalPrice}}</span><br>
+                        <select name="" id="discountNums" @change="getNewDiscountPrice;total()">
+                            <option  v-for="(discountCode,index) in this.discount_list" :value="index">{{discountCode[0]}}</option>
                         </select><br>
-                        <span id="couponPrice">-$16,093</span><br>
-                        <span>$16,093</span><br> 
+                        <span id="couponPrice">{{Discount}}</span><br>
+                        <span>{{totalPrice}}</span><br> 
                     </div>
                 </div>
             </div>
@@ -299,7 +299,7 @@
                             <h4>森林木屋</h4>
                             <p>自由之丘</p>
                         </div>
-                        <input type="radio" class="stayChoose" name="stayChoose" id="cabinButton" > 
+                        <input type="radio"  class="stayChoose" name="stayChoose" id="cabinButton" value="森林木屋"> 
                         <div class="cabinBlockA">
                             <img id="cabinImg" src="./img/orderPage/cabin.jpg" alt="">
                             <div class="cabinBlockB">
@@ -321,7 +321,7 @@
                             <h4>帳篷露營</h4>
                             <p>山巔之息</p>
                         </div>
-                        <input type="radio"  class="stayChoose" name="stayChoose" id="campingButton">
+                        <input type="radio"  class="stayChoose" name="stayChoose" id="campingButton" value="帳篷露營">
                         <div class="campingBlockA">
                             <img id="campingImg" :src="campingimg" alt="">
                             <div class="campingBlockB">
@@ -343,7 +343,7 @@
                             <h4>海上Villa</h4>
                             <p>日月星</p>
                         </div>
-                        <input type="radio" class="stayChoose" name="stayChoose" id="villaButton">
+                        <input type="radio" class="stayChoose" name="stayChoose" id="villaButton" value="海上Villa">
                         <div class="villaBlockA">
                             <img id="villaImg" src="./img/orderPage/villa.jpg" alt="">
                             <div class="villaBlockB">
