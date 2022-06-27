@@ -1,0 +1,72 @@
+@import 'base/var';
+
+body{
+    background-color: $sun_color;
+
+    main{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100vh;
+    
+        form{
+            background-color: $moon_color;
+            width: 30%;
+            // height: 585px;
+            padding: 50px;
+            color: $sun_color;
+            text-align: center;
+            border-radius: 35px;
+
+            img{
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+                margin-bottom: 70px;
+            }
+
+            h2{
+                line-height: 1;
+                margin-bottom: 60px;
+            }
+
+            input{
+                display: block;
+                width: 50%;
+                height: 45px;
+                margin: 0 auto;
+                text-align: center;
+                font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+                font-size: 20rem;
+            }
+
+            #account{
+                margin-bottom: 55px;
+            }
+
+            #password{
+                margin-bottom: 45px;
+            }
+
+            #submit{
+                background-color: $sun_color;
+                color: $moon_color;
+                width: 22%;
+                font-weight: bold;
+                border-color: $moon_color;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $moon_color;
+                    color: $sun_color;
+                    border-color: $sun_color;
+                }
+
+            }
+        }
+    }
+
+}
