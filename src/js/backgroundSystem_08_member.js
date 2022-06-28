@@ -4,6 +4,8 @@ Vue.component('member',{
         return{
             content:'',
             page:0,
+            show_pop_up:false,
+            index:0,
         }
     },
     methods: {
@@ -19,10 +21,20 @@ Vue.component('member',{
         },
         showEdit(e){
             // console.log(e.target.dataset.index);
-            let index = e.target.dataset.index;
-            console.log(this.list[this.page][index]);
-            
-        }
+            // let index = e.target.dataset.index;
+            // console.log(this.list[this.page][index]);
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true;    
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        suspend(e){
+            this.show_pop_up=false;
+        },
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');
@@ -90,8 +102,66 @@ Vue.component('member',{
                 </ul>
             </div>
         </div>
-    </div> 
     
+
+
+        <div class="pop_up" v-if="show_pop_up">
+
+            <div class="formBody_06">
+                <h3>會員資訊</h3>
+                <form class="Form_06 col" action="">
+                    <div class="leftForm_06 col-5">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <h4>{{list[page][index][0]}}</h4>
+                            </li>
+                            <li>
+                                <h4>姓名:</h4>
+                                <h4>{{list[page][index][7]+list[page][index][8]}}</h4>
+                            </li>
+                            <li>
+                                <h4>電話:</h4>
+                                <h4>{{list[page][index][3]}}</h4>
+                            </li>
+                            <li>
+                                <h4>Email:</h4>
+                                <h4>{{list[page][index][1]}}</h4>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="centerForm_06 col-1">
+                        <div></div>
+                    </div>
+                    <div class="rightForm_06 col-5">
+                        <ul>
+                            <li>
+                                <h4>建立日期:</h4>
+                                <h4>{{list[page][index][4]}}</h4>
+                            </li>
+                            <li>
+                                <h4>會員狀態:</h4>
+                                <h4>{{list[page][index][5]}}</h4>
+                            </li>
+                            <li>
+                                <h4>違規紀錄:</h4>
+                                <h4>{{list[page][index][6]}}</h4>
+                            </li>
+                        </ul>
+
+                    </div>
+                </form>            
+                <div class="buttonBlock_06 row">
+                    <button class="b1 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b2 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b3 col-2" @click="suspend">停權該會員</button>
+                </div>
+            </div>
+        </div>
+    </div> 
     `
     ,
 })
