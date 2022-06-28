@@ -2302,17 +2302,16 @@ window.addEventListener('load',function(){
                 
                 //下一頁
                 $('#NextPage').on('click',()=>{
+                    let StayChooseName = document.getElementsByClassName('StayChooseName');
+                    let daysbutton = document.getElementsByClassName('daysbutton')
                     for(i = 0 ; i < this.dateArray.length; i++){
-                        if($('.StayChooseName').text() == ''){
-                            $('.daysbutton').find('input').val("未選取住宿")
-                            $('.daysbutton').animate({
-                                'borderColor':'red',
-
-                            },2000)
+                        if(StayChooseName[i].innerText == ''){
+                            daysbutton[i].classList.add('notCheck')
+                            daysbutton[i].querySelector('input').value = '請選擇住宿'
                         }
-                        if($('.StayChooseName').text() != ''){
-                            window.location.href = './readyToPay.html'
-                        }
+                        // if(StayChooseName.innerText != ''){
+                        //     window.location.href = './readyToPay.html'
+                        // }
                     }
                     
                 })

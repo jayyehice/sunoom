@@ -42,6 +42,27 @@
     
 }
 
+.notCheck{
+    animation: notCheck 0.2s infinite;
+}
+@keyframes notCheck {
+   0%{
+    transform: translate(2px,2px);
+   }
+   25%{
+    transform: translate(-2px,-2px);
+   }
+   50%{
+    transform: translate(0px,0px);
+   }
+   75%{
+    transform: translate(2px,-2px);
+   }
+   100%{
+    transform: translate(-2px,2px);
+   }
+}
+
 .tripChoose{
     background-color:$sun_color;
     color: $moon_color;
@@ -155,6 +176,7 @@
             align-items: center;
             border: 1px solid $moon_color;
             background-color: $sun_color;
+
             .SendChoose{
                 width: 160px;
                 height: 30px;
