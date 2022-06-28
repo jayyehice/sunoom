@@ -17,6 +17,12 @@ Vue.component('activity',{
             $(e.target.closest('ul')).find('li.on').removeClass('on');
             $(e.target).addClass('on');
         },
+        showEdit(e){
+            // console.log(e.target.dataset.index);
+            let index = e.target.dataset.index;
+            console.log(this.list[this.page][index]);
+            
+        },
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');
@@ -67,7 +73,7 @@ Vue.component('activity',{
                     <li class="col"><p>{{item[3]}}</p></li>
                     <li class="col"><p>{{item[9]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
                 

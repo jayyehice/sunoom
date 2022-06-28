@@ -43,7 +43,13 @@ Vue.component('discuss',{
             $(e.target).addClass('on');
 
             // console.log($('#pageList li:nth-child(2)'));
-        }
+        },
+        showEdit(e){
+            // console.log(e.target.dataset.index);
+            let index = e.target.dataset.index;
+            console.log(this.list[this.page][index]);
+            
+        },
     },
     computed:{},
     mounted() {
@@ -95,7 +101,7 @@ Vue.component('discuss',{
                     <li class="col"><p>{{item[5]}}</p></li>
                     <li class="col-2"><p>{{item[9]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
             </div>
