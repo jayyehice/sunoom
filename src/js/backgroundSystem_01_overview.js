@@ -35,7 +35,7 @@ Vue.component('overview',{
 
             <!-- 長條圖區域 -->
             <div class="col-8 bar-chart">
-                <h3>未來一周預定人數</h3>
+                <h3>未來一週預定人數</h3>
                 <div class="card-body">
                     <canvas id="myBarChart" width="100%" height="50"></canvas>
                 </div>

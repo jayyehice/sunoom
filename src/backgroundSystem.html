@@ -24,7 +24,7 @@
                 
                 <i class="document fa-regular fa-file-lines col-1"></i>
                 <i class="mail fa-regular fa-envelope col-1"></i>
-                <button class="out col-1">登出</button>
+                <button class="out col-1" id="logOut">登出</button>
             </div>
         </div>
     </header>
@@ -38,21 +38,21 @@
                     <nav class="col-2" >
                         <div class="leftNav">
                             <div class="admin">
-                                <img src="./img/backsystem/Rectangle418.png" alt="">
+                                <img :src="image" alt="">
                                 <div class="user">
-                                    <h5>LongBoy<br>
+                                    <h5>{{account}}<br>
                                         <h6>Admin</h6>
                                     </h5>
                                 </div>
                             </div>
-                            <a id="overview" data-type="overview" @click="navClick">總覽</a>
-                            <a id="order" data-type="order_table" @click="navClick">訂單管理</a>
-                            <a id="activity" data-type="activity" @click="navClick">活動管理</a>
-                            <a id="shop" data-type="shop" @click="navClick">餐廳管理</a>
-                            <a id="live" data-type="live" @click="navClick">住宿管理</a>
-                            <a id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
-                            <a id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
-                            <a id="member" data-type="member" @click="navClick">會員管理</a>
+                            <a v-if="authority > 5" id="overview" data-type="overview" @click="navClick">總覽</a>
+                            <a v-if="authority > 5" id="order" data-type="order_table" @click="navClick">訂單管理</a>
+                            <a v-if="authority > 5" id="activity" data-type="activity" @click="navClick">活動管理</a>
+                            <a v-if="authority > 5" id="shop" data-type="shop" @click="navClick">餐廳管理</a>
+                            <a v-if="authority > 5" id="live" data-type="live" @click="navClick">住宿管理</a>
+                            <a v-if="authority > 5" id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
+                            <a v-if="authority > 5" id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
+                            <a v-if="authority > 5" id="member" data-type="member" @click="navClick">會員管理</a>
                         </div>
                     </nav>
                     
