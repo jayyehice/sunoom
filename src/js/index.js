@@ -1,7 +1,7 @@
 // gsap.to('.animation01', {width: '65%', duration: 1});
 
-gsap.from('.draw01', {duration: 1, x: '0%'});
-gsap.to('.draw01', {duration: 1, x: '65%'});
+// gsap.from('.draw01', {duration: 1, width: '0%'});
+// gsap.to('.draw01', {duration: 1, width: '65%'});
 
 
 // window.addEventListener("load", e => {

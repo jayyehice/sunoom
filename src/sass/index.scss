@@ -91,10 +91,12 @@
             justify-content: center;
             align-items: center;
 
-            #text {
+            #textSunoom {
                 position: absolute;
+                z-index: 2;
                 font-size: 5vw;
                 text-align: center;
+                top: 10%;
             }
 
             .muntain01 {
@@ -667,9 +669,28 @@
                 text-align: center;
             }
 
+            #textSunoom {
+                position: absolute;
+                z-index: 2;
+                font-size: 5vw;
+                text-align: center;
+                top: 10%;
+            }
+
             .muntain01 {
                 width: 100%;
                 top: 0;
+            }
+
+            .muntain02{
+                top: 0;
+            }
+
+            .tree01{
+                top: 0;
+            }
+            .sun{
+                right: 0;
             }
         }
 

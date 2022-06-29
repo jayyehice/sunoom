@@ -62,10 +62,12 @@
   justify-content: center;
   align-items: center;
 }
-.index main .parallax #text {
+.index main .parallax #textSunoom {
   position: absolute;
+  z-index: 2;
   font-size: 5vw;
   text-align: center;
+  top: 10%;
 }
 .index main .parallax .muntain01 {
   width: 100%;
@@ -561,9 +563,25 @@
 .index_moon main .parallax h3 {
   text-align: center;
 }
+.index_moon main .parallax #textSunoom {
+  position: absolute;
+  z-index: 2;
+  font-size: 5vw;
+  text-align: center;
+  top: 10%;
+}
 .index_moon main .parallax .muntain01 {
   width: 100%;
   top: 0;
+}
+.index_moon main .parallax .muntain02 {
+  top: 0;
+}
+.index_moon main .parallax .tree01 {
+  top: 0;
+}
+.index_moon main .parallax .sun {
+  right: 0;
 }
 .index_moon main .news {
   display: flex;
