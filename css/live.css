@@ -1,0 +1,2776 @@
+.live {
+  background-color: #F5F0DD;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+  color: #0C1244;
+}
+
+.live a {
+  text-decoration: none;
+  color: #0C1244;
+}
+
+.live header .one li a {
+  color: #F5F0DD;
+}
+
+.live header .headerCenter {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.live main .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.live main .wrapper .breadcrumb {
+  margin-top: 20px;
+}
+
+.live main .wrapper .logCabin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live main .wrapper .logCabin .logCabinLeft {
+  width: 427px;
+}
+
+.live main .wrapper .logCabin .logCabinLeft .logCabinText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 93px 110px;
+}
+
+.live main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+.live main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder .forest {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live main .wrapper .logCabin .logCabinLeft .logCabinText .forestImg {
+  margin-top: 110px;
+}
+
+.live main .wrapper .logCabin .logCabinRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea {
+  margin-top: 40px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.live main .wrapper .siteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.live main .wrapper .siteLayout .bookButton_RWD {
+  display: none;
+}
+
+.live main .wrapper .siteLayout h3 {
+  text-align: center;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp {
+  position: relative;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp .wood {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp .wood1 {
+  right: 18%;
+  top: 16%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp .wood11 {
+  right: 8%;
+  bottom: 14%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp .wood2 {
+  left: 25%;
+  top: 12%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutwp .wood3 {
+  left: 10%;
+  bottom: 25%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf01 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf01 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf01 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf01 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf02 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf02 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf02 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf02 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf03 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf03 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf03 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live main .wrapper .siteLayout .siteLayoutInf03 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .campingTents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft {
+  width: 427px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft .campingTentsText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 80px 110px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder .mountain {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainImg {
+  margin-top: 110px;
+}
+
+.live main .wrapper .campingTents .campingTentsLeft .campingTentsText .t3_RWD {
+  display: none;
+}
+
+.live main .wrapper .campingTents .campingTentsRight {
+  margin-top: 126px;
+  width: 750px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 {
+  width: 600px;
+  height: 320px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea {
+  margin-top: 40px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.live main .wrapper .campingSiteLayout {
+  margin: 0 auto;
+  width: 1150x;
+  margin-bottom: 100px;
+}
+
+.live main .wrapper .campingSiteLayout h3 {
+  text-align: center;
+}
+
+.live main .wrapper .bookButton_RWD {
+  display: none;
+}
+
+.live main .wrapper .villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live main .wrapper .villa .villaLeft {
+  width: 427px;
+}
+
+.live main .wrapper .villa .villaLeft .villaText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 74px 110px;
+}
+
+.live main .wrapper .villa .villaLeft .villaText .oceanBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+.live main .wrapper .villa .villaLeft .villaText .oceanBorder .ocean {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live main .wrapper .villa .villaLeft .villaText .oceanImg {
+  margin-top: 110px;
+}
+
+.live main .wrapper .villa .villaLeft .villaText .t3_RWD {
+  display: none;
+}
+
+.live main .wrapper .villa .villaRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea {
+  margin-top: 40px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconpool {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.live main .wrapper .villaSiteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.live main .wrapper .villaSiteLayout h3 {
+  text-align: center;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp {
+  position: relative;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
+  right: 40%;
+  top: 18%;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
+  right: 40%;
+  bottom: 46%;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
+  right: 40%;
+  bottom: 14%;
+}
+
+.live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
+  left: 30%;
+  bottom: 46%;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf01 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf01 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf01 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf01 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf02 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf02 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf02 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf02 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf03 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf03 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf03 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf03 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf04 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf04 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf04 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon {
+  background-color: #0C1244;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+  color: #F5F0DD;
+}
+
+.live_moon a {
+  text-decoration: none;
+  color: #F5F0DD;
+}
+
+.live_moon main .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.live_moon main .wrapper .breadcrumb {
+  margin-top: 20px;
+}
+
+.live_moon main .wrapper .logCabin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinLeft {
+  width: 427px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinLeft .logCabinText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 105px 110px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
+  border: 1px solid #F5F0DD;
+  width: 190px;
+  height: 190px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder .forest {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinLeft .logCabinText .forestImg {
+  margin-top: 110px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #F5F0DD;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea {
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area {
+  margin-top: 40px;
+  color: #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
+  border: 1.5px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #F5F0DD;
+  margin-left: auto;
+}
+
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.live_moon main .wrapper .siteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.live_moon main .wrapper .siteLayout h3 {
+  text-align: center;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp {
+  position: relative;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp .wood {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp .wood1 {
+  right: 18%;
+  top: 16%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp .wood11 {
+  right: 8%;
+  bottom: 14%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp .wood2 {
+  left: 25%;
+  top: 12%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutwp .wood3 {
+  left: 10%;
+  bottom: 25%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf01 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf01 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf01 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf01 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf02 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf02 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf02 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf02 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf03 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf03 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf03 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+.live_moon main .wrapper .siteLayout .siteLayoutInf03 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .campingTents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsLeft {
+  width: 427px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsLeft .campingTentsText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 80px 110px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder {
+  border: 1px solid #F5F0DD;
+  width: 190px;
+  height: 190px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder .mountain {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainImg {
+  margin-top: 110px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight {
+  margin-top: 126px;
+  width: 750px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 {
+  width: 600px;
+  height: 320px;
+  border: 1.5px solid #F5F0DD;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea {
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area {
+  margin-top: 40px;
+  color: #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
+  border: 1.5px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #F5F0DD;
+  margin-left: auto;
+}
+
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.live_moon main .wrapper .campingSiteLayout {
+  margin: 0 auto;
+  width: 1150x;
+  margin-bottom: 100px;
+}
+
+.live_moon main .wrapper .campingSiteLayout h3 {
+  text-align: center;
+}
+
+.live_moon main .wrapper .villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.live_moon main .wrapper .villa .villaLeft {
+  width: 427px;
+}
+
+.live_moon main .wrapper .villa .villaLeft .villaText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 74px 110px;
+}
+
+.live_moon main .wrapper .villa .villaLeft .villaText .oceanBorder {
+  border: 1px solid #F5F0DD;
+  width: 190px;
+  height: 190px;
+}
+
+.live_moon main .wrapper .villa .villaLeft .villaText .oceanBorder .ocean {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+.live_moon main .wrapper .villa .villaLeft .villaText .oceanImg {
+  margin-top: 110px;
+}
+
+.live_moon main .wrapper .villa .villaRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #F5F0DD;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea {
+  margin-top: 40px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconpool {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area {
+  margin-top: 40px;
+  color: #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton {
+  border: 1.5px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #F5F0DD;
+  margin-left: auto;
+}
+
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.live_moon main .wrapper .villaSiteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.live_moon main .wrapper .villaSiteLayout h3 {
+  text-align: center;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp {
+  position: relative;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
+  right: 40%;
+  top: 18%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
+  right: 40%;
+  bottom: 46%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
+  right: 40%;
+  bottom: 14%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
+  left: 30%;
+  bottom: 46%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf01 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf01 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf01 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf01 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf02 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf02 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf02 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf02 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf03 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf03 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf03 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf03 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf04 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf04 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf04 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.live_moon main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+.live_header {
+  background-image: url(../img/live/sun/live_main_bn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.live_header h1 {
+  padding-top: 480px;
+  color: #F5F0DD;
+  text-align: center;
+}
+
+main .wrapper {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+main .wrapper .breadcrumb {
+  margin-top: 20px;
+}
+
+main .wrapper .logCabin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+main .wrapper .logCabin .logCabinLeft {
+  width: 427px;
+}
+
+main .wrapper .logCabin .logCabinLeft .logCabinText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 93px 110px;
+}
+
+main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder .forest {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+main .wrapper .logCabin .logCabinLeft .logCabinText .forestImg {
+  margin-top: 110px;
+}
+
+main .wrapper .logCabin .logCabinRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea {
+  margin-top: 40px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+main .wrapper .siteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+main .wrapper .siteLayout h3 {
+  text-align: center;
+}
+
+main .wrapper .siteLayout .siteLayoutwp {
+  position: relative;
+}
+
+main .wrapper .siteLayout .siteLayoutwp .wood {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+main .wrapper .siteLayout .siteLayoutwp .wood1 {
+  right: 18%;
+  top: 16%;
+}
+
+main .wrapper .siteLayout .siteLayoutwp .wood11 {
+  right: 8%;
+  bottom: 14%;
+}
+
+main .wrapper .siteLayout .siteLayoutwp .wood2 {
+  left: 25%;
+  top: 12%;
+}
+
+main .wrapper .siteLayout .siteLayoutwp .wood3 {
+  left: 10%;
+  bottom: 25%;
+}
+
+main .wrapper .siteLayout .siteLayoutInf01 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .siteLayout .siteLayoutInf01 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf01 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf01 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf02 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .siteLayout .siteLayoutInf02 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf02 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf02 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf03 {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .siteLayout .siteLayoutInf03 .room_img {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf03 .roomInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+}
+
+main .wrapper .siteLayout .siteLayoutInf03 .roomInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .campingTents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+main .wrapper .campingTents .campingTentsLeft {
+  width: 427px;
+}
+
+main .wrapper .campingTents .campingTentsLeft .campingTentsText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 80px 110px;
+}
+
+main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder .mountain {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainImg {
+  margin-top: 110px;
+}
+
+main .wrapper .campingTents .campingTentsRight {
+  margin-top: 126px;
+  width: 750px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 {
+  width: 600px;
+  height: 320px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea {
+  margin-top: 40px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+main .wrapper .campingSiteLayout {
+  margin: 0 auto;
+  width: 1150x;
+  margin-bottom: 100px;
+}
+
+main .wrapper .campingSiteLayout h3 {
+  text-align: center;
+}
+
+main .wrapper .villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+main .wrapper .villa .villaLeft {
+  width: 427px;
+}
+
+main .wrapper .villa .villaLeft .villaText {
+  width: 202px;
+  text-align: center;
+  margin: 190px 0 74px 110px;
+}
+
+main .wrapper .villa .villaLeft .villaText .oceanBorder {
+  border: 1px solid #0C1244;
+  width: 190px;
+  height: 190px;
+}
+
+main .wrapper .villa .villaLeft .villaText .oceanBorder .ocean {
+  font-size: 150px;
+  line-height: 190px;
+}
+
+main .wrapper .villa .villaLeft .villaText .oceanImg {
+  margin-top: 110px;
+}
+
+main .wrapper .villa .villaRight {
+  margin-top: 120px;
+  width: 750px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea {
+  margin: 0 auto;
+  width: 600px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 {
+  width: 600px;
+  height: 300px;
+  border: 1.5px solid #0C1244;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 h4 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .text {
+  margin: 0 auto;
+  width: 390px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 390px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea {
+  margin-top: 40px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconbed {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea .iconpool {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area {
+  margin-top: 40px;
+  color: #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-star-half-stroke {
+  color: #FFBF44;
+  font-size: 12px;
+  letter-spacing: -5px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area .fa-circle-plus {
+  margin-right: 10px;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .bookButton {
+  border: 1.5px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  line-height: 50px;
+  color: #0C1244;
+  margin-left: auto;
+}
+
+main .wrapper .villa .villaRight .rightTextArea .bookButton:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+main .wrapper .villaSiteLayout {
+  margin: 0 auto;
+  width: 920px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+main .wrapper .villaSiteLayout h3 {
+  text-align: center;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp {
+  position: relative;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  line-height: 50px;
+  letter-spacing: 0px;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea1 {
+  right: 40%;
+  top: 18%;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea2 {
+  right: 40%;
+  bottom: 46%;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea3 {
+  right: 40%;
+  bottom: 14%;
+}
+
+main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea4 {
+  left: 30%;
+  bottom: 46%;
+}
+
+main .wrapper .villaSiteLayout .villaInf01 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .villaSiteLayout .villaInf01 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+main .wrapper .villaSiteLayout .villaInf01 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+main .wrapper .villaSiteLayout .villaInf01 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .villaSiteLayout .villaInf02 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .villaSiteLayout .villaInf02 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+main .wrapper .villaSiteLayout .villaInf02 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+main .wrapper .villaSiteLayout .villaInf02 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .villaSiteLayout .villaInf03 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .villaSiteLayout .villaInf03 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+main .wrapper .villaSiteLayout .villaInf03 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+main .wrapper .villaSiteLayout .villaInf03 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+main .wrapper .villaSiteLayout .villaInf04 {
+  display: none;
+  width: 400px;
+  height: 400px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+main .wrapper .villaSiteLayout .villaInf04 .viila_img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+main .wrapper .villaSiteLayout .villaInf04 .villaInfText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
+  width: 50px;
+  border-radius: 50%;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  margin-right: 20px;
+  margin-top: 10px;
+  letter-spacing: 0px;
+  line-height: 50px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .live main .wrapper {
+    width: calc(100% - 40px);
+  }
+  .live main .wrapper .logCabin {
+    margin-bottom: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .live main .wrapper .logCabin .logCabinLeft {
+    width: 28%;
+    margin-top: 50px;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .logCabinText {
+    margin: 0px 10px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
+    height: 170px;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t1 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .t3 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .live main .wrapper .logCabin .logCabinLeft .forestImg {
+    width: 192px;
+  }
+  .live main .wrapper .logCabin .logCabinRight {
+    width: 60%;
+    margin-top: 50px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .logCabinImg {
+    width: 100%;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea {
+    width: 100%;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 {
+    width: 330px;
+    margin-top: 20px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .text {
+    width: 268px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList {
+    width: 290px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .iconArea {
+    margin-top: 20px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 .logCbinList .comments_area {
+    margin-top: 20px;
+  }
+  .live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
+    display: none;
+  }
+  .live main .wrapper .siteLayout {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutwp {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutwp .layOutImg {
+    width: 100%;
+  }
+  .live main .wrapper .siteLayout .siteLayoutwp .wood {
+    width: 32px;
+    line-height: 32px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf01 {
+    width: 312px;
+    height: 312px;
+    left: 22%;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf01 .room_img {
+    width: 250px;
+    margin-top: 30px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf01 .roomInfText {
+    margin-top: 20px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf01 .roomInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf01 .roomInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf02 {
+    width: 312px;
+    height: 312px;
+    left: 22%;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf02 .room_img {
+    width: 250px;
+    margin-top: 30px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf02 .roomInfText {
+    margin-top: 20px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf02 .roomInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf02 .roomInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf03 {
+    width: 312px;
+    height: 312px;
+    left: 22%;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf03 .room_img {
+    width: 250px;
+    margin-top: 30px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf03 .roomInfText {
+    margin-top: 20px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf03 .roomInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+  }
+  .live main .wrapper .siteLayout .siteLayoutInf03 .roomInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .siteLayout .bookButton_RWD {
+    border: 1.5px solid #0C1244;
+    width: 380px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    color: #0C1244;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 60px;
+  }
+  .live main .wrapper .siteLayout .bookButton_RWD:hover {
+    background-color: #0C1244;
+    color: #F5F0DD;
+  }
+  .live main .wrapper .campingTents {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft {
+    width: 28%;
+    margin-top: 50px;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .campingTentsText {
+    width: 190px;
+    margin: 0px 10px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder {
+    height: 170px;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .campingTentsText .t3_RWD {
+    display: block;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .t1 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .t2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .t3 {
+    display: none;
+  }
+  .live main .wrapper .campingTents .campingTentsLeft .mountainImg {
+    width: 192px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight {
+    width: 60%;
+    margin-top: 50px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .campingImg {
+    width: 330px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea {
+    width: 100%;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 {
+    width: 330px;
+    margin-top: 20px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .text {
+    width: 268px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList {
+    width: 290px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea {
+    margin-top: 40px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .iconArea .iconText {
+    display: none;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 .campingTentsList .comments_area {
+    margin-top: 20px;
+  }
+  .live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
+    display: none;
+  }
+  .live main .wrapper .campingSiteLayout {
+    width: calc(100% - 40px);
+    margin-bottom: 20px;
+  }
+  .live main .wrapper .campingSiteLayout .campingsiteLayoutwp {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .live main .wrapper .campingSiteLayout .campingsiteLayoutwp .campingLayout_img {
+    width: 100%;
+  }
+  .live main .wrapper .bookButton_RWD {
+    border: 1.5px solid #0C1244;
+    width: 380px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    color: #0C1244;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 60px;
+  }
+  .live main .wrapper .bookButton_RWD:hover {
+    background-color: #0C1244;
+    color: #F5F0DD;
+  }
+  .live main .wrapper .villa {
+    margin-bottom: 20px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .live main .wrapper .villa .villaLeft {
+    width: 192px;
+    margin-top: 50px;
+  }
+  .live main .wrapper .villa .villaLeft .villaText {
+    width: 190px;
+    margin: 0px 10px 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .live main .wrapper .villa .villaLeft .villaText .oceanBorder {
+    height: 170px;
+  }
+  .live main .wrapper .villa .villaLeft .villaText .t1 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .live main .wrapper .villa .villaLeft .villaText .t2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .live main .wrapper .villa .villaLeft .villaText .t3_RWD {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .live main .wrapper .villa .villaLeft .villaText .t3 {
+    display: none;
+  }
+  .live main .wrapper .villa .villaLeft .oceanImg {
+    width: 192px;
+  }
+  .live main .wrapper .villa .villaRight {
+    width: 333px;
+    margin-top: 50px;
+  }
+  .live main .wrapper .villa .villaRight .villaImg {
+    width: 330px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea {
+    width: 100%;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .villaText02 {
+    width: 330px;
+    margin-top: 20px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .villaText02 .text {
+    width: 268px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList {
+    width: 290px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .iconArea {
+    margin-top: 20px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .villaText02 .villaList .comments_area {
+    margin-top: 20px;
+  }
+  .live main .wrapper .villa .villaRight .rightTextArea .bookButton {
+    display: none;
+  }
+  .live main .wrapper .villaSiteLayout {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .layOutImg {
+    width: 100%;
+  }
+  .live main .wrapper .villaSiteLayout .villaSiteLayoutwp .sea {
+    width: 30px;
+    line-height: 30px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf01 {
+    width: 250px;
+    height: 250px;
+    left: 26%;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf01 .viila_img {
+    width: 175px;
+    margin-top: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf01 .villaInfText {
+    margin-top: 5px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf01 .villaInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf01 .villaInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf02 {
+    width: 250px;
+    height: 250px;
+    left: 26%;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf02 .viila_img {
+    width: 175px;
+    margin-top: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf02 .villaInfText {
+    margin-top: 5px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf02 .villaInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf02 .villaInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf03 {
+    width: 250px;
+    height: 250px;
+    left: 26%;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf03 .viila_img {
+    width: 175px;
+    margin-top: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf03 .villaInfText {
+    margin-top: 5px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf03 .villaInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf03 .villaInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf04 {
+    width: 250px;
+    height: 250px;
+    left: 26%;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf04 .viila_img {
+    width: 175px;
+    margin-top: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf04 .villaInfText {
+    margin-top: 5px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf04 .villaInfText .number1 {
+    width: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  .live main .wrapper .villaSiteLayout .villaInf04 .villaInfText .text {
+    text-align: center;
+  }
+  .live main .wrapper .villaSiteLayout .bookButton_RWD {
+    border: 1.5px solid #0C1244;
+    width: 380px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    color: #0C1244;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 60px;
+  }
+  .live main .wrapper .villaSiteLayout .bookButton_RWD:hover {
+    background-color: #0C1244;
+    color: #F5F0DD;
+  }
+}
+/*# sourceMappingURL=live.css.map */

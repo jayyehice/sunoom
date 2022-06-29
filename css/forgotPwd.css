@@ -1,0 +1,386 @@
+.forgotPwd {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.forgotPwd header {
+  border-top: 0.1px solid #F5F0DD;
+}
+
+.forgotPwd main {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+.forgotPwd main .wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .wrapper {
+    width: 479px;
+  }
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .wrapper .crumbs {
+    display: none;
+  }
+}
+
+.forgotPwd main .wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+.forgotPwd main p {
+  margin-top: 17px;
+}
+
+.forgotPwd main h3 {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main h3 {
+    font-size: 28rem;
+    margin: 50px 0 20px 0;
+  }
+}
+
+.forgotPwd main .forgotMain {
+  width: 625px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain {
+    width: 459px;
+    margin: 0 auto;
+  }
+}
+
+.forgotPwd main .forgotMain h4 {
+  text-align: center;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain h4 {
+    display: none;
+  }
+}
+
+.forgotPwd main .forgotMain .phoneText {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .phoneText {
+    display: block;
+    font-size: 20rem;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.forgotPwd main .forgotMain .forgotForm label {
+  font-size: 24rem;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm label {
+    position: relative;
+    left: -138px;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm .forgotFormInput {
+  width: 400px;
+  height: 50px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  margin: 15px 0;
+  padding-left: 10px;
+  font-size: 24rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm .forgotFormInput {
+    width: 380px;
+    height: 60px;
+    margin: 10px 0 50px 0;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm .forgotFormBtn {
+  background-color: #F5F0DD;
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #0C1244;
+  margin-bottom: 10px;
+  font-size: 16rem;
+  color: #0C1244;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm .forgotFormBtn {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #F5F0DD;
+    border: 1.5px solid #F5F0DD;
+    background-color: #0C1244;
+    font-size: 25rem;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm .forgotFormBtn:hover {
+  cursor: pointer;
+  color: #F5F0DD;
+  border: 1.5px solid #F5F0DD;
+  background-color: #0C1244;
+}
+
+.forgotPwd main .forgotMain .forgotForm .resend {
+  font-size: 20rem;
+  border: 0;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  cursor: pointer;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm .resend {
+    text-decoration: underline;
+    margin-bottom: 50px;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm .reminder {
+  margin-top: 150px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm .reminder {
+    display: none;
+  }
+}
+
+.forgotPwd main .forgotMain .forgotForm .reminderText {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd main .forgotMain .forgotForm .reminderText {
+    display: none;
+  }
+}
+
+.forgotPwd_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.forgotPwd_moon header {
+  border-top: 0.1px solid #0C1244;
+}
+
+.forgotPwd_moon main {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+.forgotPwd_moon main .wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .wrapper {
+    width: 479px;
+  }
+}
+
+.forgotPwd_moon main .wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #F5F0DD;
+}
+
+.forgotPwd_moon main p {
+  margin-top: 17px;
+}
+
+.forgotPwd_moon main h3 {
+  margin-top: 62px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main h3 {
+    font-size: 28rem;
+    margin: 50px 0 20px 0;
+  }
+}
+
+.forgotPwd_moon main .forgotMain {
+  width: 625px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain {
+    width: 459px;
+    margin: 0 auto;
+  }
+}
+
+.forgotPwd_moon main .forgotMain h4 {
+  text-align: center;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain h4 {
+    display: none;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .phoneText {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .phoneText {
+    display: block;
+    font-size: 20rem;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm label {
+  font-size: 24rem;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm label {
+    position: relative;
+    left: -138px;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormInput {
+  width: 400px;
+  height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  margin: 15px 0;
+  padding-left: 10px;
+  font-size: 24rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm .forgotFormInput {
+    width: 380px;
+    height: 60px;
+    margin: 10px 0 50px 0;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn {
+  background-color: #0C1244;
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #F5F0DD;
+  margin-bottom: 10px;
+  font-size: 16rem;
+  color: #F5F0DD;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #0C1244;
+    border: 1.5px solid #0C1244;
+    background-color: #F5F0DD;
+    font-size: 25rem;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .forgotFormBtn:hover {
+  cursor: pointer;
+  color: #0C1244;
+  border: 1.5px solid #0C1244;
+  background-color: #F5F0DD;
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .resend {
+  font-size: 20rem;
+  border: 0;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  cursor: pointer;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm .resend {
+    text-decoration: underline;
+    margin-bottom: 50px;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .reminder {
+  margin-top: 150px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm .reminder {
+    display: none;
+  }
+}
+
+.forgotPwd_moon main .forgotMain .forgotForm .reminderText {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 579px) {
+  .forgotPwd_moon main .forgotMain .forgotForm .reminderText {
+    display: none;
+  }
+}
+/*# sourceMappingURL=forgotPwd.css.map */

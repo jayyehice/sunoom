@@ -1,0 +1,84 @@
+body {
+  background-color: #F5F0DD;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+body main form {
+  background-color: #0C1244;
+  width: 30%;
+  padding: 50px;
+  color: #F5F0DD;
+  text-align: center;
+  border-radius: 35px;
+}
+
+body main form img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+body main form h2 {
+  line-height: 1;
+  margin-bottom: 60px;
+}
+
+body main form #hint {
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+body main form p.error {
+  color: red;
+}
+
+body main form input {
+  display: block;
+  width: 50%;
+  height: 45px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+  font-size: 20rem;
+}
+
+body main form #account {
+  margin-bottom: 45px;
+}
+
+body main form #password {
+  margin-bottom: 45px;
+}
+
+body main form #submit {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  display: block;
+  margin: 0 auto;
+  width: 22%;
+  line-height: 45px;
+  font-weight: bold;
+  border: 1px solid #0C1244;
+}
+
+body main form #submit:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  border: 1px solid #F5F0DD;
+}
+/*# sourceMappingURL=backgroundSystem_login.css.map */

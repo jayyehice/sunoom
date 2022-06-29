@@ -1,0 +1,4240 @@
+.bodyCover {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: none;
+  top: 0;
+  z-index: 5;
+}
+
+.ChooseMove {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+}
+
+.notCheck {
+  -webkit-animation: notCheck 0.2s;
+          animation: notCheck 0.2s;
+}
+
+@-webkit-keyframes notCheck {
+  0% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes notCheck {
+  0% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+}
+
+.tripChoose {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.tripChoose .dayclick {
+  background-color: #0C1244 !important;
+  color: #F5F0DD;
+}
+
+.tripChoose .buttonBorderTop {
+  border-top: 1px solid #F5F0DD !important;
+}
+
+.tripChoose .buttonBorderBottom {
+  border-bottom: 1px solid #F5F0DD !important;
+}
+
+.tripChoose .weekCircularMoon {
+  border: 1px solid #F5F0DD !important;
+}
+
+.tripChoose select {
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+
+.tripChoose input {
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+
+.tripChoose button {
+  color: #0C1244;
+}
+
+.tripChoose .addfadein {
+  width: 12vw;
+  height: 10vh;
+  position: fixed;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  border: 1px solid #0C1244;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 10vh;
+  font-size: 16px;
+  border-radius: 22px;
+  opacity: 0;
+  z-index: -999;
+}
+
+.tripChoose .addfadein .fa-regular {
+  margin-left: 10px;
+}
+
+.tripChoose span {
+  font-size: 16px;
+}
+
+.tripChoose section h2 {
+  text-align: center;
+}
+
+.tripChoose section h3 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tripChoose .shoppingProcess {
+  width: 1180px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.tripChoose .shoppingProcess img {
+  width: 80px;
+  height: 24px;
+  margin: 0 40px;
+}
+
+.tripChoose .shoppingProcess .chooseAdate {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose .shoppingProcess .chooseAtrip {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.tripChoose .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose .shoppingProcess .tallyOrder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose .shoppingProcess .orderComplete {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose .datePickerBox {
+  width: 1280px;
+  margin: 0px auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F5F0DD;
+  z-index: 4;
+}
+
+.tripChoose .datePickerBox .daysbutton {
+  display: inline-block;
+  width: 160px;
+  margin: 10px;
+  font-size: 16px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #0C1244;
+  background-color: #F5F0DD;
+}
+
+.tripChoose .datePickerBox .daysbutton .SendChoose {
+  width: 160px;
+  height: 30px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  font-size: 16rem;
+  cursor: pointer;
+}
+
+.tripChoose .datePickerBox .daysbutton select {
+  width: 160px;
+  height: 30px;
+  font-size: 16rem;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tripChoose .datePickerBox .daysbutton .DateAndWeek {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.tripChoose .datePickerBox .daysbutton .DateAndWeek h3 {
+  margin: 0px;
+}
+
+.tripChoose .datePickerBox .daysbutton .DateAndWeek .weekCircular {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 999em;
+  border: 1px solid #0C1244;
+  margin-right: 5px;
+}
+
+.tripChoose .datePickerBox .daysbutton p {
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.tripChoose .ListSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  width: 50px;
+  height: 170px;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  font-size: 20px;
+  text-align: center;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.tripChoose .ListSmall .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+  line-height: 20px;
+  margin-top: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin-left: 4px;
+}
+
+.tripChoose .BigList {
+  width: 0px;
+  height: 100vh;
+  background-color: #F5F0DD;
+  border: 2px solid #0C1244;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  right: 3%;
+  top: 0%;
+  position: fixed;
+  display: none;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.tripChoose .BigList span {
+  font-weight: bolder;
+}
+
+.tripChoose .BigList h6 {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.tripChoose .BigList .leftButton {
+  width: 8px;
+  height: 8px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.tripChoose .BigList .rightButton {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.tripChoose .BigList .deleteButton {
+  width: 16px;
+  cursor: pointer;
+}
+
+.tripChoose .BigList p {
+  font-weight: bolder;
+  margin: 10px;
+}
+
+.tripChoose .BigList .ListTitle {
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+}
+
+.tripChoose .BigList .tripAndDate {
+  border-bottom: 1px solid #0C1244;
+  padding: 10px;
+}
+
+.tripChoose .BigList .tripAndDate input {
+  width: 200px;
+  background-color: #F5F0DD;
+}
+
+.tripChoose .BigList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: safe;
+      -ms-flex-pack: safe;
+          justify-content: safe;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 10px 0;
+}
+
+.tripChoose .BigList ul li {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tripChoose .BigList ul li:first-Child {
+  text-align: center;
+  width: 150px;
+  overflow: auto;
+}
+
+.tripChoose .BigList ul li:nth-Child(2) {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.tripChoose .BigList ul li:nth-Child(3) {
+  width: 60px;
+  text-align: center;
+}
+
+.tripChoose .BigList ul li:nth-Child(4) {
+  width: 50px;
+  text-align: center;
+}
+
+.tripChoose .BigList ul li:nth-Child(4) img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.tripChoose .BigList .tripList {
+  border-bottom: 1px solid #0C1244;
+}
+
+.tripChoose .BigList .FoodList {
+  border-bottom: 1px solid #0C1244;
+}
+
+.tripChoose .BigList .StayList {
+  border-bottom: 1px solid #0C1244;
+}
+
+.tripChoose .BigList .totalBlock {
+  margin: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tripChoose .BigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 25px;
+}
+
+.tripChoose .BigList .totalBlock .totalTitle span {
+  font-size: 16px;
+}
+
+.tripChoose .BigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 0px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.tripChoose .BigList .totalBlock .totalPrice span {
+  font-size: 20px;
+  color: #FFBF44;
+}
+
+.tripChoose .BigList .totalBlock .totalPrice select {
+  text-align: center;
+}
+
+.tripChoose .BigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
+
+.tripChoose .tripChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #0C1244;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  position: relative;
+}
+
+.tripChoose .tripChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.tripChoose .tripChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tripChoose .tripChooseBlock .itineraryTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.tripChoose .tripChooseBlock .itineraryTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+}
+
+.tripChoose .tripChooseBlock .itineraryTitle select {
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningTime {
+  width: 120px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA #tripPriceA {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB #itineraryText {
+  width: 440px;
+}
+
+.tripChoose .tripChooseBlock .morningItineraryA #addItineraryM {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary img {
+  width: 120px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB #tripPriceB {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB #itineraryTextB {
+  width: 440px;
+}
+
+.tripChoose .tripChooseBlock .noonItinerary #addItineraryN {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 16px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary img {
+  width: 120px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC #tripPriceC {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB #itineraryTextC {
+  width: 440px;
+}
+
+.tripChoose .tripChooseBlock #addItineraryE {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .foodChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #0C1244;
+  margin: 0 auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  position: relative;
+}
+
+.tripChoose .foodChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.tripChoose .foodChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tripChoose .foodChooseBlock .foodTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.tripChoose .foodChooseBlock .foodTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
+.tripChoose .foodChooseBlock .morningFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .foodChooseBlock .morningFood img {
+  width: 120px;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodTitle {
+  text-align: center;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA #foodPriceA {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .foodChooseBlock .morningFood .morningFoodA .morningFoodB #foodTextA {
+  width: 440px;
+}
+
+.tripChoose .foodChooseBlock .morningFood #addFoodM {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .foodChooseBlock .noonFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .foodChooseBlock .noonFood img {
+  width: 120px;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB #foodPriceB {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .foodChooseBlock .noonFood .noonFoodA .noonFoodB #foodTextB {
+  width: 440px;
+}
+
+.tripChoose .foodChooseBlock .noonFood #addFoodN {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .foodChooseBlock .eveningFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 16px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood img {
+  width: 120px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC #foodPriceC {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB #foodTextC {
+  width: 440px;
+}
+
+.tripChoose .foodChooseBlock #addFoodE {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .stayChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #0C1244;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  position: relative;
+}
+
+.tripChoose .stayChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.tripChoose .stayChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tripChoose .stayChooseBlock .stayTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.tripChoose .stayChooseBlock .stayTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
+.tripChoose .stayChooseBlock .cabin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinTitle {
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .cabin #cabinButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA #cabinImg {
+  margin: 24px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA .cabinBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption #cabinPrice {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .stayChooseBlock .cabin .cabinBlockA .cabinBlockB #cabinText {
+  width: 440px;
+}
+
+.tripChoose .stayChooseBlock .cabin #addcabin {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .stayChooseBlock .camping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 15px;
+}
+
+.tripChoose .stayChooseBlock .camping .campingTitle {
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .camping #campingButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA #campingImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA .campingBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption #campingPrice {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .stayChooseBlock .camping .campingBlockA .campingBlockB #campingText {
+  width: 440px;
+}
+
+.tripChoose .stayChooseBlock .camping #addCamping {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .stayChooseBlock .villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #0C1244;
+  padding: 16px;
+}
+
+.tripChoose .stayChooseBlock .villa .villaTitle {
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .villa #villaButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA {
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA #villaImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #F5F0DD;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption #villaPrice {
+  border: 1px solid #0C1244;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose .stayChooseBlock .villa .villaBlockA .villaBlockB #villaText {
+  width: 440px;
+}
+
+.tripChoose .stayChooseBlock #addVilla {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose .buttonBlock1 {
+  width: 300px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tripChoose .buttonBlock1 #backToDatePage {
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .buttonBlock1 #backToDatePage {
+    width: 300px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.tripChoose .buttonBlock1 #backToDatePage:hover {
+  color: #F5F0DD;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+}
+
+.tripChoose .buttonBlock1 #NextPage {
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .buttonBlock1 #NextPage {
+    width: 300px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.tripChoose .buttonBlock1 #NextPage:hover {
+  color: #F5F0DD;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+}
+
+.tripChoose #readyToPay {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.tripChoose #readyToPay select {
+  border: 1px solid #0C1244;
+  color: #0C1244;
+  background-color: #F5F0DD;
+}
+
+.tripChoose #readyToPay input {
+  border: 1px solid #0C1244;
+  color: #0C1244;
+  background-color: #F5F0DD;
+}
+
+.tripChoose #readyToPay button {
+  color: #0C1244;
+}
+
+.tripChoose #readyToPay section h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay section h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.tripChoose #readyToPay section h3 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tripChoose #readyToPay .shoppingProcess {
+  width: 1180px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess {
+    width: 98%;
+    height: 75px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.tripChoose #readyToPay .shoppingProcess img {
+  width: 80px;
+  height: 24px;
+  margin: 0 40px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess img {
+    display: none;
+  }
+}
+
+.tripChoose #readyToPay .shoppingProcess .chooseAdate {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose #readyToPay .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .chooseAdate h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .chooseAdate {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose #readyToPay .shoppingProcess .chooseAdate h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose #readyToPay .shoppingProcess .chooseAtrip {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose #readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .chooseAtrip {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose #readyToPay .shoppingProcess .chooseAtrip h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose #readyToPay .shoppingProcess .tallyOrder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.tripChoose #readyToPay .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .tallyOrder h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .tallyOrder {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose #readyToPay .shoppingProcess .tallyOrder h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose #readyToPay .shoppingProcess .orderComplete {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose #readyToPay .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .orderComplete h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .shoppingProcess .orderComplete {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose #readyToPay .shoppingProcess .orderComplete h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList {
+  width: 1000px;
+  height: auto;
+  border: 2px solid #0C1244;
+  margin: 50px auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .readyToPayBigList {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayListTitle {
+  margin: 0px auto;
+  width: 980px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .readyToPayBigList .readyToPayListTitle {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayListDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .readyToPayBigList .readyToPayListDate {
+    margin: 10px;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayListDate li {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .readyToPayBigList .readyToPayListDate li {
+    margin-right: 7px;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayListDate li:first-Child {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table {
+  width: 99%;
+  height: auto;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 1px solid #0C1244;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table th {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bolder;
+  border: 1px solid #0C1244;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table td {
+  border: 1px solid #0C1244;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .readyToPayBigList table ul {
+    display: block;
+  }
+}
+
+.tripChoose #readyToPay .readyToPayBigList table ul li {
+  margin: 7px;
+  text-align: center;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table ul li i {
+  margin-left: 5px;
+}
+
+.tripChoose #readyToPay .readyToPayBigList table ul li:last-child {
+  color: #FFBF44;
+  border-left: none;
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayTotalBlock {
+  margin: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 150px;
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalTitle {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 19.5px;
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 12px;
+  text-align: center;
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice span {
+  color: #FFBF44;
+  font-size: 20px;
+}
+
+.tripChoose #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice #readyToPayCouponPrice {
+  color: #FF4444;
+}
+
+.tripChoose #readyToPay .payBlock {
+  width: 750px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose #readyToPay .payBlock h5 {
+  margin-top: 15px;
+}
+
+.tripChoose #readyToPay .payBlock #payEmail {
+  width: 450px;
+  height: 50px;
+  background-color: #F5F0DD;
+  font-size: 24px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock #payEmail {
+    width: 90%;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .mailAndPhone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .mailAndPhone {
+    display: block;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .mailAndPhone .email {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .mailAndPhone .email {
+    margin-right: 0;
+  }
+}
+
+.tripChoose #readyToPay .payBlock #payPhoneNumber {
+  width: 200px;
+  height: 50px;
+  background-color: #F5F0DD;
+  font-size: 24px;
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock {
+    padding-bottom: 0px;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock .firstName {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock .firstName {
+    margin-right: 10px;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock #firstName {
+  width: 200px;
+  height: 50px;
+  background-color: #F5F0DD;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock #firstName {
+    width: 150px;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock .lastName {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock .lastName {
+    margin-right: 0px;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock #lastName {
+  width: 200px;
+  height: 50px;
+  background-color: #F5F0DD;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock #lastName {
+    margin-right: 0px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .nameBlock .payWay {
+    display: none;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .nameBlock #payWay {
+  width: 200px;
+  height: 50px;
+  background-color: #F5F0DD;
+  font-size: 20px;
+  text-align: center;
+  text-align-last: center;
+}
+
+.tripChoose #readyToPay .payBlock .payWayMobile {
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .payWayMobile {
+    display: block;
+  }
+  .tripChoose #readyToPay .payBlock .payWayMobile #payWayMobileUse {
+    width: 200px;
+    height: 50px;
+    background-color: #F5F0DD;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock {
+  margin-top: 50px;
+  border-top: 1px solid #0C1244;
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock input {
+  width: 150px;
+  height: 50px;
+  background-color: #F5F0DD;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay .payBlock .creditCardBlock input {
+    width: 70px;
+    height: 40px;
+  }
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock h4 {
+  width: 150px;
+  height: 50px;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock .creditCardNums input {
+  margin-right: 5px;
+  text-align: center;
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock .expAndScode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tripChoose #readyToPay .payBlock .creditCardBlock .expAndScode .exp {
+  margin-right: 16px;
+}
+
+.tripChoose #readyToPay .payBlock .directions .agreeListOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.tripChoose #readyToPay .payBlock .directions .agreeListTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+
+.tripChoose #readyToPay #FinishPage {
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+  margin: 50px auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose #readyToPay #FinishPage {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+
+.tripChoose #readyToPay #FinishPage:hover {
+  color: #F5F0DD;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon select {
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon input {
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon button {
+  color: #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon section h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon section h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.tripChoose .readyToPay_moon section h3 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess {
+  width: 1180px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess {
+    width: 98%;
+    height: 75px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess img {
+  width: 80px;
+  height: 24px;
+  margin: 0 40px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess img {
+    display: none;
+  }
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .chooseAdate {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAdate h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAdate {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAdate h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .chooseAtrip {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAtrip h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAtrip {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose .readyToPay_moon .shoppingProcess .chooseAtrip h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .tallyOrder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .tallyOrder h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .tallyOrder {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose .readyToPay_moon .shoppingProcess .tallyOrder h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .orderComplete {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose .readyToPay_moon .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .orderComplete h4:last-Child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .shoppingProcess .orderComplete {
+    width: 75px;
+    height: 75px;
+  }
+  .tripChoose .readyToPay_moon .shoppingProcess .orderComplete h4 {
+    font-size: 16px;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList {
+  width: 1000px;
+  height: auto;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .bigList {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList .ListTitle {
+  margin: 0px auto;
+  width: 980px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .bigList .ListTitle {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList .ListDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .bigList .ListDate {
+    margin: 10px;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList .ListDate li {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .bigList .ListDate li {
+    margin-right: 7px;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList .ListDate li:first-Child {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.tripChoose .readyToPay_moon .bigList table {
+  width: 99%;
+  height: auto;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 1px solid #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon .bigList table th {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bolder;
+  border: 1px solid #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon .bigList table td {
+  border: 1px solid #F5F0DD;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.tripChoose .readyToPay_moon .bigList table td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tripChoose .readyToPay_moon .bigList table ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .bigList table ul {
+    display: block;
+  }
+}
+
+.tripChoose .readyToPay_moon .bigList table ul li {
+  margin: 7px;
+  text-align: center;
+}
+
+.tripChoose .readyToPay_moon .bigList table ul li:last-child {
+  color: #FFBF44;
+  border-left: none;
+}
+
+.tripChoose .readyToPay_moon .bigList .totalBlock {
+  margin: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 150px;
+}
+
+.tripChoose .readyToPay_moon .bigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 19.5px;
+}
+
+.tripChoose .readyToPay_moon .bigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 12px;
+  text-align: center;
+}
+
+.tripChoose .readyToPay_moon .bigList .totalBlock .totalPrice span {
+  color: #FFBF44;
+  font-size: 20px;
+}
+
+.tripChoose .readyToPay_moon .bigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
+
+.tripChoose .readyToPay_moon .payBlock {
+  width: 750px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock {
+    width: 98%;
+    height: 100%;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock h5 {
+  margin-top: 15px;
+}
+
+.tripChoose .readyToPay_moon .payBlock #payEmail {
+  width: 450px;
+  height: 50px;
+  background-color: #0C1244;
+  font-size: 24px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock #payEmail {
+    width: 90%;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .mailAndPhone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .mailAndPhone {
+    display: block;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .mailAndPhone .email {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .mailAndPhone .email {
+    margin-right: 0;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock #payPhoneNumber {
+  width: 200px;
+  height: 50px;
+  background-color: #0C1244;
+  font-size: 24px;
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock {
+    padding-bottom: 0px;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock .firstName {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock .firstName {
+    margin-right: 10px;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock #firstName {
+  width: 200px;
+  height: 50px;
+  background-color: #0C1244;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock #firstName {
+    width: 150px;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock .lastName {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock .lastName {
+    margin-right: 0px;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock #lastName {
+  width: 200px;
+  height: 50px;
+  background-color: #0C1244;
+  font-size: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock #lastName {
+    margin-right: 0px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .nameBlock .payWay {
+    display: none;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .nameBlock #payWay {
+  width: 200px;
+  height: 50px;
+  background-color: #0C1244;
+  font-size: 20px;
+  text-align: center;
+  text-align-last: center;
+}
+
+.tripChoose .readyToPay_moon .payBlock .payWayMobile {
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .payWayMobile {
+    display: block;
+  }
+  .tripChoose .readyToPay_moon .payBlock .payWayMobile #payWayMobileUse {
+    width: 200px;
+    height: 50px;
+    background-color: #0C1244;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock {
+  margin-top: 50px;
+  border-top: 1px solid #F5F0DD;
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock input {
+  width: 150px;
+  height: 50px;
+  background-color: #0C1244;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .payBlock .creditCardBlock input {
+    width: 70px;
+    height: 40px;
+  }
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock h4 {
+  width: 150px;
+  height: 50px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock .creditCardNums input {
+  margin-right: 5px;
+  text-align: center;
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock .expAndScode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tripChoose .readyToPay_moon .payBlock .creditCardBlock .expAndScode .exp {
+  margin-right: 16px;
+}
+
+.tripChoose .readyToPay_moon .payBlock .directions .agreeListOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.tripChoose .readyToPay_moon .payBlock .directions .agreeListTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+
+.tripChoose .readyToPay_moon .buttonBlock {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+}
+
+.tripChoose .readyToPay_moon .buttonBlock .backToChoosePage {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  margin-left: 20px;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .buttonBlock .backToChoosePage {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+
+.tripChoose .readyToPay_moon .buttonBlock .backToChoosePage:hover {
+  color: #0C1244;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+}
+
+.tripChoose .readyToPay_moon .buttonBlock #FinishPage {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+}
+
+@media (max-width: 576px) {
+  .tripChoose .readyToPay_moon .buttonBlock #FinishPage {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+
+.tripChoose_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.tripChoose_moon select {
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+
+.tripChoose_moon input {
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+
+.tripChoose_moon button {
+  color: #F5F0DD;
+}
+
+.tripChoose_moon .addfadein {
+  width: 12vw;
+  height: 10vh;
+  position: fixed;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  border: 1px solid #F5F0DD;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 10vh;
+  font-size: 16px;
+  border-radius: 22px;
+  opacity: 0;
+}
+
+.tripChoose_moon .addfadein .fa-regular {
+  margin-left: 10px;
+}
+
+.tripChoose_moon span {
+  font-size: 16px;
+}
+
+.tripChoose_moon section h2 {
+  text-align: center;
+}
+
+.tripChoose_moon section h3 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.tripChoose_moon .shoppingProcess {
+  width: 1180px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.tripChoose_moon .shoppingProcess img {
+  width: 80px;
+  height: 24px;
+  margin: 0 40px;
+}
+
+.tripChoose_moon .shoppingProcess .chooseAdate {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose_moon .shoppingProcess .chooseAdate h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose_moon .shoppingProcess .chooseAtrip {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+.tripChoose_moon .shoppingProcess .chooseAtrip h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose_moon .shoppingProcess .tallyOrder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose_moon .shoppingProcess .tallyOrder h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose_moon .shoppingProcess .orderComplete {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #F5F0DD;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tripChoose_moon .shoppingProcess .orderComplete h4:last-Child {
+  margin-bottom: 20px;
+}
+
+.tripChoose_moon .datePickerBox {
+  width: 980px;
+  height: auto;
+  margin: 50px auto;
+  position: relative;
+}
+
+.tripChoose_moon .datePickerBox .dateTitle p {
+  margin: 20px;
+}
+
+.tripChoose_moon .datePickerBox .dateTitle i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+}
+
+.tripChoose_moon .datePickerBox .pickerBox {
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tripChoose_moon .datePickerBox .pickerBox .daysbutton {
+  width: 130px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.tripChoose_moon .datePickerBox .pickerBox .daysbutton img {
+  width: 90px;
+}
+
+.tripChoose_moon .datePickerBox .pickerBox .daysbutton select {
+  width: 115px;
+}
+
+.tripChoose_moon .ListSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  width: 50px;
+  height: 170px;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tripChoose_moon .ListSmall .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+  line-height: 20px;
+  margin-top: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin-left: 4px;
+}
+
+.tripChoose_moon .BigList {
+  width: 0px;
+  height: 100vh;
+  background-color: #0C1244;
+  border: 2px solid #F5F0DD;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  right: 3%;
+  top: 0%;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.tripChoose_moon .BigList span {
+  font-weight: bolder;
+}
+
+.tripChoose_moon .BigList h6 {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.tripChoose_moon .BigList .leftButton {
+  width: 8px;
+  height: 8px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.tripChoose_moon .BigList .rightButton {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.tripChoose_moon .BigList .deleteButton {
+  width: 16px;
+  cursor: pointer;
+}
+
+.tripChoose_moon .BigList p {
+  font-weight: bolder;
+  margin: 10px;
+}
+
+.tripChoose_moon .BigList .ListTitle {
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #F5F0DD;
+  color: #0C1244;
+  text-align: center;
+  line-height: 50px;
+}
+
+.tripChoose_moon .BigList .tripAndDate {
+  border-bottom: 1px solid #F5F0DD;
+  padding: 10px;
+}
+
+.tripChoose_moon .BigList .tripAndDate input {
+  width: 200px;
+  background-color: #0C1244;
+}
+
+.tripChoose_moon .BigList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: safe;
+      -ms-flex-pack: safe;
+          justify-content: safe;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 10px 0;
+}
+
+.tripChoose_moon .BigList ul li {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tripChoose_moon .BigList ul li:first-Child {
+  text-align: center;
+  width: 150px;
+  overflow: auto;
+}
+
+.tripChoose_moon .BigList ul li:nth-Child(2) {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.tripChoose_moon .BigList ul li:nth-Child(3) {
+  width: 60px;
+  text-align: center;
+}
+
+.tripChoose_moon .BigList ul li:nth-Child(4) {
+  width: 50px;
+  text-align: center;
+}
+
+.tripChoose_moon .BigList ul li:nth-Child(4) img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.tripChoose_moon .BigList .tripList {
+  border-bottom: 1px solid #F5F0DD;
+}
+
+.tripChoose_moon .BigList .FoodList {
+  border-bottom: 1px solid #F5F0DD;
+}
+
+.tripChoose_moon .BigList .StayList {
+  border-bottom: 1px solid #F5F0DD;
+}
+
+.tripChoose_moon .BigList .totalBlock {
+  margin: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tripChoose_moon .BigList .totalBlock .totalTitle {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tripChoose_moon .BigList .totalBlock .totalTitle span {
+  font-size: 16px;
+}
+
+.tripChoose_moon .BigList .totalBlock .totalPrice {
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 20.5px;
+  text-align: center;
+}
+
+.tripChoose_moon .BigList .totalBlock .totalPrice span {
+  font-size: 20px;
+  color: #FFBF44;
+}
+
+.tripChoose_moon .BigList .totalBlock .totalPrice #couponPrice {
+  color: #FF4444;
+}
+
+.tripChoose_moon .tripChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.tripChoose_moon .tripChooseBlock .itineraryTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .tripChooseBlock .itineraryTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+}
+
+.tripChoose_moon .tripChooseBlock .itineraryTitle select {
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningTime {
+  width: 120px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA #tripPriceA {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB #itineraryText {
+  width: 440px;
+}
+
+.tripChoose_moon .tripChooseBlock .morningItineraryA #addItineraryM {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary img {
+  width: 120px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB #tripPriceB {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB #itineraryTextB {
+  width: 440px;
+}
+
+.tripChoose_moon .tripChooseBlock .noonItinerary #addItineraryN {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 16px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary img {
+  width: 120px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC #tripPriceC {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB #itineraryTextC {
+  width: 440px;
+}
+
+.tripChoose_moon .tripChooseBlock #addItineraryE {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .foodChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #F5F0DD;
+  margin: 0 auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.tripChoose_moon .foodChooseBlock .foodTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .foodChooseBlock .foodTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood img {
+  width: 120px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodTitle {
+  text-align: center;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA #foodPriceA {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB #foodTextA {
+  width: 440px;
+}
+
+.tripChoose_moon .foodChooseBlock .morningFood #addFoodM {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood img {
+  width: 120px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
+  margin: 22px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB #foodPriceB {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB #foodTextB {
+  width: 440px;
+}
+
+.tripChoose_moon .foodChooseBlock .noonFood #addFoodN {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 16px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood img {
+  width: 120px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB {
+  margin: 5px auto;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC #foodPriceC {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB #foodTextC {
+  width: 440px;
+}
+
+.tripChoose_moon .foodChooseBlock #addFoodE {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .stayChooseBlock {
+  width: 1000px;
+  height: 676px;
+  border: 2px solid #F5F0DD;
+  margin: 50px auto;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.tripChoose_moon .stayChooseBlock .stayTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 66px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .stayChooseBlock .stayTitle .chooseDate {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinTitle {
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin #cabinButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA #cabinImg {
+  margin: 24px 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption #cabinPrice {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB #cabinText {
+  width: 440px;
+}
+
+.tripChoose_moon .stayChooseBlock .cabin #addcabin {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .stayChooseBlock .camping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 15px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingTitle {
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .camping #campingButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA #campingImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption #campingPrice {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB #campingText {
+  width: 440px;
+}
+
+.tripChoose_moon .stayChooseBlock .camping #addCamping {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon .stayChooseBlock .villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #F5F0DD;
+  padding: 16px;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaTitle {
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .villa #villaButton {
+  width: 20px;
+  height: 20px;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA {
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 170px;
+  border-radius: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA #villaImg {
+  margin: 15px;
+  width: 170px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 21px;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB {
+  margin: 0 auto;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption select {
+  width: 180px;
+  height: 38px;
+  border-radius: 22px;
+  background-color: #0C1244;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption #villaPrice {
+  border: 1px solid #F5F0DD;
+  width: 170px;
+  height: 35px;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB #villaText {
+  width: 440px;
+}
+
+.tripChoose_moon .stayChooseBlock #addVilla {
+  width: 35px;
+  height: 35px;
+  opacity: 0.1;
+  cursor: not-allowed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.tripChoose_moon #NextPage {
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+  margin: 50px auto;
+}
+
+@media (max-width: 576px) {
+  .tripChoose_moon #NextPage {
+    width: 300px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.tripChoose_moon #NextPage:hover {
+  color: #0C1244;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+}
+/*# sourceMappingURL=tripChoose.css.map */

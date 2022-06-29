@@ -1,0 +1,391 @@
+@charset "UTF-8";
+.overFlow {
+  position: fixed;
+  width: 100%;
+}
+
+.moon {
+  background-color: #0C1244;
+}
+
+/* 基本按鈕樣式 */
+button.hamburger_icon {
+  border: 2px solid grey;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  z-index: 100;
+  /* 每一條橫線的樣式 */
+  /* 最上面那條線的樣式 */
+  /* 最下面那條線的樣式 */
+}
+
+@media (max-width: 576px) {
+  button.hamburger_icon {
+    left: 20px;
+    top: 20px;
+  }
+}
+
+button.hamburger_icon span.-hr {
+  height: 2px;
+  width: 80%;
+  background-color: grey;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+button.hamburger_icon span.-hr.-top {
+  top: 25%;
+}
+
+button.hamburger_icon span.-hr.-bottom {
+  top: 75%;
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.hamburger_icon.-on {
+  /* 中間的線 */
+  /* 下方的線 */
+}
+
+button.hamburger_icon.-on span.-hr.-top {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  top: 5px;
+  left: 6px;
+  width: 102%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+button.hamburger_icon.-on span.-hr.-middle {
+  opacity: 0;
+}
+
+button.hamburger_icon.-on span.-hr.-bottom {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  bottom: 5px;
+  left: 6px;
+  width: 102%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: auto;
+}
+
+button.btn2 {
+  border: 2px solid #fff;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  left: 50px;
+  top: 50px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  /* 每一條橫線的樣式 */
+  /* 最上面那條線的樣式 */
+  /* 最下面那條線的樣式 */
+}
+
+@media (max-width: 576px) {
+  button.btn2 {
+    left: 20px;
+    top: 20px;
+  }
+}
+
+button.btn2 span.-hr {
+  height: 2px;
+  width: 80%;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+button.btn2 span.-hr.-top {
+  top: 25%;
+}
+
+button.btn2 span.-hr.-bottom {
+  top: 75%;
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.btn2.-on {
+  /* 中間的線 */
+  /* 下方的線 */
+}
+
+button.btn2.-on span.-hr.-top {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  top: 5px;
+  left: 6px;
+  width: 102%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+button.btn2.-on span.-hr.-middle {
+  opacity: 0;
+}
+
+button.btn2.-on span.-hr.-bottom {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  bottom: 5px;
+  left: 6px;
+  width: 102%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: auto;
+}
+
+header {
+  font-size: 20rem;
+  /* 共同 ul*/
+  /* 共同 li*/
+}
+
+header a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+header nav {
+  position: fixed;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  top: 0;
+}
+
+header video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header li {
+  line-height: 40px;
+}
+
+header .one {
+  width: 120px;
+  mix-blend-mode: screen;
+  margin-left: 411px;
+  padding-top: 133px;
+}
+
+@media (max-width: 576px) {
+  header .one {
+    margin: 0 auto;
+  }
+}
+
+header .two {
+  margin-left: 30px;
+}
+
+header .ham_logo {
+  position: absolute;
+  left: 190px;
+  top: 180px;
+}
+
+@media (max-width: 576px) {
+  header .ham_logo {
+    left: 10px;
+    top: 100px;
+  }
+}
+
+header .ham_pay {
+  position: absolute;
+  right: 50px;
+  top: 120px;
+}
+
+@media (max-width: 576px) {
+  header .ham_pay {
+    right: 20px;
+    top: 70px;
+  }
+}
+
+header .ham_member {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
+@media (max-width: 576px) {
+  header .ham_member {
+    right: 70px;
+    top: 20px;
+  }
+}
+
+header .hamLoginOut {
+  color: #fff;
+  position: absolute;
+  right: 50px;
+  top: 60px;
+}
+
+@media (max-width: 576px) {
+  header .hamLoginOut {
+    right: 20px;
+    top: 30px;
+  }
+}
+
+header .hamLoginOut #hamL {
+  display: block;
+}
+
+header .hamLoginOut #hamO {
+  background: none;
+  color: #fff;
+  border: 0;
+  padding: 0;
+  font-size: 20rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+header .ham_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 210px;
+  margin-top: 45px;
+  z-index: 1;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  header .ham_social {
+    left: -188px;
+    top: 0;
+  }
+}
+
+header .ham_ig {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  header .ham_ig {
+    margin-right: 25px;
+  }
+}
+
+header .ham_ytb {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  header .ham_ytb {
+    margin-right: 25px;
+  }
+}
+
+header .ham_fb {
+  margin-right: 50px;
+}
+
+@media (max-width: 576px) {
+  header .ham_fb {
+    margin-right: 25px;
+  }
+}
+
+header .headerCenter {
+  padding-top: 77px;
+  text-align: center;
+}
+
+header .headerCenter .headerMoonLogo {
+  display: none;
+}
+
+header .headerRight {
+  text-align: right;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 100;
+}
+
+@media (max-width: 576px) {
+  header .headerRight {
+    right: -10px;
+    top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .headerRight .sunPay {
+    display: none !important;
+  }
+}
+
+header .headerRight .moonPay {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  header .headerRight .moonPay {
+    display: none !important;
+  }
+}
+
+header .headerRight .switch #sunSwitch {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  header .headerRight .switch #sunSwitch {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+header .headerRight .switch #moonSwitch {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  header .headerRight .switch #moonSwitch {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+/*# sourceMappingURL=header.css.map */

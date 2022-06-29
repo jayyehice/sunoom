@@ -166,6 +166,7 @@ new Vue({
 
         //bbq
         document.getElementsByClassName("bbq")[0].addEventListener("click", e => {
+            alert("t")
             this.boxContent = this.map_list[0];
             boxShow();
         });

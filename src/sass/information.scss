@@ -241,7 +241,7 @@
                         left: 280px;
                         position: absolute;
                         cursor: pointer;    
-
+                        border: 1px solid red;
                     }
 
                     .stilthouse{
@@ -301,7 +301,7 @@
                     }
                     p{
                         color: $moon_color;
-                        font-size: $p;
+                        font-size: 16rem;
                         letter-spacing: 3px;
                         line-height: 1.6;
                     }
