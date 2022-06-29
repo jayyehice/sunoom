@@ -425,11 +425,411 @@ window.addEventListener('load',function(){
     //     </div>
     //     `,
     // })
+    // Vue.component('readytopay',{
+    //     props:[],
+    //     data() {
+    //         return {
+                
+    //         }
+    //     },
+    //     template:
+    //     `<div class="readyToPay">
+    //         <article>
+    //             <section>
+    //                 <h2>訂購流程</h2>
+    //                 <div class="shoppingProcess">
+    //                     <div class="chooseAdate">
+    //                         <h4>1</h4>
+    //                         <h4>選擇日期</h4>
+    //                     </div>
+    //                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+    //                     <div class="chooseAtrip">
+    //                         <h4>2</h4>
+    //                         <h4>選擇行程</h4>
+    //                     </div>
+    //                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+    //                     <div class="tallyOrder">
+    //                         <h4>3</h4>
+    //                         <h4>結帳</h4>
+    //                     </div>
+    //                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+    //                     <div class="orderComplete">
+    //                         <h4>4</h4>
+    //                         <h4>訂單完成</h4>
+    //                     </div>
+    //                 </div>
+    //                 <!-- 訂購流程結束 -->
+    //                 <h3>3.結帳</h3>
+    //                 <!-- 訂單明細開始 -->
+    //                 <div class="bigList">
+    //                     <div class="ListTitle">訂單明細</div>
+    //                     <ul class="ListDate">
+    //                         <li>自由行</li>
+    //                         <li>Check In：<h6>2022/07/16</h6></li>
+    //                         <li>Check Out：<h6>2022/07/18</h6></li>
+    //                     </ul>
+    //                     <table>
+    //                         <thead>
+    //                             <th>日期</th>
+    //                             <th>遊</th>
+    //                             <th>食</th>
+    //                             <th>宿</th>
+    //                         </thead>
+    //                         <tbody>
+    //                             <tr>
+    //                                 <td>07/16(Sat)</td>
+    //                                 <td class="tripList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="FoodList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="StayList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                             </tr>
+    //                         </tbody>
+    //                         <tbody>
+    //                             <tr>
+    //                                 <td>07/16(Sat)</td>
+    //                                 <td class="tripList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="FoodList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="StayList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                             </tr>
+    //                         </tbody>
+    //                         <tbody>
+    //                             <tr>
+    //                                 <td>07/16(Sat)</td>
+    //                                 <td class="tripList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="FoodList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                                 <td class="StayList">
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>潛水(日)</li>
+    //                                         <li>6<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$11,994</li>
+    //                                     </ul>
+    //                                     <ul>
+    //                                         <li>不需選購</li>
+    //                                         <li>0<i class="fa-solid fa-user"></i></li>
+    //                                         <li>$0</li>
+    //                                     </ul>
+    //                                 </td>
+    //                             </tr>
+    //                         </tbody>
+    //                     </table>
+    //                     <div class="totalBlock">
+    //                         <div class="totalTitle">
+    //                             <span>小計：</span><br>
+    //                             <span>折扣碼：</span><br>
+    //                             <span>折扣金額：</span><br>
+    //                             <span>總金額：</span><br>
+    //                         </div>
+    //                         <div class="totalPrice">
+    //                             <span>$32,186</span><br>
+    //                             <select name="" id="">
+    //                                 <option value="">Long_bro_only_9453</option>
+    //                                 <option value="">NewMember</option>
+    //                             </select><br>
+    //                             <span id="couponPrice">-$16,093</span><br>
+    //                             <span>$16,093</span><br>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //                 <!-- <div class="payBlock">
+    //                     <h4>PayMent</h4>
+    //                     <div class="mailAndPhone">
+    //                         <div class="email">
+    //                             <h5>E-Mail</h5>
+    //                         <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    //                         </div>
+    //                         <div class="phone">
+    //                             <h5>連絡電話</h5>
+    //                             <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+    //                         </div>
+    //                     </div>
+    //                     <div class="nameBlock">
+    //                         <div class="firstName">
+    //                             <h5>姓氏</h5>
+    //                             <input type="text" name="" id="firstName">
+    //                         </div>
+    //                         <div class="lastName">
+    //                             <h5>名字</h5>
+    //                             <input type="text" name="" id="lastName">
+    //                         </div>
+    //                         <div class="payWay">
+    //                             <h5>付款方式</h5>
+    //                             <select name="" id="payWay">
+    //                                 <option value="">信用卡</option>
+    //                                 <option value="">匯款</option>
+    //                             </select>
+    //                         </div>
+    //                     </div>
+    //                     <div class="payWayMobile">
+    //                         <h5>付款方式</h5>
+    //                         <select name="" id="payWayMobileUse">
+    //                             <option value="">信用卡</option>
+    //                             <option value="">匯款</option>
+    //                         </select>
+    //                     </div>
+    //                     <p>我們將會發送確認的驗證碼郵件。<br>
+    //                         <br>
+    //                         *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
+    //                     <div class="creditCardBlock">
+    //                         <h4>輸入信用卡</h4>
+    //                         <h5>輸入卡號</h5>
+    //                         <div class="creditCardNums">
+    //                             <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+    //                             <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+    //                             <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+    //                             <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+    //                         </div>
+    //                         <div class="expAndScode">
+    //                             <div class="exp">
+    //                                 <h5>有效日期</h5>
+    //                                 <input type="month" name="" id="">
+    //                             </div>
+    //                             <div class="Scode">
+    //                                 <h5>安全碼</h5>
+    //                                 <input type="text" maxlength="3" oninput = "value=value.replace(/[^\d]/g,'')">
+    //                             </div> 
+    //                         </div>
+    //                     </div>
+    //                     <div class="directions">
+    //                         <p>訂房注意事項<br>
+    //                             <br>
+    //                             ◎ 90 公分以下孩童加人不加床，酌收300元/人＜每房僅限一位＞，加棉被一件500元。
+    //                             ◎ 90公分以上 --- 佔床（或加床）含早餐，加第一人每人加收1,000元，加二人合收1,500元。<br>
+    //                             <br>
+    //                             1. 房價已含服務費及早餐。<br>
+    //                             2. 訂房時請確認人數，為維護住房品質，入宿當天無法提供臨時任何加床或加寢具之服務須在訂房時告知，請您務必配合依訂房人數入住。<br>
+    //                             3. 如有超住人數，明島有權拒絕房客當天入住，並收取50%房費作為山居留房至當日之損失，特此說明。<br>
+    //                             4. 當日住宿者若無法於當日下午三點~五點前抵達Chick in，請務必提早告知！明島有權不再保留訂房！並且當日訂金無法退還！<br>
+    //                             5. 為維持房客住房品質，客房內嚴禁炊煮；嚴禁酗酒喧鬧。若有類似情事發生，經人員勸導無效，可要求房客立即退房，房費並不予退還。<br>
+    //                             6. 因安全顧慮，室內禁止吸禁，嚴禁炊煮、烤肉及攜帶寵物。(若在房間抽菸將收1,000元清潔費)<br>
+    //                             7. 禁止使用非客房配置之任何電器用品及瓦斯器具，以免發生危險。<br>
+    //                         </p>
+    //                         <div class="agreeListOne">
+    //                             <input type="checkbox" name="" id="">
+    //                             <p>我同意收到電子最新消息和優惠</p>
+    //                         </div>
+    //                         <div class="agreeListTwo">
+    //                             <input type="checkbox" name="" id="">
+    //                             <p>我同意隱私條款與預訂政策和條件</p>
+    //                         </div>
+    //                         <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
+    //                     </div>
+    //                 </div>
+    //                 <button id="FinishPage">完成結帳</button> -->
+                    
+    //                 <!-- 改成form表單 -->
+    //                 <form action="./php/pay.php" class="payBlock" method="post">
+    //                     <h4>PayMent</h4>
+    //                     <div class="mailAndPhone">
+    //                         <div class="email">
+    //                             <h5>E-Mail</h5>
+    //                             <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    //                         </div>
+    //                         <div class="phone">
+    //                             <h5>連絡電話</h5>
+    //                             <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+    //                         </div>
+    //                     </div>
+    //                     <div class="nameBlock">
+    //                         <div class="firstName">
+    //                             <h5>姓氏</h5>
+    //                             <input type="text" name="" id="firstName">
+    //                         </div>
+    //                         <div class="lastName">
+    //                             <h5>名字</h5>
+    //                             <input type="text" name="" id="lastName">
+    //                         </div>
+    //                         <div class="payWay">
+    //                             <h5>付款方式</h5>
+    //                             <select name="" id="payWay">
+    //                                 <option value="">信用卡</option>
+    //                                 <option value="">匯款</option>
+    //                             </select>
+    //                         </div>
+    //                     </div>
+    //                     <div class="payWayMobile">
+    //                         <h5>付款方式</h5>
+    //                         <select name="" id="payWayMobileUse">
+    //                             <option value="">信用卡</option>
+    //                             <option value="">匯款</option>
+    //                         </select>
+    //                     </div>
+    //                     <p>我們將會發送確認的驗證碼郵件。<br>
+    //                         <br>
+    //                         *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
+                
+    //                         <div class="directions">
+    //                         <p>訂房注意事項<br>
+    //                             <br>
+    //                             ◎ 90 公分以下孩童加人不加床，酌收300元/人＜每房僅限一位＞，加棉被一件500元。
+    //                             ◎ 90公分以上 --- 佔床（或加床）含早餐，加第一人每人加收1,000元，加二人合收1,500元。<br>
+    //                             <br>
+    //                             1. 房價已含服務費及早餐。<br>
+    //                             2. 訂房時請確認人數，為維護住房品質，入宿當天無法提供臨時任何加床或加寢具之服務須在訂房時告知，請您務必配合依訂房人數入住。<br>
+    //                             3. 如有超住人數，明島有權拒絕房客當天入住，並收取50%房費作為山居留房至當日之損失，特此說明。<br>
+    //                             4. 當日住宿者若無法於當日下午三點~五點前抵達Chick in，請務必提早告知！明島有權不再保留訂房！並且當日訂金無法退還！<br>
+    //                             5. 為維持房客住房品質，客房內嚴禁炊煮；嚴禁酗酒喧鬧。若有類似情事發生，經人員勸導無效，可要求房客立即退房，房費並不予退還。<br>
+    //                             6. 因安全顧慮，室內禁止吸禁，嚴禁炊煮、烤肉及攜帶寵物。(若在房間抽菸將收1,000元清潔費)<br>
+    //                             7. 禁止使用非客房配置之任何電器用品及瓦斯器具，以免發生危險。<br>
+    //                         </p>
+    //                         <div class="agreeListOne">
+    //                             <input type="checkbox" name="" id="">
+    //                             <p>我同意收到電子最新消息和優惠</p>
+    //                         </div>
+    //                         <div class="agreeListTwo">
+    //                             <input type="checkbox" name="" id="">
+    //                             <p>我同意隱私條款與預訂政策和條件</p>
+    //                         </div>
+    //                         <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
+    //                     </div>
+    //                     <button id="FinishPage" type="submit">完成結帳</button>
+    //                     <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
+        
+    //                 </form>
+                
+    //             </section>
+    //         </article>
+    //     </div>`
+    // });
     let vm = new Vue({
         el:'#app',
         data:{
+
+            //呼叫組件
+            content:'',
+
             triplist:'',
-            countent:'',
 
             choosePrice:'',
             pepoleNums:0,
@@ -471,6 +871,10 @@ window.addEventListener('load',function(){
             minorTotalPrice:0,
             Discount:0,
             totalPrice:0,
+            //結帳明細金額
+            minorTotalPriceR:0,
+            DiscountR:0,
+            totalPriceR:0,
 
             
             //上午行程
@@ -678,7 +1082,7 @@ window.addEventListener('load',function(){
                         //晚餐
                         for(fe = 0; fe < this.food_list.length; fe++ ){
                             // console.log(this.activity_list[j][1]);
-                            if(this.food_list[fe][0] == FoodNoonName[i].innerText){
+                            if(this.food_list[fe][0] == FoodEveningName[i].innerText){
                                 FoodEchoose.value = fe
                                 this.eveningFoodtext=this.food_list[fe][2]
                                 this.eveningFoodPrice=this.food_list[fe][1]
@@ -1461,45 +1865,59 @@ window.addEventListener('load',function(){
                         if(date == i ){
                             $('.tripMorningName')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
                             $('.tripMorningPrice')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
-    
-                            let tirpMorningChooseList = [];
-                            tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
-                            localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+                            
+                            // $('.tripMorningNameR')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
+                            // $('.tripMorningPriceR')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
     
                             $('.tripNoonName')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
                             $('.tripNoonPrice')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+
+                            // $('.tripNoonNameR')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
+                            // $('.tripNoonPriceR')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
     
-                            let tripNoonChooseList = [];
-                            tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
-                            localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                            // let tripNoonChooseList = [];
+                            // tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                            // localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
                             
                             $('.tripEveningName')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
                             $('.tripEveningPrice')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+
+                            // $('.tripEveningNameR')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
+                            // $('.tripEveningPriceR')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
     
-                            let tripEveningChooseList = [];
-                            tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
-                            localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                            // let tripEveningChooseList = [];
+                            // tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                            // localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
     
                             $('.FoodMorningName')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
                             $('.FoodMorningPrice')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodMorningNameR')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
+                            // $('.FoodMorningPriceR')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
     
-                            let FoodMorningChooseList = [];
-                            FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
-                            localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
+                            // let FoodMorningChooseList = [];
+                            // FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
+                            // localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
     
                             $('.FoodNoonName')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
                             $('.FoodNoonPrice')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodNoonNameR')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
+                            // $('.FoodNoonPriceR')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
     
-                            let FoodNoonChooseList = [];
-                            FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
-                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
+                            // let FoodNoonChooseList = [];
+                            // FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
+                            // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
     
                             $('.FoodEveningName')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
                             $('.FoodEveningPrice')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodEveningNameR')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
+                            // $('.FoodEveningPriceR')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
     
-                            let FoodEveningChooseList = [];
-                            FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
-                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
+                            // let FoodEveningChooseList = [];
+                            // FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
+                            // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
     
                             let stayChoose = document.getElementsByClassName('stayChoose');
                             for(let j = 0 ; j < stayChoose.length ; j++){
@@ -1516,9 +1934,9 @@ window.addEventListener('load',function(){
                                     $('.StayChooseName')[i].innerHTML = thisStayName;
                                     $('.StayChoosePrice')[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
             
-                                    let stayChooseList = [];
-                                    stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                    localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+                                    // let stayChooseList = [];
+                                    // stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                    // localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
                                 }
                             }
                             // e.stopPropagation();
@@ -1657,17 +2075,18 @@ window.addEventListener('load',function(){
                 };
                 this.minorTotalPrice = tripMoringPricetotal + tripNoonPricetotal + tripEveningPricetotal +FoodMorningPricetotal +FoodNoonPricetotal + FoodEveningPricetotal + StayChoosePricetotal;
                 this.minorTotalPrice ='$'+this.minorTotalPrice.toLocaleString('en-US')
-
+                this.minorTotalPriceR = this.minorTotalPrice
                 this.discount_list.forEach(() => {
                     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
                     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
                 });
-                
+                this.DiscountR = this.Discount
                 this.totalPrice = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.Discount.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+                this.totalPriceR = this.totalPrice
             },
-            getNewDiscountPrice(){
-                this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
-            },
+            // getNewDiscountPrice(){
+            //     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
+            // },
             //人數減
             dpnums(e){
                 // console.log(typeof(eg.nextElementSibling.innerHTML));
@@ -1754,14 +2173,125 @@ window.addEventListener('load',function(){
                 eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
                 localStorage.removeItem('StayDeleteButton'+[eg.dataset.deleteindex])
             },
-            
+            //判斷住宿是否全都已選擇完畢
+            FinishCheck(){ 
+                let StayChooseName = document.getElementsByClassName('StayChooseName');
+                let ans = StayChooseName.every(()=>{
+                    console.log(innerText);
+                    return innerText != ''
+                })
+                return ans
+            },
+            //完成選擇後開始結帳，隱藏選單
+            close(){
+                //選取內容帶去完整明細表
+                let tripMorningName = document.getElementsByClassName('tripMorningName');
+                let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+                let tripMorningNameR = document.getElementsByClassName('tripMorningNameR');
+                let tripMorningPriceR = document.getElementsByClassName('tripMorningPriceR');
 
+                let tripNoonName = document.getElementsByClassName('tripNoonName');
+                let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
+                let tripNoonNameR = document.getElementsByClassName('tripNoonNameR');
+                let tripNoonPriceR = document.getElementsByClassName('tripNoonPriceR');
 
+                let tripEveningName = document.getElementsByClassName('tripEveningName');
+                let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
+                let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
+                let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR');
+
+                let FoodMorningName = document.getElementsByClassName('FoodMorningName');
+                let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');
+                let FoodMorningNameR = document.getElementsByClassName('FoodMorningNameR');
+                let FoodMorningPriceR = document.getElementsByClassName('FoodMorningPriceR');
+
+                let FoodNoonName = document.getElementsByClassName('FoodNoonName');
+                let FoodNoonPrice = document.getElementsByClassName('FoodNoonPrice');
+                let FoodNoonNameR = document.getElementsByClassName('FoodNoonNameR');
+                let FoodNoonPriceR = document.getElementsByClassName('FoodNoonPriceR');
+
+                let FoodEveningName = document.getElementsByClassName('FoodEveningName');
+                let FoodEveningPrice = document.getElementsByClassName('FoodEveningPrice');
+                let FoodEveningNameR = document.getElementsByClassName('FoodEveningNameR');
+                let FoodEveningPriceR = document.getElementsByClassName('FoodEveningPriceR');
+
+                let StayChooseName = document.getElementsByClassName('StayChooseName');
+                let StayChoosePrice = document.getElementsByClassName('StayChoosePrice');
+                let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
+                let StayChoosePriceR = document.getElementsByClassName('StayChoosePriceR');
+
+                let PepoleImg = '<i class="fa-solid fa-user"></i>'
+
+                function check(x){
+                    return  x != ''
+                }
+                for(i = 0; i < StayChooseName.length; i++){
+                    if(StayChooseName[i].innerText == ''){
+                        // alert('請確認您尚未選擇的住宿')
+                        sectionBlock.style.display = 'block'
+                        readyToPay.style.display = 'none'
+                        break;
+                    }else{
+                        sectionBlock.style.display = 'none'
+                        readyToPay.style.display = 'block'
+                        $('html, body').animate({
+                            scrollTop:'0'
+                        },1000)
+                        break;
+                        
+                    }
+                }
+
+                for(i = 0 ; i < this.dateArray.length; i++){
+                    //行程
+                    tripMorningNameR[i].innerText = tripMorningName[i].innerText
+                    tripMorningNameR[i].nextElementSibling.innerHTML = tripMorningName[i].nextElementSibling.innerText + PepoleImg
+                    tripMorningPriceR[i].innerText = tripMorningPrice[i].innerText
+
+                    tripNoonNameR[i].innerText = tripNoonName[i].innerText
+                    tripNoonNameR[i].nextElementSibling.innerHTML = tripNoonName[i].nextElementSibling.innerText + PepoleImg
+                    tripNoonPriceR[i].innerText = tripNoonPrice[i].innerText
+
+                    tripEveningNameR[i].innerText = tripEveningName[i].innerText
+                    tripEveningNameR[i].nextElementSibling.innerHTML = tripEveningName[i].nextElementSibling.innerText + PepoleImg
+                    tripEveningPriceR[i].innerText = tripEveningPrice[i].innerText
+                    //餐點
+                    FoodMorningNameR[i].innerText = FoodMorningName[i].innerText
+                    FoodMorningNameR[i].nextElementSibling.innerHTML = FoodMorningName[i].nextElementSibling.innerText + PepoleImg
+                    FoodMorningPriceR[i].innerText = FoodMorningPrice[i].innerText
+
+                    FoodNoonNameR[i].innerText = FoodNoonName[i].innerText
+                    FoodNoonNameR[i].nextElementSibling.innerHTML = FoodNoonName[i].nextElementSibling.innerText + PepoleImg
+                    FoodNoonPriceR[i].innerText = FoodNoonPrice[i].innerText
+
+                    FoodEveningNameR[i].innerText = FoodEveningName[i].innerText
+                    FoodEveningNameR[i].nextElementSibling.innerHTML = FoodEveningName[i].nextElementSibling.innerText + PepoleImg
+                    FoodEveningPriceR[i].innerText = FoodEveningPrice[i].innerText
+                    //住宿
+                    StayChooseNameR[i].innerText = StayChooseName[i].innerText
+                    StayChoosePriceR[i].innerText = StayChoosePrice[i].innerText
+                }
+                this.minorTotalPriceR = this.minorTotalPrice
+                this.DiscountR = this.Discount
+                this.totalPriceR =this.totalPrice
+                // this.discount_list.forEach(() => {
+                // this.DiscountR =  '-$'+(Math.round((this.minorTotalPriceR.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+                // })
+                // this.totalPriceR = '$'+(parseInt(this.minorTotalPriceR.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+
+            },
+            totalR(){
+                this.discount_list.forEach(() => {
+                    this.DiscountR =  '-$'+(Math.round((this.minorTotalPriceR.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+                    })
+                this.totalPriceR = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+            },
+            back(){
+                window.location.href = './orderPage.html'
+            },
         },
         computed:{
-            daysButton(){
-                return {daysbutton : true};
-            }
+            
         },
         created() {
             //取行程資料表
@@ -1943,10 +2473,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         tripEchoose.value = -1
-                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!',
-                        this.eveningtripPrice='0',
-                        this.eveningtripImg='./img/orderPage/welcome.jpg',
-                        
+                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!'
+                        this.eveningtripPrice='0'
+                        this.eveningtripImg='./img/orderPage/welcome.jpg'
                     } 
 
                 })
@@ -1987,9 +2516,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         FoodMchoose.value = -1
-                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!',
-                        this.morningFoodPrice='0',
-                        this.morningFoodImg='./img/orderPage/welcome.jpg',
+                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!'
+                        this.morningFoodPrice='0'
+                        this.morningFoodImg='./img/orderPage/welcome.jpg'
                         
                     } 
 
@@ -2030,9 +2559,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         FoodNchoose.value = -1 
-                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!',
-                        this.noonFoodPrice='0',
-                        this.noonFoodImg='./img/orderPage/welcome.jpg',
+                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!'
+                        this.noonFoodPrice='0'
+                        this.noonFoodImg='./img/orderPage/welcome.jpg'
                         
                     } 
 
@@ -2078,9 +2607,9 @@ window.addEventListener('load',function(){
                                 cursor:'not-allowed',
                             })
                             FoodEchoose.value = -1
-                            this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!',
-                            this.eveningFoodPrice='0',
-                            this.eveningFoodImg='./img/orderPage/welcome.jpg',
+                            this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!'
+                            this.eveningFoodPrice='0'
+                            this.eveningFoodImg='./img/orderPage/welcome.jpg'
                         }
 
 
@@ -2411,6 +2940,78 @@ window.addEventListener('load',function(){
             this.FoodNoonNameValue = FoodNchoose.value;
             this.FoodEveningNameValue = FoodEchoose.value;
 
+
+            // //選取內容帶去完整明細表
+            // let tripMorningName = document.getElementsByClassName('tripMorningName');
+            // let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+            // let tripMorningNameR = document.getElementsByClassName('tripMorningNameR');
+            // let tripMorningPriceR = document.getElementsByClassName('tripMorningPriceR');
+
+            // let tripNoonName = document.getElementsByClassName('tripNoonName');
+            // let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
+            // let tripNoonNameR = document.getElementsByClassName('tripNoonNameR');
+            // let tripNoonPriceR = document.getElementsByClassName('tripNoonPriceR');
+
+            // let tripEveningName = document.getElementsByClassName('tripEveningName');
+            // let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
+            // let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
+            // let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR');
+
+            // let FoodMorningName = document.getElementsByClassName('FoodMorningName');
+            // let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');
+            // let FoodMorningNameR = document.getElementsByClassName('FoodMorningNameR');
+            // let FoodMorningPriceR = document.getElementsByClassName('FoodMorningPriceR');
+
+            // let FoodNoonName = document.getElementsByClassName('FoodNoonName');
+            // let FoodNoonPrice = document.getElementsByClassName('FoodNoonPrice');
+            // let FoodNoonNameR = document.getElementsByClassName('FoodNoonNameR');
+            // let FoodNoonPriceR = document.getElementsByClassName('FoodNoonPriceR');
+
+            // let FoodEveningName = document.getElementsByClassName('FoodEveningName');
+            // let FoodEveningPrice = document.getElementsByClassName('FoodEveningPrice');
+            // let FoodEveningNameR = document.getElementsByClassName('FoodEveningNameR');
+            // let FoodEveningPriceR = document.getElementsByClassName('FoodEveningPriceR');
+
+            // let StayChooseName = document.getElementsByClassName('StayChooseName');
+            // let StayChoosePrice = document.getElementsByClassName('StayChoosePrice');
+            // let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
+            // let StayChoosePriceR = document.getElementsByClassName('StayChoosePriceR');
+
+            // let PepoleImg = '<i class="fa-solid fa-user"></i>'
+            // for(i = 0 ; i < this.dateArray.length; i++){
+            //     //行程
+            //     tripMorningNameR[i].innerText = tripMorningName[i].innerText
+            //     tripMorningNameR[i].nextElementSibling.innerHTML = tripMorningName[i].nextElementSibling.innerText + PepoleImg
+            //     tripMorningPriceR[i].innerText = tripMorningPrice[i].innerText
+
+            //     tripNoonNameR[i].innerText = tripNoonName[i].innerText
+            //     tripNoonNameR[i].nextElementSibling.innerHTML = tripNoonName[i].nextElementSibling.innerText + PepoleImg
+            //     tripNoonPriceR[i].innerText = tripNoonPrice[i].innerText
+
+            //     tripEveningNameR[i].innerText = tripEveningName[i].innerText
+            //     tripEveningNameR[i].nextElementSibling.innerHTML = tripEveningName[i].nextElementSibling.innerText + PepoleImg
+            //     tripEveningPriceR[i].innerText = tripEveningPrice[i].innerText
+            //     //餐點
+            //     FoodMorningNameR[i].innerText = FoodMorningName[i].innerText
+            //     FoodMorningNameR[i].nextElementSibling.innerHTML = FoodMorningName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodMorningPriceR[i].innerText = FoodMorningPrice[i].innerText
+
+            //     FoodNoonNameR[i].innerText = FoodNoonName[i].innerText
+            //     FoodNoonNameR[i].nextElementSibling.innerHTML = FoodNoonName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodNoonPriceR[i].innerText = FoodNoonPrice[i].innerText
+
+            //     FoodEveningNameR[i].innerText = FoodEveningName[i].innerText
+            //     FoodEveningNameR[i].nextElementSibling.innerHTML = FoodEveningName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodEveningPriceR[i].innerText = FoodEveningPrice[i].innerText
+            //     //住宿
+            //     StayChooseNameR[i].innerText = StayChooseName[i].innerText
+            //     StayChoosePriceR[i].innerText = StayChoosePrice[i].innerText
+            // }
+            // this.discount_list.forEach(() => {
+            //     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
+            //     this.DiscountR =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+            // });
+            // this.totalPriceR = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
             // this.discount_list.forEach(() => {
             //     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
             //     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
