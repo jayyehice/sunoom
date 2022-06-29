@@ -12,6 +12,10 @@
 
               if($table == 'article'){
                      $sql = "SELECT * FROM V_article";
+              }else if($table == 'comment'){
+                     $sql = "SELECT * FROM V_comment";
+              }else if($table == 'order_table'){
+                     $sql = "SELECT * FROM V_order_table";
               }else{
                      $sql = "SELECT * FROM $table";
               }

@@ -4,6 +4,13 @@ Vue.component('activity',{
         return{
             content:'',
             page:0,
+            show_pop_up:false,
+            index:0,
+            type:true,
+            name:'',
+            price:0,
+            people:0,
+            intro:'', 
         }
     },
     methods: {
@@ -18,10 +25,24 @@ Vue.component('activity',{
             $(e.target).addClass('on');
         },
         showEdit(e){
-            // console.log(e.target.dataset.index);
-            let index = e.target.dataset.index;
-            console.log(this.list[this.page][index]);
-            
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true;
+            this.name = this.list[this.page][this.index][1];
+            this.price = this.list[this.page][this.index][3];
+            this.people = this.list[this.page][this.index][9];
+            this.intro = this.list[this.page][this.index][2];
+
+            if(this.list[this.page][this.index][8] == '陸'){
+                this.type = true;
+            }else if(this.list[this.page][this.index][8] == '海'){
+                this.type = false;
+            }
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
         },
     },
     mounted() {
@@ -90,6 +111,84 @@ Vue.component('activity',{
                 </ul>
             </div>
         </div>
+
+
+
+        <div class="pop_up" v-if="show_pop_up">
+            <div class="formBody_01">
+                <h3>活動資訊</h3>
+                <form class="Form_01 col" action="">
+                    <div class="leftForm_01 col-6">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <p>{{list[page][index][0]}}</p>
+                            </li>
+                            <li>
+                                <h4>名稱:</h4>
+                                <input type="text" v-model="name">
+                            </li>
+                            <li>
+                                <h4>價格:</h4>
+                                <input type="text" v-model="price">
+                            </li>
+                            <li>
+                                <h4>人數:</h4>
+                                <input type="text" v-model="poeple">
+                            </li>
+                            <li class="radio">
+                                <h4>類別:</h4>
+                                <input type="radio" name="island" value="land" :checked="type">
+                                <label for="food">陸</label>
+                                <input type="radio" name="island" value="sea" :checked="!type">
+                                <label for="live">海</label>
+                            </li>
+                            <li>
+                                <h4>簡介:</h4>
+                            </li>
+                            <li>
+                                <textarea v-model="intro"></textarea>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                    <div class="rightForm_01 col-6">
+                        <ul>
+                            <li>
+                                <h4>縮圖:</h4>
+                                <input type="file">
+                            </li>
+                            <li>
+                                <img :src="list[page][index][5]" alt="">
+                            </li>
+                            <li>
+                                <h4>大圖:</h4>
+                                <input type="file">
+                            </li>
+                            <li>
+                                <img :src="list[page][index][6]" alt="">
+                            </li>
+                        </ul>
+                        <!-- <span class="col-1">活動</span> <textarea class="col-8" name="" id="" cols="23" rows="10"></textarea><br>
+                        <span class="col-1"> 活動</span><input class="col-6" type="file" src="" alt=""><button class="col-2">上傳</button><br>
+                            -->
+                    </div>
+                </form>            
+                <div class="buttonBlock_01 row">
+                    <button type="submit" class="b01 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b03 col-2">結束活動</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
     </div> 
     
     `

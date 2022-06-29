@@ -4,6 +4,14 @@ Vue.component('shop',{
         return{
             content:'',
             page:0,
+            show_pop_up:false,
+            index:0,
+            island:true,
+            name:'',
+            price:0,
+            principal:'',
+            phone:'',
+            status:true,
         }
     },
     methods: {
@@ -18,10 +26,30 @@ Vue.component('shop',{
             $(e.target).addClass('on');
         },
         showEdit(e){
-            // console.log(e.target.dataset.index);
-            let index = e.target.dataset.index;
-            console.log(this.list[this.page][index]);
-            
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true;
+            this.name = this.list[this.page][this.index][2];
+            this.price = this.list[this.page][this.index][9];
+            this.principal = this.list[this.page][this.index][4];
+            this.phone = this.list[this.page][this.index][5];
+
+            if(this.list[this.page][this.index][8] == 1){
+                this.island = true;
+            }else if(this.list[this.page][this.index][8] == 2){
+                this.island = false;
+            }
+
+            if(this.list[this.page][this.index][6] == 1){
+                this.status = true;
+            }else{
+                this.status = false;
+            }
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
         },
     },
     mounted() {
@@ -66,7 +94,7 @@ Vue.component('shop',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]">
+                <ul class="tableList" v-for="(item, index) in list[page]"  v-if="index != 0">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[2]}}</p></li>
                     <li class="col"><p>{{item[9]}}</p></li>
@@ -90,6 +118,64 @@ Vue.component('shop',{
                 </ul>
             </div>
         </div>
+
+
+
+
+        <div class="pop_up" v-if="show_pop_up">
+            <div class="formBody_02">
+                <h3>店家資訊</h3>
+                <form class="Form_02 col" action="">
+                    <ul>
+                        <li>
+                            <h4>編號:</h4>
+                            <p>{{list[page][index][0]}}</p>
+                        </li>
+                        <li>
+                            <h4>店名:</h4>
+                            <input type="text" v-model="name">
+                        </li>
+                        <li>
+                            <h4>價格:</h4>
+                            <input type="text" v-model="price">
+                        </li>
+                        <li>
+                            <h4>負責人:</h4>
+                            <input type="text" v-model="principal">
+                        </li>
+                        <li>
+                            <h4>電話:</h4>
+                            <input type="text" v-model="phone">
+                        </li>
+                        <li class="radio">
+                            <h4>位置:</h4>
+                            <input type="radio" name="island" value="open" :checked="island">
+                            <label for="food">日島</label>
+                            <input type="radio" name="island" value="close" :checked="!island">
+                            <label for="live">月島</label>
+                        </li>
+                        <li class="radio">
+                            <h4>狀態:</h4>
+                            <input type="radio" name="article_type" value="open" :checked="status">
+                            <label for="food">營運中</label>
+                            <input type="radio" name="article_type" value="close" :checked="!status">
+                            <label for="live">未營運</label>
+                        </li>
+                    </ul>
+                        
+                </form>            
+                <div class="buttonBlock_02 row">
+                    <button type="submit" class="b01 col-2 offset-3" @click="comfirm">確認</button>
+                    <div class="col-2"></div>
+                    <button class="b02 col-2" @click="cancle">取消</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
     </div> 
     
     `

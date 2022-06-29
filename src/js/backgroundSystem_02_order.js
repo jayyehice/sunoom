@@ -4,6 +4,8 @@ Vue.component('order_table',{
         return{
             content:'',
             page:0,
+            show_pop_up:false,
+            index:0,
         }
     },
     methods: {
@@ -18,10 +20,31 @@ Vue.component('order_table',{
             $(e.target).addClass('on');
         },
         showEdit(e){
-            // console.log(e.target.dataset.index);
-            let index = e.target.dataset.index;
-            console.log(this.list[this.page][index]);
+            this.index = e.target.dataset.index; 
+            this.show_pop_up = true;
+        },
+        changePayStatus(status){
+            switch(status){
+                case 0:
+                    return '未付款';
+                    break;
             
+                case 1:
+                    return '已付款';
+                    break;
+
+                default:
+                    return '未知';
+            }
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        unfinish(e){
+            this.show_pop_up=false;
         },
     },
     mounted() {
@@ -91,6 +114,84 @@ Vue.component('order_table',{
                 </ul>
             </div>
         </div>
+
+
+
+
+        <div class="pop_up" v-if="show_pop_up">
+            <div class="formBody_00">
+                <h3>訂單資訊</h3>
+                <form class="Form col" action="">
+                    <div class="leftForm col-6">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <p>{{list[page][index][0]}}</p>
+                            </li>
+                            <li>
+                                <h4>訂購人:</h4>
+                                <p>{{list[page][index][8]+list[page][index][9]}}</p>
+                            </li>
+                            <li>
+                                <h4>電話:</h4>
+                                <p>{{list[page][index][11]}}</p>
+                            </li>
+                            <li>
+                                <h4>信箱:</h4>
+                                <p id="order_email">{{list[page][index][10]}}</p>
+                            </li>
+                            <li>
+                                <h4>付款狀態:</h4>
+                                <p>{{changePayStatus(list[page][index][6])}}</p>
+                            </li>
+                            <li>
+                                <h4>付款方式:</h4>
+                                <p>{{list[page][index][3]}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rightForm col-6">
+                        <ul>
+                            <li>
+                                <h4>旅遊日期:</h4>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <h4>訂購人數:</h4>
+                                <p>1</p>
+                            </li>
+                            <li id="order_content">
+                                <h4>訂購內容:</h4>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <h4>折扣碼:</h4>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <h4>總金額:</h4>
+                                <p>{{list[page][index][4]}}</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </form>            
+                <div class="buttonBlock row">
+                    <button type="submit" class="b1 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b2 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b3 col-2" @click="unfinish">不成立訂單</button>
+                </div>
+                </div>
+            
+        </div>
+
+
+
+
+
     </div> 
     
     `
