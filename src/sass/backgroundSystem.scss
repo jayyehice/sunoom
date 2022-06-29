@@ -395,6 +395,233 @@ main{
             position: fixed;
             top: 0;
             left: 0;
+
+            .formBody_04{
+                // width: 800px;
+                // height: 500px;
+                padding: 30px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                background-color: #F5F0DD;
+                // display: none;
+                border-radius: 20px;
+                border: 1px solid #0C1244;
+                p{
+                    border: 1px solid #0C1244;
+                    box-sizing: border-box;
+                }
+
+                h3{
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .Form_04{
+                    display: flex;
+                    justify-content: center;
+                    // margin-left: 30px;
+                    ul{
+                        display: block;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            &>h4{
+                                // border: 1px solid #000;
+                                // text-align: right;
+                                box-sizing: border-box;
+                                width: 120px;
+                                margin-right: 20px;
+                            }
+                            &>input{
+                                width: 220px;
+                                font-size: 16px;
+                                padding: 0 10px;
+                                text-align: center;
+                            }
+                            &>p{
+                                width: 140px;
+                                text-align: center;
+                            }
+                            
+                            .discount_num{
+                                display: flex;
+                                input{
+                                    // flex-grow: 1;
+                                    text-align: center;
+                                    width: 220px;
+                                    font-size: 16px;
+                                    padding: 0 10px;
+                                }
+                                p{
+                                    // width: 220px;
+                                    margin-left: 20px;
+                                }
+                            }
+                            
+                        }
+                    }
+                    // span{
+                    //     display: inline-block;
+                    //     margin:15px 0;
+                    //     // text-align: center;
+                    //     width: 70px;
+                    // }
+                    textarea{
+                        height: 100px;
+                    }
+                    
+                }
+                .content_04{
+                    ul{
+                        display: block;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+
+                            &>h4{
+                                // border: 1px solid #000;
+                                // text-align: right;
+                                box-sizing: border-box;
+                                width: 120px;
+                                margin-right: 20px;
+                            }
+                            &>input{
+                                width: 420px;
+                                // flex-grow: 1;
+                                font-size: 16px;
+                                padding: 0 10px;
+                                height: 38px;
+                                // text-align: center;
+                            }
+                            &>p{
+                                width: 420px;
+                                // text-align: center;
+                                text-align-last: left;
+                                padding: 0 10px;
+                            }
+
+                            &>textarea{
+                                width: 420px;
+                                height: 200px;
+                                font-size: 16px;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                overflow-y: auto;
+                            }
+                        }
+
+                        li:last-child{
+                            align-items: start;
+                            p{
+                                height: 200px;
+                                text-align: left;
+                                overflow-y: auto;
+                            }
+                        }
+                    }
+                }
+                .buttonBlock_04{
+                    margin-top: 30px;
+                    button{
+                        // height: 60px;
+                        font-size: 16rem;
+                        line-height: 40px;
+                        background-color: #F5F0DD;
+                        color: #0C1244;
+                        &:hover{
+                            background-color: #0C1244;
+                            color: #F5F0DD;
+                        }
+                    }
+                }
+            }
+
+            .formBody_05{
+                // width: 400px;
+                // height: 300px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                background-color: #F5F0DD;
+                // display: none;
+                padding: 30px;
+                border-radius: 20px;
+                border: 1px solid #0C1244;
+                h3{
+                    text-align: center;
+                    // margin: 20px 0;
+                    margin-bottom: 30px;
+                }
+                .Form_05{
+                    display: flex;
+                    justify-content: center;
+                    ul{
+                        display: block;
+                        li{
+                            display: flex;
+                            margin-bottom: 20px;
+                            &>h4{
+                                // border: 1px solid #000;
+                                // text-align: right;
+                                box-sizing: border-box;
+                                width: 120px;
+                                margin-right: 20px;
+                            }
+                            &>input{
+                                width: 220px;
+                                font-size: 16px;
+                                padding: 0 10px;
+                                text-align: center;
+                            }
+                            &>p{
+                                width: 220px;
+                                text-align: center;
+                            }
+                            
+                            .discount_num{
+                                display: flex;
+                                input{
+                                    // flex-grow: 1;
+                                    text-align: center;
+                                    width: 220px;
+                                    font-size: 16px;
+                                    padding: 0 10px;
+                                }
+                                p{
+                                    // width: 220px;
+                                    margin-left: 20px;
+                                }
+                            }
+                            
+                        }
+                    }
+                    // span{
+                    //     display: inline-block;
+                    //     // text-align: center;
+                    //     width: 70px;
+                    //     margin-bottom: 15px;
+                    // }
+                }
+                .buttonBlock_05{
+                    // margin: 40px 0;
+                    margin-top: 30px;
+                    button{
+                        // height: 60px;
+                        font-size: 16rem;
+                        line-height: 40px;
+                        background-color: #F5F0DD;
+                        color: #0C1244;
+                        &:hover{
+                            background-color: #0C1244;
+                            color: #F5F0DD;
+                        }
+                    }
+                }
+            }
         
             .formBody_06{
                 width: 1000px;
@@ -720,85 +947,8 @@ main{
         }
     }
 }
-.formBody_04{
-    width: 800px;
-    height: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #F5F0DD;
-    display: none;
-    border-radius: 5%;
-    border: 1px solid #0C1244;
-    h2{
-        text-align: center;
-        margin: 20px;
-    }
-    .Form_04{
-        display: flex;
-        justify-content: center;
-        margin-left: 30px;
-        span{
-            display: inline-block;
-            margin:15px 0;
-            // text-align: center;
-            width: 70px;
-        }
-        textarea{
-            height: 100px;
-        }
-        
-    }
-    .buttonBlock_04{
-        margin: 40px 0;
-        button{
-            height: 50px;
-            background-color: #F5F0DD;
-            color: #0C1244;
-            &:hover{
-                background-color: #0C1244;
-                color: #F5F0DD;
-            }
-        }
-    }
-}
-.formBody_05{
-    width: 400px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #F5F0DD;
-    display: none;
-    border-radius: 5%;
-    border: 1px solid #0C1244;
-    h2{
-        text-align: center;
-        margin: 20px 0;
-    }
-    .Form_05{
-        span{
-            display: inline-block;
-            // text-align: center;
-            width: 70px;
-            margin-bottom: 15px;
-        }
-    }
-    .buttonBlock_05{
-        margin: 40px 0;
-        button{
-            height: 30px;
-            background-color: #F5F0DD;
-            color: #0C1244;
-            &:hover{
-                background-color: #0C1244;
-                color: #F5F0DD;
-            }
-        }
-    }
-}
+
+
 
 
 

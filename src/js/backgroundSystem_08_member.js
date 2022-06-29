@@ -15,14 +15,10 @@ Vue.component('member',{
         },
         changePage(e){
             this.page = e.target.dataset.page;
-            // console.log(e.target.dataset.page);
             $(e.target.closest('ul')).find('li.on').removeClass('on');
             $(e.target).addClass('on');
         },
         showEdit(e){
-            // console.log(e.target.dataset.index);
-            // let index = e.target.dataset.index;
-            // console.log(this.list[this.page][index]);
             this.index = e.target.dataset.index;
             this.show_pop_up = true;    
         },

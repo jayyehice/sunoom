@@ -10,7 +10,12 @@
 
        foreach($tables as $idx => $table){
 
-              $sql = "SELECT * FROM $table";
+              if($table == 'article'){
+                     $sql = "SELECT * FROM V_article";
+              }else{
+                     $sql = "SELECT * FROM $table";
+              }
+
               $statement = $pdo->query($sql);
               $data = $statement->fetchAll();
               

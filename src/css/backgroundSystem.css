@@ -331,6 +331,184 @@ main .listTitle .pop_up {
   top: 0;
   left: 0;
 }
+main .listTitle .pop_up .formBody_04 {
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  border-radius: 20px;
+  border: 1px solid #0C1244;
+}
+main .listTitle .pop_up .formBody_04 p {
+  border: 1px solid #0C1244;
+  box-sizing: border-box;
+}
+main .listTitle .pop_up .formBody_04 h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 {
+  display: flex;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > input {
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > p {
+  width: 140px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num {
+  display: flex;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num input {
+  text-align: center;
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num p {
+  margin-left: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 textarea {
+  height: 100px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > input {
+  width: 420px;
+  font-size: 16px;
+  padding: 0 10px;
+  height: 38px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > p {
+  width: 420px;
+  text-align-last: left;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > textarea {
+  width: 420px;
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li:last-child {
+  align-items: start;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li:last-child p {
+  height: 200px;
+  text-align: left;
+  overflow-y: auto;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 {
+  margin-top: 30px;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 button {
+  font-size: 16rem;
+  line-height: 40px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+main .listTitle .pop_up .formBody_05 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #0C1244;
+}
+main .listTitle .pop_up .formBody_05 h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 {
+  display: flex;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > input {
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > p {
+  width: 220px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num {
+  display: flex;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num input {
+  text-align: center;
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num p {
+  margin-left: 20px;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 {
+  margin-top: 30px;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 button {
+  font-size: 16rem;
+  line-height: 40px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
 main .listTitle .pop_up .formBody_06 {
   width: 1000px;
   padding: 20px;
@@ -615,82 +793,6 @@ main .table > :not(:first-child) {
   color: #0C1244;
 }
 .formBody_03 .buttonBlock_03 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-
-.formBody_04 {
-  width: 800px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F5F0DD;
-  display: none;
-  border-radius: 5%;
-  border: 1px solid #0C1244;
-}
-.formBody_04 h2 {
-  text-align: center;
-  margin: 20px;
-}
-.formBody_04 .Form_04 {
-  display: flex;
-  justify-content: center;
-  margin-left: 30px;
-}
-.formBody_04 .Form_04 span {
-  display: inline-block;
-  margin: 15px 0;
-  width: 70px;
-}
-.formBody_04 .Form_04 textarea {
-  height: 100px;
-}
-.formBody_04 .buttonBlock_04 {
-  margin: 40px 0;
-}
-.formBody_04 .buttonBlock_04 button {
-  height: 50px;
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_04 .buttonBlock_04 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-
-.formBody_05 {
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F5F0DD;
-  display: none;
-  border-radius: 5%;
-  border: 1px solid #0C1244;
-}
-.formBody_05 h2 {
-  text-align: center;
-  margin: 20px 0;
-}
-.formBody_05 .Form_05 span {
-  display: inline-block;
-  width: 70px;
-  margin-bottom: 15px;
-}
-.formBody_05 .buttonBlock_05 {
-  margin: 40px 0;
-}
-.formBody_05 .buttonBlock_05 button {
-  height: 30px;
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_05 .buttonBlock_05 button:hover {
   background-color: #0C1244;
   color: #F5F0DD;
 }

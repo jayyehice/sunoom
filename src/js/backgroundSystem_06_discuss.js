@@ -4,6 +4,10 @@ Vue.component('discuss',{
         return{
             content:'article',
             page:0,
+            show_pop_up:false,
+            index:0,
+            title:'',
+            content_article:'',
         }
     },
     methods:{
@@ -46,9 +50,22 @@ Vue.component('discuss',{
         },
         showEdit(e){
             // console.log(e.target.dataset.index);
-            let index = e.target.dataset.index;
-            console.log(this.list[this.page][index]);
+            // let index = e.target.dataset.index;
+            // console.log(this.list[this.page][this.index]);
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true; 
+            this.title = this.list[this.content][this.page][this.index][3];
+            this.content_article = this.list[this.content][this.page][this.index][4];
             
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        removeArticle(e){
+            this.show_pop_up=false;
         },
     },
     computed:{},
@@ -139,6 +156,65 @@ Vue.component('discuss',{
                     <li>></li>
                 </ul>
             </div>
+        </div>
+
+
+        <div class="pop_up" v-if="show_pop_up">
+            <div class="formBody_04">
+                <h3>文章資訊</h3>
+                <form class="Form_04 row">
+                    <div class="leftForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <p>{{list[content][page][index][0]}}</p>
+                            </li>
+                            <li>
+                                <h4>作者:</h4>
+                                <p>{{list[content][page][index][10]+list[content][page][index][11]}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>發佈:</h4>
+                                <p>{{list[content][page][index][9]}}</p>
+                            </li>
+                            <li>
+                                <h4>類別:</h4>
+                                <p>{{changeCatagory(list[content][page][index][2])}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="content_04 row">
+                    <div class="col-12">
+                        <ul>
+                            <li>
+                                <h4>標題:</h4>
+                                <input type="text" v-if="list[content][page][index][1]==1" v-model="title">
+                                <p v-if="list[content][page][index][1]==2">{{title}}</p>
+                            </li>
+                            <li>
+                                <h4>內容:</h4>
+                                <textarea class="col" name="" id="" cols="80" rows="11" v-if="list[content][page][index][1]==1" v-model="content_article"></textarea>
+                                <p v-if="list[content][page][index][1]==2">{{content_article}}</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </div>            
+                <div class="buttonBlock_04 row">
+                    <button type="submit" class="b01 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b03 col-2" @click="removeArticle">移除文章</button>
+                </div>
+            </div>
+            
         </div>
     </div> 
     
