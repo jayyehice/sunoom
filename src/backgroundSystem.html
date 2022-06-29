@@ -8,6 +8,7 @@
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/vue.js"></script>
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/backgroundSystem.css">
@@ -23,7 +24,7 @@
                 
                 <i class="document fa-regular fa-file-lines col-1"></i>
                 <i class="mail fa-regular fa-envelope col-1"></i>
-                <button class="out col-1">登出</button>
+                <button class="out col-1" id="logOut">登出</button>
             </div>
         </div>
     </header>
@@ -37,25 +38,93 @@
                     <nav class="col-2" >
                         <div class="leftNav">
                             <div class="admin">
-                                <img src="./img/backsystem/Rectangle418.png" alt="">
+                                <img :src="image" alt="">
                                 <div class="user">
-                                    <h5>LongBoy<br>
+                                    <h5>{{account}}<br>
                                         <h6>Admin</h6>
                                     </h5>
                                 </div>
                             </div>
-                            <a id="overview" data-type="overview" @click="navClick">總覽</a>
-                            <a id="order" data-type="order_table" @click="navClick">訂單管理</a>
-                            <a id="activity" data-type="activity" @click="navClick">活動管理</a>
-                            <a id="shop" data-type="shop" @click="navClick">店家管理</a>
-                            <a id="live" data-type="live" @click="navClick">住宿管理</a>
-                            <a id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
-                            <a id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
-                            <a id="member" data-type="member" @click="navClick">會員管理</a>
+                            <a v-if="authority > 5" id="overview" data-type="overview" @click="navClick">總覽</a>
+                            <a v-if="authority > 5" id="order" data-type="order_table" @click="navClick">訂單管理</a>
+                            <a v-if="authority > 5" id="activity" data-type="activity" @click="navClick">活動管理</a>
+                            <a v-if="authority > 5" id="shop" data-type="shop" @click="navClick">餐廳管理</a>
+                            <a v-if="authority > 5" id="live" data-type="live" @click="navClick">住宿管理</a>
+                            <a v-if="authority > 5" id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
+                            <a v-if="authority > 5" id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
+                            <a v-if="authority > 5" id="member" data-type="member" @click="navClick">會員管理</a>
                         </div>
                     </nav>
                     
+                    <!-- vue 組件 -->
                     <component :is="content" :list="render_list"></component>
+                    
+                    <!--
+                    <div class="listTitle col-10">
+                        <div class="pop_up">
+                            <div class="formBody_04">
+                                <h3>文章資訊</h3>
+                                <form class="Form_04 row">
+                                    <div class="leftForm_04 col-6">
+                                        <ul>
+                                            <li>
+                                                <h4>編號:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>作者:</h4>
+                                                <p>1</p>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                    
+                                    <div class="rightForm_04 col-6">
+                                        <ul>
+                                            <li>
+                                                <h4>發佈:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>類別:</h4>
+                                                <p>1</p>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                </form>
+                                <div class="content_04 row">
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>
+                                                <h4>標題:</h4>
+                                                <input type="text">
+                                                <p>11111111111111111111111</p>
+                                            </li>
+                                            <li>
+                                                <h4>內容:</h4>
+                                                <textarea class="col" name="" id="" cols="80" rows="11"></textarea>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex architecto odio ab. Aperiam iusto magnam amet cupiditate quaerat voluptatum saepe quis est debitis aliquid sapiente, deserunt quod necessitatibus ipsum vero delectus. Perspiciatis, quibusdam. Tempora officiis placeat soluta a quae alias et repudiandae itaque provident tempore nam veniam corrupti quia error, dolores voluptatum ab numquam, praesentium id cupiditate doloremque distinctio laboriosam? Modi consequatur obcaecati maiores corrupti molestias hic velit sequi, nesciunt sunt iusto suscipit fuga fugiat quisquam nisi nostrum nulla commodi id quos nam odit tempore nihil? Expedita, libero temporibus debitis at fuga ea quisquam, nemo minus hic iure, sunt eveniet!</p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    
+                                </div>            
+                                <div class="buttonBlock_04 row">
+                                    <button type="submit" class="b01 col-1 offset-3">確認</button>
+                                    <div class="col-1"></div>
+                                    <button class="b02 col-1" onclick="closeBlock(4)">取消</button>
+                                    <div class="col-1"></div>
+                                    <button class="b03 col-2">移除文章</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                 -->
+                
+
                         
                 </div>
             </div>
@@ -157,71 +226,11 @@
             <button class="b03 col-1">下架</button>
         </div>
     </div>
-    <div class="formBody_04">
-        <h2>文章資訊</h2>
-        <form class="Form_04 col" action="">
-            <div class="leftForm_04 col-5">
-                <span class="">編號:</span><input type="text"><br>
-                <span> 標題:</span><input type="text"><br>
-                <span>內容:</span><br>
-                <textarea class="col" name="" id="" cols="80" rows="11"></textarea><br>
-            </div>
-            <div class="col-1"></div>
-            <div class="rightForm_04 col-5">
-                <span>類別:</span><input type="text"><br>
-            </div>
-        </form>            
-        <div class="buttonBlock_04 row">
-            <button type="submit" class="b01 col-1 offset-3">確認</button>
-            <div class="col-1"></div>
-            <button class="b02 col-1" onclick="closeBlock(4)">取消</button>
-            <div class="col-1"></div>
-            <button class="b03 col-2">移除文章</button>
-        </div>
-    </div>
-    <div class="formBody_05">
-        <h2>店家資訊</h2>
-        <form class="Form_05 col" action="">
-                <span class=" col-2 offset-2">編號:</span><input  type="text"><br>
-                <span class=" col-2 offset-2">關鍵字: </span><input type="text"><br>
-                <span class=" col-2 offset-2">開始時間:</span><input type="text"><br>
-                <span class=" col-2 offset-2">結束時間:</span><input type="text"><br>
-                <span class=" col-5 offset-2">使用次數:</span ><span style="text-align: center;" class="col-5 offset-2" >100</span><br>
-        </form>            
-        <div class="buttonBlock_05 row">
-            <button type="submit" class="b01 col-2 offset-1">確認</button>
-            <div class="col-1"></div>
-            <button class="b02 col-2" onclick="closeBlock(5)">取消</button>
-            <div class="col-1"></div>
-            <button class="b02 col-4">結束優惠卷</button>
-        </div>
-    </div>
-    <div class="formBody_06">
-        <h2>會員資訊</h2>
-        <form class="Form_06 col" action="">
-            <div class="leftForm_06 col-5">
-                <span class="">編號:</span><input type="text"><br>
-                <span> 姓名: </span><input type="text"><br>
-                <span>電話:</span><input type="text"><br>
-                <span>Email:</span><input type="text"><br>
-            </div>
-            <div class="col-1"></div>
-            <div class="rightForm_06 col-5">
-                <span class="">建立日期:</span><input type="text"><br>
-                <span> 會員狀態:</span><input type="text"><br>
-                <span>違規紀錄:</span><input type="text"><br>
-                <span style="">密碼:</span><button>發送重置密碼(Email)</button><br>
-            </div>
-        </form>            
-        <div class="buttonBlock_06 row">
-            <button type="submit" class="b1 col-1 offset-3">確認</button>
-            <div class="col-1"></div>
-            <button class="b2 col-1" onclick="closeBlock(6)">取消</button>
-            <div class="col-1"></div>
-            <button class="b3 col-2">停權該會員</button>
-        </div>
-     </div>
+    
+    
+
     <!-- <footer></footer> -->
+
     <script src="./js/backgroundSystem_01_overview.js"></script>
     <script src="./js/backgroundSystem_02_order.js"></script>
     <script src="./js/backgroundSystem_03_activity.js"></script>

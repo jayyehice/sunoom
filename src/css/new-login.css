@@ -1,0 +1,348 @@
+.newLogin {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+.newLogin main {
+  height: 100vh;
+  margin-bottom: 85px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newLogin main .container {
+  background-color: #fff;
+  width: 650px;
+  height: 485px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.newLogin main .container .form-box {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  background-color: #F5F0DD;
+  width: 320px;
+  height: 580px;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+}
+.newLogin main .container .register-box, .newLogin main .container .login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.newLogin main .container .hidden {
+  display: none;
+  transition: 0.5s;
+}
+.newLogin main .container input {
+  /* border:1px solid red; */
+  background-color: transparent;
+  width: 70%;
+  color: rgb(162, 162, 162);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 0;
+  text-indent: 10px;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.newLogin main .container .btn {
+  border: none;
+  margin-top: 3%;
+  background-color: #ddd988;
+  color: #f8f8f4;
+  border-radius: 5px;
+  width: 270px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+}
+.newLogin main .container input::placeholder {
+  color: rgb(160, 160, 160);
+}
+.newLogin main .container input:focus {
+  color: #a262ad;
+  outline: none;
+  border-bottom: 1px solid rgba(158, 162, 29, 0.5019607843);
+  transition: 0.5s;
+}
+.newLogin main .container input:focus::placeholder {
+  opacity: 0;
+}
+.newLogin main .container .form-box button {
+  width: 70%;
+  margin-top: 35px;
+  background-color: #f6f6f6;
+  outline: none;
+  border-radius: 8px;
+  padding: 13px;
+  color: #a262ad;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+}
+.newLogin main .container .form-box .login-box img {
+  /* border:1px solid red; */
+  width: 150px;
+  margin: 40px 0px;
+}
+.newLogin main .container .form-box button:hover {
+  background-color: #a262ad;
+  color: #f6f6f6;
+  transition: background-color 0.5s ease;
+}
+.newLogin main .container .con-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.newLogin main .container .con-box .form1 {
+  margin-left: 35px;
+}
+.newLogin main .container .con-box .form2 {
+  margin-right: 35px;
+}
+.newLogin main .container .con-box.left {
+  /* border:1px solid red; */
+  left: -2%;
+}
+.newLogin main .container .con-box.left .h1 {
+  /* border:1px solid red; */
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #0c1244;
+  letter-spacing: 5px;
+}
+.newLogin main .container .con-box.right {
+  /* border:1px solid red; */
+  right: -2%;
+}
+.newLogin main .container .form-box h2 {
+  color: #8e9aaf;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.newLogin main .container .form-box p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #8e9aaf;
+  text-align: center;
+}
+.newLogin main .container .form-box span {
+  color: #cbbc47;
+}
+.newLogin main .container .form-box img {
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+  margin: 40px 0;
+}
+.newLogin main .container .form-box button {
+  margin-top: 3%;
+  background-color: #fff;
+  color: #ddd988;
+  padding: 6px 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+.newLogin main .container .form-box button:hover {
+  background-color: #d3c961;
+  color: #fff;
+}
+
+.newLogin_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.newLogin_moon main {
+  height: 100vh;
+  margin-bottom: 85px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newLogin_moon main .container {
+  background-color: #fff;
+  width: 650px;
+  height: 485px;
+  border-radius: 5px;
+  box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+.newLogin_moon main .container .form-box {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  background-color: #0C1244;
+  width: 320px;
+  height: 580px;
+  border-radius: 5px;
+  box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+}
+.newLogin_moon main .container .register-box, .newLogin_moon main .container .login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.newLogin_moon main .container .hidden {
+  display: none;
+  transition: 0.5s;
+}
+.newLogin_moon main .container input {
+  /* border:1px solid red; */
+  background-color: transparent;
+  width: 70%;
+  color: rgb(162, 162, 162);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 0;
+  text-indent: 10px;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.newLogin_moon main .container .btn {
+  border: none;
+  margin-top: 3%;
+  background-color: #ddd988;
+  color: #f8f8f4;
+  border-radius: 5px;
+  width: 270px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+}
+.newLogin_moon main .container input::placeholder {
+  color: rgb(160, 160, 160);
+}
+.newLogin_moon main .container input:focus {
+  color: #a262ad;
+  outline: none;
+  border-bottom: 1px solid rgba(158, 162, 29, 0.5019607843);
+  transition: 0.5s;
+}
+.newLogin_moon main .container input:focus::placeholder {
+  opacity: 0;
+}
+.newLogin_moon main .container .form-box button {
+  width: 70%;
+  margin-top: 35px;
+  background-color: #f6f6f6;
+  outline: none;
+  border-radius: 8px;
+  padding: 13px;
+  color: #a262ad;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+}
+.newLogin_moon main .container .form-box .login-box img {
+  /* border:1px solid red; */
+  width: 150px;
+  margin: 40px 0px;
+}
+.newLogin_moon main .container .form-box button:hover {
+  background-color: #a262ad;
+  color: #f6f6f6;
+  transition: background-color 0.5s ease;
+}
+.newLogin_moon main .container .con-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.newLogin_moon main .container .con-box .form1 {
+  margin-left: 35px;
+}
+.newLogin_moon main .container .con-box .form2 {
+  margin-right: 35px;
+}
+.newLogin_moon main .container .con-box.left {
+  /* border:1px solid red; */
+  left: -2%;
+}
+.newLogin_moon main .container .con-box.left .h1 {
+  /* border:1px solid red; */
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0c1244;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.newLogin_moon main .container .con-box.right {
+  /* border:1px solid red; */
+  right: -2%;
+}
+.newLogin_moon main .container .form-box h2 {
+  color: #8e9aaf;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.newLogin_moon main .container .form-box p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #8e9aaf;
+  text-align: center;
+}
+.newLogin_moon main .container .form-box span {
+  color: #cbbc47;
+}
+.newLogin_moon main .container .form-box img {
+  width: 150px;
+  height: 150px;
+  opacity: 0.9;
+  margin: 40px 0;
+}
+.newLogin_moon main .container .form-box button {
+  margin-top: 3%;
+  background-color: #fff;
+  color: #ddd988;
+  padding: 6px 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+.newLogin_moon main .container .form-box button:hover {
+  background-color: #d3c961;
+  color: #fff;
+}
+
+/*# sourceMappingURL=new-login.css.map */

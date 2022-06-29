@@ -1,5 +1,40 @@
 Vue.component('member',{
     props:['list'],
+    data(){
+        return{
+            content:'',
+            page:0,
+            show_pop_up:false,
+            index:0,
+        }
+    },
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        },
+        changePage(e){
+            this.page = e.target.dataset.page;
+            $(e.target.closest('ul')).find('li.on').removeClass('on');
+            $(e.target).addClass('on');
+        },
+        showEdit(e){
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true;    
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        suspend(e){
+            this.show_pop_up=false;
+        },
+    },
+    mounted() {
+        $('#pageList > li:nth-child(2)').addClass('on');
+    },
     template:
     `
 
@@ -15,8 +50,8 @@ Vue.component('member',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>正常</h5>
-                <h5>已停權</h5>
+                <h5 @click="addClass" class="on">正常</h5>
+                <h5 @click="addClass">已停權</h5>
 
             </div>
             <!-- 
@@ -39,14 +74,14 @@ Vue.component('member',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list">
+                <ul class="tableList" v-for="(item, index) in list[page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[7]}}</p></li>
                     <li class="col-2"><p>{{item[8]}}</p></li>
                     <li class="col-3"><p>{{item[1]}}</p></li>
                     <li class="col"><p>{{item[6]}}</p></li>
                     <li class="col"><p>{{item[5]}}</p></li>
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
                 
@@ -56,15 +91,73 @@ Vue.component('member',{
     
         <div class="container-fluid">
             <div class="row pages">
-                <ul class="pageList col-2 offset-7">
+                <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage">1</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
         </div>
-    </div> 
     
+
+
+        <div class="pop_up" v-if="show_pop_up">
+
+            <div class="formBody_06">
+                <h3>會員資訊</h3>
+                <form class="Form_06 col" action="">
+                    <div class="leftForm_06 col-5">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <h4>{{list[page][index][0]}}</h4>
+                            </li>
+                            <li>
+                                <h4>姓名:</h4>
+                                <h4>{{list[page][index][7]+list[page][index][8]}}</h4>
+                            </li>
+                            <li>
+                                <h4>電話:</h4>
+                                <h4>{{list[page][index][3]}}</h4>
+                            </li>
+                            <li>
+                                <h4>Email:</h4>
+                                <h4>{{list[page][index][1]}}</h4>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="centerForm_06 col-1">
+                        <div></div>
+                    </div>
+                    <div class="rightForm_06 col-5">
+                        <ul>
+                            <li>
+                                <h4>建立日期:</h4>
+                                <h4>{{list[page][index][4]}}</h4>
+                            </li>
+                            <li>
+                                <h4>會員狀態:</h4>
+                                <h4>{{list[page][index][5]}}</h4>
+                            </li>
+                            <li>
+                                <h4>違規紀錄:</h4>
+                                <h4>{{list[page][index][6]}}</h4>
+                            </li>
+                        </ul>
+
+                    </div>
+                </form>            
+                <div class="buttonBlock_06 row">
+                    <button class="b1 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b2 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b3 col-2" @click="suspend">停權該會員</button>
+                </div>
+            </div>
+        </div>
+    </div> 
     `
     ,
 })

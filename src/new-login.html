@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>登陸頁</title>
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+@@include('./layout/header_footer_css_link.html')
+    <link rel="stylesheet" href="./css/new-login.css">
+</head>
+
+<body class="newLogin">
+    @@include('./layout/header.html')
+
+    <main>
+        <div class="container">
+            <div class="form-box">
+                <!-- 註冊 -->
+                <div class="register-box hidden">
+                    <h2>歡迎來到<span>明島</span></h2>
+                    <p>快來領取你的<span>吉祥物</span>吧</p>
+                    <img src="./img/member/member_login.jpg" alt="">
+                    <p>已有帳號</p>
+                    <button id="login">去登錄</button>
+                </div>
+                <!-- 登陸 -->
+                <div class="login-box">
+                    <h2>歡迎來到<span>明島</span></h2>
+                    <p>快來看看可愛的<span>海豹</span>吧</p>
+                    <img src="./img/member/member_register.jpg" alt="">
+                    <p>還沒有帳號?</p>
+                    <button id="register">去註冊</button>
+                </div>
+            </div>
+            <div class="con-box left">
+                <form action="./php/new-login.php" method="post" class="form1">
+                    <h1 style="text-align: center;margin-bottom: 25px;color:#0c1244;text-transform: uppercase; letter-spacing: 5px;">register</h1>
+                    <input type="text" name="last_name" placeholder="姓氏">
+                    <input type="text" name="first_name" placeholder="名字">
+                    <input type="text" name="phone" placeholder="電話">
+                    <input type="email" name="email" placeholder="信箱">
+                    <input type="password" name="password" placeholder="密碼" id="pw1">
+                    <input type="password" name="passwordsure" placeholder="確認密碼" id="pw2" onkeyup="validate()"><span id="tishi"></span>
+                    <button type="submit" class="btn" id="submit">註冊</button>
+                </form>
+            </div>
+            <div class="con-box right">
+                <form action="./php/new-login_2.php" method="post" class="form2">
+                    <h1 style="text-align: center;color:#0c1244 ;margin-bottom: 25px;text-transform: uppercase;letter-spacing: 5px;">login</h1>
+                    <input id="b1" type="text" name="a" placeholder="帳號">
+                    <input id="b2" type="password" name="b" placeholder="密碼">
+                    <button type="submit" class="btn">登錄</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    @@include('./layout/footer.html')
+ 
+@@include('./layout/header_footer_script_link.html')
+    
+    <script src="js/new-login.js"></script>
+</body>
+
+</html>

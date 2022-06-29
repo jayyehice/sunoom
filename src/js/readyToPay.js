@@ -1,5 +1,5 @@
 $(function(){
-    $('#FinishPage').on('click',()=>{
-        window.location.href= './FinishPay.html'
-    })
+    // $('#FinishPage').on('click',()=>{
+    //     window.location.href= './FinishPay.html'
+    // })
 })

@@ -1,5 +1,32 @@
 Vue.component('live',{
     props:['list'],
+    data(){
+        return{
+            content:'',
+            page:0,
+        }
+    },
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        },
+        changePage(e){
+            this.page = e.target.dataset.page;
+            // console.log(e.target.dataset.page);
+            $(e.target.closest('ul')).find('li.on').removeClass('on');
+            $(e.target).addClass('on');
+        },
+        showEdit(e){
+            // console.log(e.target.dataset.index);
+            let index = e.target.dataset.index;
+            console.log(this.list[this.page][index]);
+            
+        },
+    },
+    mounted() {
+        $('#pageList > li:nth-child(2)').addClass('on');
+    },
     template:
     `
 
@@ -15,9 +42,9 @@ Vue.component('live',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>食</h5>
-                <h5>宿</h5>
-                <h5>已下架</h5>
+                <h5 @click="addClass" class="on">食</h5>
+                <h5 @click="addClass">宿</h5>
+                <h5 @click="addClass">已下架</h5>
 
             </div>
             <!-- 
@@ -35,19 +62,19 @@ Vue.component('live',{
                     <li class="col"><p>屬性</p></li>
                     <li class="col"><p>名稱</p></li>
                     <li class="col"><p>價格</p></li>
-                    <li class="col"><p>單場人數</p></li>
+                    <li class="col"><p>人數上限</p></li>
                     
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list">
+                <ul class="tableList" v-for="(item, index) in list[page]">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{item[2]}}</p></li>
+                    <li class="col"><p>{{item[27]}}</p></li>
+                    <li class="col"><p>{{item[28]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
                 
@@ -57,9 +84,9 @@ Vue.component('live',{
     
         <div class="container-fluid">
             <div class="row pages">
-                <ul class="pageList col-2 offset-7">
+                <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage">1</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>

@@ -1,6 +1,32 @@
 Vue.component('order_table',{
     props:['list'],
-
+    data(){
+        return{
+            content:'',
+            page:0,
+        }
+    },
+    methods: {
+        addClass(e){
+            $(e.target.closest('div')).find('h5').removeClass('on');
+            $(e.target).addClass('on'); 
+        },
+        changePage(e){
+            this.page = e.target.dataset.page;
+            // console.log(e.target.dataset.page);
+            $(e.target.closest('ul')).find('li.on').removeClass('on');
+            $(e.target).addClass('on');
+        },
+        showEdit(e){
+            // console.log(e.target.dataset.index);
+            let index = e.target.dataset.index;
+            console.log(this.list[this.page][index]);
+            
+        },
+    },
+    mounted() {
+        $('#pageList > li:nth-child(2)').addClass('on');
+    },
     template:
     `
 
@@ -16,9 +42,9 @@ Vue.component('order_table',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5>未完成</h5>
-                <h5>已完成</h5>
-                <h5>已取消</h5>
+                <h5 @click="addClass" class="on">未完成</h5>
+                <h5 @click="addClass">已完成</h5>
+                <h5 @click="addClass">已取消</h5>
 
             </div>
             <!-- 
@@ -41,14 +67,14 @@ Vue.component('order_table',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list">
+                <ul class="tableList" v-for="(item, index) in list[page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[4]}}</p></li>
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[5]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
                 
@@ -58,9 +84,9 @@ Vue.component('order_table',{
     
         <div class="container-fluid">
             <div class="row pages">
-                <ul class="pageList col-2 offset-7">
+                <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage">1</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
