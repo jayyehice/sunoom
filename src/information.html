@@ -32,7 +32,7 @@
         </div>
 
         <section class="map">
-            <div class="wrapper">
+            <div id="map" class="wrapper">
                 <h3>園區地圖</h3>
                 <ul>
                     <li>
@@ -57,13 +57,63 @@
                     
                 </ul>
 
+                <!-- 日島地圖 -->
                 <ol>
-                    <img src="./img/information/sun/island_map.jpg" alt="" id="img_test">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <!-- <img src="./img/information/sun/island_map.jpg" alt="" id="img_test"> -->
+
+                    <li>
+                        <img class="allmap bbq" src="./img/information/sun/bbq.png" alt="bbq">
+                        <img class="allmap hamberger" src="./img/information/sun/hamberger.png" alt="漢堡">
+                        <img class="allmap juice" src="./img/information/sun/juice.png" alt="果汁">
+                        <img class="allmap lobster" src="./img/information/sun/lobster.png" alt="抓蝦">
+                    </li>
+                    <li>
+                        <img class="allmap chariot" src="./img/information/sun/chariot.png" alt="沙灘戰車">
+                        <img class="allmap diving" src="./img/information/sun/diving.png" alt="潛水">
+                        <img class="allmap fishing" src="./img/information/sun/fishing.png" alt="釣魚">
+                        <img class="allmap horse_back_riding" src="./img/information/sun/horse_back_riding.png" alt="騎馬">
+                        <img class="allmap mountaineering" src="./img/information/sun/mountaineering.png" alt="登山">
+                        <img class="allmap rafting" src="./img/information/sun/rafting.png" alt="泛舟">
+                        <img class="allmap snorkeling" src="./img/information/sun/snorkeling.png" alt="浮潛">
+                        <img class="allmap stand_up_paddle" src="./img/information/sun/stand_up_paddle.png" alt="立槳">
+                        <img class="allmap stonehenge" src="./img/information/sun/stonehenge.png" alt="巨石陣">
+                        <img class="allmap yacht" src="./img/information/sun/yacht.png" alt="遊艇">
+
+                    </li>
+                    <li>
+                        <img class="allmap office" src="./img/information/sun/office.png" alt="辦公室">
+                        <img class="allmap residential" src="./img/information/sun/residential.png" alt="高級屋">
+                        <img class="allmap tent" src="./img/information/sun/tent.png" alt="帳篷">
+                        <img class="allmap stilthouse" src="./img/information/sun/stilt-house.png" alt="小木屋">
+
+                    </li>
+                    <li>
+
+                    </li>
                 </ol>
+
+                <!-- 燈箱開啟時的深色背景 -->
+                <div class="backdrop"></div>
+                <!-- 地圖燈箱 -->
+                <div class="iconBox" v-if="boxContent">
+                    <!-- 燈箱關閉按鈕 -->
+                    <i class="fa-solid fa-circle-xmark close"></i>
+                    <!-- 燈箱店家icon -->
+                    <img  :src="boxContent[3]" alt="">
+                    <!-- 燈箱店名 -->
+                    <p>
+                        {{boxContent[4]}}
+                    </p>
+                    <!-- 燈箱營業時間 -->
+                    <p class="iconBoxtime">
+                        {{boxContent[5]}}
+                    </p>
+                    <!-- 燈箱店家簡介 -->
+                    <p>
+                        {{boxContent[6]}}
+                    </p>
+                </div>
+
             </div>
 
             

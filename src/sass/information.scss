@@ -66,16 +66,253 @@
                         @import 'component/big_btn';
                     }
                 }
-    
+                
                 ol{
+                    background-image: url("../img/information/sun/sunmap.png");
+                    width: 900px;
+                    height: 700px;
+                    margin: 0 auto;
+                    background-size: cover;
+                    border: 1px solid $moon_color;
+                    position: relative;
+
                     img{
-                        display: block;
-                        width: 899px;
-                        margin: 0 auto;
-                        border: $show_border;
+                        // display: block;
+                        // width: 899px;
+                        // margin: 0 auto;
+                        // border: $show_border;
+                    }
+
+                    li{
+
+                    }
+
+                    .allmap{
+                        animation-name: scale1;
+                        animation-duration: 5s;
+                        animation-iteration-count: infinite;
+                        
                     }
     
+                    .bbq{
+                        z-index: 1;
+                        top:540px;
+                        left: 255px;
+                        position: absolute;
+                        cursor: pointer;    
+                    }
+
+                    .hamberger{
+                        z-index: 1;
+                        top:380px;
+                        left: 410px;
+                        position: absolute;
+                        cursor: pointer;    
+                    }
+
+                    .juice{
+                        z-index: 1;
+                        top:180px;
+                        left: 120px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+
+                    .lobster{
+                        z-index: 1;
+                        top:260px;
+                        left: 520px;
+                        position: absolute;
+                        cursor: pointer;    
+                    }
+
+                    // 玩
+                    .chariot{
+                        z-index: 1;
+                        top:170px;
+                        left: 210px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .diving{
+                        z-index: 1;
+                        top:170px;
+                        left: 380px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .fishing{
+                        z-index: 1;
+                        top:610px;
+                        left: 60px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .horse_back_riding{
+                        z-index: 1;
+                        top:150px;
+                        right: 170px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .mountaineering{
+                        z-index: 1;
+                        top:410px;
+                        left: 310px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .rafting{
+                        z-index: 1;
+                        top:297px;
+                        left: 422px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .snorkeling{
+                        z-index: 1;
+                        top:330px;
+                        left: 160px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .stand_up_paddle{
+                        z-index: 1;
+                        top:500px;
+                        right: 320px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .stonehenge{
+                        z-index: 1;
+                        top:100px;
+                        right: 110px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .yacht{
+                        z-index: 1;
+                        top:200px;
+                        right: 10px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .office{
+                        z-index: 1;
+                        top:260px;
+                        left: 290px;
+                        position: absolute;
+                        cursor: pointer;    
+                    }
+
+                    // 住
+                    .residential{
+                        z-index: 1;
+                        top:475px;
+                        left: 230px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .tent{
+                        z-index: 1;
+                        top:335px;
+                        left: 280px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
+
+                    .stilthouse{
+                        z-index: 1;
+                        top:210px;
+                        left: 540px;
+                        position: absolute;
+                        cursor: pointer;    
+
+                    }
                 }
+
+                // 燈箱開啟時的深色背景
+                .backdrop {
+                    z-index: 1;
+                    opacity: .0;
+                    filter: alpha(opacity=0);
+                    display: none;
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                }
+    
+                // 地圖燈箱
+                .iconBox{
+                    display: none;
+                    z-index: 2;
+                    width: 250px;
+                    height: 350px;
+                    border: 1px solid #0C1244;
+                    padding: 10px;
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% ,-50%);
+                    border-radius: 5px;
+                    background-color: rgba(245,240,221,0.8);
+                    -moz-box-shadow: 0px 0px 5px #444444;
+                    -webkit-box-shadow: 0px 0px 5px #444444;
+                    box-shadow: 0px 0px 5px #444444;
+
+                    // 燈箱關閉按鈕
+                    .fa-circle-xmark{
+                        color:#0C1244;
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        cursor: pointer;
+                    }
+                    img{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        color: $moon_color;
+                        font-size: $p;
+                        letter-spacing: 3px;
+                        line-height: 1.6;
+                    }
+                    .iconBoxtime{
+                        margin-top: 10px;
+                        margin-bottom: 40px;
+                    }
+                }
+
+
+
             }
     
             .polaroid{
@@ -1185,4 +1422,9 @@
 }
 
 
-
+/* 地圖燈箱動畫 */
+@keyframes scale1 {
+    0% {  transform: scale(1); }
+    50%  {  transform: scale(1.2); }
+    100%   {  transform: scale(1); }   
+}
