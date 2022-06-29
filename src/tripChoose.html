@@ -21,9 +21,7 @@
     <div class="addfadein">
         已加入您的訂單中<i class="fa-regular fa-circle-check"></i>
     </div>
-    
     <article id="app">
-        <component :is="content"></component>
         <section id="sectionBlock">
             <h2>訂購流程</h2>
             <div class="shoppingProcess">
@@ -367,22 +365,22 @@
             <section>
                 <h2>訂購流程</h2>
                 <div class="shoppingProcess">
-                    <div class="chooseAdate">
+                    <div class="chooseAdateR">
                         <h4>1</h4>
                         <h4>選擇日期</h4>
                     </div>
                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
-                    <div class="chooseAtrip">
+                    <div class="chooseAtripR">
                         <h4>2</h4>
                         <h4>選擇行程</h4>
                     </div>
                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
-                    <div class="tallyOrder">
+                    <div class="tallyOrderR">
                         <h4>3</h4>
                         <h4>結帳</h4>
                     </div>
                     <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
-                    <div class="orderComplete">
+                    <div class="orderCompleteR">
                         <h4>4</h4>
                         <h4>訂單完成</h4>
                     </div>
@@ -619,8 +617,8 @@
                         <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
                     </div>
                     <div class="buttonBlock">
+                        <button class="backToChoosePage" type="button" @click="backToChoosePage">回上一頁</button>
                         <button id="FinishPage" type="submit">完成結帳</button>
-                        <button class="backToChoosePage" type="button">回上一頁</button>
                     </div>
                     <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
                 </form>
