@@ -11,6 +11,7 @@
 @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/set.css">
     <title>活動套票</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     
 </head>
 <body class="set">
@@ -30,6 +31,8 @@
             </p>
 
             <h3>活動套票</h3>
+
+            <button id="changeButton">臨時測試</button>
 
             <ul class="setTopNav">
                 <li>
@@ -88,24 +91,24 @@
             </a>
 
             <!-- 第1個 測試 -->
-             <section id="adventure" class="setMain">
+             <section id="adventure" class="setMain" v-if="set1">
                 <article class="setPic">
-                    <img :src="set_list[0][9]" alt="活動大圖">
+                    <img :src="set1[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[0][10]" alt="活動小圖">
-                        <img :src="set_list[0][11]" alt="活動小圖">
-                        <img :src="set_list[0][12]" alt="活動小圖">
+                        <img :src="set1[10]" alt="活動小圖">
+                        <img :src="set1[11]" alt="活動小圖">
+                        <img :src="set1[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_1.png" alt="探險線條圖">
 
-                    <h4>{{set_list[0][4]}}</h4>
-                    <h5>{{set_list[0][5]}}</h5>
+                    <h4>{{set1[4]}}</h4>
+                    <h5>{{set1[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[0][6]}}<br>集合地點：{{set_list[0][7]}}<br>活動內容：{{set_list[0][8]}}
+                        集合時間：{{set1[6]}}<br>集合地點：{{set1[7]}}<br>活動內容：{{set1[8]}}
                     </p>
                     <p class="setTextWord2">
                         機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
@@ -171,24 +174,24 @@
              </section> -->
 
             <!-- 第2個 測試 -->
-             <section id="family" class="setMain">
+             <section id="family" class="setMain" v-if="set2">
                 <article class="setPic">
-                    <img :src="set_list[1][9]" alt="活動大圖">
+                    <img :src="set2[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[1][10]" alt="活動小圖">
-                        <img :src="set_list[1][11]" alt="活動小圖">
-                        <img :src="set_list[1][12]" alt="活動小圖">
+                        <img :src="set2[10]" alt="活動小圖">
+                        <img :src="set2[11]" alt="活動小圖">
+                        <img :src="set2[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_2.png" alt="親子線條圖">
 
-                    <h4>{{set_list[1][4]}}</h4>
-                    <h5>{{set_list[1][5]}}</h5>
+                    <h4>{{set2[4]}}</h4>
+                    <h5>{{set2[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[1][6]}}<br>集合地點：{{set_list[1][7]}}<br>活動內容：{{set_list[1][8]}}
+                        集合時間：{{set2[6]}}<br>集合地點：{{set2[7]}}<br>活動內容：{{set2[8]}}
                     </p>
             
                     <p class="setTextWord2">
@@ -255,24 +258,24 @@
              </section> -->
 
             <!-- 第3個 測試 -->
-             <section id="relax" class="setMain">
+             <section id="relax" class="setMain" v-if="set3">
                 <article class="setPic">
-                    <img :src="set_list[2][9]" alt="活動大圖">
+                    <img :src="set3[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[2][10]" alt="活動小圖">
-                        <img :src="set_list[2][11]" alt="活動小圖">
-                        <img :src="set_list[2][12]" alt="活動小圖">
+                        <img :src="set3[10]" alt="活動小圖">
+                        <img :src="set3[11]" alt="活動小圖">
+                        <img :src="set3[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_3.png" alt="度假線條圖">
 
-                    <h4>{{set_list[2][4]}}</h4>
-                    <h5>{{set_list[2][5]}}</h5>
+                    <h4>{{set3[4]}}</h4>
+                    <h5>{{set3[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[2][6]}}<br>集合地點：{{set_list[2][7]}}<br>活動內容：{{set_list[2][8]}}
+                        集合時間：{{set3[6]}}<br>集合地點：{{set3[7]}}<br>活動內容：{{set3[8]}}
                     </p>
                     <p class="setTextWord2">
                         機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
@@ -337,24 +340,24 @@
              </section> -->
 
             <!-- 第4個 測試 -->
-             <section id="couple" class="setMain">
+             <section id="couple" class="setMain" v-if="set4">
                 <article class="setPic">
-                    <img :src="set_list[3][9]" alt="活動大圖">
+                    <img :src="set4[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[3][10]" alt="活動小圖">
-                        <img :src="set_list[3][11]" alt="活動小圖">
-                        <img :src="set_list[3][12]" alt="活動小圖">
+                        <img :src="set4[10]" alt="活動小圖">
+                        <img :src="set4[11]" alt="活動小圖">
+                        <img :src="set4[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_4.png" alt="蜜月線條圖">
 
-                    <h4>{{set_list[3][4]}}</h4>
-                    <h5>{{set_list[3][5]}}</h5>
+                    <h4>{{set4[4]}}</h4>
+                    <h5>{{set4[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[3][6]}}<br>集合地點：{{set_list[3][7]}}<br>活動內容：{{set_list[3][8]}}
+                        集合時間：{{set4[6]}}<br>集合地點：{{set4[7]}}<br>活動內容：{{set4[8]}}
                     </p>
                     <p class="setTextWord2">
                         機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
@@ -419,24 +422,24 @@
              </section> -->
 
             <!-- 第5個 測試 -->
-             <section id="sea" class="setMain">
+             <section id="sea" class="setMain" v-if="set5">
                 <article class="setPic">
-                    <img :src="set_list[4][9]" alt="活動大圖">
+                    <img :src="set5[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[4][10]" alt="活動小圖">
-                        <img :src="set_list[4][11]" alt="活動小圖">
-                        <img :src="set_list[4][12]" alt="活動小圖">
+                        <img :src="set5[10]" alt="活動小圖">
+                        <img :src="set5[11]" alt="活動小圖">
+                        <img :src="set5[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_5.png" alt="海洋線條圖">
 
-                    <h4>{{set_list[4][4]}}</h4>
-                    <h5>{{set_list[4][5]}}</h5>
+                    <h4>{{set5[4]}}</h4>
+                    <h5>{{set5[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[4][6]}}<br>集合地點：{{set_list[4][7]}}<br>活動內容：{{set_list[4][8]}}
+                        集合時間：{{set5[6]}}<br>集合地點：{{set5[7]}}<br>活動內容：{{set5[8]}}
                     </p>
                     <p class="setTextWord2">
                         機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
@@ -501,24 +504,24 @@
              </section> -->
 
              <!-- 第6個 測試 -->
-             <section id="ecology" class="setMain">
+             <section id="ecology" class="setMain" v-if="set6">
                 <article class="setPic">
-                    <img :src="set_list[5][9]" alt="活動大圖">
+                    <img :src="set6[9]" alt="活動大圖">
                     <div class="setPicS">
-                        <img :src="set_list[5][10]" alt="活動小圖">
-                        <img :src="set_list[5][11]" alt="活動小圖">
-                        <img :src="set_list[5][12]" alt="活動小圖">
+                        <img :src="set6[10]" alt="活動小圖">
+                        <img :src="set6[11]" alt="活動小圖">
+                        <img :src="set6[12]" alt="活動小圖">
                     </div>
                 </article>
 
                 <article class="setText">
                     <img class="setTextPic" src="./img/set/sun/set_icon_1_6.png" alt="海龜線條圖">
 
-                    <h4>{{set_list[5][4]}}</h4>
-                    <h5>{{set_list[5][5]}}</h5>
+                    <h4>{{set6[4]}}</h4>
+                    <h5>{{set6[5]}}</h5>
                     <p class="setTextTitle">行程資訊</p>
                     <p class="setTextWord">
-                        集合時間：{{set_list[5][6]}} <br>集合地點：{{set_list[5][7]}}<br>活動內容：{{set_list[5][8]}}
+                        集合時間：{{set6[6]}} <br>集合地點：{{set6[7]}}<br>活動內容：{{set6[8]}}
                     </p>
                     <p class="setTextWord2">
                         機場、港口皆有專人接送輕鬆到集合點，專業教練將會全程跟著，從早上到晚上10點豐富的活動等著你探險。
