@@ -4,6 +4,10 @@ Vue.component('discount_code',{
         return{
             content:'',
             page:0,
+            show_pop_up:false,
+            index:0,
+            discount:0,
+            keyword:'',
         }
     },
     methods: {
@@ -13,9 +17,24 @@ Vue.component('discount_code',{
         },
         changePage(e){
             this.page = e.target.dataset.page;
-            // console.log(e.target.dataset.page);
             $(e.target.closest('ul')).find('li.on').removeClass('on');
             $(e.target).addClass('on');
+        },
+        showEdit(e){
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true;
+            this.keyword = this.list[this.page][this.index][1];
+            this.discount = this.list[this.page][this.index][5];
+            console.log(this.list[this.page]);
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        stop(e){
+            this.show_pop_up=false;
         },
     },
     mounted() {
@@ -67,7 +86,7 @@ Vue.component('discount_code',{
                     <li class="col-3"><p>{{item[3]}}</p></li>
                     <li class="col"><p>{{item[4]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
                 
@@ -84,6 +103,48 @@ Vue.component('discount_code',{
                 </ul>
             </div>
         </div>
+
+
+        <div class="pop_up" v-if="show_pop_up">
+
+            <div class="formBody_05">
+                <h3>優惠券管理</h3>
+                <form class="Form_05 col" action="">
+                    <ul>
+                        <li>
+                            <h4>編號:</h4>
+                            <p>{{list[page][index][0]}}</p>
+                        </li>
+                        <li>
+                            <h4>折扣:</h4>
+                            <div class="discount_num">
+                                <input  type="text" v-model="discount">
+                                <p>折</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>關鍵字:</h4>
+                            <input  type="text" v-model="keyword">
+                        </li>
+                        <li>
+                            <h4>使用次數:</h4>
+                            <p>{{list[page][index][4]}}</p>
+                        </li>
+                    </ul>
+                        
+                </form>            
+                <div class="buttonBlock_05 row">
+                    <button type="submit" class="b01 col-2 offset-1" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-2" onclick="closeBlock(5)" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-4" @click="stop">結束優惠卷</button>
+                </div>
+            </div>
+        </div>
+
+
+        
     </div> 
     
     `
