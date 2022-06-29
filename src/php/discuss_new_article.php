@@ -29,10 +29,13 @@
 
 
         //Web根目錄真實路徑
-        $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-        //echo $ServerRoot."<br>";
+        // $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
+        // echo $ServerRoot."<br>";// C:/xampp/htdocs
+
+        $ServerRoot = dirname(__DIR__);
+        // echo dirname(__DIR__)."<br>";// C:\xampp\htdocs\sunoom\dist
         //檔案最終存放位置
-        $filePath = $ServerRoot."/sunoom/src/img/discuss/article/".$fileName;
+        $filePath = $ServerRoot."/img/discuss/article/".$fileName;
         $image = './img/discuss/article/'.$fileName;
         //echo $filePath."<br>";
         //將暫存檔搬移到正確位置

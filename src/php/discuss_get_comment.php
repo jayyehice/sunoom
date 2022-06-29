@@ -3,7 +3,7 @@
        include("connection.php");
 
        $sql = "
-       SELECT c.*, UNIX_TIMESTAMP(c.date), m.name 
+       SELECT c.*, UNIX_TIMESTAMP(c.date), m.first_name 
        FROM 
               comment c
        join member m

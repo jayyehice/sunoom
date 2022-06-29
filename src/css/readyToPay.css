@@ -1,35 +1,35 @@
-.readyToPay {
+#readyToPay {
   background-color: #F5F0DD;
   color: #0C1244;
 }
-.readyToPay select {
+#readyToPay select {
   border: 1px solid #0C1244;
   color: #0C1244;
   background-color: #F5F0DD;
 }
-.readyToPay input {
+#readyToPay input {
   border: 1px solid #0C1244;
   color: #0C1244;
   background-color: #F5F0DD;
 }
-.readyToPay button {
+#readyToPay button {
   color: #0C1244;
 }
-.readyToPay section h2 {
+#readyToPay section h2 {
   text-align: center;
   margin-top: 50px;
 }
 @media (max-width: 576px) {
-  .readyToPay section h2 {
+  #readyToPay section h2 {
     margin-top: 50px;
     margin-bottom: 20px;
   }
 }
-.readyToPay section h3 {
+#readyToPay section h3 {
   text-align: center;
   margin: 50px 0;
 }
-.readyToPay .shoppingProcess {
+#readyToPay .shoppingProcess {
   width: 1180px;
   height: 200px;
   display: flex;
@@ -38,23 +38,23 @@
   margin: 0 auto;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess {
+  #readyToPay .shoppingProcess {
     width: 98%;
     height: 75px;
     justify-content: space-between;
   }
 }
-.readyToPay .shoppingProcess img {
+#readyToPay .shoppingProcess img {
   width: 80px;
   height: 24px;
   margin: 0 40px;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess img {
+  #readyToPay .shoppingProcess img {
     display: none;
   }
 }
-.readyToPay .shoppingProcess .chooseAdate {
+#readyToPay .shoppingProcess .chooseAdate {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -65,24 +65,24 @@
   align-items: center;
   flex-direction: column;
 }
-.readyToPay .shoppingProcess .chooseAdate h4:last-Child {
+#readyToPay .shoppingProcess .chooseAdate h4:last-Child {
   margin-bottom: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .chooseAdate h4:last-Child {
+  #readyToPay .shoppingProcess .chooseAdate h4:last-Child {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .chooseAdate {
+  #readyToPay .shoppingProcess .chooseAdate {
     width: 75px;
     height: 75px;
   }
-  .readyToPay .shoppingProcess .chooseAdate h4 {
+  #readyToPay .shoppingProcess .chooseAdate h4 {
     font-size: 16px;
   }
 }
-.readyToPay .shoppingProcess .chooseAtrip {
+#readyToPay .shoppingProcess .chooseAtrip {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -93,24 +93,24 @@
   align-items: center;
   flex-direction: column;
 }
-.readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
+#readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
   margin-bottom: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
+  #readyToPay .shoppingProcess .chooseAtrip h4:last-Child {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .chooseAtrip {
+  #readyToPay .shoppingProcess .chooseAtrip {
     width: 75px;
     height: 75px;
   }
-  .readyToPay .shoppingProcess .chooseAtrip h4 {
+  #readyToPay .shoppingProcess .chooseAtrip h4 {
     font-size: 16px;
   }
 }
-.readyToPay .shoppingProcess .tallyOrder {
+#readyToPay .shoppingProcess .tallyOrder {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -123,24 +123,24 @@
   background-color: #0C1244;
   color: #F5F0DD;
 }
-.readyToPay .shoppingProcess .tallyOrder h4:last-Child {
+#readyToPay .shoppingProcess .tallyOrder h4:last-Child {
   margin-bottom: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .tallyOrder h4:last-Child {
+  #readyToPay .shoppingProcess .tallyOrder h4:last-Child {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .tallyOrder {
+  #readyToPay .shoppingProcess .tallyOrder {
     width: 75px;
     height: 75px;
   }
-  .readyToPay .shoppingProcess .tallyOrder h4 {
+  #readyToPay .shoppingProcess .tallyOrder h4 {
     font-size: 16px;
   }
 }
-.readyToPay .shoppingProcess .orderComplete {
+#readyToPay .shoppingProcess .orderComplete {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -151,36 +151,36 @@
   align-items: center;
   flex-direction: column;
 }
-.readyToPay .shoppingProcess .orderComplete h4:last-Child {
+#readyToPay .shoppingProcess .orderComplete h4:last-Child {
   margin-bottom: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .orderComplete h4:last-Child {
+  #readyToPay .shoppingProcess .orderComplete h4:last-Child {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 576px) {
-  .readyToPay .shoppingProcess .orderComplete {
+  #readyToPay .shoppingProcess .orderComplete {
     width: 75px;
     height: 75px;
   }
-  .readyToPay .shoppingProcess .orderComplete h4 {
+  #readyToPay .shoppingProcess .orderComplete h4 {
     font-size: 16px;
   }
 }
-.readyToPay .bigList {
+#readyToPay .readyToPayBigList {
   width: 1000px;
   height: auto;
   border: 2px solid #0C1244;
   margin: 50px auto;
 }
 @media (max-width: 576px) {
-  .readyToPay .bigList {
+  #readyToPay .readyToPayBigList {
     width: 98%;
     height: 100%;
   }
 }
-.readyToPay .bigList .ListTitle {
+#readyToPay .readyToPayBigList .readyToPayListTitle {
   margin: 0px auto;
   width: 980px;
   height: 50px;
@@ -191,23 +191,23 @@
   font-size: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .bigList .ListTitle {
+  #readyToPay .readyToPayBigList .readyToPayListTitle {
     width: 98%;
     height: 100%;
   }
 }
-.readyToPay .bigList .ListDate {
+#readyToPay .readyToPayBigList .readyToPayListDate {
   display: flex;
   list-style: none;
   justify-content: center;
   margin: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .bigList .ListDate {
+  #readyToPay .readyToPayBigList .readyToPayListDate {
     margin: 10px;
   }
 }
-.readyToPay .bigList .ListDate li {
+#readyToPay .readyToPayBigList .readyToPayListDate li {
   margin-right: 20px;
   font-size: 16px;
   font-weight: bolder;
@@ -215,71 +215,71 @@
   align-items: center;
 }
 @media (max-width: 576px) {
-  .readyToPay .bigList .ListDate li {
+  #readyToPay .readyToPayBigList .readyToPayListDate li {
     margin-right: 7px;
   }
 }
-.readyToPay .bigList .ListDate li:first-Child {
+#readyToPay .readyToPayBigList .readyToPayListDate li:first-Child {
   font-weight: bolder;
   font-size: 16px;
 }
-.readyToPay .bigList table {
+#readyToPay .readyToPayBigList table {
   width: 99%;
   height: auto;
   margin: 0 auto;
   align-content: center;
   border: 1px solid #0C1244;
 }
-.readyToPay .bigList table th {
+#readyToPay .readyToPayBigList table th {
   height: 50px;
   line-height: 50px;
   font-weight: bolder;
   border: 1px solid #0C1244;
 }
-.readyToPay .bigList table td {
+#readyToPay .readyToPayBigList table td {
   border: 1px solid #0C1244;
   height: 100px;
   vertical-align: middle;
 }
-.readyToPay .bigList table td:first-child {
+#readyToPay .readyToPayBigList table td:first-child {
   text-align: center;
   vertical-align: middle;
 }
-.readyToPay .bigList table ul {
+#readyToPay .readyToPayBigList table ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media (max-width: 576px) {
-  .readyToPay .bigList table ul {
+  #readyToPay .readyToPayBigList table ul {
     display: block;
   }
 }
-.readyToPay .bigList table ul li {
+#readyToPay .readyToPayBigList table ul li {
   margin: 7px;
   text-align: center;
 }
-.readyToPay .bigList table ul li i {
+#readyToPay .readyToPayBigList table ul li i {
   margin-left: 5px;
 }
-.readyToPay .bigList table ul li:last-child {
+#readyToPay .readyToPayBigList table ul li:last-child {
   color: #FFBF44;
   border-left: none;
 }
-.readyToPay .bigList .totalBlock {
+#readyToPay .readyToPayBigList .readyToPayTotalBlock {
   margin: 40px 20px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
   height: 150px;
 }
-.readyToPay .bigList .totalBlock .totalTitle {
+#readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalTitle {
   font-weight: bolder;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 19.5px;
 }
-.readyToPay .bigList .totalBlock .totalPrice {
+#readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice {
   font-weight: bolder;
   display: flex;
   flex-direction: column;
@@ -287,114 +287,114 @@
   line-height: 12px;
   text-align: center;
 }
-.readyToPay .bigList .totalBlock .totalPrice span {
+#readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice span {
   color: #FFBF44;
   font-size: 20px;
 }
-.readyToPay .bigList .totalBlock .totalPrice #couponPrice {
+#readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice #readyToPayCouponPrice {
   color: #FF4444;
 }
-.readyToPay .payBlock {
+#readyToPay .payBlock {
   width: 750px;
   margin: 0 auto;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock {
+  #readyToPay .payBlock {
     width: 98%;
     height: 100%;
   }
 }
-.readyToPay .payBlock h5 {
+#readyToPay .payBlock h5 {
   margin-top: 15px;
 }
-.readyToPay .payBlock #payEmail {
+#readyToPay .payBlock #payEmail {
   width: 450px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 24px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock #payEmail {
+  #readyToPay .payBlock #payEmail {
     width: 90%;
   }
 }
-.readyToPay .payBlock .mailAndPhone {
+#readyToPay .payBlock .mailAndPhone {
   display: flex;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .mailAndPhone {
+  #readyToPay .payBlock .mailAndPhone {
     display: block;
   }
 }
-.readyToPay .payBlock .mailAndPhone .email {
+#readyToPay .payBlock .mailAndPhone .email {
   margin-right: 50px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .mailAndPhone .email {
+  #readyToPay .payBlock .mailAndPhone .email {
     margin-right: 0;
   }
 }
-.readyToPay .payBlock #payPhoneNumber {
+#readyToPay .payBlock #payPhoneNumber {
   width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 24px;
 }
-.readyToPay .payBlock .nameBlock {
+#readyToPay .payBlock .nameBlock {
   display: flex;
   align-items: center;
   padding-bottom: 40px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock {
+  #readyToPay .payBlock .nameBlock {
     padding-bottom: 0px;
   }
 }
-.readyToPay .payBlock .nameBlock .firstName {
+#readyToPay .payBlock .nameBlock .firstName {
   margin-right: 50px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock .firstName {
+  #readyToPay .payBlock .nameBlock .firstName {
     margin-right: 10px;
   }
 }
-.readyToPay .payBlock .nameBlock #firstName {
+#readyToPay .payBlock .nameBlock #firstName {
   width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock #firstName {
+  #readyToPay .payBlock .nameBlock #firstName {
     width: 150px;
   }
 }
-.readyToPay .payBlock .nameBlock .lastName {
+#readyToPay .payBlock .nameBlock .lastName {
   margin-right: 50px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock .lastName {
+  #readyToPay .payBlock .nameBlock .lastName {
     margin-right: 0px;
   }
 }
-.readyToPay .payBlock .nameBlock #lastName {
+#readyToPay .payBlock .nameBlock #lastName {
   width: 200px;
   height: 50px;
   background-color: #F5F0DD;
   font-size: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock #lastName {
+  #readyToPay .payBlock .nameBlock #lastName {
     margin-right: 0px;
     width: 180px;
   }
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .nameBlock .payWay {
+  #readyToPay .payBlock .nameBlock .payWay {
     display: none;
   }
 }
-.readyToPay .payBlock .nameBlock #payWay {
+#readyToPay .payBlock .nameBlock #payWay {
   width: 200px;
   height: 50px;
   background-color: #F5F0DD;
@@ -402,15 +402,15 @@
   text-align: center;
   text-align-last: center;
 }
-.readyToPay .payBlock .payWayMobile {
+#readyToPay .payBlock .payWayMobile {
   display: none;
   margin-bottom: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .payWayMobile {
+  #readyToPay .payBlock .payWayMobile {
     display: block;
   }
-  .readyToPay .payBlock .payWayMobile #payWayMobileUse {
+  #readyToPay .payBlock .payWayMobile #payWayMobileUse {
     width: 200px;
     height: 50px;
     background-color: #F5F0DD;
@@ -418,22 +418,22 @@
     text-align: center;
   }
 }
-.readyToPay .payBlock .creditCardBlock {
+#readyToPay .payBlock .creditCardBlock {
   margin-top: 50px;
   border-top: 1px solid #0C1244;
 }
-.readyToPay .payBlock .creditCardBlock input {
+#readyToPay .payBlock .creditCardBlock input {
   width: 150px;
   height: 50px;
   background-color: #F5F0DD;
 }
 @media (max-width: 576px) {
-  .readyToPay .payBlock .creditCardBlock input {
+  #readyToPay .payBlock .creditCardBlock input {
     width: 70px;
     height: 40px;
   }
 }
-.readyToPay .payBlock .creditCardBlock h4 {
+#readyToPay .payBlock .creditCardBlock h4 {
   width: 150px;
   height: 50px;
   background-color: #0C1244;
@@ -443,27 +443,32 @@
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.readyToPay .payBlock .creditCardBlock .creditCardNums input {
+#readyToPay .payBlock .creditCardBlock .creditCardNums input {
   margin-right: 5px;
   text-align: center;
 }
-.readyToPay .payBlock .creditCardBlock .expAndScode {
+#readyToPay .payBlock .creditCardBlock .expAndScode {
   display: flex;
   margin-bottom: 20px;
 }
-.readyToPay .payBlock .creditCardBlock .expAndScode .exp {
+#readyToPay .payBlock .creditCardBlock .expAndScode .exp {
   margin-right: 16px;
 }
-.readyToPay .payBlock .directions .agreeListOne {
+#readyToPay .payBlock .directions .agreeListOne {
   display: flex;
   margin-top: 20px;
 }
-.readyToPay .payBlock .directions .agreeListTwo {
+#readyToPay .payBlock .directions .agreeListTwo {
   display: flex;
   margin: 20px 0;
 }
+<<<<<<< HEAD
 .readyToPay #FinishPage {
   display: inline-block;
+=======
+#readyToPay #FinishPage {
+  display: block;
+>>>>>>> dev
   width: 140px;
   height: 50px;
   text-align: center;
@@ -473,14 +478,14 @@
   margin: 50px auto;
 }
 @media (max-width: 576px) {
-  .readyToPay #FinishPage {
+  #readyToPay #FinishPage {
     margin-top: 20px;
     width: 300px;
     height: 60px;
     border-radius: 30px;
   }
 }
-.readyToPay #FinishPage:hover {
+#readyToPay #FinishPage:hover {
   color: #F5F0DD;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
@@ -972,7 +977,12 @@
   display: flex;
   margin: 20px 0;
 }
-.readyToPay_moon #FinishPage {
+.readyToPay_moon .buttonBlock {
+  width: 300px;
+  display: flex;
+  margin: 50px auto;
+}
+.readyToPay_moon .buttonBlock .backToChoosePage {
   display: block;
   width: 140px;
   height: 50px;
@@ -980,17 +990,39 @@
   line-height: 50px;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
-  margin: 50px auto;
+  margin-left: 20px;
 }
 @media (max-width: 576px) {
-  .readyToPay_moon #FinishPage {
+  .readyToPay_moon .buttonBlock .backToChoosePage {
     margin-top: 20px;
     width: 300px;
     height: 60px;
     border-radius: 30px;
   }
 }
-.readyToPay_moon #FinishPage:hover {
+.readyToPay_moon .buttonBlock .backToChoosePage:hover {
+  color: #0C1244;
+  background-color: #F5F0DD;
+  border: 1px solid #0C1244;
+}
+.readyToPay_moon .buttonBlock #FinishPage {
+  display: block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #0C1244;
+  border: 1px solid #F5F0DD;
+}
+@media (max-width: 576px) {
+  .readyToPay_moon .buttonBlock #FinishPage {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+.readyToPay_moon .buttonBlock #FinishPage:hover {
   color: #0C1244;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;

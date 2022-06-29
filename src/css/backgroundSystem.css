@@ -77,9 +77,9 @@ main .backwrapper nav .leftNav .admin {
   justify-content: center;
 }
 main .backwrapper nav .leftNav .admin img {
-  width: 50px;
   height: 50px;
   align-self: center;
+  border-radius: 50%;
 }
 main .backwrapper nav .leftNav .admin .user {
   align-self: center;
@@ -113,6 +113,73 @@ main .backwrapper nav .leftNav a:hover {
 main .backwrapper nav .leftNav a.on {
   background-color: #F5F0DD;
   color: #0C1244;
+}
+main .backwrapper .overview {
+  padding: 30px;
+}
+main .backwrapper .overview .number {
+  display: flex;
+}
+main .backwrapper .overview .number .analysis {
+  box-sizing: border-box;
+}
+main .backwrapper .overview .number .analysis > h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .number .analysis > h1 {
+  text-align: center;
+  color: red;
+  font-size: 64rem;
+  margin: 40rem 0;
+}
+main .backwrapper .overview .number .analysis .wrapper {
+  width: 65%;
+  margin: 0 auto;
+}
+main .backwrapper .overview .number .analysis .wrapper .week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .backwrapper .overview .number .analysis .wrapper .week .count {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .backwrapper .overview .number .analysis .wrapper .week .count h5:last-child {
+  margin-left: 10px;
+}
+main .backwrapper .overview .number .bar-chart {
+  border-left: 2px solid #0C1244;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+main .backwrapper .overview .number .bar-chart > h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .number .bar-chart .card-body {
+  padding: 20px;
+  margin-top: 10px;
+}
+main .backwrapper .overview .border-hr {
+  width: 100%;
+  height: 1px;
+  background-color: #0C1244;
+  margin: 30px 0;
+}
+main .backwrapper .overview .pie-chart-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  flex-grow: 1;
+}
+main .backwrapper .overview .pie-chart-container h3 {
+  text-decoration: underline;
+}
+main .backwrapper .overview .pie-chart-container .pieChart {
+  border: 1px solid #000;
+  box-sizing: border-box;
 }
 main .listTitle {
   padding: 30px 50px;
@@ -253,6 +320,274 @@ main .listTitle .pages .pageList li:hover {
   cursor: pointer;
 }
 main .listTitle .pages .pageList li.on {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+main .listTitle .pop_up {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+main .listTitle .pop_up .formBody_04 {
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  border-radius: 20px;
+  border: 1px solid #0C1244;
+}
+main .listTitle .pop_up .formBody_04 p {
+  border: 1px solid #0C1244;
+  box-sizing: border-box;
+}
+main .listTitle .pop_up .formBody_04 h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 {
+  display: flex;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > input {
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li > p {
+  width: 140px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num {
+  display: flex;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num input {
+  text-align: center;
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 ul li .discount_num p {
+  margin-left: 20px;
+}
+main .listTitle .pop_up .formBody_04 .Form_04 textarea {
+  height: 100px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > input {
+  width: 420px;
+  font-size: 16px;
+  padding: 0 10px;
+  height: 38px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > p {
+  width: 420px;
+  text-align-last: left;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li > textarea {
+  width: 420px;
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li:last-child {
+  align-items: start;
+}
+main .listTitle .pop_up .formBody_04 .content_04 ul li:last-child p {
+  height: 200px;
+  text-align: left;
+  overflow-y: auto;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 {
+  margin-top: 30px;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 button {
+  font-size: 16rem;
+  line-height: 40px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+main .listTitle .pop_up .formBody_04 .buttonBlock_04 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+main .listTitle .pop_up .formBody_05 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #0C1244;
+}
+main .listTitle .pop_up .formBody_05 h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 {
+  display: flex;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > h4 {
+  box-sizing: border-box;
+  width: 120px;
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > input {
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li > p {
+  width: 220px;
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num {
+  display: flex;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num input {
+  text-align: center;
+  width: 220px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+main .listTitle .pop_up .formBody_05 .Form_05 ul li .discount_num p {
+  margin-left: 20px;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 {
+  margin-top: 30px;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 button {
+  font-size: 16rem;
+  line-height: 40px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+main .listTitle .pop_up .formBody_05 .buttonBlock_05 button:hover {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+main .listTitle .pop_up .formBody_06 {
+  width: 1000px;
+  padding: 20px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5F0DD;
+  border-radius: 20px;
+  border: 1px solid #0C1244;
+}
+main .listTitle .pop_up .formBody_06 h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 {
+  display: flex;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 ul {
+  display: block;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 ul li h4:first-child {
+  box-sizing: border-box;
+  width: 120px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 ul li h4:last-child {
+  width: 260px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 16rem;
+  line-height: 38px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 span {
+  display: inline-block;
+  margin: 15px 0;
+  text-align: center;
+  width: 70px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .leftForm_06, main .listTitle .pop_up .formBody_06 .Form_06 .rightForm_06 {
+  text-align: center;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .leftForm_06 ul li {
+  justify-content: end;
+  margin-right: 10px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .centerForm_06 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .centerForm_06 > div {
+  background-color: #0C1244;
+  width: 2px;
+  height: 225px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .rightForm_06 h4:first-child {
+  margin-right: 20px;
+}
+main .listTitle .pop_up .formBody_06 .Form_06 .rightForm_06 ul li {
+  justify-content: start;
+}
+main .listTitle .pop_up .formBody_06 .buttonBlock_06 {
+  margin-top: 30px;
+}
+main .listTitle .pop_up .formBody_06 .buttonBlock_06 button {
+  font-size: 16rem;
+  line-height: 40px;
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+main .listTitle .pop_up .formBody_06 .buttonBlock_06 button:hover {
   background-color: #0C1244;
   color: #F5F0DD;
 }
@@ -458,144 +793,6 @@ main .table > :not(:first-child) {
   color: #0C1244;
 }
 .formBody_03 .buttonBlock_03 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-
-.formBody_04 {
-  width: 800px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F5F0DD;
-  display: none;
-  border-radius: 5%;
-  border: 1px solid #0C1244;
-}
-.formBody_04 h2 {
-  text-align: center;
-  margin: 20px;
-}
-.formBody_04 .Form_04 {
-  display: flex;
-  justify-content: center;
-  margin-left: 30px;
-}
-.formBody_04 .Form_04 span {
-  display: inline-block;
-  margin: 15px 0;
-  width: 70px;
-}
-.formBody_04 .Form_04 textarea {
-  height: 100px;
-}
-.formBody_04 .buttonBlock_04 {
-  margin: 40px 0;
-}
-.formBody_04 .buttonBlock_04 button {
-  height: 50px;
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_04 .buttonBlock_04 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-
-.formBody_05 {
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F5F0DD;
-  display: none;
-  border-radius: 5%;
-  border: 1px solid #0C1244;
-}
-.formBody_05 h2 {
-  text-align: center;
-  margin: 20px 0;
-}
-.formBody_05 .Form_05 span {
-  display: inline-block;
-  width: 70px;
-  margin-bottom: 15px;
-}
-.formBody_05 .buttonBlock_05 {
-  margin: 40px 0;
-}
-.formBody_05 .buttonBlock_05 button {
-  height: 30px;
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_05 .buttonBlock_05 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-
-.formBody_06 {
-  width: 800px;
-  height: 450px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #F5F0DD;
-  display: none;
-  border-radius: 5%;
-  border: 1px solid #0C1244;
-}
-.formBody_06 h2 {
-  text-align: center;
-  margin: 20px 0;
-}
-.formBody_06 .Form_06 {
-  display: flex;
-  justify-content: center;
-}
-.formBody_06 .Form_06 span {
-  display: inline-block;
-  margin: 15px 0;
-  text-align: center;
-  width: 70px;
-}
-.formBody_06 .Form_06 .leftForm_06 {
-  text-align: center;
-}
-.formBody_06 .Form_06 .rightForm_06 {
-  text-align: center;
-}
-.formBody_06 .Form_06 .rightForm_06::before {
-  content: "";
-  background-color: #0C1244;
-  width: 2px;
-  height: 200px;
-  display: block;
-  position: absolute;
-  left: 400px;
-}
-.formBody_06 .Form_06 .rightForm_06 button {
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_06 .Form_06 .rightForm_06 button:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
-}
-.formBody_06 .buttonBlock_06 {
-  margin: 60px 0;
-}
-.formBody_06 .buttonBlock_06 button {
-  height: 60px;
-  background-color: #F5F0DD;
-  color: #0C1244;
-}
-.formBody_06 .buttonBlock_06 button:hover {
   background-color: #0C1244;
   color: #F5F0DD;
 }
