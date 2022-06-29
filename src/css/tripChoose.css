@@ -1,3 +1,20 @@
+.dayclick {
+  background-color: #0C1244 !important;
+  color: #F5F0DD;
+}
+
+.buttonBorderTop {
+  border-top: 1px solid #F5F0DD !important;
+}
+
+.buttonBorderBottom {
+  border-bottom: 1px solid #F5F0DD !important;
+}
+
+.weekCircularMoon {
+  border: 1px solid #F5F0DD !important;
+}
+
 .bodyCover {
   height: 100vh;
   width: 100vw;
@@ -6,7 +23,7 @@
   position: fixed;
   display: none;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 .ChooseMove {
@@ -16,7 +33,7 @@
 }
 
 .notCheck {
-  animation: notCheck 0.2s infinite;
+  animation: notCheck 0.2s;
 }
 
 @keyframes notCheck {
@@ -163,6 +180,8 @@
   position: sticky;
   top: 0px;
   display: flex;
+  background-color: #F5F0DD;
+  z-index: 4;
 }
 .tripChoose .datePickerBox .daysbutton {
   display: inline-block;
@@ -231,7 +250,7 @@
   top: 10%;
   font-size: 20px;
   text-align: center;
-  z-index: 3;
+  z-index: 100;
   cursor: pointer;
 }
 .tripChoose .ListSmall .circle {
@@ -255,7 +274,7 @@
   top: 0%;
   position: fixed;
   display: none;
-  z-index: 3;
+  z-index: 100;
   overflow-y: auto;
 }
 .tripChoose .BigList span {
@@ -387,6 +406,25 @@
   margin: 50px auto;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
+  position: relative;
+}
+.tripChoose .tripChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.tripChoose .tripChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
 }
 .tripChoose .tripChooseBlock .itineraryTitle {
   display: flex;
@@ -592,6 +630,25 @@
   margin: 0 auto;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
+  position: relative;
+}
+.tripChoose .foodChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.tripChoose .foodChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
 }
 .tripChoose .foodChooseBlock .foodTitle {
   display: flex;
@@ -599,6 +656,7 @@
   position: relative;
   height: 66px;
   align-items: center;
+  z-index: -1;
 }
 .tripChoose .foodChooseBlock .foodTitle .chooseDate {
   position: absolute;
@@ -793,6 +851,25 @@
   margin: 50px auto;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
+  position: relative;
+}
+.tripChoose .stayChooseBlock::before {
+  content: "";
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.tripChoose .stayChooseBlock.divCover::before {
+  opacity: 1;
+  pointer-events: auto;
 }
 .tripChoose .stayChooseBlock .stayTitle {
   display: flex;
@@ -800,6 +877,7 @@
   position: relative;
   height: 66px;
   align-items: center;
+  z-index: -1;
 }
 .tripChoose .stayChooseBlock .stayTitle .chooseDate {
   position: absolute;

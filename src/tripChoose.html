@@ -25,6 +25,7 @@
     <div class="addfadein">
         已加入您的訂單中<i class="fa-regular fa-circle-check"></i>
     </div>
+    
     <!-- <header></header> -->
     <article>
         <section id="app">
@@ -53,7 +54,7 @@
             <h3>2.選擇行程</h3>
             <div class="datePickerBox">
                 <div @click="day(date,index);ChooseReturn(index,$event)" class="daysbutton" v-for="(date,index) in dateArray"> 
-                    <select class="setChooseList" @change="setChoose($event.target.value,$event)" @click ="setChoose($event.target.value,$event)">
+                    <select class="setChooseList" @change="setChoose($event.target.value,$event,index)" @click ="setChoose($event.target.value,$event)">
                         <option value="">選擇行程</option>
                         <option value="-1">自由選擇</option>
                         <option v-for="(set,index,event) in set_list" :value="index">{{set[4]}}</option>
@@ -91,21 +92,21 @@
                         <li class="tripMorningName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total();" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripMorningPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="morningTripDeleteButton" @click="morningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="morningTripDeleteButton" @click="morningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                     <ul>
                         <li class="tripNoonName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripNoonPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="noonTripDeleteButton" @click="noonTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="noonTripDeleteButton" @click="noonTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                     <ul>
                         <li class="tripEveningName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="tripEveningPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="eveningTripDeleteButton" @click="eveningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="eveningTripDeleteButton" @click="eveningTripDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
 
                 </div>
@@ -116,19 +117,19 @@
                         <li class="FoodMorningName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodMorningPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="morningFoodDeleteButton" @click="morningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="morningFoodDeleteButton" @click="morningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                     <ul>
                         <li class="FoodNoonName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodNoonPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="noonFoodDeleteButton" @click="noonFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="noonFoodDeleteButton" @click="noonFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                     <ul>
                         <li class="FoodEveningName"></li>
                         <li ><img class="leftButton" @click="dpnums($event.target);total()" src="./img/orderPage/sun/left_button.png" ><h6>{{pepoleNums}}</h6><img class="rightButton" @click="apnums($event.target);total()" src="./img/orderPage/sun/right_button.png"></li>
                         <li class="FoodEveningPrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="eveningFoodDeleteButton" @click="eveningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="eveningFoodDeleteButton" @click="eveningFoodDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                 </div>
                 
@@ -139,7 +140,7 @@
                         <li class="StayChooseName"></li>
                         <li ><h6>{{pepoleNums}}</h6></li>
                         <li class="StayChoosePrice">{{newPrice}}</li>
-                        <li><img :data-deleteindex="index" class="StayDeleteButton" @click="StayDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
+                        <li><img :data-deleteindex="index" v-if="CheckForFree(index)" class="StayDeleteButton" @click="StayDeleteButton" src="./img/orderPage/sun/delete_button.png"></li>
                     </ul>
                 </div>
                 <div class="totalBlock">

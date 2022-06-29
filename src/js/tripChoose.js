@@ -1,5 +1,6 @@
 
 
+
 window.addEventListener('load',function(){
     // const bus = new Vue();
 
@@ -433,7 +434,8 @@ window.addEventListener('load',function(){
             choosePrice:'',
             pepoleNums:0,
             newPrice: 0,
-
+            //日期按鈕
+            daysbutton:[],
             selectedDate: null,
             //行程資料表
             activity_list:[],
@@ -515,13 +517,43 @@ window.addEventListener('load',function(){
             day(val,index){
                 this.newDay = val;
                 this.dayindex = index;
-                
                 let daysbutton = document.getElementsByClassName('daysbutton')
+                let setChooseList = document.getElementsByClassName('setChooseList')
+                let SendChoose = document.getElementsByClassName('SendChoose')
+                
                 for(i = 0 ; i < daysbutton.length ; i++){
                     daysbutton[i].classList.remove('UseForCheck')
+                    daysbutton[i].classList.remove('dayclick')
+                    SendChoose[index].classList.remove('buttonBorderTop')
+                    setChooseList[index].classList.remove('buttonBorderBottom')
+                    daysbutton[index].querySelector('input').style.outline = 'none'
+                    
                 }
+                if(daysbutton[index].querySelector('input').value != '已選擇' && daysbutton[index].querySelector('input').value != '請點下列購物車'){
+                    daysbutton[index].querySelector('input').value = '確認送出'
+                }
+                if(daysbutton[index].querySelector('input').value == '已選擇'){
+                    $('.tripChooseBlock').addClass('divCover')
+                    $('.foodChooseBlock').addClass('divCover')
+                    $('.stayChooseBlock').addClass('divCover') 
+                }
+                
                 daysbutton[index].classList.add('UseForCheck')
-
+                daysbutton[index].classList.add('dayclick')
+                SendChoose[index].classList.add('buttonBorderTop')
+                setChooseList[index].classList.add('buttonBorderBottom')
+            },
+            //確認是否為自由行，是才可出現刪除形成按鈕函式
+            CheckForFree(dateindex){
+                let setChooseList = document.getElementsByClassName('setChooseList')
+                let SendChoose = document.getElementsByClassName('SendChoose')
+                for(i = 0; i < setChooseList.length; i++){
+                    if(dateindex == i){
+                        if(setChooseList[i].value == '-1' && SendChoose[i].value == '請點下列購物車' ){
+                            return true
+                        }
+                    }
+                }
             },
             //點選日期帶回當天已選擇的行程資料
             ChooseReturn(indexval,e){
@@ -543,6 +575,7 @@ window.addEventListener('load',function(){
                 let tripEchoose = document.getElementById('tripEchoose');
 
                 console.log('冒泡');
+
                 //先清空
                 //上午行程
                 tripMchoose.value = -1
@@ -587,6 +620,7 @@ window.addEventListener('load',function(){
                 $('#addFoodM').css('opacity','0')
                 $('#addFoodN').css('opacity','0')
                 $('#addFoodE').css('opacity','0')
+
 
                 //在開始對比
                 for(i = 0; i < tripList.length; i++){
@@ -676,11 +710,54 @@ window.addEventListener('load',function(){
 
             //套餐選單Change事件 + scroll事件設定
 
-            setChoose(val,e){
+            setChoose(val,e,index){
                 let eg = e.target
                 // console.log($(eg).parent().text().substring(0,4));
                 this.newDay = $(eg).parent().find('p').text()
 
+
+                // let setChooseList = document.getElementsByClassName('setChooseList')
+                // let SendChoose = document.getElementsByClassName('SendChoose')
+
+                let daysbutton = document.getElementsByClassName('daysbutton')
+
+                // this.daysbutton[index].classList.add('UseForCheck')
+                // this.daysbutton[index].classList.add('dayclick')
+                // SendChoose[index].classList.add('buttonBorderTop')
+                // setChooseList[index].classList.add('buttonBorderBottom')
+                for(i = 0 ; i < this.dateArray.length ; i++){
+                    
+                    daysbutton[i].classList.remove('dayclick')
+                    
+                    // SendChoose[index].classList.remove('buttonBorderTop')
+                    // setChooseList[index].classList.remove('buttonBorderBottom')
+                    // daysbutton[index].querySelector('input').style.outline = 'none'
+                    
+                }
+                $(eg).parent().addClass('dayclick')
+                $(eg).addClass('buttonBorderBottom');
+                $(eg).parent().find('input').addClass('buttonBorderTop')
+                // console.log($(eg).parent().find('.weekCircular'));
+                $(eg).parent().find('.weekCircular').addClass('weekCircularMoon')
+                // weekCircular[index].classList.add('weekCircularMoon')
+                // if(daysbutton[index].querySelector('input').value != '已選擇'){
+                //     daysbutton[index].querySelector('input').value = '確認送出'
+                // }
+                if(val == '-1'){
+                    $(eg).parent().find('.SendChoose').val("請點下列購物車")
+                }else{
+                    $(eg).parent().find('.SendChoose').val("確認送出")
+                }
+                if(val != '-1' && val != ''){
+                    $('.tripChooseBlock').addClass('divCover')
+                    $('.foodChooseBlock').addClass('divCover')
+                    $('.stayChooseBlock').addClass('divCover')
+                }else{
+                    $('.tripChooseBlock').removeClass('divCover')
+                    $('.foodChooseBlock').removeClass('divCover')
+                    $('.stayChooseBlock').removeClass('divCover')
+                }
+                
                 // if(val != '' && val != -1){
                 //     $(window).scroll(()=>{
                 //         // console.log($(window).scrollTop());
@@ -767,6 +844,8 @@ window.addEventListener('load',function(){
                         $('#addcabin').css('opacity','0.1')
                         $('#addCamping').css('opacity','0.1')
                         $('#addVilla').css('opacity','0.1')
+                        
+                        
                         break;
                     case '0':
                         //上午行程
@@ -816,6 +895,7 @@ window.addEventListener('load',function(){
                         $('#addcabin').css('opacity','0')
                         $('#addCamping').css('opacity','0')
                         $('#addVilla').css('opacity','0')
+                        
                         break;
                     case '1':
                         //上午行程
@@ -1374,84 +1454,95 @@ window.addEventListener('load',function(){
             //套餐加入訂單
             sendChoose(date,e){
                 let eg = event.target;
-                
+                let SendChoose = document.getElementsByClassName('SendChoose')
+                // console.log($(eg).parent().find('select').val());
                 for(let i = 0; i <= this.dateArray.length ;i++ ){
-                    if(date == i ){
-                        $('.tripMorningName')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
-                        $('.tripMorningPrice')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
-
-                        let tirpMorningChooseList = [];
-                        tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
-                        localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
-
-                        $('.tripNoonName')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
-                        $('.tripNoonPrice')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
-
-                        let tripNoonChooseList = [];
-                        tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
-                        localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
-                        
-                        $('.tripEveningName')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
-                        $('.tripEveningPrice')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
-
-                        let tripEveningChooseList = [];
-                        tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
-                        localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
-
-                        $('.FoodMorningName')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
-                        $('.FoodMorningPrice')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
-
-                        let FoodMorningChooseList = [];
-                        FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
-                        localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
-
-                        $('.FoodNoonName')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
-                        $('.FoodNoonPrice')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
-
-                        let FoodNoonChooseList = [];
-                        FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
-                        localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
-
-                        $('.FoodEveningName')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
-                        $('.FoodEveningPrice')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
-
-                        let FoodEveningChooseList = [];
-                        FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
-                        localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
-
-                        let stayChoose = document.getElementsByClassName('stayChoose');
-                        for(let j = 0 ; j < stayChoose.length ; j++){
-                            if(stayChoose[j].checked == true){
-                                // console.log(stayChoose[j].parentNode.querySelectorAll('span')[0].innerText.substring(1,5));
-                                let thisStayName = stayChoose[j].parentNode.querySelectorAll('h4')[0].innerText
-                                let thisPrice = stayChoose[j].parentNode.querySelectorAll('span')[0].innerText.substring(1,5)
-                                // console.log(cabinOption.value);
-                                if(cabinOption.value == 1){
-                                   thisStayName = thisStayName + '(日)';
-                                }else{
-                                    thisStayName = thisStayName + '(月)';
+                    if($(eg).parent().find('select').val() != '' && $(eg).parent().find('select').val() != '-1'){
+                        if(date == i ){
+                            $('.tripMorningName')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
+                            $('.tripMorningPrice')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
+    
+                            let tirpMorningChooseList = [];
+                            tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
+                            localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+    
+                            $('.tripNoonName')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
+                            $('.tripNoonPrice')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+    
+                            let tripNoonChooseList = [];
+                            tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                            localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                            
+                            $('.tripEveningName')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
+                            $('.tripEveningPrice')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+    
+                            let tripEveningChooseList = [];
+                            tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                            localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+    
+                            $('.FoodMorningName')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
+                            $('.FoodMorningPrice')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
+    
+                            let FoodMorningChooseList = [];
+                            FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
+                            localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
+    
+                            $('.FoodNoonName')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
+                            $('.FoodNoonPrice')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
+    
+                            let FoodNoonChooseList = [];
+                            FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
+                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
+    
+                            $('.FoodEveningName')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
+                            $('.FoodEveningPrice')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
+    
+                            let FoodEveningChooseList = [];
+                            FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
+                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
+    
+                            let stayChoose = document.getElementsByClassName('stayChoose');
+                            for(let j = 0 ; j < stayChoose.length ; j++){
+                                if(stayChoose[j].checked == true){
+                                    // console.log(stayChoose[j].parentNode.querySelectorAll('span')[0].innerText.substring(1,5));
+                                    let thisStayName = stayChoose[j].parentNode.querySelectorAll('h4')[0].innerText
+                                    let thisPrice = stayChoose[j].parentNode.querySelectorAll('span')[0].innerText.substring(1,5)
+                                    // console.log(cabinOption.value);
+                                    if(cabinOption.value == 1){
+                                       thisStayName = thisStayName + '(日)';
+                                    }else{
+                                        thisStayName = thisStayName + '(月)';
+                                    }
+                                    $('.StayChooseName')[i].innerHTML = thisStayName;
+                                    $('.StayChoosePrice')[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
+            
+                                    let stayChooseList = [];
+                                    stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                    localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
                                 }
-                                $('.StayChooseName')[i].innerHTML = thisStayName;
-                                $('.StayChoosePrice')[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
-        
-                                let stayChooseList = [];
-                                stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
                             }
+                            // e.stopPropagation();
+                            
+                            // console.log(SendChoose[date].value);
+                            
+                            SendChoose[date].value = '已選擇'
+    
                         }
 
+                        $('.addfadein').fadeTo(1,0.9)
+                        $('.addfadein').fadeOut(3000)
+                        $('.addfadein').css({'z-index':'999'})
+                        setTimeout(()=>{
+                            $('.addfadein').css({'z-index':'-999'})
+                        },2000)
+                        // console.log($(eg));
+                        $(eg).parent().addClass('send');
+                        // e.stopPropagation();
 
                     }
+                   
                 }
-                $('.addfadein').fadeTo(1,0.9)
-                $('.addfadein').fadeOut(3000)
-                $('.addfadein').css({'z-index':'999'})
-                setTimeout(()=>{
-                    $('.addfadein').css({'z-index':'-999'})
-                },2000)
-                // console.log($(eg));
-                $(eg).parent().addClass('send');
-                // e.stopPropagation();
+
             },
 
             //上午行程
@@ -1667,7 +1758,11 @@ window.addEventListener('load',function(){
 
 
         },
-
+        computed:{
+            daysButton(){
+                return {daysbutton : true};
+            }
+        },
         created() {
             //取行程資料表
             const url = './php/tripChoose.php'
@@ -1728,11 +1823,11 @@ window.addEventListener('load',function(){
                 let addItineraryM = document.getElementById('addItineraryM');
                 let tripMorningName = document.getElementsByClassName('tripMorningName');
                 let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
-
+                let setChooseList = document.getElementsByClassName('setChooseList')
                 addItineraryM.addEventListener('click',()=>{
-                    console.log(this.newDay);
-                    if(this.newDay !== ''){
-                        for(let i = 0; i <= this.dateArray.length ;i++ ){
+                    if(this.newDay !== ''  ){
+                        for(let i = 0; i < this.dateArray.length ;i++ ){
+                            console.log( setChooseList[i].value);
                             if(this.dayindex == i ){
                                 tripMorningName[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
                                 tripMorningPrice[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
@@ -1809,9 +1904,6 @@ window.addEventListener('load',function(){
                         this.noontriptext='請點選上方選單列，開始安排您的旅程吧!'
                         this.noontripPrice='0'
                         this.noontripImg='./img/orderPage/welcome.jpg'
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     }  
                     
@@ -1854,9 +1946,6 @@ window.addEventListener('load',function(){
                         this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!',
                         this.eveningtripPrice='0',
                         this.eveningtripImg='./img/orderPage/welcome.jpg',
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     } 
 
@@ -1901,9 +1990,6 @@ window.addEventListener('load',function(){
                         this.morningFoodtext='請點選上方選單列，開始安排您的早餐!',
                         this.morningFoodPrice='0',
                         this.morningFoodImg='./img/orderPage/welcome.jpg',
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     } 
 
@@ -1947,9 +2033,6 @@ window.addEventListener('load',function(){
                         this.noonFoodtext='請點選上方選單列，開始安排您的午餐!',
                         this.noonFoodPrice='0',
                         this.noonFoodImg='./img/orderPage/welcome.jpg',
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     } 
 
@@ -1998,10 +2081,6 @@ window.addEventListener('load',function(){
                             this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!',
                             this.eveningFoodPrice='0',
                             this.eveningFoodImg='./img/orderPage/welcome.jpg',
-                            $('html,body').animate({
-                                scrollTop: 0
-                            }, 1000);
-                            
                         }
 
 
@@ -2019,7 +2098,7 @@ window.addEventListener('load',function(){
                                 if(this.dayindex == i ){
                                     let thisStayName = $(e.target).parent().find('h4').text()
                                     let thisPrice = $(e.target).prev().find('span').text().substring(1,5);
-                                    console.log(cabinOption.value);
+                                    
                                     if(cabinOption.value == 1){
                                        thisStayName = thisStayName + '(日)';
                                     }else{
@@ -2054,11 +2133,7 @@ window.addEventListener('load',function(){
                         $('#addcabin').css({
                             opacity:'0.1',
                             cursor:'not-allowed',
-                        }) 
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
-                        
+                        })                        
                     }  
 
                 })
@@ -2105,9 +2180,6 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         alert('請先選擇日期')
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     }  
 
@@ -2155,9 +2227,6 @@ window.addEventListener('load',function(){
                             opacity:'0.1',
                             cursor:'not-allowed',
                         })
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
                         
                     } 
 
@@ -2259,7 +2328,7 @@ window.addEventListener('load',function(){
                             display:"block",
                         })
                         $('.bodyCover').css('display','block')
-                        $('#dateBooking').css('opacity','0.5')
+                        
                         $('.circle').css({
                             transform:'rotateZ(405deg)',
                         })
@@ -2273,7 +2342,7 @@ window.addEventListener('load',function(){
                         $('.circle').css({
                             transform:'rotate(0deg)',
                         })
-                        $('#dateBooking').css('opacity','1')
+                        
                         $('.bodyCover').css('display','none')
                         $('.ListSmall').addClass('on');
                     }
@@ -2308,6 +2377,11 @@ window.addEventListener('load',function(){
                         if(StayChooseName[i].innerText == ''){
                             daysbutton[i].classList.add('notCheck')
                             daysbutton[i].querySelector('input').value = '請選擇住宿'
+                            daysbutton[i].querySelector('input').style.outline = '3rem solid #FF4444'
+
+                            setTimeout(()=>{
+                                $('.daysbutton').removeClass('notCheck')
+                            },500)
                         }
                         // if(StayChooseName.innerText != ''){
                         //     window.location.href = './readyToPay.html'

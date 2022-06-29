@@ -22,9 +22,21 @@
     }
 };
 
-
-.bodyCover{
+.dayclick{
+    background-color: $moon_color !important;
+    color: $sun_color;
+}
+.buttonBorderTop{
+    border-top: 1px solid $sun_color !important;
     
+}
+.buttonBorderBottom{
+    border-bottom: 1px solid $sun_color !important;
+}
+.weekCircularMoon{
+    border: 1px solid $sun_color !important;
+}
+.bodyCover{
     height: 100vh;
     width: 100vw;
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -32,8 +44,9 @@
     position: fixed;
     display: none;
     top: 0;
-    z-index: 2;
+    z-index: 5;
 }
+
 
 .ChooseMove{
     position: fixed;
@@ -43,7 +56,7 @@
 }
 
 .notCheck{
-    animation: notCheck 0.2s infinite;
+    animation: notCheck 0.2s; 
 }
 @keyframes notCheck {
    0%{
@@ -163,6 +176,8 @@
         position: sticky;
         top: 0px;
         display: flex;
+        background-color: $sun_color;
+        z-index: 4;
         .daysbutton{
             display: inline-block;
             width: 160px;
@@ -210,6 +225,7 @@
                     border-radius: 999em;
                     border: 1px solid $moon_color;
                     margin-right: 5px;
+
                 }
             }
             p{
@@ -234,7 +250,7 @@
         top: 10%;
         font-size: 20px;
         text-align: center;
-        z-index: 3;
+        z-index: 100;
         cursor: pointer;
         .circle{
             width: 20px;
@@ -258,7 +274,7 @@
         top: 0%;
         position: fixed;
         display: none;
-        z-index: 3;
+        z-index: 100;
         overflow-y: auto;
         span{
             font-weight: bolder;
@@ -395,6 +411,33 @@
         margin: 50px auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+
+
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
 
         .itineraryTitle{
             display: flex;
@@ -610,12 +653,38 @@
         margin: 0 auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
         .foodTitle{
             display: flex;
             justify-content: center;
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
@@ -817,12 +886,38 @@
         margin: 50px auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
         .stayTitle{
             display: flex;
             justify-content: center;
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
