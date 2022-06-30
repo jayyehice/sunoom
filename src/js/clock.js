@@ -11,16 +11,16 @@ $(document).ready(function(){
         let timeBegin = parseInt($(".progress-ring__circle").css("stroke-dashoffset"));
         if(timeBegin > "-1472"){
             //轉場黑幕
-            $(".blackCover").animate({"opacity":"1"},{duration:0})
-            $(".blackCover").animate({"opacity":"0.3"},{duration:3000})
+            // $(".blackCover").animate({"opacity":"1"},{duration:0})
+            // $(".blackCover").animate({"opacity":"0.3"},{duration:3000})
 
             //中心文字$
             $(`.event-item${event_num}`).css({"display":"none"})
 
-            $(`.ocean${event_num}`).animate({"top":"135px"})
-            $(`.chName${event_num}`).animate({"top":"200px"})
-            $(`.enName${event_num}`).animate({"top":"300px"})
-            $(`.discover${event_num}`).animate({"top":"350px"})
+            // $(`.ocean${event_num}`).animate({"top":"135px"})
+            // $(`.chName${event_num}`).animate({"top":"200px"})
+            // $(`.enName${event_num}`).animate({"top":"300px"})
+            // $(`.discover${event_num}`).animate({"top":"350px"})
 
             // -----------------------------------------------------------------------------------------------------------------------
             event_num = event_num + 1;
@@ -28,11 +28,11 @@ $(document).ready(function(){
 
             $(`.event-item${event_num}`).css({"display":"block"})
 
-            $(`.event-item${event_num}`).animate({"opacity":"0"}).animate({"opacity":"1"},{duration:2000})
-            $(`.ocean${event_num}`).animate({"top":"-65px"},{duration:2000})
-            $(`.chName${event_num}`).animate({"top":"0px"},{duration:2300})
-            $(`.enName${event_num}`).animate({"top":"100px"},{duration:2500})
-            $(`.discover${event_num}`).animate({"top":"150px"},{duration:3000})
+            // $(`.event-item${event_num}`).animate({"opacity":"0"}).animate({"opacity":"1"},{duration:2000})
+            // $(`.ocean${event_num}`).animate({"top":"-65px"},{duration:2000})
+            // $(`.chName${event_num}`).animate({"top":"0px"},{duration:2300})
+            // $(`.enName${event_num}`).animate({"top":"100px"},{duration:2500})
+            // $(`.discover${event_num}`).animate({"top":"150px"},{duration:3000})
 
             // 流動線圈
             $(".progress-ring__circle").css("stroke-dashoffset",(timeBegin-368))
@@ -68,21 +68,21 @@ $(document).ready(function(){
             //中心文字$
             $(`.event-item${event_num}`).css({"display":"none"})
 
-            $(`.ocean${event_num}`).animate({"top":"135px"})
-            $(`.chName${event_num}`).animate({"top":"200px"})
-            $(`.enName${event_num}`).animate({"top":"300px"})
-            $(`.discover${event_num}`).animate({"top":"350px"})
+            // $(`.ocean${event_num}`).animate({"top":"135px"})
+            // $(`.chName${event_num}`).animate({"top":"200px"})
+            // $(`.enName${event_num}`).animate({"top":"300px"})
+            // $(`.discover${event_num}`).animate({"top":"350px"})
 
             event_num =1
             
 
             $(`.event-item${event_num}`).css({"display":"block"})
 
-            $(`.event-item${event_num}`).animate({"opacity":"0"}).animate({"opacity":"1"},{duration:2000})
-            $(`.ocean${event_num}`).animate({"top":"-65px"},{duration:2000})
-            $(`.chName${event_num}`).animate({"top":"0px"},{duration:2300})
-            $(`.enName${event_num}`).animate({"top":"100px"},{duration:2500})
-            $(`.discover${event_num}`).animate({"top":"150px"},{duration:3000})
+            // $(`.event-item${event_num}`).animate({"opacity":"0"}).animate({"opacity":"1"},{duration:2000})
+            // $(`.ocean${event_num}`).animate({"top":"-65px"},{duration:2000})
+            // $(`.chName${event_num}`).animate({"top":"0px"},{duration:2300})
+            // $(`.enName${event_num}`).animate({"top":"100px"},{duration:2500})
+            // $(`.discover${event_num}`).animate({"top":"150px"},{duration:3000})
             // -------------------------------------------------------------------------------------------------------------------------
             // $(`.event-item${event_num}`).animate({"opacity":"0"}).animate({"opacity":"1"},{duration:2000})
             // $(`.ocean${event_num}`).animate({"top":"-65px"},{duration:2000})
