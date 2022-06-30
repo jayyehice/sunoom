@@ -2,7 +2,7 @@ Vue.component('shop',{
     props:['list'],
     data(){
         return{
-            content:'',
+            content:'營運中',
             page:0,
             show_pop_up:false,
             index:0,
@@ -15,9 +15,11 @@ Vue.component('shop',{
         }
     },
     methods: {
-        addClass(e){
+        topButton(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
             $(e.target).addClass('on'); 
+            this.content = e.target.innerText; 
+            this.page = 0;
         },
         changePage(e){
             this.page = e.target.dataset.page;
@@ -28,18 +30,18 @@ Vue.component('shop',{
         showEdit(e){
             this.index = e.target.dataset.index;
             this.show_pop_up = true;
-            this.name = this.list[this.page][this.index][2];
-            this.price = this.list[this.page][this.index][9];
-            this.principal = this.list[this.page][this.index][4];
-            this.phone = this.list[this.page][this.index][5];
+            this.name = this.list[this.content][this.page][this.index][2];
+            this.price = this.list[this.content][this.page][this.index][9];
+            this.principal = this.list[this.content][this.page][this.index][4];
+            this.phone = this.list[this.content][this.page][this.index][5];
 
-            if(this.list[this.page][this.index][8] == 1){
+            if(this.list[this.content][this.page][this.index][8] == 1){
                 this.island = true;
-            }else if(this.list[this.page][this.index][8] == 2){
+            }else if(this.list[this.content][this.page][this.index][8] == 2){
                 this.island = false;
             }
 
-            if(this.list[this.page][this.index][6] == 1){
+            if(this.list[this.content][this.page][this.index][6] == 1){
                 this.status = true;
             }else{
                 this.status = false;
@@ -47,9 +49,56 @@ Vue.component('shop',{
         },
         comfirm(e){
             this.show_pop_up=false;
+
+            let id = this.list[this.content][this.page][this.index][0];
+            let island = 1;
+            let status = 1;
+            if(this.island){
+                island = 1;
+            }else{
+                island = 2;
+            }
+
+            if(this.status){
+                status = 1;
+            }else{
+                status = 0;
+            }
+            let data = [['name', this.name],
+                        ['price', this.price], 
+                        ['principal', this.principal],
+                        ['islandid', island], 
+                        ['status', status], 
+                        ['phone', this.phone]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'shop',
+                    id: id,
+                    data: data,
+                })
+            });
+            this.show_pop_up=false;
         },
         cancle(e){
             this.show_pop_up=false;
+        },
+        changeSun(e){
+            this.island = true;
+        },
+        changeMoon(e){
+            this.island = false;
+        },
+        changeOpen(e){
+            this.status = true;
+        },
+        changeClose(e){
+            this.status = false;
         },
     },
     mounted() {
@@ -70,8 +119,8 @@ Vue.component('shop',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5 @click="addClass" class="on">營運中</h5>
-                <h5 @click="addClass">未營運</h5>
+                <h5 @click="topButton" class="on">營運中</h5>
+                <h5 @click="topButton">未營運</h5>
 
             </div>
             <!-- 
@@ -94,7 +143,7 @@ Vue.component('shop',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]"  v-if="index != 0">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[2]}}</p></li>
                     <li class="col"><p>{{item[9]}}</p></li>
@@ -113,7 +162,7 @@ Vue.component('shop',{
             <div class="row pages">
                 <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
@@ -129,7 +178,7 @@ Vue.component('shop',{
                     <ul>
                         <li>
                             <h4>編號:</h4>
-                            <p>{{list[page][index][0]}}</p>
+                            <p>{{list[content][page][index][0]}}</p>
                         </li>
                         <li>
                             <h4>店名:</h4>
@@ -149,16 +198,16 @@ Vue.component('shop',{
                         </li>
                         <li class="radio">
                             <h4>位置:</h4>
-                            <input type="radio" name="island" value="open" :checked="island">
+                            <input type="radio" name="island" :checked="island" @change="changeSun">
                             <label for="food">日島</label>
-                            <input type="radio" name="island" value="close" :checked="!island">
+                            <input type="radio" name="island" :checked="!island" @change="changeMoon">
                             <label for="live">月島</label>
                         </li>
                         <li class="radio">
                             <h4>狀態:</h4>
-                            <input type="radio" name="article_type" value="open" :checked="status">
+                            <input type="radio" name="article_type" :checked="status" @change="changeOpen">
                             <label for="food">營運中</label>
-                            <input type="radio" name="article_type" value="close" :checked="!status">
+                            <input type="radio" name="article_type" :checked="!status" @change="changeClose">
                             <label for="live">未營運</label>
                         </li>
                     </ul>

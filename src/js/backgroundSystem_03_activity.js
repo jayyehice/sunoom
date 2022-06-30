@@ -10,7 +10,9 @@ Vue.component('activity',{
             name:'',
             price:0,
             people:0,
-            intro:'', 
+            intro:'',
+            s_img:'',
+            l_img:'',
         }
     },
     methods: {
@@ -18,6 +20,7 @@ Vue.component('activity',{
             $(e.target.closest('div')).find('h5').removeClass('on');
             $(e.target).addClass('on');
             this.content = e.target.innerText; 
+            this.page = 0;
         },
         changePage(e){
             this.page = e.target.dataset.page;
@@ -32,6 +35,8 @@ Vue.component('activity',{
             this.price = this.list[this.content][this.page][this.index][3];
             this.people = this.list[this.content][this.page][this.index][9];
             this.intro = this.list[this.content][this.page][this.index][2];
+            this.s_img = this.list[this.content][this.page][this.index][5];
+            this.l_img = this.list[this.content][this.page][this.index][6];
 
             if(this.list[this.content][this.page][this.index][8] == '陸'){
                 this.type = true;
@@ -40,12 +45,67 @@ Vue.component('activity',{
             }
         },
         comfirm(e){
+            this.data_change = false;
+            let id = this.list[this.content][this.page][this.index][0];
+            let type = '';
+            if(this.type){
+                type = '陸';
+            }else{
+                type = '海';
+            }
+            let data = [['name', this.name],
+                        ['price', this.price], 
+                        ['people', this.people],
+                        ['type', type],  
+                        ['content', this.intro]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'activity',
+                    id: id,
+                    data: data,
+                })
+            });
             this.show_pop_up=false;
         },
         cancle(e){
             this.show_pop_up=false;
         },
+        close(e){
+
+            this.show_pop_up=false;
+            
+            let id = this.list[this.content][this.page][this.index][0];
+            let data = [['status', 0]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'activity',
+                    id: id,
+                    data: data,
+                })
+            });
+        },
+        sImg(e){},
+        lImg(e){},
+        changeTypeLand(e){
+            this.type = true;
+        },
+        changeTypeSea(e){
+            this.type = false;
+        },
     },
+    watch: {},
     mounted() {
         //右下選單
         $('#pageList > li:nth-child(2)').addClass('on');
@@ -141,9 +201,9 @@ Vue.component('activity',{
                             </li>
                             <li class="radio">
                                 <h4>類別:</h4>
-                                <input type="radio" name="island" value="land" :checked="type">
+                                <input type="radio" name="island" value="land" :checked="type" @change="changeTypeLand">
                                 <label for="food">陸</label>
-                                <input type="radio" name="island" value="sea" :checked="!type">
+                                <input type="radio" name="island" value="sea" :checked="!type" @change="changeTypeSea">
                                 <label for="live">海</label>
                             </li>
                             <li>
@@ -160,17 +220,17 @@ Vue.component('activity',{
                         <ul>
                             <li>
                                 <h4>縮圖:</h4>
-                                <input type="file">
+                                <input type="file" @change="sImg">
                             </li>
                             <li>
-                                <img :src="list[content][page][index][5]" alt="">
+                                <img :src="s_img" alt="">
                             </li>
                             <li>
                                 <h4>大圖:</h4>
-                                <input type="file">
+                                <input type="file" @change="lImg">
                             </li>
                             <li>
-                                <img :src="list[content][page][index][6]" alt="">
+                                <img :src="l_img" alt="">
                             </li>
                         </ul>
                         <!-- <span class="col-1">活動</span> <textarea class="col-8" name="" id="" cols="23" rows="10"></textarea><br>
@@ -183,7 +243,7 @@ Vue.component('activity',{
                     <div class="col-1"></div>
                     <button class="b02 col-1" @click="cancle">取消</button>
                     <div class="col-1"></div>
-                    <button class="b03 col-2">結束活動</button>
+                    <button class="b03 col-2" @click="close" v-if="list[content][page][index][10]">結束活動</button>
                 </div>
             </div>
             

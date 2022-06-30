@@ -11,9 +11,9 @@
 
     foreach($data as $idx => $content){
         if($idx == (count($data)-1)){
-            $update_value = $update_value."$content[0] = $content[1]";
+            $update_value = $update_value."$content[0] = '$content[1]'";
         }else{
-            $update_value = $update_value."$content[0] = $content[1], ";
+            $update_value = $update_value."$content[0] = '$content[1]', ";
         }
     }
 
@@ -21,5 +21,6 @@
     // sql
     include("connection.php");
     $sql = "UPDATE $table SET $update_value WHERE (id = $id);";
+    // echo $sql;
     $statement = $pdo->exec($sql);
 ?>
