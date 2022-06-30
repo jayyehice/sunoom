@@ -4,7 +4,7 @@
 
        $all_list = [];
        
-       $tables = ['shop', 'live', 'discount_code', 'member', 'article', 'comment'];
+       $tables = ['article', 'comment'];
        // $tables = ['article']; //測試用
 
        function data_slice($data){
@@ -90,7 +90,7 @@
 
        //活動資料切割為 1進行中 0已結束
        //餐廳資料切割為 1進行中 0已結束
-       $tables2 = ["activity", "shop"];
+       $tables2 = ["activity", 'shop', 'live', 'discount_code', 'member'];
        foreach($tables2 as $idx => $table){
               $new_data = [];
               $title = '';
@@ -107,12 +107,26 @@
                             }else{
                                    $title = '已結束'; 
                             }
-                     }else if($table == "shop"){
+                     }else if($table == "shop" || $table == "live"){
                             
                             if($i==1){
                                    $title = '營運中';
                             }else{
                                    $title = '未營運'; 
+                            }
+                     }else if($table == "discount_code"){
+                            
+                            if($i==1){
+                                   $title = '進行中';
+                            }else{
+                                   $title = '已結束'; 
+                            }
+                     }else if($table == "member"){
+                            
+                            if($i==1){
+                                   $title = '正常';
+                            }else{
+                                   $title = '已停權'; 
                             }
                      }
 

@@ -45,7 +45,7 @@ Vue.component('activity',{
             }
         },
         comfirm(e){
-            this.data_change = false;
+            
             let id = this.list[this.content][this.page][this.index][0];
             let type = '';
             if(this.type){

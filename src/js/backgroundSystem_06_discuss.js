@@ -44,16 +44,10 @@ Vue.component('discuss',{
         },
         changePage(e){
             this.page = e.target.dataset.page;
-            // console.log(e.target.dataset.page);
             $(e.target.closest('ul')).find('li.on').removeClass('on');
             $(e.target).addClass('on');
-
-            // console.log($('#pageList li:nth-child(2)'));
         },
         showEdit(e){
-            // console.log(e.target.dataset.index);
-            // let index = e.target.dataset.index;
-            // console.log(this.list[this.page][this.index]);
             this.index = e.target.dataset.index;
             this.show_pop_up = true; 
             if(this.content == 'article'){
@@ -68,6 +62,24 @@ Vue.component('discuss',{
         },
         comfirm(e){
             this.show_pop_up=false;
+            if(this.content=="article" && this.list[this.content][this.page][this.index][1]==1){
+                let id = this.list[this.content][this.page][this.index][0];
+                let data = [['title', this.title],
+                            ['content', this.content_article]];
+        
+                const url = './php/backgroundSystem_update.php';
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        table: 'article',
+                        id: id,
+                        data: data,
+                    })
+                });
+            }
         },
         cancle(e){
             this.show_pop_up=false;

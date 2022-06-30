@@ -48,8 +48,6 @@ Vue.component('shop',{
             }
         },
         comfirm(e){
-            this.show_pop_up=false;
-
             let id = this.list[this.content][this.page][this.index][0];
             let island = 1;
             let status = 1;

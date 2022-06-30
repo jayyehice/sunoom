@@ -2,16 +2,18 @@ Vue.component('member',{
     props:['list'],
     data(){
         return{
-            content:'',
+            content:'正常',
             page:0,
             show_pop_up:false,
             index:0,
         }
     },
     methods: {
-        addClass(e){
+        topButton(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
-            $(e.target).addClass('on'); 
+            $(e.target).addClass('on');
+            this.content = e.target.innerText; 
+            this.page = 0;
         },
         changePage(e){
             this.page = e.target.dataset.page;
@@ -29,6 +31,21 @@ Vue.component('member',{
             this.show_pop_up=false;
         },
         suspend(e){
+            let id = this.list[this.content][this.page][this.index][0];
+            let data = [['status', 0]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'member',
+                    id: id,
+                    data: data,
+                })
+            });
             this.show_pop_up=false;
         },
     },
@@ -50,8 +67,8 @@ Vue.component('member',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5 @click="addClass" class="on">正常</h5>
-                <h5 @click="addClass">已停權</h5>
+                <h5 @click="topButton" class="on">正常</h5>
+                <h5 @click="topButton">已停權</h5>
 
             </div>
             <!-- 
@@ -74,7 +91,7 @@ Vue.component('member',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[7]}}</p></li>
                     <li class="col-2"><p>{{item[8]}}</p></li>
@@ -93,7 +110,7 @@ Vue.component('member',{
             <div class="row pages">
                 <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
@@ -110,19 +127,19 @@ Vue.component('member',{
                         <ul>
                             <li>
                                 <h4>編號:</h4>
-                                <h4>{{list[page][index][0]}}</h4>
+                                <h4>{{list[content][page][index][0]}}</h4>
                             </li>
                             <li>
                                 <h4>姓名:</h4>
-                                <h4>{{list[page][index][7]+list[page][index][8]}}</h4>
+                                <h4>{{list[content][page][index][7]+list[content][page][index][8]}}</h4>
                             </li>
                             <li>
                                 <h4>電話:</h4>
-                                <h4>{{list[page][index][3]}}</h4>
+                                <h4>{{list[content][page][index][3]}}</h4>
                             </li>
                             <li>
                                 <h4>Email:</h4>
-                                <h4>{{list[page][index][1]}}</h4>
+                                <h4>{{list[content][page][index][1]}}</h4>
                             </li>
                         </ul>
 
@@ -134,15 +151,15 @@ Vue.component('member',{
                         <ul>
                             <li>
                                 <h4>建立日期:</h4>
-                                <h4>{{list[page][index][4]}}</h4>
+                                <h4>{{list[content][page][index][4]}}</h4>
                             </li>
                             <li>
                                 <h4>會員狀態:</h4>
-                                <h4>{{list[page][index][5]}}</h4>
+                                <h4>{{list[content][page][index][5]}}</h4>
                             </li>
                             <li>
                                 <h4>違規紀錄:</h4>
-                                <h4>{{list[page][index][6]}}</h4>
+                                <h4>{{list[content][page][index][6]}}</h4>
                             </li>
                         </ul>
 
@@ -153,7 +170,7 @@ Vue.component('member',{
                     <div class="col-1"></div>
                     <button class="b2 col-1" @click="cancle">取消</button>
                     <div class="col-1"></div>
-                    <button class="b3 col-2" @click="suspend">停權該會員</button>
+                    <button class="b3 col-2" @click="suspend" v-if="list[content][page][index][9]">停權該會員</button>
                 </div>
             </div>
         </div>
