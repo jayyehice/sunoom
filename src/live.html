@@ -232,10 +232,10 @@
                     <h3>{{live_list[2][11]}}</h3>
                     <div class="villaSiteLayoutwp">
                         <img class="layOutImg" :src="live_list[2][12]">
-                        <h3 class="sea sea1">1</h3>
-                        <h3 class="sea sea2">2</h3>
-                        <h3 class="sea sea3">3</h3>
-                        <h3 class="sea sea4">4</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf01" class="sea sea1">1</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf02" class="sea sea2">2</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf03" class="sea sea3">3</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf04" class="sea sea4">4</h3>
                     </div>
                     <!-- villa彈窗 siteLayout  -->
                     <div class="villaInf01">

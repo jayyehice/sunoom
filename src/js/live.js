@@ -24,6 +24,20 @@ new Vue({
             // console.log(e.target.closest('div.siteLayout').querySelector(`div.${boxclass}`));
             // box.setAttribute("style","display:block;");
         },
+
+        villaMouseenter(e){
+            let boxclass = e.target.dataset.boxclass;
+            let box = e.target.closest('div.villaSiteLayout').querySelector(`div.${boxclass}`);
+            box.setAttribute("style","display:block;");
+            // console.log(e.target.closest('div.villaSiteLayout').querySelector(`div.${boxclass}`));
+        },
+
+        villaMouseleave(e){
+            let boxclass = e.target.dataset.boxclass;
+            let box = e.target.closest('div.villaSiteLayout').querySelector(`div.${boxclass}`);
+            box.removeAttribute("style");
+            // console.log(e.target.closest('div.villaSiteLayout').querySelector(`div.${boxclass}`));
+        },
     },
     computed: {},
     watch: {},
@@ -44,7 +58,6 @@ new Vue({
     mounted() {},
 
     updated() {
-        // faq_click();
     },
     beforeDestroy() {},
     destroyed() {},
