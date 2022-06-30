@@ -46,8 +46,18 @@ Vue.component('member',{
                     data: data,
                 })
             });
+            this.reFetch();
             this.show_pop_up=false;
         },
+        reFetch(){
+            setTimeout(e => {
+                const url = './php/backgroundSystem.php?table=member';
+                fetch(url)
+                    .then(response => response.json())
+                    // .then(text => console.log(text))
+                    .then(text => this.list = text['member'])
+            },500);
+        }
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');

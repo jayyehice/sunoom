@@ -47,7 +47,7 @@ window.addEventListener("load",function(){
                 if(this.authority > 5){
                     this.content = 'overview';
                 }
-                const url = './php/backgroundSystem.php';
+                const url = './php/backgroundSystem.php?table=all';
                 fetch(url)
                     .then(response => response.json())
                     // .then(text => console.log(text))
