@@ -493,8 +493,14 @@
                     margin: 0 auto;
 
                     li {
-                        img:hover {
-                            cursor: pointer;
+                        img{
+                            opacity: .7;
+
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 1;
+                                transition: all .5s;
+                            }
                         }
                     }
                 }
@@ -1058,8 +1064,14 @@
                     margin: 0 auto;
 
                     li {
-                        img:hover {
-                            cursor: pointer;
+                        img{
+                            opacity: .7;
+
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 1;
+                                transition: all .5s;
+                            }
                         }
                     }
                 }

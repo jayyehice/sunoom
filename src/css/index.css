@@ -432,8 +432,13 @@
   width: 936px;
   margin: 0 auto;
 }
+.index main .instagram .wrapper .instagramPhoto li img {
+  opacity: 0.7;
+}
 .index main .instagram .wrapper .instagramPhoto li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .index main .instagram #ig_pop_up {
   display: none;
@@ -903,8 +908,13 @@
   width: 936px;
   margin: 0 auto;
 }
+.index_moon main .instagram .wrapper .instagramPhoto li img {
+  opacity: 0.7;
+}
 .index_moon main .instagram .wrapper .instagramPhoto li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .index_moon main .instagram #ig_pop_up {
   display: none;
