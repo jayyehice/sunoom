@@ -3,434 +3,10 @@
 
 window.addEventListener('load',function(){
     // const bus = new Vue();
-
-    // Vue.component('triplist1',{
-    //     props:['activity_list','date'],
-    //     data() {
-            
-    //         return {
-    //             chooseData:'',
-    //             choosePrice:'',
-    //             pepoleNums:0,
-    //             newPrice: 0,
-
-    //         }
-    //     },
-    //     template:
-    //     `
-    //     <div class="tripList">
-    //         <h6 class="tripTitle">{{date}}</h6>
-    //         <ul v-if="activity_list[chooseData]">
-    //             <li>{{activity_list[chooseData][1]}}</li>
-    //             <li><img class="leftButton" @click="dpnums" src="./img/orderPage/sun/left_button.png" >{{pepoleNums}}<img class="rightButton" @click="apnums" src="./img/orderPage/sun/right_button.png"></li>
-    //             <li va\-model='newPrice'>\${{newPrice}}</li>
-    //             <li><img class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
-    //         </ul>
-    //     </div>
-    //     `,
-    //     methods:{
-    //         dpnums(){
-    //             if(this.pepoleNums > 1){
-    //                 this.pepoleNums -=1
-    //             }
-                
-    //         },
-    //         apnums(){
-    //             if(this.pepoleNums < JSON.parse(localStorage.getItem('pepoleNums'))){
-    //                 this.pepoleNums +=1
-    //             }
-    //         }
-    //     },
-    //     computed:{
-    //     },
-    //     mounted() {
-    //             this.pepoleNums = JSON.parse(localStorage.getItem('pepoleNums'));
-    //             bus.$on('sync',nums => this.chooseData = nums)
-    //             bus.$on('sync1',nums => this.choosePrice = nums)
-    //             console.log(this.chooseData);
-            
-    //     },
-    //     updated() {
-    //         this.newPrice =  parseInt(this.choosePrice * this.pepoleNums);
-    //         this.pepoleNums = parseInt(this.pepoleNums)
-    //         console.log(typeof(this.pepoleNums));
-    //     },
-
-    // })
-
-    // Vue.component('ChooseBlock0',{
-    //     props:["activity_list","food_list","day","dayindex"],
-    //     data() {
-    //         return {
-    //         //上午行程
-    //         morningtriptext:'請點選上方選單列，開始安排您的旅程吧!',
-    //         morningtripPrice:'0',
-    //         morningtripImg:'./img/orderPage/welcome.jpg',
-    //         //下午行程
-    //         noontriptext:'請點選上方選單列，開始安排您的旅程吧!',
-    //         noontripPrice:'0',
-    //         noontripImg:'./img/orderPage/welcome.jpg',
-    //         //晚上行程
-    //         eveningtriptext:'請點選上方選單列，開始安排您的旅程吧!',
-    //         eveningtripPrice:'0',
-    //         eveningtripImg:'./img/orderPage/welcome.jpg',
-    
-    //         //早餐
-    //         morningFoodtext:'請點選上方選單列，開始安排您的早餐!',
-    //         morningFoodPrice:'0',
-    //         morningFoodImg:'./img/orderPage/welcome.jpg',
-    //         //午餐
-    //         noonFoodtext:'請點選上方選單列，開始安排您的午餐!',
-    //         noonFoodPrice:'0',
-    //         noonFoodImg:'./img/orderPage/welcome.jpg',
-    //         //晚餐
-    //         eveningFoodtext:'請點選上方選單列，開始安排您的晚餐!',
-    //         eveningFoodPrice:'0',
-    //         eveningFoodImg:'./img/orderPage/welcome.jpg',
-            
-    //         //campingimg
-    //         campingimg:'./img/orderPage/camping.jpg',
-            
-
-    //         choosevalue:'',
-
-    //         dateBox:[],
-
-    //         countent:'',
-            
-    //         pepoleNums:0,
-    //         tripPriceM: 0,
-            
-
-    //         }
-    //     },
-    //     methods: {
-    //         //購物車
-    //         dpnums(){
-    //             if(this.pepoleNums > 1){
-    //                 this.pepoleNums -=1
-    //             }
-                
-    //         },
-    //         apnums(){
-    //             if(this.pepoleNums < JSON.parse(localStorage.getItem('pepoleNums'))){
-    //                 this.pepoleNums +=1
-    //             }
-    //         },
-
-
-    //         //上午行程
-    //         morningChange(value){
-    //             this.morningtriptext=this.activity_list[value][2]
-    //             this.morningtripPrice=this.activity_list[value][3]
-    //             this.morningtripImg=this.activity_list[value][5]
-    //             this.choosevalue = value
-    //         },
-    //         //下午行程
-    //         noonChange(value){
-    //             this.noontriptext=this.activity_list[value][2]
-    //             this.noontripPrice=this.activity_list[value][3]
-    //             this.noontripImg=this.activity_list[value][5]
-    //             this.choosevalue = value
-    //         },
-    //         //晚上行程
-    //         eveningChange(value){
-    //             this.eveningtriptext=this.activity_list[value][2]
-    //             this.eveningtripPrice=this.activity_list[value][3]
-    //             this.eveningtripImg=this.activity_list[value][5]
-    //             this.choosevalue = value
-    //         },
-    //         //早餐
-    //         morningFoodChange(value){
-    //             this.morningFoodtext=this.food_list[value][2]
-    //             this.morningFoodPrice=this.food_list[value][1]
-    //             this.morningFoodImg=this.food_list[value][3]
-    //             this.choosevalue = value
-    //         },
-    //         //午餐
-    //         noonFoodChange(value){
-    //             this.noonFoodtext=this.food_list[value][2]
-    //             this.noonFoodPrice=this.food_list[value][1]
-    //             this.noonFoodImg=this.food_list[value][3]
-    //             this.choosevalue = value
-    //         },
-    //         //晚餐
-    //         eveningFoodChange(value){
-    //             this.eveningFoodtext=this.food_list[value][2]
-    //             this.eveningFoodPrice=this.food_list[value][1]
-    //             this.eveningFoodImg=this.food_list[value][3]
-    //             this.choosevalue = value
-    //         },
-    //         //住宿換圖
-    //         stayimgChange(value){
-    //             if(value == 2){
-    //                 this.campingimg = './img/orderPage/campingnight.jpg'
-    //             }else{
-    //                 this.campingimg = './img/orderPage/camping.jpg'
-    //             }
-    //         },
-    //         sync(){
-                
-    //             bus.$emit('sync',this.choosevalue)
-    //             bus.$emit('sync1',this.morningtripPrice)
-                
-                
-    //         },
-    //     },   
-            
-        
-    //     mounted(){
-    //         // bus.$emit('day', this.dateBox,this.pepoleNums)
-    //         let tripTitle = document.getElementsByClassName("tripTitle");
-    //         // console.log(tripTitle);
-    //         let x = [];
-    //         for(let i = 0; i < tripTitle.length; i++){
-    //             x.push(tripTitle[i].innerHTML)
-    //         }
-    //         // console.log(x);
-            
-    //         this.dateBox = x;
-
-    //         //取得人數
-    //         this.pepoleNums = JSON.parse(localStorage.getItem('pepoleNums'));
-    //         this.pepoleNums = parseInt(this.pepoleNums)
-
-            
-
-    //         //JS的方式寫入購物清單
-    //         let addItineraryM = document.getElementById('addItineraryM');
-    //         addItineraryM.addEventListener('click',()=>{
-    //             this.tripPriceM =  parseInt(this.morningtripPrice * this.pepoleNums);
-    //             for(let i = 0; i <= x.length ;i++ ){
-    //                 if(this.dayindex == i){
-    //                     tripTitle[i].insertAdjacentHTML('afterend',
-    //                     `<ul>
-    //                         <li>${this.activity_list[this.choosevalue][1]}</li>
-    //                         <li><img class="leftButton" onclick="dpnums()" src="./img/orderPage/sun/left_button.png" >${this.pepoleNums}<img class="rightButton" onclick="apnums()" src="./img/orderPage/sun/right_button.png"></li>
-    //                         <li>${this.tripPriceM}</li>
-    //                         <li><img @click="deleteChoose()" class="deleteButton" src="./img/orderPage/sun/delete_button.png"></li>
-    //                     </ul>`
-    //                     )
-    //                 }  
-    //             }
-    //         })
-
-
-
-    //     },
-    //     updated() {
-    //         // bus.$emit('sync',this.choosevalue)
-    //         // bus.$emit('sync1',this.morningtripPrice)
-            
-
-    //         // console.log(morningChoose.target);
-    //     },
-    //     template:
-    //     `<div>
-    //             <div class="tripChooseBlock">  
-    //                 <div class="itineraryTitle">
-    //                     <h4>遊</h4>
-    //                     <h4 class="chooseDate">{{day}}</h4>
-    //                 </div>
-    //                 <!-- 上午行程 -->
-    //                 <div class="morningItineraryA" >
-    //                     <img class="morningTime" src="./img/orderPage/sun/morning.png" alt="">
-    //                     <div class="morningBlockA">
-    //                         <img id="morningImg" :src="morningtripImg" alt="">
-    //                         <div class="morningBlockB">
-    //                             <div class="optionBlockA">
-    //                                 <select id="morningChoose" @change="morningChange($event.target.value)">
-    //                                     <option value="">開始選購您的行程</option>
-    //                                     <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
-    //                                 </select>
-    //                                 <span id="tripPriceA">\${{morningtripPrice}}/人</span>
-    //                             </div>
-    //                             <p id="itineraryText">{{morningtriptext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addItineraryM" @click="sync();countent='triplist'" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 下午行程 -->
-    //                 <div class="noonItinerary">
-    //                     <img src="./img/orderPage/sun/afternoon.png" alt="">
-    //                     <div class="noonBlockA">
-    //                         <img id="noonImg" :src="noontripImg" alt="">
-    //                         <div class="noonBlockB">
-    //                             <div class="optionBlockB">
-    //                                 <select name="" @change="noonChange($event.target.value)">
-    //                                     <option value="">開始選購您的行程</option>
-    //                                     <option  v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
-    //                                 </select>
-    //                                 <span id="tripPriceB">\${{noontripPrice}}/人</span>
-    //                             </div>
-    //                             <p id="itineraryTextB">{{noontriptext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addItineraryN" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 晚上行程 -->
-    //                 <div class="eveningItinerary">
-    //                     <img src="./img/orderPage/sun/night.png" alt="">
-    //                     <div class="eveningBlockA">
-    //                         <img id="eveningImg" :src="eveningtripImg" alt="">
-    //                         <div class="eveningBlockB">
-    //                             <div class="optionBlockC">
-    //                                 <select name="" @change="eveningChange($event.target.value)">
-    //                                     <option value="">開始選購您的行程</option>
-    //                                     <option v-for="(list,index) in activity_list" :value="index">{{list[1]}}</option>
-    //                                 </select>
-    //                                 <span id="tripPriceC">{{eveningtripPrice}}/人</span>
-    //                             </div>
-    //                             <p id="itineraryTextC">{{eveningtriptext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addItineraryE" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-                    
-    //             </div>
-    //             <!-- 餐廳選擇區 -->
-    //             <div class="foodChooseBlock">
-    //                 <div class="foodTitle">
-    //                     <h4>食</h4>
-    //                     <h4 class="chooseDate">{{day}}</h4>
-    //                 </div>
-    //                 <!-- 早餐 -->
-    //                 <div class="morningFood">
-    //                     <img src="./img/orderPage/sun/morningFood.png" alt="">
-    //                     <div class="morningFoodA">
-    //                         <img id="morningFoodImg" :src="morningFoodImg" alt="">
-    //                         <div class="morningFoodB">
-    //                             <div class="foodOptionBlockA">
-    //                                 <select name="" @change="morningFoodChange($event.target.value)">
-    //                                     <option value="">請選擇您的早餐</option>
-    //                                     <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
-    //                                 </select>
-    //                                 <span id="foodPriceA">{{morningFoodPrice}}/人</span>
-    //                             </div>
-    //                             <p id="foodTextA">{{morningFoodtext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addFoodM" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 午餐 -->
-    //                 <div class="noonFood">
-    //                     <img src="./img/orderPage/sun/noonFood.png" alt="">
-    //                     <div class="noonFoodA">
-    //                         <img id="noonFoodImg" :src="noonFoodImg" alt="">
-    //                         <div class="noonFoodB">
-    //                             <div class="foodoptionBlockB">
-    //                                 <select name="" @change="noonFoodChange($event.target.value)">
-    //                                     <option value="">請選擇您的午餐</option>
-    //                                     <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
-    //                                 </select>
-    //                                 <span id="foodPriceB">{{noonFoodPrice}}/人</span>
-    //                             </div>
-    //                             <p id="foodTextB">{{noonFoodtext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addFoodN" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 晚餐 -->
-    //                 <div class="eveningFood">
-    //                     <img src="./img/orderPage/sun/eveningFood.png" alt="">
-    //                     <div class="eveningFoodA">
-    //                         <img id="eveningFoodImg" :src="eveningFoodImg" alt="">
-    //                         <div class="eveningFoodB">
-    //                             <div class="foodoptionBlockC">
-    //                                 <select name="" @change="eveningFoodChange($event.target.value)">
-    //                                     <option value="">請選擇您的晚餐</option>
-    //                                     <option v-for="(list,index) in food_list" :value="index">{{list[0]}}</option>
-    //                                 </select>
-    //                                 <span id="foodPriceC">{{eveningFoodPrice}}/人</span>
-    //                             </div>
-    //                             <p id="foodTextC">{{eveningFoodtext}}</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addFoodE" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>  
-    //             </div>
-    //             <!-- 住宿選擇區 -->
-    //             <div class="stayChooseBlock">
-    //                 <div class="stayTitle">
-    //                     <h4>宿</h4>
-    //                     <h4 class="chooseDate">{{day}}</h4>
-    //                 </div>
-    //                 <!-- 小木屋 -->
-    //                 <div class="cabin">
-    //                     <div class="cabinTitle">
-    //                         <h4>森林木屋</h4>
-    //                         <p>自由之丘</p>
-    //                     </div>
-    //                     <input type="radio" name="stayChoose" id="cabinButton">
-    //                     <div class="cabinBlockA">
-    //                         <img id="cabinImg" src="./img/orderPage/cabin.jpg" alt="">
-    //                         <div class="cabinBlockB">
-    //                             <div class="cabinOption">
-    //                                 <select name="" id="cabinOption">
-    //                                     <option value="1">日島</option>
-    //                                     <option value="2">月島</option>
-    //                                 </select>
-    //                                 <span id="cabinPrice">$2999/人</span>
-    //                             </div>
-    //                             <p id="cabinText">循著山路走進這裡，就彷彿進入了童話故事之中，挑高的屋頂設計讓整體空間感相當舒適，一點也不壓迫，這麼大間的小木屋，入住一晚的價格卻相當實惠，CP值真的太高啦！。</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addcabin" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 露營 -->
-    //                 <div class="camping">
-    //                     <div class="campingTitle">
-    //                         <h4>帳篷露營</h4>
-    //                         <p>山巔之息</p>
-    //                     </div>
-    //                     <input type="radio" name="stayChoose" id="campingButton">
-    //                     <div class="campingBlockA">
-    //                         <img id="campingImg" :src="campingimg" alt="">
-    //                         <div class="campingBlockB">
-    //                             <div class="campingOption">
-    //                                 <select name="" id="" @change="stayimgChange($event.target.value)">
-    //                                     <option value="1">日島</option>
-    //                                     <option value="2">月島</option>
-    //                                 </select>
-    //                                 <span id="campingPrice">$1999/人</span>
-    //                             </div>
-    //                             <p id="campingText">全包式懶人露營營區，不但有幫旅客搭好的超美帳篷，甚至提供餐點、陸上活動與生態導覽等等，讓您只要準備好衣物攜帶相機，及準備好拍美照的心情就可以出發。</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addCamping" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>
-    //                 <!-- 海上度假村 -->
-    //                 <div class="villa">
-    //                     <div class="villaTitle">
-    //                         <h4>海上Villa</h4>
-    //                         <p>日月星</p>
-    //                     </div>
-    //                     <input type="radio" name="stayChoose" id="villaButton">
-    //                     <div class="villaBlockA">
-    //                         <img id="villaImg" src="./img/orderPage/villa.jpg" alt="">
-    //                         <div class="villaBlockB">
-    //                             <div class="villaOption">
-    //                                 <select name="" id="villaChoose">
-    //                                     <option value="1">日島</option>
-    //                                     <option value="2">月島</option>
-    //                                 </select>
-    //                                 <span id="villaPrice">$3999/人</span>
-    //                             </div>
-    //                             <p id="villaText">每一間房間都有私人泳池，設施及活動應有盡有，有餐廳、酒吧、水上活動、沙灘活動應有盡有，吃喝玩樂一站全包，面對著壯闊的海洋美景，真的會覺得人生如此，夫復何求？</p>
-    //                         </div>
-    //                     </div>
-    //                     <img id="addVilla" src="./img/orderPage/sun/shopping-cart-add.png" alt="">
-    //                 </div>  
-    //             </div>
-    //     </div>
-    //     `,
-    // })
     let vm = new Vue({
         el:'#app',
         data:{
-            triplist:'',
-            countent:'',
-
+            
             choosePrice:'',
             pepoleNums:0,
             newPrice: 0,
@@ -471,6 +47,10 @@ window.addEventListener('load',function(){
             minorTotalPrice:0,
             Discount:0,
             totalPrice:0,
+            //結帳明細金額
+            minorTotalPriceR:0,
+            DiscountR:0,
+            totalPriceR:0,
 
             
             //上午行程
@@ -678,7 +258,7 @@ window.addEventListener('load',function(){
                         //晚餐
                         for(fe = 0; fe < this.food_list.length; fe++ ){
                             // console.log(this.activity_list[j][1]);
-                            if(this.food_list[fe][0] == FoodNoonName[i].innerText){
+                            if(this.food_list[fe][0] == FoodEveningName[i].innerText){
                                 FoodEchoose.value = fe
                                 this.eveningFoodtext=this.food_list[fe][2]
                                 this.eveningFoodPrice=this.food_list[fe][1]
@@ -1461,45 +1041,59 @@ window.addEventListener('load',function(){
                         if(date == i ){
                             $('.tripMorningName')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
                             $('.tripMorningPrice')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
-    
-                            let tirpMorningChooseList = [];
-                            tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
-                            localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+                            
+                            // $('.tripMorningNameR')[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
+                            // $('.tripMorningPriceR')[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
     
                             $('.tripNoonName')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
                             $('.tripNoonPrice')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
+
+                            // $('.tripNoonNameR')[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
+                            // $('.tripNoonPriceR')[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
     
-                            let tripNoonChooseList = [];
-                            tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
-                            localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                            // let tripNoonChooseList = [];
+                            // tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                            // localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
                             
                             $('.tripEveningName')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
                             $('.tripEveningPrice')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
+
+                            // $('.tripEveningNameR')[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
+                            // $('.tripEveningPriceR')[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
     
-                            let tripEveningChooseList = [];
-                            tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
-                            localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                            // let tripEveningChooseList = [];
+                            // tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                            // localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
     
                             $('.FoodMorningName')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
                             $('.FoodMorningPrice')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodMorningNameR')[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
+                            // $('.FoodMorningPriceR')[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
     
-                            let FoodMorningChooseList = [];
-                            FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
-                            localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
+                            // let FoodMorningChooseList = [];
+                            // FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
+                            // localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
     
                             $('.FoodNoonName')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
                             $('.FoodNoonPrice')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodNoonNameR')[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
+                            // $('.FoodNoonPriceR')[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
     
-                            let FoodNoonChooseList = [];
-                            FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
-                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
+                            // let FoodNoonChooseList = [];
+                            // FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
+                            // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
     
                             $('.FoodEveningName')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
                             $('.FoodEveningPrice')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
+
+                            // $('.FoodEveningNameR')[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
+                            // $('.FoodEveningPriceR')[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
     
-                            let FoodEveningChooseList = [];
-                            FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
-                            localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
+                            // let FoodEveningChooseList = [];
+                            // FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
+                            // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
     
                             let stayChoose = document.getElementsByClassName('stayChoose');
                             for(let j = 0 ; j < stayChoose.length ; j++){
@@ -1516,9 +1110,9 @@ window.addEventListener('load',function(){
                                     $('.StayChooseName')[i].innerHTML = thisStayName;
                                     $('.StayChoosePrice')[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
             
-                                    let stayChooseList = [];
-                                    stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                    localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+                                    // let stayChooseList = [];
+                                    // stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                    // localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
                                 }
                             }
                             // e.stopPropagation();
@@ -1657,17 +1251,18 @@ window.addEventListener('load',function(){
                 };
                 this.minorTotalPrice = tripMoringPricetotal + tripNoonPricetotal + tripEveningPricetotal +FoodMorningPricetotal +FoodNoonPricetotal + FoodEveningPricetotal + StayChoosePricetotal;
                 this.minorTotalPrice ='$'+this.minorTotalPrice.toLocaleString('en-US')
-
+                this.minorTotalPriceR = this.minorTotalPrice
                 this.discount_list.forEach(() => {
                     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
                     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
                 });
-                
+                this.DiscountR = this.Discount
                 this.totalPrice = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.Discount.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+                this.totalPriceR = this.totalPrice
             },
-            getNewDiscountPrice(){
-                this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
-            },
+            // getNewDiscountPrice(){
+            //     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');
+            // },
             //人數減
             dpnums(e){
                 // console.log(typeof(eg.nextElementSibling.innerHTML));
@@ -1754,14 +1349,132 @@ window.addEventListener('load',function(){
                 eg.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML = ''
                 localStorage.removeItem('StayDeleteButton'+[eg.dataset.deleteindex])
             },
-            
+            //判斷住宿是否全都已選擇完畢
+            FinishCheck(){ 
+                let StayChooseName = document.getElementsByClassName('StayChooseName');
+                let ans = StayChooseName.every(()=>{
+                    console.log(innerText);
+                    return innerText != ''
+                })
+                return ans
+            },
+            //完成選擇後開始結帳，隱藏選單
+            close(){
+                //選取內容帶去完整明細表
+                let tripMorningName = document.getElementsByClassName('tripMorningName');
+                let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+                let tripMorningNameR = document.getElementsByClassName('tripMorningNameR');
+                let tripMorningPriceR = document.getElementsByClassName('tripMorningPriceR');
 
+                let tripNoonName = document.getElementsByClassName('tripNoonName');
+                let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
+                let tripNoonNameR = document.getElementsByClassName('tripNoonNameR');
+                let tripNoonPriceR = document.getElementsByClassName('tripNoonPriceR');
 
+                let tripEveningName = document.getElementsByClassName('tripEveningName');
+                let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
+                let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
+                let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR');
+
+                let FoodMorningName = document.getElementsByClassName('FoodMorningName');
+                let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');
+                let FoodMorningNameR = document.getElementsByClassName('FoodMorningNameR');
+                let FoodMorningPriceR = document.getElementsByClassName('FoodMorningPriceR');
+
+                let FoodNoonName = document.getElementsByClassName('FoodNoonName');
+                let FoodNoonPrice = document.getElementsByClassName('FoodNoonPrice');
+                let FoodNoonNameR = document.getElementsByClassName('FoodNoonNameR');
+                let FoodNoonPriceR = document.getElementsByClassName('FoodNoonPriceR');
+
+                let FoodEveningName = document.getElementsByClassName('FoodEveningName');
+                let FoodEveningPrice = document.getElementsByClassName('FoodEveningPrice');
+                let FoodEveningNameR = document.getElementsByClassName('FoodEveningNameR');
+                let FoodEveningPriceR = document.getElementsByClassName('FoodEveningPriceR');
+
+                let StayChooseName = document.getElementsByClassName('StayChooseName');
+                let StayChoosePrice = document.getElementsByClassName('StayChoosePrice');
+                let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
+                let StayChoosePriceR = document.getElementsByClassName('StayChoosePriceR');
+
+                let PepoleImg = '<i class="fa-solid fa-user"></i>'
+
+                function check(x){
+                    return  x != ''
+                }
+                for(i = 0; i < StayChooseName.length; i++){
+                    if(StayChooseName[i].innerText == ''){
+                        // alert('請確認您尚未選擇的住宿')
+                        sectionBlock.style.display = 'block'
+                        readyToPay.style.display = 'none'
+                        break;
+                    }else{
+                        sectionBlock.style.display = 'none'
+                        readyToPay.style.display = 'block'
+                        $('html, body').animate({
+                            scrollTop:'0'
+                        },1000)
+                        break;
+                        
+                    }
+                }
+
+                for(i = 0 ; i < this.dateArray.length; i++){
+                    //行程
+                    tripMorningNameR[i].innerText = tripMorningName[i].innerText
+                    tripMorningNameR[i].nextElementSibling.innerHTML = tripMorningName[i].nextElementSibling.innerText + PepoleImg
+                    tripMorningPriceR[i].innerText = tripMorningPrice[i].innerText
+
+                    tripNoonNameR[i].innerText = tripNoonName[i].innerText
+                    tripNoonNameR[i].nextElementSibling.innerHTML = tripNoonName[i].nextElementSibling.innerText + PepoleImg
+                    tripNoonPriceR[i].innerText = tripNoonPrice[i].innerText
+
+                    tripEveningNameR[i].innerText = tripEveningName[i].innerText
+                    tripEveningNameR[i].nextElementSibling.innerHTML = tripEveningName[i].nextElementSibling.innerText + PepoleImg
+                    tripEveningPriceR[i].innerText = tripEveningPrice[i].innerText
+                    //餐點
+                    FoodMorningNameR[i].innerText = FoodMorningName[i].innerText
+                    FoodMorningNameR[i].nextElementSibling.innerHTML = FoodMorningName[i].nextElementSibling.innerText + PepoleImg
+                    FoodMorningPriceR[i].innerText = FoodMorningPrice[i].innerText
+
+                    FoodNoonNameR[i].innerText = FoodNoonName[i].innerText
+                    FoodNoonNameR[i].nextElementSibling.innerHTML = FoodNoonName[i].nextElementSibling.innerText + PepoleImg
+                    FoodNoonPriceR[i].innerText = FoodNoonPrice[i].innerText
+
+                    FoodEveningNameR[i].innerText = FoodEveningName[i].innerText
+                    FoodEveningNameR[i].nextElementSibling.innerHTML = FoodEveningName[i].nextElementSibling.innerText + PepoleImg
+                    FoodEveningPriceR[i].innerText = FoodEveningPrice[i].innerText
+                    //住宿
+                    StayChooseNameR[i].innerText = StayChooseName[i].innerText
+                    StayChoosePriceR[i].innerText = StayChoosePrice[i].innerText
+                }
+                this.minorTotalPriceR = this.minorTotalPrice
+                this.DiscountR = this.Discount
+                this.totalPriceR =this.totalPrice
+                // this.discount_list.forEach(() => {
+                // this.DiscountR =  '-$'+(Math.round((this.minorTotalPriceR.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+                // })
+                // this.totalPriceR = '$'+(parseInt(this.minorTotalPriceR.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+
+            },
+            totalR(){
+                this.discount_list.forEach(() => {
+                    this.DiscountR =  '-$'+(Math.round((this.minorTotalPriceR.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+                    })
+                this.totalPriceR = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
+            },
+            back(){
+                window.location.href = './orderPage.html'
+            },
+            backToChoosePage(){
+                sectionBlock.style.display = 'block'
+                readyToPay.style.display = 'none'
+                $('html, body').animate({
+                    scrollTop:'0'
+                },1000)
+            }
         },
         computed:{
-            daysButton(){
-                return {daysbutton : true};
-            }
+            
         },
         created() {
             //取行程資料表
@@ -1943,10 +1656,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         tripEchoose.value = -1
-                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!',
-                        this.eveningtripPrice='0',
-                        this.eveningtripImg='./img/orderPage/welcome.jpg',
-                        
+                        this.eveningtriptext='請點選上方選單列，開始安排您的旅程吧!'
+                        this.eveningtripPrice='0'
+                        this.eveningtripImg='./img/orderPage/welcome.jpg'
                     } 
 
                 })
@@ -1987,9 +1699,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         FoodMchoose.value = -1
-                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!',
-                        this.morningFoodPrice='0',
-                        this.morningFoodImg='./img/orderPage/welcome.jpg',
+                        this.morningFoodtext='請點選上方選單列，開始安排您的早餐!'
+                        this.morningFoodPrice='0'
+                        this.morningFoodImg='./img/orderPage/welcome.jpg'
                         
                     } 
 
@@ -2030,9 +1742,9 @@ window.addEventListener('load',function(){
                             cursor:'not-allowed',
                         })
                         FoodNchoose.value = -1 
-                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!',
-                        this.noonFoodPrice='0',
-                        this.noonFoodImg='./img/orderPage/welcome.jpg',
+                        this.noonFoodtext='請點選上方選單列，開始安排您的午餐!'
+                        this.noonFoodPrice='0'
+                        this.noonFoodImg='./img/orderPage/welcome.jpg'
                         
                     } 
 
@@ -2078,9 +1790,9 @@ window.addEventListener('load',function(){
                                 cursor:'not-allowed',
                             })
                             FoodEchoose.value = -1
-                            this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!',
-                            this.eveningFoodPrice='0',
-                            this.eveningFoodImg='./img/orderPage/welcome.jpg',
+                            this.eveningFoodtext='請點選上方選單列，開始安排您的晚餐!'
+                            this.eveningFoodPrice='0'
+                            this.eveningFoodImg='./img/orderPage/welcome.jpg'
                         }
 
 
@@ -2411,6 +2123,78 @@ window.addEventListener('load',function(){
             this.FoodNoonNameValue = FoodNchoose.value;
             this.FoodEveningNameValue = FoodEchoose.value;
 
+
+            // //選取內容帶去完整明細表
+            // let tripMorningName = document.getElementsByClassName('tripMorningName');
+            // let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
+            // let tripMorningNameR = document.getElementsByClassName('tripMorningNameR');
+            // let tripMorningPriceR = document.getElementsByClassName('tripMorningPriceR');
+
+            // let tripNoonName = document.getElementsByClassName('tripNoonName');
+            // let tripNoonPrice = document.getElementsByClassName('tripNoonPrice');
+            // let tripNoonNameR = document.getElementsByClassName('tripNoonNameR');
+            // let tripNoonPriceR = document.getElementsByClassName('tripNoonPriceR');
+
+            // let tripEveningName = document.getElementsByClassName('tripEveningName');
+            // let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
+            // let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
+            // let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR');
+
+            // let FoodMorningName = document.getElementsByClassName('FoodMorningName');
+            // let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');
+            // let FoodMorningNameR = document.getElementsByClassName('FoodMorningNameR');
+            // let FoodMorningPriceR = document.getElementsByClassName('FoodMorningPriceR');
+
+            // let FoodNoonName = document.getElementsByClassName('FoodNoonName');
+            // let FoodNoonPrice = document.getElementsByClassName('FoodNoonPrice');
+            // let FoodNoonNameR = document.getElementsByClassName('FoodNoonNameR');
+            // let FoodNoonPriceR = document.getElementsByClassName('FoodNoonPriceR');
+
+            // let FoodEveningName = document.getElementsByClassName('FoodEveningName');
+            // let FoodEveningPrice = document.getElementsByClassName('FoodEveningPrice');
+            // let FoodEveningNameR = document.getElementsByClassName('FoodEveningNameR');
+            // let FoodEveningPriceR = document.getElementsByClassName('FoodEveningPriceR');
+
+            // let StayChooseName = document.getElementsByClassName('StayChooseName');
+            // let StayChoosePrice = document.getElementsByClassName('StayChoosePrice');
+            // let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
+            // let StayChoosePriceR = document.getElementsByClassName('StayChoosePriceR');
+
+            // let PepoleImg = '<i class="fa-solid fa-user"></i>'
+            // for(i = 0 ; i < this.dateArray.length; i++){
+            //     //行程
+            //     tripMorningNameR[i].innerText = tripMorningName[i].innerText
+            //     tripMorningNameR[i].nextElementSibling.innerHTML = tripMorningName[i].nextElementSibling.innerText + PepoleImg
+            //     tripMorningPriceR[i].innerText = tripMorningPrice[i].innerText
+
+            //     tripNoonNameR[i].innerText = tripNoonName[i].innerText
+            //     tripNoonNameR[i].nextElementSibling.innerHTML = tripNoonName[i].nextElementSibling.innerText + PepoleImg
+            //     tripNoonPriceR[i].innerText = tripNoonPrice[i].innerText
+
+            //     tripEveningNameR[i].innerText = tripEveningName[i].innerText
+            //     tripEveningNameR[i].nextElementSibling.innerHTML = tripEveningName[i].nextElementSibling.innerText + PepoleImg
+            //     tripEveningPriceR[i].innerText = tripEveningPrice[i].innerText
+            //     //餐點
+            //     FoodMorningNameR[i].innerText = FoodMorningName[i].innerText
+            //     FoodMorningNameR[i].nextElementSibling.innerHTML = FoodMorningName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodMorningPriceR[i].innerText = FoodMorningPrice[i].innerText
+
+            //     FoodNoonNameR[i].innerText = FoodNoonName[i].innerText
+            //     FoodNoonNameR[i].nextElementSibling.innerHTML = FoodNoonName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodNoonPriceR[i].innerText = FoodNoonPrice[i].innerText
+
+            //     FoodEveningNameR[i].innerText = FoodEveningName[i].innerText
+            //     FoodEveningNameR[i].nextElementSibling.innerHTML = FoodEveningName[i].nextElementSibling.innerText + PepoleImg
+            //     FoodEveningPriceR[i].innerText = FoodEveningPrice[i].innerText
+            //     //住宿
+            //     StayChooseNameR[i].innerText = StayChooseName[i].innerText
+            //     StayChoosePriceR[i].innerText = StayChoosePrice[i].innerText
+            // }
+            // this.discount_list.forEach(() => {
+            //     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
+            //     this.DiscountR =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
+            // });
+            // this.totalPriceR = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
             // this.discount_list.forEach(() => {
             //     // console.log((1 -( this.discount_list[discountNums.value][1]  / 10 )));
             //     this.Discount =  '-$'+(Math.round((this.minorTotalPrice.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNums.value][1] / 10)))).toLocaleString('en-US');

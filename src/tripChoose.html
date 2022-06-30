@@ -8,15 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/tripChoose.css">
+    <!-- <link rel="stylesheet" href="./css/readyToPay.css"> -->
     <script src="./js/vue.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/tripChoose.js"></script>
-    <script src='./js/v_calendar.js'></script>
     @@include('./layout/header_footer_css_link.html')
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
 </head>
 <body class="tripChoose">
@@ -25,10 +21,8 @@
     <div class="addfadein">
         已加入您的訂單中<i class="fa-regular fa-circle-check"></i>
     </div>
-    
-    <!-- <header></header> -->
-    <article>
-        <section id="app">
+    <article id="app">
+        <section id="sectionBlock">
             <h2>訂購流程</h2>
             <div class="shoppingProcess">
                 <div class="chooseAdate">
@@ -51,6 +45,7 @@
                     <h4>訂單完成</h4>
                 </div>
             </div>
+            
             <h3>2.選擇行程</h3>
             <div class="datePickerBox">
                 <div @click="day(date,index);ChooseReturn(index,$event)" class="daysbutton" v-for="(date,index) in dateArray"> 
@@ -77,7 +72,6 @@
                     <h5>訂單明細</h5>
                 </div>
                 <div class="tripAndDate">
-                    <p>自由行</p>
                     <p>Check In:</p>
                     <h6>{{startDay}}</h6>
                     <p>Check out:</p>
@@ -152,7 +146,7 @@
                     </div>
                     <div class="totalPrice">
                         <span id="totalPrice" >{{minorTotalPrice}}</span><br>
-                        <select name="" id="discountNums" @change="getNewDiscountPrice;total()">
+                        <select name="" id="discountNums" @change="total()">
                             <option  v-for="(discountCode,index) in this.discount_list" :value="index">{{discountCode[0]}}</option>
                         </select><br>
                         <span id="couponPrice">{{Discount}}</span><br>
@@ -362,10 +356,277 @@
                     </div>  
                 </div>
                 <!-- 下一頁按鈕 -->
-            <button id="NextPage">前往結帳</button>
+            <div class="buttonBlock1">
+                <button id="backToDatePage" @click="back()">回上一頁</button>
+                <button id="NextPage" @click="close();total()">前往結帳</button>
+            </div>
         </section>
+        <article id="readyToPay">
+            <section>
+                <h2>訂購流程</h2>
+                <div class="shoppingProcess">
+                    <div class="chooseAdateR">
+                        <h4>1</h4>
+                        <h4>選擇日期</h4>
+                    </div>
+                    <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+                    <div class="chooseAtripR">
+                        <h4>2</h4>
+                        <h4>選擇行程</h4>
+                    </div>
+                    <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+                    <div class="tallyOrderR">
+                        <h4>3</h4>
+                        <h4>結帳</h4>
+                    </div>
+                    <img src="./img/orderPage/sun/orderPageArrow.png" alt="">
+                    <div class="orderCompleteR">
+                        <h4>4</h4>
+                        <h4>訂單完成</h4>
+                    </div>
+                </div>
+                <!-- 訂購流程結束 -->
+                <h3>3.結帳</h3>
+                <!-- 訂單明細開始 -->
+                <div class="readyToPayBigList">
+                    <div class="readyToPayListTitle">訂單明細</div>
+                    <ul class="readyToPayListDate">
+                        <li>Check In：<h6>{{startDay}}</h6></li>
+                        <li>Check Out：<h6>{{endDay}}</h6></li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <th>日期</th>
+                            <th>遊</th>
+                            <th>食</th>
+                            <th>宿</th>
+                        </thead>
+                        <tbody v-for="(date,index) in dateArray">
+                            <tr>
+                                <td class="tripTitle">{{date}}</td>
+                                <td class="readyToPaytripList" >
+                                    <ul>
+                                        <li class="tripMorningNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="tripMorningPriceR">{{newPrice}}</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="tripNoonNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="tripNoonPriceR">{{newPrice}}</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="tripEveningNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="tripEveningPriceR">{{newPrice}}</li>
+                                    </ul>
+                                </td>
+                                <td class="readyToPayFoodList" >
+                                    <ul>
+                                        <li class="FoodMorningNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="FoodMorningPriceR">{{newPrice}}</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="FoodNoonNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="FoodNoonPriceR">{{newPrice}}</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="FoodEveningNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="FoodEveningPriceR">{{newPrice}}</li>
+                                    </ul>
+                                </td>
+                                <td class="readyToPayStayList" >
+                                    <ul>
+                                        <li class="StayChooseNameR"></li>
+                                        <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                        <li class="StayChoosePriceR">{{newPrice}}</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="readyToPayTotalBlock">
+                        <div class="readyToPayTotalTitle">
+                            <span>小計：</span><br>
+                            <span>折扣碼：</span><br>
+                            <span>折扣金額：</span><br>
+                            <span>總金額：</span><br>
+                        </div>
+                        <div class="readyToPayTotalPrice">
+                            <span id="totalPriceR" >{{minorTotalPriceR}}</span><br>
+                            <select name="" id="discountNumsR" @change="totalR()">
+                                <option  v-for="(discountCode,index) in this.discount_list" :value="index">{{discountCode[0]}}</option>
+                            </select><br>
+                            <span id="couponPriceR">{{DiscountR}}</span><br>
+                            <span>{{totalPriceR}}</span><br> 
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="payBlock">
+                    <h4>PayMent</h4>
+                    <div class="mailAndPhone">
+                        <div class="email">
+                            <h5>E-Mail</h5>
+                        <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+                        <div class="phone">
+                            <h5>連絡電話</h5>
+                            <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+                        </div>
+                    </div>
+                    <div class="nameBlock">
+                        <div class="firstName">
+                            <h5>姓氏</h5>
+                            <input type="text" name="" id="firstName">
+                        </div>
+                        <div class="lastName">
+                            <h5>名字</h5>
+                            <input type="text" name="" id="lastName">
+                        </div>
+                        <div class="payWay">
+                            <h5>付款方式</h5>
+                            <select name="" id="payWay">
+                                <option value="">信用卡</option>
+                                <option value="">匯款</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payWayMobile">
+                        <h5>付款方式</h5>
+                        <select name="" id="payWayMobileUse">
+                            <option value="">信用卡</option>
+                            <option value="">匯款</option>
+                        </select>
+                    </div>
+                    <p>我們將會發送確認的驗證碼郵件。<br>
+                        <br>
+                        *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
+                    <div class="creditCardBlock">
+                        <h4>輸入信用卡</h4>
+                        <h5>輸入卡號</h5>
+                        <div class="creditCardNums">
+                            <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                            <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                            <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                            <input type="text" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')">
+                        </div>
+                        <div class="expAndScode">
+                            <div class="exp">
+                                <h5>有效日期</h5>
+                                <input type="month" name="" id="">
+                            </div>
+                            <div class="Scode">
+                                <h5>安全碼</h5>
+                                <input type="text" maxlength="3" oninput = "value=value.replace(/[^\d]/g,'')">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="directions">
+                        <p>訂房注意事項<br>
+                            <br>
+                            ◎ 90 公分以下孩童加人不加床，酌收300元/人＜每房僅限一位＞，加棉被一件500元。
+                            ◎ 90公分以上 --- 佔床（或加床）含早餐，加第一人每人加收1,000元，加二人合收1,500元。<br>
+                            <br>
+                            1. 房價已含服務費及早餐。<br>
+                            2. 訂房時請確認人數，為維護住房品質，入宿當天無法提供臨時任何加床或加寢具之服務須在訂房時告知，請您務必配合依訂房人數入住。<br>
+                            3. 如有超住人數，明島有權拒絕房客當天入住，並收取50%房費作為山居留房至當日之損失，特此說明。<br>
+                            4. 當日住宿者若無法於當日下午三點~五點前抵達Chick in，請務必提早告知！明島有權不再保留訂房！並且當日訂金無法退還！<br>
+                            5. 為維持房客住房品質，客房內嚴禁炊煮；嚴禁酗酒喧鬧。若有類似情事發生，經人員勸導無效，可要求房客立即退房，房費並不予退還。<br>
+                            6. 因安全顧慮，室內禁止吸禁，嚴禁炊煮、烤肉及攜帶寵物。(若在房間抽菸將收1,000元清潔費)<br>
+                            7. 禁止使用非客房配置之任何電器用品及瓦斯器具，以免發生危險。<br>
+                        </p>
+                        <div class="agreeListOne">
+                            <input type="checkbox" name="" id="">
+                            <p>我同意收到電子最新消息和優惠</p>
+                        </div>
+                        <div class="agreeListTwo">
+                            <input type="checkbox" name="" id="">
+                            <p>我同意隱私條款與預訂政策和條件</p>
+                        </div>
+                        <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
+                    </div>
+                </div>
+                <button id="FinishPage">完成結帳</button> -->
+                
+                <!-- 改成form表單 -->
+                <form action="./php/pay.php" class="payBlock" method="post">
+                    <h4>PayMent</h4>
+                    <div class="mailAndPhone">
+                        <div class="email">
+                            <h5>E-Mail</h5>
+                            <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        </div>
+                        <div class="phone">
+                            <h5>連絡電話</h5>
+                            <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+                        </div>
+                    </div>
+                    <div class="nameBlock">
+                        <div class="firstName">
+                            <h5>姓氏</h5>
+                            <input type="text" name="" id="firstName">
+                        </div>
+                        <div class="lastName">
+                            <h5>名字</h5>
+                            <input type="text" name="" id="lastName">
+                        </div>
+                        <div class="payWay">
+                            <h5>付款方式</h5>
+                            <select name="" id="payWay">
+                                <option value="">信用卡</option>
+                                <option value="">匯款</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payWayMobile">
+                        <h5>付款方式</h5>
+                        <select name="" id="payWayMobileUse">
+                            <option value="">信用卡</option>
+                            <option value="">匯款</option>
+                        </select>
+                    </div>
+                    <p>我們將會發送確認的驗證碼郵件。<br>
+                        <br>
+                        *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
+            
+                        <div class="directions">
+                        <p>訂房注意事項<br>
+                            <br>
+                            ◎ 90 公分以下孩童加人不加床，酌收300元/人＜每房僅限一位＞，加棉被一件500元。
+                            ◎ 90公分以上 --- 佔床（或加床）含早餐，加第一人每人加收1,000元，加二人合收1,500元。<br>
+                            <br>
+                            1. 房價已含服務費及早餐。<br>
+                            2. 訂房時請確認人數，為維護住房品質，入宿當天無法提供臨時任何加床或加寢具之服務須在訂房時告知，請您務必配合依訂房人數入住。<br>
+                            3. 如有超住人數，明島有權拒絕房客當天入住，並收取50%房費作為山居留房至當日之損失，特此說明。<br>
+                            4. 當日住宿者若無法於當日下午三點~五點前抵達Chick in，請務必提早告知！明島有權不再保留訂房！並且當日訂金無法退還！<br>
+                            5. 為維持房客住房品質，客房內嚴禁炊煮；嚴禁酗酒喧鬧。若有類似情事發生，經人員勸導無效，可要求房客立即退房，房費並不予退還。<br>
+                            6. 因安全顧慮，室內禁止吸禁，嚴禁炊煮、烤肉及攜帶寵物。(若在房間抽菸將收1,000元清潔費)<br>
+                            7. 禁止使用非客房配置之任何電器用品及瓦斯器具，以免發生危險。<br>
+                        </p>
+                        <div class="agreeListOne">
+                            <input type="checkbox" name="" id="">
+                            <p>我同意收到電子最新消息和優惠</p>
+                        </div>
+                        <div class="agreeListTwo">
+                            <input type="checkbox" name="" id="">
+                            <p>我同意隱私條款與預訂政策和條件</p>
+                        </div>
+                        <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
+                    </div>
+                    <div class="buttonBlock">
+                        <button class="backToChoosePage" type="button" @click="backToChoosePage">回上一頁</button>
+                        <button id="FinishPage" type="submit">完成結帳</button>
+                    </div>
+                    <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
+                </form>
+            </section>
+        </article>
     </article>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
+<script src="./js/pay.js"></script>
 </body>
 </html>
