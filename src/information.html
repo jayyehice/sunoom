@@ -58,40 +58,96 @@
                 </ul>
 
                 <!-- 日島地圖 -->
-                <ol>
+                <ol class="sunMap">
                     <!-- <img src="./img/information/sun/island_map.jpg" alt="" id="img_test"> -->
 
                     <li>
-                        <img class="allmap bbq" src="./img/information/sun/bbq.png" alt="bbq">
+                        <!-- <img class="allmap bbq" src="./img/information/sun/bbq.png" alt="bbq">
                         <img class="allmap hamberger" src="./img/information/sun/hamberger.png" alt="漢堡">
                         <img class="allmap juice" src="./img/information/sun/juice.png" alt="果汁">
-                        <img class="allmap lobster" src="./img/information/sun/lobster.png" alt="抓蝦">
-                        <!-- <img class="allmap bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="">
-                        <img class="allmap lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="">
-                        <img class="allmap juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="">
-                        <img class="allmap hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt=""> -->
+                        <img class="allmap lobster" src="./img/information/sun/lobster.png" alt="巴菲"> -->
+                        <img class="allmap bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
+                        <img class="allmap lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
+                        <img class="allmap juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
+                        <img class="allmap hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
         
                     </li>
                     <li>
-                        <img class="allmap chariot" src="./img/information/sun/chariot.png" alt="沙灘戰車">
-                        <img class="allmap diving" src="./img/information/sun/diving.png" alt="潛水">
-                        <img class="allmap fishing" src="./img/information/sun/fishing.png" alt="釣魚">
-                        <img class="allmap horse_back_riding" src="./img/information/sun/horse_back_riding.png" alt="騎馬">
-                        <img class="allmap mountaineering" src="./img/information/sun/mountaineering.png" alt="登山">
-                        <img class="allmap rafting" src="./img/information/sun/rafting.png" alt="泛舟">
-                        <img class="allmap snorkeling" src="./img/information/sun/snorkeling.png" alt="浮潛">
-                        <img class="allmap stand_up_paddle" src="./img/information/sun/stand_up_paddle.png" alt="立槳">
-                        <img class="allmap stonehenge" src="./img/information/sun/stonehenge.png" alt="巨石陣">
-                        <img class="allmap yacht" src="./img/information/sun/yacht.png" alt="遊艇">
+
+                        <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
+                        <img class="allmap residential"   v-if="map_list[8]" :src="map_list[8][3]" alt="別墅">
+                        <img class="allmap tent"     v-if="map_list[9]" :src="map_list[9][3]" alt="帳篷">
+                        <img class="allmap stilthouse" v-if="map_list[10]" :src="map_list[10][3]" alt="小木屋">
+
 
                     </li>
                     <li>
-                        <img class="allmap office" src="./img/information/sun/office.png" alt="辦公室">
-                        <img class="allmap residential" src="./img/information/sun/residential.png" alt="高級屋">
-                        <img class="allmap tent" src="./img/information/sun/tent.png" alt="帳篷">
-                        <img class="allmap stilthouse" src="./img/information/sun/stilt-house.png" alt="小木屋">
+                        <img class="allmap chariot"   v-if="map_list[11]" :src="map_list[11][3]" alt="沙灘戰車">
+                        <img class="allmap horse_back_riding"     v-if="map_list[12]" :src="map_list[12][3]" alt="騎馬">
+                        <img class="allmap stonehenge" v-if="map_list[13]" :src="map_list[13][3]" alt="巨石陣">
+                        <img class="allmap mountaineering" v-if="map_list[14]" :src="map_list[14][3]" alt="登山">
+                        <img class="allmap rafting" v-if="map_list[15]" :src="map_list[15][3]" alt="泛舟">
+
+                        <img class="allmap diving" v-if="map_list[16]" :src="map_list[16][3]" alt="潛水">
+                        <img class="allmap yacht" v-if="map_list[17]" :src="map_list[17][3]" alt="遊艇">
+                        <img class="allmap fishing" v-if="map_list[18]" :src="map_list[18][3]" alt="釣魚">
+                        <img class="allmap snorkeling" v-if="map_list[19]" :src="map_list[19][3]" alt="浮潛">
+                        <img class="allmap stand_up_paddle" v-if="map_list[20]" :src="map_list[20][3]" alt="海岸SUP">
+
+                        <img class="allmap agency" v-if="map_list[21]" :src="map_list[21][3]" alt="珊瑚復育所">
+                        <img class="allmap turtle" v-if="map_list[22]" :src="map_list[22][3]" alt="海龜">
+                        <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
+
+
 
                     </li>
+
+                    <li>
+
+                    </li>
+                </ol>
+
+                <!-- 月島地圖 -->
+                <ol class="moonMap">
+                    <!-- <img src="./img/information/sun/island_map.jpg" alt="" id="img_test"> -->
+
+                    <li>
+                        <img class="allmap m_bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
+                        <img class="allmap m_lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
+                        <img class="allmap m_juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
+                        <img class="allmap m_hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
+        
+                    </li>
+                    <li>
+
+                        <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
+                        <img class="allmap m_residential"   v-if="map_list[25]" :src="map_list[25][3]" alt="別墅">
+                        <img class="allmap m_tent"     v-if="map_list[26]" :src="map_list[26][3]" alt="帳篷">
+                        <img class="allmap m_stilthouse" v-if="map_list[27]" :src="map_list[27][3]" alt="小木屋">
+
+
+                    </li>
+                    <li>
+                        <img class="allmap m_campfire"   v-if="map_list[28]" :src="map_list[28][3]" alt="沙灘營火">
+                        <img class="allmap m_bar"     v-if="map_list[29]" :src="map_list[29][3]" alt="酒吧">
+                        <img class="allmap m_star" v-if="map_list[30]" :src="map_list[30][3]" alt="觀星">
+                        <img class="allmap m_owl" v-if="map_list[31]" :src="map_list[31][3]" alt="尋貓頭鷹">
+                        <img class="allmap m_cave" v-if="map_list[32]" :src="map_list[32][3]" alt="隕石洞穴">
+
+                        <img class="allmap m_diving" v-if="map_list[33]" :src="map_list[33][3]" alt="潛水">
+                        <img class="allmap m_yacht" v-if="map_list[34]" :src="map_list[34][3]" alt="遊艇">
+                        <img class="allmap m_fishing" v-if="map_list[35]" :src="map_list[35][3]" alt="釣魚">
+                        <img class="allmap m_flying_fish" v-if="map_list[36]" :src="map_list[36][3]" alt="飛魚">
+                        <img class="allmap m_stand_up_paddle" v-if="map_list[37]" :src="map_list[37][3]" alt="海岸SUP">
+
+                        <img class="allmap tear" v-if="map_list[38]" :src="map_list[38][3]" alt="藍眼淚">
+                        <img class="allmap intertidal" v-if="map_list[39]" :src="map_list[39][3]" alt="潮間帶">
+                        <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
+
+
+
+                    </li>
+
                     <li>
 
                     </li>

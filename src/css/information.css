@@ -60,8 +60,163 @@
   border: 1.5px solid #F5F0DD;
   background-color: #0C1244;
 }
-.information main .map .wrapper ol {
-  background-image: url("../img/information/sun/sunmap.png");
+.information main .map .wrapper .sunMap {
+  background-image: url("../img/information/sun/sunMap.jpg");
+  width: 900px;
+  height: 700px;
+  margin: 0 auto;
+  background-size: cover;
+  border: 1px solid #0C1244;
+  position: relative;
+  display: none;
+}
+.information main .map .wrapper .sunMap .allmap {
+  animation-name: scale1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.information main .map .wrapper .sunMap .bbq {
+  z-index: 1;
+  top: 540px;
+  left: 255px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .hamberger {
+  z-index: 1;
+  top: 380px;
+  left: 410px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .juice {
+  z-index: 1;
+  top: 180px;
+  left: 120px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .lobster {
+  z-index: 1;
+  top: 260px;
+  left: 520px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .chariot {
+  z-index: 1;
+  top: 170px;
+  left: 210px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .diving {
+  z-index: 1;
+  top: 170px;
+  left: 380px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .fishing {
+  z-index: 1;
+  top: 610px;
+  left: 60px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .horse_back_riding {
+  z-index: 1;
+  top: 150px;
+  right: 170px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .mountaineering {
+  z-index: 1;
+  top: 410px;
+  left: 310px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .rafting {
+  z-index: 1;
+  top: 297px;
+  left: 422px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .snorkeling {
+  z-index: 1;
+  top: 330px;
+  left: 160px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .stand_up_paddle {
+  z-index: 1;
+  top: 500px;
+  right: 320px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .stonehenge {
+  z-index: 1;
+  top: 100px;
+  right: 110px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .yacht {
+  z-index: 1;
+  top: 200px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .office {
+  z-index: 1;
+  top: 260px;
+  left: 290px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .residential {
+  z-index: 1;
+  top: 475px;
+  left: 230px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .tent {
+  z-index: 1;
+  top: 335px;
+  left: 280px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .stilthouse {
+  z-index: 1;
+  top: 210px;
+  left: 540px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .agency {
+  z-index: 1;
+  top: 380px;
+  left: 190px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .turtle {
+  z-index: 1;
+  top: 60px;
+  left: 790px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap {
+  background-image: url("../img/information/moon/moonMap.jpg");
   width: 900px;
   height: 700px;
   margin: 0 auto;
@@ -69,135 +224,137 @@
   border: 1px solid #0C1244;
   position: relative;
 }
-.information main .map .wrapper ol .allmap {
+.information main .map .wrapper .moonMap .allmap {
   animation-name: scale1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-.information main .map .wrapper ol .bbq {
-  z-index: 1;
-  top: 540px;
-  left: 255px;
+.information main .map .wrapper .moonMap .m_juice {
+  top: 425px;
+  left: 730px;
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper ol .hamberger {
-  z-index: 1;
-  top: 380px;
-  left: 410px;
+.information main .map .wrapper .moonMap .m_bbq {
+  top: 210px;
+  left: 275px;
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper ol .juice {
-  z-index: 1;
-  top: 180px;
-  left: 120px;
+.information main .map .wrapper .moonMap .m_hamberger {
+  top: 130px;
+  left: 575px;
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper ol .lobster {
-  z-index: 1;
-  top: 260px;
-  left: 520px;
+.information main .map .wrapper .moonMap .m_lobster {
+  top: 275px;
+  left: 415px;
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper ol .chariot {
-  z-index: 1;
-  top: 170px;
-  left: 210px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .diving {
-  z-index: 1;
-  top: 170px;
-  left: 380px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .fishing {
-  z-index: 1;
-  top: 610px;
-  left: 60px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .horse_back_riding {
-  z-index: 1;
-  top: 150px;
-  right: 170px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .mountaineering {
-  z-index: 1;
-  top: 410px;
-  left: 310px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .rafting {
-  z-index: 1;
-  top: 297px;
-  left: 422px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .snorkeling {
-  z-index: 1;
-  top: 330px;
-  left: 160px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .stand_up_paddle {
-  z-index: 1;
-  top: 500px;
-  right: 320px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .stonehenge {
-  z-index: 1;
-  top: 100px;
-  right: 110px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .yacht {
-  z-index: 1;
-  top: 200px;
-  right: 10px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .office {
-  z-index: 1;
-  top: 260px;
-  left: 290px;
-  position: absolute;
-  cursor: pointer;
-}
-.information main .map .wrapper ol .residential {
+.information main .map .wrapper .moonMap .m_residential {
   z-index: 1;
   top: 475px;
-  left: 230px;
+  left: 490px;
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper ol .tent {
+.information main .map .wrapper .moonMap .m_tent {
   z-index: 1;
-  top: 335px;
-  left: 280px;
+  top: 325px;
+  left: 640px;
   position: absolute;
   cursor: pointer;
-  border: 1px solid red;
 }
-.information main .map .wrapper ol .stilthouse {
+.information main .map .wrapper .moonMap .m_stilthouse {
+  z-index: 1;
+  top: 300px;
+  left: 300px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_campfire {
+  z-index: 1;
+  top: 170px;
+  left: 190px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_bar {
+  z-index: 1;
+  top: 420px;
+  left: 360px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_star {
+  z-index: 1;
+  top: 190px;
+  left: 650px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_owl {
   z-index: 1;
   top: 210px;
-  left: 540px;
+  left: 490px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_cave {
+  z-index: 1;
+  top: 130px;
+  left: 480px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_diving {
+  z-index: 1;
+  top: 580px;
+  left: 130px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_yacht {
+  z-index: 1;
+  top: 90px;
+  left: 750px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_fishing {
+  z-index: 1;
+  top: 600px;
+  left: 720px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_flying_fish {
+  z-index: 1;
+  top: 30px;
+  left: 680px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .m_stand_up_paddle {
+  z-index: 1;
+  top: 70px;
+  left: 180px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .tear {
+  z-index: 1;
+  top: 370px;
+  left: 180px;
+  position: absolute;
+  cursor: pointer;
+}
+.information main .map .wrapper .moonMap .intertidal {
+  z-index: 1;
+  top: 600px;
+  left: 450px;
   position: absolute;
   cursor: pointer;
 }
@@ -222,7 +379,7 @@
   padding: 10px;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 125%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
@@ -627,11 +784,354 @@
   border: 1.5px solid #0C1244;
   background-color: #F5F0DD;
 }
-.information_moon main .map .wrapper ol img {
-  display: block;
-  width: 899px;
+.information_moon main .map .wrapper .sunMap {
+  background-image: url("../img/information/sun/sunMap.jpg");
+  width: 900px;
+  height: 700px;
   margin: 0 auto;
-  border: 1px solid #000;
+  background-size: cover;
+  border: 1px solid #F5F0DD;
+  position: relative;
+  display: none;
+}
+.information_moon main .map .wrapper .sunMap .allmap {
+  animation-name: scale1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.information_moon main .map .wrapper .sunMap .bbq {
+  z-index: 1;
+  top: 540px;
+  left: 255px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .hamberger {
+  z-index: 1;
+  top: 380px;
+  left: 410px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .juice {
+  z-index: 1;
+  top: 180px;
+  left: 120px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .lobster {
+  z-index: 1;
+  top: 260px;
+  left: 520px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .chariot {
+  z-index: 1;
+  top: 170px;
+  left: 210px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .diving {
+  z-index: 1;
+  top: 170px;
+  left: 380px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .fishing {
+  z-index: 1;
+  top: 610px;
+  left: 60px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .horse_back_riding {
+  z-index: 1;
+  top: 150px;
+  right: 170px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .mountaineering {
+  z-index: 1;
+  top: 410px;
+  left: 310px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .rafting {
+  z-index: 1;
+  top: 297px;
+  left: 422px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .snorkeling {
+  z-index: 1;
+  top: 330px;
+  left: 160px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .stand_up_paddle {
+  z-index: 1;
+  top: 500px;
+  right: 320px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .stonehenge {
+  z-index: 1;
+  top: 100px;
+  right: 110px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .yacht {
+  z-index: 1;
+  top: 200px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .office {
+  z-index: 1;
+  top: 260px;
+  left: 290px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .residential {
+  z-index: 1;
+  top: 475px;
+  left: 230px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .tent {
+  z-index: 1;
+  top: 335px;
+  left: 280px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .stilthouse {
+  z-index: 1;
+  top: 210px;
+  left: 540px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .agency {
+  z-index: 1;
+  top: 380px;
+  left: 190px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .turtle {
+  z-index: 1;
+  top: 60px;
+  left: 790px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap {
+  background-image: url("../img/information/moon/moonMap.jpg");
+  width: 900px;
+  height: 700px;
+  margin: 0 auto;
+  background-size: cover;
+  border: 1px solid #F5F0DD;
+  position: relative;
+}
+.information_moon main .map .wrapper .moonMap .allmap {
+  animation-name: scale1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.information_moon main .map .wrapper .moonMap .m_juice {
+  top: 425px;
+  left: 730px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_bbq {
+  top: 210px;
+  left: 275px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_hamberger {
+  top: 130px;
+  left: 575px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_lobster {
+  top: 275px;
+  left: 415px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_residential {
+  z-index: 1;
+  top: 475px;
+  left: 490px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_tent {
+  z-index: 1;
+  top: 325px;
+  left: 640px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_stilthouse {
+  z-index: 1;
+  top: 300px;
+  left: 300px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_campfire {
+  z-index: 1;
+  top: 170px;
+  left: 190px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_bar {
+  z-index: 1;
+  top: 420px;
+  left: 360px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_star {
+  z-index: 1;
+  top: 190px;
+  left: 650px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_owl {
+  z-index: 1;
+  top: 210px;
+  left: 490px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_cave {
+  z-index: 1;
+  top: 130px;
+  left: 480px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_diving {
+  z-index: 1;
+  top: 580px;
+  left: 130px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_yacht {
+  z-index: 1;
+  top: 90px;
+  left: 750px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_fishing {
+  z-index: 1;
+  top: 600px;
+  left: 720px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_flying_fish {
+  z-index: 1;
+  top: 30px;
+  left: 680px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .m_stand_up_paddle {
+  z-index: 1;
+  top: 70px;
+  left: 180px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .tear {
+  z-index: 1;
+  top: 370px;
+  left: 180px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .intertidal {
+  z-index: 1;
+  top: 600px;
+  left: 450px;
+  position: absolute;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .backdrop {
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.information_moon main .map .wrapper .iconBox {
+  display: none;
+  z-index: 2;
+  width: 250px;
+  height: 350px;
+  border: 1px solid #0C1244;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: rgba(245, 240, 221, 0.8);
+  -moz-box-shadow: 0px 0px 5px #444444;
+  -webkit-box-shadow: 0px 0px 5px #444444;
+  box-shadow: 0px 0px 5px #444444;
+}
+.information_moon main .map .wrapper .iconBox .fa-circle-xmark {
+  color: #0C1244;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .iconBox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.information_moon main .map .wrapper .iconBox p {
+  color: #F5F0DD;
+  font-size: 16rem;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.information_moon main .map .wrapper .iconBox .iconBoxtime {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .information_moon main .map .polaroid svg {
   display: block;
