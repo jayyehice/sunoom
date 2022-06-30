@@ -11,7 +11,7 @@ window.addEventListener("load", e => {
             activity4: [],
             activity5: [],
         },
-        method: {
+        methods: {
             changeText() {
                 // console.log(this.activity1[4]);
 
@@ -208,7 +208,7 @@ window.addEventListener("load", e => {
     $('#changeButton').click(function () {
         v_landactivity.changeText();
         // console('test');
-        alert('ttt');
+        // alert('ttt');
     });
 })
 
