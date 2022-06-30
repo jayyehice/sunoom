@@ -107,6 +107,7 @@ window.addEventListener("load", e => {
             fetch(url)
                 .then(response => response.json())
                 .then(text => this.land_tour_list = text);
+                console.log()
     
             // const url_ig = './php/land_tour_ig.php';
             // fetch(url_ig)
