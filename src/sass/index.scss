@@ -90,6 +90,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
 
             #textSunoom {
                 position: absolute;
@@ -198,8 +199,7 @@
 
                         .draw01 {
                             background-color: $moon_color;
-                            // width: 65%;
-                            width: 0%;
+                            width: 65%;
                             height: 5px;
                             position: absolute;
                             top: 0;
@@ -664,6 +664,7 @@
             background-size: cover;
             height: 700px;
             position: relative;
+            overflow: hidden;
 
             h3 {
                 text-align: center;
@@ -1237,6 +1238,7 @@
         main {
             .parallax {
                 display: none;
+                overflow: hidden;
             }
 
             .news {

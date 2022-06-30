@@ -61,6 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .index main .parallax #textSunoom {
   position: absolute;
@@ -170,7 +171,7 @@
 }
 .index main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #0C1244;
-  width: 0%;
+  width: 65%;
   height: 5px;
   position: absolute;
   top: 0;
@@ -559,6 +560,7 @@
   background-size: cover;
   height: 700px;
   position: relative;
+  overflow: hidden;
 }
 .index_moon main .parallax h3 {
   text-align: center;
@@ -1025,6 +1027,7 @@
   }
   .index main .parallax {
     display: none;
+    overflow: hidden;
   }
   .index main .news {
     display: block;
