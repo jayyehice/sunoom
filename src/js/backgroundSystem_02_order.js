@@ -2,26 +2,31 @@ Vue.component('order_table',{
     props:['list'],
     data(){
         return{
-            content:'',
+            content:'待付款',
             page:0,
             show_pop_up:false,
             index:0,
         }
     },
     methods: {
-        addClass(e){
+        topButton(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
             $(e.target).addClass('on'); 
+            this.content = e.target.innerText;
         },
         changePage(e){
             this.page = e.target.dataset.page;
             // console.log(e.target.dataset.page);
             $(e.target.closest('ul')).find('li.on').removeClass('on');
             $(e.target).addClass('on');
+
         },
         showEdit(e){
             this.index = e.target.dataset.index; 
             this.show_pop_up = true;
+            console.log(this.list[this.content][this.page][this.index]);
+
+
         },
         changePayStatus(status){
             switch(status){
@@ -45,10 +50,28 @@ Vue.component('order_table',{
         },
         unfinish(e){
             this.show_pop_up=false;
+            let id = this.list[this.content][this.page][this.index][0];
+            let data = [['orderstatus', 2]];
+
+
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'order_table',
+                    id: id,
+                    data: data,
+                })
+            });
         },
     },
     mounted() {
+        //右下選單
         $('#pageList > li:nth-child(2)').addClass('on');
+        $('#pageList > li:last-child').removeClass('on');
     },
     template:
     `
@@ -64,10 +87,11 @@ Vue.component('order_table',{
         </div>
         <!-- 表單細分類 -->
         <div class="checkList">
-            <div class="col-4 select_button">
-                <h5 @click="addClass" class="on">未完成</h5>
-                <h5 @click="addClass">已完成</h5>
-                <h5 @click="addClass">已取消</h5>
+            <div class="col-6 select_button">
+                <h5 @click="topButton" class="on">待付款</h5>
+                <h5 @click="topButton">已付款</h5>
+                <h5 @click="topButton">已完成</h5>
+                <h5 @click="topButton">已取消</h5>
 
             </div>
             <!-- 
@@ -90,11 +114,11 @@ Vue.component('order_table',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col"><p>{{item[8]+item[9]}}</p></li>
                     <li class="col"><p>{{item[4]}}</p></li>
-                    <li class="col"><p>{{item[0]}}</p></li>
+                    <li class="col"><p>{{changePayStatus(item[6])}}</p></li>
                     <li class="col"><p>{{item[5]}}</p></li>
                     
                     <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
@@ -109,7 +133,7 @@ Vue.component('order_table',{
             <div class="row pages">
                 <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
@@ -126,27 +150,27 @@ Vue.component('order_table',{
                         <ul>
                             <li>
                                 <h4>編號:</h4>
-                                <p>{{list[page][index][0]}}</p>
+                                <p>{{list[content][page][index][0]}}</p>
                             </li>
                             <li>
                                 <h4>訂購人:</h4>
-                                <p>{{list[page][index][8]+list[page][index][9]}}</p>
+                                <p>{{list[content][page][index][8]+list[content][page][index][9]}}</p>
                             </li>
                             <li>
                                 <h4>電話:</h4>
-                                <p>{{list[page][index][11]}}</p>
+                                <p>{{list[content][page][index][11]}}</p>
                             </li>
                             <li>
                                 <h4>信箱:</h4>
-                                <p id="order_email">{{list[page][index][10]}}</p>
+                                <p id="order_email">{{list[content][page][index][10]}}</p>
                             </li>
                             <li>
                                 <h4>付款狀態:</h4>
-                                <p>{{changePayStatus(list[page][index][6])}}</p>
+                                <p>{{changePayStatus(list[content][page][index][6])}}</p>
                             </li>
                             <li>
                                 <h4>付款方式:</h4>
-                                <p>{{list[page][index][3]}}</p>
+                                <p>{{list[content][page][index][3]}}</p>
                             </li>
                         </ul>
                     </div>
@@ -171,7 +195,7 @@ Vue.component('order_table',{
                             </li>
                             <li>
                                 <h4>總金額:</h4>
-                                <p>{{list[page][index][4]}}</p>
+                                <p>{{list[content][page][index][4]}}</p>
                             </li>
                             
                         </ul>
@@ -182,7 +206,7 @@ Vue.component('order_table',{
                     <div class="col-1"></div>
                     <button class="b2 col-1" @click="cancle">取消</button>
                     <div class="col-1"></div>
-                    <button class="b3 col-2" @click="unfinish">不成立訂單</button>
+                    <button class="b3 col-2" @click="unfinish" v-if="content=='待付款' || content=='已付款'">不成立訂單</button>
                 </div>
                 </div>
             
