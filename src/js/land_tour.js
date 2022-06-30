@@ -10,10 +10,10 @@ window.addEventListener("load", e => {
             activity3: [],
             activity4: [],
             activity5: [],
+            test:1,
         },
-        method: {
-            changeText() {
-                // console.log(this.activity1[4]);
+        methods: {
+            changeText(){
 
                 if (this.activity1[4] == 1) {
                     this.activity1 = this.land_tour_list[6];
@@ -28,7 +28,7 @@ window.addEventListener("load", e => {
                     this.activity4 = this.land_tour_list[3];
                     this.activity5 = this.land_tour_list[4];
                 }
-            }
+            },
         },
         compute: {},
         watch: {},
@@ -206,9 +206,13 @@ window.addEventListener("load", e => {
     
 
     $('#changeButton').click(function () {
-        v_landactivity.changeText();
-        // console('test');
-        alert('ttt');
+        // v_landactivity.changeText();
+        // // console('test');
+        // alert('ttt');
+        v_landactivity.changeText()
+        // console.log(v_landactivity.test);
+
+
     });
 })
 
