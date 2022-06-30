@@ -23,7 +23,7 @@
             <button id="changeButton">臨時測試</button>
 
                  <!-- 時鐘外框 -->
-                 <section class="banner">
+                 <section id="banner" class="banner">
                     <!-- 時鐘 -->
                     <div class="progress-ring-wrapper">
                         <!-- svg -->
@@ -48,7 +48,8 @@
                                 cy="468.5"
                                 style=" stroke-dasharray: 368.823, 1475.29;  
                                         stroke-dashoffset: 0;
-                                        transform-origin: 0px 0px 0px;"
+                                        transform-origin: 0px 0px 0px;
+                                        transition :2.5s;"
                                 data-svg-origin="468.5 468.5" 
                                 transform="matrix(0,-1,1,0,0,937)">
                             </circle>
@@ -67,7 +68,7 @@
                                 data-event-item="1" 
                                 x="450" 
                                 y="150">
-                                潛水
+                                {{clock1[1]}}
                             </text>
     
                             <!-- 活動2 -->
@@ -83,7 +84,7 @@
                                 data-event-item="2" 
                                 x="770" 
                                 y="385">
-                                遊艇
+                                {{clock2[1]}}
                             </text>
     
                             <!-- 活動3 -->
@@ -99,7 +100,7 @@
                                 data-event-item="3" 
                                 x="650" 
                                 y="740">
-                                出海釣魚
+                                {{clock3[1]}}
                             </text>
     
                             <!-- 活動4 -->
@@ -115,7 +116,7 @@
                                 data-event-item="4" 
                                 x="255" 
                                 y="740">
-                                浮潛
+                                {{clock4[1]}}
                             </text>
     
                             <!-- 活動5 -->
@@ -131,7 +132,7 @@
                                 data-event-item="5" 
                                 x="110" 
                                 y="385">
-                                海岸SUP
+                                {{clock5[1]}}
                             </text>
                         </svg>
                     </div>
@@ -142,36 +143,36 @@
                         <!-- 活動1 中心文字 -->
                         <div class="event-item event-item1">
                             <div class="ocean ocean1">Ocean</div>
-                            <div class="chName chName1">潛水</div>
-                            <div  class="enName enName1">diving</div>
+                            <div class="chName chName1">{{clock1[1]}}</div>
+                            <div  class="enName enName1">{{clock1[11]}}</div>
                             <a  class="discover discover1" href="#" target="_blank">Discover</a>
                         </div>
                        <!-- 活動2 中心文字-->
                        <div class="event-item event-item2">
                             <div class="ocean ocean2">Ocean</div>
-                            <div class="chName chName2">遊艇</div>
-                            <div class="enName enName2">luxury boat</div>
+                            <div class="chName chName2">{{clock2[1]}}</div>
+                            <div class="enName enName2">{{clock2[11]}}</div>
                             <a class="discover discover2" href="#" target="_blank">Discover</a>
                         </div>
                         <!-- 活動3 中心文字-->
                        <div class="event-item event-item3">
                             <div class="ocean ocean3">Ocean</div>
-                            <div class="chName chName3">出海釣魚</div>
-                            <div class="enName enName3">fishing</div>
+                            <div class="chName chName3">{{clock3[1]}}</div>
+                            <div class="enName enName3">{{clock3[11]}}</div>
                             <a class="discover discover3" href="#" target="_blank">Discover</a>
                         </div>
                         <!-- 活動4 中心文字-->
                        <div class="event-item event-item4">
                             <div class="ocean ocean4">Ocean</div>
-                            <div class="chName chName4">浮潛</div>
-                            <div class="enName enName4">scuba diving</div>
+                            <div class="chName chName4">{{clock4[1]}}</div>
+                            <div class="enName enName4">{{clock4[11]}}</div>
                             <a class="discover discover4"href="#"target="_blank">Discover</a>
                         </div>
                         <!-- 活動5 中心文字-->
                        <div class="event-item event-item5">
                             <div class="ocean ocean5">Ocean</div>
-                            <div class="chName chName5">海岸SUP</div>
-                            <div class="enName enName5">sup sport</div>
+                            <div class="chName chName5">{{clock5[1]}}</div>
+                            <div class="enName enName5">{{clock5[11]}}</div>
                             <a class="discover discover5" href="#" target="_blank">Discover</a>
                         </div>
                     </div>

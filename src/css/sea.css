@@ -31,24 +31,12 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("../img/sea/banner1.png");
+  background-image: url("../img/sea/sun/banner1.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   /* 轉場黑幕 */
-}
-.sea main .banner .bg2 {
-  background-image: url("../img/sea/banner2.jpg");
-}
-.sea main .banner .bg3 {
-  background-image: url("../img/sea/banner3.jpg");
-}
-.sea main .banner .bg4 {
-  background-image: url("../img/sea/banner4.jpg");
-}
-.sea main .banner .bg5 {
-  background-image: url("../img/sea/banner5.jpg");
 }
 .sea main .banner .progress-ring-wrapper {
   position: relative;
@@ -221,6 +209,18 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   line-height: 50px;
   z-index: 2;
+}
+.sea main .bg2 {
+  background-image: url("../img/sea/sun/banner2.jpg");
+}
+.sea main .bg3 {
+  background-image: url("../img/sea/sun/banner3.jpg");
+}
+.sea main .bg4 {
+  background-image: url("../img/sea/sun/banner4.jpg");
+}
+.sea main .bg5 {
+  background-image: url("../img/sea/sun/banner5.jpg");
 }
 .sea main .line1 {
   position: absolute;
@@ -884,7 +884,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("../img/sea/turtle.png");
+  background-image: url("../img/sea/moon/banner1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -899,6 +899,18 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   line-height: 50px;
   z-index: 2;
+}
+.sea_moon main .bg2 {
+  background-image: url("../img/sea/moon/banner2.jpg");
+}
+.sea_moon main .bg3 {
+  background-image: url("../img/sea/moon/banner3.jpg");
+}
+.sea_moon main .bg4 {
+  background-image: url("../img/sea/moon/banner4.jpg");
+}
+.sea_moon main .bg5 {
+  background-image: url("../img/sea/moon/banner5.jpg");
 }
 .sea_moon main .line1 {
   position: absolute;
@@ -1524,22 +1536,196 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url("../img/sea/turtle.png");
+    background-image: url("../img/sea/sun/banner1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 35% center;
+    display: flex;
+    justify-content: center;
+    /* 轉場黑幕 */
+  }
+  .sea main .banner .progress-ring-wrapper {
+    position: relative;
+    top: 65px;
+    display: flex;
+    height: 100%;
+  }
+  .sea main .banner .progress-ring-wrapper .progress-ring {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 外框活動文字 */
+  }
+  .sea main .banner .progress-ring-wrapper .progress-ring .progress-ring__background-circle {
+    stroke: white;
+    stroke-width: 1.5;
+    fill: transparent;
+  }
+  .sea main .banner .progress-ring-wrapper .progress-ring .progress-ring__circle {
+    stroke: #d5a655;
+    stroke-width: 4;
+    position: absolute;
+    fill: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .sea main .banner .progress-ring-wrapper .progress-ring .time-label {
+    fill: white;
+    font-weight: bold;
+    text-shadow: gray 0.5px 0.5px 0.5px;
+    font-size: 16px;
+  }
+  .sea main .banner .schedule-wrapper {
+    z-index: 2;
+    position: absolute;
+    top: calc(50% + 45px);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 500px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sea main .banner .schedule-wrapper .event-item {
+    position: relative;
+    /* flex-flow:column wrap; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    line-height: 1;
+    opacity: 1;
+    /* THE OCEAN */
+    /* 中文名 */
+    /* 英文名 */
+    /* 探索活動 */
+  }
+  .sea main .banner .schedule-wrapper .event-item .ocean {
+    color: white;
+    position: absolute;
+    /* top: -65px; */
+    top: 100px;
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    opacity: 1;
+    /* visibility: inherit; */
+  }
+  .sea main .banner .schedule-wrapper .event-item .ocean1 {
+    top: -65px;
+  }
+  .sea main .banner .schedule-wrapper .event-item .chName {
+    position: relative;
+    line-height: 1;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: gray 5px 5px 5px;
+    /* color:#d5a655; */
+    color: white;
+    opacity: 1;
+    top: 170px;
+    /* visibility: inherit; */
+    animation-fill-mode: backwards;
+  }
+  .sea main .banner .schedule-wrapper .event-item .chName1 {
+    top: 0px;
+  }
+  .sea main .banner .schedule-wrapper .event-item .enName {
+    color: white;
+    position: absolute;
+    /* top: 100px; */
+    top: 250px;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    opacity: 1;
+    /* visibility: inherit; */
+  }
+  .sea main .banner .schedule-wrapper .event-item .enName1 {
+    top: 100px;
+  }
+  .sea main .banner .schedule-wrapper .event-item .discover {
+    position: absolute;
+    /* top:150px; */
+    top: 300px;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    width: 100%;
+    color: white;
+    opacity: 1;
+    /* visibility: inherit; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .sea main .banner .schedule-wrapper .event-item .discover1 {
+    top: 150px;
+  }
+  .sea main .banner .schedule-wrapper .event-item .discover:hover {
+    opacity: 0.5 !important;
+  }
+  .sea main .banner .schedule-wrapper .event-item2 {
+    display: none;
+  }
+  .sea main .banner .schedule-wrapper .event-item3 {
+    display: none;
+  }
+  .sea main .banner .schedule-wrapper .event-item4 {
+    display: none;
+  }
+  .sea main .banner .schedule-wrapper .event-item5 {
+    display: none;
+  }
+  .sea main .banner .blackCover {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   .sea main .banner .begin {
     position: absolute;
     bottom: 100px;
-    left: calc(50% - 30px);
-    transform: translateX(-50%);
+    left: calc(50% - 15px);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #F5F0DD;
-    line-height: 30px;
+    text-align: center;
+    line-height: 50px;
     z-index: 2;
+  }
+  .sea main .bg2 {
+    background-image: url("../img/sea/sun/banner2.jpg");
+  }
+  .sea main .bg3 {
+    background-image: url("../img/sea/sun/banner3.jpg");
+  }
+  .sea main .bg4 {
+    background-image: url("../img/sea/sun/banner4.jpg");
+  }
+  .sea main .bg5 {
+    background-image: url("../img/sea/sun/banner5.jpg");
   }
   .sea main .line0 {
     display: block;
@@ -1554,7 +1740,7 @@ h1, h2, h3, h4, h5, h6, p {
     top: -91px;
     left: 400px;
     display: none;
-    z-index: 2;
+    z-index: 3;
   }
   .sea main .line2 {
     position: absolute;
@@ -2278,21 +2464,196 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url("../img/sea/turtle.png");
+    background-image: url("../img/sea/moon/banner1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 35% center;
+    display: flex;
+    justify-content: center;
+    /* 轉場黑幕 */
+  }
+  .sea_moon main .banner .progress-ring-wrapper {
+    position: relative;
+    top: 65px;
+    display: flex;
+    height: 100%;
+  }
+  .sea_moon main .banner .progress-ring-wrapper .progress-ring {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 外框活動文字 */
+  }
+  .sea_moon main .banner .progress-ring-wrapper .progress-ring .progress-ring__background-circle {
+    stroke: white;
+    stroke-width: 1.5;
+    fill: transparent;
+  }
+  .sea_moon main .banner .progress-ring-wrapper .progress-ring .progress-ring__circle {
+    stroke: #d5a655;
+    stroke-width: 4;
+    position: absolute;
+    fill: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .sea_moon main .banner .progress-ring-wrapper .progress-ring .time-label {
+    fill: white;
+    font-weight: bold;
+    text-shadow: gray 0.5px 0.5px 0.5px;
+    font-size: 16px;
+  }
+  .sea_moon main .banner .schedule-wrapper {
+    z-index: 2;
+    position: absolute;
+    top: calc(50% + 45px);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 500px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item {
+    position: relative;
+    /* flex-flow:column wrap; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    line-height: 1;
+    opacity: 1;
+    /* THE OCEAN */
+    /* 中文名 */
+    /* 英文名 */
+    /* 探索活動 */
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .ocean {
+    color: white;
+    position: absolute;
+    /* top: -65px; */
+    top: 100px;
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    opacity: 1;
+    /* visibility: inherit; */
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .ocean1 {
+    top: -65px;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .chName {
+    position: relative;
+    line-height: 1;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: gray 5px 5px 5px;
+    /* color:#d5a655; */
+    color: white;
+    opacity: 1;
+    top: 170px;
+    /* visibility: inherit; */
+    animation-fill-mode: backwards;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .chName1 {
+    top: 0px;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .enName {
+    color: white;
+    position: absolute;
+    /* top: 100px; */
+    top: 250px;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    opacity: 1;
+    /* visibility: inherit; */
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .enName1 {
+    top: 100px;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .discover {
+    position: absolute;
+    /* top:150px; */
+    top: 300px;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: gray 2px 2px 2px;
+    width: 100%;
+    color: white;
+    opacity: 1;
+    /* visibility: inherit; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .discover1 {
+    top: 150px;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item .discover:hover {
+    opacity: 0.5 !important;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item2 {
+    display: none;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item3 {
+    display: none;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item4 {
+    display: none;
+  }
+  .sea_moon main .banner .schedule-wrapper .event-item5 {
+    display: none;
+  }
+  .sea_moon main .banner .blackCover {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   .sea_moon main .banner .begin {
     position: absolute;
     bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: calc(50% - 15px);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #F5F0DD;
-    line-height: 30px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+  }
+  .sea_moon main .bg2 {
+    background-image: url("../img/sea/moon/banner2.jpg");
+  }
+  .sea_moon main .bg3 {
+    background-image: url("../img/sea/moon/banner3.jpg");
+  }
+  .sea_moon main .bg4 {
+    background-image: url("../img/sea/moon/banner4.jpg");
+  }
+  .sea_moon main .bg5 {
+    background-image: url("../img/sea/moon/banner5.jpg");
   }
   .sea_moon main .line0 {
     display: block;

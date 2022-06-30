@@ -55,7 +55,7 @@ $(document).ready(function(){
         },   
     })
 
-    //生態活動資料串接
+    //生態活動 資料串接
     let v_echo = new Vue({
         el: '#echoTitle',
         data: {     // 變數放這裡！               
@@ -97,12 +97,67 @@ $(document).ready(function(){
         },   
     })
 
+    //時鐘 資料串接
+    let v_clock = new Vue({
+        el: '#banner',
+        data: {     // 變數放這裡！               
+            seaActivity_list: [],
+            clock1:[],
+            clock2:[],
+            clock3:[],
+            clock4:[],
+            clock5:[],
+        },
+        methods: {
+            testChange(){
+                // console.log(this.clock1[4]);
+                if( this.clock1[4] == 1){
+                    this.clock1=this.seaActivity_list[19];
+                    this.clock2=this.seaActivity_list[20];
+                    this.clock3=this.seaActivity_list[21];
+                    this.clock4=this.seaActivity_list[22];
+                    this.clock5=this.seaActivity_list[23];
+                }else{
+                    this.clock1=this.seaActivity_list[12];
+                    this.clock2=this.seaActivity_list[13];
+                    this.clock3=this.seaActivity_list[14];
+                    this.clock4=this.seaActivity_list[15];
+                    this.clock5=this.seaActivity_list[16];
+                }
+            }
+        },
+        computed: {},
+        watch: {},
+        beforeCreate() {
+            const url = './php/sea.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => {
+                    this.seaActivity_list = text;
+                    this.clock1=this.seaActivity_list[12];
+                    this.clock2=this.seaActivity_list[13];
+                    this.clock3=this.seaActivity_list[14];
+                    this.clock4=this.seaActivity_list[15];
+                    this.clock5=this.seaActivity_list[16];
+                });
+        },
+        created() {
+        },
+        mounted() {
+        },
+        updated() {          
+        },   
+    })
+
     $('#changeButton').click(function(){
         v_activity.testChange();
         v_echo.testChange();
+        v_clock.testChange();
         console('test')
     });
 })
+
+
 
 
 // setTimeout(function(){
