@@ -2,7 +2,7 @@ Vue.component('activity',{
     props:['list'],
     data(){
         return{
-            content:'',
+            content:'進行中',
             page:0,
             show_pop_up:false,
             index:0,
@@ -14,9 +14,10 @@ Vue.component('activity',{
         }
     },
     methods: {
-        addClass(e){
+        topButton(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
-            $(e.target).addClass('on'); 
+            $(e.target).addClass('on');
+            this.content = e.target.innerText; 
         },
         changePage(e){
             this.page = e.target.dataset.page;
@@ -27,14 +28,14 @@ Vue.component('activity',{
         showEdit(e){
             this.index = e.target.dataset.index;
             this.show_pop_up = true;
-            this.name = this.list[this.page][this.index][1];
-            this.price = this.list[this.page][this.index][3];
-            this.people = this.list[this.page][this.index][9];
-            this.intro = this.list[this.page][this.index][2];
+            this.name = this.list[this.content][this.page][this.index][1];
+            this.price = this.list[this.content][this.page][this.index][3];
+            this.people = this.list[this.content][this.page][this.index][9];
+            this.intro = this.list[this.content][this.page][this.index][2];
 
-            if(this.list[this.page][this.index][8] == '陸'){
+            if(this.list[this.content][this.page][this.index][8] == '陸'){
                 this.type = true;
-            }else if(this.list[this.page][this.index][8] == '海'){
+            }else if(this.list[this.content][this.page][this.index][8] == '海'){
                 this.type = false;
             }
         },
@@ -46,7 +47,9 @@ Vue.component('activity',{
         },
     },
     mounted() {
+        //右下選單
         $('#pageList > li:nth-child(2)').addClass('on');
+        $('#pageList > li:last-child').removeClass('on');
     },
     template:
     `
@@ -63,8 +66,8 @@ Vue.component('activity',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5 @click="addClass" class="on">進行中</h5>
-                <h5 @click="addClass">已結束</h5>
+                <h5 @click="topButton" class="on">進行中</h5>
+                <h5 @click="topButton">已結束</h5>
 
             </div>
             <!-- 
@@ -87,7 +90,7 @@ Vue.component('activity',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[8]}}</p></li>
                     <li class="col"><p>{{item[1]}}</p></li>
@@ -106,7 +109,7 @@ Vue.component('activity',{
             <div class="row pages">
                 <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
@@ -122,7 +125,7 @@ Vue.component('activity',{
                         <ul>
                             <li>
                                 <h4>編號:</h4>
-                                <p>{{list[page][index][0]}}</p>
+                                <p>{{list[content][page][index][0]}}</p>
                             </li>
                             <li>
                                 <h4>名稱:</h4>
@@ -134,7 +137,7 @@ Vue.component('activity',{
                             </li>
                             <li>
                                 <h4>人數:</h4>
-                                <input type="text" v-model="poeple">
+                                <input type="text" v-model="people">
                             </li>
                             <li class="radio">
                                 <h4>類別:</h4>
@@ -160,14 +163,14 @@ Vue.component('activity',{
                                 <input type="file">
                             </li>
                             <li>
-                                <img :src="list[page][index][5]" alt="">
+                                <img :src="list[content][page][index][5]" alt="">
                             </li>
                             <li>
                                 <h4>大圖:</h4>
                                 <input type="file">
                             </li>
                             <li>
-                                <img :src="list[page][index][6]" alt="">
+                                <img :src="list[content][page][index][6]" alt="">
                             </li>
                         </ul>
                         <!-- <span class="col-1">活動</span> <textarea class="col-8" name="" id="" cols="23" rows="10"></textarea><br>

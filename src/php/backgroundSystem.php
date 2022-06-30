@@ -4,7 +4,7 @@
 
        $all_list = [];
        
-       $tables = ['activity', 'shop', 'live', 'discount_code', 'member', 'article', 'comment'];
+       $tables = ['shop', 'live', 'discount_code', 'member', 'article', 'comment'];
        // $tables = ['article']; //測試用
 
        function data_slice($data){
@@ -88,6 +88,27 @@
        $all_list['order_table'] = $order_data;
 
 
+
+       //活動資料切割為 1進行中 0已結束
+       $activity_data = [];
+       $activity_title = '';
+       for($i=0; $i<2; $i++){
+
+              $sql = "SELECT * FROM activity WHERE status=$i";
+
+              $statement = $pdo->query($sql);
+              $data = $statement->fetchAll();
+
+              if($i==1){
+                     $activity_title = '進行中';
+              }else{
+                     $activity_title = '已結束'; 
+              }
+
+              $activity_data[$activity_title] = data_slice($data);
+       }
+
+       $all_list['activity'] = $activity_data;
        
        echo json_encode($all_list);
 
