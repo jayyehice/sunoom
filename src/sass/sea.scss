@@ -42,27 +42,235 @@ h1, h2, h3, h4, h5, h6, p{
             position: relative;
             height: 100vh;
             width: 100%;
-            background-image: url('../img/sea/turtle.png');
+            background-image: url("../img/sea/banner1.png");
             background-size: cover;
             background-repeat: no-repeat;
+            display:flex;
+            justify-content:center;
+
+            // 背景圖輪播用
+            .bg2{
+                background-image: url("../img/sea/banner2.jpg");
+            }
+            .bg3{
+                background-image: url("../img/sea/banner3.jpg");
+            }
+            .bg4{
+                background-image: url("../img/sea/banner4.jpg");
+            }
+            .bg5{
+                background-image: url("../img/sea/banner5.jpg");
+            }
+
+            // 時鐘
+            .progress-ring-wrapper{
+                position:relative;
+                top: 45px;
+                display:flex;
+                // justify-content:center;
+                // align-items:center;
+                height:100%;
+
+                // svg
+                .progress-ring{
+                    z-index: 2;
+                    position:relative;
+                    width: 100%;
+                    height: 100vh;
+
+                    // 大圈圈
+                    .progress-ring__background-circle{
+                        stroke:white;
+                        stroke-width:1.5;
+                        fill:transparent;
+                    }
+
+                    // 流動線圈
+                    .progress-ring__circle{
+                        stroke:#d5a655;
+                        stroke-width:4;
+                        position:absolute;
+                        fill:transparent;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        left:0;
+                    }
+
+                    // 時鐘上的五個點
+                    .progress-ring__point{}
+
+                    /* 外框活動文字 */
+                    .time-label{
+                        fill: white;
+                        font-weight: bold;
+                        text-shadow: gray 0.5px 0.5px 0.5px;
+                        font-size: $p;
+                    }
+  
+                }     
+            }
+
+            // 時鐘中心文字
+            .schedule-wrapper{
+                z-index: 2;
+                position:absolute;
+                top:calc(50% + 45px);
+                left:50%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                width:100%;
+                max-width:400px;
+                height:100%;
+                max-height:500px;
+                border-radius:50%;
+                transform:translate(-50%,-50%);
+
+                // 中心文字共用
+               .event-item{
+                   position:relative;
+                   /* flex-flow:column wrap; */
+                   justify-content:center;
+                   align-items:center;
+                   width:100%;
+                   max-width:400px;
+                   line-height:1;
+                   opacity: 1;
+
+                   /* THE OCEAN */
+                   .ocean{
+                       color: white;
+                       position:absolute;
+                       /* top: -65px; */
+                       top: 135px;
+                       width:100%;
+                       font-size:32px;
+                       letter-spacing: 3px;
+                       font-weight:lighter;
+                       text-transform:uppercase;
+                       text-align:center;
+                       text-shadow: gray 2px 2px 2px;
+                       opacity: 1;
+                       /* visibility: inherit; */
+                   }
+                   
+                   .ocean1{
+                       top: -65px;
+                   }
+
+                   /* 中文名 */
+                   .chName{
+                       position:relative;
+                       line-height:1;
+                       font-size:80px;
+                       letter-spacing: 3px;
+                       text-align: center;
+                       text-shadow: gray 5px 5px 5px;
+                       /* color:#d5a655; */
+                       color: white;
+                       opacity: 1;
+                       top: 200px;
+                       /* visibility: inherit; */
+                       animation-fill-mode: backwards;
+                   }
+                   .chName1{
+                       top: 0px;
+                   }
+
+                   /* 英文名 */
+                   .enName{
+                       color: white;
+                       position:absolute;
+                       /* top: 100px; */
+                       top: 300px;
+                       width:100%;
+                       font-size:32px;
+                       letter-spacing: 3px;
+                       font-weight:lighter;
+                       text-transform:uppercase;
+                       text-align:center;
+                       text-shadow: gray 2px 2px 2px;
+                       opacity: 1;
+                       /* visibility: inherit; */
+                   }
+                   .enName1{
+                       top: 100px;
+                   }
+
+                   /* 探索活動 */
+                   .discover{
+                       position:absolute;
+                       /* top:150px; */
+                       top: 350px;
+                       font-size:16px;
+                       text-align: center;
+                       text-shadow: gray 2px 2px 2px;
+                       width: 100%;
+                       color: white;
+                       opacity: 1;
+                       /* visibility: inherit; */
+                       text-transform:uppercase;
+                       letter-spacing:1px;
+                       -webkit-transition:all .3s;transition:all .3s
+                   }
+                   .discover1{
+                       top: 150px;
+                   }
+
+                   .discover:hover{
+                       opacity:0.5!important
+                   }
+               }
+               
+               .event-item2{
+                   display: none;
+               }
+               .event-item3{
+                   display: none;
+                }
+               .event-item4{
+                   display: none;
+                }
+                .event-item5{
+                   display: none;
+               }
+               
+
+           }
+
+            /* 轉場黑幕 */
+            .blackCover{
+                position:absolute;
+                background-color:#000;
+                opacity:0.3;
+                z-index:1;
+                top:0;
+                right:0; 
+                bottom:0;
+                left:0;
+            }
+
             // 點點起始
             .begin{
                 position: absolute;
                 bottom: 60px;
-                left: calc(50% - 50px);
+                left: calc(50% - 15px);
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 background-color: #F5F0DD;
                 text-align: center;
                 line-height: 50px;
+                z-index: 2;
             }
         }
         // 線條一
         .line1{
             position: absolute;
-            top: -89px;
-            left:400px;
+            top: -91px;
+            left:435px;
+            z-index: 2;
         }
         // 線條二
         .line2{
@@ -822,20 +1030,22 @@ h1, h2, h3, h4, h5, h6, p{
           .begin{
               position: absolute;
               bottom: 60px;
-              left: calc(50% - 50px);
+              left: calc(50% - 15px);
               width: 30px;
               height: 30px;
               border-radius: 50%;
               background-color: #F5F0DD;
               text-align: center;
               line-height: 50px;
+              z-index: 2;
           }
       }
       // 線條一
       .line1{
           position: absolute;
-          top: -89px;
-          left:400px;
+          top: -91px;
+          left:435px;
+          z-index: 2;
       }
       // 線條二
       .line2{
@@ -1554,11 +1764,15 @@ h1, h2, h3, h4, h5, h6, p{
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: 35% center;
+
+                
+
+
                 // 點點起始
                 .begin{
                     position: absolute;
                     bottom: 100px;
-                    left: 50%;
+                    left: calc(50% - 30px);
                     transform: translateX(-50%);
                     width: 30px;
                     height: 30px;
@@ -1566,6 +1780,7 @@ h1, h2, h3, h4, h5, h6, p{
                     background-color: #F5F0DD;
                     // text-align: center;
                     line-height: 30px;
+                    z-index: 2;
                 }
             }
             // RWD專用線條
@@ -1580,9 +1795,10 @@ h1, h2, h3, h4, h5, h6, p{
             // 線條一
             .line1{
                 position: absolute;
-                top: -89px;
+                top: -91px;
                 left:400px;
                 display: none;
+                z-index: 2;
             }
             // 線條二
             .line2{
