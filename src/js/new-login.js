@@ -43,11 +43,14 @@ new Vue({
             e.preventDefault();
             let url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
             fetch(url)
-                // .then(response => response.json())
-                .then(response => console.log(response.json()))
+                .then(response => response.json())
+                // .then(response => console.log(response.json()))
                 // .then(text => this.login_region_list = text);
-                // .then(text => console.log(text));
+                .then(text => {
+                    if text
+                });
                 // console.log(this.login_region)
+                
         },
     },
     compute:{},
