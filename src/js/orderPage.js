@@ -152,7 +152,7 @@ $(function () {
     //顯示天數
     $('#manyDays').html(theDays+1);
 
-    sendDays.push(Sday,theDays);
+    sendDays.push(Sday,theDays,Eday);
     
     
     });

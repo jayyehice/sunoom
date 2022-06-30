@@ -8,9 +8,10 @@ $moon_color: #0C1244;
     }
 };
 
-.readyToPay{
+#readyToPay{
     background-color: $sun_color;
     color: $moon_color;
+    // display: none;
     select{
         border: 1px solid $moon_color;
         color: $moon_color;
@@ -100,7 +101,7 @@ $moon_color: #0C1244;
     }
 
 
-    .bigList{
+    .readyToPayBigList{
         width: 1000px;
         height: auto;
         border:2px solid $moon_color;
@@ -109,7 +110,7 @@ $moon_color: #0C1244;
             width: 98%;
             height: 100%
         }
-        .ListTitle{
+        .readyToPayListTitle{
             margin: 0px auto;
             width: 980px;
             height: 50px;
@@ -124,7 +125,7 @@ $moon_color: #0C1244;
 
             }
         }
-        .ListDate{
+        .readyToPayListDate{
             display: flex;
             list-style: none;
             justify-content: center;
@@ -194,20 +195,20 @@ $moon_color: #0C1244;
                 }
             }
         }
-        .totalBlock{
+        .readyToPayTotalBlock{
             margin:  40px 20px;
             display: flex;
             justify-content:flex-end;
             align-content: center;
             height: 150px;
-            .totalTitle{
+            .readyToPayTotalTitle{
                 font-weight: bolder;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 font-size: 19.5px;
             }
-            .totalPrice{
+            .readyToPayTotalPrice{
                 font-weight: bolder;
                 display: flex;
                 flex-direction: column;
@@ -218,7 +219,7 @@ $moon_color: #0C1244;
                     color: #FFBF44;
                     font-size: 20px;
                 }
-                #couponPrice{
+                #readyToPayCouponPrice{
                     color: #FF4444;
                 }
             }
@@ -775,26 +776,53 @@ $moon_color: #0C1244;
             }
         }
     }
-    #FinishPage{
-        display: block;
-        width: 140px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        background-color:$sun_color;
-        border:1px solid $moon_color;
+    .buttonBlock{
+        width: 300px;
+        display: flex;
         margin: 50px auto;
-        @include mobile{
-            margin-top: 20px;
-            width: 300px;
-            height: 60px;
-            border-radius: 30px;
+        .backToChoosePage{
+            display: block;
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:$sun_color;
+            border:1px solid $moon_color;
+            margin-left: 20px;
+            @include mobile{
+                margin-top: 20px;
+                width: 300px;
+                height: 60px;
+                border-radius: 30px;
+            }
+            &:hover{
+                color:$sun_color;
+                background-color:$moon_color;
+                border:1px solid $sun_color;
+            }
         }
-        &:hover{
-            color:$sun_color;
-            background-color:$moon_color;
-            border:1px solid $sun_color;
+        #FinishPage{
+            display: block;
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:$sun_color;
+            border:1px solid $moon_color;
+            @include mobile{
+                margin-top: 20px;
+                width: 300px;
+                height: 60px;
+                border-radius: 30px;
+            }
+            &:hover{
+                color:$sun_color;
+                background-color:$moon_color;
+                border:1px solid $sun_color;
+            }
         }
+    
     }
+
 
 }
