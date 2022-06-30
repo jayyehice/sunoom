@@ -48,19 +48,7 @@ h1, h2, h3, h4, h5, h6, p{
             display:flex;
             justify-content:center;
 
-            // 背景圖輪播用
-            .bg2{
-                background-image: url("../img/sea/banner2.jpg");
-            }
-            .bg3{
-                background-image: url("../img/sea/banner3.jpg");
-            }
-            .bg4{
-                background-image: url("../img/sea/banner4.jpg");
-            }
-            .bg5{
-                background-image: url("../img/sea/banner5.jpg");
-            }
+            
 
             // 時鐘
             .progress-ring-wrapper{
@@ -264,6 +252,20 @@ h1, h2, h3, h4, h5, h6, p{
                 line-height: 50px;
                 z-index: 2;
             }
+        }
+
+        // 背景圖輪播用
+        .bg2{
+            background-image: url("../img/sea/banner2.jpg");
+        }
+        .bg3{
+            background-image: url("../img/sea/banner3.jpg");
+        }
+        .bg4{
+            background-image: url("../img/sea/banner4.jpg");
+        }
+        .bg5{
+            background-image: url("../img/sea/banner5.jpg");
         }
         // 線條一
         .line1{
