@@ -29,3 +29,33 @@ function validate(){
     }
 }
 
+new Vue({
+    el:'#login_region',
+
+    data:{
+        login_region_list:[],
+        account:"",
+        password:"",
+    },
+
+    methods:{
+        submit(e){
+            e.preventDefault();
+            let url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
+            fetch(url)
+                // .then(response => response.json())
+                .then(response => console.log(response.json()))
+                // .then(text => this.login_region_list = text);
+                // .then(text => console.log(text));
+                // console.log(this.login_region)
+        },
+    },
+    compute:{},
+    watch:{},
+
+    create(){
+   
+    },
+
+ 
+})

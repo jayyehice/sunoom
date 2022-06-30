@@ -29,7 +29,6 @@ window.addEventListener("load",function(){
                 }
             },
             
-            
         },
         mounted() {
             // console.log(this.memberID);
@@ -40,8 +39,6 @@ window.addEventListener("load",function(){
                 window.location.href = './backgroundSystem_login.html';
                 // open('./backgroundSystem_login.html');
             }else{
-
-                
                 this.id = sessionStorage['id'];
                 this.account = sessionStorage['account'];
                 this.authority = sessionStorage['authority'];
@@ -62,20 +59,9 @@ window.addEventListener("load",function(){
     });
 
 
+    //登出按鈕
     document.getElementById('logOut').addEventListener('click', e => {
         sessionStorage.clear();
         window.location.href = './backgroundSystem_login.html';
-    })
-
-
-
-   
+    }) 
 })
-//彈窗事件綁定
-// function showEdit(nums){
-//     console.log(nums);
-//     $(`.formBody_0${nums}`).css('display','block')
-// }
-// function closeBlock(nums){
-//     $(`.formBody_0${nums}`).css('display','none')
-// }
