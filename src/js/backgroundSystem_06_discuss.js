@@ -4,6 +4,12 @@ Vue.component('discuss',{
         return{
             content:'article',
             page:0,
+            show_pop_up:false,
+            index:0,
+            title:'',
+            content_article:'',
+            content_comment:'',
+            title_comment:'',
         }
     },
     methods:{
@@ -43,7 +49,32 @@ Vue.component('discuss',{
             $(e.target).addClass('on');
 
             // console.log($('#pageList li:nth-child(2)'));
-        }
+        },
+        showEdit(e){
+            // console.log(e.target.dataset.index);
+            // let index = e.target.dataset.index;
+            // console.log(this.list[this.page][this.index]);
+            this.index = e.target.dataset.index;
+            this.show_pop_up = true; 
+            if(this.content == 'article'){
+
+                this.title = this.list[this.content][this.page][this.index][3];
+                this.content_article = this.list[this.content][this.page][this.index][4];
+            }else if(this.content == 'comment'){
+                this.title_comment = this.list[this.content][this.page][this.index][7];
+                this.content_comment = this.list[this.content][this.page][this.index][3];
+            }
+            
+        },
+        comfirm(e){
+            this.show_pop_up=false;
+        },
+        cancle(e){
+            this.show_pop_up=false;
+        },
+        removeArticle(e){
+            this.show_pop_up=false;
+        },
     },
     computed:{},
     mounted() {
@@ -82,7 +113,7 @@ Vue.component('discuss',{
                     <li class="col"><p>編號</p></li>
                     <li class="col"><p>類別</p></li>
                     <li class="col-4"><p>標題</p></li>
-                    <li class="col"><p>作者</p></li>
+                    <li class="col-2"><p>作者</p></li>
                     <li class="col-2"><p>日期</p></li>
                     
                     <li class="col"></li>
@@ -92,20 +123,20 @@ Vue.component('discuss',{
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{changeCatagory(item[2])}}</p></li>
                     <li class="col-4"><p>{{item[3]}}</p></li>
-                    <li class="col"><p>{{item[5]}}</p></li>
+                    <li class="col-2"><p>{{item[11]}}</p></li>
                     <li class="col-2"><p>{{item[9]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
             </div>
 
-            <div class="row"  v-if="content == 'comment'">
+            <div class="row" v-if="content == 'comment'">
                 <ul class="tableTitle">
                     <li class="col"><p>編號</p></li>
-                    <li class="col"><p>對應文章</p></li>
+                    <li class="col-5"><p>對應文章</p></li>
                     <li class="col"><p>內容</p></li>
-                    <li class="col"><p>作者</p></li>
+                    <li class="col-2"><p>作者</p></li>
                     <li class="col"><p>日期</p></li>
                     
                     <li class="col"></li>
@@ -113,12 +144,12 @@ Vue.component('discuss',{
                 
                 <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
-                    <li class="col"><p>{{item[1]}}</p></li>
+                    <li class="col-5"><p>{{item[7]}}</p></li>
                     <li class="col"><p>{{item[3]}}</p></li>
-                    <li class="col"><p>{{item[2]}}</p></li>
+                    <li class="col-2"><p>{{item[6]}}</p></li>
                     <li class="col"><p>{{item[4]}}</p></li>
                     
-                    <li class="col button" :data-index="index"><button onclick="showEdit(6)">編輯/查看</button></li>
+                    <li class="col button"><button :data-index="index" @click="showEdit">編輯/查看</button></li>
                 </ul>
 
             </div>
@@ -133,6 +164,119 @@ Vue.component('discuss',{
                     <li>></li>
                 </ul>
             </div>
+        </div>
+
+
+        <div class="pop_up" v-if="show_pop_up">
+            <div class="formBody_04" v-if="content == 'article'">
+                <h3>文章資訊</h3>
+                <form class="Form_04 row">
+                    <div class="leftForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <p>{{list[content][page][index][0]}}</p>
+                            </li>
+                            <li>
+                                <h4>作者:</h4>
+                                <p>{{list[content][page][index][10]+list[content][page][index][11]}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>發佈:</h4>
+                                <p>{{list[content][page][index][9]}}</p>
+                            </li>
+                            <li>
+                                <h4>類別:</h4>
+                                <p>{{changeCatagory(list[content][page][index][2])}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="content_04 row">
+                    <div class="col-12">
+                        <ul>
+                            <li>
+                                <h4>標題:</h4>
+                                <input type="text" v-if="list[content][page][index][1]==1" v-model="title">
+                                <p v-if="list[content][page][index][1]==2">{{title}}</p>
+                            </li>
+                            <li>
+                                <h4>內容:</h4>
+                                <textarea class="col" name="" id="" cols="80" rows="11" v-if="list[content][page][index][1]==1" v-model="content_article"></textarea>
+                                <p v-if="list[content][page][index][1]==2">{{content_article}}</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </div>            
+                <div class="buttonBlock_04 row">
+                    <button type="submit" class="b01 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b03 col-2" @click="removeArticle">移除文章</button>
+                </div>
+            </div>
+
+
+            <div class="formBody_04" v-if="content == 'comment'">
+                <h3>文章資訊</h3>
+                <form class="Form_04 row">
+                    <div class="leftForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>編號:</h4>
+                                <p>{{list[content][page][index][0]}}</p>
+                            </li>
+                            <li>
+                                <h4>作者:</h4>
+                                <p>{{list[content][page][index][5]+list[content][page][index][6]}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightForm_04 col-6">
+                        <ul>
+                            <li>
+                                <h4>發佈:</h4>
+                                <p>{{list[content][page][index][4]}}</p>
+                            </li>
+                            <li>
+                                <h4>類別:</h4>
+                                <p>{{changeCatagory(list[content][page][index][8])}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="content_04 row">
+                    <div class="col-12">
+                        <ul>
+                            <li>
+                                <h4>文章:</h4>
+                                <p>{{title_comment}}</p>
+                            </li>
+                            <li>
+                                <h4>內容:</h4>
+                                <p>{{content_comment}}</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    
+                </div>            
+                <div class="buttonBlock_04 row">
+                    <button type="submit" class="b01 col-1 offset-3" @click="comfirm">確認</button>
+                    <div class="col-1"></div>
+                    <button class="b02 col-1" @click="cancle">取消</button>
+                    <div class="col-1"></div>
+                    <button class="b03 col-2" @click="removeArticle">移除評論</button>
+                </div>
+            </div>
+            
         </div>
     </div> 
     

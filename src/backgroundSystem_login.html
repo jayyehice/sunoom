@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>明島-後台管理系統</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/backgroundSystem_login.css">
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <main>
+        <form id="app">
+            <img src="./img/common/moon/sunoomlogo.png" alt="">
+            <h2>管理員登入</h2>
+            <p id="hint" :class="error">{{hint}}</p>
+            <input type="text" placeholder="帳號" id="account" name="account" v-model="account"  @keyup.enter="bgsLogin" required>
+            <input type="password" placeholder="密碼" id="password" name="password" v-model="password"  @keyup.enter="bgsLogin" required>
+            <!-- <input type="submit" value="送出" id="submit" @click="bgsLogin"> -->
+            <h5 id="submit" @click.enter="bgsLogin">送出</h5>
+        </form>
+    </main>
+
+    <script>
+
+        window.addEventListener("load",function(){
+
+            let vm = new Vue({
+                el: '#app',
+                data: {
+                    account:'',
+                    password:'',
+                    hint:'請輸入帳號密碼',
+                    error:'',
+                },
+                methods: {
+                    bgsLogin(){
+
+                        if(this.account == '' || this.password == ''){
+                            // console.log('object');
+                            alert('請輸入帳號密碼');
+                        }else{
+                            
+                            const url = `./php/bgslogin.php?account=${this.account}&password=${this.password}`;
+                            fetch(url)
+                                .then(response => response.json())
+                                .then(text => {
+                                    console.log(text);
+    
+                                    if(text === 'false'){
+                                        alert('帳號或密碼錯誤');
+                                        this.hint='帳號或密碼錯誤';
+                                        this.error='error';
+                                    }else{
+    
+                                        sessionStorage.setItem('id', text[0]['id']);
+                                        sessionStorage.setItem('account', text[0]['account']);
+                                        sessionStorage.setItem('authority', text[0]['authority']);
+                                        sessionStorage.setItem('image', text[0]['image']);
+        
+                                        window.location.href = './backgroundSystem.html';
+                                    }
+                                
+                                })
+                        }
+                    },
+                },
+                created() {},       
+            });
+
+        });
+
+    </script>
+</body>
+</html>

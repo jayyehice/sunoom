@@ -31,4 +31,22 @@
 
        echo json_encode($process_data);
 
+
+
+       // $sql = "
+       // UPDATE article 
+       // SET comment = (
+       //        select count(*)
+       //        from comment c
+       //        where c.article_id = ?
+       //        group by c.article_id) 
+       // WHERE (id = ?);
+       // ";
+       
+       // $statement = $pdo->prepare($sql);
+       // $statement->bindParam(1, $_GET['content']);
+       // $statement->bindParam(2, $_GET['commentid']);
+       // $statement->execute();
+       // $data = $statement->fetchAll();
+
 ?>

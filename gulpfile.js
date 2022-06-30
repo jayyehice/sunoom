@@ -62,6 +62,13 @@ function mvallphp() {
 exports.mvphp = mvallphp;
 
 
+// copy 綠界php
+function mvAioSDK() {
+    return src(['./src/AioSDK/*.*','./src/AioSDK/**/*.*']).pipe(dest('dist/AioSDK'));
+}
+
+exports.mvaio = mvAioSDK;
+
 
 // 同步跟異步
 
@@ -200,10 +207,10 @@ function watchfile(){
 }
 
 // exports.watch = series(parallel(sassstyle, includeHTML , miniJs ,mvimages), watchfile) 
-exports.watch = series(parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp), watchfile)
+exports.watch = series(parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp, mvAioSDK), watchfile)
 
 
 
-exports.default =  parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp)
+exports.default =  parallel(mvallcss, includeHTML, mvjavascript, mvimages, mvallmovies, mvallphp, mvAioSDK)
 
 

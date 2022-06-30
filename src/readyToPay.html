@@ -43,12 +43,11 @@
             <!-- 訂購流程結束 -->
             <h3>3.結帳</h3>
             <!-- 訂單明細開始 -->
-            <div class="bigList">
-                <div class="ListTitle">訂單明細</div>
-                <ul class="ListDate">
-                    <li>自由行</li>
-                    <li>Check In：<h6>2022/07/16</h6></li>
-                    <li>Check Out：<h6>2022/07/18</h6></li>
+            <div class="readyToPayBigList">
+                <div class="readyToPayListTitle">訂單明細</div>
+                <ul class="readyToPayListDate">
+                    <li>Check In：<h6>{{startDay}}</h6></li>
+                    <li>Check Out：<h6>{{endDay}}</h6></li>
                 </ul>
                 <table>
                     <thead>
@@ -57,58 +56,48 @@
                         <th>食</th>
                         <th>宿</th>
                     </thead>
-                    <tbody>
+                    <tbody v-for="(date,index) in dateArray">
                         <tr>
-                            <td>07/16(Sat)</td>
-                            <td class="tripList">
+                            <td class="tripTitle">{{date}}</td>
+                            <td class="readyToPaytripList" >
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li class="tripMorningName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="tripMorningPrice">{{newPrice}}</li>
                                 </ul>
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li class="tripNoonName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="tripNoonPrice">{{newPrice}}</li>
                                 </ul>
                                 <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                            <td class="FoodList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
+                                    <li class="tripEveningName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="tripEveningPrice">{{newPrice}}</li>
                                 </ul>
                             </td>
-                            <td class="StayList">
+                            <td class="readyToPayFoodList" >
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li class="FoodMorningName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="FoodMorningPrice">{{newPrice}}</li>
                                 </ul>
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li class="FoodNoonName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="FoodNoonPrice">{{newPrice}}</li>
                                 </ul>
                                 <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
+                                    <li class="FoodEveningName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="FoodEveningPrice">{{newPrice}}</li>
+                                </ul>
+                            </td>
+                            <td class="readyToPayStayList" >
+                                <ul>
+                                    <li class="StayChooseName"></li>
+                                    <li>{{pepoleNums}}<i class="fa-solid fa-user"></i></li>
+                                    <li class="StayChoosePrice">{{newPrice}}</li>
                                 </ul>
                             </td>
                         </tr>
@@ -116,7 +105,7 @@
                     <tbody>
                         <tr>
                             <td>07/16(Sat)</td>
-                            <td class="tripList">
+                            <td class="readyToPaytripList">
                                 <ul>
                                     <li>潛水(日)</li>
                                     <li>6<i class="fa-solid fa-user"></i></li>
@@ -133,7 +122,7 @@
                                     <li>$0</li>
                                 </ul>
                             </td>
-                            <td class="FoodList">
+                            <td class="readyToPayFoodList">
                                 <ul>
                                     <li>潛水(日)</li>
                                     <li>6<i class="fa-solid fa-user"></i></li>
@@ -150,7 +139,7 @@
                                     <li>$0</li>
                                 </ul>
                             </td>
-                            <td class="StayList">
+                            <td class="readyToPayStayList">
                                 <ul>
                                     <li>潛水(日)</li>
                                     <li>6<i class="fa-solid fa-user"></i></li>
@@ -226,21 +215,20 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="totalBlock">
-                    <div class="totalTitle">
+                <div class="readyToPayTotalBlock">
+                    <div class="readyToPayTotalTitle">
                         <span>小計：</span><br>
                         <span>折扣碼：</span><br>
                         <span>折扣金額：</span><br>
                         <span>總金額：</span><br>
                     </div>
-                    <div class="totalPrice">
-                        <span>$32,186</span><br>
-                        <select name="" id="">
-                            <option value="">Long_bro_only_9453</option>
-                            <option value="">NewMember</option>
+                    <div class="readyToPayTotalPrice">
+                        <span id="totalPrice" >{{minorTotalPrice}}</span><br>
+                        <select name="" id="discountNums" @change="getNewDiscountPrice;total()">
+                            <option  v-for="(discountCode,index) in this.discount_list" :value="index">{{discountCode[0]}}</option>
                         </select><br>
-                        <span id="couponPrice">-$16,093</span><br>
-                        <span>$16,093</span><br>
+                        <span id="couponPrice">{{Discount}}</span><br>
+                        <span>{{totalPrice}}</span><br> 
                     </div>
                 </div>
             </div>
