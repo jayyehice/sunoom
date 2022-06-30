@@ -204,9 +204,61 @@ window.addEventListener("load", e => {
         destroyed() { },
     })
     
+    //時鐘 資料串接
+    let v_clock = new Vue({
+        el: '#banner',
+        data: {     // 變數放這裡！               
+            land_tour_list: [],
+            clock1:[],
+            clock2:[],
+            clock3:[],
+            clock4:[],
+            clock5:[],
+        },
+        methods: {
+            testChange(){
+                // console.log(this.clock1[4]);
+                if( this.clock1[4] == 1){
+                    this.clock1=this.land_tour_list[6];
+                    this.clock2=this.land_tour_list[7];
+                    this.clock3=this.land_tour_list[8];
+                    this.clock4=this.land_tour_list[9];
+                    this.clock5=this.land_tour_list[10];
+                }else{
+                    this.clock1=this.land_tour_list[0];
+                    this.clock2=this.land_tour_list[1];
+                    this.clock3=this.land_tour_list[2];
+                    this.clock4=this.land_tour_list[3];
+                    this.clock5=this.land_tour_list[4];
+                }
+            }
+        },
+        computed: {},
+        watch: {},
+        beforeCreate() {
+            const url = './php/land_tour.php';
+            fetch(url)
+                .then(response => response.json())
+                .then(text => {
+                    this.land_tour_list = text;
+                    this.clock1=this.land_tour_list[0];
+                    this.clock2=this.land_tour_list[1];
+                    this.clock3=this.land_tour_list[2];
+                    this.clock4=this.land_tour_list[3];
+                    this.clock5=this.land_tour_list[4];
+                });
+        },
+        created() {
+        },
+        mounted() {
+        },
+        updated() {          
+        },   
+    })
 
     $('#changeButton').click(function () {
         v_landactivity.changeText();
+        v_clock.testChange();
         // console('test');
         // alert('ttt');
     });

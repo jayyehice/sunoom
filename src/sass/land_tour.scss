@@ -1,12 +1,14 @@
 @import 'base/var';
-#changeButton{
+
+#changeButton {
     position: fixed;
     z-index: 100;
     top: 200px;
     right: 200px;
     cursor: pointer;
 }
-.land_tour{
+
+.land_tour {
     background-color: $sun_color;
     color: $moon_color;
     letter-spacing: 3px;
@@ -19,111 +21,263 @@
         transform: translateX(-50%);
     }
 
-    main{
-    
-        #top_banner{
+    main {
+
+        .banner {
             width: 100%;
             height: 100vh;
             background-image: url(../img/land_tour/sun/top_banner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
+            display: flex;
+            justify-content: center;
 
-            .mask{
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, .3);
-                position: absolute;
-                top: 0px;
-                left: 0px;
-            }
-
-            .progress-ring, .progress-bg {
-                position: absolute;
-                top: 60%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                // border: 1px solid #fff;
-            }
-    
-            .progress-ring_circle {
-                transition: 0.35s stroke-dashoffset;
-                transform-origin: 50% 50%;
-                // transform: rotate(-90deg);
-                
-                
-            }
-
-            .progress-bg{
-                .progress-ring_circle {
-                    color: $sun_color;
-                }
-
-            }
-
-            .progress-ring{
-                .progress-ring_circle {
-                    color: $moon_color;
-                }
-
-            }
-            
-            ul{
-                width: 100%;
-                height: 100%;
+            // 時鐘
+            .progress-ring-wrapper {
                 position: relative;
-                li{
-                    display: flex;
+                top: 45px;
+                display: flex;
+                // justify-content:center;
+                // align-items:center;
+                height: 100%;
+
+                // svg
+                .progress-ring {
+                    z-index: 2;
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+
+                    // 大圈圈
+                    .progress-ring__background-circle {
+                        stroke: white;
+                        stroke-width: 1.5;
+                        fill: transparent;
+                    }
+
+                    // 流動線圈
+                    .progress-ring__circle {
+                        stroke: #d5a655;
+                        stroke-width: 4;
+                        position: absolute;
+                        fill: transparent;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    // 時鐘上的五個點
+                    .progress-ring__point {}
+
+                    /* 外框活動文字 */
+                    .time-label {
+                        fill: white;
+                        font-weight: bold;
+                        text-shadow: gray 0.5px 0.5px 0.5px;
+                        font-size: 16px;
+                    }
+
+                }
+            }
+
+            // 時鐘中心文字
+            .schedule-wrapper {
+                z-index: 2;
+                position: absolute;
+                top: calc(50% + 45px);
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 400px;
+                height: 100%;
+                max-height: 500px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+
+                // 中心文字共用
+                .event-item {
+                    position: relative;
+                    /* flex-flow:column wrap; */
+                    justify-content: center;
                     align-items: center;
-                    color: $sun_color;
-                    position: absolute;
-                    &::before{
-                        content: "";
-                        display: block;
-                        width: 16px;
-                        height: 16px;
-                        background-color: $sun_color;
-                        border-radius: 50%;
+                    width: 100%;
+                    max-width: 400px;
+                    line-height: 1;
+                    opacity: 1;
 
-                        margin-right: 20px;
+                    /* THE OCEAN */
+                    .ocean {
+                        color: white;
+                        position: absolute;
+                        /* top: -65px; */
+                        top: 135px;
+                        width: 100%;
+                        font-size: 32px;
+                        letter-spacing: 3px;
+                        font-weight: lighter;
+                        text-transform: uppercase;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                    }
 
+                    .ocean1 {
+                        top: -65px;
+                    }
+
+                    /* 中文名 */
+                    .chName {
+                        position: relative;
+                        line-height: 1;
+                        font-size: 80px;
+                        letter-spacing: 3px;
+                        text-align: center;
+                        text-shadow: gray 5px 5px 5px;
+                        /* color:#d5a655; */
+                        color: white;
+                        opacity: 1;
+                        top: 200px;
+                        /* visibility: inherit; */
+                        animation-fill-mode: backwards;
+                    }
+
+                    .chName1 {
+                        top: 0px;
+                    }
+
+                    /* 英文名 */
+                    .enName {
+                        color: white;
+                        position: absolute;
+                        /* top: 100px; */
+                        top: 300px;
+                        width: 100%;
+                        font-size: 32px;
+                        letter-spacing: 3px;
+                        font-weight: lighter;
+                        text-transform: uppercase;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                    }
+
+                    .enName1 {
+                        top: 100px;
+                    }
+
+                    /* 探索活動 */
+                    .discover {
+                        position: absolute;
+                        /* top:150px; */
+                        top: 350px;
+                        font-size: 16px;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        width: 100%;
+                        color: white;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        -webkit-transition: all .3s;
+                        transition: all .3s
+                    }
+
+                    .discover1 {
+                        top: 150px;
+                    }
+
+                    .discover:hover {
+                        opacity: 0.5 !important
                     }
                 }
 
-                
+                .event-item2 {
+                    display: none;
+                }
+
+                .event-item3 {
+                    display: none;
+                }
+
+                .event-item4 {
+                    display: none;
+                }
+
+                .event-item5 {
+                    display: none;
+                }
 
 
             }
+
+            /* 轉場黑幕 */
+            .blackCover {
+                position: absolute;
+                background-color: #000;
+                opacity: 0.3;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
         }
 
-        .breadcrumbs{
-            .wrapper{
+        // 背景圖輪播用
+        .bg2{
+            background-image: url("../img/land_tour/sun/top_banner2.jpg");
+        }
+        .bg3{
+            background-image: url("../img/land_tour/sun/top_banner3.jpg");
+        }
+        .bg4{
+            background-image: url("../img/land_tour/sun/top_banner4.jpg");
+        }
+        .bg5{
+            background-image: url("../img/land_tour/sun/top_banner5.jpg");
+        }
+
+        .breadcrumbs {
+            .wrapper {
                 width: 1070px;
                 margin: 0 auto;
+
                 // border: $show_border;
-                ul{
-    
+                ul {
+
                     height: 140px;
                     box-sizing: border-box;
                     // border: $show_border;
                     display: flex;
+
                     // align-items: flex-start;
-                    li{
+                    li {
                         margin-right: 10px;
                         margin-top: 15px;
-                        a{
+
+                        a {
                             text-decoration: none;
 
-                            &:link{
+                            &:link {
                                 color: $moon_color;
                             }
 
                             &:visited {
                                 color: $moon_color;
                             }
+
                             &:hover {
                                 color: $moon_color;
                             }
+
                             &:active {
                                 color: $moon_color;
                             }
@@ -132,36 +286,36 @@
                 }
             }
         }
-    
-        .slogan_banner{
+
+        .slogan_banner {
             box-sizing: border-box;
             // border: $show_border;
             padding-top: 310px;
             height: 585px;
             position: relative;
-    
-            img{
+
+            img {
                 display: block;
                 position: absolute;
                 z-index: -1;
             }
-    
-            .leaf_left{
+
+            .leaf_left {
                 top: 0px;
                 left: 0px;
             }
-    
-            .leaf_right{
+
+            .leaf_right {
                 top: 0px;
                 right: 0px;
             }
-    
-            .deer{
+
+            .deer {
                 bottom: 0px;
                 left: -300px;
             }
-    
-            .slogan{
+
+            .slogan {
                 box-sizing: border-box;
                 // border: $show_border;
                 text-align: center;
@@ -169,28 +323,29 @@
                 // height: 90px;
                 // margin-top: 310px;
                 margin-left: 60%;
-    
-                h3:first-child{
+
+                h3:first-child {
                     font-size: 128rem;
                     text-align: right;
                     // border: $show_border;
                     line-height: 0.3;
                     margin-right: 50px;
                 }
-    
-                .slogan_h5{
+
+                .slogan_h5 {
                     // border: $show_border;
                     margin-top: 40px;
                     display: flex;
                     justify-content: center;
-                    h5{
+
+                    h5 {
                         margin-left: 10px;
                     }
                 }
             }
         }
-    
-        .ecotourism{
+
+        .ecotourism {
             width: 1200px;
             height: 540px;
             margin: $margin_center;
@@ -198,12 +353,12 @@
             box-sizing: border-box;
             margin-top: 100px;
             position: relative;
-    
-            ul{
+
+            ul {
                 display: flex;
                 width: 100%;
-    
-                li{
+
+                li {
                     flex-basis: 0;
                     flex-grow: 1;
                     overflow: hidden;
@@ -213,270 +368,282 @@
                     background-repeat: no-repeat;
                     height: 540px;
 
-                    &:hover{
+                    &:hover {
                         flex-grow: 2;
                         // transition: all .5;
                     }
 
-                    
-    
-                    img{
+
+
+                    img {
                         // width: 100%;
                         height: 100%;
                     }
                 }
 
-                
 
-                
+
+
             }
-    
-            .intro_word{
+
+            .intro_word {
                 width: 300px;
                 height: 250px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: rgba(245,240,221, .7);
+                background-color: rgba(245, 240, 221, .7);
                 text-align: center;
                 padding: 60px 45px 0px;
                 box-sizing: border-box;
-    
-                h3{
+
+                h3 {
                     margin-bottom: 40px;
                 }
-    
-                
+
+
             }
         }
-    
-        .activity_intro{
-    
-            ul{
+
+        .activity_intro {
+
+            ul {
                 padding-top: 185px;
                 // margin-top: 185px;
                 overflow: hidden;
-                li{
+
+                li {
                     text-align: center;
                     margin-bottom: 130px;
                     position: relative;
+
                     // overflow: hidden;
-                    .wrapper{
+                    .wrapper {
                         width: 1200px;
                         margin: $margin_center;
                         // border: $show_border;
                         box-sizing: border-box;
-    
-                        &>div{
+
+                        &>div {
                             width: 600px;
                             // margin-left: 50px;
-                            
-                            h3{
+
+                            h3 {
                                 margin-top: 20px;
                             }
-    
-                            &>p{
-                                
+
+                            &>p {
+
                                 width: 430px;
                                 margin: $margin_center;
                                 margin-top: 20px;
                                 // border: $show_border;
                                 box-sizing: border-box;
                             }
-    
-                            .comment{
+
+                            .comment {
                                 width: 430px;
                                 margin: $margin_center;
                                 margin-top: 15px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-    
+
                                 // border: $show_border;
                                 box-sizing: border-box;
-    
-    
-                                
-                                div.star_block{
+
+
+
+                                div.star_block {
                                     display: inline-block;
                                     margin-right: 13px;
-    
-                                    i{
+
+                                    i {
                                         color: #FFBF44;
                                     }
                                 }
-                                
-    
-                                p:nth-child(2){
+
+
+                                p:nth-child(2) {
                                     margin-right: 25px;
                                 }
-    
-                                &>i{
+
+                                &>i {
                                     margin-right: 7px;
                                 }
                             }
                         }
-    
-                        
+
+
                     }
                 }
-    
-                li:nth-child(1){
-                    .wrapper{
-                        #bird_01{
+
+                li:nth-child(1) {
+                    .wrapper {
+                        #bird_01 {
                             position: absolute;
                             top: 0px;
                             right: -480px;
                         }
-    
-                        #cloud_01{
+
+                        #cloud_01 {
                             position: absolute;
                             top: -210px;
                             left: 0px;
                             z-index: -1;
                         }
-    
-                        #cloud_02{
+
+                        #cloud_02 {
                             position: absolute;
-                            top:230px;
+                            top: 230px;
                             right: 0px;
                             z-index: -1;
                         }
                     }
                 }
-    
-                li:nth-child(2){
-                    .wrapper{
-                        &>div{
+
+                li:nth-child(2) {
+                    .wrapper {
+                        &>div {
                             margin-left: 600px;
                         }
                     }
-    
-                    #butterfly_01{
+
+                    #butterfly_01 {
                         position: absolute;
                         top: 0px;
                         left: -80px;
                     }
-    
-                    #branch_01{
+
+                    #branch_01 {
                         position: absolute;
                         top: 0px;
                         left: -140px;
                     }
                 }
-    
-                li:nth-child(3){
+
+                li:nth-child(3) {
                     margin-bottom: 260px;
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             margin-left: 100px;
                         }
                     }
-                    #branch_02{
+
+                    #branch_02 {
                         position: absolute;
                         top: -90px;
                         right: 0px;
                     }
                 }
-    
-                li:nth-child(4){
+
+                li:nth-child(4) {
                     margin-bottom: 290px;
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             margin-left: 500px;
                         }
                     }
-                    #branch_03{
+
+                    #branch_03 {
                         position: absolute;
                         top: 0px;
                         left: 0px;
                     }
                 }
-    
-                li:nth-child(5){
+
+                li:nth-child(5) {
                     margin-bottom: 250px;
-                    
-                    #branch_04{
+
+                    #branch_04 {
                         position: absolute;
                         top: -60px;
                         right: -100px;
                     }
-    
-                    #branch_05{
+
+                    #branch_05 {
                         position: absolute;
                         top: 160px;
                         right: 0px;
                     }
-    
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             position: relative;
-                            #flower_01{
+
+                            #flower_01 {
                                 position: absolute;
                                 top: -60px;
                                 right: -100px;
                             }
-            
-                            #butter_02{
+
+                            #butter_02 {
                                 position: absolute;
                                 top: -93px;
                                 right: -81px;
                                 // top: -1650px;
                                 // right: -81px;
-                                
+
                             }
-    
+
                         }
                     }
-    
-    
-                    
+
+
+
                 }
-    
-                li:nth-child(6){
+
+                li:nth-child(6) {
                     margin-bottom: 50px;
-                    #branch_06{
+
+                    #branch_06 {
                         position: absolute;
                         top: 0px;
                         left: 0px;
                     }
 
-                    #branch_07, #branch_08{
+                    #branch_07,
+                    #branch_08 {
                         display: none;
                     }
                 }
             }
         }
-    
-        .instagram{
+
+        .instagram {
             margin-bottom: 80px;
-            .wrapper{
+
+            .wrapper {
                 width: 900px;
                 margin: 0 auto;
                 // border: $show_border;
                 // box-sizing: border-box;
-    
-                .title{
+
+                .title {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 15px;
-                    img{
+
+                    img {
                         margin-right: 35px;
                     }
                 }
-    
-                ul{
+
+                ul {
                     width: 100%;
                     // height: 1000px;
                     display: flex;
                     justify-content: space-between;
                     flex-shrink: 0;
                     flex-wrap: wrap;
+
                     // border: $show_border;
                     // box-sizing: border-box;
-                    li{
+                    li {
                         width: 438px;
                         // border: $show_border;
                         // box-sizing: border-box;
@@ -485,11 +652,12 @@
                         flex-wrap: wrap;
                         align-items: center;
                         justify-content: space-between;
-                        img{
+
+                        img {
                             margin-bottom: 20px;
                             opacity: .7;
-    
-                            &:hover{
+
+                            &:hover {
                                 cursor: pointer;
                                 opacity: 1;
                                 transition: all .5s;
@@ -498,15 +666,16 @@
                     }
                 }
             }
-    
-            #ig_pop_up{
+
+            #ig_pop_up {
                 display: none;
                 position: fixed;
                 top: 0;
                 background-color: rgba(0, 0, 0, .4);
                 height: 100vh;
                 width: 100%;
-                #ig_pop_up_content{
+
+                #ig_pop_up_content {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -515,31 +684,33 @@
                     display: flex;
                     // align-items: flex-start;
                     justify-content: center;
-    
-                    #ig_pop_up_left{
+
+                    #ig_pop_up_left {
                         width: 800px;
                         background-color: #000;
-                        img{
+
+                        img {
                             max-width: 100%;
                             display: block;
                             margin: 0 auto;
                             margin-top: 100px;
                         }
-    
-                        p{
+
+                        p {
                             text-align: center;
                             line-height: 100px;
                             color: #fff;
                             // padding-left: 60px;
                             // box-sizing: border-box;
                         }
-                        
+
                     }
-    
-                    #ig_pop_up_right{
+
+                    #ig_pop_up_right {
                         width: 400px;
                         background-color: #fff;
-                        #ig_author{
+
+                        #ig_author {
                             height: 85px;
                             padding: 0 25px;
                             box-sizing: border-box;
@@ -547,39 +718,39 @@
                             align-items: center;
                             justify-content: flex-start;
                             border-bottom: 1px solid #BBB;
-    
-                            #ig_author_img{
+
+                            #ig_author_img {
                                 width: 55px;
                                 border-radius: 50%;
                                 margin-right: 15px;
                             }
-    
+
                         }
-    
-                        #ig_words{
+
+                        #ig_words {
                             height: calc(100% - 85px);
                             padding: 25px;
                         }
                     }
                 }
             }
-    
-    
+
+
         }
     }
 
 }
 
 
-.land_tour_moon{
+.land_tour_moon {
     @import 'base/moonColorSwitch';
 
     background-color: $sun_color;
     color: $moon_color;
 
-    main{
-    
-        #top_banner{
+    main {
+
+        .banner {
             width: 100%;
             height: 100vh;
             background-image: url(../img/land_tour/sun/top_banner.jpg);
@@ -587,7 +758,7 @@
             background-size: cover;
             position: relative;
 
-            .mask{
+            .mask {
                 width: 100%;
                 height: 100%;
                 background-color: rgba(0, 0, 0, .3);
@@ -596,46 +767,49 @@
                 left: 0px;
             }
 
-            .progress-ring, .progress-bg {
+            .progress-ring,
+            .progress-bg {
                 position: absolute;
                 top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 // border: 1px solid #fff;
             }
-    
+
             .progress-ring_circle {
                 transition: 0.35s stroke-dashoffset;
                 transform-origin: 50% 50%;
                 // transform: rotate(-90deg);
-                
-                
+
+
             }
 
-            .progress-bg{
+            .progress-bg {
                 .progress-ring_circle {
                     color: $sun_color;
                 }
 
             }
 
-            .progress-ring{
+            .progress-ring {
                 .progress-ring_circle {
                     color: $moon_color;
                 }
 
             }
-            
-            ul{
+
+            ul {
                 width: 100%;
                 height: 100%;
                 position: relative;
-                li{
+
+                li {
                     display: flex;
                     align-items: center;
                     color: $sun_color;
                     position: absolute;
-                    &::before{
+
+                    &::before {
                         content: "";
                         display: block;
                         width: 16px;
@@ -648,40 +822,45 @@
                     }
                 }
 
-                
+
 
 
             }
         }
 
-        .breadcrumbs{
-            .wrapper{
+        .breadcrumbs {
+            .wrapper {
                 width: 1070px;
                 margin: 0 auto;
+
                 // border: $show_border;
-                ul{
-    
+                ul {
+
                     height: 140px;
                     box-sizing: border-box;
                     // border: $show_border;
                     display: flex;
+
                     // align-items: flex-start;
-                    li{
+                    li {
                         margin-right: 10px;
                         margin-top: 15px;
-                        a{
+
+                        a {
                             text-decoration: none;
 
-                            &:link{
+                            &:link {
                                 color: $moon_color;
                             }
 
                             &:visited {
                                 color: $moon_color;
                             }
+
                             &:hover {
                                 color: $moon_color;
                             }
+
                             &:active {
                                 color: $moon_color;
                             }
@@ -690,36 +869,36 @@
                 }
             }
         }
-    
-        .slogan_banner{
+
+        .slogan_banner {
             box-sizing: border-box;
             // border: $show_border;
             padding-top: 310px;
             height: 585px;
             position: relative;
-    
-            img{
+
+            img {
                 display: block;
                 position: absolute;
                 z-index: -1;
             }
-    
-            .leaf_left{
+
+            .leaf_left {
                 top: 0px;
                 left: 0px;
             }
-    
-            .leaf_right{
+
+            .leaf_right {
                 top: 0px;
                 right: 0px;
             }
-    
-            .deer{
+
+            .deer {
                 bottom: 0px;
                 left: -300px;
             }
-    
-            .slogan{
+
+            .slogan {
                 box-sizing: border-box;
                 // border: $show_border;
                 text-align: center;
@@ -727,28 +906,29 @@
                 // height: 90px;
                 // margin-top: 310px;
                 margin-left: 60%;
-    
-                h3:first-child{
+
+                h3:first-child {
                     font-size: 128rem;
                     text-align: right;
                     // border: $show_border;
                     line-height: 0.3;
                     margin-right: 50px;
                 }
-    
-                .slogan_h5{
+
+                .slogan_h5 {
                     // border: $show_border;
                     margin-top: 40px;
                     display: flex;
                     justify-content: center;
-                    h5{
+
+                    h5 {
                         margin-left: 10px;
                     }
                 }
             }
         }
-    
-        .ecotourism{
+
+        .ecotourism {
             width: 1200px;
             height: 540px;
             margin: $margin_center;
@@ -756,12 +936,12 @@
             box-sizing: border-box;
             margin-top: 100px;
             position: relative;
-    
-            ul{
+
+            ul {
                 display: flex;
                 width: 100%;
-    
-                li{
+
+                li {
                     flex-basis: 0;
                     flex-grow: 1;
                     overflow: hidden;
@@ -771,270 +951,282 @@
                     background-repeat: no-repeat;
                     height: 540px;
 
-                    &:hover{
+                    &:hover {
                         flex-grow: 2;
                         // transition: all .5;
                     }
 
-                    
-    
-                    img{
+
+
+                    img {
                         // width: 100%;
                         height: 100%;
                     }
                 }
 
-                
 
-                
+
+
             }
-    
-            .intro_word{
+
+            .intro_word {
                 width: 300px;
                 height: 250px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: rgba(245,240,221, .7);
+                background-color: rgba(245, 240, 221, .7);
                 text-align: center;
                 padding: 60px 45px 0px;
                 box-sizing: border-box;
-    
-                h3{
+
+                h3 {
                     margin-bottom: 40px;
                 }
-    
-                
+
+
             }
         }
-    
-        .activity_intro{
-    
-            ul{
+
+        .activity_intro {
+
+            ul {
                 padding-top: 185px;
                 // margin-top: 185px;
                 overflow: hidden;
-                li{
+
+                li {
                     text-align: center;
                     margin-bottom: 130px;
                     position: relative;
+
                     // overflow: hidden;
-                    .wrapper{
+                    .wrapper {
                         width: 1200px;
                         margin: $margin_center;
                         // border: $show_border;
                         box-sizing: border-box;
-    
-                        &>div{
+
+                        &>div {
                             width: 600px;
                             // margin-left: 50px;
-                            
-                            h3{
+
+                            h3 {
                                 margin-top: 20px;
                             }
-    
-                            &>p{
-                                
+
+                            &>p {
+
                                 width: 430px;
                                 margin: $margin_center;
                                 margin-top: 20px;
                                 // border: $show_border;
                                 box-sizing: border-box;
                             }
-    
-                            .comment{
+
+                            .comment {
                                 width: 430px;
                                 margin: $margin_center;
                                 margin-top: 15px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-    
+
                                 // border: $show_border;
                                 box-sizing: border-box;
-    
-    
-                                
-                                div.star_block{
+
+
+
+                                div.star_block {
                                     display: inline-block;
                                     margin-right: 13px;
-    
-                                    i{
+
+                                    i {
                                         color: #FFBF44;
                                     }
                                 }
-                                
-    
-                                p:nth-child(2){
+
+
+                                p:nth-child(2) {
                                     margin-right: 25px;
                                 }
-    
-                                &>i{
+
+                                &>i {
                                     margin-right: 7px;
                                 }
                             }
                         }
-    
-                        
+
+
                     }
                 }
-    
-                li:nth-child(1){
-                    .wrapper{
-                        #bird_01{
+
+                li:nth-child(1) {
+                    .wrapper {
+                        #bird_01 {
                             position: absolute;
                             top: 0px;
                             right: -480px;
                         }
-    
-                        #cloud_01{
+
+                        #cloud_01 {
                             position: absolute;
                             top: -210px;
                             left: 0px;
                             z-index: -1;
                         }
-    
-                        #cloud_02{
+
+                        #cloud_02 {
                             position: absolute;
-                            top:230px;
+                            top: 230px;
                             right: 0px;
                             z-index: -1;
                         }
                     }
                 }
-    
-                li:nth-child(2){
-                    .wrapper{
-                        &>div{
+
+                li:nth-child(2) {
+                    .wrapper {
+                        &>div {
                             margin-left: 600px;
                         }
                     }
-    
-                    #butterfly_01{
+
+                    #butterfly_01 {
                         position: absolute;
                         top: 0px;
                         left: -80px;
                     }
-    
-                    #branch_01{
+
+                    #branch_01 {
                         position: absolute;
                         top: 0px;
                         left: -140px;
                     }
                 }
-    
-                li:nth-child(3){
+
+                li:nth-child(3) {
                     margin-bottom: 260px;
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             margin-left: 100px;
                         }
                     }
-                    #branch_02{
+
+                    #branch_02 {
                         position: absolute;
                         top: -90px;
                         right: 0px;
                     }
                 }
-    
-                li:nth-child(4){
+
+                li:nth-child(4) {
                     margin-bottom: 290px;
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             margin-left: 500px;
                         }
                     }
-                    #branch_03{
+
+                    #branch_03 {
                         position: absolute;
                         top: 0px;
                         left: 0px;
                     }
                 }
-    
-                li:nth-child(5){
+
+                li:nth-child(5) {
                     margin-bottom: 250px;
-                    
-                    #branch_04{
+
+                    #branch_04 {
                         position: absolute;
                         top: -60px;
                         right: -100px;
                     }
-    
-                    #branch_05{
+
+                    #branch_05 {
                         position: absolute;
                         top: 160px;
                         right: 0px;
                     }
-    
-                    .wrapper{
-                        &>div{
+
+                    .wrapper {
+                        &>div {
                             position: relative;
-                            #flower_01{
+
+                            #flower_01 {
                                 position: absolute;
                                 top: -60px;
                                 right: -100px;
                             }
-            
-                            #butter_02{
+
+                            #butter_02 {
                                 position: absolute;
                                 top: -93px;
                                 right: -81px;
                                 // top: -1650px;
                                 // right: -81px;
-                                
+
                             }
-    
+
                         }
                     }
-    
-    
-                    
+
+
+
                 }
-    
-                li:nth-child(6){
+
+                li:nth-child(6) {
                     margin-bottom: 50px;
-                    #branch_06{
+
+                    #branch_06 {
                         position: absolute;
                         top: 0px;
                         left: 0px;
                     }
 
-                    #branch_07, #branch_08{
+                    #branch_07,
+                    #branch_08 {
                         display: none;
                     }
                 }
             }
         }
-    
-        .instagram{
+
+        .instagram {
             margin-bottom: 80px;
-            .wrapper{
+
+            .wrapper {
                 width: 900px;
                 margin: 0 auto;
                 // border: $show_border;
                 // box-sizing: border-box;
-    
-                .title{
+
+                .title {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 15px;
-                    img{
+
+                    img {
                         margin-right: 35px;
                     }
                 }
-    
-                ul{
+
+                ul {
                     width: 100%;
                     // height: 1000px;
                     display: flex;
                     justify-content: space-between;
                     flex-shrink: 0;
                     flex-wrap: wrap;
+
                     // border: $show_border;
                     // box-sizing: border-box;
-                    li{
+                    li {
                         width: 438px;
                         // border: $show_border;
                         // box-sizing: border-box;
@@ -1043,11 +1235,12 @@
                         flex-wrap: wrap;
                         align-items: center;
                         justify-content: space-between;
-                        img{
+
+                        img {
                             margin-bottom: 20px;
                             opacity: .7;
-    
-                            &:hover{
+
+                            &:hover {
                                 cursor: pointer;
                                 opacity: 1;
                                 transition: all .5s;
@@ -1056,15 +1249,16 @@
                     }
                 }
             }
-    
-            #ig_pop_up{
+
+            #ig_pop_up {
                 display: none;
                 position: fixed;
                 top: 0;
                 background-color: rgba(0, 0, 0, .4);
                 height: 100vh;
                 width: 100%;
-                #ig_pop_up_content{
+
+                #ig_pop_up_content {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -1073,31 +1267,33 @@
                     display: flex;
                     // align-items: flex-start;
                     justify-content: center;
-    
-                    #ig_pop_up_left{
+
+                    #ig_pop_up_left {
                         width: 800px;
                         background-color: #000;
-                        img{
+
+                        img {
                             max-width: 100%;
                             display: block;
                             margin: 0 auto;
                             margin-top: 100px;
                         }
-    
-                        p{
+
+                        p {
                             text-align: center;
                             line-height: 100px;
                             color: #fff;
                             // padding-left: 60px;
                             // box-sizing: border-box;
                         }
-                        
+
                     }
-    
-                    #ig_pop_up_right{
+
+                    #ig_pop_up_right {
                         width: 400px;
                         background-color: #fff;
-                        #ig_author{
+
+                        #ig_author {
                             height: 85px;
                             padding: 0 25px;
                             box-sizing: border-box;
@@ -1105,76 +1301,82 @@
                             align-items: center;
                             justify-content: flex-start;
                             border-bottom: 1px solid #BBB;
-    
-                            #ig_author_img{
+
+                            #ig_author_img {
                                 width: 55px;
                                 border-radius: 50%;
                                 margin-right: 15px;
                             }
-    
+
                         }
-    
-                        #ig_words{
+
+                        #ig_words {
                             height: calc(100% - 85px);
                             padding: 25px;
                         }
                     }
                 }
             }
-    
-    
+
+
         }
     }
 
 }
 
-@media screen and (max-width: 575.98px){
-    .land_tour{
-        main{
-            .breadcrumbs{
-                .wrapper{
+@media screen and (max-width: 575.98px) {
+    .land_tour {
+        main {
+            .breadcrumbs {
+                .wrapper {
                     width: 100%;
                 }
             }
-            .slogan_banner{
+
+            .slogan_banner {
                 padding-top: 170px;
                 height: 335px;
-                .leaf_left{
+
+                .leaf_left {
                     width: 25%;
                 }
 
-                .leaf_right{
+                .leaf_right {
                     width: 63%;
                 }
 
-                .deer{
+                .deer {
                     width: 63%;
                     left: -10px;
                 }
 
-                .slogan{
+                .slogan {
                     // border: $show_border;
 
                     width: 50%;
-                    
+
                     margin-left: 35%;
-                    h3:first-child{
+
+                    h3:first-child {
                         display: none;
                     }
-                    h3{
+
+                    h3 {
                         // border: $show_border;
                     }
-                    .slogan_h5{
+
+                    .slogan_h5 {
                         // border: $show_border;
                         display: block;
                         margin-top: 30px;
                         text-align: center;
-                        h5{
+
+                        h5 {
                             // border: $show_border;
                             margin-left: 0px;
                         }
 
-                        h5:first-child{
+                        h5:first-child {
                             margin-bottom: 30px;
                         }
                     }
@@ -1182,59 +1384,67 @@
 
             }
 
-            .ecotourism{
+            .ecotourism {
                 width: 100%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 margin-top: 50px;
 
-                ul{
+                ul {
                     order: 1;
-                    li{
+
+                    li {
                         height: 259px;
                     }
                 }
 
-                .intro_word{
+                .intro_word {
                     position: static;
                     width: auto;
                     height: auto;
                     top: 0;
                     left: 0;
                     background-color: transparent;
-                    transform: translate(0,0);
+                    transform: translate(0, 0);
                     border: 1px solid $moon_color;
                     padding: 20px 30px;
-                    h3{
+
+                    h3 {
                         margin-bottom: 30px;
                     }
+
                     margin-bottom: 20px;
                 }
 
-                
+
             }
 
-            .activity_intro{
+            .activity_intro {
                 margin-top: 50px;
-                ul{
+
+                ul {
                     padding-top: 0px;
-                    li{
+
+                    li {
                         margin-bottom: 50px;
-                        .wrapper{
+
+                        .wrapper {
                             width: calc(100% - 100px);
-                            &>div{
+
+                            &>div {
                                 width: 65%;
                                 text-align: left;
-                                img{
+
+                                img {
                                     width: 100%;
                                 }
 
-                                &>p{
+                                &>p {
                                     width: 100%;
                                 }
 
-                                .comment{
+                                .comment {
                                     // border: $show_border;
                                     width: 170px;
                                     flex-shrink: 0;
@@ -1244,29 +1454,31 @@
                                     margin-top: 20px;
                                     line-height: 1;
 
-                                    .star_block, p:nth-child(2){
+                                    .star_block,
+                                    p:nth-child(2) {
                                         margin-bottom: 20px;
                                     }
                                 }
                             }
-                            #cloud_01{
+
+                            #cloud_01 {
                                 display: none;
-                                
+
                             }
                         }
                     }
-                    
-                    li:nth-child(1){
-                        .wrapper{
-                            
-                            #bird_01{
+
+                    li:nth-child(1) {
+                        .wrapper {
+
+                            #bird_01 {
                                 width: 150px;
                                 top: 150px;
                                 right: 30px;
-        
+
                             }
 
-                            #cloud_02{
+                            #cloud_02 {
                                 top: 370px;
                                 left: -260px;
                             }
@@ -1274,59 +1486,62 @@
 
                     }
 
-                    li:nth-child(2){
-                        .wrapper{
-                            &>div{
+                    li:nth-child(2) {
+                        .wrapper {
+                            &>div {
                                 margin-left: auto;
                             }
                         }
 
-                        #branch_01{
+                        #branch_01 {
                             width: 230px;
                             left: -86px;
                             top: 145px;
                         }
 
-                        #butterfly_01{
+                        #butterfly_01 {
                             width: 50px;
                             top: 177px;
                             left: 88px;
                         }
                     }
 
-                    li:nth-child(3){
+                    li:nth-child(3) {
                         margin-bottom: 50px;
-                        #branch_02{
+
+                        #branch_02 {
                             width: 150px;
                             top: 40px;
                         }
                     }
 
-                    li:nth-child(4){
+                    li:nth-child(4) {
                         margin-bottom: 50px;
-                        .wrapper{
-                            &>div{
+
+                        .wrapper {
+                            &>div {
                                 margin-left: auto;
                             }
                         }
 
-                        #branch_03{
+                        #branch_03 {
                             width: 150px;
                             top: 80px;
                         }
                     }
 
-                    li:nth-child(5){
+                    li:nth-child(5) {
                         margin-bottom: 200px;
-                        .wrapper{
-                            &>div{
-                                #butter_02{
+
+                        .wrapper {
+                            &>div {
+                                #butter_02 {
                                     width: 50px;
                                     top: 130px;
                                     right: -50px;
                                 }
 
-                                #flower_01{
+                                #flower_01 {
                                     width: 100px;
                                     top: 120px;
                                     right: -50px;
@@ -1334,29 +1549,29 @@
                             }
                         }
 
-                        #branch_04{
+                        #branch_04 {
                             width: 150px;
                             top: -40px;
                             right: -13px;
                         }
 
-                        #branch_05{
+                        #branch_05 {
                             width: 150px;
                             top: -8px;
                         }
                     }
 
-                    li:nth-child(6){
-                        #bear_01{
+                    li:nth-child(6) {
+                        #bear_01 {
                             width: 270px;
                         }
 
-                        #branch_06{
+                        #branch_06 {
                             width: 150px;
                             top: -80px;
                         }
 
-                        #branch_07{
+                        #branch_07 {
                             display: block;
                             position: absolute;
                             width: 150px;
@@ -1364,7 +1579,7 @@
                             right: -7px;
                         }
 
-                        #branch_08{
+                        #branch_08 {
                             display: block;
                             position: absolute;
                             width: 150px;
@@ -1376,74 +1591,83 @@
                 }
             }
 
-            .instagram{
-                .wrapper{
+            .instagram {
+                .wrapper {
                     width: calc(100% - 100px);
-                    .title{
-                        img{
+
+                    .title {
+                        img {
                             width: 36px;
                             margin-right: 13px;
                         }
-                        h3{
+
+                        h3 {
                             font-size: 24px;
                         }
                     }
 
-                    ul{
-                        li{
+                    ul {
+                        li {
                             width: 49%;
-                            img{
+
+                            img {
                                 margin-bottom: 10px;
                                 width: 100%;
                             }
                         }
 
-                        li:nth-child(1), li:nth-child(3){
-                            img:nth-child(2), img:nth-child(3){
+                        li:nth-child(1),
+                        li:nth-child(3) {
+
+                            img:nth-child(2),
+                            img:nth-child(3) {
                                 width: 48%;
                             }
                         }
 
-                        li:nth-child(2), li:nth-child(4){
-                            img:nth-child(2), img:nth-child(1){
+                        li:nth-child(2),
+                        li:nth-child(4) {
+
+                            img:nth-child(2),
+                            img:nth-child(1) {
                                 width: 48%;
                             }
                         }
                     }
                 }
 
-                #ig_pop_up{
+                #ig_pop_up {
                     // display: block;
 
-                    #ig_pop_up_content{
+                    #ig_pop_up_content {
                         flex-direction: column;
 
                         width: calc(100% - 100px);
 
-                        #ig_pop_up_left{
+                        #ig_pop_up_left {
                             width: 100%;
 
-                            img{
+                            img {
                                 max-width: calc(100% - 40px);
                                 margin-top: 20px;
                             }
 
-                            p{
+                            p {
                                 line-height: 40px;
                             }
                         }
 
-                        #ig_pop_up_right{
+                        #ig_pop_up_right {
                             width: 100%;
 
-                            #ig_author{
-                                #ig_author_img{
+                            #ig_author {
+                                #ig_author_img {
                                     width: 40px;
                                 }
                             }
                         }
 
-                        
+
                     }
                 }
 
@@ -1452,52 +1676,58 @@
         }
     }
 
-    .land_tour_moon{
-        main{
-            .breadcrumbs{
-                .wrapper{
+    .land_tour_moon {
+        main {
+            .breadcrumbs {
+                .wrapper {
                     width: 100%;
                 }
             }
-            .slogan_banner{
+
+            .slogan_banner {
                 padding-top: 170px;
                 height: 335px;
-                .leaf_left{
+
+                .leaf_left {
                     width: 25%;
                 }
 
-                .leaf_right{
+                .leaf_right {
                     width: 63%;
                 }
 
-                .deer{
+                .deer {
                     width: 63%;
                     left: -10px;
                 }
 
-                .slogan{
+                .slogan {
                     // border: $show_border;
 
                     width: 50%;
-                    
+
                     margin-left: 35%;
-                    h3:first-child{
+
+                    h3:first-child {
                         display: none;
                     }
-                    h3{
+
+                    h3 {
                         // border: $show_border;
                     }
-                    .slogan_h5{
+
+                    .slogan_h5 {
                         // border: $show_border;
                         display: block;
                         margin-top: 30px;
                         text-align: center;
-                        h5{
+
+                        h5 {
                             // border: $show_border;
                             margin-left: 0px;
                         }
 
-                        h5:first-child{
+                        h5:first-child {
                             margin-bottom: 30px;
                         }
                     }
@@ -1505,59 +1735,67 @@
 
             }
 
-            .ecotourism{
+            .ecotourism {
                 width: 100%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 margin-top: 50px;
 
-                ul{
+                ul {
                     order: 1;
-                    li{
+
+                    li {
                         height: 259px;
                     }
                 }
 
-                .intro_word{
+                .intro_word {
                     position: static;
                     width: auto;
                     height: auto;
                     top: 0;
                     left: 0;
                     background-color: transparent;
-                    transform: translate(0,0);
+                    transform: translate(0, 0);
                     border: 1px solid $moon_color;
                     padding: 20px 30px;
-                    h3{
+
+                    h3 {
                         margin-bottom: 30px;
                     }
+
                     margin-bottom: 20px;
                 }
 
-                
+
             }
 
-            .activity_intro{
+            .activity_intro {
                 margin-top: 50px;
-                ul{
+
+                ul {
                     padding-top: 0px;
-                    li{
+
+                    li {
                         margin-bottom: 50px;
-                        .wrapper{
+
+                        .wrapper {
                             width: calc(100% - 100px);
-                            &>div{
+
+                            &>div {
                                 width: 65%;
                                 text-align: left;
-                                img{
+
+                                img {
                                     width: 100%;
                                 }
 
-                                &>p{
+                                &>p {
                                     width: 100%;
                                 }
 
-                                .comment{
+                                .comment {
                                     // border: $show_border;
                                     width: 170px;
                                     flex-shrink: 0;
@@ -1567,29 +1805,31 @@
                                     margin-top: 20px;
                                     line-height: 1;
 
-                                    .star_block, p:nth-child(2){
+                                    .star_block,
+                                    p:nth-child(2) {
                                         margin-bottom: 20px;
                                     }
                                 }
                             }
-                            #cloud_01{
+
+                            #cloud_01 {
                                 display: none;
-                                
+
                             }
                         }
                     }
-                    
-                    li:nth-child(1){
-                        .wrapper{
-                            
-                            #bird_01{
+
+                    li:nth-child(1) {
+                        .wrapper {
+
+                            #bird_01 {
                                 width: 150px;
                                 top: 150px;
                                 right: 30px;
-        
+
                             }
 
-                            #cloud_02{
+                            #cloud_02 {
                                 top: 370px;
                                 left: -260px;
                             }
@@ -1597,59 +1837,62 @@
 
                     }
 
-                    li:nth-child(2){
-                        .wrapper{
-                            &>div{
+                    li:nth-child(2) {
+                        .wrapper {
+                            &>div {
                                 margin-left: auto;
                             }
                         }
 
-                        #branch_01{
+                        #branch_01 {
                             width: 230px;
                             left: -86px;
                             top: 145px;
                         }
 
-                        #butterfly_01{
+                        #butterfly_01 {
                             width: 50px;
                             top: 177px;
                             left: 88px;
                         }
                     }
 
-                    li:nth-child(3){
+                    li:nth-child(3) {
                         margin-bottom: 50px;
-                        #branch_02{
+
+                        #branch_02 {
                             width: 150px;
                             top: 40px;
                         }
                     }
 
-                    li:nth-child(4){
+                    li:nth-child(4) {
                         margin-bottom: 50px;
-                        .wrapper{
-                            &>div{
+
+                        .wrapper {
+                            &>div {
                                 margin-left: auto;
                             }
                         }
 
-                        #branch_03{
+                        #branch_03 {
                             width: 150px;
                             top: 80px;
                         }
                     }
 
-                    li:nth-child(5){
+                    li:nth-child(5) {
                         margin-bottom: 200px;
-                        .wrapper{
-                            &>div{
-                                #butter_02{
+
+                        .wrapper {
+                            &>div {
+                                #butter_02 {
                                     width: 50px;
                                     top: 130px;
                                     right: -50px;
                                 }
 
-                                #flower_01{
+                                #flower_01 {
                                     width: 100px;
                                     top: 120px;
                                     right: -50px;
@@ -1657,29 +1900,29 @@
                             }
                         }
 
-                        #branch_04{
+                        #branch_04 {
                             width: 150px;
                             top: -40px;
                             right: -13px;
                         }
 
-                        #branch_05{
+                        #branch_05 {
                             width: 150px;
                             top: -8px;
                         }
                     }
 
-                    li:nth-child(6){
-                        #bear_01{
+                    li:nth-child(6) {
+                        #bear_01 {
                             width: 270px;
                         }
 
-                        #branch_06{
+                        #branch_06 {
                             width: 150px;
                             top: -80px;
                         }
 
-                        #branch_07{
+                        #branch_07 {
                             display: block;
                             position: absolute;
                             width: 150px;
@@ -1687,7 +1930,7 @@
                             right: -7px;
                         }
 
-                        #branch_08{
+                        #branch_08 {
                             display: block;
                             position: absolute;
                             width: 150px;
@@ -1699,74 +1942,83 @@
                 }
             }
 
-            .instagram{
-                .wrapper{
+            .instagram {
+                .wrapper {
                     width: calc(100% - 100px);
-                    .title{
-                        img{
+
+                    .title {
+                        img {
                             width: 36px;
                             margin-right: 13px;
                         }
-                        h3{
+
+                        h3 {
                             font-size: 24px;
                         }
                     }
 
-                    ul{
-                        li{
+                    ul {
+                        li {
                             width: 49%;
-                            img{
+
+                            img {
                                 margin-bottom: 10px;
                                 width: 100%;
                             }
                         }
 
-                        li:nth-child(1), li:nth-child(3){
-                            img:nth-child(2), img:nth-child(3){
+                        li:nth-child(1),
+                        li:nth-child(3) {
+
+                            img:nth-child(2),
+                            img:nth-child(3) {
                                 width: 48%;
                             }
                         }
 
-                        li:nth-child(2), li:nth-child(4){
-                            img:nth-child(2), img:nth-child(1){
+                        li:nth-child(2),
+                        li:nth-child(4) {
+
+                            img:nth-child(2),
+                            img:nth-child(1) {
                                 width: 48%;
                             }
                         }
                     }
                 }
 
-                #ig_pop_up{
+                #ig_pop_up {
                     // display: block;
 
-                    #ig_pop_up_content{
+                    #ig_pop_up_content {
                         flex-direction: column;
 
                         width: calc(100% - 100px);
 
-                        #ig_pop_up_left{
+                        #ig_pop_up_left {
                             width: 100%;
 
-                            img{
+                            img {
                                 max-width: calc(100% - 40px);
                                 margin-top: 20px;
                             }
 
-                            p{
+                            p {
                                 line-height: 40px;
                             }
                         }
 
-                        #ig_pop_up_right{
+                        #ig_pop_up_right {
                             width: 100%;
 
-                            #ig_author{
-                                #ig_author_img{
+                            #ig_author {
+                                #ig_author_img {
                                     width: 40px;
                                 }
                             }
                         }
 
-                        
+
                     }
                 }
 
