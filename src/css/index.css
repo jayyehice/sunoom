@@ -61,11 +61,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-.index main .parallax #text {
+.index main .parallax #textSunoom {
   position: absolute;
+  z-index: 2;
   font-size: 5vw;
   text-align: center;
+  top: 10%;
 }
 .index main .parallax .muntain01 {
   width: 100%;
@@ -168,7 +171,7 @@
 }
 .index main .category .wrapper .FoodSea .foodSeaText .draw01 {
   background-color: #0C1244;
-  width: 0%;
+  width: 65%;
   height: 5px;
   position: absolute;
   top: 0;
@@ -429,8 +432,13 @@
   width: 936px;
   margin: 0 auto;
 }
+.index main .instagram .wrapper .instagramPhoto li img {
+  opacity: 0.7;
+}
 .index main .instagram .wrapper .instagramPhoto li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .index main .instagram #ig_pop_up {
   display: none;
@@ -557,13 +565,30 @@
   background-size: cover;
   height: 700px;
   position: relative;
+  overflow: hidden;
 }
 .index_moon main .parallax h3 {
   text-align: center;
 }
+.index_moon main .parallax #textSunoom {
+  position: absolute;
+  z-index: 2;
+  font-size: 5vw;
+  text-align: center;
+  top: 10%;
+}
 .index_moon main .parallax .muntain01 {
   width: 100%;
   top: 0;
+}
+.index_moon main .parallax .muntain02 {
+  top: 0;
+}
+.index_moon main .parallax .tree01 {
+  top: 0;
+}
+.index_moon main .parallax .sun {
+  right: 0;
 }
 .index_moon main .news {
   display: flex;
@@ -883,8 +908,13 @@
   width: 936px;
   margin: 0 auto;
 }
+.index_moon main .instagram .wrapper .instagramPhoto li img {
+  opacity: 0.7;
+}
 .index_moon main .instagram .wrapper .instagramPhoto li img:hover {
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
 }
 .index_moon main .instagram #ig_pop_up {
   display: none;
@@ -1007,6 +1037,7 @@
   }
   .index main .parallax {
     display: none;
+    overflow: hidden;
   }
   .index main .news {
     display: block;

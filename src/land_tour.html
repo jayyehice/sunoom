@@ -9,6 +9,7 @@
     <script src="./js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/land_tour.css">
@@ -84,7 +85,7 @@
 
             </div>
         </div>
-
+        <button id="changeButton">臨時測試</button>
         <section class="slogan_banner">
             <img class="leaf_left" src="./img/land_tour/leaf_left.png" alt="">
             <img class="leaf_right" src="./img/land_tour/leaf_right.png" alt="">
@@ -128,11 +129,11 @@
             <ul>
                 <li>
                     
-                    <div class="wrapper" v-if="land_tour_list[0]">
+                    <div class="wrapper" v-if="activity1">
                         <div>
                             <img src="./img/land_tour/activity_mountain_climbing.jpg" alt="">
-                            <h3  >{{land_tour_list[0][1]}}</h3>
-                            <p>{{land_tour_list[0][2]}}</p>
+                            <h3>{{activity1[1]}}</h3>
+                            <p>{{activity1[2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -160,11 +161,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper" v-if="land_tour_list[1]">
+                    <div class="wrapper" v-if="activity2">
                         <div>
                             <img src="./img/land_tour/activity_rafting.jpg" alt="">
-                            <h3>{{land_tour_list[1][1]}}</h3>
-                            <p>{{land_tour_list[1][2]}}</p>
+                            <h3>{{activity2[1]}}</h3>
+                            <p>{{activity2[2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -189,11 +190,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper" v-if="land_tour_list[2]">
+                    <div class="wrapper" v-if="activity3">
                         <div>
                             <img src="./img/land_tour/activity_beach_chariot.jpg" alt="">
-                            <h3>{{land_tour_list[2][1]}}</h3>
-                            <p>{{land_tour_list[2][2]}}</p>
+                            <h3>{{activity3[1]}}</h3>
+                            <p>{{activity3[2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -212,11 +213,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper" v-if="land_tour_list[3]">
+                    <div class="wrapper" v-if="activity4">
                         <div>
                             <img src="./img/land_tour/activity_horse_riding.jpg" alt="">
-                            <h3>{{land_tour_list[3][1]}}</h3>
-                            <p>{{land_tour_list[3][2]}}</p>
+                            <h3>{{activity4[1]}}</h3>
+                            <p>{{activity4[2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
@@ -235,11 +236,11 @@
                 </li>
 
                 <li>
-                    <div class="wrapper" v-if="land_tour_list[4]">
+                    <div class="wrapper" v-if="activity5">
                         <div>
                             <img src="./img/land_tour/activity_stonehenge.jpg" alt="">
-                            <h3>{{land_tour_list[4][1]}}</h3>
-                            <p>{{land_tour_list[4][2]}}</p>
+                            <h3>{{activity5[1]}}</h3>
+                            <p>{{activity5[2]}}</p>
                             <div class="comment">
                                 <div class="star_block">
                                     <i class="fa-solid fa-star"></i>
