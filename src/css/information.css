@@ -542,9 +542,25 @@
   flex-basis: 0;
   flex-grow: 1;
   overflow: hidden;
+  transition: 0.5s;
 }
 .information main .island_intro .wrapper .feature ul li img {
   height: 100%;
+}
+.information main .island_intro .wrapper .feature ul li:first-child {
+  flex-grow: 2;
+}
+.information main .island_intro .wrapper .feature ul li:nth-child(2) {
+  flex-grow: 1;
+}
+.information main .island_intro .wrapper .feature ul li:nth-child(3) {
+  flex-grow: 1;
+}
+.information main .island_intro .wrapper .feature ul li:last-child {
+  flex-grow: 2;
+}
+.information main .island_intro .wrapper .feature ul li:hover {
+  flex-grow: 5;
 }
 .information main .island_intro .wrapper .develope > h4 {
   margin-top: 85px;
