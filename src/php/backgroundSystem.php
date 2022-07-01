@@ -46,9 +46,9 @@
        foreach($tables as $idx => $table){
 
               if($table == 'article'){
-                     $sql = "SELECT * FROM V_article";
+                     $sql = "SELECT * FROM v_article";
               }else if($table == 'comment'){
-                     $sql = "SELECT * FROM V_comment";
+                     $sql = "SELECT * FROM v_comment";
               }else{
                      $sql = "SELECT * FROM $table";
               }
@@ -67,7 +67,7 @@
 
                      if($i==0){
                             for($j=0; $j<2; $j++){
-                                   $sql = "SELECT * FROM V_order_table WHERE orderstatus=$i and paystatus=$j";
+                                   $sql = "SELECT * FROM v_order_table WHERE orderstatus=$i and paystatus=$j";
                                    $statement = $pdo->query($sql);
                                    $data = $statement->fetchAll();
 
@@ -82,7 +82,7 @@
                             }
                      }else{
 
-                            $sql = "SELECT * FROM V_order_table WHERE orderstatus=$i";
+                            $sql = "SELECT * FROM v_order_table WHERE orderstatus=$i";
 
                             $statement = $pdo->query($sql);
                             $data = $statement->fetchAll();
