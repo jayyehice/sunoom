@@ -10,6 +10,7 @@ Vue.component('discuss',{
             content_article:'',
             content_comment:'',
             title_comment:'',
+            table_name: 'discuss',
         }
     },
     methods:{
@@ -61,12 +62,11 @@ Vue.component('discuss',{
             
         },
         comfirm(e){
-            this.show_pop_up=false;
             if(this.content=="article" && this.list[this.content][this.page][this.index][1]==1){
                 let id = this.list[this.content][this.page][this.index][0];
                 let data = [['title', this.title],
-                            ['content', this.content_article]];
-        
+                ['content', this.content_article]];
+                
                 const url = './php/backgroundSystem_update.php';
                 fetch(url, {
                     method: 'POST',
@@ -80,6 +80,8 @@ Vue.component('discuss',{
                     })
                 });
             }
+            this.$emit('my-emit', this.table_name);
+            this.show_pop_up=false;
         },
         cancle(e){
             this.show_pop_up=false;
@@ -87,6 +89,7 @@ Vue.component('discuss',{
         removeArticle(e){
             this.show_pop_up=false;
         },
+        
     },
     computed:{},
     mounted() {

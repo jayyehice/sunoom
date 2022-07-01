@@ -12,6 +12,7 @@ Vue.component('shop',{
             principal:'',
             phone:'',
             status:true,
+            table_name: 'shop',
         }
     },
     methods: {
@@ -81,6 +82,7 @@ Vue.component('shop',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){

@@ -8,6 +8,7 @@ Vue.component('discount_code',{
             index:0,
             discount:0,
             keyword:'',
+            table_name: 'discount_code',
         }
     },
     methods: {
@@ -46,6 +47,8 @@ Vue.component('discount_code',{
                     data: data,
                 })
             });
+            
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){
@@ -67,8 +70,11 @@ Vue.component('discount_code',{
                     data: data,
                 })
             });
+            
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
+        
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');
@@ -169,7 +175,7 @@ Vue.component('discount_code',{
                 <div class="buttonBlock_05 row">
                     <button type="submit" class="b01 col-2 offset-1" @click="comfirm">確認</button>
                     <div class="col-1"></div>
-                    <button class="b02 col-2" onclick="closeBlock(5)" @click="cancle">取消</button>
+                    <button class="b02 col-2" @click="cancle">取消</button>
                     <div class="col-1"></div>
                     <button class="b02 col-4" @click="stop" v-if="list[content][page][index][6]">結束優惠卷</button>
                 </div>

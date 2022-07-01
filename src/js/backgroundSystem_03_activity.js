@@ -13,6 +13,7 @@ Vue.component('activity',{
             intro:'',
             s_img:'',
             l_img:'',
+            table_name: 'activity',
         }
     },
     methods: {
@@ -71,15 +72,13 @@ Vue.component('activity',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){
             this.show_pop_up=false;
         },
         close(e){
-
-            this.show_pop_up=false;
-            
             let id = this.list[this.content][this.page][this.index][0];
             let data = [['status', 0]];
     
@@ -95,6 +94,8 @@ Vue.component('activity',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
+            this.show_pop_up=false;
         },
         sImg(e){},
         lImg(e){},

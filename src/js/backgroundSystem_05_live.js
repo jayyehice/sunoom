@@ -12,6 +12,7 @@ Vue.component('live',{
             title4:'',
             intro1:'',
             intro2:'',
+            table_name: 'live',
         }
     },
     methods: {
@@ -58,6 +59,7 @@ Vue.component('live',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){
@@ -79,12 +81,14 @@ Vue.component('live',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');
     },
+    
     template:
     `
 
