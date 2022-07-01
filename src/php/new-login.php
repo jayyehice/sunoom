@@ -9,26 +9,32 @@
 
 include("connection.php");
 
-// echo $last_name.$first_name.$phone.$email.$password;
 
-//-------------------------------------------
-//建立sql
-
-$sql = "INSERT INTO member (account, password, phone, createdate, last_name, first_name) VALUES(?,?,?,now(),?,?)";
-
-// $sql = "INSERT INTO member (account, password, phone, createdate, last_name, first_name) VALUES('$email','$password','$phone',now(),'$last_name','$first_name')";
-
+$sql = "select * from member where account=? ";
 $statement = $pdo->prepare($sql);
 $statement->bindParam(1, $_GET['email']);
-$statement->bindParam(2, $_GET['password']);
-$statement->bindParam(3, $_GET['phone']);
-$statement->bindParam(4, $_GET['last_name']);
-$statement->bindParam(5, $_GET['first_name']);
 $statement->execute();
 
-// echo $last_name;
-// $pdo->exec($sql);
+$data = $statement->fetchAll();
 
-header("Location:../new-login.html");
+if(count($data) > 0){
+    echo json_encode("same");
+}else{
+    $sql = "INSERT INTO member (account, password, phone, createdate, last_name, first_name) VALUES(?,?,?,now(),?,?)";
+
+
+
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(1, $_GET['email']);
+    $statement->bindParam(2, $_GET['password']);
+    $statement->bindParam(3, $_GET['phone']);
+    $statement->bindParam(4, $_GET['last_name']);
+    $statement->bindParam(5, $_GET['first_name']);
+    $statement->execute();
+
+    echo json_encode("success");
+
+}
+
 ?>
 

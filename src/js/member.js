@@ -35,4 +35,23 @@ $(document).ready(function(){
     $("#cancel").click(function(){
         confirm("您確定要取消訂單嗎？")
     })
+
+
+
 });
+
+
+new Vue({
+    el:'#member',
+
+    data:{
+            account:null,
+            isLogin:'no',
+    },
+    methods:{
+        logout(){
+            sessionStorage.clear()
+            window.location.href = './new-login.html';
+        }
+    },
+})
