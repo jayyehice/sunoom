@@ -11,6 +11,9 @@
     a {
         text-decoration: none;
         color: $moon_color;
+        &:visited {
+            color: $moon_color;
+        }
     }
 
     header{
@@ -808,6 +811,9 @@
     a {
         text-decoration: none;
         color: $moon_color;
+        &:visited {
+            color: $moon_color;
+        }
     }
 
     main {

@@ -6,6 +6,7 @@
     top: 200px;
     right: 200px;
     cursor: pointer;
+    display: none;
 }
 
 .land_tour {
@@ -19,6 +20,13 @@
         z-index: 100;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    a{
+        text-decoration: none;
+        &:visited {
+            color: $moon_color;
+        }
     }
 
     main {
@@ -725,11 +733,16 @@
                                 margin-right: 15px;
                             }
 
+                            #ig_author_name{
+                                color: #0C1244;
+                            }
+
                         }
 
                         #ig_words {
                             height: calc(100% - 85px);
                             padding: 25px;
+                            color: #0C1244;
                         }
                     }
                 }
@@ -747,6 +760,13 @@
 
     background-color: $sun_color;
     color: $moon_color;
+
+    a{
+        text-decoration: none;
+        &:visited {
+            color: $moon_color;
+        }
+    }
 
     main {
 

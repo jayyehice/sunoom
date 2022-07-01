@@ -9,6 +9,9 @@
   text-decoration: none;
   color: #0C1244;
 }
+.live a:visited {
+  color: #0C1244;
+}
 .live header .one li a {
   color: #F5F0DD;
 }
@@ -636,6 +639,9 @@
 }
 .live_moon a {
   text-decoration: none;
+  color: #F5F0DD;
+}
+.live_moon a:visited {
   color: #F5F0DD;
 }
 .live_moon main .wrapper {
