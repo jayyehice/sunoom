@@ -232,7 +232,7 @@
 }
 .orderPage .datePickerBox {
   width: 700px;
-  height: 360px;
+  height: 400px;
   margin: 0px auto;
   border: 1px solid #0C1244;
   box-sizing: border-box;
@@ -249,6 +249,155 @@
   text-align: center;
   width: 100%;
   border-top: 1px solid #0C1244;
+}
+.orderPage .calendar {
+  width: 50%;
+  background-color: #0C1244;
+  border-radius: 30px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.orderPage .calendar-header {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.orderPage .month-picker {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.orderPage .year-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orderPage .year-change {
+  width: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.orderPage .year-change pre {
+  overflow: hidden;
+}
+.orderPage .calendar-week-day {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+}
+.orderPage .calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: #F5F0DD;
+}
+.orderPage .calendar-days {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  font-size: 16px;
+}
+.orderPage .calendar-days > div {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  cursor: pointer;
+  animation: to-top 1s forwards;
+  background-color: white;
+  box-sizing: border-box;
+}
+.orderPage .calendar-days div:hover span {
+  transition: 0.5s ease-in-out;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 234, 0);
+}
+.orderPage .calendar-days div span {
+  position: absolute;
+}
+.orderPage .calendar-days {
+  box-sizing: border-box;
+}
+.orderPage .calendar-days .date {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 35px;
+  border: 1px solid #F5F0DD;
+}
+.orderPage .calendar-days .date .div.startDay {
+  box-sizing: border-box;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+.orderPage .calendar-days .date .div.EndDay {
+  box-sizing: border-box;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+.orderPage .calendar-days .date.startDay {
+  box-sizing: border-box;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+.orderPage .calendar-days .date.EndDay {
+  box-sizing: border-box;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+.orderPage .calendar-days .date.afterToday:hover {
+  box-sizing: border-box;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+.orderPage .calendar-days .date.beforeToday {
+  color: #F5F0DD;
+  background-color: #0C1244;
+  text-decoration: line-through;
+  pointer-events: none;
+  border: none;
+}
+.orderPage .calendar-days .thisMonth {
+  color: #0C1244;
+  background-color: #F5F0DD;
+}
+.orderPage .calendar-days .thisMonth.active {
+  background-color: rgb(255, 0, 0);
+}
+.orderPage .calendar-days .isToday {
+  border: 1px solid #F5F0DD !important;
+  background-color: #0C1244;
+  color: #F5F0DD;
+  text-decoration: none !important;
+}
+.orderPage .month-list {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 0px;
+  left: 0px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #0C1244;
+  padding: 20px;
+  transform: scale(1.5);
+  visibility: hidden;
+  cursor: pointer;
+}
+.orderPage .month-list.show {
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: visible;
+  transition: all 0.2s ease-in-out;
 }
 .orderPage #NextPage {
   display: block;
