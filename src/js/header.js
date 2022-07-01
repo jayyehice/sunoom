@@ -195,7 +195,7 @@ $(function() {
   $(window).scroll(function() {
       let h =  document.body.scrollHeight*0.4;
       if ( $(this).scrollTop() > h){
-        console.log(h);
+        // console.log(h);
           $('#go_top').fadeIn();
       } else {
           $('#go_top').fadeOut();

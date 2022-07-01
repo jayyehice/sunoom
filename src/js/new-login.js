@@ -85,41 +85,40 @@ new Vue({
         login_region_list:[],
         account:"",
         password:"",
+        hint:"請輸入帳號密碼",
+        error:'hint',
     },
 
     methods:{
         submit(e){
             e.preventDefault();
-            let url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
-            fetch(url)
-                .then(response => response.json())
-                // .then(response => console.log(response.json()))
-                // .then(text => this.login_region_list = text);
-                .then(text => {
-                    if(this.account =='' || this.password == ''){
-                        // console.log('pptt');
-                        alert('請輸入帳號密碼');
-                    }else{
-                        const url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
-                        fetch(url)
-                            .then(response => response.json())
-                            .then(text =>{
-                                console.log(text);
 
-                                if(text === 'false'){
-                                    alert('帳號或密碼錯誤');
-                                    this.hint='帳號或密碼錯誤';
-                                    this.error='error';
-                                }else{
-                                    sessionStorage.setItem('account',text[0]['account']);
-                                    sessionStorage.setItem('password',text[0]['password']);
+            if(this.account =='' || this.password == ''){
+                // console.log('pptt');
+                alert('請輸入帳號密碼');
+            }else{
+                const url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
+                fetch(url)
+                    .then(response => response.json())
+                    .then(text =>{
+                        // console.log(text);
 
-                                    window.location.href = 'member.html';
-                                }
-                            })
-                    }
-                });
-                // console.log(this.login_region)
+                        if(text === 'false'){
+                            alert('帳號或密碼錯誤');
+                            this.hint = '帳號或密碼錯誤';
+                            this.error = 'hint error';
+                            
+                        }else{
+                            sessionStorage.setItem('account',text[0]['account']);
+                            sessionStorage.setItem('id',text[0]['id']);
+                            sessionStorage.setItem('last_name',text[0]['last_name']);
+                            sessionStorage.setItem('first_name',text[0]['first_name']);
+                            sessionStorage.setItem('photo',text[0]['photo']);
+                            sessionStorage.setItem('phone',text[0]['phone']);
+                            window.location.href = 'member.html';
+                        }
+                    })
+            }
                 
         },
     },
