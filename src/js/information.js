@@ -126,11 +126,23 @@ new Vue({
     el: '#map',
     data: {     // 變數放這裡！           
         map_list: [],
+        type: "all",
 
         //燈箱內容
         boxContent:[],
     },
-    methods: {},
+    methods: {
+        changeContent(e){
+            // console.log(e.target.dataset.type);
+            e.preventDefault();
+            
+            this.type=e.target.dataset.type;
+
+            // ul on樣式
+            $(e.target.closest('ul')).find('button.on').removeClass('on');
+            $(e.target.closest('button')).addClass('on');
+        },
+    },
     computed: {},
     watch: {},
     beforeCreate() {
@@ -138,6 +150,7 @@ new Vue({
         fetch(url)
             .then(response => response.json())
             .then(text => this.map_list = text);
+
     },
     created() {
     },

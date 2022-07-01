@@ -36,19 +36,19 @@
                 <h3>園區地圖</h3>
                 <ul>
                     <li>
-                        <button class="big_btn" onclick="e.preventDefault">總攬</button>
+                        <button class="big_btn on" data-type="all" @click="changeContent">總攬</button>
                     </li>
 
                     <li>
-                        <button class="big_btn" onclick="e.preventDefault">食</button>
+                        <button class="big_btn" data-type="food" @click="changeContent">食</button>
                     </li>
 
                     <li>
-                        <button class="big_btn" onclick="e.preventDefault">宿</button>
+                        <button class="big_btn" data-type="live" @click="changeContent">宿</button>
                     </li>
 
                     <li>
-                        <button class="big_btn" onclick="e.preventDefault">遊</button>
+                        <button class="big_btn" data-type="tour" @click="changeContent">遊</button>
                     </li>
 
                     <!-- <li>
@@ -59,29 +59,22 @@
 
                 <!-- 日島地圖 -->
                 <ol class="sunMap">
-                    <!-- <img src="./img/information/sun/island_map.jpg" alt="" id="img_test"> -->
-
-                    <li>
-                        <!-- <img class="allmap bbq" src="./img/information/sun/bbq.png" alt="bbq">
-                        <img class="allmap hamberger" src="./img/information/sun/hamberger.png" alt="漢堡">
-                        <img class="allmap juice" src="./img/information/sun/juice.png" alt="果汁">
-                        <img class="allmap lobster" src="./img/information/sun/lobster.png" alt="巴菲"> -->
+                    <li v-if="type == 'all' || type =='food'" >
                         <img class="allmap bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
                         <img class="allmap lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
                         <img class="allmap juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
                         <img class="allmap hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
-        
                     </li>
-                    <li>
+
+                    <li v-if="type == 'all' || type =='live'">
 
                         <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
                         <img class="allmap residential"   v-if="map_list[8]" :src="map_list[8][3]" alt="別墅">
                         <img class="allmap tent"     v-if="map_list[9]" :src="map_list[9][3]" alt="帳篷">
                         <img class="allmap stilthouse" v-if="map_list[10]" :src="map_list[10][3]" alt="小木屋">
-
-
                     </li>
-                    <li>
+
+                    <li v-if="type == 'all' || type =='tour'">
                         <img class="allmap chariot"   v-if="map_list[11]" :src="map_list[11][3]" alt="沙灘戰車">
                         <img class="allmap horse_back_riding"     v-if="map_list[12]" :src="map_list[12][3]" alt="騎馬">
                         <img class="allmap stonehenge" v-if="map_list[13]" :src="map_list[13][3]" alt="巨石陣">
@@ -97,37 +90,26 @@
                         <img class="allmap agency" v-if="map_list[21]" :src="map_list[21][3]" alt="珊瑚復育所">
                         <img class="allmap turtle" v-if="map_list[22]" :src="map_list[22][3]" alt="海龜">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
-
-
-
-                    </li>
-
-                    <li>
-
                     </li>
                 </ol>
 
                 <!-- 月島地圖 -->
                 <ol class="moonMap">
-                    <!-- <img src="./img/information/sun/island_map.jpg" alt="" id="img_test"> -->
-
-                    <li>
+                    <li v-if="type == 'all' || type =='food'" >
                         <img class="allmap m_bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
                         <img class="allmap m_lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
                         <img class="allmap m_juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
                         <img class="allmap m_hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
-        
                     </li>
-                    <li>
 
+                    <li v-if="type == 'all' || type =='live'" >
                         <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
                         <img class="allmap m_residential"   v-if="map_list[25]" :src="map_list[25][3]" alt="別墅">
                         <img class="allmap m_tent"     v-if="map_list[26]" :src="map_list[26][3]" alt="帳篷">
                         <img class="allmap m_stilthouse" v-if="map_list[27]" :src="map_list[27][3]" alt="小木屋">
-
-
                     </li>
-                    <li>
+
+                    <li v-if="type == 'all' || type =='tour'">
                         <img class="allmap m_campfire"   v-if="map_list[28]" :src="map_list[28][3]" alt="沙灘營火">
                         <img class="allmap m_bar"     v-if="map_list[29]" :src="map_list[29][3]" alt="酒吧">
                         <img class="allmap m_star" v-if="map_list[30]" :src="map_list[30][3]" alt="觀星">
@@ -143,13 +125,6 @@
                         <img class="allmap tear" v-if="map_list[38]" :src="map_list[38][3]" alt="藍眼淚">
                         <img class="allmap intertidal" v-if="map_list[39]" :src="map_list[39][3]" alt="潮間帶">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
-
-
-
-                    </li>
-
-                    <li>
-
                     </li>
                 </ol>
 

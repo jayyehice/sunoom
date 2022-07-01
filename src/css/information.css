@@ -60,15 +60,18 @@
   border: 1.5px solid #F5F0DD;
   background-color: #0C1244;
 }
+.information main .map .wrapper ul li .on {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
 .information main .map .wrapper .sunMap {
-  background-image: url("../img/information/sun/sunMap.jpg");
+  background-image: url("../img/information/sun/map.jpg");
   width: 900px;
   height: 700px;
   margin: 0 auto;
   background-size: cover;
   border: 1px solid #0C1244;
   position: relative;
-  display: none;
 }
 .information main .map .wrapper .sunMap .allmap {
   animation-name: scale1;
@@ -216,18 +219,16 @@
   cursor: pointer;
 }
 .information main .map .wrapper .moonMap {
-  background-image: url("../img/information/moon/moonMap.jpg");
-  width: 900px;
-  height: 700px;
+  background-image: url("../img/information/moon/map.jpg");
   margin: 0 auto;
   background-size: cover;
-  border: 1px solid #0C1244;
   position: relative;
 }
 .information main .map .wrapper .moonMap .allmap {
   animation-name: scale1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  display: none;
 }
 .information main .map .wrapper .moonMap .m_juice {
   top: 425px;
@@ -379,7 +380,7 @@
   padding: 10px;
   text-align: center;
   position: absolute;
-  top: 125%;
+  top: 155%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
@@ -784,8 +785,12 @@
   border: 1.5px solid #0C1244;
   background-color: #F5F0DD;
 }
+.information_moon main .map .wrapper ul li .on {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
 .information_moon main .map .wrapper .sunMap {
-  background-image: url("../img/information/sun/sunMap.jpg");
+  background-image: url("../img/information/sun/map.jpg");
   width: 900px;
   height: 700px;
   margin: 0 auto;
@@ -940,7 +945,7 @@
   cursor: pointer;
 }
 .information_moon main .map .wrapper .moonMap {
-  background-image: url("../img/information/moon/moonMap.jpg");
+  background-image: url("../img/information/moon/map.jpg");
   width: 900px;
   height: 700px;
   margin: 0 auto;
@@ -952,6 +957,7 @@
   animation-name: scale1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  display: inline-block;
 }
 .information_moon main .map .wrapper .moonMap .m_juice {
   top: 425px;
@@ -1103,7 +1109,7 @@
   padding: 10px;
   text-align: center;
   position: absolute;
-  top: 125%;
+  top: 155%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
