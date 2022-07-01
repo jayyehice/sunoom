@@ -1,4 +1,3 @@
-<!-- 登陸頁的php -->
 <?php
 include("connection.php");
 
@@ -17,7 +16,7 @@ $statement->bindParam(2, $password);
 $statement->execute();   //這段是必要的，要執行sql語法
 $data = $statement->fetchAll();
 // print_r($data);
-echo json_encode("aaa");
+echo json_encode($data);
 // if(count($data) > 0){
 //     session_start();
 //     $_SESSION['UserID'] = $email;
@@ -34,25 +33,3 @@ echo json_encode("aaa");
 
 
 
-
-<!-- 這支PHP是用來測試登錄頁 -->
-<?php
-// session_start();
-// $_SESSION['member'];
-// unset($_SESSION['member']);
-
-// $sql = "SELECT * FROM member WHERE account = ? and password = ?";
-// $sql->execute([$_REQUEST['email'],$_REQUEST['password']]);
-
-// foreach($sql->fetchAll() as $row){
-//     $_SESSION['member']=['email'];
-// }
-
-// if(isset($_SESSION['member'])){
-//     echo '登入成功',$_SESSION['member']['email'], '、歡迎光臨。';
-// }else{
-//     echo '登入ID或密碼錯誤。';
-// }
-
-// header("Location:../member.html");
-?>
