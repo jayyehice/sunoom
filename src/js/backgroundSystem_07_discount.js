@@ -2,18 +2,21 @@ Vue.component('discount_code',{
     props:['list'],
     data(){
         return{
-            content:'',
+            content:'進行中',
             page:0,
             show_pop_up:false,
             index:0,
             discount:0,
             keyword:'',
+            table_name: 'discount_code',
         }
     },
     methods: {
-        addClass(e){
+        topButton(e){
             $(e.target.closest('div')).find('h5').removeClass('on');
-            $(e.target).addClass('on'); 
+            $(e.target).addClass('on');
+            this.content = e.target.innerText; 
+            this.page = 0;
         },
         changePage(e){
             this.page = e.target.dataset.page;
@@ -23,19 +26,55 @@ Vue.component('discount_code',{
         showEdit(e){
             this.index = e.target.dataset.index;
             this.show_pop_up = true;
-            this.keyword = this.list[this.page][this.index][1];
-            this.discount = this.list[this.page][this.index][5];
-            console.log(this.list[this.page]);
+            this.keyword = this.list[this.content][this.page][this.index][1];
+            this.discount = this.list[this.content][this.page][this.index][5];
+            // console.log(this.list[this.page]);
         },
         comfirm(e){
+            let id = this.list[this.content][this.page][this.index][0];
+            let data = [['keyword', this.keyword],
+                        ['discount_quantity', this.discount]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'discount_code',
+                    id: id,
+                    data: data,
+                })
+            });
+            
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){
             this.show_pop_up=false;
         },
         stop(e){
+            let id = this.list[this.content][this.page][this.index][0];
+            let data = [['status', 0]];
+    
+            const url = './php/backgroundSystem_update.php';
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    table: 'discount_code',
+                    id: id,
+                    data: data,
+                })
+            });
+            
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
+        
     },
     mounted() {
         $('#pageList > li:nth-child(2)').addClass('on');
@@ -55,8 +94,8 @@ Vue.component('discount_code',{
         <!-- 表單細分類 -->
         <div class="checkList">
             <div class="col-4 select_button">
-                <h5 @click="addClass" class="on">進行中</h5>
-                <h5 @click="addClass">已結束</h5>
+                <h5 @click="topButton" class="on">進行中</h5>
+                <h5 @click="topButton">已結束</h5>
 
             </div>
             <!-- 
@@ -79,7 +118,7 @@ Vue.component('discount_code',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col-3"><p>{{item[1]}}</p></li>
                     <li class="col-3"><p>{{item[2]}}</p></li>
@@ -98,7 +137,7 @@ Vue.component('discount_code',{
             <div class="row pages">
                 <ul class="pageList col-2 offset-7" id="pageList">
                     <li class=""><</li>
-                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list.length">{{p}}</li>
+                    <li class="nowPage" :data-page="i" @click="changePage" v-for="(p,i) in list[content].length">{{p}}</li>
                     <li>></li>
                 </ul>
             </div>
@@ -113,7 +152,7 @@ Vue.component('discount_code',{
                     <ul>
                         <li>
                             <h4>編號:</h4>
-                            <p>{{list[page][index][0]}}</p>
+                            <p>{{list[content][page][index][0]}}</p>
                         </li>
                         <li>
                             <h4>折扣:</h4>
@@ -128,7 +167,7 @@ Vue.component('discount_code',{
                         </li>
                         <li>
                             <h4>使用次數:</h4>
-                            <p>{{list[page][index][4]}}</p>
+                            <p>{{list[content][page][index][4]}}</p>
                         </li>
                     </ul>
                         
@@ -136,9 +175,9 @@ Vue.component('discount_code',{
                 <div class="buttonBlock_05 row">
                     <button type="submit" class="b01 col-2 offset-1" @click="comfirm">確認</button>
                     <div class="col-1"></div>
-                    <button class="b02 col-2" onclick="closeBlock(5)" @click="cancle">取消</button>
+                    <button class="b02 col-2" @click="cancle">取消</button>
                     <div class="col-1"></div>
-                    <button class="b02 col-4" @click="stop">結束優惠卷</button>
+                    <button class="b02 col-4" @click="stop" v-if="list[content][page][index][6]">結束優惠卷</button>
                 </div>
             </div>
         </div>

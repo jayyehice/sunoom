@@ -21,55 +21,165 @@
 
     <main>
 
+        <section id="banner" class="banner">
+            <!-- 時鐘 -->
+            <div class="progress-ring-wrapper">
+                <!-- svg -->
+                <svg 
+                    class="progress-ring" 
+                    viewBox="0 0 937 937" 
+                    preserveAspectRatio="xMidYMid meet" >
 
+                    <!-- 大圈圈 -->
+                    <circle 
+                        class="progress-ring__background-circle" 
+                        r="293.5" 
+                        cx="468.5" 
+                        cy="468.5">
+                    </circle>
 
-        <section id="top_banner">
-            <div class="mask"></div>
+                    <!-- 流動線圈 -->
+                    <circle 
+                        class="progress-ring__circle" 
+                        r="293.5" 
+                        cx="468.5" 
+                        cy="468.5"
+                        style=" stroke-dasharray: 368.823, 1475.29;  
+                                stroke-dashoffset: 0;
+                                transform-origin: 0px 0px 0px;
+                                transition :2.5s;"
+                        data-svg-origin="468.5 468.5" 
+                        transform="matrix(0,-1,1,0,0,937)">
+                    </circle>
 
-            <svg
-                class="progress-bg"
-                :width="width"
-                :height="width"
-            >
-            <circle
-                class="progress-ring_circle"
-                stroke="currentColor"
-                stroke-width="6"
-                fill="transparent"
-                :r="radius"
-                :cx="half_width"
-                :cy="half_width"
-                :stroke-dasharray="full_circle_bg"
-                />
-            </svg>
+                    <!-- 活動1 -->
+                    <circle 
+                        class="progress-ring__point point-item-1" 
+                        fill="white" 
+                        r="3" 
+                        x="468.5"
+                        cx="470" 
+                        cy="175">
+                    </circle>
+                    <text 
+                        class=" time-label time-label-1" 
+                        data-event-item="1" 
+                        x="450" 
+                        y="150">
+                        {{clock1[1]}}
+                    </text>
 
-            <svg
-                class="progress-ring"
-                :width="width"
-                :height="width"
-            >
-            <circle
-                class="progress-ring_circle"
-                stroke="currentColor"
-                stroke-width="4"
-                fill="transparent"
-                :r="radius"
-                :cx="half_width"
-                :cy="half_width"
-                :stroke-dasharray="full_circle"
-                :stroke-dashoffset = "offset"/>
-            </svg>
-            <ul>
-                <li v-for="li in li_data" :style="li[1]">
-                    <p>{{li[0]}}</p>
-                    
-                </li>
+                    <!-- 活動2 -->
+                    <circle 
+                        class="progress-ring__point point-item-4" 
+                        fill="white" 
+                        r="3" 
+                        cx="748"
+                        cy="378">
+                    </circle>
+                    <text 
+                        class="time-label time-label-4" 
+                        data-event-item="2" 
+                        x="770" 
+                        y="385">
+                        {{clock2[1]}}
+                    </text>
 
-            </ul>
-            
+                    <!-- 活動3 -->
+                    <circle 
+                        class="progress-ring__point point-item-7" 
+                        fill="white" 
+                        r="3" 
+                        cx="641"
+                        cy="706">
+                    </circle>
+                    <text 
+                        class="time-label time-label-7" 
+                        data-event-item="3" 
+                        x="650" 
+                        y="740">
+                        {{clock3[1]}}
+                    </text>
 
+                    <!-- 活動4 -->
+                    <circle 
+                        class="progress-ring__point point-item-10" 
+                        fill="white" 
+                        r="3" 
+                        cx="296"
+                        cy="706">
+                    </circle>
+                    <text 
+                        class="time-label time-label-10" 
+                        data-event-item="4" 
+                        x="255" 
+                        y="740">
+                        {{clock4[1]}}
+                    </text>
 
+                    <!-- 活動5 -->
+                    <circle 
+                        class="progress-ring__point point-item-13" 
+                        fill="white" 
+                        r="3" 
+                        cx="189"
+                        cy="378">
+                    </circle>
+                    <text 
+                        class="time-label time-label-13" 
+                        data-event-item="5" 
+                        x="110" 
+                        y="385">
+                        {{clock5[1]}}
+                    </text>
+                </svg>
+            </div>
 
+            <!-- 時鐘中心文字 -->
+            <div class=" schedule-wrapper">
+
+                <!-- 活動1 中心文字 -->
+                <div class="event-item event-item1">
+                    <div class="ocean ocean1">Land</div>
+                    <div class="chName chName1">{{clock1[1]}}</div>
+                    <div  class="enName enName1">{{clock1[11]}}</div>
+                    <a  class="discover discover1" href="#" target="_blank">Discover</a>
+                </div>
+               <!-- 活動2 中心文字-->
+               <div class="event-item event-item2">
+                    <div class="ocean ocean2">Land</div>
+                    <div class="chName chName2">{{clock2[1]}}</div>
+                    <div class="enName enName2">{{clock2[11]}}</div>
+                    <a class="discover discover2" href="#" target="_blank">Discover</a>
+                </div>
+                <!-- 活動3 中心文字-->
+               <div class="event-item event-item3">
+                    <div class="ocean ocean3">Land</div>
+                    <div class="chName chName3">{{clock3[1]}}</div>
+                    <div class="enName enName3">{{clock3[11]}}</div>
+                    <a class="discover discover3" href="#" target="_blank">Discover</a>
+                </div>
+                <!-- 活動4 中心文字-->
+               <div class="event-item event-item4">
+                    <div class="ocean ocean4">Land</div>
+                    <div class="chName chName4">{{clock4[1]}}</div>
+                    <div class="enName enName4">{{clock4[11]}}</div>
+                    <a class="discover discover4"href="#"target="_blank">Discover</a>
+                </div>
+                <!-- 活動5 中心文字-->
+               <div class="event-item event-item5">
+                    <div class="ocean ocean5">Land</div>
+                    <div class="chName chName5">{{clock5[1]}}</div>
+                    <div class="enName enName5">{{clock5[11]}}</div>
+                    <a class="discover discover5" href="#" target="_blank">Discover</a>
+                </div>
+            </div>
+
+            <!-- 轉場黑幕 -->
+            <div class="blackCover"></div>
+
+            <!-- 點點起始 -->
+            <div class="begin"></div>
         </section>
 
 
@@ -335,7 +445,7 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <!-- <script src="./js/instagram_pop_up.js"></script> -->
-    <script src="./js/progress_ring.js"></script>
+    <script src="./js/land_clock.js"></script>
     <script src="./js/land_tour.js"></script>
 </body>
 </html>

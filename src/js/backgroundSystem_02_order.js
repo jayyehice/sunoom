@@ -6,6 +6,7 @@ Vue.component('order_table',{
             page:0,
             show_pop_up:false,
             index:0,
+            table_name: 'order_table',
         }
     },
     methods: {
@@ -49,11 +50,10 @@ Vue.component('order_table',{
             this.show_pop_up=false;
         },
         unfinish(e){
-            this.show_pop_up=false;
+            
             let id = this.list[this.content][this.page][this.index][0];
             let data = [['orderstatus', 2]];
-
-
+            
             const url = './php/backgroundSystem_update.php';
             fetch(url, {
                 method: 'POST',
@@ -66,6 +66,8 @@ Vue.component('order_table',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
+            this.show_pop_up=false;
         },
     },
     mounted() {
