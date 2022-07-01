@@ -1,13 +1,12 @@
 window.addEventListener("load",function(){
 
-    let vm = new Vue({  // vue instance (實例)
+    let vm = new Vue({
         el: '#app',
         data: { 
             id:0,
             account:'',
             authority:0,
             image:'',
-            // content:'overview',
             content:'',
             data_list:[],
             render_list:[],
@@ -28,16 +27,25 @@ window.addEventListener("load",function(){
                     this.render_list = this.data_list[nav_name];
                 }
             },
+            makeSync(table_name){
+                setTimeout(e => {
+                    const url = `./php/backgroundSystem.php?table=${table_name}`;
+                    fetch(url)
+                        .then(response => response.json())
+                        // .then(text => console.log(text))
+                        .then(text => {
+                            this.data_list[table_name] = text[table_name];
+                            this.render_list = text[table_name];
+                        })
+                },500);
+            },
             
         },
         mounted() {
-            // console.log(this.memberID);
-            // console.log(sessionStorage);
             if(sessionStorage.length === 0){
                 this.content = '';
                 alert('請重新登入');
                 window.location.href = './backgroundSystem_login.html';
-                // open('./backgroundSystem_login.html');
             }else{
                 this.id = sessionStorage['id'];
                 this.account = sessionStorage['account'];
@@ -47,7 +55,7 @@ window.addEventListener("load",function(){
                 if(this.authority > 5){
                     this.content = 'overview';
                 }
-                const url = './php/backgroundSystem.php';
+                const url = './php/backgroundSystem.php?table=all';
                 fetch(url)
                     .then(response => response.json())
                     // .then(text => console.log(text))
