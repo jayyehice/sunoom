@@ -77,15 +77,6 @@ new Vue({
 })
 
 
-
-
-
-
-
-
-
-
-
 //以下是登錄頁的js函式
 new Vue({
     el:'#login_region',
@@ -137,7 +128,6 @@ new Vue({
     create(){
    
     },
-
- 
 })
+
 

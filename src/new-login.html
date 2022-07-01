@@ -38,11 +38,11 @@
             <div class="con-box left" id="register_region">
                 <form action="./php/new-login.php" method="post" class="form1">
                     <h1 style="text-align: center;margin-bottom: 25px;color:#0c1244;text-transform: uppercase; letter-spacing: 5px;">register</h1>
-                    <input v-mod type="text" name="last_name" placeholder="姓氏">
-                    <input type="text" name="first_name" placeholder="名字">
-                    <input type="text" name="phone" placeholder="電話">
-                    <input type="email" name="email" placeholder="信箱">
-                    <input type="password" name="password" placeholder="密碼" id="pw1">
+                    <input v-model="last_name" type="text" name="last_name" placeholder="姓氏">
+                    <input v-model="first_name" type="text" name="first_name" placeholder="名字">
+                    <input v-model="phone"type="text" name="phone" placeholder="電話">
+                    <input v-model="email" type="email" name="email" placeholder="信箱">
+                    <input v-model="password" type="password" name="password" placeholder="密碼" id="pw1">
                     <input type="password" name="passwordsure" placeholder="確認密碼" id="pw2" onkeyup="validate()"><span id="tishi"></span>
                     <button type="submit" class="btn" id="submit" @click="ftdregister">註冊</button>
                 </form>

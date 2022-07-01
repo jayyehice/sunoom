@@ -11,13 +11,14 @@
 @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/member.css">
     <title>會員專區</title>
+    <script src="./js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 </head>
 <body class="member">
     @@include('./layout/header.html')
     
-   <main>
+   <main id="member">
        <div class="wrapper">
 
             <p class="crumbs">
@@ -26,7 +27,7 @@
 
             <h3>會員專區</h3>
 
-            <input type="button" class="signOut" value="登出">
+            <input type="button" class="signOut" value="登出" @click="logout">
 
             <ul class="memberPage">
                 <li><a href="#basicData">會員資料</a></li>
