@@ -1,0 +1,625 @@
+@charset "UTF-8";
+footer {
+  background-color: #F5F0DD;
+  color: #0C1244;
+}
+
+footer .moon_icon {
+  display: none;
+}
+
+footer section {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+footer section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer section ul > li {
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+footer section ul > li:first-child {
+  width: 100%;
+  background-image: url("../img/footer/sun/footer_bg_01.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+footer section ul > li:first-child .icon {
+  position: absolute;
+  top: 60vh;
+  right: 30px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer section ul > li:first-child .icon a {
+  margin-bottom: 20px;
+}
+
+footer section ul > li:last-child {
+  width: 50%;
+  background-color: #F5F0DD;
+  border: 3px solid #0C1244;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 7vh;
+}
+
+footer section ul > li:last-child > p {
+  line-height: 40px;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #0C1244;
+}
+
+footer section ul > li:last-child .today_weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5vh;
+  padding: 0 10%;
+}
+
+footer section ul > li:last-child .today_weather div {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_left h1 {
+  margin-bottom: 2.5vh;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_left h1:first-child {
+  font-size: 72px;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_center h1 {
+  text-align: center;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_center svg {
+  width: 100%;
+  margin-top: 6vh;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_right {
+  text-align: right;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_right h1:first-child {
+  font-size: 80px;
+  margin-bottom: 9vh;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_right div {
+  margin-bottom: 1.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer section ul > li:last-child .today_weather .today_weather_right div svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+footer section ul > li:last-child .wave {
+  position: relative;
+  margin-top: 1.5vh;
+  height: 10px;
+}
+
+footer section ul > li:last-child .wave svg {
+  width: 100%;
+  position: absolute;
+}
+
+footer section ul > li:last-child .wave svg:last-child {
+  top: 5px;
+}
+
+footer section ul > li:last-child .week_weather {
+  margin-top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10%;
+}
+
+footer section ul > li:last-child .week_weather > li {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+footer section ul > li:last-child .week_weather > li div {
+  height: 15vh;
+}
+
+footer section ul > li:last-child .week_weather > li div svg {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+footer section .wrapper {
+  width: 400px;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: calc( (50% - 400px) / 2);
+}
+
+footer section .wrapper #content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-top: 90px;
+  width: 100%;
+}
+
+footer section .wrapper #content .info {
+  margin-top: 15vh;
+  width: 100%;
+}
+
+footer section .wrapper #content .info h5 {
+  margin-bottom: 4vh;
+}
+
+footer section .wrapper #content .info .subscribe {
+  margin-top: 7.5vh;
+  margin-bottom: 1.5vh;
+}
+
+footer section .wrapper #content .info .subscribe p {
+  margin-bottom: 1.5vh;
+}
+
+footer section .wrapper #content .info .subscribe input {
+  width: 300px;
+  height: 30px;
+  background-color: #0C1244;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  font-family: 'Noto Sans TC';
+  color: #F5F0DD;
+  font-size: 16rem;
+  font-weight: normal;
+}
+
+footer section .wrapper #content .info .subscribe button {
+  width: 80px;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #0C1244;
+  color: #0C1244;
+}
+
+footer section .wrapper #content .info .subscribe button:hover {
+  cursor: pointer;
+  background-color: #F5F0DD;
+}
+
+footer section .wrapper #content .info > p {
+  line-height: 1.6;
+}
+
+footer section .wrapper #content .info .icon {
+  margin-top: 60px;
+}
+
+footer section .wrapper #content .info .icon img {
+  height: 40px;
+  margin-right: 40px;
+}
+
+footer section .wrapper #content .icon {
+  display: none;
+}
+
+/*
+moon 底下
+有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")
+以及天氣icon
+                    .sun_icon{
+                        display: none;
+                    }
+
+                    .moon_icon{
+                        display: block;
+                    }
+*/
+.moon footer {
+  background-color: #0C1244;
+  color: #F5F0DD;
+}
+
+.moon footer .sun_icon {
+  display: none;
+}
+
+.moon footer .moon_icon {
+  display: block;
+}
+
+.moon footer section {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.moon footer section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.moon footer section ul > li {
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.moon footer section ul > li:first-child {
+  width: 100%;
+  background-image: url("../img/footer/moon/footer_bg_01-2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.moon footer section ul > li:first-child .icon {
+  position: absolute;
+  top: 60vh;
+  right: 30px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.moon footer section ul > li:first-child .icon a {
+  margin-bottom: 20px;
+}
+
+.moon footer section ul > li:last-child {
+  width: 50%;
+  background-color: #0C1244;
+  border: 3px solid #F5F0DD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 7vh;
+}
+
+.moon footer section ul > li:last-child > p {
+  line-height: 40px;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #F5F0DD;
+}
+
+.moon footer section ul > li:last-child .today_weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5vh;
+  padding: 0 10%;
+}
+
+.moon footer section ul > li:last-child .today_weather div {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_left h1 {
+  margin-bottom: 2.5vh;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_left h1:first-child {
+  font-size: 72px;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_center h1 {
+  text-align: center;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_center svg {
+  width: 100%;
+  margin-top: 6vh;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_right {
+  text-align: right;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_right h1:first-child {
+  font-size: 80px;
+  margin-bottom: 9vh;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_right div {
+  margin-bottom: 1.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.moon footer section ul > li:last-child .today_weather .today_weather_right div svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.moon footer section ul > li:last-child .wave {
+  position: relative;
+  margin-top: 1.5vh;
+  height: 10px;
+}
+
+.moon footer section ul > li:last-child .wave svg {
+  width: 100%;
+  position: absolute;
+}
+
+.moon footer section ul > li:last-child .wave svg:last-child {
+  top: 5px;
+}
+
+.moon footer section ul > li:last-child .week_weather {
+  margin-top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10%;
+}
+
+.moon footer section ul > li:last-child .week_weather > li {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.moon footer section ul > li:last-child .week_weather > li div {
+  height: 15vh;
+}
+
+.moon footer section ul > li:last-child .week_weather > li div svg {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.moon footer section .wrapper {
+  width: 400px;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: calc( (50% - 400px) / 2);
+}
+
+.moon footer section .wrapper #content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-top: 90px;
+  width: 100%;
+}
+
+.moon footer section .wrapper #content .info {
+  margin-top: 15vh;
+  width: 100%;
+}
+
+.moon footer section .wrapper #content .info h5 {
+  margin-bottom: 4vh;
+}
+
+.moon footer section .wrapper #content .info .subscribe {
+  margin-top: 7.5vh;
+  margin-bottom: 1.5vh;
+}
+
+.moon footer section .wrapper #content .info .subscribe p {
+  margin-bottom: 1.5vh;
+}
+
+.moon footer section .wrapper #content .info .subscribe input {
+  width: 300px;
+  height: 30px;
+  background-color: #F5F0DD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  font-family: 'Noto Sans TC';
+  color: #0C1244;
+  font-size: 16rem;
+  font-weight: normal;
+}
+
+.moon footer section .wrapper #content .info .subscribe button {
+  width: 80px;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #F5F0DD;
+  color: #F5F0DD;
+}
+
+.moon footer section .wrapper #content .info .subscribe button:hover {
+  cursor: pointer;
+  background-color: #0C1244;
+}
+
+.moon footer section .wrapper #content .info > p {
+  line-height: 1.6;
+}
+
+.moon footer section .wrapper #content .info .icon {
+  margin-top: 60px;
+}
+
+.moon footer section .wrapper #content .info .icon img {
+  height: 40px;
+  margin-right: 40px;
+}
+
+/*
+moon 底下
+有換背景圖 url("../img/footer/moon/footer_bg_01.jpg")
+*/
+/* RWD 576px以下字型大小 */
+@media screen and (max-width: 575.98px) {
+  footer {
+    position: static;
+  }
+  footer section ul {
+    position: static;
+  }
+  footer section ul > li {
+    height: auto;
+  }
+  footer section ul > li:first-child {
+    display: none;
+  }
+  footer section ul > li:last-child {
+    width: 100%;
+  }
+  footer section .wrapper {
+    position: static;
+    width: 100%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    background-image: url("../img/footer/sun/footer_bg_01.jpg");
+    background-size: cover;
+    overflow: hidden;
+  }
+  footer section .wrapper #content {
+    padding-left: 0;
+    width: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer section .wrapper #content .info {
+    width: 100%;
+    margin-top: 10vh;
+  }
+  footer section .wrapper #content .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 15vh;
+  }
+  .moon footer {
+    position: static;
+  }
+  .moon footer section ul {
+    position: static;
+  }
+  .moon footer section ul > li {
+    height: auto;
+  }
+  .moon footer section ul > li:first-child {
+    display: none;
+  }
+  .moon footer section ul > li:last-child {
+    width: 100%;
+  }
+  .moon footer section .wrapper {
+    position: static;
+    width: 100%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    background-image: url("../img/footer/moon/footer_bg_01-2.jpg");
+    background-size: cover;
+  }
+  .moon footer section .wrapper #content {
+    padding-left: 0;
+    width: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .moon footer section .wrapper #content .info {
+    width: 100%;
+    margin-top: 10vh;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

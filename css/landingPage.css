@@ -1,0 +1,102 @@
+.landingPage {
+  color: #0C1244;
+}
+
+.landingPage header {
+  position: relative;
+}
+
+.landingPage header img {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.landingPage main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.landingPage main div {
+  position: relative;
+  min-width: 50%;
+}
+
+.landingPage main div h1 {
+  position: absolute;
+}
+
+.landingPage main div a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.landingPage main div svg {
+  width: 100%;
+}
+
+.landingPage main .landingPage_left {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #F5F0DD;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.landingPage main .landingPage_left div {
+  margin-right: 100px;
+}
+
+.landingPage main .landingPage_left div h1 {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.landingPage main .landingPage_right {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #0C1244;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage main .landingPage_right div {
+  margin-left: 100px;
+}
+
+.landingPage main .landingPage_right div h1 {
+  color: #FFBF44;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=landingPage.css.map */

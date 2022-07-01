@@ -1,0 +1,442 @@
+.allPage {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .allPage .bigimg {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .mobileimg {
+    display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .allPage h5 {
+    font-size: 16rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .allPage h5 {
+    font-size: 14rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage h5 {
+    font-size: 16rem;
+  }
+}
+
+.allPage span {
+  display: block;
+  font-size: 120rem;
+  font-weight: bolder;
+}
+
+@media (max-width: 1440px) {
+  .allPage span {
+    font-size: 90rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .allPage span {
+    font-size: 70rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage span {
+    font-size: 70rem;
+  }
+}
+
+.allPage .SeaItinerary {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(142, 173, 251, 0.65);
+  border-top: 49px solid rgba(8, 83, 125, 0.73);
+  border-left: 50px solid rgba(8, 83, 125, 0.73);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.allPage .SeaItinerary:hover #seaVideo {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary:hover #seaVideo {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary:hover #seaVideo {
+    display: none;
+  }
+}
+
+.allPage .SeaItinerary img {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.allPage .SeaItinerary video {
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary video {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary {
+    border-top: 25px solid rgba(8, 83, 125, 0.73);
+    border-left: 25px solid rgba(8, 83, 125, 0.73);
+    text-align: center;
+  }
+}
+
+@media (max-width: 1366px) {
+  .allPage .SeaItinerary {
+    border-top: 24px solid rgba(8, 83, 125, 0.73);
+    border-left: 24px solid rgba(8, 83, 125, 0.73);
+  }
+}
+
+.allPage .SeaItinerary span {
+  position: absolute;
+  top: 35%;
+  right: 17%;
+  color: #fff;
+  -webkit-transform: translate(-20%, -35%);
+          transform: translate(-20%, -35%);
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary span {
+    top: 25%;
+    right: 25%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary span {
+    right: 10%;
+    top: 36%;
+  }
+}
+
+.allPage .SeaItinerary h5 {
+  position: absolute;
+  top: 40%;
+  right: 37%;
+  color: #fff;
+}
+
+@media (max-width: 1366px) {
+  .allPage .SeaItinerary h5 {
+    top: 35%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .SeaItinerary h5 {
+    top: 36%;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage .SeaItinerary h5 {
+    top: 35%;
+    right: 0%;
+  }
+}
+
+.allPage .LandItinerary {
+  width: 50%;
+  height: 100%;
+  border-top: 49px solid #7A8D7C;
+  border-right: 50px solid #7A8D7C;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.allPage .LandItinerary:hover #landVideo {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary:hover #landVideo {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary:hover #landVideo {
+    display: none;
+  }
+}
+
+.allPage .LandItinerary img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.allPage .LandItinerary video {
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary video {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary video {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary {
+    border-top: 25px solid #7A8D7C;
+    border-right: 25px solid #7A8D7C;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1366px) {
+  .allPage .LandItinerary {
+    border-top: 24px solid #7A8D7C;
+    border-right: 24px solid #7A8D7C;
+  }
+}
+
+.allPage .LandItinerary span {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  -webkit-transform: translate(-20%, -35%);
+          transform: translate(-20%, -35%);
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary span {
+    top: 25%;
+    right: 10%;
+    -webkit-transform: translate(-10%, -25%);
+            transform: translate(-10%, -25%);
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary span {
+    top: 36%;
+    left: 15%;
+  }
+}
+
+.allPage .LandItinerary h5 {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  color: #fff;
+}
+
+@media (max-width: 1366px) {
+  .allPage .LandItinerary h5 {
+    top: 35%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .LandItinerary h5 {
+    top: 36%;
+    left: 34%;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage .LandItinerary h5 {
+    top: 35%;
+    left: 0%;
+  }
+}
+
+.allPage .packageTour {
+  position: absolute;
+  bottom: 0px;
+  -webkit-clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+          clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+  background-color: #FFE8BD;
+  border-bottom: 50px solid #FFDA91;
+  border-left: 50px solid #FFDA91;
+  border-right: 50px solid #FFDA91;
+  height: 50%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+.allPage .packageTour:hover #packVideo {
+  display: block;
+  z-index: 999;
+}
+
+@media (max-width: 576px) {
+  .allPage .packageTour:hover #packVideo {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour:hover #packVideo {
+    display: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .allPage .packageTour {
+    border-bottom: 24px solid #FFDA91;
+    border-left: 24px solid #FFDA91;
+    border-right: 24px solid #FFDA91;
+  }
+}
+
+.allPage .packageTour video {
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour video {
+    display: none;
+  }
+}
+
+.allPage .packageTour .mobileimg {
+  height: 100%;
+  width: 100%;
+}
+
+.allPage .packageTour img {
+  width: 100%;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.allPage .packageTour .Pagebox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.allPage .packageTour .Pagebox span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  color: #fff;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour .Pagebox span {
+    top: 35%;
+  }
+}
+
+.allPage .packageTour .Pagebox h5 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
+  color: #fff;
+  font-weight: bolder;
+}
+
+.allPage .packageTour .Pagebox h5:nth-Child(3) {
+  top: 80%;
+  left: 56%;
+  -webkit-transform: translate(-56%, -80%);
+          transform: translate(-56%, -80%);
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .allPage .packageTour .Pagebox h5:nth-Child(3) {
+    left: 57%;
+    top: 78%;
+  }
+}
+
+@media (max-width: 576px) {
+  .allPage .packageTour .Pagebox h5:nth-Child(3) {
+    left: 75%;
+    top: 70%;
+    -webkit-transform: translate(-75%, -70%);
+            transform: translate(-75%, -70%);
+  }
+}
+/*# sourceMappingURL=tripIndex.css.map */

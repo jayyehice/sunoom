@@ -29,6 +29,64 @@ function validate(){
     }
 }
 
+//以下是註冊頁的js
+new Vue({
+    el:'#register_region',
+
+    data:{
+        register_region_list:[],
+        last_name:"",
+        first_name:"",
+        phone:"",
+        email:"",
+        password:"",
+    },
+
+    methods:{
+        ftdregister(e){
+            e.preventDefault();
+
+            if(this.last_name.value ==="" || this.first_name ==="" || this.phone ==="" ||this.email ==="" ||this.password ===""){
+                alert('請填入姓名、電話、信箱、密碼')
+            }else{
+                const url=`./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
+                fetch(url)
+                .then(response => response.json())
+                .then(text =>{
+                    if(text === 'same'){
+                        alert('帳號已經註冊');
+                        this.hint='帳號已經註冊';
+                        this.error='error';
+                    }else{
+                        sessionStorage.setItem('id', text[0]['id']);
+                        sessionStorage.setItem('last_name', text[0]['last_name']);
+                        sessionStorage.setItem('first_name', text[0]['first_name']);
+                        sessionStorage.setItem('phone', text[0]['phone']);
+                        sessionStorage.setItem('email', text[0]['email']);
+
+                        window.location.href = 'member.html';
+                    }
+                })
+            }
+            // let url = `./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
+            // fetch(url)
+            //     .then(response => response.json())
+            //     .then(text => {})
+        }
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+//以下是登錄頁的js函式
 new Vue({
     el:'#login_region',
 
@@ -43,19 +101,43 @@ new Vue({
             e.preventDefault();
             let url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
             fetch(url)
-                // .then(response => response.json())
-                .then(response => console.log(response.json()))
+                .then(response => response.json())
+                // .then(response => console.log(response.json()))
                 // .then(text => this.login_region_list = text);
-                // .then(text => console.log(text));
+                .then(text => {
+                    if(this.account =='' || this.password == ''){
+                        // console.log('pptt');
+                        alert('請輸入帳號密碼');
+                    }else{
+                        const url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(text =>{
+                                console.log(text);
+
+                                if(text === 'false'){
+                                    alert('帳號或密碼錯誤');
+                                    this.hint='帳號或密碼錯誤';
+                                    this.error='error';
+                                }else{
+                                    sessionStorage.setItem('account',text[0]['account']);
+                                    sessionStorage.setItem('password',text[0]['password']);
+
+                                    window.location.href = 'member.html';
+                                }
+                            })
+                    }
+                });
                 // console.log(this.login_region)
+                
         },
     },
     compute:{},
     watch:{},
-
     create(){
    
     },
 
  
 })
+

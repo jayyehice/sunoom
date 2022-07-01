@@ -212,7 +212,6 @@ header .ham_member {
   }
 }
 header .hamLoginOut {
-  border: 1px solid red;
   color: #fff;
   position: absolute;
   right: 50px;

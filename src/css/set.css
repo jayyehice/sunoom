@@ -1,3 +1,11 @@
+#changeButton {
+  position: fixed;
+  z-index: 100;
+  top: 200px;
+  right: 200px;
+  cursor: pointer;
+}
+
 .set {
   background-color: #F5F0DD;
   color: #0C1244;
