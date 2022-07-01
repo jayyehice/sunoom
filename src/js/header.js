@@ -19,6 +19,7 @@ $(function(){
 
      // 禁止滾動
     //  $("body").addClass("overFlow");
+    $('html').css('overflow','hidden');
 
 
      // 點擊按鈕，選單縮放
@@ -59,7 +60,7 @@ $(function(){
     
      // 解開禁止滑動
     //  $("body").removeClass("overFlow");
-
+    $('html').removeAttr('style');
 
      // 點擊按鈕，選單縮放
      $("nav").slideToggle();
@@ -87,6 +88,13 @@ function imgSwitch(){
   }
 
 }
+
+
+function changeBtn(){
+  if($('#changeButton')[0]){
+    $('#changeButton')[0].click();
+  }
+}
   
   
 // 日按紐
@@ -101,7 +109,7 @@ function imgSwitch(){
       $(this).hide();
       $("#moonSwitch").show();
 
-      console.log($("body")[0].className);
+      // console.log($("body")[0].className);
       
 
 
@@ -125,7 +133,10 @@ function imgSwitch(){
       
 
       //照片切換 by Jay
-      imgSwitch()
+      imgSwitch();
+
+      //changeButton按鈕
+      changeBtn();
     });
 
 
@@ -154,6 +165,9 @@ function imgSwitch(){
       
       //照片切換 by Jay
       imgSwitch()
+
+      //changeButton按鈕
+      changeBtn();
     });
 
   });
@@ -169,68 +183,22 @@ $(function(){
 })
 
 
-// $(function(){
+//go top 按鈕
+$(function() {
+  /* 按下GoTop按鈕時的事件 */
+  $('#go_top').click(function(){
+      $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+      return false;
+  });
   
-//     // 按鈕狀態的切換
-//     $("button.hamburger_icon_moon").click(function(){
-//       $(this).toggleClass("-on");
-//       // 按鈕1消失
-//       $(this).hide();
-//       //header 兩個消失
-//       $(".headerCenter").hide();
-//       $(".headerRight").hide();
-
-
-//       $("button.btn2").toggleClass("-on");
-//       // 按鈕2出現
-//       $("button.btn2").show();
-
-//      // 禁止滾動
-//      $("body").addClass("overFlow");
-
-
-//     });
-    
-// });
-
-// // 按鈕2
-// $(function(){
-  
-//   // 按鈕狀態的切換
-//   $("button.btn2").click(function(){
-//     $(this).toggleClass("-on");
-//     // 按鈕2消失
-//     // $("button.btn2").hide();
-
-//     $("button.hamburger_icon_moon").toggleClass("-on");
-  
-  
-
-//     // 按鈕1出現
-//     // settimeout 0.5秒
-//    setTimeout(function(){
-//     $("button.hamburger_icon_moon").toggle();
-//     //header 兩個出現
-//     $(".headerCenter").toggle();
-//     $(".headerRight").toggle();
-    
-//    },500);
-  
-//    // 解開禁止滑動
-//    $("body").removeClass("overFlow");
-
-//   });
-// });
-
-
-// // 點擊按鈕，選單縮放
-// $("button.hamburger_icon_moon").click(function(){
-// $("nav").slideToggle();
-// // 點擊消失
-// // $(this).hide();
-// // 按鈕2出現
-// $("button.btn2").toggle();
-
-// });
-
-
+  /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+  $(window).scroll(function() {
+      let h =  document.body.scrollHeight*0.4;
+      if ( $(this).scrollTop() > h){
+        console.log(h);
+          $('#go_top').fadeIn();
+      } else {
+          $('#go_top').fadeOut();
+      }
+  });
+});

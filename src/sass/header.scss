@@ -437,5 +437,23 @@ header{
     }
   }
 
+
+  #go_top{
+    position: fixed;
+    z-index: 99;
+
+    // display: block;
+    display: none;
+    width: 70px;
+
+    right: 20px;
+    bottom: 50px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+
 }
 

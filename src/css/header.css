@@ -323,5 +323,16 @@ header .headerRight .switch #moonSwitch {
     transform: rotate(-90deg);
   }
 }
+header #go_top {
+  position: fixed;
+  z-index: 99;
+  display: none;
+  width: 70px;
+  right: 20px;
+  bottom: 50px;
+}
+header #go_top:hover {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=header.css.map */
