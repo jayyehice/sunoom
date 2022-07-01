@@ -12,6 +12,7 @@ Vue.component('shop',{
             principal:'',
             phone:'',
             status:true,
+            table_name: 'shop',
         }
     },
     methods: {
@@ -48,8 +49,6 @@ Vue.component('shop',{
             }
         },
         comfirm(e){
-            this.show_pop_up=false;
-
             let id = this.list[this.content][this.page][this.index][0];
             let island = 1;
             let status = 1;
@@ -83,6 +82,7 @@ Vue.component('shop',{
                     data: data,
                 })
             });
+            this.$emit('my-emit', this.table_name);
             this.show_pop_up=false;
         },
         cancle(e){

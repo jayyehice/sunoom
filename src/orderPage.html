@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>orderPage</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/orderPage.css">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/vue.js"></script>
+    <script src="./js/v-calendar.js"></script>
     @@include('./layout/header_footer_css_link.html')
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -21,7 +24,7 @@
     @@include('./layout/header.html')
     <header>
     </header>
-    <article>
+    <article id="app">
         <section>
             <h2>訂購流程</h2>
             <div class="shoppingProcess">
@@ -62,7 +65,7 @@
                     </li>
                     <li>
                         <h4>人數</h4>
-                        <div id="app" class="pepoleNums" >
+                        <div  class="pepoleNums" >
                             <img id="min" @click="min" src="./img/orderPage/sun/left_button.png">
                             <input id="pepoleNums" type="text" v-model.lazy="count" min="1">
                             <img id="add" @click="count+=1" src="./img/orderPage/sun/right_button.png">
@@ -74,11 +77,55 @@
                 <div class="pickerBox" >
                     <input type="text" name="dates" id="dateBooking">
                 </div>
+                <template>
+                    <!-- 月份選擇器，支持左右箭頭修改月份 -->
+                    
+                    <div class="calendar">
+                      <div class="calendar-header">
+                        <div class="year-picker">
+                          <span class="year-change" id="prev-year" @click="reduceMonth()">
+                            <pre><</pre>
+                          </span>
+                          <span id="year"
+                            >{{ time.year }}年{{ time.month + 1 > 9 ? time.month + 1 : '0' +
+                            (time.month + 1) }}月</span
+                          >
+                          <span class="year-change" id="next-year" @click="addMonth()">
+                            <pre>></pre>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="calendar-body">
+                        <div class="calendar-week-day">
+                          <div>日</div>
+                          <div>一</div>
+                          <div>二</div>
+                          <div>三</div>
+                          <div>四</div>
+                          <div>五</div>
+                          <div>六</div>
+                        </div>
+                        <div class="calendar-days">
+                          <!-- 日曆號 -->
+                          <div
+                            class="date"
+                            :class="[item.thisMonth, item.isToday, item.afterToday,item.beforeToday,{'active':item.active}]"
+                            v-for="(item, index) in visibleCalendar"
+                            :key="index"  :data-m="item.month" :data-d="item.day"
+                          >
+                            <div @click="startDay" @mouseenter="RangeHover" :data-m="item.month" :data-d="item.day">{{ item.day }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="month-list"></div>
+                    </div>
+                  </template>
             </div>
             <button id="NextPage">Next</button>
         </section> 
     </article>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./js/orderPage.js"></script>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')

@@ -1,0 +1,772 @@
+.set {
+  background-color: #F5F0DD;
+  color: #0C1244;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+}
+
+.set header {
+  border-top: 0.1px solid #F5F0DD;
+}
+
+.set main {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 579px) {
+  .set main {
+    line-height: 24rem;
+  }
+}
+
+.set main .wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper {
+    width: 479px;
+  }
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs {
+    margin: 50px 0 20px 0;
+    position: relative;
+  }
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs a {
+    text-align: center;
+    font-size: 24rem;
+    width: 185px;
+    line-height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.set main .wrapper .crumbs .setCrumbs1 {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs .setCrumbs1 {
+    display: inline-block;
+  }
+}
+
+.set main .wrapper .crumbs .setCrumbs2 {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs .setCrumbs2 {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.set main .wrapper .crumbs .setCrumbs2Text {
+  display: inline-block;
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs .setCrumbs2Text {
+    font-size: 24rem;
+    display: inline-block;
+    color: #F5F0DD;
+    position: absolute;
+    left: 230px;
+    top: 7px;
+  }
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .crumbs span:nth-child(2) {
+    display: none;
+  }
+}
+
+.set main .wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0C1244;
+}
+
+.set main p {
+  margin-top: 17px;
+}
+
+.set main h3 {
+  margin-top: 62px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 579px) {
+  .set main h3 {
+    font-size: 28rem;
+    display: none;
+  }
+}
+
+.set main .setTopNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 579px) {
+  .set main .setTopNav {
+    margin-bottom: 50px;
+  }
+}
+
+.set main .setTopNav .none {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set main .setTopNav .none {
+    display: block;
+  }
+}
+
+@media (max-width: 579px) {
+  .set main .setTopNav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.set main .setTopNav li:first-child {
+  margin-left: 0;
+}
+
+.set main .setTopNav li {
+  text-align: center;
+  margin-left: 50px;
+}
+
+@media (max-width: 579px) {
+  .set main .setTopNav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+  .set main .setTopNav li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 579px) {
+  .set main .setTopNav li a h4 {
+    display: none;
+  }
+}
+
+.set main .wrapper .setLogin {
+  display: block;
+  text-align: center;
+  font-size: 24rem;
+}
+
+@media (max-width: 579px) {
+  .set main .wrapper .setLogin {
+    line-height: 30px;
+  }
+}
+
+.set main .wrapper .setLogin .setSpeaker {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 10px;
+}
+
+.set main .setMain {
+  margin-top: 60px;
+  border: 1px solid #0C1244;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1080px;
+  height: 543px;
+  margin-bottom: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain {
+    margin-top: 50px;
+    width: 476px;
+    height: 810px;
+    display: block;
+    text-align: center;
+    border: 0;
+    position: relative;
+  }
+}
+
+.set main .setMain .setPic {
+  padding: 65px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setPic {
+    padding: 10px;
+  }
+}
+
+.set main .setMain .setPic > img {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setPic > img {
+    margin-bottom: 0;
+  }
+}
+
+.set main .setMain .setPic .setPicS > img:nth-child(2) {
+  margin: 0 7px;
+}
+
+.set main .setMain .setText {
+  display: block;
+  width: 471px;
+  height: 357px;
+  padding: 65px;
+  padding-left: 0;
+  position: relative;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText {
+    width: 430px;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+
+.set main .setMain .setText .setTextPic {
+  position: absolute;
+  right: 64px;
+  top: 130px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextPic {
+    width: 80px;
+    right: 20px;
+    top: 30px;
+  }
+}
+
+.set main .setMain .setText h4 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText h4 {
+    position: absolute;
+    right: 180px;
+    top: -280px;
+    font-weight: 800;
+  }
+}
+
+.set main .setMain .setText h5 {
+  margin-bottom: 20px;
+}
+
+.set main .setMain .setText .setTextTitle {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextTitle {
+    margin-bottom: 20px;
+  }
+}
+
+.set main .setMain .setText .setTextWord {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextWord {
+    margin-bottom: 20px;
+  }
+}
+
+.set main .setMain .setText .setTextWord2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.set main .setMain .setText .setTextBotm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.set main .setMain .setText .setTextBotm .stbS p {
+  margin: 0;
+}
+
+.set main .setMain .setText .setTextBotm .stbS a i {
+  color: #0C1244;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm .stbS {
+    margin-right: 70px;
+  }
+}
+
+.set main .setMain .setText .setTextBotm .setBook {
+  border: 1px solid #0C1244;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #0C1244;
+  background-color: #F5F0DD;
+}
+
+@media (max-width: 579px) {
+  .set main .setMain .setText .setTextBotm .setBook {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #F5F0DD;
+    border: 1.5px solid #F5F0DD;
+    background-color: #0C1244;
+  }
+}
+
+.set main .setMain .setText .setTextBotm .setBook:hover {
+  cursor: pointer;
+  color: #F5F0DD;
+  border: 1.5px solid #F5F0DD;
+  background-color: #0C1244;
+}
+
+.set main .setMain:last-child {
+  margin-bottom: 100px;
+}
+
+.set_moon {
+  background-color: #0C1244;
+  color: #F5F0DD;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+}
+
+.set_moon header {
+  border-top: 0.1px solid #0C1244;
+}
+
+.set_moon main {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main {
+    line-height: 24rem;
+  }
+}
+
+.set_moon main .wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper {
+    width: 479px;
+  }
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs {
+    margin: 50px 0 20px 0;
+    position: relative;
+  }
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs a {
+    text-align: center;
+    font-size: 24rem;
+    width: 185px;
+    line-height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.set_moon main .wrapper .crumbs .setCrumbs1 {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs .setCrumbs1 {
+    display: inline-block;
+  }
+}
+
+.set_moon main .wrapper .crumbs .setCrumbs2 {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs .setCrumbs2 {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.set_moon main .wrapper .crumbs .setCrumbs2Text {
+  display: inline-block;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs .setCrumbs2Text {
+    font-size: 24rem;
+    display: inline-block;
+    color: #0C1244;
+    position: absolute;
+    left: 230px;
+    top: 7px;
+  }
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .crumbs span:nth-child(2) {
+    display: none;
+  }
+}
+
+.set_moon main .wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  color: #F5F0DD;
+}
+
+.set_moon main p {
+  margin-top: 17px;
+}
+
+.set_moon main h3 {
+  margin-top: 62px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main h3 {
+    font-size: 28rem;
+    display: none;
+  }
+}
+
+.set_moon main .setTopNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setTopNav {
+    margin-bottom: 50px;
+  }
+}
+
+.set_moon main .setTopNav .none {
+  display: none;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setTopNav .none {
+    display: block;
+  }
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setTopNav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.set_moon main .setTopNav li:first-child {
+  margin-left: 0;
+}
+
+.set_moon main .setTopNav li {
+  text-align: center;
+  margin-left: 50px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setTopNav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+    margin-right: 40px;
+  }
+  .set_moon main .setTopNav li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setTopNav li a h4 {
+    display: none;
+  }
+}
+
+.set_moon main .wrapper .setLogin {
+  display: block;
+  text-align: center;
+  font-size: 24rem;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .wrapper .setLogin {
+    line-height: 30px;
+  }
+}
+
+.set_moon main .wrapper .setLogin .setSpeaker {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 10px;
+}
+
+.set_moon main .setMain {
+  margin-top: 60px;
+  border: 1px solid #F5F0DD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1080px;
+  height: 543px;
+  margin-bottom: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain {
+    margin-top: 50px;
+    width: 476px;
+    height: 810px;
+    display: block;
+    text-align: center;
+    border: 0;
+    position: relative;
+  }
+}
+
+.set_moon main .setMain .setPic {
+  padding: 65px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic {
+    padding: 10px;
+  }
+}
+
+.set_moon main .setMain .setPic > img {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setPic > img {
+    margin-bottom: 0;
+  }
+}
+
+.set_moon main .setMain .setPic .setPicS > img:nth-child(2) {
+  margin: 0 7px;
+}
+
+.set_moon main .setMain .setText {
+  display: block;
+  width: 471px;
+  height: 357px;
+  padding: 65px;
+  padding-left: 0;
+  position: relative;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText {
+    width: 430px;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+
+.set_moon main .setMain .setText .setTextPic {
+  position: absolute;
+  right: 64px;
+  top: 130px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextPic {
+    width: 80px;
+    right: 20px;
+    top: 30px;
+  }
+}
+
+.set_moon main .setMain .setText h4 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText h4 {
+    position: absolute;
+    right: 180px;
+    top: -280px;
+    font-weight: 800;
+  }
+}
+
+.set_moon main .setMain .setText h5 {
+  margin-bottom: 20px;
+}
+
+.set_moon main .setMain .setText .setTextTitle {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextTitle {
+    margin-bottom: 20px;
+  }
+}
+
+.set_moon main .setMain .setText .setTextWord {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextWord {
+    margin-bottom: 20px;
+  }
+}
+
+.set_moon main .setMain .setText .setTextWord2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.set_moon main .setMain .setText .setTextBotm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.set_moon main .setMain .setText .setTextBotm .stbS p {
+  margin: 0;
+}
+
+.set_moon main .setMain .setText .setTextBotm .stbS a i {
+  color: #F5F0DD;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .stbS {
+    margin-right: 70px;
+  }
+}
+
+.set_moon main .setMain .setText .setTextBotm .setBook {
+  border: 1px solid #F5F0DD;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #F5F0DD;
+  background-color: #0C1244;
+}
+
+@media (max-width: 579px) {
+  .set_moon main .setMain .setText .setTextBotm .setBook {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0C1244;
+    border: 1.5px solid #0C1244;
+    background-color: #F5F0DD;
+  }
+}
+
+.set_moon main .setMain .setText .setTextBotm .setBook:hover {
+  cursor: pointer;
+  color: #0C1244;
+  border: 1.5px solid #0C1244;
+  background-color: #F5F0DD;
+}
+
+.set_moon main .setMain:last-child {
+  margin-bottom: 100px;
+}
+/*# sourceMappingURL=set.css.map */

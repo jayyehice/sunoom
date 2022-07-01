@@ -1,0 +1,70 @@
+@charset "UTF-8";
+html {
+  font-size: 6.25%;
+  font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
+  color: #0C1244;
+}
+
+body {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  letter-spacing: 3rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 48rem;
+}
+
+h2 {
+  font-size: 40rem;
+}
+
+h3 {
+  font-size: 32rem;
+}
+
+h4 {
+  font-size: 24rem;
+}
+
+h5 {
+  font-size: 20rem;
+}
+
+h6 {
+  font-size: 12rem;
+}
+
+p {
+  font-size: 16rem;
+}
+
+/* RWD 576px以下字型大小 */
+@media screen and (max-width: 575.98px) {
+  h1 {
+    font-size: 40rem;
+  }
+  h2 {
+    font-size: 36rem;
+  }
+  h3 {
+    font-size: 28rem;
+  }
+  h4 {
+    font-size: 24rem;
+  }
+  h5 {
+    font-size: 20rem;
+  }
+  h6 {
+    font-size: 12rem;
+  }
+  p {
+    font-size: 16rem;
+  }
+}
+/*# sourceMappingURL=common.css.map */
