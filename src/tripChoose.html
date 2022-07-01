@@ -49,7 +49,7 @@
             <h3>2.選擇行程</h3>
             <div class="datePickerBox">
                 <div @click="day(date,index);ChooseReturn(index,$event)" class="daysbutton" v-for="(date,index) in dateArray"> 
-                    <select class="setChooseList" @change="setChoose($event.target.value,$event,index)" @click ="setChoose($event.target.value,$event)">
+                    <select class="setChooseList" @change="setChoose($event.target.value,$event,index)" @click ="setChoose($event.target.value,$event,index)">
                         <option value="">選擇行程</option>
                         <option value="-1">自由選擇</option>
                         <option v-for="(set,index,event) in set_list" :value="index">{{set[4]}}</option>

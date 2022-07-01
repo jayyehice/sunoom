@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
             discount_list:[],
             //選擇日期
             newDay:'',
-            dayindex:'',
+            dayindex:0,
 
             //訂單明細總表
             //上午
@@ -295,7 +295,7 @@ window.addEventListener('load',function(){
                 // console.log($(eg).parent().text().substring(0,4));
                 this.newDay = $(eg).parent().find('p').text()
 
-
+                this.dayindex = index
                 // let setChooseList = document.getElementsByClassName('setChooseList')
                 // let SendChoose = document.getElementsByClassName('SendChoose')
 
@@ -1026,9 +1026,9 @@ window.addEventListener('load',function(){
                 }
                 e.stopPropagation();
             },
-            stopPropagation(e){
-                
-                e.stopPropagation();
+            stopPropagation(e,index){
+                // this.dayindex = index
+                // e.stopPropagation();
 
             },
             //套餐加入訂單
@@ -1540,7 +1540,7 @@ window.addEventListener('load',function(){
                 addItineraryM.addEventListener('click',()=>{
                     if(this.newDay !== ''  ){
                         for(let i = 0; i < this.dateArray.length ;i++ ){
-                            console.log( setChooseList[i].value);
+                            console.log(this.dayindex);
                             if(this.dayindex == i ){
                                 tripMorningName[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
                                 tripMorningPrice[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
@@ -2138,7 +2138,7 @@ window.addEventListener('load',function(){
             // let tripEveningName = document.getElementsByClassName('tripEveningName');
             // let tripEveningPrice = document.getElementsByClassName('tripEveningPrice');
             // let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
-            // let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR');
+            // let tripEveningPriceR = document.getElementsByClassName('tripEveningPriceR'); 
 
             // let FoodMorningName = document.getElementsByClassName('FoodMorningName');
             // let FoodMorningPrice = document.getElementsByClassName('FoodMorningPrice');

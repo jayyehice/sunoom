@@ -133,6 +133,7 @@
     }
     section{
         h2{
+            margin-top: 50px;
             text-align: center;
         }
         h3{
@@ -1599,6 +1600,20 @@
     @import 'base/moonColorSwitch';
     background-color:$sun_color;
     color: $moon_color;
+    .dayclick{
+        background-color: $moon_color !important;
+        color: $sun_color;
+    }
+    .buttonBorderTop{
+        border-top: 1px solid $sun_color !important;
+        
+    }
+    .buttonBorderBottom{
+        border-bottom: 1px solid $sun_color !important;
+    }
+    .weekCircularMoon{
+        border: 1px solid $sun_color !important;
+    }
     select{
         background-color: $sun_color;
         border: 1px solid $moon_color;
@@ -1626,6 +1641,7 @@
         font-size: 16px;
         border-radius: 22px;
         opacity: 0;
+        z-index: -999;
         .fa-regular{
             margin-left: 10px;
         }
@@ -1651,12 +1667,14 @@
     }
     section{
         h2{
+            margin-top: 50px;
             text-align: center;
         }
         h3{
             text-align: center;
             margin: 50px 0;
         }
+
     }
     .shoppingProcess{
         width: 1180px;
@@ -1689,45 +1707,69 @@
     }
     //日期區塊
     .datePickerBox{
-        width:980px;
-        height: auto;
-        margin: 50px auto;
-        // border: 1px solid $moon_color;
-        position: relative;
-
-        .dateTitle{
-            p{
-                margin: 20px;
-                
-            }
-            i{
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                right: 20px;
-                top: 20px;
-                
-            }
-        }
-        .pickerBox{
+        width:1280px;
+        margin: 0px auto;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        background-color: $sun_color;
+        z-index: 4;
+        .daysbutton{
+            display: inline-block;
+            width: 160px;
+            margin: 10px;
+            font-size: 16px;
+            transition: all 2s;
             text-align: center;
-            width: 100%;
-            // border-top: 1px solid $moon_color;
             display: flex;
-            flex-wrap: wrap;
-            .daysbutton{
-                width: 130px;
-                margin: 5px;
-                font-size: 16px;
-                img{
-                    width: 90px;
-                }
-                select{
-                    width: 115px;
-                }
-                
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            border: 1px solid $moon_color;
+            background-color: $sun_color;
+
+            .SendChoose{
+                width: 160px;
+                height: 30px;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                font-size: 16rem;
+                cursor: pointer;
             }
-        }
+            select{
+                width: 160px;
+                height: 30px;
+                font-size: 16rem;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                cursor: pointer;
+            }
+            .DateAndWeek{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                h3{
+                    margin: 0px;
+                }
+                .weekCircular{
+                    width: 30px;
+                    height:30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                    border-radius: 999em;
+                    border: 1px solid $moon_color;
+                    margin-right: 5px;
+
+                }
+            }
+            p{
+                letter-spacing: 4px;
+                cursor: pointer;
+            }
+
+        } 
 
     }
     .ListSmall{
@@ -1744,6 +1786,7 @@
         top: 10%;
         font-size: 20px;
         text-align: center;
+        z-index: 100;
         cursor: pointer;
         .circle{
             width: 20px;
@@ -1767,7 +1810,7 @@
         top: 0%;
         position: fixed;
         display: none;
-        z-index: 1;
+        z-index: 100;
         overflow-y: auto;
         span{
             font-weight: bolder;
@@ -1868,6 +1911,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                line-height: 25px;
                 span{
                     font-size: 16px;
                 }
@@ -1877,14 +1921,20 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                line-height: 20.5px;
+                line-height: 0px;
                 text-align: center;
+                line-height: 25px;
                 span{
                     font-size: 20px;
                     color: #FFBF44;
+                    // padding-top: 8px;
+                }
+                select{
+                    text-align: center;
                 }
                 #couponPrice{
                     color: #FF4444;
+                    
                 }
             }
         }
@@ -1897,6 +1947,33 @@
         margin: 50px auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+
+
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
 
         .itineraryTitle{
             display: flex;
@@ -1904,6 +1981,7 @@
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
@@ -1976,7 +2054,7 @@
             #addItineraryM{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2037,7 +2115,7 @@
             #addItineraryN{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2099,8 +2177,7 @@
         #addItineraryE{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
-            cursor: not-allowed;
+            opacity: 0;
             transition: all 1s;
         }
     }
@@ -2112,12 +2189,38 @@
         margin: 0 auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
         .foodTitle{
             display: flex;
             justify-content: center;
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
@@ -2184,7 +2287,7 @@
             #addFoodM{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2244,7 +2347,7 @@
             #addFoodN{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2306,7 +2409,7 @@
         #addFoodE{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
+            opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
         }
@@ -2319,12 +2422,38 @@
         margin: 50px auto;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
         .stayTitle{
             display: flex;
             justify-content: center;
             position: relative;
             height: 66px;
             align-items: center;
+            z-index: -1;
             .chooseDate{
                 position: absolute;
                 right: 10%;
@@ -2391,7 +2520,7 @@
             #addcabin{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2456,7 +2585,7 @@
             #addCamping{
                 width: 35px;
                 height: 35px;
-                opacity: 0.1;
+                opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
             }
@@ -2523,32 +2652,480 @@
         #addVilla{
             width: 35px;
             height: 35px;
-            opacity: 0.1;
+            opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
         }
     }
-    #NextPage{
-        display: block;
-        width: 140px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        background-color:$sun_color;
-        border:1px solid $moon_color;
+    .buttonBlock1{
+        width: 300px;
         margin: 50px auto;
-        @include mobile{
-            width: 300px;
-            border-radius: 30px;
-            margin-top: 20px;
-            margin-bottom: 50px;
+        display: flex;
+        #backToDatePage{
+            display: block;
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:$sun_color;
+            border:1px solid $moon_color;
+            margin-right: 20px;
+            @include mobile{
+                width: 300px;
+                border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            &:hover{
+                color:$sun_color;
+                background-color:$moon_color;
+                border:1px solid $sun_color;
+            }
         }
-        &:hover{
-            color:$sun_color;
-            background-color:$moon_color;
-            border:1px solid $sun_color;
+    
+        #NextPage{
+            display: block;
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:$sun_color;
+            border:1px solid $moon_color;
+            @include mobile{
+                width: 300px;
+                border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            &:hover{
+                color:$sun_color;
+                background-color:$moon_color;
+                border:1px solid $sun_color;
+            }
         }
     }
 
-
+    #readyToPay{
+        background-color: $sun_color;
+        color: $moon_color;
+        display: none;
+        select{
+            border: 1px solid $moon_color;
+            color: $moon_color;
+            background-color: $sun_color;
+        }
+        input{
+            border: 1px solid $moon_color;
+            color: $moon_color;
+            background-color: $sun_color;
+        }
+        button{
+            color: $moon_color;
+        }
+        @mixin circle{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid $moon_color;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h4:last-Child{
+                margin-bottom: 20px;
+                @include mobile{
+                    margin-bottom: 10px;
+                }
+            }
+            @include mobile{
+                width: 75px;
+                height: 75px;
+                h4{
+                    font-size: 16px;
+                }
+            }
+        };
+        section{
+            h2{
+                text-align: center;
+                margin-top: 50px;
+                @include mobile{
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                }
+            }
+            h3{
+                text-align: center;
+                margin: 50px 0;
+            }
+        }
+        .shoppingProcess{
+            width: 1180px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:  0 auto;
+            @include mobile{
+                width: 98%;
+                height: 75px;
+                justify-content: space-between;
+            }
+            img{
+                width: 80px;
+                height: 24px;
+                margin: 0 40px;
+                @include mobile{
+                    display: none;
+                }
+            }
+            .chooseAdateR{
+                @include circle;
+            }
+            .chooseAtripR{
+                @include circle;
+            }
+            .tallyOrderR{
+                @include circle;
+                background-color: $moon_color;
+                color:$sun_color
+            }
+            .orderCompleteR{
+                @include circle;
+            }
+            //步驟區塊結束
+        }
+    
+    
+        .readyToPayBigList{
+            width: 1000px;
+            height: auto;
+            border:2px solid $moon_color;
+            margin: 50px auto;
+            @include mobile{
+                width: 98%;
+                height: 100%
+            }
+            .readyToPayListTitle{
+                margin: 0px auto;
+                width: 980px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: $moon_color;
+                color: $sun_color;
+                font-size: 20px;
+                @include mobile{
+                    width: 98%;
+                    height: 100%;
+    
+                }
+            }
+            .readyToPayListDate{
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                margin: 20px;
+                @include mobile{
+                    margin: 10px;
+                }
+    
+                li{
+                    margin-right: 20px;
+                    font-size: 16px;
+                    font-weight: bolder;
+                    display: flex;
+                    align-items: center;
+                    @include mobile{
+                        margin-right: 7px;
+        
+                    }
+                }
+                li:first-Child{
+                    font-weight: bolder;
+                    font-size: 16px;
+                }
+                
+            }
+            table{
+                width: 99%;
+                height: auto;
+                margin: 0 auto;
+                align-content: center;
+                border: 1px solid $moon_color;
+                th{
+                    height: 50px;
+                    line-height: 50px;
+                    font-weight: bolder;
+                    border: 1px solid $moon_color;
+                }
+                td{
+                    border: 1px solid $moon_color;
+                    height: 100px; 
+                    vertical-align:middle;
+                }
+                td:first-child{
+                    text-align: center;
+                    vertical-align:middle;
+                }
+                ul{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    // grid-auto-rows: 33px;
+                    // display: flex;
+                    // text-align: center;
+                    // justify-content: space-between;
+                    @include mobile{
+                        display: block;
+                    }
+                    li{
+                        margin: 7px;
+                        text-align: center;
+                        i{
+                            margin-left: 5px;
+                        }
+                    }
+                    li:last-child{
+                        color: #FFBF44;
+                        border-left: none;
+                    }
+                }
+            }
+            .readyToPayTotalBlock{
+                margin:  40px 20px;
+                display: flex;
+                justify-content:flex-end;
+                align-content: center;
+                height: 150px;
+                .readyToPayTotalTitle{
+                    font-weight: bolder;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 19.5px;
+                }
+                .readyToPayTotalPrice{
+                    font-weight: bolder;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    line-height: 12px;
+                    text-align: center;
+                    span{
+                        color: #FFBF44;
+                        font-size: 20px;
+                    }
+                    #readyToPayCouponPrice{
+                        color: #FF4444;
+                    }
+                }
+            
+            }
+        }
+        .payBlock{
+            width: 750px;
+            margin: 0 auto;
+            @include mobile{
+                width: 98%;
+                height: 100%
+            }
+            
+            h5{
+                margin-top: 15px;
+            }
+            #payEmail{
+                width: 450px;
+                height: 50px;
+                background-color: $sun_color;
+                font-size: 24px;
+                @include mobile{
+                    width: 90%;
+                }
+                
+            }
+            .mailAndPhone{
+                display: flex;
+                @include mobile{
+                    display: block;
+                }
+                .email{
+                    margin-right: 50px;
+                    @include mobile{
+                        margin-right: 0;
+                    }
+                }
+            }
+            #payPhoneNumber{
+                width: 200px;
+                height: 50px;
+                background-color: $sun_color;
+                font-size: 24px;
+            }
+            .nameBlock{
+                display: flex;
+                align-items: center;
+                padding-bottom: 40px;
+                @include mobile{
+                    padding-bottom: 0px;
+                }
+                .firstName{
+                    margin-right: 50px;
+                    @include mobile{
+                        margin-right: 10px;
+                    }
+                }
+                #firstName{
+                    width: 200px;
+                    height: 50px;
+                    background-color: $sun_color;
+                    font-size: 20px;
+                    @include mobile{
+                        width: 150px;
+                    }
+                }
+                .lastName{
+                    margin-right: 50px;
+                    @include mobile{
+                        margin-right: 0px;
+                    }
+                    
+                }
+                #lastName{
+                    width: 200px;
+                    height: 50px;
+                    background-color: $sun_color;
+                    font-size: 20px;
+                    @include mobile{
+                        margin-right: 0px;
+                        width: 180px;
+                    }
+                }
+                .payWay{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                #payWay{
+                    width: 200px;
+                    height: 50px;
+                    background-color: $sun_color;
+                    font-size: 20px;
+                    text-align: center;
+                    text-align-last:center
+                }
+    
+            }
+            .payWayMobile{
+                display: none;
+                margin-bottom: 20px;
+                @include mobile{
+                    display: block;
+                    #payWayMobileUse{
+                        width: 200px;
+                        height: 50px;
+                        background-color: $sun_color;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+            .creditCardBlock{
+                margin-top: 50px;
+                border-top: 1px solid $moon_color;
+                input{
+                    width: 150px;
+                    height: 50px;
+                    background-color: $sun_color;
+                    @include mobile{
+                        width: 70px;
+                        height: 40px;
+                    }
+                }
+                h4{
+                    width: 150px;
+                    height: 50px;
+                    background-color: $moon_color;
+                    color: $sun_color;
+                    text-align: center;
+                    line-height: 50px;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+                .creditCardNums{
+                    
+                    input{
+                        margin-right: 5px;
+                        text-align: center;
+                    }
+                }
+                .expAndScode{
+                    display: flex;
+                    margin-bottom: 20px;
+                    .exp{
+                        margin-right: 16px;
+                    }
+                }
+    
+            }
+            .directions{
+                .agreeListOne{
+                    display: flex;
+                    margin-top: 20px;
+                }
+                .agreeListTwo{
+                    display: flex;
+                    margin: 20px 0;
+                }
+            }
+        }
+        .buttonBlock{
+            width: 300px;
+            margin: 50px auto;
+            display: flex;
+            .backToChoosePage{
+                display: block;
+                width: 140px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color:$sun_color;
+                border:1px solid $moon_color;
+                margin-right: 20px;
+                @include mobile{
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+                &:hover{
+                    color:$sun_color;
+                    background-color:$moon_color;
+                    border:1px solid $sun_color;
+                }
+            }
+            #FinishPage{
+                display: block;
+                width: 140px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color:$sun_color;
+                border:1px solid $moon_color;
+                @include mobile{
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+                &:hover{
+                    color:$sun_color;
+                    background-color:$moon_color;
+                    border:1px solid $sun_color;
+                }
+            }
+        }
+    
+    }
+    
 }
