@@ -114,7 +114,7 @@
 .land_tour main .banner .schedule-wrapper .event-item .chName {
   position: relative;
   line-height: 1;
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 3px;
   text-align: center;
   text-shadow: gray 5px 5px 5px;
@@ -555,55 +555,185 @@
 .land_tour_moon main .banner {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/land_tour/sun/top_banner.jpg);
+  background-image: url(../img/land_tour/moon/top_banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  /* 轉場黑幕 */
 }
-.land_tour_moon main .banner .mask {
-  width: 100%;
+.land_tour_moon main .banner .progress-ring-wrapper {
+  position: relative;
+  top: 45px;
+  display: flex;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0px;
-  left: 0px;
 }
-.land_tour_moon main .banner .progress-ring,
-.land_tour_moon main .banner .progress-bg {
+.land_tour_moon main .banner .progress-ring-wrapper .progress-ring {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 外框活動文字 */
+}
+.land_tour_moon main .banner .progress-ring-wrapper .progress-ring .progress-ring__background-circle {
+  stroke: white;
+  stroke-width: 1.5;
+  fill: transparent;
+}
+.land_tour_moon main .banner .progress-ring-wrapper .progress-ring .progress-ring__circle {
+  stroke: #d5a655;
+  stroke-width: 4;
   position: absolute;
-  top: 60%;
+  fill: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.land_tour_moon main .banner .progress-ring-wrapper .progress-ring .time-label {
+  fill: white;
+  font-weight: bold;
+  text-shadow: gray 0.5px 0.5px 0.5px;
+  font-size: 16px;
+}
+.land_tour_moon main .banner .schedule-wrapper {
+  z-index: 2;
+  position: absolute;
+  top: calc(50% + 45px);
   left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 500px;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-.land_tour_moon main .banner .progress-ring_circle {
-  transition: 0.35s stroke-dashoffset;
-  transform-origin: 50% 50%;
-}
-.land_tour_moon main .banner .progress-bg .progress-ring_circle {
-  color: #0C1244;
-}
-.land_tour_moon main .banner .progress-ring .progress-ring_circle {
-  color: #F5F0DD;
-}
-.land_tour_moon main .banner ul {
-  width: 100%;
-  height: 100%;
+.land_tour_moon main .banner .schedule-wrapper .event-item {
   position: relative;
-}
-.land_tour_moon main .banner ul li {
-  display: flex;
+  /* flex-flow:column wrap; */
+  justify-content: center;
   align-items: center;
-  color: #0C1244;
-  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  line-height: 1;
+  opacity: 1;
+  /* THE OCEAN */
+  /* 中文名 */
+  /* 英文名 */
+  /* 探索活動 */
 }
-.land_tour_moon main .banner ul li::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: #0C1244;
-  border-radius: 50%;
-  margin-right: 20px;
+.land_tour_moon main .banner .schedule-wrapper .event-item .ocean {
+  color: white;
+  position: absolute;
+  /* top: -65px; */
+  top: 135px;
+  width: 100%;
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: gray 2px 2px 2px;
+  opacity: 1;
+  /* visibility: inherit; */
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .ocean1 {
+  top: -65px;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .chName {
+  position: relative;
+  line-height: 1;
+  font-size: 80px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: gray 5px 5px 5px;
+  /* color:#d5a655; */
+  color: white;
+  opacity: 1;
+  top: 200px;
+  /* visibility: inherit; */
+  animation-fill-mode: backwards;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .chName1 {
+  top: 0px;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .enName {
+  color: white;
+  position: absolute;
+  /* top: 100px; */
+  top: 300px;
+  width: 100%;
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: gray 2px 2px 2px;
+  opacity: 1;
+  /* visibility: inherit; */
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .enName1 {
+  top: 100px;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .discover {
+  position: absolute;
+  /* top:150px; */
+  top: 350px;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: gray 2px 2px 2px;
+  width: 100%;
+  color: white;
+  opacity: 1;
+  /* visibility: inherit; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .discover1 {
+  top: 150px;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item .discover:hover {
+  opacity: 0.5 !important;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item2 {
+  display: none;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item3 {
+  display: none;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item4 {
+  display: none;
+}
+.land_tour_moon main .banner .schedule-wrapper .event-item5 {
+  display: none;
+}
+.land_tour_moon main .banner .blackCover {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.land_tour_moon main .bg2 {
+  background-image: url("../img/land_tour/moon/top_banner2.jpg");
+}
+.land_tour_moon main .bg3 {
+  background-image: url("../img/land_tour/moon/top_banner3.jpg");
+}
+.land_tour_moon main .bg4 {
+  background-image: url("../img/land_tour/moon/top_banner4.jpg");
+}
+.land_tour_moon main .bg5 {
+  background-image: url("../img/land_tour/moon/top_banner5.jpg");
 }
 .land_tour_moon main .breadcrumbs .wrapper {
   width: 1070px;

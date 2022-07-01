@@ -134,7 +134,7 @@
                     .chName {
                         position: relative;
                         line-height: 1;
-                        font-size: 80px;
+                        font-size: 60px;
                         letter-spacing: 3px;
                         text-align: center;
                         text-shadow: gray 5px 5px 5px;
@@ -753,79 +753,223 @@
         .banner {
             width: 100%;
             height: 100vh;
-            background-image: url(../img/land_tour/sun/top_banner.jpg);
+            background-image: url(../img/land_tour/moon/top_banner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
+            display: flex;
+            justify-content: center;
 
-            .mask {
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, .3);
-                position: absolute;
-                top: 0px;
-                left: 0px;
-            }
-
-            .progress-ring,
-            .progress-bg {
-                position: absolute;
-                top: 60%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                // border: 1px solid #fff;
-            }
-
-            .progress-ring_circle {
-                transition: 0.35s stroke-dashoffset;
-                transform-origin: 50% 50%;
-                // transform: rotate(-90deg);
-
-
-            }
-
-            .progress-bg {
-                .progress-ring_circle {
-                    color: $sun_color;
-                }
-
-            }
-
-            .progress-ring {
-                .progress-ring_circle {
-                    color: $moon_color;
-                }
-
-            }
-
-            ul {
-                width: 100%;
-                height: 100%;
+            // 時鐘
+            .progress-ring-wrapper {
                 position: relative;
+                top: 45px;
+                display: flex;
+                // justify-content:center;
+                // align-items:center;
+                height: 100%;
 
-                li {
-                    display: flex;
+                // svg
+                .progress-ring {
+                    z-index: 2;
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+
+                    // 大圈圈
+                    .progress-ring__background-circle {
+                        stroke: white;
+                        stroke-width: 1.5;
+                        fill: transparent;
+                    }
+
+                    // 流動線圈
+                    .progress-ring__circle {
+                        stroke: #d5a655;
+                        stroke-width: 4;
+                        position: absolute;
+                        fill: transparent;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    // 時鐘上的五個點
+                    .progress-ring__point {}
+
+                    /* 外框活動文字 */
+                    .time-label {
+                        fill: white;
+                        font-weight: bold;
+                        text-shadow: gray 0.5px 0.5px 0.5px;
+                        font-size: 16px;
+                    }
+
+                }
+            }
+
+            // 時鐘中心文字
+            .schedule-wrapper {
+                z-index: 2;
+                position: absolute;
+                top: calc(50% + 45px);
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 400px;
+                height: 100%;
+                max-height: 500px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+
+                // 中心文字共用
+                .event-item {
+                    position: relative;
+                    /* flex-flow:column wrap; */
+                    justify-content: center;
                     align-items: center;
-                    color: $sun_color;
-                    position: absolute;
+                    width: 100%;
+                    max-width: 400px;
+                    line-height: 1;
+                    opacity: 1;
 
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: 16px;
-                        height: 16px;
-                        background-color: $sun_color;
-                        border-radius: 50%;
+                    /* THE OCEAN */
+                    .ocean {
+                        color: white;
+                        position: absolute;
+                        /* top: -65px; */
+                        top: 135px;
+                        width: 100%;
+                        font-size: 32px;
+                        letter-spacing: 3px;
+                        font-weight: lighter;
+                        text-transform: uppercase;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                    }
 
-                        margin-right: 20px;
+                    .ocean1 {
+                        top: -65px;
+                    }
 
+                    /* 中文名 */
+                    .chName {
+                        position: relative;
+                        line-height: 1;
+                        font-size: 80px;
+                        letter-spacing: 3px;
+                        text-align: center;
+                        text-shadow: gray 5px 5px 5px;
+                        /* color:#d5a655; */
+                        color: white;
+                        opacity: 1;
+                        top: 200px;
+                        /* visibility: inherit; */
+                        animation-fill-mode: backwards;
+                    }
+
+                    .chName1 {
+                        top: 0px;
+                    }
+
+                    /* 英文名 */
+                    .enName {
+                        color: white;
+                        position: absolute;
+                        /* top: 100px; */
+                        top: 300px;
+                        width: 100%;
+                        font-size: 32px;
+                        letter-spacing: 3px;
+                        font-weight: lighter;
+                        text-transform: uppercase;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                    }
+
+                    .enName1 {
+                        top: 100px;
+                    }
+
+                    /* 探索活動 */
+                    .discover {
+                        position: absolute;
+                        /* top:150px; */
+                        top: 350px;
+                        font-size: 16px;
+                        text-align: center;
+                        text-shadow: gray 2px 2px 2px;
+                        width: 100%;
+                        color: white;
+                        opacity: 1;
+                        /* visibility: inherit; */
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        -webkit-transition: all .3s;
+                        transition: all .3s
+                    }
+
+                    .discover1 {
+                        top: 150px;
+                    }
+
+                    .discover:hover {
+                        opacity: 0.5 !important
                     }
                 }
 
+                .event-item2 {
+                    display: none;
+                }
 
+                .event-item3 {
+                    display: none;
+                }
+
+                .event-item4 {
+                    display: none;
+                }
+
+                .event-item5 {
+                    display: none;
+                }
 
 
             }
+
+            /* 轉場黑幕 */
+            .blackCover {
+                position: absolute;
+                background-color: #000;
+                opacity: 0.3;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+        }
+
+        // 背景圖輪播用
+        .bg2{
+            background-image: url("../img/land_tour/moon/top_banner2.jpg");
+        }
+        .bg3{
+            background-image: url("../img/land_tour/moon/top_banner3.jpg");
+        }
+        .bg4{
+            background-image: url("../img/land_tour/moon/top_banner4.jpg");
+        }
+        .bg5{
+            background-image: url("../img/land_tour/moon/top_banner5.jpg");
         }
 
         .breadcrumbs {
