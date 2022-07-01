@@ -49,7 +49,7 @@
                             <a v-if="authority > 5" id="order" data-type="order_table" @click="navClick">訂單管理</a>
                             <a v-if="authority > 5" id="activity" data-type="activity" @click="navClick">活動管理</a>
                             <a v-if="authority > 5" id="shop" data-type="shop" @click="navClick">餐廳管理</a>
-                            <a v-if="authority > 5" id="live" data-type="live" @click="navClick">住宿管理</a>
+                            <a v-if="authority > 5" id="live" data-type="live" @click="navClick">住宿介紹</a>
                             <a v-if="authority > 5" id="discuss" data-type="discuss" @click="navClick">討論區管理</a>
                             <a v-if="authority > 5" id="discount_code" data-type="discount_code" @click="navClick">優惠券管理</a>
                             <a v-if="authority > 5" id="member" data-type="member" @click="navClick">會員管理</a>
@@ -62,67 +62,80 @@
                     <!--
                     <div class="listTitle col-10">
                         <div class="pop_up">
-                            <div class="formBody_04">
-                                <h3>文章資訊</h3>
-                                <form class="Form_04 row">
-                                    <div class="leftForm_04 col-6">
+                            <div class="formBody_00">
+                                <h3>訂單資訊</h3>
+                                <form class="Form col" action="">
+                                    <div class="leftForm col-6">
                                         <ul>
                                             <li>
                                                 <h4>編號:</h4>
                                                 <p>1</p>
                                             </li>
                                             <li>
-                                                <h4>作者:</h4>
+                                                <h4>訂購人:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>電話:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>信箱:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>付款狀態:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            <li>
+                                                <h4>付款方式:</h4>
                                                 <p>1</p>
                                             </li>
                                         </ul>
-                                        
                                     </div>
                                     
-                                    <div class="rightForm_04 col-6">
+                                    <div class="rightForm col-6">
                                         <ul>
                                             <li>
-                                                <h4>發佈:</h4>
+                                                <h4>旅遊日期:</h4>
                                                 <p>1</p>
                                             </li>
                                             <li>
-                                                <h4>類別:</h4>
+                                                <h4>訂購人數:</h4>
                                                 <p>1</p>
                                             </li>
-                                        </ul>
-                                        
-                                    </div>
-                                </form>
-                                <div class="content_04 row">
-                                    <div class="col-12">
-                                        <ul>
-                                            <li>
-                                                <h4>標題:</h4>
-                                                <input type="text">
-                                                <p>11111111111111111111111</p>
+                                            <li id="order_content">
+                                                <h4>訂購內容:</h4>
+                                                <p>1</p>
                                             </li>
                                             <li>
-                                                <h4>內容:</h4>
-                                                <textarea class="col" name="" id="" cols="80" rows="11"></textarea>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex architecto odio ab. Aperiam iusto magnam amet cupiditate quaerat voluptatum saepe quis est debitis aliquid sapiente, deserunt quod necessitatibus ipsum vero delectus. Perspiciatis, quibusdam. Tempora officiis placeat soluta a quae alias et repudiandae itaque provident tempore nam veniam corrupti quia error, dolores voluptatum ab numquam, praesentium id cupiditate doloremque distinctio laboriosam? Modi consequatur obcaecati maiores corrupti molestias hic velit sequi, nesciunt sunt iusto suscipit fuga fugiat quisquam nisi nostrum nulla commodi id quos nam odit tempore nihil? Expedita, libero temporibus debitis at fuga ea quisquam, nemo minus hic iure, sunt eveniet!</p>
+                                                <h4>折扣碼:</h4>
+                                                <p>1</p>
                                             </li>
+                                            <li>
+                                                <h4>總金額:</h4>
+                                                <p>1</p>
+                                            </li>
+                                            
                                         </ul>
-
                                     </div>
-                                    
-                                </div>            
-                                <div class="buttonBlock_04 row">
-                                    <button type="submit" class="b01 col-1 offset-3">確認</button>
+                                </form>            
+                                <div class="buttonBlock row">
+                                    <button type="submit" class="b1 col-1 offset-3">確認</button>
                                     <div class="col-1"></div>
-                                    <button class="b02 col-1" onclick="closeBlock(4)">取消</button>
+                                    <button class="b2 col-1">取消</button>
                                     <div class="col-1"></div>
-                                    <button class="b03 col-2">移除文章</button>
+                                    <button class="b3 col-2">不成立訂單</button>
                                 </div>
-                            </div>
+                             </div>
                             
                         </div>
                     </div>
-                 -->
+                    -->
+                    
+                
+                    
+                 
                 
 
                         
@@ -131,101 +144,10 @@
         </div>
 
     </main>
-    <div class="formBody_00">
-        <h2>訂單資訊</h2>
-        <form class="Form col" action="">
-            <div class="leftForm col-5">
-                <span class="">編號:</span><input type="text"><br>
-                <span> 訂購人: </span><input type="text"><br>
-                <span>電話:</span><input type="text"><br>
-                <span>Email:</span><input type="text"><br>
-                <span>付款狀態:</span><input type=""><br>
-                <span>付款方式:</span><input type="text"><br>
-            </div>
-            <div class="col-1"></div>
-            <div class="rightForm col-5">
-                <span class="">旅遊日期:</span><input type="text"><br>
-                <span> 訂購人數: </span><input type="text"><br>
-                <span>折扣碼:</span><input type="text"><br>
-                <span style="">訂購內容:</span> <textarea name="" id="" cols="23" rows="10"></textarea><br>
-                <span>總金額:</span><span style="text-decoration:underline;">共NT$</span>
-            </div>
-        </form>            
-        <div class="buttonBlock row">
-            <button type="submit" class="b1 col-1 offset-3">確認</button>
-            <div class="col-1"></div>
-            <button class="b2 col-1" onclick="closeBlock(0)">取消</button>
-            <div class="col-1"></div>
-            <button class="b3 col-2">不成立訂單</button>
-        </div>
-     </div>
-    <div class="formBody_01">
-        <h2>活動資訊</h2>
-        <form class="Form_01 col" action="">
-            <div class="leftForm_01 col-5">
-                <span class="">編號:</span><input type="text"><br>
-                <span> 屬性: </span><input type="text"><br>
-                <span>名稱:</span><input type="text"><br>
-                <span>價格:</span><input type="text"><br>
-                <span>單場人數:</span><input type=""><br>
-            </div>
-            <div class="col-1"></div>
-            <div class="rightForm_01 col-5">
-                <span class="col-1">活動簡介:</span> <textarea class="col-8" name="" id="" cols="23" rows="10"></textarea><br>
-                <span class="col-1"> 活動縮圖:</span><input class="col-6" type="file" src="" alt=""><button class="col-2">上傳</button><br>
-                <span class="col-1">縮圖預覽:</span><div class="imgView col-10"></div><br>
-            </div>
-        </form>            
-        <div class="buttonBlock_01 row">
-            <button type="submit" class="b01 col-1 offset-3">確認</button>
-            <div class="col-1"></div>
-            <button class="b02 col-1" onclick="closeBlock(1)">取消</button>
-            <div class="col-1"></div>
-            <button class="b03 col-2">結束活動</button>
-        </div>
-    </div>
-    <div class="formBody_02">
-        <h2>店家資訊</h2>
-        <form class="Form_02 col" action="">
-                <span class=" col-1 offset-2">編號:</span><input class=" col-4" type="text"><br>
-                <span class=" col-1 offset-2"> 店名: </span><input type="text"><br>
-                <span class=" col-1 offset-2">位置:</span><input type="text"><br>
-                <span class=" col-1 offset-2">負責人:</span><input type="text"><br>
-                <span class=" col-1 offset-2">電話:</span><input type=""><br>
-                <span class=" col-1 offset-3">營運狀態</span><input style="margin-left:10px ;" type="radio" name="opened" id="">營運中<input style="margin-left:10px ;" type="radio" name="opened" id="">未營運<br>
-        </form>            
-        <div class="buttonBlock_02 row">
-            <button type="submit" class="b01 col-2 offset-3">確認</button>
-            <div class="col-2"></div>
-            <button class="b02 col-2" onclick="closeBlock(2)">取消</button>
-        </div>
-    </div>
-    <div class="formBody_03">
-        <h2>食宿資訊</h2>
-        <form class="Form_03 col" action="">
-            <div class="leftForm_03 col-5">
-                <span class="">編號:</span><input type="text"><br>
-                <span> 類別: </span><input type="text"><br>
-                <span>屬性:</span><input type="text"><br>
-                <span>名稱:</span><input type="text"><br>
-                <span>價格:</span><input type=""><br>
-                <span>單場人數:</span><input type=""><br>
-            </div>
-            <div class="col-1"></div>
-            <div class="rightForm_03 col-5">
-                <span class="col-1">簡介:</span> <textarea class="col-8" name="" id="" cols="23" rows="10"></textarea><br>
-                <span class="col-1"> 活動縮圖:</span><input class="col-6" type="file" src="" alt=""><button class="col-2">上傳</button><br>
-                <span class="col-1">縮圖預覽:</span><div class="imgView col-10"></div><br>
-            </div>
-        </form>            
-        <div class="buttonBlock_03 row">
-            <button type="submit" class="b01 col-1 offset-3">確認</button>
-            <div class="col-1"></div>
-            <button class="b02 col-1" onclick="closeBlock(3)">取消</button>
-            <div class="col-1"></div>
-            <button class="b03 col-1">下架</button>
-        </div>
-    </div>
+    
+    
+    
+
     
     
 

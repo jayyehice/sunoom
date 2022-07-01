@@ -80,6 +80,8 @@
 
 
     main {
+    
+        
         .parallax {
             // background-image: url(../img/index/muntain_bg01.png);
             // background-repeat: no-repeat;
@@ -90,11 +92,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
 
-            #text {
+            #textSunoom {
                 position: absolute;
+                z-index: 2;
                 font-size: 5vw;
                 text-align: center;
+                top: 10%;
             }
 
             .muntain01 {
@@ -196,8 +201,7 @@
 
                         .draw01 {
                             background-color: $moon_color;
-                            // width: 65%;
-                            width: 0%;
+                            width: 65%;
                             height: 5px;
                             position: absolute;
                             top: 0;
@@ -491,8 +495,14 @@
                     margin: 0 auto;
 
                     li {
-                        img:hover {
-                            cursor: pointer;
+                        img{
+                            opacity: .7;
+
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 1;
+                                transition: all .5s;
+                            }
                         }
                     }
                 }
@@ -662,14 +672,34 @@
             background-size: cover;
             height: 700px;
             position: relative;
+            overflow: hidden;
 
             h3 {
                 text-align: center;
             }
 
+            #textSunoom {
+                position: absolute;
+                z-index: 2;
+                font-size: 5vw;
+                text-align: center;
+                top: 10%;
+            }
+
             .muntain01 {
                 width: 100%;
                 top: 0;
+            }
+
+            .muntain02{
+                top: 0;
+            }
+
+            .tree01{
+                top: 0;
+            }
+            .sun{
+                right: 0;
             }
         }
 
@@ -1036,8 +1066,14 @@
                     margin: 0 auto;
 
                     li {
-                        img:hover {
-                            cursor: pointer;
+                        img{
+                            opacity: .7;
+
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 1;
+                                transition: all .5s;
+                            }
                         }
                     }
                 }
@@ -1216,6 +1252,7 @@
         main {
             .parallax {
                 display: none;
+                overflow: hidden;
             }
 
             .news {

@@ -133,6 +133,7 @@
     }
     section{
         h2{
+            margin-top: 50px;
             text-align: center;
         }
         h3{
@@ -1173,7 +1174,7 @@
     #readyToPay{
         background-color: $sun_color;
         color: $moon_color;
-        // display: none;
+        display: none;
         select{
             border: 1px solid $moon_color;
             color: $moon_color;
@@ -1245,18 +1246,18 @@
                     display: none;
                 }
             }
-            .chooseAdate{
+            .chooseAdateR{
                 @include circle;
             }
-            .chooseAtrip{
+            .chooseAtripR{
                 @include circle;
             }
-            .tallyOrder{
+            .tallyOrderR{
                 @include circle;
                 background-color: $moon_color;
                 color:$sun_color
             }
-            .orderComplete{
+            .orderCompleteR{
                 @include circle;
             }
             //步驟區塊結束
@@ -1544,7 +1545,1123 @@
                 }
             }
         }
-        #FinishPage{
+        .buttonBlock{
+            width: 300px;
+            margin: 50px auto;
+            display: flex;
+            .backToChoosePage{
+                display: block;
+                width: 140px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color:$sun_color;
+                border:1px solid $moon_color;
+                margin-right: 20px;
+                @include mobile{
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+                &:hover{
+                    color:$sun_color;
+                    background-color:$moon_color;
+                    border:1px solid $sun_color;
+                }
+            }
+            #FinishPage{
+                display: block;
+                width: 140px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color:$sun_color;
+                border:1px solid $moon_color;
+                @include mobile{
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
+                &:hover{
+                    color:$sun_color;
+                    background-color:$moon_color;
+                    border:1px solid $sun_color;
+                }
+            }
+        }
+    
+    }
+    
+}
+
+.tripChoose_moon{
+    @import 'base/moonColorSwitch';
+    background-color:$sun_color;
+    color: $moon_color;
+    .dayclick{
+        background-color: $moon_color !important;
+        color: $sun_color;
+    }
+    .buttonBorderTop{
+        border-top: 1px solid $sun_color !important;
+        
+    }
+    .buttonBorderBottom{
+        border-bottom: 1px solid $sun_color !important;
+    }
+    .weekCircularMoon{
+        border: 1px solid $sun_color !important;
+    }
+    select{
+        background-color: $sun_color;
+        border: 1px solid $moon_color;
+        color: $moon_color;
+    }
+    input{
+        border: 1px solid $moon_color;
+        color: $moon_color;
+    }
+    button{
+        color: $moon_color;
+    }
+    .addfadein{
+        width: 12vw;
+        height: 10vh;
+        position:fixed;
+        background-color: $moon_color;
+        color: $sun_color ;
+        border: 1px solid $moon_color;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        line-height: 10vh;
+        font-size: 16px;
+        border-radius: 22px;
+        opacity: 0;
+        z-index: -999;
+        .fa-regular{
+            margin-left: 10px;
+        }
+        
+    }
+    @mixin circle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid $moon_color;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        h4:last-Child{
+            margin-bottom: 20px;
+        }
+    };
+    span{
+        font-size: 16px;
+    }
+    section{
+        h2{
+            margin-top: 50px;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            margin: 50px 0;
+        }
+
+    }
+    .shoppingProcess{
+        width: 1180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:  0 auto;
+        img{
+            width: 80px;
+            height: 24px;
+            margin: 0 40px;
+        }
+        .chooseAdate{
+            @include circle;
+        }
+        .chooseAtrip{
+            @include circle;
+            background-color: $moon_color;
+            color:$sun_color
+        }
+        .tallyOrder{
+            @include circle;
+        }
+        .orderComplete{
+            @include circle;
+        }
+        //步驟區塊結束
+
+    }
+    //日期區塊
+    .datePickerBox{
+        width:1280px;
+        margin: 0px auto;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        background-color: $sun_color;
+        z-index: 4;
+        .daysbutton{
+            display: inline-block;
+            width: 160px;
+            margin: 10px;
+            font-size: 16px;
+            transition: all 2s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            border: 1px solid $moon_color;
+            background-color: $sun_color;
+
+            .SendChoose{
+                width: 160px;
+                height: 30px;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                font-size: 16rem;
+                cursor: pointer;
+            }
+            select{
+                width: 160px;
+                height: 30px;
+                font-size: 16rem;
+                background-color: $moon_color;
+                color: $sun_color;
+                text-align: center;
+                cursor: pointer;
+            }
+            .DateAndWeek{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                h3{
+                    margin: 0px;
+                }
+                .weekCircular{
+                    width: 30px;
+                    height:30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                    border-radius: 999em;
+                    border: 1px solid $moon_color;
+                    margin-right: 5px;
+
+                }
+            }
+            p{
+                letter-spacing: 4px;
+                cursor: pointer;
+            }
+
+        } 
+
+    }
+    .ListSmall{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $moon_color;
+        color: $sun_color;
+        writing-mode: vertical-lr;
+        width: 50px;
+        height: 170px;
+        position: fixed;
+        right: 0;
+        top: 10%;
+        font-size: 20px;
+        text-align: center;
+        z-index: 100;
+        cursor: pointer;
+        .circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border:1px solid $sun_color;
+            color: $sun_color;
+            line-height: 20px;
+            margin-top: 10px;
+            transition: all 1s;
+            margin-left: 4px;
+        }
+    }
+    .BigList{
+        width:0px;
+        height: 100vh;
+        background-color:$sun_color;
+        border:2px solid $moon_color;
+        transition: all 2s;
+        right: 3%;
+        top: 0%;
+        position: fixed;
+        display: none;
+        z-index: 100;
+        overflow-y: auto;
+        span{
+            font-weight: bolder;
+        }
+        h6{
+            font-weight: bolder;
+            margin-left: 10px;
+        }
+
+        .leftButton{
+            width: 8px;
+            height: 8px;
+            margin-right: 0px;
+            cursor: pointer;
+        }
+        .rightButton{
+            width: 8px;
+            height: 8px;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+        .deleteButton{
+            width: 16px;
+            cursor: pointer;
+        }
+        p{
+            font-weight: bolder;
+            margin: 10px;
+        }
+        .ListTitle{
+            width: 260px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: $moon_color;
+            color: $sun_color;
+            text-align: center;
+            line-height: 50px;
+        }
+        .tripAndDate{
+            border-bottom: 1px solid $moon_color;
+            padding: 10px;
+
+            input{
+                width: 200px;
+                background-color: $sun_color;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: safe;
+            align-items: center;
+            flex-grow: 1;
+            margin: 10px 0;
+            li{
+               align-content: center;
+            }
+            li:first-Child{
+                text-align: center;
+                width: 150px;
+                overflow: auto;
+            }
+            li:nth-Child(2){
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            li:nth-Child(3){
+                width: 60px;
+                text-align: center;
+            }
+            li:nth-Child(4){
+                width: 50px;
+                text-align: center;
+                img{
+                    width: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .tripList{
+            border-bottom: 1px solid $moon_color;
+        }
+        .FoodList{
+            border-bottom: 1px solid $moon_color;
+        }
+        .StayList{
+            border-bottom: 1px solid $moon_color;
+        }
+        .totalBlock{
+            margin:  20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            .totalTitle{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                line-height: 25px;
+                span{
+                    font-size: 16px;
+                }
+            }
+            .totalPrice{
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                line-height: 0px;
+                text-align: center;
+                line-height: 25px;
+                span{
+                    font-size: 20px;
+                    color: #FFBF44;
+                    // padding-top: 8px;
+                }
+                select{
+                    text-align: center;
+                }
+                #couponPrice{
+                    color: #FF4444;
+                    
+                }
+            }
+        }
+    }
+    
+    .tripChooseBlock{
+        width: 1000px;
+        height: 676px;
+        border:2px solid $moon_color;
+        margin: 50px auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        position: relative;
+
+
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
+
+        .itineraryTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 66px;
+            align-items: center;
+            z-index: -1;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 25%;
+            }
+            select{
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                height: 35px;
+                border-radius: 22px;
+                text-align: center;
+            }
+        }
+        .morningItineraryA{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid $moon_color;
+            padding: 15px;
+            .morningTime{
+                width: 120px;
+
+            }
+            .morningBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+
+                #morningImg{
+                    margin:22px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .morningBlockB{
+                    margin: 5px auto;
+
+                    .optionBlockA{
+                        display: flex;
+                        width: 400px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceA{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addItineraryM{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .noonItinerary{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .noonBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                
+                #noonImg{
+                    margin:22px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .noonBlockB{
+                    margin: 5px auto;
+                    .optionBlockB{
+                        display: flex;
+                        width: 400px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceB{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryTextB{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addItineraryN{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .eveningItinerary{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 16px;
+            img{
+                width: 120px;
+            }
+            .eveningBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                
+                #eveningImg{
+                    margin: 22px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;  
+                    border-radius: 21px;
+                }
+                .eveningBlockB{
+                    margin: 5px auto;
+                    .optionBlockC{
+                        display: flex;
+                        width: 400px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #tripPriceC{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #itineraryTextC{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addItineraryE{
+            width: 35px;
+            height: 35px;
+            opacity: 0;
+            transition: all 1s;
+        }
+    }
+
+    .foodChooseBlock{
+        width: 1000px;
+        height: 676px;
+        border:2px solid $moon_color;
+        margin: 0 auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
+        .foodTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 66px;
+            align-items: center;
+            z-index: -1;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 30%;
+            }
+        }
+        .morningFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid $moon_color;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .morningFoodTitle{
+                text-align: center;
+            }
+            .morningFoodA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                
+                #morningFoodImg{
+                    margin: 22px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .morningFoodB{
+                    margin: 5px auto;
+                    .foodOptionBlockA{
+                        display: flex;
+                        width: 300px;
+                        justify-items: center;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceA{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextA{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addFoodM{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .noonFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 15px;
+            img{
+                width: 120px;
+            }
+            .noonFoodA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                #noonFoodImg{
+                    margin:22px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .noonFoodB{
+                    margin: 5px auto;
+                    .foodoptionBlockB{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceB{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextB{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addFoodN{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .eveningFood{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 16px;
+            img{
+                width: 120px;
+            }
+            .eveningFoodA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+;
+                #eveningFoodImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .eveningFoodB{
+                    margin: 5px auto;
+                    .foodoptionBlockC{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #foodPriceC{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #foodTextC{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addFoodE{
+            width: 35px;
+            height: 35px;
+            opacity: 0;
+            cursor: not-allowed;
+            transition: all 1s;
+        }
+    }
+
+    .stayChooseBlock{
+        width: 1000px;
+        height: 676px;
+        border:2px solid $moon_color;
+        margin: 50px auto;
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            background: rgba( #000000, 0.05);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s;
+        }
+
+
+        &.divCover{
+            &::before{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        
+        }
+        .stayTitle{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: 66px;
+            align-items: center;
+            z-index: -1;
+            .chooseDate{
+                position: absolute;
+                right: 10%;
+                top: 30%;
+            }
+        }
+        .cabin{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 2px solid $moon_color;
+            padding: 15px;
+            .cabinTitle{
+                text-align: center;
+            }
+            #cabinButton{
+                width: 20px;
+                height: 20px;
+            }
+            .cabinBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                align-items: center;
+                #cabinImg{
+                    margin: 24px 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .cabinBlockB{
+                    margin: 0 auto;
+                    .cabinOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #cabinPrice{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #cabinText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addcabin{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .camping{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 15px;
+            .campingTitle{
+                text-align: center;
+            }
+            #campingButton{
+                width: 20px;
+                height: 20px;
+            }
+            .campingBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                align-items: center;
+                #campingImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .campingBlockB{
+                    margin: 0 auto;
+                    .campingOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #campingPrice{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #campingText{
+                        width: 440px;
+                    }
+                }
+
+            }
+            #addCamping{
+                width: 35px;
+                height: 35px;
+                opacity: 0;
+                cursor: not-allowed;
+                transition: all 1s;
+            }
+        }
+        .villa{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid $moon_color;
+            padding: 16px;
+            
+            .villaTitle{
+                text-align: center;
+            }
+            #villaButton{
+                width: 20px;
+                height: 20px;
+            }
+            .villaBlockA{
+                border:1px solid $moon_color;
+                display: flex;
+                width: 700px;
+                height: 170px;
+                border-radius: 22px;
+                align-items: center;
+                #villaImg{
+                    margin: 15px;
+                    width: 170px;
+                    height: 120px;
+                    line-height: 120px;
+                    border-radius: 21px;
+                }
+                .villaBlockB{
+                    margin: 0 auto;
+                    .villaOption{
+                        display: flex;
+                        width: 300px;
+                        justify-content: center;
+                        margin: 10px;
+                        select{
+                            width: 180px;
+                            height: 38px;
+                            border-radius: 22px;
+                            background-color: $sun_color;
+                            margin-right: 20px;
+                            text-align: center;
+                        }
+                        #villaPrice{
+                            border: 1px solid $moon_color;
+                            width: 170px;
+                            height: 35px;
+                            border-radius: 22px;
+                            text-align: center;
+                            line-height: 35px;
+                        }
+                    }
+                    #villaText{
+                        width: 440px;
+                    }
+                }
+            }   
+
+        }
+        #addVilla{
+            width: 35px;
+            height: 35px;
+            opacity: 0;
+            cursor: not-allowed;
+            transition: all 1s;
+        }
+    }
+    .buttonBlock1{
+        width: 300px;
+        margin: 50px auto;
+        display: flex;
+        #backToDatePage{
             display: block;
             width: 140px;
             height: 50px;
@@ -1552,12 +2669,12 @@
             line-height: 50px;
             background-color:$sun_color;
             border:1px solid $moon_color;
-            margin: 50px auto;
+            margin-right: 20px;
             @include mobile{
-                margin-top: 20px;
                 width: 300px;
-                height: 60px;
                 border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 50px;
             }
             &:hover{
                 color:$sun_color;
@@ -1566,20 +2683,41 @@
             }
         }
     
+        #NextPage{
+            display: block;
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:$sun_color;
+            border:1px solid $moon_color;
+            @include mobile{
+                width: 300px;
+                border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            &:hover{
+                color:$sun_color;
+                background-color:$moon_color;
+                border:1px solid $sun_color;
+            }
+        }
     }
-    
-    .readyToPay_moon{
-        @import 'base/moonColorSwitch';
+
+    #readyToPay{
         background-color: $sun_color;
         color: $moon_color;
+        display: none;
         select{
-            background-color: $sun_color;
             border: 1px solid $moon_color;
             color: $moon_color;
+            background-color: $sun_color;
         }
         input{
             border: 1px solid $moon_color;
             color: $moon_color;
+            background-color: $sun_color;
         }
         button{
             color: $moon_color;
@@ -1642,25 +2780,25 @@
                     display: none;
                 }
             }
-            .chooseAdate{
+            .chooseAdateR{
                 @include circle;
             }
-            .chooseAtrip{
+            .chooseAtripR{
                 @include circle;
             }
-            .tallyOrder{
+            .tallyOrderR{
                 @include circle;
                 background-color: $moon_color;
                 color:$sun_color
             }
-            .orderComplete{
+            .orderCompleteR{
                 @include circle;
             }
             //步驟區塊結束
         }
     
     
-        .bigList{
+        .readyToPayBigList{
             width: 1000px;
             height: auto;
             border:2px solid $moon_color;
@@ -1669,7 +2807,7 @@
                 width: 98%;
                 height: 100%
             }
-            .ListTitle{
+            .readyToPayListTitle{
                 margin: 0px auto;
                 width: 980px;
                 height: 50px;
@@ -1684,7 +2822,7 @@
     
                 }
             }
-            .ListDate{
+            .readyToPayListDate{
                 display: flex;
                 list-style: none;
                 justify-content: center;
@@ -1744,6 +2882,9 @@
                     li{
                         margin: 7px;
                         text-align: center;
+                        i{
+                            margin-left: 5px;
+                        }
                     }
                     li:last-child{
                         color: #FFBF44;
@@ -1751,20 +2892,20 @@
                     }
                 }
             }
-            .totalBlock{
+            .readyToPayTotalBlock{
                 margin:  40px 20px;
                 display: flex;
                 justify-content:flex-end;
                 align-content: center;
                 height: 150px;
-                .totalTitle{
+                .readyToPayTotalTitle{
                     font-weight: bolder;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     font-size: 19.5px;
                 }
-                .totalPrice{
+                .readyToPayTotalPrice{
                     font-weight: bolder;
                     display: flex;
                     flex-direction: column;
@@ -1775,7 +2916,7 @@
                         color: #FFBF44;
                         font-size: 20px;
                     }
-                    #couponPrice{
+                    #readyToPayCouponPrice{
                         color: #FF4444;
                     }
                 }
@@ -1940,17 +3081,17 @@
         }
         .buttonBlock{
             width: 300px;
-            display: flex;
             margin: 50px auto;
+            display: flex;
             .backToChoosePage{
-                display: inline-block;
+                display: block;
                 width: 140px;
                 height: 50px;
                 text-align: center;
                 line-height: 50px;
                 background-color:$sun_color;
                 border:1px solid $moon_color;
-                margin-left: 20px;
+                margin-right: 20px;
                 @include mobile{
                     margin-top: 20px;
                     width: 300px;
@@ -1964,7 +3105,7 @@
                 }
             }
             #FinishPage{
-                display: inline-block;
+                display: block;
                 width: 140px;
                 height: 50px;
                 text-align: center;
@@ -1977,974 +3118,14 @@
                     height: 60px;
                     border-radius: 30px;
                 }
-                // &:hover{
-                //     color:$sun_color;
-                //     background-color:$moon_color;
-                //     border:1px solid $sun_color;
-                // }
+                &:hover{
+                    color:$sun_color;
+                    background-color:$moon_color;
+                    border:1px solid $sun_color;
+                }
             }
-        
         }
     
-    
-    }
-
-}
-
-.tripChoose_moon{
-    @import 'base/moonColorSwitch';
-    background-color:$sun_color;
-    color: $moon_color;
-    select{
-        background-color: $sun_color;
-        border: 1px solid $moon_color;
-        color: $moon_color;
-    }
-    input{
-        border: 1px solid $moon_color;
-        color: $moon_color;
-    }
-    button{
-        color: $moon_color;
-    }
-    .addfadein{
-        width: 12vw;
-        height: 10vh;
-        position:fixed;
-        background-color: $moon_color;
-        color: $sun_color ;
-        border: 1px solid $moon_color;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-        line-height: 10vh;
-        font-size: 16px;
-        border-radius: 22px;
-        opacity: 0;
-        .fa-regular{
-            margin-left: 10px;
-        }
-        
-    }
-    @mixin circle{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 1px solid $moon_color;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        h4:last-Child{
-            margin-bottom: 20px;
-        }
-    };
-    span{
-        font-size: 16px;
-    }
-    section{
-        h2{
-            text-align: center;
-        }
-        h3{
-            text-align: center;
-            margin: 50px 0;
-        }
-    }
-    .shoppingProcess{
-        width: 1180px;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin:  0 auto;
-        img{
-            width: 80px;
-            height: 24px;
-            margin: 0 40px;
-        }
-        .chooseAdate{
-            @include circle;
-        }
-        .chooseAtrip{
-            @include circle;
-            background-color: $moon_color;
-            color:$sun_color
-        }
-        .tallyOrder{
-            @include circle;
-        }
-        .orderComplete{
-            @include circle;
-        }
-        //步驟區塊結束
-
-    }
-    //日期區塊
-    .datePickerBox{
-        width:980px;
-        height: auto;
-        margin: 50px auto;
-        // border: 1px solid $moon_color;
-        position: relative;
-
-        .dateTitle{
-            p{
-                margin: 20px;
-                
-            }
-            i{
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                right: 20px;
-                top: 20px;
-                
-            }
-        }
-        .pickerBox{
-            text-align: center;
-            width: 100%;
-            // border-top: 1px solid $moon_color;
-            display: flex;
-            flex-wrap: wrap;
-            .daysbutton{
-                width: 130px;
-                margin: 5px;
-                font-size: 16px;
-                img{
-                    width: 90px;
-                }
-                select{
-                    width: 115px;
-                }
-                
-            }
-        }
-
-    }
-    .ListSmall{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $moon_color;
-        color: $sun_color;
-        writing-mode: vertical-lr;
-        width: 50px;
-        height: 170px;
-        position: fixed;
-        right: 0;
-        top: 10%;
-        font-size: 20px;
-        text-align: center;
-        cursor: pointer;
-        .circle{
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border:1px solid $sun_color;
-            color: $sun_color;
-            line-height: 20px;
-            margin-top: 10px;
-            transition: all 1s;
-            margin-left: 4px;
-        }
-    }
-    .BigList{
-        width:0px;
-        height: 100vh;
-        background-color:$sun_color;
-        border:2px solid $moon_color;
-        transition: all 2s;
-        right: 3%;
-        top: 0%;
-        position: fixed;
-        display: none;
-        z-index: 1;
-        overflow-y: auto;
-        span{
-            font-weight: bolder;
-        }
-        h6{
-            font-weight: bolder;
-            margin-left: 10px;
-        }
-
-        .leftButton{
-            width: 8px;
-            height: 8px;
-            margin-right: 0px;
-            cursor: pointer;
-        }
-        .rightButton{
-            width: 8px;
-            height: 8px;
-            margin-left: 6px;
-            cursor: pointer;
-        }
-        .deleteButton{
-            width: 16px;
-            cursor: pointer;
-        }
-        p{
-            font-weight: bolder;
-            margin: 10px;
-        }
-        .ListTitle{
-            width: 260px;
-            height: 50px;
-            margin: 0 auto;
-            background-color: $moon_color;
-            color: $sun_color;
-            text-align: center;
-            line-height: 50px;
-        }
-        .tripAndDate{
-            border-bottom: 1px solid $moon_color;
-            padding: 10px;
-
-            input{
-                width: 200px;
-                background-color: $sun_color;
-            }
-        }
-        ul{
-            display: flex;
-            justify-content: safe;
-            align-items: center;
-            flex-grow: 1;
-            margin: 10px 0;
-            li{
-               align-content: center;
-            }
-            li:first-Child{
-                text-align: center;
-                width: 150px;
-                overflow: auto;
-            }
-            li:nth-Child(2){
-                width: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-            li:nth-Child(3){
-                width: 60px;
-                text-align: center;
-            }
-            li:nth-Child(4){
-                width: 50px;
-                text-align: center;
-                img{
-                    width: 20px;
-                    cursor: pointer;
-                }
-            }
-        }
-        .tripList{
-            border-bottom: 1px solid $moon_color;
-        }
-        .FoodList{
-            border-bottom: 1px solid $moon_color;
-        }
-        .StayList{
-            border-bottom: 1px solid $moon_color;
-        }
-        .totalBlock{
-            margin:  20px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
-            .totalTitle{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                span{
-                    font-size: 16px;
-                }
-            }
-            .totalPrice{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                line-height: 20.5px;
-                text-align: center;
-                span{
-                    font-size: 20px;
-                    color: #FFBF44;
-                }
-                #couponPrice{
-                    color: #FF4444;
-                }
-            }
-        }
     }
     
-    .tripChooseBlock{
-        width: 1000px;
-        height: 676px;
-        border:2px solid $moon_color;
-        margin: 50px auto;
-        border-top-left-radius: 22px;
-        border-top-right-radius: 22px;
-
-        .itineraryTitle{
-            display: flex;
-            justify-content: center;
-            position: relative;
-            height: 66px;
-            align-items: center;
-            .chooseDate{
-                position: absolute;
-                right: 10%;
-                top: 25%;
-            }
-            select{
-                position: absolute;
-                left: 10%;
-                top: 25%;
-                height: 35px;
-                border-radius: 22px;
-                text-align: center;
-            }
-        }
-        .morningItineraryA{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 2px solid $moon_color;
-            padding: 15px;
-            .morningTime{
-                width: 120px;
-
-            }
-            .morningBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-
-                #morningImg{
-                    margin:22px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .morningBlockB{
-                    margin: 5px auto;
-
-                    .optionBlockA{
-                        display: flex;
-                        width: 400px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #tripPriceA{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #itineraryText{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addItineraryM{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .noonItinerary{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 15px;
-            img{
-                width: 120px;
-            }
-            .noonBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                
-                #noonImg{
-                    margin:22px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .noonBlockB{
-                    margin: 5px auto;
-                    .optionBlockB{
-                        display: flex;
-                        width: 400px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #tripPriceB{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #itineraryTextB{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addItineraryN{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .eveningItinerary{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 16px;
-            img{
-                width: 120px;
-            }
-            .eveningBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                
-                #eveningImg{
-                    margin: 22px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;  
-                    border-radius: 21px;
-                }
-                .eveningBlockB{
-                    margin: 5px auto;
-                    .optionBlockC{
-                        display: flex;
-                        width: 400px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #tripPriceC{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #itineraryTextC{
-                        width: 440px;
-                    }
-                }
-            }   
-
-        }
-        #addItineraryE{
-            width: 35px;
-            height: 35px;
-            opacity: 0.1;
-            cursor: not-allowed;
-            transition: all 1s;
-        }
-    }
-
-    .foodChooseBlock{
-        width: 1000px;
-        height: 676px;
-        border:2px solid $moon_color;
-        margin: 0 auto;
-        border-top-left-radius: 22px;
-        border-top-right-radius: 22px;
-        .foodTitle{
-            display: flex;
-            justify-content: center;
-            position: relative;
-            height: 66px;
-            align-items: center;
-            .chooseDate{
-                position: absolute;
-                right: 10%;
-                top: 30%;
-            }
-        }
-        .morningFood{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 2px solid $moon_color;
-            padding: 15px;
-            img{
-                width: 120px;
-            }
-            .morningFoodTitle{
-                text-align: center;
-            }
-            .morningFoodA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                
-                #morningFoodImg{
-                    margin: 22px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .morningFoodB{
-                    margin: 5px auto;
-                    .foodOptionBlockA{
-                        display: flex;
-                        width: 300px;
-                        justify-items: center;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #foodPriceA{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #foodTextA{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addFoodM{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .noonFood{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 15px;
-            img{
-                width: 120px;
-            }
-            .noonFoodA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                #noonFoodImg{
-                    margin:22px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .noonFoodB{
-                    margin: 5px auto;
-                    .foodoptionBlockB{
-                        display: flex;
-                        width: 300px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #foodPriceB{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #foodTextB{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addFoodN{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .eveningFood{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 16px;
-            img{
-                width: 120px;
-            }
-            .eveningFoodA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-;
-                #eveningFoodImg{
-                    margin: 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .eveningFoodB{
-                    margin: 5px auto;
-                    .foodoptionBlockC{
-                        display: flex;
-                        width: 300px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #foodPriceC{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #foodTextC{
-                        width: 440px;
-                    }
-                }
-            }   
-
-        }
-        #addFoodE{
-            width: 35px;
-            height: 35px;
-            opacity: 0.1;
-            cursor: not-allowed;
-            transition: all 1s;
-        }
-    }
-
-    .stayChooseBlock{
-        width: 1000px;
-        height: 676px;
-        border:2px solid $moon_color;
-        margin: 50px auto;
-        border-top-left-radius: 22px;
-        border-top-right-radius: 22px;
-        .stayTitle{
-            display: flex;
-            justify-content: center;
-            position: relative;
-            height: 66px;
-            align-items: center;
-            .chooseDate{
-                position: absolute;
-                right: 10%;
-                top: 30%;
-            }
-        }
-        .cabin{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 2px solid $moon_color;
-            padding: 15px;
-            .cabinTitle{
-                text-align: center;
-            }
-            #cabinButton{
-                width: 20px;
-                height: 20px;
-            }
-            .cabinBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                align-items: center;
-                #cabinImg{
-                    margin: 24px 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .cabinBlockB{
-                    margin: 0 auto;
-                    .cabinOption{
-                        display: flex;
-                        width: 300px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #cabinPrice{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #cabinText{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addcabin{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .camping{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 15px;
-            .campingTitle{
-                text-align: center;
-            }
-            #campingButton{
-                width: 20px;
-                height: 20px;
-            }
-            .campingBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                align-items: center;
-                #campingImg{
-                    margin: 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .campingBlockB{
-                    margin: 0 auto;
-                    .campingOption{
-                        display: flex;
-                        width: 300px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #campingPrice{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #campingText{
-                        width: 440px;
-                    }
-                }
-
-            }
-            #addCamping{
-                width: 35px;
-                height: 35px;
-                opacity: 0.1;
-                cursor: not-allowed;
-                transition: all 1s;
-            }
-        }
-        .villa{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-top: 1px solid $moon_color;
-            padding: 16px;
-            
-            .villaTitle{
-                text-align: center;
-            }
-            #villaButton{
-                width: 20px;
-                height: 20px;
-            }
-            .villaBlockA{
-                border:1px solid $moon_color;
-                display: flex;
-                width: 700px;
-                height: 170px;
-                border-radius: 22px;
-                align-items: center;
-                #villaImg{
-                    margin: 15px;
-                    width: 170px;
-                    height: 120px;
-                    line-height: 120px;
-                    border-radius: 21px;
-                }
-                .villaBlockB{
-                    margin: 0 auto;
-                    .villaOption{
-                        display: flex;
-                        width: 300px;
-                        justify-content: center;
-                        margin: 10px;
-                        select{
-                            width: 180px;
-                            height: 38px;
-                            border-radius: 22px;
-                            background-color: $sun_color;
-                            margin-right: 20px;
-                            text-align: center;
-                        }
-                        #villaPrice{
-                            border: 1px solid $moon_color;
-                            width: 170px;
-                            height: 35px;
-                            border-radius: 22px;
-                            text-align: center;
-                            line-height: 35px;
-                        }
-                    }
-                    #villaText{
-                        width: 440px;
-                    }
-                }
-            }   
-
-        }
-        #addVilla{
-            width: 35px;
-            height: 35px;
-            opacity: 0.1;
-            cursor: not-allowed;
-            transition: all 1s;
-        }
-    }
-    #NextPage{
-        display: block;
-        width: 140px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        background-color:$sun_color;
-        border:1px solid $moon_color;
-        margin: 50px auto;
-        @include mobile{
-            width: 300px;
-            border-radius: 30px;
-            margin-top: 20px;
-            margin-bottom: 50px;
-        }
-        &:hover{
-            color:$sun_color;
-            background-color:$moon_color;
-            border:1px solid $sun_color;
-        }
-    }
-
-
 }

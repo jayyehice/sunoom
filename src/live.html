@@ -88,7 +88,7 @@
                         <h3 @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf03" class="wood wood3">3</h3>
                     </div>
                     <!-- 彈窗 siteLayout  -->
-                    <div class="siteLayoutInf01">
+                    <div @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf01" class="siteLayoutInf01">
                         <img class="room_img" :src="live_list[0][17]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">1</h3>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="siteLayoutInf02">
+                    <div @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf02" class="siteLayoutInf02">
                         <img class="room_img" :src="live_list[0][20]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">2</h3>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="siteLayoutInf03">
+                    <div @mouseenter="h3Mouseenter" @mouseleave="h3Mouseleave" data-boxclass="siteLayoutInf03" class="siteLayoutInf03">
                         <img class="room_img" :src="live_list[0][23]" alt="">
                         <div class="roomInfText">
                             <h3 class="number1">3</h3>
@@ -232,13 +232,13 @@
                     <h3>{{live_list[2][11]}}</h3>
                     <div class="villaSiteLayoutwp">
                         <img class="layOutImg" :src="live_list[2][12]">
-                        <h3 class="sea sea1">1</h3>
-                        <h3 class="sea sea2">2</h3>
-                        <h3 class="sea sea3">3</h3>
-                        <h3 class="sea sea4">4</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf01" class="sea sea1">1</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf02" class="sea sea2">2</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf03" class="sea sea3">3</h3>
+                        <h3 @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf04" class="sea sea4">4</h3>
                     </div>
                     <!-- villa彈窗 siteLayout  -->
-                    <div class="villaInf01">
+                    <div @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf01" class="villaInf01">
                         <img class="viila_img" :src="live_list[2][17]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">1</h3>
@@ -248,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="villaInf02">
+                    <div @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf02" class="villaInf02">
                         <img class="viila_img" :src="live_list[2][20]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">2</h3>
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="villaInf03">
+                    <div @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf03" class="villaInf03">
                         <img class="viila_img" :src="live_list[2][23]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">3</h3>
@@ -268,7 +268,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="villaInf04">
+                    <div @mouseenter="villaMouseenter" @mouseleave="villaMouseleave" data-boxclass="villaInf04" class="villaInf04">
                         <img class="viila_img" :src="live_list[2][26]" alt="">
                         <div class="villaInfText">
                             <h3 class="number1">4</h3>
