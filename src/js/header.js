@@ -1,3 +1,39 @@
+//首頁、海遊、路遊logo切換
+
+(function(){
+  let url = window.location.href;
+  if(url.includes('index.html') || !url.includes('.html')){
+    $('#top_logo_sun').attr('src', './img/common/sunoom_logo_landingPage.png');
+    $('#top_logo_moon').attr('src', './img/common/sunoom_logo_landingPage.png');
+  }else if(url.includes('sea.html') || url.includes('land_tour.html')){
+    $('#top_logo_sun').attr('src', './img/header/header_sunoomlogo_moon.png');
+  }
+
+})();
+
+
+//判斷是否為登入
+(function(){
+  // console.log(sessionStorage.getItem('id'));
+  if(sessionStorage.getItem('id')){
+    $('#hamL').hide();
+    $('#hamO').show();
+    console.log($('#hamL')[0]);
+  }else{
+    $('#hamL').removeAttr('style');
+    $('#hamO').removeAttr('style');
+  }
+
+  $('#hamO').click(function(e){
+    e.preventDefault();
+    sessionStorage.clear();
+    location.reload(true);
+  });
+
+})();
+
+
+
 // 漢堡的按鈕
 
 $(function(){
@@ -95,7 +131,8 @@ function changeBtn(){
     $('#changeButton')[0].click();
   }
 }
-  
+
+
   
 // 日按紐
   $(function(){
@@ -182,7 +219,6 @@ $(function(){
 
 })
 
-
 //go top 按鈕
 $(function() {
   /* 按下GoTop按鈕時的事件 */
@@ -202,3 +238,5 @@ $(function() {
       }
   });
 });
+
+
