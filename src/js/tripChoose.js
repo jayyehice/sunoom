@@ -425,7 +425,9 @@ window.addEventListener('load',function(){
                         $('#addCamping').css('opacity','0.1')
                         $('#addVilla').css('opacity','0.1')
                         
-                        
+                        $(eg).parent().find('input').css({
+                            outline:'none'
+                        })
                         break;
                     case '0':
                         //上午行程
@@ -1124,11 +1126,11 @@ window.addEventListener('load',function(){
                         }
 
                         $('.addfadein').fadeTo(1,0.9)
-                        $('.addfadein').fadeOut(3000)
+                        $('.addfadein').fadeOut(1000)
                         $('.addfadein').css({'z-index':'999'})
                         setTimeout(()=>{
                             $('.addfadein').css({'z-index':'-999'})
-                        },2000)
+                        },1000)
                         // console.log($(eg));
                         $(eg).parent().addClass('send');
                         // e.stopPropagation();
