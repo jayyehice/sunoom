@@ -260,6 +260,8 @@
                     box-sizing: border-box;
                     // border: $show_border;
                     display: flex;
+                    position: relative;
+                    z-index: 3;
 
                     // align-items: flex-start;
                     li {
@@ -1001,6 +1003,8 @@
                     box-sizing: border-box;
                     // border: $show_border;
                     display: flex;
+                    position: relative;
+                    z-index: 3;
 
                     // align-items: flex-start;
                     li {
