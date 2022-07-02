@@ -11,18 +11,18 @@ const grass = document.querySelector('.grass');
 
 
 window.addEventListener('scroll', function(){
-    let value = window.scrollY - 100;
+    let value = window.scrollY - 120;
     // console.log(value);
     text.style.top =  value * .07 + '%';
     muntain02.style.top =  value * -.02 + '%';
     muntain03.style.top =  value * -.008 + '%';
-    bird.style.top =  value * -.06+ '%';
+    bird.style.top =  value * -.06 + '%';
     tree01.style.top =  value * -.01+ '%';
-    tree02.style.top =  value * .01+ '%';
+    tree02.style.top =  value * .02+ '%';
     sun.style.top =  value * -.08 + '%';
     cloud01.style.left =  value * -.03+ '%';
     cloud02.style.left =  value * .03+ '%';
-    grass.style.top =  value * -.008+ '%';
+    // grass.style.top =  value * -.005+ '%';
 });
 
 

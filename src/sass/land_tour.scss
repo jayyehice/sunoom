@@ -137,7 +137,7 @@
                     .chName {
                         position: relative;
                         line-height: 1;
-                        font-size: 60px;
+                        font-size: 80px;
                         letter-spacing: 3px;
                         text-align: center;
                         text-shadow: gray 5px 5px 5px;
@@ -1498,6 +1498,21 @@
 @media screen and (max-width: 575.98px) {
     .land_tour {
         main {
+            .banner{
+
+                .schedule-wrapper{
+                    .event-item{
+                        .ocean{
+                            font-size: 24px;
+                        }
+    
+                        .enName{
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            
             .breadcrumbs {
                 .wrapper {
                     width: 100%;
