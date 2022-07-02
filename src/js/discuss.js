@@ -103,6 +103,9 @@ window.addEventListener("load", function(){
                 }
                 
             },
+            contentSlice(content){
+                return content
+            },
         },
         computed: {},
         watch: {
@@ -122,6 +125,17 @@ window.addEventListener("load", function(){
         },
         mounted() {},
         updated() {
+
+            // ----------------------------------切換頁籤------------------------------------
+            let search_obj = new URLSearchParams(location.search);
+            let type = search_obj.get("type");
+            if(type == 'food'){
+                $('#active2')[0].click();
+            }else if(type == 'live'){
+                $('#active3')[0].click();
+            }else if(type == 'tour'){
+                $('#active4')[0].click();
+            }
             
             // ------------------------------開啟pop-up-out彈窗------------------------------
 
@@ -158,16 +172,20 @@ window.addEventListener("load", function(){
             for(let i=0; i<article1.length; i++){
                 article1[i].addEventListener("click", e => {
                     e.preventDefault();
+                    let renderid = e.target.closest('li').querySelector('a').dataset.index;
                     this.articleid = $(article1[i]).data("articleid");
                     $('.discuss-region').children('div').children('img').attr("src", $(article1[i]).children('.img_1').children('img').attr("src"))
                     $('.pop-up').find('.span1')[0].innerText = $(article1[i]).find('.span2')[0].innerText;//觀看次數
                     $('.pop-up').find('.span2')[0].innerText = $(article1[i]).find('.span3')[0].innerText;//評論次數
                     $('.pop-up > h3')[0].innerText=$(article1[i]).find('.title > h5')[0].innerText;//標題
-                    $('.pop-up').find('.comment-region > p')[0].innerText=$(article1[i]).find('.comment > p')[0].innerText;//內文
+                    // $('.pop-up').find('.comment-region > p')[0].innerText=$(article1[i]).find('.comment > p')[0].innerText;//內文
+                    $('.pop-up').find('.comment-region > p')[0].innerText = this.render_list[renderid][4];//內文
                     $('.pop-up').find('.span3')[0].innerText=$(article1[i]).find('.span1')[0].innerText;//作者
                     $('.pop-up').find('.icons2 img').attr("src",$(article1[i]).find('.icon-1 img').attr("src"))//作者頭像
                     $('.pop-up-out').css('display','block')
                     $('html').attr("style","overflow: hidden");
+
+                    
 
                 })
             }
@@ -255,11 +273,11 @@ window.addEventListener("load", function(){
 
 
 //頁籤點擊的顏色變換
-$(".active").click(function(){
-    $(this).css("background-color","#ebca56");
-    // $(this).parent().find('.active').css("background-color","#33CC33");
+// $(".active").click(function(){
+//     $(this).css("background-color","#ebca56");
+//     // $(this).parent().find('.active').css("background-color","#33CC33");
 
-    $(this).siblings('.active').css("background-color",'#F5F0DD');
-});
+//     $(this).siblings('.active').css("background-color",'#F5F0DD');
+// });
 
 
