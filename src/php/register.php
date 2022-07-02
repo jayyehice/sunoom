@@ -46,7 +46,7 @@
         $statement->bindParam(6, $str);
         $statement->execute();
 
-        sleep(0.5);
+        sleep(1);
 
 
         $sql = "SELECT * FROM member WHERE account = ?";
@@ -78,7 +78,7 @@
         
         }
 
-        $web_api_url = "https://script.google.com/macros/s/AKfycbx7jUowo3-jpm-h3sIkLBwWBAWgt4S1Q9Vs1TLj2-7qv04DJw0P9moXOkoRs7bzx4w1/exec?email=jayyehice@gmail.com&cf=$str&id=$id";
+        $web_api_url = "https://script.google.com/macros/s/AKfycbx7jUowo3-jpm-h3sIkLBwWBAWgt4S1Q9Vs1TLj2-7qv04DJw0P9moXOkoRs7bzx4w1/exec?email=$mail&cf=$str&id=$id";
 
 
         $data = request_curl_get($web_api_url);
