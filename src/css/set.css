@@ -1,11 +1,3 @@
-#changeButton {
-  position: fixed;
-  z-index: 100;
-  top: 200px;
-  right: 200px;
-  cursor: pointer;
-}
-
 .set {
   background-color: #F5F0DD;
   color: #0C1244;
@@ -628,6 +620,15 @@
 }
 .set_moon main .setMain:last-child {
   margin-bottom: 100px;
+}
+
+#changeButton {
+  position: fixed;
+  z-index: 100;
+  top: 200px;
+  right: 200px;
+  cursor: pointer;
+  display: none;
 }
 
 /*# sourceMappingURL=set.css.map */
