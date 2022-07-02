@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>會員認證頁面</title>
+    <style>
+        body{
+            padding: 30px;
+            background-color: #F5F0DD;
+            color: #0C1244;
+        }
+
+    </style>
+</head>
+<body>
+    <main id="app">
+        <h2>{{message}}</h2>
+    </main>
+
+    <script>
+
+        window.addEventListener("load",function(){
+
+            let vm = new Vue({
+                el: '#app',
+                data: {
+                    message:'會員註冊認證中，請稍等...',
+                },
+                methods: {},
+                mounted() {
+                    //查詢參數
+                    let search_obj = new URLSearchParams(location.search);
+                    let id = search_obj.get("id");
+                    let cf = search_obj.get("cf");
+
+                    
+
+                    if(id && cf){
+                        
+                        const url=`./php/member_certification.php?id=${id}&cf=${cf}`;
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(text =>{
+                                console.log(text);
+                                if(text === 'success'){
+
+                                    let data = [['state', '已開通']];
+                                    const url = './php/backgroundSystem_update.php';
+                                    fetch(url, {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify({
+                                            table: 'member',
+                                            id: id,
+                                            data: data,
+                                        })
+                                    });
+
+                                    this.message = '認證成功，三秒後跳轉回登入頁!'
+
+                                    setTimeout(e => {
+                                        window.location.href = './new-login.html';
+                                    }, 4000);
+
+
+                                }else if(text === 'false'){
+                                    this.message = '認證失敗，請聯絡客服人員，三秒後跳轉回首頁'
+                                    setTimeout(e => {
+                                        window.location.href = './index.html';
+                                    }, 4000);
+                                }
+                            })
+
+                    }else{
+                        // console.log('跳轉');
+                        window.location.href = './new-login.html';
+                    }
+
+
+                },
+                created() {},       
+            });
+
+        });
+
+    </script>
+</body>
+</html>

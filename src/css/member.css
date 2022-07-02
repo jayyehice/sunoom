@@ -160,15 +160,35 @@
     margin-right: 40px;
   }
 }
+.member main .basicData .memberForm ul {
+  width: 70%;
+  margin: 0 auto;
+}
+.member main .basicData .memberForm ul li {
+  margin-bottom: 20px;
+}
+.member main .basicData .memberForm ul li p {
+  margin-top: 0;
+  margin-right: 80px;
+  width: 330px;
+  border: 1px solid #0C1244;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 50px;
+  font-size: 24rem;
+  color: rgb(158, 156, 156);
+}
 .member main .basicData input {
   margin-bottom: 23px;
-  width: 400px;
+  margin-right: 80px;
+  width: 330px;
   height: 50px;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
-  padding-left: 10px;
+  text-align: center;
   font-size: 24rem;
   box-sizing: border-box;
+  color: #0C1244;
 }
 @media (max-width: 579px) {
   .member main .basicData input {
@@ -216,6 +236,8 @@
 }
 .member main .basicData .btn {
   background-color: #F5F0DD;
+  margin-right: 0px;
+  margin-bottom: 50px;
   display: inline-block;
   width: 140px;
   height: 50px;
