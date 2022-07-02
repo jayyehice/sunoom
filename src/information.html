@@ -60,35 +60,35 @@
                 <!-- 日島地圖 -->
                 <ol class="sunMap">
                     <li v-if="type == 'all' || type =='food'" >
-                        <img class="allmap bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
-                        <img class="allmap lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
-                        <img class="allmap juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
-                        <img class="allmap hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
+                        <img class="allmap bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq" @click="lightBox(0)">
+                        <img class="allmap lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲" @click="lightBox(2)">
+                        <img class="allmap juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁" @click="lightBox(6)">
+                        <img class="allmap hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡" @click="lightBox(4)">
                     </li>
 
                     <li v-if="type == 'all' || type =='live'">
 
                         <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
-                        <img class="allmap residential"   v-if="map_list[8]" :src="map_list[8][3]" alt="別墅">
-                        <img class="allmap tent"     v-if="map_list[9]" :src="map_list[9][3]" alt="帳篷">
-                        <img class="allmap stilthouse" v-if="map_list[10]" :src="map_list[10][3]" alt="小木屋">
+                        <img class="allmap residential"   v-if="map_list[8]" :src="map_list[8][3]" alt="別墅" @click="lightBox(8)">
+                        <img class="allmap tent"     v-if="map_list[9]" :src="map_list[9][3]" alt="帳篷" @click="lightBox(9)">
+                        <img class="allmap stilthouse" v-if="map_list[10]" :src="map_list[10][3]" alt="小木屋" @click="lightBox(10)">
                     </li>
 
                     <li v-if="type == 'all' || type =='tour'">
-                        <img class="allmap chariot"   v-if="map_list[11]" :src="map_list[11][3]" alt="沙灘戰車">
-                        <img class="allmap horse_back_riding"     v-if="map_list[12]" :src="map_list[12][3]" alt="騎馬">
-                        <img class="allmap stonehenge" v-if="map_list[13]" :src="map_list[13][3]" alt="巨石陣">
-                        <img class="allmap mountaineering" v-if="map_list[14]" :src="map_list[14][3]" alt="登山">
-                        <img class="allmap rafting" v-if="map_list[15]" :src="map_list[15][3]" alt="泛舟">
+                        <img class="allmap chariot"   v-if="map_list[11]" :src="map_list[11][3]" alt="沙灘戰車" @click="lightBox(11)">
+                        <img class="allmap horse_back_riding"     v-if="map_list[12]" :src="map_list[12][3]" alt="騎馬" @click="lightBox(12)">
+                        <img class="allmap stonehenge" v-if="map_list[13]" :src="map_list[13][3]" alt="巨石陣" @click="lightBox(13)">
+                        <img class="allmap mountaineering" v-if="map_list[14]" :src="map_list[14][3]" alt="登山" @click="lightBox(14)">
+                        <img class="allmap rafting" v-if="map_list[15]" :src="map_list[15][3]" alt="泛舟" @click="lightBox(15)">
 
-                        <img class="allmap diving" v-if="map_list[16]" :src="map_list[16][3]" alt="潛水">
-                        <img class="allmap yacht" v-if="map_list[17]" :src="map_list[17][3]" alt="遊艇">
-                        <img class="allmap fishing" v-if="map_list[18]" :src="map_list[18][3]" alt="釣魚">
-                        <img class="allmap snorkeling" v-if="map_list[19]" :src="map_list[19][3]" alt="浮潛">
-                        <img class="allmap stand_up_paddle" v-if="map_list[20]" :src="map_list[20][3]" alt="海岸SUP">
+                        <img class="allmap diving" v-if="map_list[16]" :src="map_list[16][3]" alt="潛水" @click="lightBox(16)">
+                        <img class="allmap yacht" v-if="map_list[17]" :src="map_list[17][3]" alt="遊艇" @click="lightBox(17)">
+                        <img class="allmap fishing" v-if="map_list[18]" :src="map_list[18][3]" alt="釣魚" @click="lightBox(18)">
+                        <img class="allmap snorkeling" v-if="map_list[19]" :src="map_list[19][3]" alt="浮潛" @click="lightBox(19)">
+                        <img class="allmap stand_up_paddle" v-if="map_list[20]" :src="map_list[20][3]" alt="海岸SUP" @click="lightBox(20)">
 
-                        <img class="allmap agency" v-if="map_list[21]" :src="map_list[21][3]" alt="珊瑚復育所">
-                        <img class="allmap turtle" v-if="map_list[22]" :src="map_list[22][3]" alt="海龜">
+                        <img class="allmap agency" v-if="map_list[21]" :src="map_list[21][3]" alt="珊瑚復育所" @click="lightBox(21)">
+                        <img class="allmap turtle" v-if="map_list[22]" :src="map_list[22][3]" alt="海龜" @click="lightBox(22)">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
                     </li>
                 </ol>
@@ -96,34 +96,34 @@
                 <!-- 月島地圖 -->
                 <ol class="moonMap">
                     <li v-if="type == 'all' || type =='food'" >
-                        <img class="allmap m_bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq">
-                        <img class="allmap m_lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲">
-                        <img class="allmap m_juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁">
-                        <img class="allmap m_hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡">
+                        <img class="allmap m_bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="bbq" @click="lightBox(0)">
+                        <img class="allmap m_lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="巴菲" @click="lightBox(2)">
+                        <img class="allmap m_juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="果汁" @click="lightBox(6)">
+                        <img class="allmap m_hamberger" v-if="map_list[4]" :src="map_list[4][3]" alt="漢堡" @click="lightBox(4)">
                     </li>
 
                     <li v-if="type == 'all' || type =='live'" >
                         <!-- <img class="allmap office"       v-if="map_list[0]" :src="map_list[0][3]" alt="辦公室"> -->
-                        <img class="allmap m_residential"   v-if="map_list[25]" :src="map_list[25][3]" alt="別墅">
-                        <img class="allmap m_tent"     v-if="map_list[26]" :src="map_list[26][3]" alt="帳篷">
-                        <img class="allmap m_stilthouse" v-if="map_list[27]" :src="map_list[27][3]" alt="小木屋">
+                        <img class="allmap m_residential"   v-if="map_list[25]" :src="map_list[25][3]" alt="別墅" @click="lightBox(25)">
+                        <img class="allmap m_tent"     v-if="map_list[26]" :src="map_list[26][3]" alt="帳篷" @click="lightBox(26)">
+                        <img class="allmap m_stilthouse" v-if="map_list[27]" :src="map_list[27][3]" alt="小木屋" @click="lightBox(27)">
                     </li>
 
                     <li v-if="type == 'all' || type =='tour'">
-                        <img class="allmap m_campfire"   v-if="map_list[28]" :src="map_list[28][3]" alt="沙灘營火">
-                        <img class="allmap m_bar"     v-if="map_list[29]" :src="map_list[29][3]" alt="酒吧">
-                        <img class="allmap m_star" v-if="map_list[30]" :src="map_list[30][3]" alt="觀星">
-                        <img class="allmap m_owl" v-if="map_list[31]" :src="map_list[31][3]" alt="尋貓頭鷹">
-                        <img class="allmap m_cave" v-if="map_list[32]" :src="map_list[32][3]" alt="隕石洞穴">
+                        <img class="allmap m_campfire"   v-if="map_list[28]" :src="map_list[28][3]" alt="沙灘營火" @click="lightBox(28)">
+                        <img class="allmap m_bar"     v-if="map_list[29]" :src="map_list[29][3]" alt="酒吧" @click="lightBox(29)">
+                        <img class="allmap m_star" v-if="map_list[30]" :src="map_list[30][3]" alt="觀星" @click="lightBox(30)">
+                        <img class="allmap m_owl" v-if="map_list[31]" :src="map_list[31][3]" alt="尋貓頭鷹" @click="lightBox(31)">
+                        <img class="allmap m_cave" v-if="map_list[32]" :src="map_list[32][3]" alt="隕石洞穴" @click="lightBox(32)">
 
-                        <img class="allmap m_diving" v-if="map_list[33]" :src="map_list[33][3]" alt="潛水">
-                        <img class="allmap m_yacht" v-if="map_list[34]" :src="map_list[34][3]" alt="遊艇">
-                        <img class="allmap m_fishing" v-if="map_list[35]" :src="map_list[35][3]" alt="釣魚">
-                        <img class="allmap m_flying_fish" v-if="map_list[36]" :src="map_list[36][3]" alt="飛魚">
-                        <img class="allmap m_stand_up_paddle" v-if="map_list[37]" :src="map_list[37][3]" alt="海岸SUP">
+                        <img class="allmap m_diving" v-if="map_list[33]" :src="map_list[33][3]" alt="潛水" @click="lightBox(33)">
+                        <img class="allmap m_yacht" v-if="map_list[34]" :src="map_list[34][3]" alt="遊艇" @click="lightBox(34)">
+                        <img class="allmap m_fishing" v-if="map_list[35]" :src="map_list[35][3]" alt="釣魚" @click="lightBox(35)">
+                        <img class="allmap m_flying_fish" v-if="map_list[36]" :src="map_list[36][3]" alt="飛魚" @click="lightBox(36)">
+                        <img class="allmap m_stand_up_paddle" v-if="map_list[37]" :src="map_list[37][3]" alt="海岸SUP" @click="lightBox(37)">
 
-                        <img class="allmap tear" v-if="map_list[38]" :src="map_list[38][3]" alt="藍眼淚">
-                        <img class="allmap intertidal" v-if="map_list[39]" :src="map_list[39][3]" alt="潮間帶">
+                        <img class="allmap tear" v-if="map_list[38]" :src="map_list[38][3]" alt="藍眼淚" @click="lightBox(38)">
+                        <img class="allmap intertidal" v-if="map_list[39]" :src="map_list[39][3]" alt="潮間帶" @click="lightBox(39)">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
                     </li>
                 </ol>
@@ -286,17 +286,17 @@
             <div class="wrapper">
                 <h3>聯絡資訊</h3>
                 <ul>
-                    <li>
-                        <h4>{{office_list[0][1]}}</h4>
-                        <p>聯絡人：{{office_list[0][2]}}</p>
-                        <p>電話：{{office_list[0][3]}}</p>
-                        <p>傳真：{{office_list[0][4]}}</p>
-                        <p>位置：{{office_list[0][5]}}</p>
-                        <p>Email：{{office_list[0][6]}}</p>
-                        <img :src="office_list[0][7]" alt="">
+                    <li v-for="office in office_list">
+                        <h4>{{office[1]}}</h4>
+                        <p>聯絡人：{{office[2]}}</p>
+                        <p>電話：{{office[3]}}</p>
+                        <p>傳真：{{office[4]}}</p>
+                        <p>位置：{{office[5]}}</p>
+                        <p>Email：{{office[6]}}</p>
+                        <img :src="office[7]" alt="">
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <h4>{{office_list[1][1]}}</h4>
                         <p>聯絡人：{{office_list[1][2]}}</p>
                         <p>電話：{{office_list[1][3]}}</p>
@@ -314,7 +314,7 @@
                         <p>位置：{{office_list[2][5]}}</p>
                         <p>Email：{{office_list[2][6]}}</p>
                         <img :src="office_list[2][7]" alt="">
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </section>
@@ -394,26 +394,5 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/information.js"></script>
-    <script>
-        // let test = document.getElementById("test");
-        // let img_test = document.getElementById("img_test");
-        // let img_tag = document.getElementsByTagName("img");
-
-        // for(let i=0; i<img_tag.length; i++){
-
-        //     test.addEventListener("click", function(e){
-        //         e.preventDefault();
-        //         if(img_tag[i].getAttribute("src").includes("sun")){
-        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
-        //         }else{
-        //             img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
-        //         }
-    
-        //     });
-        // }
-
-        // let img = document.getElementsByTagName("img");
-
-    </script>
 </body>
 </html>
