@@ -40,38 +40,75 @@ new Vue({
         phone:"",
         email:"",
         password:"",
+        email_class:"",
+        phone_class:"",
     },
 
     methods:{
         ftdregister(e){
             e.preventDefault();
 
+
+
             if(this.last_name.value ==="" || this.first_name ==="" || this.phone ==="" ||this.email ==="" ||this.password ===""){
                 alert('請填入姓名、電話、信箱、密碼')
             }else{
-                const url=`./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
-                fetch(url)
-                .then(response => response.json())
-                .then(text =>{
-                    if(text === 'same'){
-                        alert('帳號已經註冊');
-                        this.hint='帳號已經註冊';
-                        this.error='error';
-                    }else{
-                        sessionStorage.setItem('id', text[0]['id']);
-                        sessionStorage.setItem('last_name', text[0]['last_name']);
-                        sessionStorage.setItem('first_name', text[0]['first_name']);
-                        sessionStorage.setItem('phone', text[0]['phone']);
-                        sessionStorage.setItem('email', text[0]['email']);
+                let pattern = /^09\d{8}$/;
 
-                        window.location.href = 'member.html';
+                if(is.email(this.email)){
+                    
+                    if(pattern.test(this.phone)){
+
+                        const url=`./php/register.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
+                        fetch(url)
+                        .then(response => response.json())
+                        .then(text =>{
+                            if(text === 'same'){
+                                alert('帳號已經註冊，請重新登入');
+                                // window.location.href = 'new-login.html';
+                                document.getElementById('login').click();
+                            }else{
+                                sessionStorage.setItem('id', text[0]['id']);
+                                sessionStorage.setItem('last_name', text[0]['last_name']);
+                                sessionStorage.setItem('first_name', text[0]['first_name']);
+                                sessionStorage.setItem('phone', text[0]['phone']);
+                                sessionStorage.setItem('email', text[0]['email']);
+        
+                                window.location.href = 'member.html';
+                            }
+                        })
+                    }else{
+                        alert('請填入正確的手機號碼');
+                        this.phone_class = '-error';
                     }
-                })
+
+                }else{
+                    if(pattern.test(this.phone)){
+
+                        alert('請填入正確的信箱');
+                        this.email_class = '-error';
+                    }else{
+                        alert('請填入正確的信箱和手機');
+                        this.email_class = '-error';
+                        this.phone_class = '-error';
+                    }
+                }
+
             }
             // let url = `./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
             // fetch(url)
             //     .then(response => response.json())
             //     .then(text => {})
+        },
+        removeErr(e){
+            let pattern = /^09\d{8}$/;
+            if(pattern.test(this.phone)){
+                this.phone_class = '';
+            }
+
+            if(is.email(this.email)){
+                this.email_class = '';
+            }
         }
     }
 })
@@ -97,7 +134,7 @@ new Vue({
                 // console.log('pptt');
                 alert('請輸入帳號密碼');
             }else{
-                const url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
+                const url = `./php/new-login.php?account=${this.account}&password=${this.password}`;
                 fetch(url)
                     .then(response => response.json())
                     .then(text =>{
