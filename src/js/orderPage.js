@@ -11,7 +11,7 @@ $(function () {
     //     },
     //     template:`<v-date-picker v-model="range" is-range/>`
     // })
-
+    
     let vm = new Vue({
         el:'#app',
         data() {
@@ -22,12 +22,23 @@ $(function () {
               },
               calendarArr: [],
               count:0,
+              startday:'',
+              endday:'',
+              days:'',
             };
           },
         methods: {
+            add(){
+                $('#pepoleNums').css({
+                    outline:'none'
+                })
+            },
             min(){
                 if(this.count >= 2){
                     this.count-=1
+                    $('#pepoleNums').css({
+                        outline:'none'
+                    })
                 }
             },
             test(e) {
@@ -58,17 +69,20 @@ $(function () {
                 console.log($(e.target));
                 // $(e.target).parent().parent().find('.startDay').removeClass('startDay')
                 // e.target.parentNode.classList.add("startDay");
-                if(e.target.parentNode.childNodes.classList.contains('.startDay')){
+                if($(e.target).parent().parent().find('div').hasClass('startDay') && $(e.target).parent().parent().find('div').hasClass('EndDay')){
+                    $(e.target).parent().parent().find('.startDay').removeClass('startDay')
+                    $(e.target).parent().parent().find('.EndDay').removeClass('EndDay')
+                }
+                if($(e.target).parent().parent().find('div').hasClass('startDay')){
                     // $(e.target).parent().parent().find('.startDay').removeClass('startDay')
-                    console.log("aaa");
+                    // console.log("aaa");
                     e.target.parentNode.classList.add("EndDay");
                 }else{
-                    console.log("BBB");
+                    // console.log("BBB");
                     e.target.parentNode.classList.add("startDay");
                 }
                 
                 // $(e.target).parent().parent().find('.startDay').removeClass('EndDay')
-
                 
               },
             //   deleteall(e){
@@ -78,8 +92,22 @@ $(function () {
             //   },
               RangeHover(e){
                 // console.log(e.target);
-                if($(e.target).parent().parent().find('.startDay')){
-                //    console.log($('.startDay'));
+                if($(e.target).parent().parent().find('div').hasClass('startDay')){
+                //    $(e.target).parent().dataset.d 
+                let startDay = document.getElementsByClassName('startDay')[0];
+                let date =document.getElementsByClassName('date');
+                   let days =  e.target.dataset.d - startDay.dataset.d 
+                   for(let i = 0; i < date.length; i++){
+                    console.log(date[i].dataset.d);
+                        for(let j = 0; j < days; j++){
+                            if(date[i].dataset.d == startDay.dataset.d+j){
+                                console.log(date[i].dataset.d);
+                            }
+                        }
+
+                   }
+                   
+                    
                 }
               }
 
@@ -252,18 +280,34 @@ $(function () {
     // $(window).load(()=>{
     //     $('#dateBooking').on('show.daterangepicker')
     // })
-    //日曆操作區塊
-    $('#dateBooking').daterangepicker({
-        "timePicker24Hour": true,
-        "showISOWeekNumbers": true,
-        "showDropdowns": true,
-        "alwaysShowCalendars": true,
-        "opens": "center",
-        "drops": "auto",
-        "minDate":new Date(),
-        locale:{showLabel: 'true'}
-        
 
+    //日曆操作區塊
+    // $('#dateBooking').show();
+    window.addEventListener('load',function(){
+        dateBooking.click();
+    })
+    let day = new Date;
+    let tDay = day.setDate(day.getDate() + 1)
+    $('#dateBooking').on('click',()=>{
+        dateBooking.style.outline = 'none'
+    });
+    $('#dateBooking').daterangepicker({
+        
+        "timePicker24Hour": true,
+        // "showISOWeekNumbers": true,
+        // "showDropdowns": true,
+        "maxSpan": {
+            "days": 6
+        },
+        locale: {
+            cancelLabel: 'Clear'
+        },
+        autoUpdateInput: false,
+        "alwaysShowCalendars":true,
+        "opens": "center",
+        // "drops": "auto",
+        "minDate": new Date(tDay),
+        
     });
 
     $('#dateBooking').on('apply.daterangepicker', function(ev, picker) {
@@ -296,12 +340,41 @@ $(function () {
         localStorage.setItem('pepoleNums',JSON.stringify(pepoleNums));
         localStorage.setItem('sendDays',JSON.stringify(sendDays));
         
-        if(window.innerWidth < 576){
-            window.location.href='tripChooseMobile.html';
-        }else{
-            window.location.href='tripChoose.html';
+        if(manyDays.innerText == ''){
+        console.log(pepoleNums);
+        $('html, body').animate({
+            scrollTop:'0'
+        },500)
+        alert('請選擇日期')
+        dateBooking.style.outline = '2rem solid #FF4444'
+        $('#dateBooking').addClass('notCheck')
+        setTimeout(()=>{
+            $('#dateBooking').removeClass('notCheck')
+        },1000)
+        }   
+        if(pepoleNums == 0){
+            $('html, body').animate({
+                scrollTop:'0'
+            },500)
+            alert('請選擇人數')
+            $('#pepoleNums').css({
+                outline : '2rem solid #FF4444'
+            })
+            $('#pepoleNums').addClass('notCheck')
+            setTimeout(()=>{
+                $('#pepoleNums').removeClass('notCheck')
+            },500)
+        }
+        if(manyDays.innerText != '' && pepoleNums != 0){
+            if(window.innerWidth < 576){
+                window.location.href='tripChooseMobile.html';
+            }else{
+                window.location.href='tripChoose.html';
+            }
+        
         }
         
+
     });
     //行程選擇用
     // $('#tripChoose').change(function(){
@@ -310,4 +383,3 @@ $(function () {
     // })
     
 })
-

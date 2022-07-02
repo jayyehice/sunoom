@@ -124,6 +124,18 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        @include mobile{
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 1px solid $moon_color;
+            text-align: center;
+            h4{
+                letter-spacing: 1px;
+                font-size: 16rem !important;
+            }
+
+        }
         h4:last-Child{
             margin-bottom: 20px;
         }
@@ -149,6 +161,19 @@
         justify-content: center;
         align-items: center;
         margin:  0 auto;
+        @include mobile{
+            width: 90%;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin:0px auto;
+            margin-top: 50px;
+            
+            img{
+                display: none;
+            }
+        }
         img{
             width: 80px;
             height: 24px;
@@ -180,6 +205,26 @@
         display: flex;
         background-color: $sun_color;
         z-index: 4;
+        @include mobile(){
+            overflow-x: auto;
+        }
+        .datePickerBoxLeftM{
+            display: none;
+            line-height: 160px;
+            font-size: 24px;
+            // @include mobile{
+            //     display: block;
+            // }
+        }
+        .datePickerBoxRightM{
+            display: none;
+            line-height: 160px;
+            font-size: 24px;
+            // @include mobile{
+            //     display: block;
+            // }
+        }
+
         .daysbutton{
             display: inline-block;
             width: 160px;
@@ -278,6 +323,9 @@
         display: none;
         z-index: 100;
         overflow-y: auto;
+        @include mobile(){
+            right: 14%;
+        }
         span{
             font-weight: bolder;
         }
@@ -414,7 +462,12 @@
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         position: relative;
-
+        @include mobile(){
+            width: 90%;
+            height: 670px;
+            border:2px solid $moon_color;
+            margin: 50px auto;
+        }
 
         &::before{
             content: "";
@@ -452,14 +505,6 @@
                 right: 10%;
                 top: 25%;
             }
-            select{
-                position: absolute;
-                left: 10%;
-                top: 25%;
-                height: 35px;
-                border-radius: 22px;
-                text-align: center;
-            }
         }
         .morningItineraryA{
             display: flex;
@@ -467,9 +512,20 @@
             align-items: center;
             border-top: 2px solid $moon_color;
             padding: 15px;
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
+            }
             .morningTime{
                 width: 120px;
-
+                @include mobile(){
+                    display: none;
+                }
             }
             .morningBlockA{
                 border:1px solid $moon_color;
@@ -477,22 +533,54 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
+                .mobileTimeM{
+                    display: none;
+                    width: 100px;
+                    border: 1px solid $moon_color;
+                    border-radius: 22px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 12px;
+                    @include mobile(){
+                        display: block;
+                        height: 30px;
+                        margin: 0 7px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                        
+                    }
+                }
                 #morningImg{
                     margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        
+                    }
                 }
                 .morningBlockB{
                     margin: 5px auto;
-
                     .optionBlockA{
                         display: flex;
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -500,6 +588,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #tripPriceA{
                             border: 1px solid $moon_color;
@@ -508,10 +603,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #itineraryText{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
 
@@ -522,6 +631,10 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                }
             }
         }
         .noonItinerary{
@@ -532,6 +645,18 @@
             padding: 15px;
             img{
                 width: 120px;
+                @include mobile(){
+                    display: none;
+                }
+            }
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
             }
             .noonBlockA{
                 border:1px solid $moon_color;
@@ -539,13 +664,40 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
+                .mobileTimeM{
+                    display: none;
+                    width: 100px;
+                    border: 1px solid $moon_color;
+                    border-radius: 22px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 12px;
+                    @include mobile(){
+                        display: block;
+                        height: 30px;
+                        margin: 0 7px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;                    
+                    }
+                }
                 #noonImg{
                     margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                    }
                 }
                 .noonBlockB{
                     margin: 5px auto;
@@ -554,6 +706,11 @@
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -561,6 +718,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #tripPriceB{
                             border: 1px solid $moon_color;
@@ -569,10 +733,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #itineraryTextB{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
 
@@ -583,6 +761,11 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                    display: block;
+                }
             }
         }
         .eveningItinerary{
@@ -591,8 +774,20 @@
             align-items: center;
             border-top: 1px solid $moon_color;
             padding: 16px;
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
+            }
             img{
                 width: 120px;
+                @include mobile(){
+                    display: none;
+                }
             }
             .eveningBlockA{
                 border:1px solid $moon_color;
@@ -600,13 +795,40 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
+                .mobileTimeM{
+                    display: none;
+                    width: 100px;
+                    border: 1px solid $moon_color;
+                    border-radius: 22px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 12px;
+                    @include mobile(){
+                        display: block;
+                        height: 30px;
+                        margin: 0 7px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;                    
+                    }
+                }
                 #eveningImg{
                     margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;  
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                    }
                 }
                 .eveningBlockB{
                     margin: 5px auto;
@@ -615,6 +837,11 @@
                         width: 400px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -622,6 +849,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #tripPriceC{
                             border: 1px solid $moon_color;
@@ -630,10 +864,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #itineraryTextC{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
             }   
@@ -644,6 +892,11 @@
             height: 35px;
             opacity: 0;
             transition: all 1s;
+            @include mobile(){
+                margin-top: 50px;
+                margin-left: -20px;
+                display: block;
+            }
         }
     }
 
@@ -655,6 +908,12 @@
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         position: relative;
+        @include mobile(){
+            width: 90%;
+            height: 660px;
+            border:2px solid $moon_color;
+            margin: 50px auto;
+        }
         &::before{
             content: "";
             pointer-events: none;
@@ -698,8 +957,20 @@
             align-items: center;
             border-top: 2px solid $moon_color;
             padding: 15px;
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
+            }
             img{
                 width: 120px;
+                @include mobile(){
+                    display: none;
+                }
             }
             .morningFoodTitle{
                 text-align: center;
@@ -710,13 +981,40 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-                
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
+                .mobileTimeM{
+                    display: none;
+                    width: 100px;
+                    border: 1px solid $moon_color;
+                    border-radius: 22px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 12px;
+                    @include mobile(){
+                        display: block;
+                        height: 30px;
+                        margin: 0 7px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;                    
+                    }
+                }
                 #morningFoodImg{
                     margin: 22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                    }
                 }
                 .morningFoodB{
                     margin: 5px auto;
@@ -726,6 +1024,11 @@
                         justify-items: center;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -733,6 +1036,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #foodPriceA{
                             border: 1px solid $moon_color;
@@ -741,10 +1051,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #foodTextA{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
 
@@ -755,6 +1079,11 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                    display: block;
+                }
             }
         }
         .noonFood{
@@ -765,6 +1094,35 @@
             padding: 15px;
             img{
                 width: 120px;
+                @include mobile(){
+                    display: none;
+                }
+            }
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
+            }
+            .mobileTimeM{
+                display: none;
+                width: 100px;
+                border: 1px solid $moon_color;
+                border-radius: 22px;
+                height: 35px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 12px;
+                @include mobile(){
+                    display: block;
+                    height: 30px;
+                    margin: 0 7px;
+                    margin-top: 5px;
+                    margin-bottom: 20px;                    
+                }
             }
             .noonFoodA{
                 border:1px solid $moon_color;
@@ -772,12 +1130,23 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
                 #noonFoodImg{
                     margin:22px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                    }
                 }
                 .noonFoodB{
                     margin: 5px auto;
@@ -786,6 +1155,11 @@
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -793,6 +1167,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #foodPriceB{
                             border: 1px solid $moon_color;
@@ -801,10 +1182,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #foodTextB{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
 
@@ -815,6 +1210,11 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                    display: block;
+                }
             }
         }
         .eveningFood{
@@ -823,8 +1223,20 @@
             align-items: center;
             border-top: 1px solid $moon_color;
             padding: 16px;
+            @include mobile(){
+                padding: 20px;
+                padding-top: 0px;
+                .useForMobile{
+                    display: flex;
+                    flex-direction: column;
+                   justify-content: center;
+                }
+            }
             img{
                 width: 120px;
+                @include mobile(){
+                    display: none;
+                }
             }
             .eveningFoodA{
                 border:1px solid $moon_color;
@@ -832,13 +1244,40 @@
                 width: 700px;
                 height: 170px;
                 border-radius: 22px;
-;
+                @include mobile(){
+                    width: 100%;
+                    border:none;
+                    height: 178px;
+                }
+                .mobileTimeM{
+                    display: none;
+                    width: 100px;
+                    border: 1px solid $moon_color;
+                    border-radius: 22px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 12px;
+                    @include mobile(){
+                        display: block;
+                        height: 30px;
+                        margin: 0 7px;
+                        margin-top: 5px;
+                        margin-bottom: 20px;                    
+                    }
+                }
                 #eveningFoodImg{
                     margin: 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                    }
                 }
                 .eveningFoodB{
                     margin: 5px auto;
@@ -847,6 +1286,11 @@
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 8px 0;
+                            padding-top: 4px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -854,6 +1298,13 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                margin-left: -20px;
+                            }
                         }
                         #foodPriceC{
                             border: 1px solid $moon_color;
@@ -862,10 +1313,24 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
                         }
                     }
                     #foodTextC{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 15px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                        }
                     }
                 }
             }   
@@ -877,6 +1342,11 @@
             opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
+            @include mobile(){
+                margin-top: 50px;
+                margin-left: -20px;
+                display: block;
+            }
         }
     }
 
@@ -888,6 +1358,13 @@
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         position: relative;
+        box-sizing: border-box;
+        @include mobile(){
+            width: 90%;
+            height: 760px;
+            border:2px solid $moon_color;
+            margin: 50px auto;
+        }
         &::before{
             content: "";
             pointer-events: none;
@@ -931,12 +1408,40 @@
             align-items: center;
             border-top: 2px solid $moon_color;
             padding: 15px;
+            @include mobile(){
+                display: inline-block;
+                position: relative;
+                padding: 13px;
+            }
             .cabinTitle{
                 text-align: center;
+                @include mobile(){
+                    text-align: left;
+
+                    h4{
+                        font-size: 16rem;
+                        margin-left: 30px;
+                        margin-top: 20px;
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                    }
+                    
+                    p{
+                        display: none;
+                        
+                    }
+                }
             }
             #cabinButton{
                 width: 20px;
                 height: 20px;
+
+                @include mobile(){
+                    position: absolute;
+                    top: 27px;
+                    left: 5px;
+                }
             }
             .cabinBlockA{
                 border:1px solid $moon_color;
@@ -945,12 +1450,25 @@
                 height: 170px;
                 border-radius: 22px;
                 align-items: center;
+                @include mobile(){
+                    width: 100%;
+                    border: none;
+                    height: 200px;
+                }
                 #cabinImg{
                     margin: 24px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                        margin-top: 30px;
+                        padding-left: -5px;
+                    }
                 }
                 .cabinBlockB{
                     margin: 0 auto;
@@ -959,6 +1477,12 @@
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 10px 0;
+                            padding-top: 5px;
+                            margin-left: -15px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -966,6 +1490,14 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                // margin-left: -10px;
+                                
+                            }
                         }
                         #cabinPrice{
                             border: 1px solid $moon_color;
@@ -974,10 +1506,26 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 10px;
+                                
+                            }
                         }
                     }
                     #cabinText{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                            
+                        }
                     }
                 }
 
@@ -988,6 +1536,14 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                    display: block;
+                    position: absolute;
+                    right: 15px;
+                    top: 60px;
+                }
             }
         }
         .camping{
@@ -996,12 +1552,39 @@
             align-items: center;
             border-top: 1px solid $moon_color;
             padding: 15px;
+            @include mobile(){
+                display: inline-block;
+                position: relative;
+                padding: 13px;
+            }
             .campingTitle{
                 text-align: center;
+                @include mobile(){
+                    text-align: left;
+
+                    h4{
+                        font-size: 16rem;
+                        margin-left: 30px;
+                        margin-top: 20px;
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                    }
+                    
+                    p{
+                        display: none;
+                        
+                    }
+                }
             }
             #campingButton{
                 width: 20px;
                 height: 20px;
+                @include mobile(){
+                    position: absolute;
+                    top: 27px;
+                    left: 5px;
+                }
             }
             .campingBlockA{
                 border:1px solid $moon_color;
@@ -1010,12 +1593,25 @@
                 height: 170px;
                 border-radius: 22px;
                 align-items: center;
+                @include mobile(){
+                    width: 100%;
+                    border: none;
+                    height: 200px;
+                }
                 #campingImg{
                     margin: 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                        margin-top: 30px;
+                        padding-left: -5px;
+                    }
                 }
                 .campingBlockB{
                     margin: 0 auto;
@@ -1024,6 +1620,12 @@
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 10px 0;
+                            padding-top: 5px;
+                            margin-left: -15px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -1031,6 +1633,14 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                // margin-left: -10px;
+                                
+                            }
                         }
                         #campingPrice{
                             border: 1px solid $moon_color;
@@ -1039,10 +1649,26 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 10px;
+                                
+                            }
                         }
                     }
                     #campingText{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                            
+                        }
                     }
                 }
 
@@ -1053,6 +1679,14 @@
                 opacity: 0;
                 cursor: not-allowed;
                 transition: all 1s;
+                @include mobile(){
+                    margin-top: 50px;
+                    margin-left: -20px;
+                    display: block;
+                    position: absolute;
+                    right: 15px;
+                    top: 60px;
+                }
             }
         }
         .villa{
@@ -1061,13 +1695,39 @@
             align-items: center;
             border-top: 1px solid $moon_color;
             padding: 16px;
-            
+            @include mobile(){
+                display: inline-block;
+                position: relative;
+                padding: 13px;
+            }
             .villaTitle{
                 text-align: center;
+                @include mobile(){
+                    text-align: left;
+
+                    h4{
+                        font-size: 16rem;
+                        margin-left: 30px;
+                        margin-top: 20px;
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                    }
+                    
+                    p{
+                        display: none;
+                        
+                    }
+                }
             }
             #villaButton{
                 width: 20px;
                 height: 20px;
+                @include mobile(){
+                    position: absolute;
+                    top: 27px;
+                    left: 5px;
+                }
             }
             .villaBlockA{
                 border:1px solid $moon_color;
@@ -1076,12 +1736,25 @@
                 height: 170px;
                 border-radius: 22px;
                 align-items: center;
+                @include mobile(){
+                    width: 100%;
+                    border: none;
+                    height: 200px;
+                }
                 #villaImg{
-                    margin: 15px;
+                    margin: 24px 15px;
                     width: 170px;
                     height: 120px;
                     line-height: 120px;
                     border-radius: 21px;
+                    @include mobile(){
+                        width: 120px;
+                        height: 97px;
+                        margin: 0;
+                        display: block;
+                        margin-top: 30px;
+                        padding-left: -5px;
+                    }
                 }
                 .villaBlockB{
                     margin: 0 auto;
@@ -1090,6 +1763,12 @@
                         width: 300px;
                         justify-content: center;
                         margin: 10px;
+                        @include mobile(){
+                            width: 220px;
+                            margin: 10px 0;
+                            padding-top: 5px;
+                            margin-left: -12px;
+                        }
                         select{
                             width: 180px;
                             height: 38px;
@@ -1097,6 +1776,14 @@
                             background-color: $sun_color;
                             margin-right: 20px;
                             text-align: center;
+                            @include mobile(){
+                                width: 102px;
+                                margin-right: 0px;
+                                height: 32px;
+                                font-size: 12px;
+                                // margin-left: -10px;
+                                
+                            }
                         }
                         #villaPrice{
                             border: 1px solid $moon_color;
@@ -1105,10 +1792,26 @@
                             border-radius: 22px;
                             text-align: center;
                             line-height: 35px;
+                            @include mobile(){
+                                line-height: 30px;
+                                display: block;
+                                width: 100px;
+                                height: 30px;
+                                margin-left: 10px;
+                                
+                            }
                         }
                     }
                     #villaText{
                         width: 440px;
+                        @include mobile(){
+                            width: 150px;
+                            font-size: 12px;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            margin-right: 0px;
+                            
+                        }
                     }
                 }
             }   
@@ -1120,6 +1823,14 @@
             opacity: 0;
             cursor: not-allowed;
             transition: all 1s;
+            @include mobile(){
+                margin-top: 50px;
+                margin-left: -20px;
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 60px;
+            }
         }
     }
     .buttonBlock1{
@@ -1381,7 +2092,7 @@
                         color: #FFBF44;
                         font-size: 20px;
                     }
-                    #readyToPayCouponPrice{
+                    #couponPriceR{
                         color: #FF4444;
                     }
                 }
