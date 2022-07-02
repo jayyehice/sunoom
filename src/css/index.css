@@ -53,12 +53,6 @@
   color: white;
   text-align: center;
 }
-.index main a {
-  text-decoration: none;
-}
-.index main a:visited {
-  color: #0C1244;
-}
 .index main .parallax {
   position: relative;
   width: 100%;
@@ -560,6 +554,13 @@
 .index main .traffic .wrapper ul > li ol li h5:last-child {
   margin-bottom: 45px;
 }
+.index main a {
+  color: #0C1244;
+  text-decoration: none;
+}
+.index main a:visited {
+  color: #0C1244;
+}
 
 .index_moon {
   background-color: #0C1244;
@@ -567,12 +568,6 @@
   letter-spacing: 3px;
   line-height: 1.6;
   font-family: "Times New Roman", "Noto Sans TC", sans-serif;
-}
-.index_moon a {
-  text-decoration: none;
-}
-.index_moon a:visited {
-  color: #F5F0DD;
 }
 .index_moon main .parallax {
   background-image: url(../img/index/muntain_bg01.png);
@@ -1040,6 +1035,13 @@
 }
 .index_moon main .traffic .wrapper ul > li ol li h5:last-child {
   margin-bottom: 45px;
+}
+.index_moon main a {
+  text-decoration: none;
+  color: #F5F0DD;
+}
+.index_moon main a:visited {
+  color: #F5F0DD;
 }
 
 @media screen and (max-width: 575.98px) {

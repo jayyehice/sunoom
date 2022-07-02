@@ -81,13 +81,6 @@
     
     main {
         
-        
-        a{
-            text-decoration: none;
-            &:visited {
-                color: $moon_color;
-            }
-        }
         .parallax {
             // background-image: url(../img/index/muntain_bg01.png);
             // background-repeat: no-repeat;
@@ -665,6 +658,14 @@
             }
         }
 
+        a{
+            color: $moon_color;
+            text-decoration: none;
+            &:visited {
+                color: $moon_color;
+            }
+        }
+
     }
 }
 
@@ -677,12 +678,7 @@
     line-height: 1.6;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
 
-    a{
-        text-decoration: none;
-        &:visited {
-            color: $moon_color;
-        }
-    }
+    
 
     main {
         .parallax {
@@ -1243,6 +1239,13 @@
             }
         }
 
+        a{
+            text-decoration: none;
+            color: $moon_color;
+            &:visited {
+                color: $moon_color;
+            }
+        }
     }
 
 }
