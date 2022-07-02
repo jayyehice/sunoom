@@ -5,6 +5,7 @@
   top: 200px;
   right: 200px;
   cursor: pointer;
+  display: none;
 }
 
 .land_tour {
@@ -18,6 +19,12 @@
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
+}
+.land_tour main a {
+  text-decoration: none;
+}
+.land_tour main a:visited {
+  color: #0C1244;
 }
 .land_tour main .banner {
   width: 100%;
@@ -543,13 +550,23 @@
   border-radius: 50%;
   margin-right: 15px;
 }
+.land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_name {
+  color: #0C1244;
+}
 .land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
   height: calc(100% - 85px);
   padding: 25px;
+  color: #0C1244;
 }
 
 .land_tour_moon {
   background-color: #0C1244;
+  color: #F5F0DD;
+}
+.land_tour_moon main a {
+  text-decoration: none;
+}
+.land_tour_moon main a:visited {
   color: #F5F0DD;
 }
 .land_tour_moon main .banner {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common.css">
 @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/new-login.css">
+    <script src="./js/is.min.js"></script>
 </head>
 
 <body class="newLogin">
@@ -38,11 +39,11 @@
             <div class="con-box left" id="register_region">
                 <form action="./php/new-login.php" method="post" class="form1">
                     <h1 style="text-align: center;margin-bottom: 25px;color:#0c1244;text-transform: uppercase; letter-spacing: 5px;">register</h1>
-                    <input v-mod type="text" name="last_name" placeholder="姓氏">
-                    <input type="text" name="first_name" placeholder="名字">
-                    <input type="text" name="phone" placeholder="電話">
-                    <input type="email" name="email" placeholder="信箱">
-                    <input type="password" name="password" placeholder="密碼" id="pw1">
+                    <input v-model="last_name" type="text" name="last_name" placeholder="姓氏">
+                    <input v-model="first_name" type="text" name="first_name" placeholder="名字">
+                    <input v-model="phone"type="tel" name="phone" placeholder="手機" :class="phone_class" @blur="removeErr">
+                    <input v-model="email" type="email" name="email" placeholder="信箱" :class="email_class" @blur="removeErr">
+                    <input v-model="password" type="password" name="password" placeholder="密碼" id="pw1">
                     <input type="password" name="passwordsure" placeholder="確認密碼" id="pw2" onkeyup="validate()"><span id="tishi"></span>
                     <button type="submit" class="btn" id="submit" @click="ftdregister">註冊</button>
                 </form>
@@ -50,6 +51,7 @@
             <div class="con-box right" id="login_region">
                 <form method="post" class="form2">
                     <h1 style="text-align: center;color:#0c1244 ;margin-bottom: 25px;text-transform: uppercase;letter-spacing: 5px;">login</h1>
+                    <p :class="error">{{hint}}</p>
                     <input id="b1" type="text" name="a" placeholder="帳號"  @keyup.enter="submit" v-model="account">
                     <input id="b2" type="password" name="b" placeholder="密碼" @keyup.enter="submit" v-model="password">
                     <button type="submit" class="btn" @click="submit">登錄</button>

@@ -88,7 +88,21 @@
         margin: 0px auto;
         border: 1px solid $moon_color;
         position: relative;
+        .datePickerBoxLeftM{
+            font-size: 96px;
+            display: none;
+            position: absolute;
+            @include mobile(){
+                display: block;
+                top: 50%;
+            }
+        }
+        .datePickerBoxRightM{
+            display: none;
+            @include mobile(){
 
+            }
+        }
         .dateTitle{
             p{
                 margin: 20px;

@@ -40,50 +40,82 @@ new Vue({
         phone:"",
         email:"",
         password:"",
+        email_class:"",
+        phone_class:"",
     },
 
     methods:{
         ftdregister(e){
             e.preventDefault();
 
+
+
             if(this.last_name.value ==="" || this.first_name ==="" || this.phone ==="" ||this.email ==="" ||this.password ===""){
                 alert('請填入姓名、電話、信箱、密碼')
             }else{
-                const url=`./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
-                fetch(url)
-                .then(response => response.json())
-                .then(text =>{
-                    if(text === 'same'){
-                        alert('帳號已經註冊');
-                        this.hint='帳號已經註冊';
-                        this.error='error';
-                    }else{
-                        sessionStorage.setItem('id', text[0]['id']);
-                        sessionStorage.setItem('last_name', text[0]['last_name']);
-                        sessionStorage.setItem('first_name', text[0]['first_name']);
-                        sessionStorage.setItem('phone', text[0]['phone']);
-                        sessionStorage.setItem('email', text[0]['email']);
+                let pattern = /^09\d{8}$/;
 
-                        window.location.href = 'member.html';
+                if(is.email(this.email)){
+                    
+                    if(pattern.test(this.phone)){
+
+                        const url=`./php/register.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
+                        fetch(url)
+                        .then(response => response.json())
+                        .then(text =>{
+                            console.log(text);
+                            if(text === 'same'){
+                                alert('帳號已經註冊，請重新登入');
+                                // window.location.href = 'new-login.html';
+                                document.getElementById('login').click();
+                            }else if(text === 'success'){
+                                // sessionStorage.setItem('id', text[0]['id']);
+                                // sessionStorage.setItem('last_name', text[0]['last_name']);
+                                // sessionStorage.setItem('first_name', text[0]['first_name']);
+                                // sessionStorage.setItem('phone', text[0]['phone']);
+                                // sessionStorage.setItem('email', text[0]['email']);
+                                
+                                confirm('註冊成功，已將認證連結發送至信箱!');
+                                window.location.href = 'new-login.html';
+                            }else{
+                                alert('註冊失敗，請聯絡客服人員確認，謝謝');
+                            }
+                        })
+                    }else{
+                        alert('請填入正確的手機號碼');
+                        this.phone_class = '-error';
                     }
-                })
+
+                }else{
+                    if(pattern.test(this.phone)){
+
+                        alert('請填入正確的信箱');
+                        this.email_class = '-error';
+                    }else{
+                        alert('請填入正確的信箱和手機');
+                        this.email_class = '-error';
+                        this.phone_class = '-error';
+                    }
+                }
+
             }
             // let url = `./php/new-login.php?last_name=${this.last_name}&first_name=${this.first_name}&phone=${this.phone}&email=${this.email}&password=${this.password}`;
             // fetch(url)
             //     .then(response => response.json())
             //     .then(text => {})
+        },
+        removeErr(e){
+            let pattern = /^09\d{8}$/;
+            if(pattern.test(this.phone)){
+                this.phone_class = '';
+            }
+
+            if(is.email(this.email)){
+                this.email_class = '';
+            }
         }
     }
 })
-
-
-
-
-
-
-
-
-
 
 
 //以下是登錄頁的js函式
@@ -94,41 +126,40 @@ new Vue({
         login_region_list:[],
         account:"",
         password:"",
+        hint:"請輸入帳號密碼",
+        error:'hint',
     },
 
     methods:{
         submit(e){
             e.preventDefault();
-            let url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
-            fetch(url)
-                .then(response => response.json())
-                // .then(response => console.log(response.json()))
-                // .then(text => this.login_region_list = text);
-                .then(text => {
-                    if(this.account =='' || this.password == ''){
-                        // console.log('pptt');
-                        alert('請輸入帳號密碼');
-                    }else{
-                        const url = `./php/new-login_2.php?account=${this.account}&password=${this.password}`;
-                        fetch(url)
-                            .then(response => response.json())
-                            .then(text =>{
-                                console.log(text);
 
-                                if(text === 'false'){
-                                    alert('帳號或密碼錯誤');
-                                    this.hint='帳號或密碼錯誤';
-                                    this.error='error';
-                                }else{
-                                    sessionStorage.setItem('account',text[0]['account']);
-                                    sessionStorage.setItem('password',text[0]['password']);
+            if(this.account =='' || this.password == ''){
+                // console.log('pptt');
+                alert('請輸入帳號密碼');
+            }else{
+                const url = `./php/new-login.php?account=${this.account}&password=${this.password}`;
+                fetch(url)
+                    .then(response => response.json())
+                    .then(text =>{
+                        // console.log(text);
 
-                                    window.location.href = 'member.html';
-                                }
-                            })
-                    }
-                });
-                // console.log(this.login_region)
+                        if(text === 'false'){
+                            alert('帳號或密碼錯誤');
+                            this.hint = '帳號或密碼錯誤';
+                            this.error = 'hint error';
+                            
+                        }else{
+                            sessionStorage.setItem('account',text[0]['account']);
+                            sessionStorage.setItem('id',text[0]['id']);
+                            sessionStorage.setItem('last_name',text[0]['last_name']);
+                            sessionStorage.setItem('first_name',text[0]['first_name']);
+                            sessionStorage.setItem('photo',text[0]['photo']);
+                            sessionStorage.setItem('phone',text[0]['phone']);
+                            window.location.href = 'member.html';
+                        }
+                    })
+            }
                 
         },
     },
@@ -137,7 +168,6 @@ new Vue({
     create(){
    
     },
-
- 
 })
+
 

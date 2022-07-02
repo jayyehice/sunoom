@@ -11,13 +11,14 @@
 @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/member.css">
     <title>會員專區</title>
+    <script src="./js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 </head>
 <body class="member">
     @@include('./layout/header.html')
     
-   <main>
+   <main id="member">
        <div class="wrapper">
 
             <p class="crumbs">
@@ -26,7 +27,7 @@
 
             <h3>會員專區</h3>
 
-            <input type="button" class="signOut" value="登出">
+            <input type="button" class="signOut" value="登出" @click="logout">
 
             <ul class="memberPage">
                 <li><a href="#basicData">會員資料</a></li>
@@ -35,7 +36,7 @@
             </ul>
 
             <div id="basicData" class="memberInner basicData">
-                <img class="memberPic" src="./img/member/member_pic.jpg" alt="大頭貼">
+                <img class="memberPic" :src="photo" alt="大頭貼">
                 <br>
 
                 <label for="file-upload" class="custom-file-upload">
@@ -46,26 +47,38 @@
                 <!-- <input class="memberFile" type="file" name="" id=""> -->
 
                 <form class="memberForm" method="POST" action="./php/member.php">
-              
-                    <label for="">姓氏</label>
-                    <input type="text" class="" name="last_name" placeholder="慶">
-                    <br>
-                    <label for="">名字</label>
-                    <input type="text" class="" name="first_name" placeholder="小隆">
 
-                    <br>
-                    <label for="">信箱</label>
-                    <input type="text" class="" name="email" placeholder="long@gmail.com">
+                    <ul>
+                        <li>
+                            <label for="">姓氏</label>
+                            <!-- <input type="text" class="" name="last_name" placeholder="慶"> -->
+                            <p>{{last_name}}</p>
 
-                    <br>
-                    <label for="">電話</label>
-                    <input type="text" class="memberPhone" name="phone" placeholder="0800-092-000">
+                        </li>
+                        <li>
+                            <label for="">名字</label>
+                            <!-- <input type="text" class="" name="first_name" placeholder="小隆"> -->
+                            <p>{{first_name}}</p>
 
-                    <br>
-                    <input type="submit" class="btn sure" value="確認變更">
+                        </li>
+                        <li>
+                            <label for="">信箱</label>
+                            <!-- <input type="text" class="" name="email" placeholder="long@gmail.com"> -->
+                            <p>{{account}}</p>
 
-                    <br>
-                    <input type="submit" class="btn no" value="取消">
+                        </li>
+                        <li>
+                            <label for="">電話</label>
+                            <input type="text" class="memberPhone" name="phone" v-model="phone">
+
+                        </li>
+
+                        <li>
+
+                            <input type="submit" class="btn sure" value="確認變更">
+                        </li>
+                    </ul>
+
                 </form>
 
             </div>

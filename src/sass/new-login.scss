@@ -25,7 +25,7 @@
         
             background-color: #fff;
             width: 650px;
-            height: 485px;
+            height: 510px;
             border-radius: 5px;
         
             box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
@@ -61,32 +61,55 @@
                 transition: 0.5s;
             }
             
+            .hint{
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 14rem;
+                color: $moon_color;
+                margin-bottom: 10px;
+            }
+
+            .hint.error{
+                color:red;
+            }
             
             input{
                 /* border:1px solid red; */
                 background-color: transparent;
-                width: 70%;
+                width: 100%;
                 color: rgb(162, 162, 162);
                 border: none;
+                // margin: 0 auto;
             
                 border-bottom: 1px solid rgba(255,255,255,0.4);
                 padding: 10px 0;
                 text-indent: 10px;
-                margin: 8px 0;
+                margin: 8px auto;
                 font-size: 14px;
                 letter-spacing: 2px;
+            }
+
+            input.-error{
+                border: 1px solid red;
             }
             
             .btn{
                 border:none;
+                margin: 0 auto;
                 margin-top: 3%;
                 background-color: #ddd988;
                 color: #f8f8f4;
                 border-radius: 5px;
-                width: 270px;
+                width: 100%;
                 height: 40px;
                 outline: none;
                 cursor: pointer;
+            }
+
+            #submit{
+                width: 70%;
+                margin-left: 15%;
             }
             
             input::placeholder{
