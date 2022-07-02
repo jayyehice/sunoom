@@ -22,14 +22,14 @@
         transform: translateX(-50%);
     }
 
-    a{
-        text-decoration: none;
-        &:visited {
-            color: $moon_color;
-        }
-    }
-
+    
     main {
+        a{
+            text-decoration: none;
+            &:visited {
+                color: $moon_color;
+            }
+        }
 
         .banner {
             width: 100%;
@@ -761,14 +761,15 @@
     background-color: $sun_color;
     color: $moon_color;
 
-    a{
-        text-decoration: none;
-        &:visited {
-            color: $moon_color;
-        }
-    }
+    
 
     main {
+        a{
+            text-decoration: none;
+            &:visited {
+                color: $moon_color;
+            }
+        }
 
         .banner {
             width: 100%;

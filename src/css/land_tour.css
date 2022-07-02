@@ -20,10 +20,10 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.land_tour a {
+.land_tour main a {
   text-decoration: none;
 }
-.land_tour a:visited {
+.land_tour main a:visited {
   color: #0C1244;
 }
 .land_tour main .banner {
@@ -563,10 +563,10 @@
   background-color: #0C1244;
   color: #F5F0DD;
 }
-.land_tour_moon a {
+.land_tour_moon main a {
   text-decoration: none;
 }
-.land_tour_moon a:visited {
+.land_tour_moon main a:visited {
   color: #F5F0DD;
 }
 .land_tour_moon main .banner {

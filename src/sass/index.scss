@@ -17,13 +17,7 @@
         transform: translateX(-50%);
     }
 
-    a{
-        text-decoration: none;
-        &:visited {
-            color: $moon_color;
-        }
-    }
-
+    
     .indexHeader {
         padding: 50px;
         height: 100vh;
@@ -39,7 +33,7 @@
             // index main sun & moon video intro
             .videoWrappper {
                 // position: relative;
-
+                
                 .index_video {
                     top: 0;
                     left: 0;
@@ -59,13 +53,12 @@
                 width: 260px;
                 height: 40px;
                 margin-top: 120px;
-
+                
                 p {
                     color: white;
-                    line-height: 40px;
                     text-align: center;
                 }
-
+                
                 .fa-arrow-up-right {
                     color: white;
                 }
@@ -77,18 +70,24 @@
             text-align: center;
             margin: 60px 0;
         }
-
+        
         h2 {
             color: white;
             text-align: center;
         }
     }
-
-
-
-    main {
     
+    
+    
+    main {
         
+        
+        a{
+            text-decoration: none;
+            &:visited {
+                color: $moon_color;
+            }
+        }
         .parallax {
             // background-image: url(../img/index/muntain_bg01.png);
             // background-repeat: no-repeat;
@@ -128,9 +127,10 @@
         .news {
             display: flex;
             border: 1px solid $moon_color;
-            height: 250px;
+            // height: 250px;
             align-items: center;
             justify-content: center;
+            padding-bottom: 20px;
 
             .news_title {
                 width: 120px;
@@ -725,13 +725,14 @@
         .news {
             display: flex;
             border: 1px solid $moon_color;
-            height: 250px;
+            // height: 100%;
             align-items: center;
             justify-content: center;
 
             .news_title {
                 width: 120px;
                 height: 70px;
+                text-align: center;
             }
 
             .news_text {
@@ -1253,10 +1254,18 @@
     
     .index {
         .indexHeader {
+            
     
-    
+            h1{
+                margin: 40px 0;
+            }
+
+            h2{
+                font-size: 24px;
+            }
             .wrapper {
                 width: 100%;
+
     
             }
     
@@ -1281,6 +1290,7 @@
                 .news_title {
                     margin: 0 auto;
                     height: 50px;
+                    text-align: center;
 
                     h3 {
                         margin-top: 20px;
@@ -1301,11 +1311,18 @@
                     padding: 0px 20px;
                     margin: 0 auto;
 
+                    .newsRightText{
+                        p{
+                            padding-bottom: 5px ;
+                        }
+                    }
+
                     .newsLeftText {
                         margin-right: 18px;
 
                         p {
-                            padding-bottom: 25px;
+                            padding-bottom: 55px;
+        
                         }
                     }
 
@@ -1324,6 +1341,10 @@
                         margin-top: 50px;
                         margin-bottom: 50px;
 
+                        .cloud01{
+                            z-index: -1;
+                        }
+
                         img {
                             display: block;
                             width: calc(100% - 60px);
@@ -1332,17 +1353,20 @@
 
                         .foodSeaText {
                             width: calc(100% - 60px);
-                            height: 318px;
+                            height: 390px;
                             top: unset;
                             right: 30px;
                             margin-top: 90px;
-                            padding-right: 45px;
-                            padding-left: 45px;
+                            padding: 60px 44px;
+                            
 
                             h3 {
                                 width: 82px;
                                 line-height: 82px;
-                                right: 192px;
+                                // right: 192px;
+                                background-color: $sun_color;
+                                z-index: 2;
+                                left: calc( 50% - 41px);
                             }
 
                             .draw01 {
@@ -1392,7 +1416,7 @@
                             }
 
                             .viewButton_RWD {
-                                margin-top: 20px;
+                                margin-top: 40px;
                                 width: 100%;
                                 height: 60px;
                                 display: block;
@@ -1413,26 +1437,31 @@
                     .LiveLand {
                         margin-top: 200px;
 
+                        .cloud02{
+                            z-index: -2;
+                        }
+
                         img {
                             display: block;
                             width: calc(100% - 60px);
-                            height: 350px;
+                            height: 200px;
                             margin: 0 auto;
                         }
 
                         .LiveLandText {
                             width: calc(100% - 60px);
-                            height: 318px;
+                            height: 410px;
                             top: unset;
                             left: 30px;
-                            margin-top: 430px;
-                            padding-right: 45px;
-                            padding-left: 45px;
+                            margin-top: 300px;
+                            padding: 60px 44px;
 
                             h3 {
                                 width: 82px;
                                 line-height: 82px;
-                                left: 192px;
+                                z-index: 2;
+                                background-color: $sun_color;
+                                left: calc( 50% - 41px );
                             }
 
                             .draw01 {
@@ -1477,7 +1506,7 @@
                             }
 
                             .viewButton_RWD {
-                                margin-top: 20px;
+                                margin-top: 40px;
                                 width: 100%;
                                 height: 60px;
                                 display: block;
@@ -1497,24 +1526,28 @@
 
             .instagram {
                 padding-bottom: 0px;
-
+                
                 .wrapper {
-                    width: 500px;
-
+                    width: 100%;
+                    
                     .instagramPhoto {
-                        width: 500px;
-
+                        width: 100%;
+                        li{
+                            display: flex;
+                            justify-content: space-around;
+                            margin-bottom: 10px;
+                        }
                         
                         .ig_img {
-                            width: 110px;
+                            width: 31%;
                         }
                         
                         .ig_img01 {
-                            width: 160px;
+                            width: 31%;
                         }
 
                         .ig_img02 {
-                            width: 142px;
+                            display: none;
                         }
 
                     }

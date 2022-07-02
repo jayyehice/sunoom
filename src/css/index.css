@@ -11,12 +11,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.index a {
-  text-decoration: none;
-}
-.index a:visited {
-  color: #0C1244;
-}
 .index .indexHeader {
   padding: 50px;
   height: 100vh;
@@ -45,7 +39,6 @@
 }
 .index .indexHeader .wrapper .switchText p {
   color: white;
-  line-height: 40px;
   text-align: center;
 }
 .index .indexHeader .wrapper .switchText .fa-arrow-up-right {
@@ -59,6 +52,12 @@
 .index .indexHeader h2 {
   color: white;
   text-align: center;
+}
+.index main a {
+  text-decoration: none;
+}
+.index main a:visited {
+  color: #0C1244;
 }
 .index main .parallax {
   position: relative;
@@ -92,9 +91,9 @@
 .index main .news {
   display: flex;
   border: 1px solid #0C1244;
-  height: 250px;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .index main .news .news_title {
   width: 120px;
@@ -609,13 +608,13 @@
 .index_moon main .news {
   display: flex;
   border: 1px solid #F5F0DD;
-  height: 250px;
   align-items: center;
   justify-content: center;
 }
 .index_moon main .news .news_title {
   width: 120px;
   height: 70px;
+  text-align: center;
 }
 .index_moon main .news .news_text {
   margin-left: 75px;
@@ -1044,6 +1043,12 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .index .indexHeader h1 {
+    margin: 40px 0;
+  }
+  .index .indexHeader h2 {
+    font-size: 24px;
+  }
   .index .indexHeader .wrapper {
     width: 100%;
   }
@@ -1061,6 +1066,7 @@
   .index main .news .news_title {
     margin: 0 auto;
     height: 50px;
+    text-align: center;
   }
   .index main .news .news_title h3 {
     margin-top: 20px;
@@ -1077,11 +1083,14 @@
     padding: 0px 20px;
     margin: 0 auto;
   }
+  .index main .news .news_text_rwd .newsRightText p {
+    padding-bottom: 5px;
+  }
   .index main .news .news_text_rwd .newsLeftText {
     margin-right: 18px;
   }
   .index main .news .news_text_rwd .newsLeftText p {
-    padding-bottom: 25px;
+    padding-bottom: 55px;
   }
   .index main .category .wrapper {
     width: calc(100% - 40px);
@@ -1093,6 +1102,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .index main .category .wrapper .FoodSea .cloud01 {
+    z-index: -1;
+  }
   .index main .category .wrapper .FoodSea img {
     display: block;
     width: calc(100% - 60px);
@@ -1100,17 +1112,18 @@
   }
   .index main .category .wrapper .FoodSea .foodSeaText {
     width: calc(100% - 60px);
-    height: 318px;
+    height: 390px;
     top: unset;
     right: 30px;
     margin-top: 90px;
-    padding-right: 45px;
-    padding-left: 45px;
+    padding: 60px 44px;
   }
   .index main .category .wrapper .FoodSea .foodSeaText h3 {
     width: 82px;
     line-height: 82px;
-    right: 192px;
+    background-color: #F5F0DD;
+    z-index: 2;
+    left: calc(50% - 41px);
   }
   .index main .category .wrapper .FoodSea .foodSeaText .draw01 {
     width: 36%;
@@ -1145,7 +1158,7 @@
     display: none;
   }
   .index main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     height: 60px;
     display: block;
@@ -1154,25 +1167,29 @@
   .index main .category .wrapper .LiveLand {
     margin-top: 200px;
   }
+  .index main .category .wrapper .LiveLand .cloud02 {
+    z-index: -2;
+  }
   .index main .category .wrapper .LiveLand img {
     display: block;
     width: calc(100% - 60px);
-    height: 350px;
+    height: 200px;
     margin: 0 auto;
   }
   .index main .category .wrapper .LiveLand .LiveLandText {
     width: calc(100% - 60px);
-    height: 318px;
+    height: 410px;
     top: unset;
     left: 30px;
-    margin-top: 430px;
-    padding-right: 45px;
-    padding-left: 45px;
+    margin-top: 300px;
+    padding: 60px 44px;
   }
   .index main .category .wrapper .LiveLand .LiveLandText h3 {
     width: 82px;
     line-height: 82px;
-    left: 192px;
+    z-index: 2;
+    background-color: #F5F0DD;
+    left: calc(50% - 41px);
   }
   .index main .category .wrapper .LiveLand .LiveLandText .draw01 {
     width: 36%;
@@ -1204,7 +1221,7 @@
     display: none;
   }
   .index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     height: 60px;
     display: block;
@@ -1214,19 +1231,24 @@
     padding-bottom: 0px;
   }
   .index main .instagram .wrapper {
-    width: 500px;
+    width: 100%;
   }
   .index main .instagram .wrapper .instagramPhoto {
-    width: 500px;
+    width: 100%;
+  }
+  .index main .instagram .wrapper .instagramPhoto li {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
   }
   .index main .instagram .wrapper .instagramPhoto .ig_img {
-    width: 110px;
+    width: 31%;
   }
   .index main .instagram .wrapper .instagramPhoto .ig_img01 {
-    width: 160px;
+    width: 31%;
   }
   .index main .instagram .wrapper .instagramPhoto .ig_img02 {
-    width: 142px;
+    display: none;
   }
   .index main .instagram .cloud03 {
     position: relative;
