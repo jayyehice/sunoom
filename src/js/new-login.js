@@ -63,18 +63,22 @@ new Vue({
                         fetch(url)
                         .then(response => response.json())
                         .then(text =>{
+                            console.log(text);
                             if(text === 'same'){
                                 alert('帳號已經註冊，請重新登入');
                                 // window.location.href = 'new-login.html';
                                 document.getElementById('login').click();
+                            }else if(text === 'success'){
+                                // sessionStorage.setItem('id', text[0]['id']);
+                                // sessionStorage.setItem('last_name', text[0]['last_name']);
+                                // sessionStorage.setItem('first_name', text[0]['first_name']);
+                                // sessionStorage.setItem('phone', text[0]['phone']);
+                                // sessionStorage.setItem('email', text[0]['email']);
+                                
+                                confirm('註冊成功，已將認證連結發送至信箱!');
+                                window.location.href = 'new-login.html';
                             }else{
-                                sessionStorage.setItem('id', text[0]['id']);
-                                sessionStorage.setItem('last_name', text[0]['last_name']);
-                                sessionStorage.setItem('first_name', text[0]['first_name']);
-                                sessionStorage.setItem('phone', text[0]['phone']);
-                                sessionStorage.setItem('email', text[0]['email']);
-        
-                                window.location.href = 'member.html';
+                                alert('註冊失敗，請聯絡客服人員確認，謝謝');
                             }
                         })
                     }else{
