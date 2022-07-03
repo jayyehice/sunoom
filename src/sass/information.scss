@@ -81,7 +81,9 @@
                     width: 900px;
                     height: 700px;
                     margin: 0 auto;
-                    background-size: cover;
+                    // background-size: cover;
+                    background-size: 100%;
+
                     border: 1px solid $moon_color;
                     position: relative;
                     // display: none;

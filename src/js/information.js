@@ -469,3 +469,15 @@ new Vue({
     
 });
 
+
+$(function(){
+    $("header .switch").click(function(){
+        alert("tt");
+
+        $('.polaroid').find("h5 .change01").text("AAAAAAA");
+    
+        
+    })
+  
+  })
+  
