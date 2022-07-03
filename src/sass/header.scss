@@ -421,22 +421,51 @@ header{
     }
 
     .switch{
-      #sunSwitch{
+      // outline: 1px solid orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 36px;
+      
+      svg {
+        transform: scale(1);
+        z-index: 2;
+        pointer-events: none;
+      }
+      
+      #sunSwitch, #moonSwitch {
+        width: 88px;
+        height: 36px;
+        background: white;
+        position: absolute;
+        z-index: 1;
         cursor: pointer;
+        border-radius: 100px;
+        background: #9cd6ef;
+        border: 1px solid #65c0e7;
+      }
+      
+      #night {
+        pointer-events: none;
+      }
+
+      // #sunSwitch{
+      //   cursor: pointer;
         
-          @include mobile{
-            transform: rotate(-90deg);
-          }
-      }
+      //     @include mobile{
+      //       transform: rotate(-90deg);
+      //     }
+      // }
 
-      #moonSwitch{
-        cursor: pointer;
-        display: none;
+      // #moonSwitch{
+      //   cursor: pointer;
+      //   display: none;
 
-        @include mobile{
-          transform: rotate(-90deg);
-        }
-      }
+      //   @include mobile{
+      //     transform: rotate(-90deg);
+      //   }
+      // }
     }
   }
 
