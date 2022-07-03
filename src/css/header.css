@@ -203,12 +203,15 @@ header .ham_pay {
 header .ham_member {
   position: absolute;
   right: 100px;
-  top: 50px;
+  top: 55px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 @media (max-width: 576px) {
   header .ham_member {
     right: 70px;
-    top: 20px;
+    top: 25px;
   }
 }
 header .hamLoginOut {

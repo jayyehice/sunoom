@@ -9,7 +9,7 @@
        foreach($catagorys as $idx => $catagory){
               // echo $catagory;
 
-              $sql = "SELECT * FROM article Where category = '$catagory' ORDER BY date DESC";
+              $sql = "SELECT * FROM v_article Where category = '$catagory' ORDER BY date DESC";
               $statement = $pdo->query($sql);
               $data = $statement->fetchAll();
 
@@ -35,7 +35,7 @@
        };
 
        //全部文章
-       $sql = "SELECT * FROM article ORDER BY date DESC";
+       $sql = "SELECT * FROM v_article WHERE category != 'offical' ORDER BY date DESC ";
        $statement = $pdo->query($sql);
        $data = $statement->fetchAll();
 
@@ -52,7 +52,7 @@
 
 
        //官方文章
-       $sql = "SELECT * FROM article Where category = 'offical' ORDER BY watch DESC";
+       $sql = "SELECT * FROM v_article Where category = 'offical' ORDER BY watch DESC";
        $statement = $pdo->query($sql);
        $data = $statement->fetchAll();
 

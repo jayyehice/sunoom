@@ -18,14 +18,17 @@
   if(sessionStorage.getItem('id')){
     $('#hamL').hide();
     $('#hamO').show();
-    console.log($('#hamL')[0]);
+    // console.log($('#hamL')[0]);
+    $('#ham_member').attr('src', sessionStorage.getItem('photo'));
   }else{
     $('#hamL').removeAttr('style');
     $('#hamO').removeAttr('style');
+    $('#ham_member').attr('src', './img/common/member/default_big.jpg');
   }
 
   $('#hamO').click(function(e){
     e.preventDefault();
+    $('#ham_member').attr('src', './img/common/member/default_big.jpg');
     sessionStorage.clear();
     location.reload(true);
   });
