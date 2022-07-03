@@ -2,6 +2,14 @@
 .food {
   background-color: #F5F0DD;
 }
+.food #bgCanvas {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 .food header .headerCenter {
   position: absolute;
   z-index: 100;
@@ -431,6 +439,17 @@
 
 .food_moon {
   background-color: #0C1244;
+  position: relative;
+}
+.food_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: 2s;
+  opacity: 1;
 }
 .food_moon .banner {
   position: relative;

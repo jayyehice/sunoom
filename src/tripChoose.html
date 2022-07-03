@@ -576,7 +576,7 @@
                 <button id="FinishPage">完成結帳</button> -->
                 
                 <!-- 改成form表單 -->
-                <form action="./php/pay.php" class="payBlock" method="post">
+                <!-- <form action="./php/pay.php" class="payBlock" method="post"> -->
                     <h4>PayMent</h4>
                     <div class="mailAndPhone">
                         <div class="email">
@@ -608,8 +608,8 @@
                     <div class="payWayMobile">
                         <h5>付款方式</h5>
                         <select name="" id="payWayMobileUse">
-                            <option value="">信用卡</option>
-                            <option value="">匯款</option>
+                            <option value="信用卡">信用卡</option>
+                            <option value="匯款">匯款</option>
                         </select>
                     </div>
                     <p>我們將會發送確認的驗證碼郵件。<br>
@@ -642,10 +642,10 @@
                     </div>
                     <div class="buttonBlock">
                         <button class="backToChoosePage" type="button" @click="backToChoosePage">回上一頁</button>
-                        <button id="FinishPage" type="submit">完成結帳</button>
+                        <button @click="SendOrder" id="FinishPage" type="submit">前往付款</button>
                     </div>
                     <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
-                </form>
+                <!-- </form> -->
             </section>
         </article>
     </article>

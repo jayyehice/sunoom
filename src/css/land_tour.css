@@ -115,7 +115,7 @@
 .land_tour main .banner .schedule-wrapper .event-item .chName {
   position: relative;
   line-height: 1;
-  font-size: 60px;
+  font-size: 80px;
   letter-spacing: 3px;
   text-align: center;
   text-shadow: gray 5px 5px 5px;
@@ -211,6 +211,8 @@
   height: 140px;
   box-sizing: border-box;
   display: flex;
+  position: relative;
+  z-index: 3;
 }
 .land_tour main .breadcrumbs .wrapper ul li {
   margin-right: 10px;
@@ -754,6 +756,8 @@
   height: 140px;
   box-sizing: border-box;
   display: flex;
+  position: relative;
+  z-index: 3;
 }
 .land_tour_moon main .breadcrumbs .wrapper ul li {
   margin-right: 10px;
@@ -1099,6 +1103,15 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .land_tour main .banner .schedule-wrapper .event-item .chName {
+    font-size: 40px;
+  }
+  .land_tour main .banner .schedule-wrapper .event-item .ocean {
+    font-size: 24px;
+  }
+  .land_tour main .banner .schedule-wrapper .event-item .enName {
+    font-size: 24px;
+  }
   .land_tour main .breadcrumbs .wrapper {
     width: 100%;
   }
@@ -1330,6 +1343,12 @@
   }
   .land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
     width: 40px;
+  }
+  .land_tour main a {
+    text-decoration: none;
+  }
+  .land_tour main a:visited {
+    color: #0C1244;
   }
 
   .land_tour_moon main .breadcrumbs .wrapper {
@@ -1563,6 +1582,12 @@
   }
   .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
     width: 40px;
+  }
+  .land_tour_moon main a {
+    text-decoration: none;
+  }
+  .land_tour_moon main a:visited {
+    color: #0C1244;
   }
 }
 
