@@ -1458,21 +1458,82 @@ window.addEventListener('load',function(){
                 // this.totalPriceR = '$'+(parseInt(this.minorTotalPriceR.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
 
             },
+            //準備結帳頁的金額重算
             totalR(){
                 this.discount_list.forEach(() => {
                     this.DiscountR =  '-$'+(Math.round((this.minorTotalPriceR.slice(1).replace(/,/g,'')) * ( 1 -( this.discount_list[discountNumsR.value][1] / 10)))).toLocaleString('en-US');
                     })
                 this.totalPriceR = '$'+(parseInt(this.minorTotalPrice.slice(1).replace(/,/g,'')) - parseInt(this.DiscountR.slice(2).replace(/,/g,''))).toLocaleString('en-US');
             },
+            //返回日期選單頁
             back(){
                 window.location.href = './orderPage.html'
             },
+            //返回行程選單頁
             backToChoosePage(){
                 sectionBlock.style.display = 'block'
                 readyToPay.style.display = 'none'
                 $('html, body').animate({
                     scrollTop:'0'
                 },1000)
+            },
+            
+            //新增會員資料至DB & 送(尚未付款)訂單明細入DB
+            SendOrder(){
+                //選取內容帶去完整明細表
+
+                let tripMorningNameR = document.getElementsByClassName('tripMorningNameR');
+
+                let tripNoonNameR = document.getElementsByClassName('tripNoonNameR');
+
+                let tripEveningNameR = document.getElementsByClassName('tripEveningNameR');
+
+                let FoodMorningNameR = document.getElementsByClassName('FoodMorningNameR');
+
+                let FoodNoonNameR = document.getElementsByClassName('FoodNoonNameR');
+
+                let FoodEveningNameR = document.getElementsByClassName('FoodEveningNameR');
+
+                let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
+                
+                let nt = (+new Date()) + payPhoneNumber.value;
+
+                fetch(url,{
+                    method:'POST', 
+                    headers:{ 'Content-Type': 'application/json' },
+                    body:JSON.stringify({
+                        account:payEmail.value,
+                        firstName:firstName.value,
+                        lastName:lastName.value,
+                        phone: payPhoneNumber.value,
+                        createdate:new Date().toLocaleDateString(),
+                        state:"未開通",
+                    })
+                    // .then(response => response.text())
+                    // .then((body) => {console.log(body)})
+                })
+                let url = './php/inserOrder.php';
+                for(let i = 0; i < this.dateArray.length; i++){
+                    let triplist = tripMorningNameR[i].innerText + tripNoonNameR[i].innerText + tripEveningNameR[i].innerText;
+                    let foodlist = FoodMorningNameR[i].innerText+FoodNoonNameR[i].innerText+FoodEveningNameR[i].innerText;
+                    fetch(url,{
+                        method:'POST', 
+                        headers:{ 'Content-Type': 'application/json' },
+                        body:JSON.stringify({
+                            paymode: payWayMobileUse.value,
+                            total: this.totalPriceR.slice(1).replace(/,/g,''),
+                            tripchoose: triplist,
+                            foodchoose: foodlist,
+                            staychoose: StayChooseNameR[i].innerText,
+                            ordernums: nt,
+                            tripdate: this.dateArray[i],
+                        })
+                        // .then(response => response.text())
+                        // .then((body) => {console.log(body)})
+                    })
+                }
+
+
             }
         },
         computed:{
@@ -1483,7 +1544,16 @@ window.addEventListener('load',function(){
             const url = './php/tripChoose.php'
             fetch(url)
             .then(response => response.json())
-            .then(activity => this.activity_list = activity);
+            .then(activity => this.activity_list = activity)
+            .then(()=>{
+                this.activity_list.forEach(elementA => {
+                    if(elementA[4] == 1){
+                       elementA[1] = elementA[1] + '(日島)';
+                    }else{
+                        elementA[1] = elementA[1] + '(月島)';
+                    }
+                })
+            })
     
             //取餐廳資料表
             const url1 = './php/foodChoose.php'
@@ -1547,9 +1617,9 @@ window.addEventListener('load',function(){
                                 tripMorningName[i].innerHTML = this.activity_list[this.tripMorningNameValue][1];
                                 tripMorningPrice[i].innerHTML = (this.activity_list[this.tripMorningNameValue][3] * this.pepoleNums)
     
-                                let tirpMorningChooseList = [];
-                                tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
-                                localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
+                                // let tirpMorningChooseList = [];
+                                // tirpMorningChooseList.push(this.dateArray[i],this.activity_list[this.tripMorningNameValue][1],this.activity_list[this.tripMorningNameValue][3])
+                                // localStorage.setItem('tirpMorningChooseList'+[i],JSON.stringify(tirpMorningChooseList))
     
                                 // $('.addfadein').fadeTo(1,0.9).css('display','block')
 
@@ -1592,9 +1662,9 @@ window.addEventListener('load',function(){
                                 tripNoonName[i].innerHTML = this.activity_list[this.tripNoonNameValue][1];
                                 tripNoonPrice[i].innerHTML = (this.activity_list[this.tripNoonNameValue][3] * this.pepoleNums)
     
-                                let tripNoonChooseList = [];
-                                tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
-                                localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
+                                // let tripNoonChooseList = [];
+                                // tripNoonChooseList.push(this.dateArray[i],this.activity_list[this.tripNoonNameValue][1],this.activity_list[this.tripNoonNameValue][3])
+                                // localStorage.setItem('tripNoonChooseList'+[i],JSON.stringify(tripNoonChooseList))
                                 
                                 
                                 $('.addfadein').fadeTo(1,0.9)
@@ -1635,9 +1705,9 @@ window.addEventListener('load',function(){
                                 tripEveningName[i].innerHTML = this.activity_list[this.tripEveningNameValue][1];
                                 tripEveningPrice[i].innerHTML = (this.activity_list[this.tripEveningNameValue][3] * this.pepoleNums)
     
-                                let tripEveningChooseList = [];
-                                tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
-                                localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
+                                // let tripEveningChooseList = [];
+                                // tripEveningChooseList.push(this.dateArray[i],this.activity_list[this.tripEveningNameValue][1],this.activity_list[this.tripEveningNameValue][3])
+                                // localStorage.setItem('tripEveningChooseList'+[i],JSON.stringify(tripEveningChooseList))
                                 
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -1677,9 +1747,9 @@ window.addEventListener('load',function(){
                                 FoodMorningName[i].innerHTML = this.food_list[this.FoodMorningNameValue][0];
                                 FoodMorningPrice[i].innerHTML = (this.food_list[this.FoodMorningNameValue][1] * this.pepoleNums)
     
-                                let FoodMorningChooseList = [];
-                                FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
-                                localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
+                                // let FoodMorningChooseList = [];
+                                // FoodMorningChooseList.push(this.dateArray[i],this.food_list[this.FoodMorningNameValue][0],this.food_list[this.FoodMorningNameValue][1])
+                                // localStorage.setItem('FoodMorningChooseList'+[i],JSON.stringify(FoodMorningChooseList))
     
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -1720,9 +1790,9 @@ window.addEventListener('load',function(){
                                 FoodNoonName[i].innerHTML = this.food_list[this.FoodNoonNameValue][0];
                                 FoodNoonPrice[i].innerHTML = (this.food_list[this.FoodNoonNameValue][1] * this.pepoleNums)
     
-                                let FoodNoonChooseList = [];
-                                FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
-                                localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
+                                // let FoodNoonChooseList = [];
+                                // FoodNoonChooseList.push(this.dateArray[i],this.food_list[this.FoodNoonNameValue][0],this.food_list[this.FoodNoonNameValue][1])
+                                // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodNoonChooseList))
     
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -1763,9 +1833,9 @@ window.addEventListener('load',function(){
                                 FoodEveningName[i].innerHTML = this.food_list[this.FoodEveningNameValue][0];
                                 FoodEveningPrice[i].innerHTML = (this.food_list[this.FoodEveningNameValue][1] * this.pepoleNums)
     
-                                let FoodEveningChooseList = [];
-                                FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
-                                localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
+                                // let FoodEveningChooseList = [];
+                                // FoodEveningChooseList.push(this.dateArray[i],this.food_list[this.FoodEveningNameValue][0],this.food_list[this.FoodEveningNameValue][1])
+                                // localStorage.setItem('FoodNoonChooseList'+[i],JSON.stringify(FoodEveningChooseList))
     
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -1821,9 +1891,9 @@ window.addEventListener('load',function(){
                                     StayChooseName[i].innerHTML = thisStayName;
                                     StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
         
-                                    let stayChooseList = [];
-                                    stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                    localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+                                    // let stayChooseList = [];
+                                    // stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                    // localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
         
                                     $('.addfadein').fadeTo(1,0.9)
                                     $('.addfadein').fadeOut(2000)
@@ -1868,9 +1938,9 @@ window.addEventListener('load',function(){
                                 StayChooseName[i].innerHTML = thisStayName;
                                 StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
     
-                                let stayChooseList = [];
-                                stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+                                // let stayChooseList = [];
+                                // stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                // localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
     
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -1915,9 +1985,9 @@ window.addEventListener('load',function(){
                                 StayChooseName[i].innerHTML = thisStayName;
                                 StayChoosePrice[i].innerHTML = (this.pepoleNums * parseInt(thisPrice));
     
-                                let stayChooseList = [];
-                                stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
-                                localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
+                                // let stayChooseList = [];
+                                // stayChooseList.push(this.dateArray[i],thisStayName,thisPrice)
+                                // localStorage.setItem('stayChooseList'+[i],JSON.stringify(stayChooseList))
     
                                 $('.addfadein').fadeTo(1,0.9)
                                 $('.addfadein').fadeOut(2000)
@@ -2005,16 +2075,16 @@ window.addEventListener('load',function(){
                 
                 
                 //RWD
-                $(window).ready(function(){
-                    $(window).resize(function(){
-                        if(window.innerWidth < 576){
-                            console.log(window.innerWidth);
-                            window.location.href='tripChooseMobile.html';
-                        }else{
-                            window.location.href='tripChoose.html';
-                        }
-                    })
-                })
+                // $(window).ready(function(){
+                //     $(window).resize(function(){
+                //         if(window.innerWidth < 576){
+                //             console.log(window.innerWidth);
+                //             window.location.href='tripChooseMobile.html';
+                //         }else{
+                //             window.location.href='tripChoose.html';
+                //         }
+                //     })
+                // })
                 
 
             
@@ -2125,7 +2195,8 @@ window.addEventListener('load',function(){
             this.FoodNoonNameValue = FoodNchoose.value;
             this.FoodEveningNameValue = FoodEchoose.value;
 
-
+            // console.log(typeof(payPhoneNumber.value));
+            // let nt = (+new Date())
             // //選取內容帶去完整明細表
             // let tripMorningName = document.getElementsByClassName('tripMorningName');
             // let tripMorningPrice = document.getElementsByClassName('tripMorningPrice');
