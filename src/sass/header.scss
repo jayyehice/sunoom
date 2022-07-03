@@ -273,10 +273,13 @@ header{
     // border: 1px solid teal;
     position: absolute;
     right: 100px;
-    top: 50px;
+    top: 55px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     @include mobile{
       right: 70px;
-      top: 20px;
+      top: 25px;
     }
   
   }

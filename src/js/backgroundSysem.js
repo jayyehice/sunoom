@@ -47,19 +47,26 @@ window.addEventListener("load",function(){
                 alert('請重新登入');
                 window.location.href = './backgroundSystem_login.html';
             }else{
-                this.id = sessionStorage['id'];
-                this.account = sessionStorage['account'];
-                this.authority = sessionStorage['authority'];
-                this.image = sessionStorage['image'];
+                if(sessionStorage['authority']){
 
-                if(this.authority > 5){
-                    this.content = 'overview';
+                    this.id = sessionStorage['id'];
+                    this.account = sessionStorage['account'];
+                    this.authority = sessionStorage['authority'];
+                    this.image = sessionStorage['image'];
+    
+                    if(this.authority > 5){
+                        this.content = 'overview';
+                    }
+                    const url = './php/backgroundSystem.php?table=all';
+                    fetch(url)
+                        .then(response => response.json())
+                        // .then(text => console.log(text))
+                        .then(text => this.data_list = text)
+                }else{
+                    this.content = '';
+                    alert('請重新登入');
+                    window.location.href = './backgroundSystem_login.html';
                 }
-                const url = './php/backgroundSystem.php?table=all';
-                fetch(url)
-                    .then(response => response.json())
-                    // .then(text => console.log(text))
-                    .then(text => this.data_list = text)
             }
         },
         
