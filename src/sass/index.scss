@@ -10,6 +10,16 @@
     line-height: 1.6;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
 
+    // 星空
+    #bgCanvas {
+        width: 0%;
+        height: 0%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
     header .headerCenter {
         position: absolute;
         z-index: 100;
@@ -677,16 +687,22 @@
     letter-spacing: 3px;
     line-height: 1.6;
     font-family: 'Times New Roman', 'Noto Sans TC', sans-serif;
-
+    position: relative;
     
+    // 星空
+    #bgCanvas {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transition: height 1s;
+        // opacity: 1;
+    }
 
     main {
-        #bgCanvas {
-            position:relative;
-            top:0;
-            left:0;
-            z-index: -2;
-        }
+        
         .parallax {
             background-image: url(../img/index/muntain_bg01.png);
             background-repeat: no-repeat;
