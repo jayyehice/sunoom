@@ -3,6 +3,14 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.information #bgCanvas {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 .information main .breadcrumbs .wrapper {
   width: 1070px;
   margin: 0 auto;
@@ -743,6 +751,17 @@
 .information_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+  position: relative;
+}
+.information_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: 2s;
+  opacity: 1;
 }
 .information_moon main .breadcrumbs .wrapper {
   width: 1070px;
@@ -1475,6 +1494,7 @@
   }
   .information main .map .wrapper {
     width: calc(100% - 40px);
+    display: none;
   }
   .information main .map .wrapper h3 {
     margin-bottom: 20px;
