@@ -328,7 +328,6 @@ $(function () {
 
     sendDays.push(Sday,theDays,Eday);
     
-    
     });
 
     let sendDays=[];
@@ -351,6 +350,7 @@ $(function () {
         setTimeout(()=>{
             $('#dateBooking').removeClass('notCheck')
         },1000)
+        
         }   
         if(pepoleNums == 0){
             $('html, body').animate({
@@ -366,12 +366,7 @@ $(function () {
             },500)
         }
         if(manyDays.innerText != '' && pepoleNums != 0){
-            if(window.innerWidth < 576){
-                window.location.href='tripChooseMobile.html';
-            }else{
-                window.location.href='tripChoose.html';
-            }
-        
+            window.location.href='tripChoose.html';
         }
         
 
