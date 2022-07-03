@@ -154,8 +154,12 @@ window.addEventListener("load", e => {
         
         data: {     //變數放這裡
             ig_list: [],
+            ig_imgtext: [],
         },
-        method: {},
+        methods: {ig_img(e){
+            let igimg = e.target.dataset.ig;
+            this.ig_imgtext = this.ig_list[igimg]
+        }},
         compute: {},
         watch: {},
         
@@ -183,7 +187,7 @@ window.addEventListener("load", e => {
             
             for (let i = 0; i < ig_img.length; i++) {
                 ig_img[i].addEventListener("click", function () {
-                    console.log(this.getAttribute("src"));
+                    // console.log(this);
                     ig_pop_up.setAttribute("style", "display:block;");
                     ig_pop_up_img.src = this.getAttribute("src");
                 });
@@ -203,7 +207,10 @@ window.addEventListener("load", e => {
         
         destroyed() { },
     })
-    
+
+
+
+   
     //時鐘 資料串接
     let v_clock = new Vue({
         el: '#banner',
