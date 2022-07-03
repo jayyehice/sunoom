@@ -15,6 +15,16 @@ $p : 16px;
 .food{
     background-color: $sun_color;
 
+    // 星空
+    #bgCanvas {
+        width: 0%;
+        height: 0%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
     //header
     header .headerCenter {
         position: absolute;
@@ -490,6 +500,20 @@ $p : 16px;
 .food_moon{
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
+    position: relative;
+
+    // 星空
+    #bgCanvas {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transition: 2s;
+        opacity: 1;
+    }
+
     // banner區塊
     .banner{
         position: relative;
