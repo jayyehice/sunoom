@@ -170,9 +170,9 @@
                                         <div class="icons">
                                             <div class="icon-1">
                                                 <div>
-                                                    <img src="img/common/member/default.jpg" alt="">
+                                                    <img :src="render[12]" alt="">
                                                 </div>
-                                                <span class="span1">慶記</span>
+                                                <span class="span1">{{render[11]}}</span>
                                             </div>
                                             <div class="icon-2">
                                                 <!-- <div>
@@ -247,7 +247,7 @@
                 </div>
                 <hr class="hr1">
                 <div class="icons2">
-                    <img src="img/common/member/sunoomlogo_author.png" alt="">
+                    <img src="./img/common/member/sunoomlogo_author.png" alt="">
                     <span class="span3">Sunoom</span>
                 </div>
                 <div class="discuss-region">
@@ -308,8 +308,8 @@
                 <div class="title2">
                     <h3>發表新文章</h3>
                     <div class="author_data">
-                        <img id="authorImg" src="./img/common/member/1.jpg" alt="">
-                        <h4 id="author">慶記</h4>
+                        <img id="authorImg" :src="memberphoto" alt="">
+                        <h4 id="author">{{membername}}</h4>
                     </div>
                 </div>
                 <div class="form_region1">

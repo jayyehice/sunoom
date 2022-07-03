@@ -13,7 +13,9 @@ window.addEventListener("load", function(){
             render_list:[],
             articleid:0,
             comment_list:[],
-            memberid:1,
+            memberid:0,
+            memberphoto:'./img/common/member/default_big.jpg',
+            membername:'訪客',
         },
         methods: {
             render_li(e){
@@ -123,7 +125,18 @@ window.addEventListener("load", function(){
                     this.render_list = text["all"];
                 })
         },
-        mounted() {},
+        mounted() {
+            //帶入會員ID
+            if(sessionStorage.getItem('id')){
+                this.memberid = sessionStorage.getItem('id');
+                this.memberphoto = sessionStorage.getItem('photo');
+                this.membername = sessionStorage.getItem('first_name');
+            }else{
+                this.memberid = 0;
+                this.memberphoto = './img/common/member/default_big.jpg';
+                this.membername = '訪客';
+            }
+        },
         updated() {
 
             // ----------------------------------切換頁籤------------------------------------
@@ -138,7 +151,7 @@ window.addEventListener("load", function(){
             }
             
             // ------------------------------開啟pop-up-out彈窗------------------------------
-
+            //官方文章開啟
             let official_article_a = document.getElementsByClassName('official_article_a');
             for(let i=0; i<official_article_a.length; i++){
                 official_article_a[i].addEventListener("click", e => {
@@ -161,7 +174,7 @@ window.addEventListener("load", function(){
                     }
                     
                     $('.pop-up').find('.span3')[0].innerText='Sunoom';//作者
-                    $('.pop-up').find('.icons2 img').attr("src","img/discuss/sunoomlogo_author.png")//作者頭像
+                    $('.pop-up').find('.icons2 img').attr("src","./img/common/member/sunoomlogo_author.png")//作者頭像
                     $('html').attr("style","overflow: hidden");
                 })
             }
@@ -225,12 +238,23 @@ window.addEventListener("load", function(){
 
             // ------------------------------發表新文章------------------------------
             // 開啟
-            $('#post_new_article').click(function(){
-                // console.log('discussion')
-                // e.preventDefault();
-                $('.form_region').css('display','block')
-                $('html').attr("style","overflow: hidden");
-            });
+            document.getElementById('post_new_article').addEventListener('click', e => {
+                if(this.memberid == 0){
+                    let r = confirm('請先登入，或註冊會員');
+                    if(r){
+                        window.location.href = './new-login.html';
+                    }
+                }else{
+                    $('.form_region').css('display','block')
+                    $('html').attr("style","overflow: hidden");
+
+                }
+
+            })
+            // $('#post_new_article').click(function(){
+            //     // console.log('discussion')
+            //     // e.preventDefault();
+            // });
 
             // 關閉
             $('.png1').click(function(e){
