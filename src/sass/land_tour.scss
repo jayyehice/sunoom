@@ -1502,6 +1502,9 @@
 
                 .schedule-wrapper{
                     .event-item{
+                        .chName{
+                            font-size: 40px;
+                        }
                         .ocean{
                             font-size: 24px;
                         }
@@ -1858,6 +1861,12 @@
                 }
 
             }
+            a{
+                text-decoration: none;
+                &:visited {
+                    color: $moon_color;
+                }
+            }
 
         }
     }
@@ -2208,6 +2217,12 @@
                     }
                 }
 
+            }
+            a{
+                text-decoration: none;
+                &:visited {
+                    color: $moon_color;
+                }
             }
 
         }

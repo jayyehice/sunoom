@@ -681,6 +681,12 @@
     
 
     main {
+        #bgCanvas {
+            position:relative;
+            top:0;
+            left:0;
+            z-index: -2;
+        }
         .parallax {
             background-image: url(../img/index/muntain_bg01.png);
             background-repeat: no-repeat;
