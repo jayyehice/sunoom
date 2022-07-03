@@ -393,27 +393,27 @@
 
                 <ul>
                     <li>
-                        <img class="ig_img" :src="ig_list[1][1]" alt="">
-                        <img class="ig_img" :src="ig_list[2][1]" alt="">
-                        <img class="ig_img" :src="ig_list[3][1]" alt="">
+                        <img class="ig_img" :src="ig_list[1][1]" alt="" data-ig="1" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[2][1]" alt="" data-ig="2" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[3][1]" alt="" data-ig="3" @click="ig_img">
                     </li>
 
                     <li>
-                        <img class="ig_img" :src="ig_list[4][1]" alt="">
-                        <img class="ig_img" :src="ig_list[5][1]" alt="">
-                        <img class="ig_img" :src="ig_list[6][1]" alt="">
+                        <img class="ig_img" :src="ig_list[4][1]" alt="" data-ig="4" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[5][1]" alt="" data-ig="5" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[6][1]" alt="" data-ig="6" @click="ig_img">
                     </li>
 
                     <li>
-                        <img class="ig_img" :src="ig_list[7][1]" alt="">
-                        <img class="ig_img" :src="ig_list[8][1]" alt="">
-                        <img class="ig_img" :src="ig_list[9][1]" alt="">
+                        <img class="ig_img" :src="ig_list[7][1]" alt="" data-ig="7" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[8][1]" alt="" data-ig="8" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[9][1]" alt="" data-ig="9" @click="ig_img">
                     </li>
 
                     <li>
-                        <img class="ig_img" :src="ig_list[10][1]" alt="">
-                        <img class="ig_img" :src="ig_list[11][1]" alt="">
-                        <img class="ig_img" :src="ig_list[12][1]" alt="">
+                        <img class="ig_img" :src="ig_list[10][1]" alt="" data-ig="10" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[11][1]" alt="" data-ig="11" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[12][1]" alt="" data-ig="12" @click="ig_img">
                     </li>
                 </ul>
 
@@ -432,7 +432,7 @@
                             <h5 id="ig_author_name">JJCHEN</h5>
                         </div>
                         <div id="ig_words">
-                            <p>我身騎棕馬，到處玩，在海灘上，日月交替的奇景，讓人以為置身於天堂，你一生一定要來一次，絕對超值。</p>
+                            <p>{{ig_imgtext[2]}}</p>
                             
                         </div>
 
