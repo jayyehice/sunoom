@@ -333,40 +333,67 @@
 .food main .wrapper_mid .fa-circle-plus {
   color: #0C1244;
 }
-.food main #bookingBox {
+.food main .box1 {
+  position: relative;
+}
+.food main .box1 .bookingBoxDrop {
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.food main .box1 #bookingBox1 {
+  display: none;
+  position: absolute;
+  z-index: 2;
   width: 350px;
-  margin-left: calc(50% - 175px);
   box-shadow: 1px 10px 30px #cccccc;
   background-color: #F5F0DD;
 }
-.food main #bookingBox .boxInner {
+.food main .box1 #bookingBox1 .boxInner {
+  position: relative;
   width: 300px;
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
   box-sizing: border-box;
 }
-.food main #bookingBox .boxInner .restaurant_picture img {
+.food main .box1 #bookingBox1 .boxInner .bookingBoxClose {
+  font-size: 24px;
+  color: #0C1244;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.food main .box1 #bookingBox1 .boxInner .restaurant_picture img {
+  width: 55%;
   box-shadow: 0 2px 10px grey;
   background-color: #fff;
 }
-.food main #bookingBox .boxInner .restaurant_name h4 {
+.food main .box1 #bookingBox1 .boxInner .restaurant_name h4 {
   font-size: 24px;
 }
-.food main #bookingBox .boxInner .table_for {
-  margin: 30px 0;
+.food main .box1 #bookingBox1 .boxInner .table_for {
+  margin: 0px 0px;
 }
-.food main #bookingBox .boxInner .table_for p {
+.food main .box1 #bookingBox1 .boxInner .table_for p {
   font-size: 16px;
 }
-.food main #bookingBox .boxInner .table_choice {
+.food main .box1 #bookingBox1 .boxInner .table_choice {
   display: flex;
   justify-content: space-around;
 }
-.food main #bookingBox .boxInner .table_choice .minus {
+.food main .box1 #bookingBox1 .boxInner .table_choice .minus {
   line-height: 60px;
 }
-.food main #bookingBox .boxInner .table_choice .minus button {
+.food main .box1 #bookingBox1 .boxInner .table_choice .minus button {
   color: black;
   background: transparent;
   border: 0px solid black;
@@ -375,20 +402,20 @@
   width: 30px;
   height: 30px;
 }
-.food main #bookingBox .boxInner .table_choice .minus button:active {
+.food main .box1 #bookingBox1 .boxInner .table_choice .minus button:active {
   transform: translate(0px, 2px);
   -webkit-transform: translate(0px, 2px);
   -moz-transform: translate(0px, 2px);
   -ms-transform: translate(0px, 2px);
   box-shadow: 0px 1px 0px 0px;
 }
-.food main #bookingBox .boxInner .table_choice .minus button:disabled {
+.food main .box1 #bookingBox1 .boxInner .table_choice .minus button:disabled {
   opacity: 0.65;
 }
-.food main #bookingBox .boxInner .table_choice .plus {
+.food main .box1 #bookingBox1 .boxInner .table_choice .plus {
   line-height: 60px;
 }
-.food main #bookingBox .boxInner .table_choice .plus button {
+.food main .box1 #bookingBox1 .boxInner .table_choice .plus button {
   color: black;
   background: transparent;
   border: 0px solid black;
@@ -397,24 +424,24 @@
   width: 30px;
   height: 30px;
 }
-.food main #bookingBox .boxInner .table_choice .plus button:active {
+.food main .box1 #bookingBox1 .boxInner .table_choice .plus button:active {
   transform: translate(0px, 2px);
   -webkit-transform: translate(0px, 2px);
   -moz-transform: translate(0px, 2px);
   -ms-transform: translate(0px, 2px);
   box-shadow: 0px 1px 0px 0px;
 }
-.food main #bookingBox .boxInner .table_choice .plus button:disabled {
+.food main .box1 #bookingBox1 .boxInner .table_choice .plus button:disabled {
   opacity: 0.65;
 }
-.food main #bookingBox .boxInner .table_choice .table_number {
+.food main .box1 #bookingBox1 .boxInner .table_choice .table_number {
   font-size: 50px;
 }
-.food main #bookingBox .boxInner .date_picker {
+.food main .box1 #bookingBox1 .boxInner .date_picker {
   width: 100%;
   margin-bottom: 15px;
 }
-.food main #bookingBox .boxInner .date_picker input {
+.food main .box1 #bookingBox1 .boxInner .date_picker input {
   color: #0C1244;
   padding: 7px;
   border: 1.5px solid #0C1244;
@@ -424,10 +451,11 @@
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
-.food main #bookingBox .boxInner .time_picker {
+.food main .box1 #bookingBox1 .boxInner .time_picker {
   width: 100%;
+  margin-bottom: 15px;
 }
-.food main #bookingBox .boxInner .time_picker input {
+.food main .box1 #bookingBox1 .boxInner .time_picker input {
   color: #0C1244;
   padding: 7px;
   border: 1.5px solid #0C1244;
@@ -437,11 +465,11 @@
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
-.food main #bookingBox .boxInner .name {
+.food main .box1 #bookingBox1 .boxInner .name {
   width: 100%;
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.food main #bookingBox .boxInner .name input {
+.food main .box1 #bookingBox1 .boxInner .name input {
   color: #0C1244;
   padding: 7px;
   border: 1.5px solid #0C1244;
@@ -451,11 +479,11 @@
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
-.food main #bookingBox .boxInner .phone {
+.food main .box1 #bookingBox1 .boxInner .phone {
   width: 100%;
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.food main #bookingBox .boxInner .phone input {
+.food main .box1 #bookingBox1 .boxInner .phone input {
   color: #0C1244;
   padding: 7px;
   border: 1.5px solid #0C1244;
@@ -465,10 +493,10 @@
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
-.food main #bookingBox .boxInner .submit_btn {
+.food main .box1 #bookingBox1 .boxInner .submit_btn {
   margin: 15px 0px 10px 0px;
 }
-.food main #bookingBox .boxInner .submit_btn button {
+.food main .box1 #bookingBox1 .boxInner .submit_btn button {
   width: 80%;
   height: 50px;
   color: #F5F0DD;
@@ -478,12 +506,12 @@
   font-family: "Raleway", sans-serif;
   cursor: pointer;
 }
-.food main #bookingBox .boxInner .submit_btn button:active {
+.food main .box1 #bookingBox1 .boxInner .submit_btn button:active {
   transform: translate(0px, 2px);
   -webkit-transform: translate(0px, 2px);
   box-shadow: 0px 1px 0px 0px;
 }
-.food main #bookingBox .boxInner .submit_btn button:hover {
+.food main .box1 #bookingBox1 .boxInner .submit_btn button:hover {
   color: #0C1244;
   background-color: #F5F0DD;
   border: 1.5px solid #0C1244;
@@ -570,7 +598,8 @@
   -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
-.food main .wrapper_bottom .map .iconBox .fa-circle-xmark {
+.food main .wrapper_bottom .map .iconBox .close {
+  font-size: 24px;
   color: #0C1244;
   position: absolute;
   top: 15px;
