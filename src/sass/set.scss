@@ -13,8 +13,9 @@
 
     //星空
     #bgCanvas {
-        width: 0%;
-        height: 0%;
+        // width: 0%;
+        // height: 0%;
+        opacity: 0;
         position:absolute;
         top: 0;
         left: 0;
@@ -481,6 +482,7 @@
     #bgCanvas {
         width: 100%;
         height: 100%;
+        opacity: 1;
         position:absolute;
         top: 0;
         left: 0;
