@@ -10,6 +10,17 @@
     background-color: $sun_color;
     color: $moon_color;
 
+    //星空
+    #bgCanvas {
+        // width: 0%;
+        // height: 0%;
+        opacity: 0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
     header{
         border-top: 0.1px solid $sun_color;
     }
@@ -194,6 +205,18 @@
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
+
+    // 星空
+    #bgCanvas {
+        width: 100%;
+        // height: 100%;
+        opacity: 1;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transition: height 1s;
+    }
 
     header{
         border-top: 0.1px solid $sun_color;
