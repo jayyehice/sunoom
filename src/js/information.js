@@ -469,15 +469,54 @@ new Vue({
     
 });
 
-
-$(function(){
-    $("header .switch").click(function(){
-        alert("tt");
-
-        $('.polaroid').find("h5 .change01").text("AAAAAAA");
+$(document).ready(function(){
+    let v_polaroid = new Vue({
+        el: '#v_polaroid',
+        data:{ 
+            content:0,
+            text:[{
+                change1: '星月沙灘',
+                change2: '日月溪',
+                change3: '登山步道',
+            },{
+                change1:'隕石洞穴',
+                change2:'獨角獸森林',
+                change3:'西部沙灘',
+            }],
+        },
+        methods: {
+            testChange(){
+                // console.log(this.change01);
     
+                if( this.content == 0){
+                    
+                    this.content = 1;
+                }else{
+                    this.content = 0;
+                }
+    
+                
+            }
+        },
+        computed: {},
+        watch: {},
+        beforeCreate() {},
+        created() {},
+        mounted() {
+            $('#changeButton').click(function(){
+                // alert("tt");
+                v_polaroid.testChange();
+        
+            });
+        },
+        updated() {
+                
+        },   
+
         
     })
-  
-  })
+
+});
+
+
   

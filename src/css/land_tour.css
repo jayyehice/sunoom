@@ -14,6 +14,13 @@
   letter-spacing: 3px;
   line-height: 1.6;
 }
+.land_tour #bgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0;
+}
 .land_tour header .headerCenter {
   position: absolute;
   z-index: 100;
@@ -564,6 +571,17 @@
 .land_tour_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+  position: relative;
+}
+.land_tour_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: height 1s;
+  opacity: 1;
 }
 .land_tour_moon main .banner {
   width: 100%;

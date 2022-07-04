@@ -309,6 +309,32 @@ header .headerRight .moonPay {
     display: none !important;
   }
 }
+header .headerRight .switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 36px;
+}
+header .headerRight .switch svg {
+  transform: scale(1);
+  z-index: 2;
+  pointer-events: none;
+}
+header .headerRight .switch #sunSwitch, header .headerRight .switch #moonSwitch {
+  width: 88px;
+  height: 36px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 100px;
+  background: #9cd6ef;
+  border: 1px solid #65c0e7;
+}
+header .headerRight .switch #night {
+  pointer-events: none;
+}
 header .headerRight .switch #sunSwitch {
   cursor: pointer;
 }

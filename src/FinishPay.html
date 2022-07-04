@@ -12,6 +12,10 @@
 @@include('./layout/header_footer_css_link.html')
 </head>
 <body class="FinishPay">
+
+    <!-- 星空 -->
+    <canvas id="bgCanvas"></canvas>
+
     @@include('./layout/header.html')
     <header>
     </header>
@@ -259,6 +263,7 @@
     <footer></footer>
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
+<script src="./js/moonsky.js"></script>
 <script>
     window.addEventListener('load',function(){
         let backToIndex = document.getElementsByClassName('backToIndex')[0];

@@ -2,6 +2,13 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.FinishPay #bgCanvas {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 .FinishPay select {
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
@@ -336,6 +343,16 @@
 .FinishPay_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+}
+.FinishPay_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: height 1s;
 }
 .FinishPay_moon select {
   background-color: #0C1244;

@@ -4,6 +4,19 @@
 .information{
     background-color: $sun_color;
     color: $moon_color;
+
+    // 星空
+    #bgCanvas {
+        // width: 0%;
+        // height: 0%;
+        opacity: 0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
+
     main{
         .breadcrumbs{
             .wrapper{
@@ -530,46 +543,6 @@
                     }
                 }
 
-
-
-
-                // RWD
-                // 美食地圖的彈窗
-                // .iconBox{
-                //     width: 250px;
-                //     height: 350px;
-                //     border: 1px solid #0C1244;
-                //     padding: 10px;
-                //     text-align: center;
-                //     position: absolute;
-                //     top: 170px;
-                //     left: 315px;
-                //     background-color: rgba(245,240,221,0.5);
-                //     .fa-circle-xmark{
-                //         color:$moon_color;
-                //         position: absolute;
-                //         top: 15px;
-                //         right: 15px;
-                //     }
-                //     img{
-                //         margin-top: 20px;
-                //         margin-bottom: 20px;
-                //     }
-                //     p{
-                //         color: $moon_color;
-                //         font-size: $p;
-                //         letter-spacing: 3px;
-                //         line-height: 1.6;
-                //     }
-                //     .iconBoxtime{
-                //         margin-top: 10px;
-                //         margin-bottom: 40px;
-                //     }
-                // }
-                
-
-
-
             }
     
             .polaroid{
@@ -1004,6 +977,20 @@
     @import 'base/moonColorSwitch';
     background-color: $sun_color;
     color: $moon_color;
+    position: relative;
+
+    // 星空
+    #bgCanvas {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transition: height 1s;
+    }
+
     main{
         .breadcrumbs{
             .wrapper{
@@ -1529,45 +1516,6 @@
                 }
 
 
-
-
-                // RWD
-                // 美食地圖的彈窗
-                // .iconBox{
-                //     width: 250px;
-                //     height: 350px;
-                //     border: 1px solid #0C1244;
-                //     padding: 10px;
-                //     text-align: center;
-                //     position: absolute;
-                //     top: 170px;
-                //     left: 315px;
-                //     background-color: rgba(245,240,221,0.5);
-                //     .fa-circle-xmark{
-                //         color:$moon_color;
-                //         position: absolute;
-                //         top: 15px;
-                //         right: 15px;
-                //     }
-                //     img{
-                //         margin-top: 20px;
-                //         margin-bottom: 20px;
-                //     }
-                //     p{
-                //         color: $moon_color;
-                //         font-size: $p;
-                //         letter-spacing: 3px;
-                //         line-height: 1.6;
-                //     }
-                //     .iconBoxtime{
-                //         margin-top: 10px;
-                //         margin-bottom: 40px;
-                //     }
-                // }
-                
-
-
-
             }
     
             .polaroid{
@@ -1982,8 +1930,10 @@
                 }
             }
             .map{
+                // display: none;
                 .wrapper{
                     width: calc(100% - 40px);
+                    display: none;
                     h3{
                         margin-bottom: 20px;
                         text-align: center;
@@ -2200,4 +2150,13 @@
     0% {  transform: scale(1); }
     50%  {  transform: scale(1.2); }
     100%   {  transform: scale(1); }   
+}
+
+#changeButton{
+    position: fixed;
+    z-index: 100;
+    top: 200px;
+    right: 200px;
+    cursor: pointer;
+    display: none;
 }

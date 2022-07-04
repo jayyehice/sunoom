@@ -13,8 +13,13 @@
     <link rel="stylesheet" href="./css/information.css">
 </head>
 <body class="information">
+
+    <!-- 星空 -->
+    <canvas id="bgCanvas"></canvas>
+
     <!-- <header>header</header> -->
     @@include('./layout/header.html')
+
 
     <main>
 
@@ -30,6 +35,8 @@
 
             </div>
         </div>
+
+        <button id="changeButton">臨時測試</button>
 
         <section class="map">
             <div id="map" class="wrapper">
@@ -153,7 +160,7 @@
             </div>
 
             
-            <div class="polaroid">
+            <div id="v_polaroid" class="polaroid">
                 
                 <svg width="1129" height="48" viewBox="0 0 1129 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1C459.864 60.8265 707.067 62.3227 1128 1" stroke="currentColor" stroke-width="2"/>
@@ -161,17 +168,17 @@
                 <ul>
                     <li>
                         <img src="./img/information/sun/polaroid_img_01.jpg" alt="">
-                        <h5 class="change01">星月沙灘</h5>                        
+                        <h5>{{text[content]['change1']}}</h5>                        
                     </li>
                     
                     <li>
                         <img src="./img/information/sun/polaroid_img_02.jpg" alt="">
-                        <h5 id="change02">日月溪</h5>                        
+                        <h5>{{text[content]['change2']}}</h5>                        
                     </li>
 
                     <li>
                         <img src="./img/information/sun/polaroid_img_03.jpg" alt="">
-                        <h5 id="change03">登山步道</h5>                        
+                        <h5>{{text[content]['change3']}}</h5>                        
                     </li>
                 </ul>
             </div>
@@ -394,5 +401,7 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/information.js"></script>
+    <script src="./js/moonsky.js"></script>
+
 </body>
 </html>
