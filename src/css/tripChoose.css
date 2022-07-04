@@ -40,6 +40,13 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+.tripChoose #bgCanvas {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 .tripChoose .dayclick {
   background-color: #0C1244 !important;
   color: #F5F0DD;
@@ -2561,6 +2568,16 @@
 .tripChoose_moon {
   background-color: #0C1244;
   color: #F5F0DD;
+}
+.tripChoose_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: height 1s;
 }
 .tripChoose_moon .dayclick {
   background-color: #F5F0DD !important;

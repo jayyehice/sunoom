@@ -469,71 +469,54 @@ new Vue({
     
 });
 
-let v_polaroid = new Vue({
-    el: 'v_polaroid',
-    data: {     // 變數放這裡！  
-        change01: '',
-        change02: '',
-        change03: '',
-
-        changea: '星月沙灘',
-        changeb: '日月溪',
-        changec: '登山步道',
-
-        changed:'隕石洞穴',
-        changee:'獨角獸森林',
-        changef:'西部沙灘',
-    },
-    methods: {
-        testChange(){
-            console.log(this.change01);
-
-            if( this.change01 == this.changea){
-                this.change01=this.changed;
-            }else{
-
-            }
-        }
-    },
-    computed: {},
-    watch: {},
-    beforeCreate() {
-        // const url = './php/sea.php';
-        // fetch(url)
-        //     .then(response => response.json())
-        //     .then(text => {
-        //         this.seaActivity_list = text;
-        //         this.activity1=this.seaActivity_list[12];
-        //         this.activity2=this.seaActivity_list[13];
-        //         this.activity3=this.seaActivity_list[14];
-        //         this.activity4=this.seaActivity_list[15];
-        //         this.activity5=this.seaActivity_list[16];
-        //     });
-    },
-    created() {
-    },
-    mounted() {
-    },
-    updated() {
-            
-    },   
-})
-
 $(document).ready(function(){
+    let v_polaroid = new Vue({
+        el: '#v_polaroid',
+        data:{ 
+            content:0,
+            text:[{
+                change1: '星月沙灘',
+                change2: '日月溪',
+                change3: '登山步道',
+            },{
+                change1:'隕石洞穴',
+                change2:'獨角獸森林',
+                change3:'西部沙灘',
+            }],
+        },
+        methods: {
+            testChange(){
+                // console.log(this.change01);
+    
+                if( this.content == 0){
+                    
+                    this.content = 1;
+                }else{
+                    this.content = 0;
+                }
+    
+                
+            }
+        },
+        computed: {},
+        watch: {},
+        beforeCreate() {},
+        created() {},
+        mounted() {
+            $('#changeButton').click(function(){
+                // alert("tt");
+                v_polaroid.testChange();
+        
+            });
+        },
+        updated() {
+                
+        },   
 
-    $('#changeButton').click(function(){
-        // alert("tt");
-        v_polaroid.testChange();
+        
+    })
 
-        // let $a = $("#change02");
-        // $a.text('獨角獸森林');
+});
 
-        // if($a == '星月沙灘'){
-
-        //     $a.text('獨角獸森林');
-        // }
-    });
-
-})
 
   

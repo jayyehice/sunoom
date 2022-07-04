@@ -14,8 +14,8 @@
 </head>
 <body class="information">
 
-        <!-- 星空 -->
-        <canvas id="bgCanvas"></canvas>
+    <!-- 星空 -->
+    <canvas id="bgCanvas"></canvas>
 
     <!-- <header>header</header> -->
     @@include('./layout/header.html')
@@ -168,17 +168,17 @@
                 <ul>
                     <li>
                         <img src="./img/information/sun/polaroid_img_01.jpg" alt="">
-                        <h5 v-if="change01"></h5>                        
+                        <h5>{{text[content]['change1']}}</h5>                        
                     </li>
                     
                     <li>
                         <img src="./img/information/sun/polaroid_img_02.jpg" alt="">
-                        <h5 v-if="change02"></h5>                        
+                        <h5>{{text[content]['change2']}}</h5>                        
                     </li>
 
                     <li>
                         <img src="./img/information/sun/polaroid_img_03.jpg" alt="">
-                        <h5 v-if="change03"></h5>                        
+                        <h5>{{text[content]['change3']}}</h5>                        
                     </li>
                 </ul>
             </div>
