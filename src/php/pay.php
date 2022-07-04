@@ -2,7 +2,10 @@
 /**
 *    Credit信用卡付款產生訂單範例
 */
-    
+$ordernums = $_POST['greenOrderNums'];
+$total = $_POST['greenPrice'];
+// echo $ordernums;
+// echo $total;
     //載入SDK(路徑可依系統規劃自行調整)
     // include('ECPay.Payment.Integration.php');
     include("../AioSDK/sdk/ECPay.Payment.Integration.php");
@@ -26,13 +29,13 @@
 
         $obj->Send['MerchantTradeNo']   = $MerchantTradeNo;                          //訂單編號
         $obj->Send['MerchantTradeDate'] = date('Y/m/d H:i:s');                       //交易時間
-        $obj->Send['TotalAmount']       = 15000;                                      //交易金額
+        $obj->Send['TotalAmount']       = $total;                                      //交易金額
         $obj->Send['TradeDesc']         = "good to drink" ;                          //交易描述
         $obj->Send['ChoosePayment']     = ECPay_PaymentMethod::Credit ;              //付款方式:Credit
         $obj->Send['IgnorePayment']     = ECPay_PaymentMethod::GooglePay ;           //不使用付款方式:GooglePay
 
         //訂單的商品資料
-        array_push($obj->Send['Items'], array('Name' => "探險風格", 'Price' => (int)"15000",
+        array_push($obj->Send['Items'], array('Name' => $ordernums, 'Price' => (int)$total,
                    'Currency' => "元", 'Quantity' => (int) "1", 'URL' => "dedwed"));
 
 
