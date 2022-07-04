@@ -158,7 +158,7 @@ window.addEventListener("load", e => {
         },
         methods: {ig_img(e){
             let igimg = e.target.dataset.ig;
-            this.ig_imgtext = this.ig_list[igimg]
+            this.ig_imgtext = this.ig_list[igimg];
         }},
         compute: {},
         watch: {},

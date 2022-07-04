@@ -6,12 +6,11 @@
   font-family: "Times New Roman", "Noto Sans TC", sans-serif;
 }
 .index #bgCanvas {
-  width: 0%;
-  height: 0%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -100;
+  opacity: 0;
 }
 .index header .headerCenter {
   position: absolute;
@@ -586,6 +585,7 @@
   left: 0;
   z-index: -100;
   transition: height 1s;
+  opacity: 1;
 }
 .index_moon main .parallax {
   background-image: url(../img/index/muntain_bg01.png);

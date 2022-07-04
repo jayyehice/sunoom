@@ -15,12 +15,11 @@
   line-height: 1.6;
 }
 .land_tour #bgCanvas {
-  width: 0%;
-  height: 0%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -100;
+  opacity: 0;
 }
 .land_tour header .headerCenter {
   position: absolute;
@@ -582,6 +581,7 @@
   left: 0;
   z-index: -100;
   transition: height 1s;
+  opacity: 1;
 }
 .land_tour_moon main .banner {
   width: 100%;
