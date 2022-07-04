@@ -219,6 +219,7 @@
         z-index: 4;
         @include mobile(){
             overflow-x: auto;
+            width: 100%;
         }
         .datePickerBoxLeftM{
             display: none;
@@ -2218,6 +2219,12 @@
                     }
                 }
             }
+            #greenPrice{
+                display: none;
+            }
+            #greenOrderNums{
+                display: none;
+            }
             .creditCardBlock{
                 margin-top: 50px;
                 border-top: 1px solid $moon_color;
@@ -2300,6 +2307,10 @@
                 line-height: 50px;
                 background-color:$sun_color;
                 border:1px solid $moon_color;
+                pointer-events: none;
+                &.emailcheck{
+                    pointer-events: auto !important;
+                }
                 @include mobile{
                     margin-top: 20px;
                     width: 300px;

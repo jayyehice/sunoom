@@ -143,7 +143,7 @@
             <div class="underline2"></div>
 
             <!-- 第一家餐廳 -->
-            <section class="restaurant1">
+            <section class="restaurant1 box1">
                 <!-- 第一家餐廳左區 -->
                 <article class="restaurant1_left">
                     <img class="restaurant1_pic1" src="img/food/sun/restaurant1.png" alt="">
@@ -177,10 +177,107 @@
                         <a class="booknow" href="">Book Now</a>
                     </article>
                 </article>
+                
+                <!-- 燈箱開啟時的深色背景 -->
+                <div class="bookingBoxDrop"></div>
+
+                <!-- 第一家_訂位燈箱 -->
+                <div id="bookingBox1">
+
+                    <!-- 燈箱內容 -->
+                    <div class="boxInner">
+
+
+                        <!-- 燈箱關閉按鈕 -->
+                        <i class="fa-solid fa-circle-xmark bookingBoxClose"></i>
+            
+                        <!-- 店家圖片 -->
+                        <div class="restaurant_picture">
+                            <img src="img/food/sun/restaurant1.png" alt="">
+                        </div>
+            
+                        <!-- 店名 -->
+                        <div class="restaurant_name">
+                            <h4>BBQ日月燒匠</h4>
+                        </div>
+            
+                        <!-- TABLE FOR -->
+                        <div class="table_for">
+                            <p>Table For</p>
+                        </div>
+            
+                        <!-- 訂位人數選擇 -->
+                        <div class="table_choice">
+                            <!-- 減號 -->
+                            <div class="minus">
+                                <button>-</button>
+                            </div>
+            
+                            <!-- 人數 -->
+                            <div class="table_number">
+                                
+                            </div>
+            
+                            <!-- 加號 -->
+                            <div class="plus">
+                                <button>+</button>
+                            </div>
+            
+                        </div>
+            
+            
+                        <!-- 選擇日期的Title -->
+                        <div>
+                            <p>Pick a Date<p>
+                        </div>
+            
+                        <!-- 日期選擇 -->
+                        <div class="date_picker">
+                            <input type="date" placeholder="">
+                        </div>
+            
+                        <!-- 選擇日期的Title -->
+                        <div>
+                            <p>Pick a Time<p>
+                        </div>
+            
+                        <!-- 時間選擇 -->
+                        <div class="time_picker">
+                            <input type="time" placeholder="" />
+                        </div>
+            
+                        <!-- 姓名的Title -->
+                        <div>
+                            <p>Your Name<p>
+                        </div>
+            
+                        <!-- 姓名 -->
+                        <div class="name">
+                            <input placeholder="Name"/>
+                        </div>
+            
+                        <!-- 電話的Title -->
+                        <div>
+                            <p>Phone Number<p>
+                        </div>
+            
+                        <!-- 電話 -->
+                        <div class="phone">
+                            <input placeholder="Phone"/>
+                        </div>
+            
+                        <!-- 確認按鈕 -->
+                        <div class="submit_btn">
+                            <button type="submit">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
+        
             <!-- 第二家餐廳 -->
-            <section class="restaurant1">
+            <section class="restaurant1 box2">
                  <!-- 第二家餐廳左區 -->
                  <article class="restaurant1_left">
                     <img class="restaurant1_pic1" src="img/food/sun/restaurant2.png" alt="">
@@ -217,7 +314,7 @@
             </section>
 
             <!-- 第三家餐廳 -->
-            <section class="restaurant1">
+            <section class="restaurant1 box3">
                 <!-- 第三家餐廳左區 -->
                 <article class="restaurant1_left">
                     <img class="restaurant1_pic1" src="img/food/sun/restaurant3.png" alt="">
@@ -255,7 +352,7 @@
             </section>
 
             <!-- 第四家餐廳 -->
-            <section class="restaurant1">
+            <section class="restaurant1 box4">
                 <!-- 第四家餐廳左區 -->
                 <article class="restaurant1_left">
                     <img class="restaurant1_pic1" src="img/food/sun/restaurant4.png" alt="">
@@ -297,8 +394,8 @@
         <div class="wrapper_bottom">
             <h3>日島美食地圖 | Sunoom Map</h3>
             
-             <!-- 美食地圖ICON*4 -->
-             <div class="map" id="map">
+            <div class="map" id="map">
+                 <!-- 美食地圖ICON*4 -->
                 <img class="foodicon bbq"       v-if="map_list[0]" :src="map_list[0][3]" alt="">
                 <img class="foodicon lobster"   v-if="map_list[2]" :src="map_list[2][3]" alt="">
                 <img class="foodicon juice"     v-if="map_list[6]" :src="map_list[6][3]" alt="">

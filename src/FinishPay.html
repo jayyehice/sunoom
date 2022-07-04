@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/FinishPay.css">
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/FinishPay.js"></script>
 @@include('./layout/header_footer_css_link.html')
 </head>
 <body class="FinishPay">
@@ -19,7 +21,7 @@
     @@include('./layout/header.html')
     <header>
     </header>
-    <article>
+    <article id="app">
         <section>
             <!-- 訂購流程區塊開始 -->
             <h2>訂購流程</h2>
@@ -56,8 +58,8 @@
                 <div class="ListTitle">訂單明細</div>
                 <ul class="ListDate">
                     <li>自由行</li>
-                    <li>Check In：<h6>2022/07/16</h6></li>
-                    <li>Check Out：<h6>2022/07/18</h6></li>
+                    <li>Check In：<h6>{{startday}}</h6></li>
+                    <li>Check Out：<h6>{{endday}}</h6></li>
                 </ul>
                 <table>
                     <thead>
@@ -67,169 +69,33 @@
                         <th>宿</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>07/16(Sat)</td>
+                        <tr v-for="(value,index) in orderlist">
+                            <td>{{value[0]}}</td>
                             <td class="tripList">
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li >{{triplist[0]}}</li>
                                 </ul>
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li>{{triplist[1]}}</li>
                                 </ul>
                                 <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
+                                    <li>{{triplist[2]}}</li>
                                 </ul>
                             </td>
-                            <td class="FoodList">
+                            <td class="FoodList" >
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li>{{foodlist[0]}}</li>
                                 </ul>
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
+                                    <li>{{foodlist[1]}}</li>
                                 </ul>
                                 <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
+                                    <li>{{foodlist[2]}}</li>
                                 </ul>
                             </td>
                             <td class="StayList">
                                 <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>07/16(Sat)</td>
-                            <td class="tripList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                            <td class="FoodList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                            <td class="StayList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>07/16(Sat)</td>
-                            <td class="tripList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                            <td class="FoodList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
-                                </ul>
-                            </td>
-                            <td class="StayList">
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>潛水(日)</li>
-                                    <li>6<i class="fa-solid fa-user"></i></li>
-                                    <li>$11,994</li>
-                                </ul>
-                                <ul>
-                                    <li>不需選購</li>
-                                    <li>0<i class="fa-solid fa-user"></i></li>
-                                    <li>$0</li>
+                                    <li>{{value[3]}}</li>
                                 </ul>
                             </td>
                         </tr>
@@ -237,19 +103,8 @@
                 </table>
                 <div class="totalBlock">
                     <div class="totalTitle">
-                        <span>小計：</span><br>
-                        <span>折扣碼：</span><br>
-                        <span>折扣金額：</span><br>
-                        <span>總金額：</span><br>
-                    </div>
-                    <div class="totalPrice">
-                        <span>$32,186</span><br>
-                        <select name="" id="">
-                            <option value="">Long_bro_only_9453</option>
-                            <option value="">NewMember</option>
-                        </select><br>
-                        <span id="couponPrice">-$16,093</span><br>
-                        <span>$16,093</span><br>
+                        <span>總金額：</span>
+                        <span>{{totalPrice}}</span><br>
                     </div>
                 </div>
             </div>
@@ -264,18 +119,5 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
 <script src="./js/moonsky.js"></script>
-<script>
-    window.addEventListener('load',function(){
-        let backToIndex = document.getElementsByClassName('backToIndex')[0];
-        let backToMember = document.getElementsByClassName('backToMember')[0];
-
-        backToIndex.addEventListener('click',function(){
-            window.location.href = './index.html'
-        });
-        backToMember.addEventListener('click',function(){
-            window.location.href = './member.html#orderCheck'
-        });
-    })
-</script>
 </body>
 </html>

@@ -3,59 +3,21 @@
 //連接資料庫
 include("connection.php");
 
-$arr=[];
-for($i = 97;$i <= 122; $i++ ){
-    // echo chr($i);
-    array_push($arr,chr($i));
-}
-
-for($i = 0; $i <= 9; $i++ ){
-    array_push($arr,$i);
-}
-shuffle($arr);
-// print_r($arr);
-$nums = [];
-foreach($arr as $index => $value){
-    array_push($nums,$value);
-}
-
-for($i = 0 ; $i <= 9; $i++){
-    
-    $password = $nums[$i];
-    echo $password;
-}
+sleep(0.5);
 $data =  json_decode(file_get_contents("php://input"), true);
 
 $account = $data["account"];
 $phone = $data["phone"];
-$createdate = $data["createdate"];
-$last_name = $data["last_name"];
-$first_name = $data["first_name"];
-$state = $data["state"];
-
-$sqlm = "INSERT INTO member(account, password, phone, createdate, state, last_name, first_name,) VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-$statement = $pdo->prepare($sqlm);
-$statement->bindParam(1, $account);
-$statement->bindParam(2, $password);
-$statement->bindParam(3, $phone);
-$statement->bindParam(4, $createdate);
-$statement->bindParam(5, $state);
-$statement->bindParam(6, $last_name);
-$statement->bindParam(7, $first_name);
-$statement->execute();
-
-sleep(0.5);
-
 //對比會員資料拉出會員id植入訂單用
-$sqlmcheck = "SELECT id FROM member WHERE account = ? , and phone = ?";
+$sqlmcheck = "SELECT id FROM member WHERE account = ?  and phone = ?";
 $statement = $pdo->prepare($sqlmcheck);
 $statement->bindParam(1, $account);
 $statement->bindParam(2, $phone);
 $statement->execute();
-$memberid = $statement->fetch();
+$memberid_list = $statement->fetchAll();
 
-echo $memberid
+$memberid = $memberid_list[0]['id'];
+
 sleep(0.5);
 
 //抓取網頁訂單欄位

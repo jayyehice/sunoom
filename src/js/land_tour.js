@@ -168,8 +168,7 @@ window.addEventListener("load", e => {
             let url = './php/land_tour_ig.php';
             fetch(url)
             .then(response => response.json())
-            .then(text => this.ig_list = text);
-            
+            .then(text => this.ig_list = text); 
         },
         
         // beforeMount() {},

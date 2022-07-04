@@ -98,6 +98,27 @@
                         <img class="allmap turtle" v-if="map_list[22]" :src="map_list[22][3]" alt="海龜" @click="lightBox(22)">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
                     </li>
+                    
+                    <!-- 地圖燈箱 -->
+                    <div class="iconBox" v-if="boxContent">
+                        <!-- 燈箱關閉按鈕 -->
+                        <i class="fa-solid fa-circle-xmark close"></i>
+                        <!-- 燈箱店家icon -->
+                        <img  :src="boxContent[3]" alt="">
+                        <!-- 燈箱店名 -->
+                        <p>
+                            {{boxContent[4]}}
+                        </p>
+                        <!-- 燈箱營業時間 -->
+                        <p class="iconBoxtime">
+                            {{boxContent[5]}}
+                        </p>
+                        <!-- 燈箱店家簡介 -->
+                        <p>
+                            {{boxContent[6]}}
+                        </p>
+                    </div>
+
                 </ol>
 
                 <!-- 月島地圖 -->
@@ -133,29 +154,30 @@
                         <img class="allmap intertidal" v-if="map_list[39]" :src="map_list[39][3]" alt="潮間帶" @click="lightBox(39)">
                         <!-- <img class="allmap " v-if="map_list[20]" :src="map_list[20][3]" alt="賞鳥"> -->
                     </li>
+
+                    <!-- 地圖燈箱 -->
+                    <div class="iconBox" v-if="boxContent">
+                        <!-- 燈箱關閉按鈕 -->
+                        <i class="fa-solid fa-circle-xmark close"></i>
+                        <!-- 燈箱店家icon -->
+                        <img  :src="boxContent[3]" alt="">
+                        <!-- 燈箱店名 -->
+                        <p>
+                            {{boxContent[4]}}
+                        </p>
+                        <!-- 燈箱營業時間 -->
+                        <p class="iconBoxtime">
+                            {{boxContent[5]}}
+                        </p>
+                        <!-- 燈箱店家簡介 -->
+                        <p>
+                            {{boxContent[6]}}
+                        </p>
+                    </div>
                 </ol>
 
                 <!-- 燈箱開啟時的深色背景 -->
                 <div class="backdrop"></div>
-                <!-- 地圖燈箱 -->
-                <div class="iconBox" v-if="boxContent">
-                    <!-- 燈箱關閉按鈕 -->
-                    <i class="fa-solid fa-circle-xmark close"></i>
-                    <!-- 燈箱店家icon -->
-                    <img  :src="boxContent[3]" alt="">
-                    <!-- 燈箱店名 -->
-                    <p>
-                        {{boxContent[4]}}
-                    </p>
-                    <!-- 燈箱營業時間 -->
-                    <p class="iconBoxtime">
-                        {{boxContent[5]}}
-                    </p>
-                    <!-- 燈箱店家簡介 -->
-                    <p>
-                        {{boxContent[6]}}
-                    </p>
-                </div>
 
             </div>
 

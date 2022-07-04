@@ -8,6 +8,7 @@
     <title>明島 Sunoom</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/vue.js"></script>
     @@include('./layout/header_footer_css_link.html')
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -228,27 +229,27 @@
             </div>
         </section>
 
-        <section class="instagram">
+        <section class="instagram" id="ig">
             <div class="wrapper">
                 <i class="fa-brands fa-instagram"></i>
                 <h4 class="igAccount">@sunoomisland</h4>
             
                 <ul class="instagramPhoto">
                     <li>
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img01.png">
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img02.png">
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img03.png">
+                        <img class="ig_img01 ig_img" :src="ig_list[15][1]" alt=""  data-ig="15" @click="ig_img">
+                        <img class="ig_img01 ig_img" :src="ig_list[16][1]" alt=""  data-ig="16" @click="ig_img">
+                        <img class="ig_img01 ig_img" :src="ig_list[17][1]" alt=""  data-ig="17" @click="ig_img">
                     </li>
                     <li>
-                        <img class="ig_img" src="./img/index/instagram_img04.png">
-                        <img class="ig_img" src="./img/index/instagram_img05.png">
-                        <img class="ig_img" src="./img/index/instagram_img06.png">
-                        <img class="ig_img02 ig_img" src="./img/index/instagram_img07.png">
+                        <img class="ig_img" :src="ig_list[18][1]" alt=""  data-ig="18" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[19][1]" alt=""  data-ig="19" @click="ig_img">
+                        <img class="ig_img" :src="ig_list[20][1]" alt=""  data-ig="20" @click="ig_img">
+                        <img class="ig_img02 ig_img" :src="ig_list[21][1]" alt=""  data-ig="21" @click="ig_img">
                     </li>
                     <li>
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img08.png">
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img09.png">
-                        <img class="ig_img01 ig_img" src="./img/index/instagram_img10.png">
+                        <img class="ig_img01 ig_img" :src="ig_list[22][1]" alt=""  data-ig="22" @click="ig_img">
+                        <img class="ig_img01 ig_img" :src="ig_list[23][1]" alt=""  data-ig="23" @click="ig_img">
+                        <img class="ig_img01 ig_img" :src="ig_list[24][1]" alt=""  data-ig="24" @click="ig_img">
 
                     </li>
                 </ul>
@@ -261,13 +262,13 @@
                         <p>圖片文字介接自Instagram，版權屬原作者所有</p>
                     </div>
 
-                    <div id="ig_pop_up_right">
+                    <div id="ig_pop_up_right"  v-if="ig_list">
                         <div id="ig_author">
                             <img id="ig_author_img" src="./img/land_tour/instagram_author_img.jpg" alt="">
                             <h5 id="ig_author_name">JJCHEN</h5>
                         </div>
                         <div id="ig_words">
-                            <p>我身騎棕馬，到處玩，在海灘上，日月交替的奇景，讓人以為置身於天堂，你一生一定要來一次，絕對超值。</p>
+                            <p>{{ig_imgtext[3]}}</p>
                             
                         </div>
 
@@ -347,6 +348,7 @@
     <script src="./js/index.js"></script>
     <script src="./js/moonsky.js"></script>
     <script src="./js/instagram_pop_up.js"></script>
+    <script src="./js/index_ig.js"></script>
 </body>
 
 </html>

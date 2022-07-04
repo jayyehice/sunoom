@@ -79,51 +79,30 @@ $(document).ready(function(){
             });
 
 
-            // 餐廳一預訂(燈箱點擊事件)
-                $(".booknow").click(function(e){
-                    e.preventDefault();
-                    $("#bookingBox1").fadeIn();
-                    $("#bookingBox1").css("display","block")
-                    $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
-                })
 
-            //點擊 X 或 其他地方 關閉 餐廳一燈箱
-                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
-                    $("#bookingBox1").fadeOut();
-                    //燈箱開啟時的深色背景
-                    $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
-                    $(".bookingBoxDrop").css({"display": "none"});
-                });
-            
-
-
-            //餐廳預訂(燈箱內人數加減)
-            function plusAndMinus(){
-                let number = 1;
+            //餐廳預訂(人數加減)
+            $(document).ready(function(){
+                var number = 2;
                 $(".table_number").html(number);
-
-                // 加法
-                $(".plus").click(function(){
-                    number = $(".table_number").text();
-                    number = parseInt(number) + 1;
-                    $(".table_number").html(number);
-                });
-
-                // 減法
-                $(".minus").click(function(){
-                    number = $(".table_number").text();
-                    number = parseInt(number) - 1;
-                    /* if(number == 2){
-                        $(".table.minus").css("button:disabled");
-                    } */
-                    if(number >= 1){
-                        $(".table_number").html(number);
-                    }
-                });
-            };
-
-            plusAndMinus();
+            });
             
+            $(".plus").click(function(){
+                number = $(".table_number").text();
+                number = parseInt(number) + 1;
+                $(".table_number").html(number);
+            });
+            
+            $(".minus").click(function(){
+                number = $(".table_number").text();
+                number = parseInt(number) - 1;
+                /* if(number == 2){
+                    $(".table.minus").css("button:disabled");
+                } */
+                if(number >= 1){
+                    $(".table_number").html(number);
+                }
+            });
+
         },
         
     })
