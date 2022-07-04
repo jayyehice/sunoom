@@ -433,6 +433,18 @@ header{
         z-index: 2;
         pointer-events: none;
       }
+
+      #cloud{
+        @include mobile{
+          display: none;
+        }
+      }
+
+      #darkmode{
+        @include mobile{
+          transform: rotate(-90deg);
+        }
+      }
       
       #sunSwitch, #moonSwitch {
         width: 88px;

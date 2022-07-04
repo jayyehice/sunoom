@@ -321,6 +321,16 @@ header .headerRight .switch svg {
   z-index: 2;
   pointer-events: none;
 }
+@media (max-width: 576px) {
+  header .headerRight .switch #cloud {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  header .headerRight .switch #darkmode {
+    transform: rotate(-90deg);
+  }
+}
 header .headerRight .switch #sunSwitch, header .headerRight .switch #moonSwitch {
   width: 88px;
   height: 36px;
