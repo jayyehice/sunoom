@@ -1659,5 +1659,12 @@
     transform: scale(1);
   }
 }
+#changeButton {
+  position: fixed;
+  z-index: 100;
+  top: 200px;
+  right: 200px;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=information.css.map */

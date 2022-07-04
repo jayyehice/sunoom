@@ -470,14 +470,15 @@ new Vue({
 });
 
 
-$(function(){
-    $("header .switch").click(function(){
-        alert("tt");
+$(document).ready(function(){
 
-        $('.polaroid').find("h5 .change01").text("AAAAAAA");
-    
-        
-    })
-  
-  })
+    $('#changeButton').click(function(){
+        // alert("tt");
+        // v_set.testChange();
+
+        $(".change01").text('獨角獸森林');
+    });
+
+})
+
   
