@@ -15,6 +15,8 @@
 @@include('./layout/header_footer_css_link.html')
 </head>
 <body class="discuss">
+    <!-- 星空 -->
+    <canvas id="bgCanvas"></canvas>
     @@include('./layout/header.html')
     <div class="wrapper" id="discuss">
         <!-- <header></header> -->
@@ -357,10 +359,11 @@
     </div>
 
     @@include('./layout/footer.html')
+    @@include('./layout/header_footer_script_link.html')
 
     
     <script src="./js/discuss.js"></script>
+    <script src="./js/moonsky.js"></script>
     <!-- <script src="./js/discuss_list.js"></script> -->
-    @@include('./layout/header_footer_script_link.html')
 </body>
 </html>
