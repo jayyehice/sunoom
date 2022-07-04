@@ -66,6 +66,18 @@
 .tripChoose{
     background-color:$sun_color;
     color: $moon_color;
+
+    // 星空
+    #bgCanvas {
+        // width: 0%;
+        // height: 0%;
+        opacity: 0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+    }
+
     .dayclick{
         background-color: $moon_color !important;
         color: $sun_color;
@@ -2310,6 +2322,19 @@
     @import 'base/moonColorSwitch';
     background-color:$sun_color;
     color: $moon_color;
+
+    // 星空
+    #bgCanvas {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        transition: height 1s;
+    }
+
     .dayclick{
         background-color: $moon_color !important;
         color: $sun_color;
