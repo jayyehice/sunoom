@@ -3,7 +3,7 @@
        include("connection.php");
 
        $sql = "
-       INSERT INTO comment (shopname, islandid, name, people, phone, date, time, bookingtime) 
+       INSERT INTO restaurant_restvation (shopname, islandid, name, people, phone, date, time, bookingtime) 
        VALUES (?, ?, ?, ?, ?, ?, ?, now());
        ";
        
@@ -15,7 +15,6 @@
        $statement->bindParam(5, $_GET['phone']);
        $statement->bindParam(6, $_GET['date']);
        $statement->bindParam(7, $_GET['time']);
-       $statement->bindParam(8, $_GET['bookingtime']);
        $statement->execute();
        $data = $statement->fetchAll();
 

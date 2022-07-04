@@ -14,6 +14,14 @@ $(document).ready(function(){
 
             //地圖燈箱內容
             boxContent:[],
+
+            //預定資料
+            name:"",
+            people:"",
+            phone:"",
+            date:"",
+            time:"",
+
         },
         methods: {},
         computed: {},
@@ -82,6 +90,9 @@ $(document).ready(function(){
             // 餐廳一預訂(燈箱點擊事件)
                 $(".booknow").click(function(e){
                     e.preventDefault();
+                    console.log($(e.target.closest('section')).find('h3').text());
+                    $("#bookingBox1").find('img').attr('src', $(e.target.closest('section')).find('img').attr('src'));
+                    $("#bookingBox1").find('h4').text($(e.target.closest('section')).find('h3').text());
                     $("#bookingBox1").fadeIn();
                     $("#bookingBox1").css("display","block")
                     $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
@@ -93,6 +104,7 @@ $(document).ready(function(){
                     //燈箱開啟時的深色背景
                     $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
                     $(".bookingBoxDrop").css({"display": "none"});
+                    $(".table_number").val("");
                 });
             
 
@@ -123,6 +135,24 @@ $(document).ready(function(){
             };
 
             plusAndMinus();
+
+            
+            $("#confirm").on("click",function(){
+                let shopname = $("#shopname").text();
+                let people = $("#people").text();
+                let name = $("#name").val();
+                let date = $("#date").val();
+                let time = $("#time").val();
+                let phone = $("#phone").val();
+                let islandid = 1;
+                if($('body')[0].classList.contains('moon')){
+                    islandid = 2;
+                }
+                // console.log(shopname, name, phone, people, date, time);
+                
+                const url = `./php/foodBooking.php?shopname=${shopname}&people=${people}&name=${name}&date=${date}&time=${time}&phone=${phone}&islandid=${islandid}`;
+                fetch(url);
+            });
             
         },
         
