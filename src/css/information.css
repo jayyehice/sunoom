@@ -225,10 +225,53 @@
   position: absolute;
   cursor: pointer;
 }
+.information main .map .wrapper .sunMap .iconBox {
+  display: none;
+  z-index: 2;
+  width: 250px;
+  height: 350px;
+  border: 1px solid #0C1244;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: rgba(245, 240, 221, 0.8);
+  -moz-box-shadow: 0px 0px 5px #444444;
+  -webkit-box-shadow: 0px 0px 5px #444444;
+  box-shadow: 0px 0px 5px #444444;
+}
+.information main .map .wrapper .sunMap .iconBox .fa-circle-xmark {
+  color: #0C1244;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.information main .map .wrapper .sunMap .iconBox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.information main .map .wrapper .sunMap .iconBox p {
+  color: #0C1244;
+  font-size: 16rem;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.information main .map .wrapper .sunMap .iconBox .iconBoxtime {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
 .information main .map .wrapper .moonMap {
+  display: none;
   background-image: url("../img/information/moon/map.jpg");
+  width: 900px;
+  height: 700px;
   margin: 0 auto;
   background-size: cover;
+  border: 1px solid #0C1244;
   position: relative;
 }
 .information main .map .wrapper .moonMap .allmap {
@@ -366,19 +409,7 @@
   position: absolute;
   cursor: pointer;
 }
-.information main .map .wrapper .backdrop {
-  z-index: 1;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
-.information main .map .wrapper .iconBox {
+.information main .map .wrapper .moonMap .iconBox {
   display: none;
   z-index: 2;
   width: 250px;
@@ -396,26 +427,38 @@
   -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
-.information main .map .wrapper .iconBox .fa-circle-xmark {
+.information main .map .wrapper .moonMap .iconBox .fa-circle-xmark {
   color: #0C1244;
   position: absolute;
   top: 15px;
   right: 15px;
   cursor: pointer;
 }
-.information main .map .wrapper .iconBox img {
+.information main .map .wrapper .moonMap .iconBox img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.information main .map .wrapper .iconBox p {
+.information main .map .wrapper .moonMap .iconBox p {
   color: #0C1244;
   font-size: 16rem;
   letter-spacing: 3px;
   line-height: 1.6;
 }
-.information main .map .wrapper .iconBox .iconBoxtime {
+.information main .map .wrapper .moonMap .iconBox .iconBoxtime {
   margin-top: 10px;
   margin-bottom: 40px;
+}
+.information main .map .wrapper .backdrop {
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000;
 }
 .information main .map .polaroid svg {
   display: block;
@@ -828,7 +871,7 @@
   width: 900px;
   height: 700px;
   margin: 0 auto;
-  background-size: cover;
+  background-size: 100%;
   border: 1px solid #F5F0DD;
   position: relative;
   display: none;
@@ -978,7 +1021,47 @@
   position: absolute;
   cursor: pointer;
 }
+.information_moon main .map .wrapper .sunMap .iconBox {
+  display: none;
+  z-index: 2;
+  width: 250px;
+  height: 350px;
+  border: 1px solid #0C1244;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: rgba(245, 240, 221, 0.8);
+  -moz-box-shadow: 0px 0px 5px #444444;
+  -webkit-box-shadow: 0px 0px 5px #444444;
+  box-shadow: 0px 0px 5px #444444;
+}
+.information_moon main .map .wrapper .sunMap .iconBox .fa-circle-xmark {
+  color: #0C1244;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .sunMap .iconBox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.information_moon main .map .wrapper .sunMap .iconBox p {
+  color: #F5F0DD;
+  font-size: 16rem;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.information_moon main .map .wrapper .sunMap .iconBox .iconBoxtime {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
 .information_moon main .map .wrapper .moonMap {
+  display: block;
   background-image: url("../img/information/moon/map.jpg");
   width: 900px;
   height: 700px;
@@ -1122,6 +1205,45 @@
   position: absolute;
   cursor: pointer;
 }
+.information_moon main .map .wrapper .moonMap .iconBox {
+  display: none;
+  z-index: 2;
+  width: 250px;
+  height: 350px;
+  border: 1px solid #0C1244;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: rgba(106, 117, 153, 0.8);
+  -moz-box-shadow: 0px 0px 5px #444444;
+  -webkit-box-shadow: 0px 0px 5px #444444;
+  box-shadow: 0px 0px 5px #444444;
+}
+.information_moon main .map .wrapper .moonMap .iconBox .fa-circle-xmark {
+  color: #F5F0DD;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.information_moon main .map .wrapper .moonMap .iconBox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.information_moon main .map .wrapper .moonMap .iconBox p {
+  color: #F5F0DD;
+  font-size: 16rem;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+.information_moon main .map .wrapper .moonMap .iconBox .iconBoxtime {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
 .information_moon main .map .wrapper .backdrop {
   z-index: 1;
   opacity: 0;
@@ -1133,45 +1255,6 @@
   width: 100%;
   height: 100%;
   background: #000;
-}
-.information_moon main .map .wrapper .iconBox {
-  display: none;
-  z-index: 2;
-  width: 250px;
-  height: 350px;
-  border: 1px solid #0C1244;
-  padding: 10px;
-  text-align: center;
-  position: absolute;
-  top: 155%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
-  box-shadow: 0px 0px 5px #444444;
-}
-.information_moon main .map .wrapper .iconBox .fa-circle-xmark {
-  color: #0C1244;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  cursor: pointer;
-}
-.information_moon main .map .wrapper .iconBox img {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.information_moon main .map .wrapper .iconBox p {
-  color: #F5F0DD;
-  font-size: 16rem;
-  letter-spacing: 3px;
-  line-height: 1.6;
-}
-.information_moon main .map .wrapper .iconBox .iconBoxtime {
-  margin-top: 10px;
-  margin-bottom: 40px;
 }
 .information_moon main .map .polaroid svg {
   display: block;

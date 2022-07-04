@@ -143,6 +143,9 @@
     padding-top: 20px;
   }
 }
+.member main .basicData .memberPic {
+  max-width: 292px;
+}
 @media (max-width: 579px) {
   .member main .basicData .memberPic {
     width: 150px;
@@ -196,12 +199,6 @@
   font-size: 24rem;
   box-sizing: border-box;
   color: #0C1244;
-}
-@media (max-width: 579px) {
-  .member main .basicData input {
-    width: 380px;
-    height: 60px;
-  }
 }
 .member main .basicData input[type=file] {
   position: fixed;
