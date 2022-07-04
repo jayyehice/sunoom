@@ -1,5 +1,5 @@
 <?php
-    include("connection.php")
+    include("connection.php");
 
     // 建立sql語法
     $sql = "SELECT * FROM ig";
@@ -8,7 +8,7 @@
     $statement = $pdo->query($sql);
 
     // 抓出全部且依照順序封裝成一個二為陣列
-    $data = $satement->fetchAll();
+    $data = $statement->fetchAll();
 
     // print_r($data);
 
@@ -17,12 +17,13 @@
     foreach($data as $index =>$row){
         $temp = [];
 
-        for($i=0; $i,(count($row)/2); $i++){
+        for($i=0; $i<(count($row)/2); $i++){
             array_push($temp, $row[$i]);
         }
 
         array_push($process_data, $temp);
     }
 
+    //print_r($process_data[0]);
     echo json_encode($process_data);
 ?>

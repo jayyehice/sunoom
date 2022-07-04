@@ -3,9 +3,13 @@ new Vue({
 
     data: {
         ig_list: [],
+        ig_imgtext:[],
     },
 
-    method: {},
+    methods: {ig_img(e){
+        let igimg = e.target.dataset.ig;
+        this.ig_imgtext = this.ig_list[igimg];
+    }},
     compute: {},
     watch: {},
 
@@ -15,6 +19,8 @@ new Vue({
         fetch(url)
         .then(response => response.json())
         .then(text => this.ig_list = text);
+        // .then(text => console.log(text));
+
     },
 
     // beforeMount() {},
