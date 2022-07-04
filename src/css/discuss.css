@@ -9,6 +9,14 @@
   /* 討論區-彈窗-發表新文章 */
   /* 表單部分 */
 }
+.discuss #bgCanvas {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
 .discuss footer section .wrapper {
   width: 400px;
 }
@@ -882,9 +890,20 @@
   background-color: #0C1244;
   color: #F5F0DD;
   margin: 0 auto;
+  position: relative;
   /* 彈窗部分的CSS */
   /* 討論區-彈窗-發表新文章 */
   /* 表單部分 */
+}
+.discuss_moon #bgCanvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: 2s;
+  opacity: 1;
 }
 .discuss_moon footer section .wrapper {
   width: 400px;

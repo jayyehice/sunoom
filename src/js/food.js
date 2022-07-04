@@ -7,10 +7,12 @@ $(document).ready(function(){
     //資料庫渲染到前端
     new Vue({
         el: '#map',
-        data: {     // 變數放這裡！           
+        data: {     // 變數放這裡！ 
+
+            //地圖          
             map_list: [],
 
-            //燈箱內容
+            //地圖燈箱內容
             boxContent:[],
         },
         methods: {},
@@ -75,6 +77,32 @@ $(document).ready(function(){
                 $(".backdrop").animate({"opacity" : "0"} , 300);
                 $(".backdrop").css({"display": "none"});
             });
+
+
+
+            //餐廳預訂(人數加減)
+            $(document).ready(function(){
+                var number = 2;
+                $(".table_number").html(number);
+            });
+            
+            $(".plus").click(function(){
+                number = $(".table_number").text();
+                number = parseInt(number) + 1;
+                $(".table_number").html(number);
+            });
+            
+            $(".minus").click(function(){
+                number = $(".table_number").text();
+                number = parseInt(number) - 1;
+                /* if(number == 2){
+                    $(".table.minus").css("button:disabled");
+                } */
+                if(number >= 1){
+                    $(".table_number").html(number);
+                }
+            });
+
         },
         
     })
