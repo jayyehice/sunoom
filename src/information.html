@@ -13,8 +13,13 @@
     <link rel="stylesheet" href="./css/information.css">
 </head>
 <body class="information">
+
+        <!-- 星空 -->
+        <canvas id="bgCanvas"></canvas>
+
     <!-- <header>header</header> -->
     @@include('./layout/header.html')
+
 
     <main>
 
@@ -30,6 +35,8 @@
 
             </div>
         </div>
+
+        <button id="changeButton">臨時測試</button>
 
         <section class="map">
             <div id="map" class="wrapper">
@@ -153,7 +160,7 @@
             </div>
 
             
-            <div class="polaroid">
+            <div id="v_polaroid" class="polaroid">
                 
                 <svg width="1129" height="48" viewBox="0 0 1129 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1C459.864 60.8265 707.067 62.3227 1128 1" stroke="currentColor" stroke-width="2"/>
@@ -161,17 +168,17 @@
                 <ul>
                     <li>
                         <img src="./img/information/sun/polaroid_img_01.jpg" alt="">
-                        <h5>星月沙灘</h5>                        
+                        <h5 v-if="change01"></h5>                        
                     </li>
                     
                     <li>
                         <img src="./img/information/sun/polaroid_img_02.jpg" alt="">
-                        <h5>日月溪</h5>                        
+                        <h5 v-if="change02"></h5>                        
                     </li>
 
                     <li>
                         <img src="./img/information/sun/polaroid_img_03.jpg" alt="">
-                        <h5>登山步道</h5>                        
+                        <h5 v-if="change03"></h5>                        
                     </li>
                 </ul>
             </div>
@@ -271,7 +278,7 @@
                     <h4>明島發展</h4>
                     <p class="underline">日月同輝 X 永續經營</p>
                     <p>“I read; I travel; I become.; I alive” — Sunoom</p>
-                    <p> 明島因其特性，我們打造成適合海陸雙棲遊玩 探險的觀光小島，同時我們也注重保護自然生態，不過度開發是我們的宗旨，平衡環境與發展，實現永續營。</p>
+                    <p> 明島因其特性，我們打造成適合海陸雙棲遊玩探險的觀光小島，同時我們也注重保護自然生態，不過度開發是我們的宗旨，平衡環境與發展，實現永續營。</p>
                     <img src="./img/information/sun/develope_01.jpg" alt="">
                 </div>
 
@@ -394,5 +401,7 @@
     @@include('./layout/footer.html')
 @@include('./layout/header_footer_script_link.html')
     <script src="./js/information.js"></script>
+    <script src="./js/moonsky.js"></script>
+
 </body>
 </html>

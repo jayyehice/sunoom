@@ -37,8 +37,8 @@ $sqlm = "INSERT INTO member(account, password, phone, createdate, state, last_na
 
 $statement = $pdo->prepare($sqlm);
 $statement->bindParam(1, $account);
-$statement->bindParam(2, $phone);
-$statement->bindParam(3, $password);
+$statement->bindParam(2, $password);
+$statement->bindParam(3, $phone);
 $statement->bindParam(4, $createdate);
 $statement->bindParam(5, $state);
 $statement->bindParam(6, $last_name);
@@ -47,7 +47,16 @@ $statement->execute();
 
 sleep(0.5);
 
+//對比會員資料拉出會員id植入訂單用
+$sqlmcheck = "SELECT id FROM member WHERE account = ? , and phone = ?";
+$statement = $pdo->prepare($sqlmcheck);
+$statement->bindParam(1, $account);
+$statement->bindParam(2, $phone);
+$statement->execute();
+$memberid = $statement->fetch();
 
+echo $memberid
+sleep(0.5);
 
 //抓取網頁訂單欄位
 $paymode = $data["paymode"];
@@ -59,7 +68,7 @@ $ordernums = $data["ordernums"];
 $tripdate = $data["tripdate"];
 
 //寫訂單入資料庫
-$sql = "INSERT INTO order_table(orderdate, paymode, total, paydate, paystatus, orderstatus, tripchoose, foodchoose,staychoose,ordernums,tripdate) VALUES (now(), ?, ?, date_add(now(),interval 7 day), 0, 1, ?, ?, ?, ?, ?);";
+$sql = "INSERT INTO order_table(orderdate, paymode, total, paydate, paystatus, orderstatus, tripchoose, foodchoose,staychoose,ordernums,tripdate, member_id) VALUES (now(), ?, ?, date_add(now(),interval 7 day), 0, 1, ?, ?, ?, ?, ?, ?);";
 
 $statement = $pdo->prepare($sql);
 $statement->bindParam(1, $paymode);
@@ -69,6 +78,7 @@ $statement->bindParam(4, $foodchoose);
 $statement->bindParam(5, $staychoose);
 $statement->bindParam(6, $ordernums);
 $statement->bindParam(7, $tripdate);
+$statement->bindParam(8, $memberid);
 $statement->execute();
 
 // echo '成功'
