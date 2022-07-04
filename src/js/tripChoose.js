@@ -1498,13 +1498,14 @@ window.addEventListener('load',function(){
                 
                 let nt = (+new Date()) + payPhoneNumber.value;
 
+                let url = './php/inserOrder.php';
                 fetch(url,{
                     method:'POST', 
                     headers:{ 'Content-Type': 'application/json' },
                     body:JSON.stringify({
                         account:payEmail.value,
-                        firstName:firstName.value,
-                        lastName:lastName.value,
+                        first_name:firstName.value,
+                        last_name:lastName.value,
                         phone: payPhoneNumber.value,
                         createdate:new Date().toLocaleDateString(),
                         state:"未開通",
@@ -1512,7 +1513,7 @@ window.addEventListener('load',function(){
                     // .then(response => response.text())
                     // .then((body) => {console.log(body)})
                 })
-                let url = './php/inserOrder.php';
+                
                 for(let i = 0; i < this.dateArray.length; i++){
                     let triplist = tripMorningNameR[i].innerText + tripNoonNameR[i].innerText + tripEveningNameR[i].innerText;
                     let foodlist = FoodMorningNameR[i].innerText+FoodNoonNameR[i].innerText+FoodEveningNameR[i].innerText;
