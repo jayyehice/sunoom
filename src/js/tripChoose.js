@@ -52,6 +52,9 @@ window.addEventListener('load',function(){
             DiscountR:0,
             totalPriceR:0,
 
+            //綠界用
+            greenPrice:0,
+            greenOrderNums:0,
             
             //上午行程
             morningtriptext:'請點選上方選單列，開始安排您的旅程吧!',
@@ -1400,32 +1403,31 @@ window.addEventListener('load',function(){
 
                 let PepoleImg = '<i class="fa-solid fa-user"></i>'
 
-                function check(x){
-                    return  x != ''
-                }
+                let staycheck = true;
                 for(i = 0; i < StayChooseName.length; i++){
                     if(StayChooseName[i].innerText == ''){
-                        // alert('請確認您尚未選擇的住宿')
-                        sectionBlock.style.display = 'block'
-                        readyToPay.style.display = 'none'
-                        break;
-                    }else{
-                        sectionBlock.style.display = 'none'
-                        readyToPay.style.display = 'block'
-                        $('html, body').animate({
-                            scrollTop:'0'
-                        },1000)
-                        break;
-                        
+                        staycheck = false;
                     }
                 }
-
+                if(!staycheck){
+                    // alert('請確認您尚未選擇的住宿')
+                    sectionBlock.style.display = 'block'
+                    readyToPay.style.display = 'none'
+                }else{
+                    sectionBlock.style.display = 'none'
+                    readyToPay.style.display = 'block'
+                    $('html, body').animate({
+                        scrollTop:'0'
+                    },1000)
+                }
+                // let trippepoleNumsList = [];
+                // let foodpepoleNumsList = [];
                 for(i = 0 ; i < this.dateArray.length; i++){
                     //行程
                     tripMorningNameR[i].innerText = tripMorningName[i].innerText
                     tripMorningNameR[i].nextElementSibling.innerHTML = tripMorningName[i].nextElementSibling.innerText + PepoleImg
                     tripMorningPriceR[i].innerText = tripMorningPrice[i].innerText
-
+                    
                     tripNoonNameR[i].innerText = tripNoonName[i].innerText
                     tripNoonNameR[i].nextElementSibling.innerHTML = tripNoonName[i].nextElementSibling.innerText + PepoleImg
                     tripNoonPriceR[i].innerText = tripNoonPrice[i].innerText
@@ -1445,6 +1447,12 @@ window.addEventListener('load',function(){
                     FoodEveningNameR[i].innerText = FoodEveningName[i].innerText
                     FoodEveningNameR[i].nextElementSibling.innerHTML = FoodEveningName[i].nextElementSibling.innerText + PepoleImg
                     FoodEveningPriceR[i].innerText = FoodEveningPrice[i].innerText
+
+                    //傳送人數至第四頁用
+                    // trippepoleNumsList.push(tripMorningName[i].nextElementSibling.innerText,tripNoonName[i].nextElementSibling.innerText,tripEveningName[i].nextElementSibling.innerText);
+                    // foodpepoleNumsList.push(FoodMorningName[i].nextElementSibling.innerText, FoodNoonName[i].nextElementSibling.innerText,FoodEveningName[i].nextElementSibling.innerText);
+                    // localStorage.setItem('trippepoleNumsList',JSON.stringify(trippepoleNumsList));
+                    // localStorage.setItem('foodpepoleNumsList',JSON.stringify(foodpepoleNumsList));
                     //住宿
                     StayChooseNameR[i].innerText = StayChooseName[i].innerText
                     StayChoosePriceR[i].innerText = StayChoosePrice[i].innerText
@@ -1497,9 +1505,33 @@ window.addEventListener('load',function(){
                 let StayChooseNameR = document.getElementsByClassName('StayChooseNameR');
                 
                 let nt = (+new Date()) + payPhoneNumber.value;
-
+                let url3 = './php/order_new_member.php'
+                // let url2 = './php/pay.php'
                 let url = './php/inserOrder.php';
-                fetch(url,{
+                // fetch(`./php/pay.php?ordernums=${nt}&total=${this.totalPriceR.slice(1).replace(/,/g,'')}`)
+                this.greenPrice = this.totalPriceR.slice(1).replace(/,/g,'');
+                this.greenOrderNums = nt;
+                html2canvas(document.querySelector("#readyToPay")).then(canvas => {
+                    // console.log("object");
+                    var AVATAR = canvas.toDataURL("image/png , 1");
+                    console.log(AVATAR);
+                    const url = './php/saveimg.php';    
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                img: AVATAR,
+                                ordernums:nt,
+                            })
+                        });
+
+                    // Canvas2Image.saveAsPNG(canvas);
+
+                    // document.body.appendChild(canvas)
+                });
+                fetch(url3,{
                     method:'POST', 
                     headers:{ 'Content-Type': 'application/json' },
                     body:JSON.stringify({
@@ -1513,14 +1545,17 @@ window.addEventListener('load',function(){
                     // .then(response => response.text())
                     // .then((body) => {console.log(body)})
                 })
-                
+                localStorage.setItem('sendToFinishPage',JSON.stringify(nt));
                 for(let i = 0; i < this.dateArray.length; i++){
-                    let triplist = tripMorningNameR[i].innerText + tripNoonNameR[i].innerText + tripEveningNameR[i].innerText;
-                    let foodlist = FoodMorningNameR[i].innerText+FoodNoonNameR[i].innerText+FoodEveningNameR[i].innerText;
+                    let triplist = tripMorningNameR[i].innerText +',' + tripNoonNameR[i].innerText + ',' + tripEveningNameR[i].innerText
+                    let foodlist = FoodMorningNameR[i].innerText + ',' + FoodNoonNameR[i].innerText + ',' + FoodEveningNameR[i].innerText ;
+
                     fetch(url,{
                         method:'POST', 
                         headers:{ 'Content-Type': 'application/json' },
                         body:JSON.stringify({
+                            account:payEmail.value,
+                            phone: payPhoneNumber.value,
                             paymode: payWayMobileUse.value,
                             total: this.totalPriceR.slice(1).replace(/,/g,''),
                             tripchoose: triplist,
@@ -1533,8 +1568,13 @@ window.addEventListener('load',function(){
                         // .then((body) => {console.log(body)})
                     })
                 }
-
-
+            },
+            emailcheck(){
+                if(is.email(payEmail.value)){
+                    $('#FinishPage').addClass('emailcheck');
+                }else{
+                    console.log("aaa");
+                }
             }
         },
         computed:{
@@ -1583,6 +1623,12 @@ window.addEventListener('load',function(){
             
         },
         mounted() {
+
+
+            $('#testimg').on('click',()=>{
+                
+
+            })
                 // bus.$on('sync',nums => this.chooseData = nums)
                 // bus.$on('sync1',nums => this.choosePrice = nums)
                 //取得第一頁的人數
@@ -2195,6 +2241,7 @@ window.addEventListener('load',function(){
             this.FoodMorningNameValue = FoodMchoose.value;
             this.FoodNoonNameValue = FoodNchoose.value;
             this.FoodEveningNameValue = FoodEchoose.value;
+
 
             // console.log(typeof(payPhoneNumber.value));
             // let nt = (+new Date())

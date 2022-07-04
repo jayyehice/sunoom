@@ -256,6 +256,7 @@
 @media (max-width: 576px) {
   .tripChoose .datePickerBox {
     overflow-x: auto;
+    width: 100%;
   }
 }
 .tripChoose .datePickerBox .datePickerBoxLeftM {
@@ -2550,6 +2551,10 @@
   line-height: 50px;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
+  pointer-events: none;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage.emailcheck {
+  pointer-events: auto !important;
 }
 @media (max-width: 576px) {
   .tripChoose #readyToPay .buttonBlock #FinishPage {

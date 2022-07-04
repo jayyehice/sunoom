@@ -11,7 +11,10 @@
     <!-- <link rel="stylesheet" href="./css/readyToPay.css"> -->
     <script src="./js/vue.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
     <script src="./js/tripChoose.js"></script>
+    <script src="./js/is.min.js"></script>
     @@include('./layout/header_footer_css_link.html')
     <script src="https://kit.fontawesome.com/3e74b0720b.js" crossorigin="anonymous"></script>
 </head>
@@ -580,16 +583,16 @@
                 <button id="FinishPage">完成結帳</button> -->
                 
                 <!-- 改成form表單 -->
-                <!-- <form action="./php/pay.php" class="payBlock" method="post"> -->
+                <form action="./php/pay.php" class="payBlock" method="post">
                     <h4>PayMent</h4>
                     <div class="mailAndPhone">
                         <div class="email">
                             <h5>E-Mail</h5>
-                            <input type="email" name="" id="payEmail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <input type="email" name="" id="payEmail" required="required" @blur="emailcheck()">
                         </div>
                         <div class="phone">
                             <h5>連絡電話</h5>
-                            <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" pattern="09\d{2}\-?\d{3}\-?\d{3}">
+                            <input type="tel" name="" id="payPhoneNumber" required="required" maxlength="11" >
                         </div>
                     </div>
                     <div class="nameBlock">
@@ -616,6 +619,8 @@
                             <option value="匯款">匯款</option>
                         </select>
                     </div>
+                    <input type="text" name="greenPrice" id="greenPrice" :value="greenPrice">
+                    <input type="text" name="greenOrderNums" id="greenOrderNums" :value="greenOrderNums">
                     <p>我們將會發送確認的驗證碼郵件。<br>
                         <br>
                         *我們會同步加入會員，您的會員資料僅供您個人查詢訂單及發送優惠劵使用，我們會保障您的資料安全，請放心。</p>
@@ -649,7 +654,8 @@
                         <button @click="SendOrder" id="FinishPage" type="submit">前往付款</button>
                     </div>
                     <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
-                <!-- </form> -->
+                </form>
+                <button id="testimg">測試按鈕</button>
             </section>
         </article>
     </article>
@@ -657,5 +663,10 @@
 @@include('./layout/header_footer_script_link.html')
 <script src="./js/pay.js"></script>
 <script src="./js/moonsky.js"></script>
+
+<script>
+    // readyToPay
+
+</script>
 </body>
 </html>
