@@ -1,19 +1,42 @@
 let login=document.getElementById('login');
 let register=document.getElementById('register');
 let form_box=document.getElementsByClassName('form-box')[0];
+
+
 let register_box=document.getElementsByClassName('register-box')[0];
 let login_box=document.getElementsByClassName('login-box')[0];
 
+
+
+
 register.addEventListener('click',()=>{
+
     form_box.style.transform='translateX(105%)';
     login_box.classList.add('hidden');
     register_box.classList.remove('hidden');
+
+    let register_region=document.getElementById('register_region');
+    register_region.removeAttribute('style');
+    setTimeout(e => {
+        let login_region=document.getElementById('login_region');
+        login_region.setAttribute('style','display:none;');
+
+    }, 400)
 })
 
 login.addEventListener('click',()=>{
     form_box.style.transform='translateX(-5%)';
     register_box.classList.add('hidden');
     login_box.classList.remove('hidden');
+
+    let login_region=document.getElementById('login_region');
+    login_region.removeAttribute('style');
+    setTimeout(e => {
+
+        let register_region=document.getElementById('register_region');
+        register_region.setAttribute('style','display:none;');
+    }, 400)
+
 })
 
 
