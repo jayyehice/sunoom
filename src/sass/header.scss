@@ -450,22 +450,22 @@ header{
         pointer-events: none;
       }
 
-      // #sunSwitch{
-      //   cursor: pointer;
+      #sunSwitch{
+        cursor: pointer;
         
-      //     @include mobile{
-      //       transform: rotate(-90deg);
-      //     }
-      // }
+          @include mobile{
+            transform: rotate(-90deg);
+          }
+      }
 
-      // #moonSwitch{
-      //   cursor: pointer;
-      //   display: none;
+      #moonSwitch{
+        cursor: pointer;
+        display: none;
 
-      //   @include mobile{
-      //     transform: rotate(-90deg);
-      //   }
-      // }
+        @include mobile{
+          transform: rotate(-90deg);
+        }
+      }
     }
   }
 

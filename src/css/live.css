@@ -6,12 +6,11 @@
   color: #0C1244;
 }
 .live #bgCanvas {
-  width: 0%;
-  height: 0%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -100;
+  opacity: 0;
 }
 .live a {
   text-decoration: none;
@@ -654,6 +653,7 @@
   left: 0;
   z-index: -100;
   transition: height 1s;
+  opacity: 1;
 }
 .live_moon a {
   text-decoration: none;

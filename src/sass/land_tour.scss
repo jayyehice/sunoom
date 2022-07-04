@@ -16,12 +16,13 @@
     line-height: 1.6;
 
     #bgCanvas {
-        width: 0%;
-        height: 0%;
+        // width: 0%;
+        // height: 0%;
         position:absolute;
         top: 0;
         left: 0;
         z-index: -100;
+        opacity: 0;
     }
 
     header .headerCenter {
@@ -784,7 +785,7 @@
         left: 0;
         z-index: -100;
         transition: height 1s;
-        // opacity: 1;
+        opacity: 1;
     }
 
     main {

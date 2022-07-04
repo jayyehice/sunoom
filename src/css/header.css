@@ -335,6 +335,23 @@ header .headerRight .switch #sunSwitch, header .headerRight .switch #moonSwitch 
 header .headerRight .switch #night {
   pointer-events: none;
 }
+header .headerRight .switch #sunSwitch {
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  header .headerRight .switch #sunSwitch {
+    transform: rotate(-90deg);
+  }
+}
+header .headerRight .switch #moonSwitch {
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 576px) {
+  header .headerRight .switch #moonSwitch {
+    transform: rotate(-90deg);
+  }
+}
 header #go_top {
   position: fixed;
   z-index: 99;
