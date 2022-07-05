@@ -14,6 +14,14 @@ $(document).ready(function(){
 
             //地圖燈箱內容
             boxContent:[],
+
+            //預定資料
+            name:"",
+            people:"",
+            phone:"",
+            date:"",
+            time:"",
+
         },
         methods: {},
         computed: {},
@@ -82,17 +90,34 @@ $(document).ready(function(){
             // 餐廳一預訂(燈箱點擊事件)
                 $(".booknow").click(function(e){
                     e.preventDefault();
+                    // console.log($(e.target.closest('section')).find('h3').text());
+                    
+                    //燈箱店家圖片和店名替換
+                    $("#bookingBox1").find('img').attr('src', $(e.target.closest('section')).find('img').attr('src'));
+                    $("#bookingBox1").find('h4').text($(e.target.closest('section')).find('h3').text());
+
+                    //燈箱開啟時的深色背景
                     $("#bookingBox1").fadeIn();
                     $("#bookingBox1").css("display","block")
                     $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
                 })
 
             //點擊 X 或 其他地方 關閉 餐廳一燈箱
-                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
+                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(bookingBoxClose){
                     $("#bookingBox1").fadeOut();
                     //燈箱開啟時的深色背景
                     $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
                     $(".bookingBoxDrop").css({"display": "none"});
+                    $("input").css("border", "#0C1244 1.5px solid");
+
+
+                    //關閉後初始
+                    let number = 1;
+                    $(".table_number").html(number);
+                    $("#name").val("");
+                    $("#phone").val("");
+                    $("#time").val("");
+                    $("#date").val("");
                 });
             
 
@@ -123,6 +148,59 @@ $(document).ready(function(){
             };
 
             plusAndMinus();
+
+            //餐廳訂位送出(傳送資料到資料庫)
+            
+            $("#confirm").on("click",function(){
+                let shopname = $("#shopname").text();
+                let people = $("#people").text();
+                let name = $("#name").val();
+                let date = $("#date").val();
+                let time = $("#time").val();
+                let phone = $("#phone").val();
+                let islandid = 1;
+                // let inputValue = $("input").val();
+                if (name == "" || date == "" || time == "" | phone == "") {
+                    // input IS empty
+                    for(let i = 0; i < $("input").length ; i++){
+                        console.log($("input")[i]);
+                        if($($("input")[i]).val() == ""){
+                            $($("input")[i]).css("border", "red 1.5px solid");
+                        }
+                    }
+                    // alert("no");
+                } else {
+                    // input is NOT empty
+                    //判斷body標籤是在日島還是月島
+                    if($('body')[0].classList.contains('moon')){
+                        islandid = 2;
+                    }
+                    // console.log(shopname, name, phone, people, date, time);
+                    
+                    //傳送資料到資料庫
+                    const url = `./php/foodBooking.php?shopname=${shopname}&people=${people}&name=${name}&date=${date}&time=${time}&phone=${phone}&islandid=${islandid}`;
+                    fetch(url);
+    
+                    //confirm點擊後，換成訂位完成燈箱
+                    $("#bookingBox1").fadeOut(200);
+                    $("#completeBox1").delay(200).fadeIn(800);
+    
+                    //Step2 燈箱開啟時的深色背景
+                    $("#completeBox1").css("display","block")
+                    $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
+    
+                    //點擊 X 或 其他地方 關閉 訂位完成燈箱
+                    $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
+                        $("#completeBox1").fadeOut();
+                        //燈箱開啟時的深色背景
+                        $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
+                        $(".bookingBoxDrop").css({"display": "none"});
+                    });
+                    
+                }
+
+
+            });
             
         },
         

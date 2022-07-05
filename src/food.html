@@ -181,7 +181,7 @@
                 <!-- 燈箱開啟時的深色背景 -->
                 <div class="bookingBoxDrop"></div>
 
-                <!-- 第一家_訂位燈箱 -->
+                <!-- Step 1. 訂位燈箱 -->
                 <div id="bookingBox1">
 
                     <!-- 燈箱內容 -->
@@ -198,7 +198,7 @@
             
                         <!-- 店名 -->
                         <div class="restaurant_name">
-                            <h4>BBQ日月燒匠</h4>
+                            <h4 id="shopname">BBQ日月燒匠</h4>
                         </div>
             
                         <!-- TABLE FOR -->
@@ -214,8 +214,8 @@
                             </div>
             
                             <!-- 人數 -->
-                            <div class="table_number">
-                                
+                            <div id="people" class="table_number">
+                                1
                             </div>
             
                             <!-- 加號 -->
@@ -233,7 +233,7 @@
             
                         <!-- 日期選擇 -->
                         <div class="date_picker">
-                            <input type="date" placeholder="">
+                            <input id="date" type="date" required>
                         </div>
             
                         <!-- 選擇日期的Title -->
@@ -243,7 +243,7 @@
             
                         <!-- 時間選擇 -->
                         <div class="time_picker">
-                            <input type="time" placeholder="" />
+                            <input id="time" type="time" placeholder="" />
                         </div>
             
                         <!-- 姓名的Title -->
@@ -253,7 +253,7 @@
             
                         <!-- 姓名 -->
                         <div class="name">
-                            <input placeholder="Name"/>
+                            <input id="name" placeholder="Name"/>
                         </div>
             
                         <!-- 電話的Title -->
@@ -263,15 +263,35 @@
             
                         <!-- 電話 -->
                         <div class="phone">
-                            <input placeholder="Phone"/>
+                            <input id="phone" placeholder="Phone"/>
                         </div>
             
                         <!-- 確認按鈕 -->
                         <div class="submit_btn">
-                            <button type="submit">Confirm</button>
+                            <button id="confirm" type="submit">Confirm</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Step 2. 訂位完成燈箱 -->
+                <div id="completeBox1">
+
+                    <!-- 燈箱內容 -->
+                    <div class="boxInner">
+
+
+                        <!-- 燈箱關閉按鈕 -->
+                        <i class="fa-solid fa-circle-xmark bookingBoxClose"></i>
+
+                        <div id="completed">
+                            <h4>預定已確認</h4>
+                            <p>已將您的預定明細，寄送簡訊至您的手機，期待您的光臨!</p>
+                            <p>明島管理團隊 敬上</p>
+                          </div>
+                        
+                    </div>
+                </div>
+
 
             </section>
 

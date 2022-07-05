@@ -516,6 +516,30 @@
   background-color: #F5F0DD;
   border: 1.5px solid #0C1244;
 }
+.food main .box1 #completeBox1 {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 350px;
+  box-shadow: 1px 10px 30px #cccccc;
+  background-color: #F5F0DD;
+}
+.food main .box1 #completeBox1 .boxInner {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+.food main .box1 #completeBox1 .boxInner .bookingBoxClose {
+  font-size: 24px;
+  color: #0C1244;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
 .food main .wrapper_bottom {
   margin-bottom: 150px;
 }

@@ -398,7 +398,7 @@
                     <h3>@sunmoonisland</h3>
                 </div>
 
-                <ul>
+                <ul v-if="ig_list[0]">
                     <li>
                         <img class="ig_img" :src="ig_list[1][1]" alt="" data-ig="1" @click="ig_img">
                         <img class="ig_img" :src="ig_list[2][1]" alt="" data-ig="2" @click="ig_img">
