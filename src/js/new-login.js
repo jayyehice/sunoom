@@ -68,7 +68,7 @@ new Vue({
     },
 
     methods:{
-        ftdregister(e){
+        ftdregister(e){     //小括弧裡面的英文是物件
             e.preventDefault();
 
 
