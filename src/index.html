@@ -119,7 +119,7 @@
                                     </p>
                                     <i class="fa-solid fa-circle-plus"></i>More Comments</a>
                                 </div>
-                                <a class="viewButton" href="./food.html">View More</a>
+                                <a class="viewButton" onclick="location.href='./food.html'">View More</a>
                             </div>
                             <a class="viewButton_RWD" href="./food.html">View More</a>
                         </div>
@@ -152,7 +152,7 @@
                                     </p>
                                     <i class="fa-solid fa-circle-plus"></i>More Comments</a>
                                 </div>
-                                <a class=viewButton href="./live.html">View More</a>
+                                <a class=viewButton onclick="location.href='./live.html'">View More</a>
                             </div>
                             <a class="viewButton_RWD" href="./live.html">View More</a>
                         </div>
@@ -186,7 +186,7 @@
                                     </p>
                                     <i class="fa-solid fa-circle-plus"></i>More Comments</a>
                                 </div>
-                                <a class=viewButton href="./sea.html">View More</a>
+                                <a class=viewButton onclick="location.href='./sea.html'">View More</a>
                             </div>
                             <a class="viewButton_RWD" href="./sea.html">View More</a>
                         </div>
@@ -219,7 +219,7 @@
                                     </p>
                                     <i class="fa-solid fa-circle-plus"></i>More Comments</a>
                                 </div>
-                                <a class="viewButton" href="./land_tour.html">View More</a>
+                                <a class="viewButton" onclick="location.href='./land_tour.html'">View More</a>
                             </div>
                             <a class="viewButton_RWD" href="./land_tour.html">View More</a>
                         </div>
@@ -234,7 +234,7 @@
                 <i class="fa-brands fa-instagram"></i>
                 <h4 class="igAccount">@sunoomisland</h4>
             
-                <ul class="instagramPhoto">
+                <ul class="instagramPhoto" v-if="ig_list[0]">
                     <li>
                         <img class="ig_img01 ig_img" :src="ig_list[15][1]" alt=""  data-ig="15" @click="ig_img">
                         <img class="ig_img01 ig_img" :src="ig_list[16][1]" alt=""  data-ig="16" @click="ig_img">
