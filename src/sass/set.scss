@@ -1,7 +1,7 @@
 @import 'base/var';
 
 @mixin mobile {
-    @media(max-width:579px){
+    @media(max-width:576px){
         @content
     }
 }
@@ -65,7 +65,7 @@
                         width: 185px;
                         line-height: 50px;
                         position: absolute;
-                        left: 0px;
+                        left: 13px;
                         top: 0px;
                     }
                     
@@ -76,6 +76,7 @@
 
                     @include mobile{
                         display: inline-block;
+                        margin-left: 20px;
                     }
 
                 }
@@ -98,7 +99,7 @@
                         display: inline-block;
                         color: $sun_color;
                         position: absolute;
-                        left: 230px;
+                        left: 254px;
                         top: 7px;
                     }
 
@@ -533,7 +534,7 @@
                         width: 185px;
                         line-height: 50px;
                         position: absolute;
-                        left: 0px;
+                        left: 13px;
                         top: 0px;
                     }
                     
@@ -544,6 +545,7 @@
 
                     @include mobile{
                         display: inline-block;
+                        margin-left: 20px;
                     }
 
                 }
@@ -566,7 +568,7 @@
                         display: inline-block;
                         color: $sun_color;
                         position: absolute;
-                        left: 230px;
+                        left: 254px;
                         top: 7px;
                     }
 
