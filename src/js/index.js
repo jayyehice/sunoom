@@ -107,7 +107,7 @@ var bubblyButtons = document.getElementsByClassName("viewButton");
 
 for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
-  setTimeout("location.href='./food.html'",1000);
+  // setTimeout("location.href='./food.html'",1000);
 }
 
 
