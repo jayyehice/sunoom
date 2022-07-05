@@ -1774,6 +1774,9 @@
   .discuss .wrapper {
     width: 100%;
   }
+  .discuss footer section .wrapper{
+    width:100%;
+  }
   .discuss .wrapper main hr {
     width: 90%;
   }
@@ -1885,6 +1888,8 @@
   .discuss .wrapper main .article_list .img_1 {
     display: inline-block;
     width: 35%;
+    position: relative;
+    bottom: 70px;
   }
   .discuss .wrapper main .article_list .img_1 img {
     width: 100%;

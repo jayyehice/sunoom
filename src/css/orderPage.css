@@ -25,6 +25,7 @@
   /*  Larger Screen Styling */
 }
 .orderPage #bgCanvas {
+  width: 0%;
   opacity: 0;
   position: absolute;
   top: 0;

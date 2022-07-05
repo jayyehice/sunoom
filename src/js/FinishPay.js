@@ -47,13 +47,16 @@ window.addEventListener('load',function(){
             fetch(url)
             .then(response => response.json())
             .then(text => {this.orderimg = text})
-            
+            // let url = `./php/saveimg.php`
+            // fetch(url)
+            // .then(response => response.json())
+            // .then(text => {this.orderimg = text})
         },
         mounted() {
-            let senDays = JSON.parse(localStorage.getItem('sendDays'));
-            console.log(senDays);
-            this.startday = new Date(senDays[0]).toLocaleDateString();
-            this.endday = new Date(senDays[2]).toLocaleDateString();
+            // let senDays = JSON.parse(localStorage.getItem('sendDays'));
+            // console.log(senDays);
+            // this.startday = new Date(senDays[0]).toLocaleDateString();
+            // this.endday = new Date(senDays[2]).toLocaleDateString();
 
             // this.trippepoleNumsList = JSON.parse(localStorage.getItem('trippepoleNumsList'));
             // this.foodpepoleNumsList = JSON.parse(localStorage.getItem('foodpepoleNumsList'));

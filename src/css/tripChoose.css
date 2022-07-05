@@ -45,6 +45,7 @@
   color: #0C1244;
 }
 .tripChoose #bgCanvas {
+  width: 0%;
   opacity: 0;
   position: absolute;
   top: 0;

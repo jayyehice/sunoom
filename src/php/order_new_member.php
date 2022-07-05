@@ -46,5 +46,4 @@ $statement->bindParam(6, $last_name);
 $statement->bindParam(7, $first_name);
 $statement->execute();
 
-sleep(0.5);
 ?>
