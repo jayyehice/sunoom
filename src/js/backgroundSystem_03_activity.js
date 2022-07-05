@@ -151,7 +151,7 @@ Vue.component('activity',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[content][page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]" v-if="item[1] != '不需選購'">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[8]}}</p></li>
                     <li class="col"><p>{{item[1]}}</p></li>

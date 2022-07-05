@@ -148,7 +148,7 @@ Vue.component('overview',{
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["6/29", "6/30", "7/1", "7/2", "7/3", "7/4", "7/5"],
+                labels: ["7/7", "7/8", "7/9", "7/10", "7/11", "7/12", "7/13"],
                 datasets: [{
                 label: "預定人數",
                 backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', '#007bff', '#dc3545', '#ffc107',],

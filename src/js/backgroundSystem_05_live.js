@@ -95,7 +95,7 @@ Vue.component('live',{
     <div class="listTitle col-10">
         <!-- 表單抬頭 -->
         <div class="Title">
-            <h3>住宿介紹</h3>
+            <h3>房型管理</h3>
             <!-- 
             <input type="text" name="" id="">
             <button>搜尋</button>
