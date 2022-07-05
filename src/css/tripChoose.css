@@ -2471,6 +2471,12 @@
     text-align: center;
   }
 }
+.tripChoose #readyToPay .payBlock #greenPrice {
+  display: none;
+}
+.tripChoose #readyToPay .payBlock #greenOrderNums {
+  display: none;
+}
 .tripChoose #readyToPay .payBlock .creditCardBlock {
   margin-top: 50px;
   border-top: 1px solid #0C1244;
