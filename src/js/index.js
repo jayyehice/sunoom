@@ -32,44 +32,44 @@ var t3 = new TimelineMax();
 var t4 = new TimelineMax();
 const controller = new ScrollMagic.Controller();
 
-tl.from('.animation01', 1.2, { width: 0}, "=-.7");
-tl.from('.animation02', .9, { height: 0}, "=-.5");
-tl.from('.animation03', 1.2, { width: 0}, "=-.7");
-tl.from('.animation04', .9, { height: 0}, "=-.7");
-tl.from('.animation05', .9, { width: 0}, "=-.5");
+tl.from('.animation01', .6, { width: 0, opacity: .2});
+tl.from('.animation02', .6, { height: 0, opacity: .2});
+tl.from('.animation03', .6, { width: 0, opacity: .2});
+tl.from('.animation04', .6, { height: 0, opacity: .2});
+tl.from('.animation05', .4, { width: 0, opacity: .2});
 const scenet1 = new ScrollMagic.Scene({
   triggerElement: ".animation01",
 })
 .setTween(tl)
 .addTo(controller);
 
-t2.from('.animation06', 1.2, { width: 0}, "=-.7");
-t2.from('.animation07', .9, { height: 0}, "=-.5");
-t2.from('.animation08', 1.2, { width: 0}, "=-.7");
-t2.from('.animation09', .9, { height: 0}, "=-.7");
-t2.from('.animation10', .9, { width: 0}, "=-.5");
+t2.from('.animation06', .6, { width: 0, opacity: .2});
+t2.from('.animation07', .6, { width: 0, opacity: .2});
+t2.from('.animation08', .6, { width: 0, opacity: .2});
+t2.from('.animation09', .6, { width: 0, opacity: .2});
+t2.from('.animation10', .4, { width: 0, opacity: .2});
 const scenet2 = new ScrollMagic.Scene({
   triggerElement: ".animation06",
 })
 .setTween(t2)
 .addTo(controller);
 
-t3.from('.animation11', 1.2, { width: 0}, "=-.7");
-t3.from('.animation12', .9, { height: 0}, "=-.5");
-t3.from('.animation13', 1.2, { width: 0}, "=-.7");
-t3.from('.animation14', .9, { height: 0}, "=-.7");
-t3.from('.animation15', .9, { width: 0}, "=-.5");
+t3.from('.animation11', .6, { width: 0, opacity: .2});
+t3.from('.animation12', .6, { width: 0, opacity: .2});
+t3.from('.animation13', .6, { width: 0, opacity: .2});
+t3.from('.animation14', .6, { width: 0, opacity: .2});
+t3.from('.animation15', .4, { width: 0, opacity: .2});
 const scenet3 = new ScrollMagic.Scene({
   triggerElement: ".animation11",
 })
 .setTween(t3)
 .addTo(controller);
 
-t4.from('.animation16', 1.2, { width: 0}, "=-.7");
-t4.from('.animation17', .9, { height: 0}, "=-.5");
-t4.from('.animation18', 1.2, { width: 0}, "=-.7");
-t4.from('.animation19', .9, { height: 0}, "=-.7");
-t4.from('.animation20', .9, { width: 0}, "=-.5");
+t4.from('.animation16', .6, { width: 0, opacity: .2});
+t4.from('.animation17', .6, { width: 0, opacity: .2});
+t4.from('.animation18', .6, { width: 0, opacity: .2});
+t4.from('.animation19', .6, { width: 0, opacity: .2});
+t4.from('.animation20', .4, { width: 0, opacity: .2});
 const scenet4 = new ScrollMagic.Scene({
   triggerElement: ".animation16",
 })
