@@ -2357,6 +2357,9 @@
 @media screen and (max-width: 575.98px){
 
   .discuss{
+    footer section .wrapper{
+      width:100%;
+    }
     .wrapper{
       width: 100%;
 
@@ -2501,6 +2504,8 @@
           .img_1{
             display: inline-block;
             width: 35%;
+            position: relative;
+            bottom: 70px;
             // height: 100%;
             img{
                 width: 100%;
