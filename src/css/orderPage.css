@@ -633,7 +633,7 @@
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background-color: #F5F0DD;
+  background-color: transparent;
   border: 1px solid #0C1244;
   margin: 50px auto;
 }
@@ -658,6 +658,7 @@
 }
 .orderPage_moon #bgCanvas {
   width: 100%;
+  height: 200vh;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -1163,6 +1164,8 @@
   font-size: 12px;
   font-weight: bold;
   padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid;
 }
 .orderPage_moon .daterangepicker.show-ranges.single.rtl .drp-calendar.left {
   border-right: 1px solid #ddd;
