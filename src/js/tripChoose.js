@@ -55,7 +55,8 @@ window.addEventListener('load',function(){
             //綠界用
             greenPrice:0,
             greenOrderNums:0,
-            
+            //結帳明細用
+            orderimgurl:'',
             //上午行程
             morningtriptext:'請點選上方選單列，開始安排您的旅程吧!',
             morningtripPrice:'0',
@@ -1549,6 +1550,7 @@ window.addEventListener('load',function(){
                         // .then((body) => {console.log(body)})
                     })
                 }
+                let orderurlcheck = '';
                 readyToPayBigListimg.classList.add('imgbgc');
                 html2canvas(document.querySelector("#readyToPayBigListimg")).then(canvas => {
                     // console.log("object");
@@ -1563,8 +1565,12 @@ window.addEventListener('load',function(){
                                 img: AVATAR,
                                 ordernums:nt,
                             })
-                        });
-
+                        })
+                        .then(response => response.json())
+                        .then(image => {
+                            console.log(image);
+                            FinishPagesubmit.click();
+                            })
                     // Canvas2Image.saveAsPNG(canvas);
 
                     // document.body.appendChild(canvas)
@@ -1575,7 +1581,6 @@ window.addEventListener('load',function(){
                 if(is.email(payEmail.value)){
                     $('#FinishPage').addClass('emailcheck');
                 }else{
-                    console.log("aaa");
                 }
             }
         },
