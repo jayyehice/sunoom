@@ -15,6 +15,7 @@
   line-height: 1.6;
 }
 .land_tour #bgCanvas {
+  width: 0%;
   position: absolute;
   top: 0;
   left: 0;
@@ -373,6 +374,21 @@
 .land_tour main .activity_intro ul li .wrapper > div .comment > i {
   margin-right: 7px;
 }
+.land_tour main .activity_intro ul li .wrapper > div .comment a {
+  text-decoration: none;
+}
+.land_tour main .activity_intro ul li .wrapper > div .comment a:link {
+  color: #0C1244;
+}
+.land_tour main .activity_intro ul li .wrapper > div .comment a:visited {
+  color: #0C1244;
+}
+.land_tour main .activity_intro ul li .wrapper > div .comment a:hover {
+  color: #0C1244;
+}
+.land_tour main .activity_intro ul li .wrapper > div .comment a:active {
+  color: #0C1244;
+}
 .land_tour main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
   top: 0px;
@@ -559,12 +575,6 @@
 .land_tour main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_words {
   height: calc(100% - 85px);
   padding: 25px;
-  color: #0C1244;
-}
-.land_tour main a {
-  text-decoration: none;
-}
-.land_tour main a:visited {
   color: #0C1244;
 }
 
@@ -929,6 +939,21 @@
 .land_tour_moon main .activity_intro ul li .wrapper > div .comment > i {
   margin-right: 7px;
 }
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment a {
+  text-decoration: none;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:link {
+  color: #F5F0DD;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:visited {
+  color: #F5F0DD;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:hover {
+  color: #F5F0DD;
+}
+.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:active {
+  color: #F5F0DD;
+}
 .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
   position: absolute;
   top: 0px;
@@ -1116,9 +1141,6 @@
 .land_tour_moon main a {
   text-decoration: none;
 }
-.land_tour_moon main a:visited {
-  color: #F5F0DD;
-}
 
 @media screen and (max-width: 575.98px) {
   .land_tour main .banner .schedule-wrapper .event-item .chName {
@@ -1227,6 +1249,21 @@
   .land_tour main .activity_intro ul li .wrapper > div .comment .star_block,
 .land_tour main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
     margin-bottom: 20px;
+  }
+  .land_tour main .activity_intro ul li .wrapper > div .comment a {
+    text-decoration: none;
+  }
+  .land_tour main .activity_intro ul li .wrapper > div .comment a:link {
+    color: #0C1244;
+  }
+  .land_tour main .activity_intro ul li .wrapper > div .comment a:visited {
+    color: #0C1244;
+  }
+  .land_tour main .activity_intro ul li .wrapper > div .comment a:hover {
+    color: #0C1244;
+  }
+  .land_tour main .activity_intro ul li .wrapper > div .comment a:active {
+    color: #0C1244;
   }
   .land_tour main .activity_intro ul li .wrapper #cloud_01 {
     display: none;
@@ -1365,9 +1402,6 @@
   .land_tour main a {
     text-decoration: none;
   }
-  .land_tour main a:visited {
-    color: #0C1244;
-  }
 
   .land_tour_moon main .breadcrumbs .wrapper {
     width: 100%;
@@ -1466,6 +1500,21 @@
   .land_tour_moon main .activity_intro ul li .wrapper > div .comment .star_block,
 .land_tour_moon main .activity_intro ul li .wrapper > div .comment p:nth-child(2) {
     margin-bottom: 20px;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a {
+    text-decoration: none;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:link {
+    color: #0C1244;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:visited {
+    color: #0C1244;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:hover {
+    color: #0C1244;
+  }
+  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:active {
+    color: #0C1244;
   }
   .land_tour_moon main .activity_intro ul li .wrapper #cloud_01 {
     display: none;
@@ -1600,12 +1649,6 @@
   }
   .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
     width: 40px;
-  }
-  .land_tour_moon main a {
-    text-decoration: none;
-  }
-  .land_tour_moon main a:visited {
-    color: #0C1244;
   }
 }
 

@@ -16,7 +16,7 @@
     line-height: 1.6;
 
     #bgCanvas {
-        // width: 0%;
+        width: 0%;
         // height: 0%;
         position:absolute;
         top: 0;
@@ -487,6 +487,28 @@
                                 &>i {
                                     margin-right: 7px;
                                 }
+
+                                a{
+                                    text-decoration: none;
+                        
+                                    &:link {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:visited {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:hover {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:active {
+                                        color: $moon_color;
+                                    }
+                                }
+
+
                             }
                         }
 
@@ -757,12 +779,7 @@
 
 
         }
-        a{
-            text-decoration: none;
-            &:visited {
-                color: $moon_color;
-            }
-        }
+        
     }
 
 }
@@ -1241,6 +1258,26 @@
                                 &>i {
                                     margin-right: 7px;
                                 }
+
+                                a{
+                                    text-decoration: none;
+                        
+                                    &:link {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:visited {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:hover {
+                                        color: $moon_color;
+                                    }
+                        
+                                    &:active {
+                                        color: $moon_color;
+                                    }
+                                }
                             }
                         }
 
@@ -1508,9 +1545,7 @@
         }
         a{
             text-decoration: none;
-            &:visited {
-                color: $moon_color;
-            }
+            
         }
     }
 
@@ -1668,362 +1703,25 @@
                                     p:nth-child(2) {
                                         margin-bottom: 20px;
                                     }
-                                }
-                            }
 
-                            #cloud_01 {
-                                display: none;
-
-                            }
-                        }
-                    }
-
-                    li:nth-child(1) {
-                        .wrapper {
-
-                            #bird_01 {
-                                width: 150px;
-                                top: 150px;
-                                right: 30px;
-
-                            }
-
-                            #cloud_02 {
-                                top: 370px;
-                                left: -260px;
-                            }
-                        }
-
-                    }
-
-                    li:nth-child(2) {
-                        .wrapper {
-                            &>div {
-                                margin-left: auto;
-                            }
-                        }
-
-                        #branch_01 {
-                            width: 230px;
-                            left: -86px;
-                            top: 145px;
-                        }
-
-                        #butterfly_01 {
-                            width: 50px;
-                            top: 177px;
-                            left: 88px;
-                        }
-                    }
-
-                    li:nth-child(3) {
-                        margin-bottom: 50px;
-
-                        #branch_02 {
-                            width: 150px;
-                            top: 40px;
-                        }
-                    }
-
-                    li:nth-child(4) {
-                        margin-bottom: 50px;
-
-                        .wrapper {
-                            &>div {
-                                margin-left: auto;
-                            }
-                        }
-
-                        #branch_03 {
-                            width: 150px;
-                            top: 80px;
-                        }
-                    }
-
-                    li:nth-child(5) {
-                        margin-bottom: 200px;
-
-                        .wrapper {
-                            &>div {
-                                #butter_02 {
-                                    width: 50px;
-                                    top: 130px;
-                                    right: -50px;
-                                }
-
-                                #flower_01 {
-                                    width: 100px;
-                                    top: 120px;
-                                    right: -50px;
-                                }
-                            }
-                        }
-
-                        #branch_04 {
-                            width: 150px;
-                            top: -40px;
-                            right: -13px;
-                        }
-
-                        #branch_05 {
-                            width: 150px;
-                            top: -8px;
-                        }
-                    }
-
-                    li:nth-child(6) {
-                        #bear_01 {
-                            width: 270px;
-                        }
-
-                        #branch_06 {
-                            width: 150px;
-                            top: -80px;
-                        }
-
-                        #branch_07 {
-                            display: block;
-                            position: absolute;
-                            width: 150px;
-                            top: -190px;
-                            right: -7px;
-                        }
-
-                        #branch_08 {
-                            display: block;
-                            position: absolute;
-                            width: 150px;
-                            top: -156px;
-                            right: -6px;
-                        }
-
-                    }
-                }
-            }
-
-            .instagram {
-                .wrapper {
-                    width: calc(100% - 100px);
-
-                    .title {
-                        img {
-                            width: 36px;
-                            margin-right: 13px;
-                        }
-
-                        h3 {
-                            font-size: 24px;
-                        }
-                    }
-
-                    ul {
-                        li {
-                            width: 49%;
-
-                            img {
-                                margin-bottom: 10px;
-                                width: 100%;
-                            }
-                        }
-
-                        li:nth-child(1),
-                        li:nth-child(3) {
-
-                            img:nth-child(2),
-                            img:nth-child(3) {
-                                width: 48%;
-                            }
-                        }
-
-                        li:nth-child(2),
-                        li:nth-child(4) {
-
-                            img:nth-child(2),
-                            img:nth-child(1) {
-                                width: 48%;
-                            }
-                        }
-                    }
-                }
-
-                #ig_pop_up {
-                    // display: block;
-
-                    #ig_pop_up_content {
-                        flex-direction: column;
-
-                        width: calc(100% - 100px);
-
-                        #ig_pop_up_left {
-                            width: 100%;
-
-                            img {
-                                max-width: calc(100% - 40px);
-                                margin-top: 20px;
-                            }
-
-                            p {
-                                line-height: 40px;
-                            }
-                        }
-
-                        #ig_pop_up_right {
-                            width: 100%;
-
-                            #ig_author {
-                                #ig_author_img {
-                                    width: 40px;
-                                }
-                            }
-                        }
-
-
-                    }
-                }
-
-            }
-            a{
-                text-decoration: none;
-                &:visited {
-                    color: $moon_color;
-                }
-            }
-
-        }
-    }
-
-    .land_tour_moon {
-        main {
-            .breadcrumbs {
-                .wrapper {
-                    width: 100%;
-                }
-            }
-
-            .slogan_banner {
-                padding-top: 170px;
-                height: 335px;
-
-                .leaf_left {
-                    width: 25%;
-                }
-
-                .leaf_right {
-                    width: 63%;
-                }
-
-                .deer {
-                    width: 63%;
-                    left: -10px;
-                }
-
-                .slogan {
-                    // border: $show_border;
-
-                    width: 50%;
-
-                    margin-left: 35%;
-
-                    h3:first-child {
-                        display: none;
-                    }
-
-                    h3 {
-                        // border: $show_border;
-                    }
-
-                    .slogan_h5 {
-                        // border: $show_border;
-                        display: block;
-                        margin-top: 30px;
-                        text-align: center;
-
-                        h5 {
-                            // border: $show_border;
-                            margin-left: 0px;
-                        }
-
-                        h5:first-child {
-                            margin-bottom: 30px;
-                        }
-                    }
-                }
-
-            }
-
-            .ecotourism {
-                width: 100%;
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                margin-top: 50px;
-
-                ul {
-                    order: 1;
-
-                    li {
-                        height: 259px;
-                    }
-                }
-
-                .intro_word {
-                    position: static;
-                    width: auto;
-                    height: auto;
-                    top: 0;
-                    left: 0;
-                    background-color: transparent;
-                    transform: translate(0, 0);
-                    border: 1px solid $moon_color;
-                    padding: 20px 30px;
-
-                    h3 {
-                        margin-bottom: 30px;
-                    }
-
-                    margin-bottom: 20px;
-                }
-
-
-            }
-
-            .activity_intro {
-                margin-top: 50px;
-
-                ul {
-                    padding-top: 0px;
-
-                    li {
-                        margin-bottom: 50px;
-
-                        .wrapper {
-                            width: calc(100% - 100px);
-
-                            &>div {
-                                width: 65%;
-                                text-align: left;
-
-                                img {
-                                    width: 100%;
-                                }
-
-                                &>p {
-                                    width: 100%;
-                                }
-
-                                .comment {
-                                    // border: $show_border;
-                                    width: 170px;
-                                    flex-shrink: 0;
-                                    flex-wrap: wrap;
-                                    justify-content: flex-start;
-                                    margin: 0;
-                                    margin-top: 20px;
-                                    line-height: 1;
-
-                                    .star_block,
-                                    p:nth-child(2) {
-                                        margin-bottom: 20px;
+                                    a{
+                                        text-decoration: none;
+                            
+                                        &:link {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:visited {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:hover {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:active {
+                                            color: $moon_color;
+                                        }
                                     }
                                 }
                             }
@@ -2241,10 +1939,380 @@
             }
             a{
                 text-decoration: none;
-                &:visited {
-                    color: $moon_color;
+                
+            }
+
+        }
+    }
+
+    .land_tour_moon {
+        main {
+            .breadcrumbs {
+                .wrapper {
+                    width: 100%;
                 }
             }
+
+            .slogan_banner {
+                padding-top: 170px;
+                height: 335px;
+
+                .leaf_left {
+                    width: 25%;
+                }
+
+                .leaf_right {
+                    width: 63%;
+                }
+
+                .deer {
+                    width: 63%;
+                    left: -10px;
+                }
+
+                .slogan {
+                    // border: $show_border;
+
+                    width: 50%;
+
+                    margin-left: 35%;
+
+                    h3:first-child {
+                        display: none;
+                    }
+
+                    h3 {
+                        // border: $show_border;
+                    }
+
+                    .slogan_h5 {
+                        // border: $show_border;
+                        display: block;
+                        margin-top: 30px;
+                        text-align: center;
+
+                        h5 {
+                            // border: $show_border;
+                            margin-left: 0px;
+                        }
+
+                        h5:first-child {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+
+            }
+
+            .ecotourism {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+
+                ul {
+                    order: 1;
+
+                    li {
+                        height: 259px;
+                    }
+                }
+
+                .intro_word {
+                    position: static;
+                    width: auto;
+                    height: auto;
+                    top: 0;
+                    left: 0;
+                    background-color: transparent;
+                    transform: translate(0, 0);
+                    border: 1px solid $moon_color;
+                    padding: 20px 30px;
+
+                    h3 {
+                        margin-bottom: 30px;
+                    }
+
+                    margin-bottom: 20px;
+                }
+
+
+            }
+
+            .activity_intro {
+                margin-top: 50px;
+
+                ul {
+                    padding-top: 0px;
+
+                    li {
+                        margin-bottom: 50px;
+
+                        .wrapper {
+                            width: calc(100% - 100px);
+
+                            &>div {
+                                width: 65%;
+                                text-align: left;
+
+                                img {
+                                    width: 100%;
+                                }
+
+                                &>p {
+                                    width: 100%;
+                                }
+
+                                .comment {
+                                    // border: $show_border;
+                                    width: 170px;
+                                    flex-shrink: 0;
+                                    flex-wrap: wrap;
+                                    justify-content: flex-start;
+                                    margin: 0;
+                                    margin-top: 20px;
+                                    line-height: 1;
+
+                                    .star_block,
+                                    p:nth-child(2) {
+                                        margin-bottom: 20px;
+                                    }
+
+                                    a{
+                                        text-decoration: none;
+                            
+                                        &:link {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:visited {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:hover {
+                                            color: $moon_color;
+                                        }
+                            
+                                        &:active {
+                                            color: $moon_color;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #cloud_01 {
+                                display: none;
+
+                            }
+                        }
+                    }
+
+                    li:nth-child(1) {
+                        .wrapper {
+
+                            #bird_01 {
+                                width: 150px;
+                                top: 150px;
+                                right: 30px;
+
+                            }
+
+                            #cloud_02 {
+                                top: 370px;
+                                left: -260px;
+                            }
+                        }
+
+                    }
+
+                    li:nth-child(2) {
+                        .wrapper {
+                            &>div {
+                                margin-left: auto;
+                            }
+                        }
+
+                        #branch_01 {
+                            width: 230px;
+                            left: -86px;
+                            top: 145px;
+                        }
+
+                        #butterfly_01 {
+                            width: 50px;
+                            top: 177px;
+                            left: 88px;
+                        }
+                    }
+
+                    li:nth-child(3) {
+                        margin-bottom: 50px;
+
+                        #branch_02 {
+                            width: 150px;
+                            top: 40px;
+                        }
+                    }
+
+                    li:nth-child(4) {
+                        margin-bottom: 50px;
+
+                        .wrapper {
+                            &>div {
+                                margin-left: auto;
+                            }
+                        }
+
+                        #branch_03 {
+                            width: 150px;
+                            top: 80px;
+                        }
+                    }
+
+                    li:nth-child(5) {
+                        margin-bottom: 200px;
+
+                        .wrapper {
+                            &>div {
+                                #butter_02 {
+                                    width: 50px;
+                                    top: 130px;
+                                    right: -50px;
+                                }
+
+                                #flower_01 {
+                                    width: 100px;
+                                    top: 120px;
+                                    right: -50px;
+                                }
+                            }
+                        }
+
+                        #branch_04 {
+                            width: 150px;
+                            top: -40px;
+                            right: -13px;
+                        }
+
+                        #branch_05 {
+                            width: 150px;
+                            top: -8px;
+                        }
+                    }
+
+                    li:nth-child(6) {
+                        #bear_01 {
+                            width: 270px;
+                        }
+
+                        #branch_06 {
+                            width: 150px;
+                            top: -80px;
+                        }
+
+                        #branch_07 {
+                            display: block;
+                            position: absolute;
+                            width: 150px;
+                            top: -190px;
+                            right: -7px;
+                        }
+
+                        #branch_08 {
+                            display: block;
+                            position: absolute;
+                            width: 150px;
+                            top: -156px;
+                            right: -6px;
+                        }
+
+                    }
+                }
+            }
+
+            .instagram {
+                .wrapper {
+                    width: calc(100% - 100px);
+
+                    .title {
+                        img {
+                            width: 36px;
+                            margin-right: 13px;
+                        }
+
+                        h3 {
+                            font-size: 24px;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            width: 49%;
+
+                            img {
+                                margin-bottom: 10px;
+                                width: 100%;
+                            }
+                        }
+
+                        li:nth-child(1),
+                        li:nth-child(3) {
+
+                            img:nth-child(2),
+                            img:nth-child(3) {
+                                width: 48%;
+                            }
+                        }
+
+                        li:nth-child(2),
+                        li:nth-child(4) {
+
+                            img:nth-child(2),
+                            img:nth-child(1) {
+                                width: 48%;
+                            }
+                        }
+                    }
+                }
+
+                #ig_pop_up {
+                    // display: block;
+
+                    #ig_pop_up_content {
+                        flex-direction: column;
+
+                        width: calc(100% - 100px);
+
+                        #ig_pop_up_left {
+                            width: 100%;
+
+                            img {
+                                max-width: calc(100% - 40px);
+                                margin-top: 20px;
+                            }
+
+                            p {
+                                line-height: 40px;
+                            }
+                        }
+
+                        #ig_pop_up_right {
+                            width: 100%;
+
+                            #ig_author {
+                                #ig_author_img {
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+            }
+            
 
         }
     }

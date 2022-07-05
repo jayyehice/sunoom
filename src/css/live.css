@@ -6,6 +6,7 @@
   color: #0C1244;
 }
 .live #bgCanvas {
+  width: 0%;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +30,7 @@
   transform: translateX(-50%);
 }
 .live main .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .live main .wrapper .breadcrumb {
@@ -663,7 +664,7 @@
   color: #F5F0DD;
 }
 .live_moon main .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .live_moon main .wrapper .breadcrumb {
@@ -1273,7 +1274,7 @@
 }
 
 main .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 main .wrapper .breadcrumb {

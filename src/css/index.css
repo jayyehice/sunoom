@@ -6,6 +6,7 @@
   font-family: "Times New Roman", "Noto Sans TC", sans-serif;
 }
 .index #bgCanvas {
+  width: 0%;
   position: absolute;
   top: 0;
   left: 0;
@@ -107,7 +108,7 @@
   display: none;
 }
 .index main .category .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index main .category .wrapper > h3 {
@@ -422,7 +423,7 @@
   padding-bottom: 30px;
 }
 .index main .instagram .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index main .instagram .wrapper .fa-brands {
@@ -510,7 +511,7 @@
   margin-bottom: 50px;
 }
 .index main .traffic .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index main .traffic .wrapper > h3 {
@@ -636,7 +637,7 @@
   display: none;
 }
 .index_moon main .category .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index_moon main .category .wrapper > h3 {
@@ -920,7 +921,7 @@
   padding-bottom: 250px;
 }
 .index_moon main .instagram .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index_moon main .instagram .wrapper .igicon {
@@ -966,7 +967,7 @@
   background-color: #000;
 }
 .index_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
-  max-width: 100%;
+  max-width: 80%;
   display: block;
   margin: 0 auto;
   margin-top: 100px;
@@ -1003,7 +1004,7 @@
   text-align: center;
 }
 .index_moon main .traffic .wrapper {
-  width: 1180px;
+  width: calc(100% - 100px);
   margin: 0 auto;
 }
 .index_moon main .traffic .wrapper > h3 {
@@ -1132,7 +1133,7 @@
   }
   .index main .category .wrapper .FoodSea .foodSeaText {
     width: calc(100% - 60px);
-    height: 390px;
+    height: 396px;
     top: unset;
     right: 30px;
     margin-top: 90px;
@@ -1198,7 +1199,7 @@
   }
   .index main .category .wrapper .LiveLand .LiveLandText {
     width: calc(100% - 60px);
-    height: 410px;
+    height: 422px;
     top: unset;
     left: 30px;
     margin-top: 300px;
@@ -1274,6 +1275,26 @@
     position: relative;
     left: 5%;
     bottom: 2%;
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content {
+    flex-direction: column;
+    width: calc(100% - 100px);
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left {
+    width: 100%;
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left img {
+    max-width: calc(100% - 120px);
+    margin-top: 20px;
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_left p {
+    line-height: 40px;
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right {
+    width: 100%;
+  }
+  .index main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
+    width: 40px;
   }
   .index main .traffic .wrapper {
     width: 100%;
