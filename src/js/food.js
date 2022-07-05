@@ -89,8 +89,15 @@ $(document).ready(function(){
 
             // 餐廳一預訂(燈箱點擊事件)
                 $(".booknow").click(function(e){
+
+                    //停止a標籤的預設行為(跳到別頁)
                     e.preventDefault();
                     // console.log($(e.target.closest('section')).find('h3').text());
+
+                    //停止事件冒泡
+                    $("#bookingBox1").click(function(e){
+                        e.stopPropagation();
+                    })
                     
                     //燈箱店家圖片和店名替換
                     $("#bookingBox1").find('img').attr('src', $(e.target.closest('section')).find('img').attr('src'));
@@ -99,14 +106,14 @@ $(document).ready(function(){
                     //燈箱開啟時的深色背景
                     $("#bookingBox1").fadeIn();
                     $("#bookingBox1").css("display","block")
-                    $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
+                    $(".bookingBoxDrop").css("display","block").css({"background-color" : "rgba(0,0,0,0.8)"} , 300);
                 })
 
             //點擊 X 或 其他地方 關閉 餐廳一燈箱
                 $(".bookingBoxClose , .bookingBoxDrop" ).click(function(bookingBoxClose){
                     $("#bookingBox1").fadeOut();
                     //燈箱開啟時的深色背景
-                    $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
+                    $(".bookingBoxDrop").animate({"background-color" : "rgba(0,0,0,0)"} , 300);
                     $(".bookingBoxDrop").css({"display": "none"});
                     $("input").css("border", "#0C1244 1.5px solid");
 
@@ -187,13 +194,13 @@ $(document).ready(function(){
     
                     //Step2 燈箱開啟時的深色背景
                     $("#completeBox1").css("display","block")
-                    $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
+                    $(".bookingBoxDrop").css("display","block").css({"background-color" : "rgba(0,0,0,0.8)"} , 300);
     
                     //點擊 X 或 其他地方 關閉 訂位完成燈箱
                     $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
                         $("#completeBox1").fadeOut();
                         //燈箱開啟時的深色背景
-                        $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
+                        $(".bookingBoxDrop").css({"background-color" : "rgba(0,0,0,0)"} , 300);
                         $(".bookingBoxDrop").css({"display": "none"});
                     });
                     

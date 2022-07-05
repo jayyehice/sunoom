@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 200px;
   right: 200px;
   cursor: pointer;
+  display: none;
 }
 
 .sea {
@@ -2541,7 +2542,7 @@ h1, h2, h3, h4, h5, h6, p {
     /* top: -65px; */
     top: 100px;
     width: 100%;
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 3px;
     font-weight: lighter;
     text-transform: uppercase;
