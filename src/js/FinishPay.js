@@ -14,13 +14,13 @@ window.addEventListener('load',function(){
     let vm = new Vue ({
         el:'#app',
         data:{
-            orderlist:[],
-            triplist:[],
-            foodlist:[],
+            orderimg:[],
+            // triplist:[],
+            // foodlist:[],
             startday:'',
             endday:'',
-            trippepoleNumsList:[],
-            foodpepoleNumsList:[],
+            // trippepoleNumsList:[],
+            // foodpepoleNumsList:[],
             totalPrice:'',
         },
         methods: {
@@ -46,14 +46,7 @@ window.addEventListener('load',function(){
             let url = `./php/Finishpay.php?ordernums=${nt}`
             fetch(url)
             .then(response => response.json())
-            .then(text => {
-                this.orderlist = text
-                for(let i = 0; i < this.orderlist.length; i++){
-                    this.triplist = this.orderlist[i][1].split(',');
-                    this.foodlist = this.orderlist[i][2].split(',');
-                }
-                this.totalPrice = '$' + parseInt(this.orderlist[0][4]).toLocaleString('en-US');
-            })
+            .then(text => {this.orderimg = text})
             
         },
         mounted() {
@@ -62,8 +55,8 @@ window.addEventListener('load',function(){
             this.startday = new Date(senDays[0]).toLocaleDateString();
             this.endday = new Date(senDays[2]).toLocaleDateString();
 
-            this.trippepoleNumsList = JSON.parse(localStorage.getItem('trippepoleNumsList'));
-            this.foodpepoleNumsList = JSON.parse(localStorage.getItem('foodpepoleNumsList'));
+            // this.trippepoleNumsList = JSON.parse(localStorage.getItem('trippepoleNumsList'));
+            // this.foodpepoleNumsList = JSON.parse(localStorage.getItem('foodpepoleNumsList'));
         },
     })
 })
