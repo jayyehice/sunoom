@@ -108,6 +108,8 @@ $(document).ready(function(){
                     //燈箱開啟時的深色背景
                     $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
                     $(".bookingBoxDrop").css({"display": "none"});
+                    $("input").css("border", "#0C1244 1.5px solid");
+
 
                     //關閉後初始
                     let number = 1;
@@ -160,8 +162,13 @@ $(document).ready(function(){
                 // let inputValue = $("input").val();
                 if (name == "" || date == "" || time == "" | phone == "") {
                     // input IS empty
-                    // $("input").css("border", "red 1px solid");
-                    alert("no");
+                    for(let i = 0; i < $("input").length ; i++){
+                        console.log($("input")[i]);
+                        if($($("input")[i]).val() == ""){
+                            $($("input")[i]).css("border", "red 1.5px solid");
+                        }
+                    }
+                    // alert("no");
                 } else {
                     // input is NOT empty
                     //判斷body標籤是在日島還是月島
@@ -182,7 +189,7 @@ $(document).ready(function(){
                     $("#completeBox1").css("display","block")
                     $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
     
-                    //點擊 X 或 其他地方 關閉 餐廳一燈箱
+                    //點擊 X 或 其他地方 關閉 訂位完成燈箱
                     $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
                         $("#completeBox1").fadeOut();
                         //燈箱開啟時的深色背景
