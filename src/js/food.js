@@ -103,12 +103,19 @@ $(document).ready(function(){
                 })
 
             //點擊 X 或 其他地方 關閉 餐廳一燈箱
-                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
+                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(bookingBoxClose){
                     $("#bookingBox1").fadeOut();
                     //燈箱開啟時的深色背景
                     $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
                     $(".bookingBoxDrop").css({"display": "none"});
-                    $(".table_number").html("");
+
+                    //關閉後初始
+                    let number = 1;
+                    $(".table_number").html(number);
+                    $("#name").val("");
+                    $("#phone").val("");
+                    $("#time").val("");
+                    $("#date").val("");
                 });
             
 
@@ -141,6 +148,7 @@ $(document).ready(function(){
             plusAndMinus();
 
             //餐廳訂位送出(傳送資料到資料庫)
+            
             $("#confirm").on("click",function(){
                 let shopname = $("#shopname").text();
                 let people = $("#people").text();
@@ -149,33 +157,42 @@ $(document).ready(function(){
                 let time = $("#time").val();
                 let phone = $("#phone").val();
                 let islandid = 1;
-
-                //判斷body標籤是在日島還是月島
-                if($('body')[0].classList.contains('moon')){
-                    islandid = 2;
+                // let inputValue = $("input").val();
+                if (name == "" || date == "" || time == "" | phone == "") {
+                    // input IS empty
+                    // $("input").css("border", "red 1px solid");
+                    alert("no");
+                } else {
+                    // input is NOT empty
+                    //判斷body標籤是在日島還是月島
+                    if($('body')[0].classList.contains('moon')){
+                        islandid = 2;
+                    }
+                    // console.log(shopname, name, phone, people, date, time);
+                    
+                    //傳送資料到資料庫
+                    const url = `./php/foodBooking.php?shopname=${shopname}&people=${people}&name=${name}&date=${date}&time=${time}&phone=${phone}&islandid=${islandid}`;
+                    fetch(url);
+    
+                    //confirm點擊後，換成訂位完成燈箱
+                    $("#bookingBox1").fadeOut(200);
+                    $("#completeBox1").delay(200).fadeIn(800);
+    
+                    //Step2 燈箱開啟時的深色背景
+                    $("#completeBox1").css("display","block")
+                    $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
+    
+                    //點擊 X 或 其他地方 關閉 餐廳一燈箱
+                    $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
+                        $("#completeBox1").fadeOut();
+                        //燈箱開啟時的深色背景
+                        $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
+                        $(".bookingBoxDrop").css({"display": "none"});
+                    });
+                    
                 }
-                // console.log(shopname, name, phone, people, date, time);
-                
-                //傳送資料到資料庫
-                const url = `./php/foodBooking.php?shopname=${shopname}&people=${people}&name=${name}&date=${date}&time=${time}&phone=${phone}&islandid=${islandid}`;
-                fetch(url);
 
-                //confirm點擊後，換成訂位完成燈箱
-                $("#bookingBox1").fadeOut(200);
-                $("#completeBox1").delay(200).fadeIn(800);
 
-                //Step2 燈箱開啟時的深色背景
-                $("#completeBox1").css("display","block")
-                $(".bookingBoxDrop").css("display","block").animate({"opacity" : "0.5"} , 300);
-
-                //點擊 X 或 其他地方 關閉 餐廳一燈箱
-                $(".bookingBoxClose , .bookingBoxDrop" ).click(function(){
-                    $("#completeBox1").fadeOut();
-                    //燈箱開啟時的深色背景
-                    $(".bookingBoxDrop").animate({"opacity" : "0"} , 300);
-                    $(".bookingBoxDrop").css({"display": "none"});
-                    $(".table_number").html("");
-                });
             });
             
         },
