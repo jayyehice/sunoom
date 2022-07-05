@@ -90,25 +90,35 @@ function updatePercentage() {
 // gsap.to('.draw01', {duration: 1, width: '65px'});
 
 
-//button animation
-var animateButton = function(e) {
+// button animation
+// var animateButton = function(e) {
 
-  e.preventDefault;
-  //reset animation
-  e.target.classList.remove('animate');
+//   e.preventDefault;
+//   //reset animation
+//   e.target.classList.remove('animate');
+//       // e.target.mousemove.remove('animate');
+
   
-  e.target.classList.add('animate');
-  setTimeout(function(){
-    e.target.classList.remove('animate');
-  },1000);
-};
+//   e.target.classList.add('animate');
+//   setTimeout(function(){
+//     e.target.classList.remove('animate');
+//   },700);
+// };
 
-var bubblyButtons = document.getElementsByClassName("viewButton");
+// var bubblyButtons = document.getElementsByClassName("bubbly-button");
 
-for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
-  // setTimeout("location.href='./food.html'",1000);
-}
+// //   for (var i = 0; i < bubblyButtons.length; i++) {
+// //     bubblyButtons[i].addEventListener('click', animateButton, false);
+  
+// // }
+// $(".bubbly-button").click(function(){
+//   // alert("tt");
+//   setTimeout("location.href='./food.html'",1000); // 3秒後跳轉頁面
+// });
+// for (var i = 0; i < bubblyButtons.length; i++) {
+//   bubblyButtons[i].addEventListener('click', animateButton, false);
+// }
+
 
 
 
