@@ -2343,7 +2343,7 @@
     // 星空
     #bgCanvas {
         width: 100%;
-        height: 100%;
+        // height: 100%;
         opacity: 1;
         position:absolute;
         top: 0;
@@ -2464,7 +2464,7 @@
         position: sticky;
         top: 0px;
         display: flex;
-        background-color: $sun_color;
+        background-color: transparent;
         z-index: 4;
         .daysbutton{
             display: inline-block;
@@ -3458,7 +3458,7 @@
     }
 
     #readyToPay{
-        background-color: $sun_color;
+        background-color: transparent;
         color: $moon_color;
         display: none;
         select{

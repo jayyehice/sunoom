@@ -2590,7 +2590,6 @@
 }
 .tripChoose_moon #bgCanvas {
   width: 100%;
-  height: 100%;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -2735,7 +2734,7 @@
   position: sticky;
   top: 0px;
   display: flex;
-  background-color: #0C1244;
+  background-color: transparent;
   z-index: 4;
 }
 .tripChoose_moon .datePickerBox .daysbutton {
@@ -3682,7 +3681,7 @@
   border: 1px solid #0C1244;
 }
 .tripChoose_moon #readyToPay {
-  background-color: #0C1244;
+  background-color: transparent;
   color: #F5F0DD;
   display: none;
 }
