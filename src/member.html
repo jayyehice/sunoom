@@ -43,14 +43,14 @@
                 <img class="memberPic" :src="photo" alt="大頭貼">
                 <br>
 
-                <label for="file-upload" class="custom-file-upload">
-                    更換照片
-                </label>
-                <input id="file-upload" class="memberFile" type="file"/>
+                <form class="memberForm" method="POST" action="./php/member_update_data.php">
+                    <!-- <label for="file-upload" class="custom-file-upload">
+                        更換照片
+                    </label>
+                    <input id="file-upload" class="memberFile" type="file" @change="imgChange" name="memberImg"/> -->
 
                 <!-- <input class="memberFile" type="file" name="" id=""> -->
 
-                <form class="memberForm" method="POST" action="./php/member.php">
 
                     <ul>
                         <li>
@@ -78,8 +78,9 @@
                         </li>
 
                         <li>
-
-                            <input type="submit" class="btn sure" value="確認變更">
+                            <input type="text" :value="id" name="id" style="display: none;">
+                            <input type="submit" class="btn sure" value="確認變更" @click="submit_b">
+                            <input type="submit" style="display: none;" id="submit_btn">
                         </li>
                     </ul>
 
@@ -168,29 +169,29 @@
                             <td class="">
                                 <h6>潛水(日)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$11,994</span>
                                 <br>
                                 <h6>巨石陣(日)</h6>
                                 
-                                2<img src="./img/member/member_people.png" alt="">
+                                2<img src="./img/common/member/default.png" alt="">
                                 <span>$3,998</span>
                             </td>
                             <td class="">
                                 <h6>BBQ(日)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$3,000</span>
                                 <br>
                                 <h6>漢堡(月)</h6>
                                 
-                                4<img src="./img/member/member_people.png" alt="">
+                                4<img src="./img/common/member/default.png" alt="">
                                 <span>$1,200</span>
                             </td>
                             <td class="">
                                 <h6>帳篷露營(月)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$11,994</span>
                             </td>
                         </tr>

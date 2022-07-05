@@ -19,6 +19,23 @@ $(document).ready(function(){
                 
                 window.location.href = './new-login.html';
             },
+            imgChange(e){
+                // console.log('object');
+                let new_img = '';
+                let reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0]);
+                reader.addEventListener("load", function(){
+                    $('.memberPic').attr('src',this.result);
+                });
+                
+            },
+            submit_b(e){
+                let r = confirm('確認修改');
+                if(r){
+                    sessionStorage.setItem('phone', this.phone);
+                    $('#submit_btn')[0].click();
+                }
+            }
         },
         mounted() {
             if(sessionStorage.getItem('account')){
@@ -26,8 +43,15 @@ $(document).ready(function(){
                 this.id = sessionStorage.getItem('id');
                 this.last_name = sessionStorage.getItem('last_name');
                 this.first_name = sessionStorage.getItem('first_name');
-                this.photo = sessionStorage.getItem('photo');
-                this.phone = sessionStorage.getItem('phone');
+
+                let url = `./php/member_data.php?id=${this.id}`;
+                fetch(url)
+                    .then(resp => resp.json())
+                    .then(text => {
+                        console.log(text);
+                        this.photo = text[0][10];
+                        this.phone = text[0][3];
+                    })
             }else{
                 alert('請重新登入');
                 window.location.href = './new-login.html';

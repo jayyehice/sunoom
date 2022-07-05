@@ -56,9 +56,11 @@
                 <form method="post" class="form2">
                     <h1 style="text-align: center;color:#0c1244 ;margin-bottom: 25px;text-transform: uppercase;letter-spacing: 5px;">login</h1>
                     <p :class="error">{{hint}}</p>
-                    <input id="b1" type="text" name="a" placeholder="帳號"  @keyup.enter="submit" v-model="account">
+                    <input id="b1" type="text" name="a" placeholder="信箱"  @keyup.enter="submit" v-model="account">
                     <input id="b2" type="password" name="b" placeholder="密碼" @keyup.enter="submit" v-model="password">
                     <button type="submit" class="btn" @click="submit">登錄</button>
+                    <a id="forgotPwd" href="./forgotPwd.html">忘記密碼</a>
+                    
                 </form>
             </div>
         </div>

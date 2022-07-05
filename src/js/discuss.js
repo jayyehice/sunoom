@@ -276,6 +276,7 @@ window.addEventListener("load", function(){
             //上傳圖片，顯示縮圖
             $('#upload_img').change(function(){
                 // console.log($(this).prev().find('img')[0]);
+                // console.log(this);
                 //預覽圖
                 let reader = new FileReader();
                 reader.readAsDataURL(this.files[0]);
