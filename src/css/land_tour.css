@@ -377,16 +377,7 @@
 .land_tour main .activity_intro ul li .wrapper > div .comment a {
   text-decoration: none;
 }
-.land_tour main .activity_intro ul li .wrapper > div .comment a:link {
-  color: #0C1244;
-}
 .land_tour main .activity_intro ul li .wrapper > div .comment a:visited {
-  color: #0C1244;
-}
-.land_tour main .activity_intro ul li .wrapper > div .comment a:hover {
-  color: #0C1244;
-}
-.land_tour main .activity_intro ul li .wrapper > div .comment a:active {
   color: #0C1244;
 }
 .land_tour main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
@@ -942,16 +933,7 @@
 .land_tour_moon main .activity_intro ul li .wrapper > div .comment a {
   text-decoration: none;
 }
-.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:link {
-  color: #F5F0DD;
-}
 .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:visited {
-  color: #F5F0DD;
-}
-.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:hover {
-  color: #F5F0DD;
-}
-.land_tour_moon main .activity_intro ul li .wrapper > div .comment a:active {
   color: #F5F0DD;
 }
 .land_tour_moon main .activity_intro ul li:nth-child(1) .wrapper #bird_01 {
@@ -1252,17 +1234,9 @@
   }
   .land_tour main .activity_intro ul li .wrapper > div .comment a {
     text-decoration: none;
-  }
-  .land_tour main .activity_intro ul li .wrapper > div .comment a:link {
     color: #0C1244;
   }
   .land_tour main .activity_intro ul li .wrapper > div .comment a:visited {
-    color: #0C1244;
-  }
-  .land_tour main .activity_intro ul li .wrapper > div .comment a:hover {
-    color: #0C1244;
-  }
-  .land_tour main .activity_intro ul li .wrapper > div .comment a:active {
     color: #0C1244;
   }
   .land_tour main .activity_intro ul li .wrapper #cloud_01 {
@@ -1503,17 +1477,9 @@
   }
   .land_tour_moon main .activity_intro ul li .wrapper > div .comment a {
     text-decoration: none;
-  }
-  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:link {
-    color: #0C1244;
+    color: #F5F0DD;
   }
   .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:visited {
-    color: #0C1244;
-  }
-  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:hover {
-    color: #0C1244;
-  }
-  .land_tour_moon main .activity_intro ul li .wrapper > div .comment a:active {
     color: #0C1244;
   }
   .land_tour_moon main .activity_intro ul li .wrapper #cloud_01 {

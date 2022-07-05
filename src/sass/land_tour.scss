@@ -491,21 +491,10 @@
                                 a{
                                     text-decoration: none;
                         
-                                    &:link {
-                                        color: $moon_color;
-                                    }
-                        
                                     &:visited {
                                         color: $moon_color;
                                     }
                         
-                                    &:hover {
-                                        color: $moon_color;
-                                    }
-                        
-                                    &:active {
-                                        color: $moon_color;
-                                    }
                                 }
 
 
@@ -1262,21 +1251,11 @@
                                 a{
                                     text-decoration: none;
                         
-                                    &:link {
-                                        color: $moon_color;
-                                    }
                         
                                     &:visited {
                                         color: $moon_color;
                                     }
                         
-                                    &:hover {
-                                        color: $moon_color;
-                                    }
-                        
-                                    &:active {
-                                        color: $moon_color;
-                                    }
                                 }
                             }
                         }
@@ -1553,6 +1532,7 @@
 
 @media screen and (max-width: 575.98px) {
     .land_tour {
+
         main {
             .banner{
 
@@ -1706,22 +1686,12 @@
 
                                     a{
                                         text-decoration: none;
-                            
-                                        &:link {
-                                            color: $moon_color;
-                                        }
+                                        color: $moon_color;
                             
                                         &:visited {
                                             color: $moon_color;
                                         }
                             
-                                        &:hover {
-                                            color: $moon_color;
-                                        }
-                            
-                                        &:active {
-                                            color: $moon_color;
-                                        }
                                     }
                                 }
                             }
@@ -2080,23 +2050,14 @@
                                     }
 
                                     a{
+                                        
                                         text-decoration: none;
-                            
-                                        &:link {
-                                            color: $moon_color;
-                                        }
+                                        color:$sun_color ;
                             
                                         &:visited {
                                             color: $moon_color;
                                         }
                             
-                                        &:hover {
-                                            color: $moon_color;
-                                        }
-                            
-                                        &:active {
-                                            color: $moon_color;
-                                        }
                                     }
                                 }
                             }
