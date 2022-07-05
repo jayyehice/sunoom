@@ -3,7 +3,7 @@
 //連接資料庫
 include("connection.php");
 
-sleep(0.5);
+sleep(1);
 $data =  json_decode(file_get_contents("php://input"), true);
 
 $account = $data["account"];

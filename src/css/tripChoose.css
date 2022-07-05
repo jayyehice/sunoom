@@ -1,3 +1,7 @@
+.header {
+  position: none !important;
+}
+
 .bodyCover {
   height: 100vh;
   width: 100vw;
@@ -250,6 +254,7 @@
   position: sticky;
   top: 0px;
   display: flex;
+  justify-content: center;
   background-color: #F5F0DD;
   z-index: 4;
 }
@@ -333,7 +338,7 @@
   height: 170px;
   position: fixed;
   right: 0;
-  top: 10%;
+  top: 15%;
   font-size: 20px;
   text-align: center;
   z-index: 100;
@@ -2227,6 +2232,9 @@
   border: 2px solid #0C1244;
   margin: 50px auto;
 }
+.tripChoose #readyToPay .readyToPayBigList.imgbgc {
+  background-color: #F5F0DD;
+}
 @media (max-width: 576px) {
   .tripChoose #readyToPay .readyToPayBigList {
     width: 98%;
@@ -2470,6 +2478,12 @@
     font-size: 20px;
     text-align: center;
   }
+}
+.tripChoose #readyToPay .payBlock #greenPrice {
+  display: none;
+}
+.tripChoose #readyToPay .payBlock #greenOrderNums {
+  display: none;
 }
 .tripChoose #readyToPay .payBlock .creditCardBlock {
   margin-top: 50px;
