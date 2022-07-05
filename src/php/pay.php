@@ -2,6 +2,7 @@
 /**
 *    Credit信用卡付款產生訂單範例
 */
+sleep(3);
 $ordernums = $_POST['greenOrderNums'];
 $total = $_POST['greenPrice'];
 // echo $ordernums;

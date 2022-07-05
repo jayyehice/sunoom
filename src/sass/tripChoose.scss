@@ -22,7 +22,9 @@
     }
 };
 
-
+.header{
+    position: none !important;
+}
 .bodyCover{
     height: 100vh;
     width: 100vw;
@@ -215,6 +217,7 @@
         position: sticky;
         top: 0px;
         display: flex;
+        justify-content: center;
         background-color: $sun_color;
         z-index: 4;
         @include mobile(){
@@ -307,7 +310,7 @@
         height: 170px;
         position: fixed;
         right: 0;
-        top: 10%;
+        top: 15%;
         font-size: 20px;
         text-align: center;
         z-index: 100;
@@ -1992,6 +1995,9 @@
             height: auto;
             border:2px solid $moon_color;
             margin: 50px auto;
+            &.imgbgc{
+                background-color: $sun_color;
+            }
             @include mobile{
                 width: 98%;
                 height: 100%

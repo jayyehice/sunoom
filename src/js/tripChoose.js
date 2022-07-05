@@ -1511,26 +1511,7 @@ window.addEventListener('load',function(){
                 // fetch(`./php/pay.php?ordernums=${nt}&total=${this.totalPriceR.slice(1).replace(/,/g,'')}`)
                 this.greenPrice = this.totalPriceR.slice(1).replace(/,/g,'');
                 this.greenOrderNums = nt;
-                html2canvas(document.querySelector("#readyToPay")).then(canvas => {
-                    // console.log("object");
-                    var AVATAR = canvas.toDataURL("image/png , 1");
-                    console.log(AVATAR);
-                    const url = './php/saveimg.php';    
-                        fetch(url, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                img: AVATAR,
-                                ordernums:nt,
-                            })
-                        });
-
-                    // Canvas2Image.saveAsPNG(canvas);
-
-                    // document.body.appendChild(canvas)
-                });
+               
                 fetch(url3,{
                     method:'POST', 
                     headers:{ 'Content-Type': 'application/json' },
@@ -1568,6 +1549,27 @@ window.addEventListener('load',function(){
                         // .then((body) => {console.log(body)})
                     })
                 }
+                readyToPayBigListimg.classList.add('imgbgc');
+                html2canvas(document.querySelector("#readyToPayBigListimg")).then(canvas => {
+                    // console.log("object");
+                    var AVATAR = canvas.toDataURL("image/png , 1");
+                    const url = './php/saveimg.php';    
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                img: AVATAR,
+                                ordernums:nt,
+                            })
+                        });
+
+                    // Canvas2Image.saveAsPNG(canvas);
+
+                    // document.body.appendChild(canvas)
+                });
+                readyToPayBigListimg.classList.remove('imgbgc');
             },
             emailcheck(){
                 if(is.email(payEmail.value)){
@@ -1679,13 +1681,13 @@ window.addEventListener('load',function(){
                             }
                         }
                         $('#addItineraryM').css({
-                            opacity:'0',
+                            opacity:'0.1',
                             cursor:'not-allowed',
                         })
                     }else{
                         alert('請先選擇日期')
                         $('#addItineraryM').css({
-                            opacity:'0',
+                            opacity:'0.1',
                             cursor:'not-allowed',
                         })
                         tripMchoose.value = '-1'
