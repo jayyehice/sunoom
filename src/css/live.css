@@ -2120,6 +2120,9 @@
     border: 1.5px #0C1244 solid;
     background-color: #F5F0DD;
   }
+  .live_moon main .wrapper .villa .villaLeft .villaText .oceanBorder {
+    border: 1.5px solid #0C1244;
+  }
 }
 
 /*# sourceMappingURL=live.css.map */

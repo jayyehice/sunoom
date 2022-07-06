@@ -1503,6 +1503,13 @@
   .index main .traffic .wrapper ul {
     display: unset;
   }
+
+  .index_moon main .category .wrapper .FoodSea .foodSeaText h3 {
+    background-color: #0C1244;
+  }
+  .index_moon main .category .wrapper .LiveLand .LiveLandText h3 {
+    background-color: #0C1244;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
