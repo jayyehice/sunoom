@@ -1,58 +1,56 @@
 <?php
-    //上傳圖片
-    $id = $_POST["id"];
-    $phone = $_POST["phone"];
-    // $image = '';
+    $postType = json_decode(file_get_contents("php://input"), true);
 
-    // print_r($_POST);
+    $id = $postType["id"];
+    $phone = $postType["phone"];
+    // $image = $postType["image"];
+    // echo $phone;
+    // echo $image;
 
-    // //判斷是否上傳成功
-    // if($_FILES["memberImg"]["error"] > 0){
-    //     echo "上傳失敗: 錯誤代碼".$_FILES["memberImg"]["error"];
-    // }else{
+    $avatarBase64Str = $postType["image"];
+    
+    //server根目錄
+    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
+    $img = str_replace(['data:image/png;base64,','data:image/jpeg;base64,'], '', $avatarBase64Str);
+    $img = str_replace(' ', '+', $img);
+    $data = base64_decode($img);
 
-    //     $originFileName = $_FILES["memberImg"]["name"];    //檔案名稱含副檔名
-    //     echo $originFileName;
-    //     $NowTime=date("Y-m-d H:i:s");
-    //     $fileName = strtotime("$NowTime,now").'.'.getExtensionName($originFileName);
+    //圖片名稱
+    $NowTime = date("Y-m-d H:i:s");
+    $timestamp = strtotime($NowTime);
+    $imageName = $timestamp.'.png';
 
-    //     $filePath_Temp = $_FILES["memberImg"]["tmp_name"];   //Server上的暫存檔路徑含檔名 
+    $ServerRoot = dirname(__DIR__);
 
-    //     $ServerRoot = dirname(__DIR__);
-    //     //檔案最終存放位置
-    //     $filePath = $ServerRoot."/img/common/member/".$fileName;
-    //     $image = './img/discuss/article/'.$fileName;
-    //     //將暫存檔搬移到正確位置
-    //     move_uploaded_file($filePath_Temp, $filePath);
+    //server路徑+自己資料夾的名稱
+    $path = $ServerRoot."/img/common/member/";     
+    if (!is_dir($path)){ //判斷目錄是否存在 不存在就建立 並賦予777許可權
+        mkdir($path,0777,true);
+    }
+    //拼成完整路徑
+    $imageSrc = $path.$imageName;  
+    // echo json_encode('./images/userUpload/'.$imageName);
+    $imageSrcforSQL = './img/common/member/'.$imageName;
 
-    // }
-
-    // //取得檔案副檔名
-    // function getExtensionName($filePath){
-    //     $path_parts = pathinfo($filePath);
-    //     return $path_parts["extension"];
-    // }
-
-    // // echo $image;
-
-
+    //寫入檔案，並回傳結果
+    $r = file_put_contents($imageSrc, $data);
 
 
     // // ------------------------ 寫入資料庫 ------------------------
 
     include("connection.php");
 
-    //建立SQL語法
-    $sql = "UPDATE member SET phone = ? WHERE (id = ?);";
+    // //建立SQL語法
+    $sql = "UPDATE member SET phone = ?, photo = ? WHERE (id = ?);";
 
     
-    //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
+    // //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
     $statement = $pdo->prepare($sql);
     $statement->bindParam(1, $phone);
-    // $statement->bindParam(2, $image);
-    $statement->bindParam(2, $id);
+    $statement->bindParam(2, $imageSrcforSQL);
+    $statement->bindParam(3, $id);
     $statement->execute();
 
-    // 跳轉回discuss.html
-    header("Location:../member.html");
+    // // 跳轉回discuss.html
+    // header("Location:../member.html");
 ?>
