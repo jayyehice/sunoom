@@ -437,29 +437,106 @@
         
                     }
         
-                    .setBook{
-                        border: 1px solid $moon_color;
-                        width: 140px;
-                        height: 50px;
-                        text-align: center;
-                        line-height: 50px;
-                        color: $moon_color;
-                        background-color: $sun_color; 
+                    // .setBook{
+                    //     border: 1px solid $moon_color;
+                    //     width: 140px;
+                    //     height: 50px;
+                    //     text-align: center;
+                    //     line-height: 50px;
+                    //     color: $moon_color;
+                    //     background-color: $sun_color; 
                         
-                        @include mobile{
-                            margin-right: 10px;
-                            cursor: pointer;
-                            color: $sun_color;
-                            border: 1.5px solid $sun_color;
-                            background-color: $moon_color;
-                        }
+                    //     @include mobile{
+                    //         margin-right: 10px;
+                    //         cursor: pointer;
+                    //         color: $sun_color;
+                    //         border: 1.5px solid $sun_color;
+                    //         background-color: $moon_color;
+                    //     }
 
         
+                    //     &:hover{
+                    //         cursor: pointer;
+                    //         color: $sun_color;
+                    //         border: 1.5px solid $sun_color;
+                    //         background-color: $moon_color;
+                    //     }
+                    // }
+
+                    .setBook{
+                        position: relative;
+                        background: $moon_color;
+                        color: $moon_color;
+                        text-decoration: none;
+                        font-size: 16px;
+                        letter-spacing: 3px;
+                        font-weight: 400;
+                        transition: 0.5s;
+                        padding: 10px 30px;
+                        box-sizing: border-box;
+                        text-align: center;
+                
+                        // 外框特效
                         &:hover{
-                            cursor: pointer;
-                            color: $sun_color;
-                            border: 1.5px solid $sun_color;
-                            background-color: $moon_color;
+                            letter-spacing: 6px;
+                            background: var(--clr);
+                            color: var(--clr);
+                            box-shadow: 0 0 35px var(--clr);
+                        }
+                
+                        //上面空洞左移
+                        &:hover  i::before{
+                            width: 20px;
+                            left: 20%;
+                        }
+                
+                        //下面空洞右移
+                        &:hover  i::after{
+                            width: 20px;
+                            left: 80%;
+                        }
+                
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            inset: 2px;
+                            background: $sun_color;
+                        }
+                
+                        span{
+                            position: relative;
+                            z-index: 1;
+                        }
+                        
+                        i{
+                            position: absolute;
+                            inset: 0;
+                            display: block;
+                    
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 80%;
+                                width: 10px;
+                                height: 4px;
+                                background: $sun_color;
+                                transform:translateX(-50%) skew(325deg);
+                                transition: 0.5s;  
+                            }
+                    
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 20%;
+                                width: 10px;
+                                height: 4px;
+                                background: $sun_color;
+                                transform:translateX(-50%) skew(325deg);
+                                transition: 0.5s;  
+                            }
+                    
                         }
                     }
 
@@ -995,29 +1072,106 @@
         
                     }
         
-                    .setBook{
-                        border: 1px solid $moon_color;
-                        width: 140px;
-                        height: 50px;
-                        text-align: center;
-                        line-height: 50px;
-                        color: $moon_color;
-                        background-color: $sun_color; 
+                    // .setBook{
+                    //     border: 1px solid $moon_color;
+                    //     width: 140px;
+                    //     height: 50px;
+                    //     text-align: center;
+                    //     line-height: 50px;
+                    //     color: $moon_color;
+                    //     background-color: $sun_color; 
                         
-                        @include mobile{
-                            margin-right: 10px;
-                            cursor: pointer;
-                            color: $sun_color;
-                            border: 1.5px solid $sun_color;
-                            background-color: $moon_color;
-                        }
+                    //     @include mobile{
+                    //         margin-right: 10px;
+                    //         cursor: pointer;
+                    //         color: $sun_color;
+                    //         border: 1.5px solid $sun_color;
+                    //         background-color: $moon_color;
+                    //     }
 
         
+                    //     &:hover{
+                    //         cursor: pointer;
+                    //         color: $sun_color;
+                    //         border: 1.5px solid $sun_color;
+                    //         background-color: $moon_color;
+                    //     }
+                    // }
+
+                    .setBook{
+                        position: relative;
+                        background: $moon_color;
+                        color: $moon_color;
+                        text-decoration: none;
+                        font-size: 16px;
+                        letter-spacing: 3px;
+                        font-weight: 400;
+                        transition: 0.5s;
+                        padding: 10px 30px;
+                        box-sizing: border-box;
+                        text-align: center;
+                
+                        // 外框特效
                         &:hover{
-                            cursor: pointer;
-                            color: $sun_color;
-                            border: 1.5px solid $sun_color;
-                            background-color: $moon_color;
+                            letter-spacing: 6px;
+                            background: var(--clr);
+                            color: var(--clr);
+                            box-shadow: 0 0 35px var(--clr);
+                        }
+                
+                        //上面空洞左移
+                        &:hover  i::before{
+                            width: 20px;
+                            left: 20%;
+                        }
+                
+                        //下面空洞右移
+                        &:hover  i::after{
+                            width: 20px;
+                            left: 80%;
+                        }
+                
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            inset: 2px;
+                            background: $sun_color;
+                        }
+                
+                        span{
+                            position: relative;
+                            z-index: 1;
+                        }
+                        
+                        i{
+                            position: absolute;
+                            inset: 0;
+                            display: block;
+                    
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 80%;
+                                width: 10px;
+                                height: 4px;
+                                background: $sun_color;
+                                transform:translateX(-50%) skew(325deg);
+                                transition: 0.5s;  
+                            }
+                    
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 20%;
+                                width: 10px;
+                                height: 4px;
+                                background: $sun_color;
+                                transform:translateX(-50%) skew(325deg);
+                                transition: 0.5s;  
+                            }
+                    
                         }
                     }
 

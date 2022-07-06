@@ -2012,14 +2012,21 @@
   display: flex;
 }
 .tripChoose .buttonBlock1 #backToDatePage {
-  display: block;
   width: 140px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  border: none;
   margin-right: 20px;
+  position: relative;
+  background: #0C1244;
+  color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 @media (max-width: 576px) {
   .tripChoose .buttonBlock1 #backToDatePage {
@@ -2030,18 +2037,72 @@
   }
 }
 .tripChoose .buttonBlock1 #backToDatePage:hover {
-  color: #F5F0DD;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose .buttonBlock1 #backToDatePage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose .buttonBlock1 #backToDatePage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose .buttonBlock1 #backToDatePage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.tripChoose .buttonBlock1 #backToDatePage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose .buttonBlock1 #backToDatePage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose .buttonBlock1 #backToDatePage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose .buttonBlock1 #backToDatePage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose .buttonBlock1 #NextPage {
   display: block;
   width: 140px;
   height: 50px;
+  border: none;
+  position: relative;
+  background: #0C1244;
+  color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
   text-align: center;
-  line-height: 50px;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
 }
 @media (max-width: 576px) {
   .tripChoose .buttonBlock1 #NextPage {
@@ -2052,9 +2113,55 @@
   }
 }
 .tripChoose .buttonBlock1 #NextPage:hover {
-  color: #F5F0DD;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose .buttonBlock1 #NextPage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose .buttonBlock1 #NextPage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose .buttonBlock1 #NextPage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.tripChoose .buttonBlock1 #NextPage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose .buttonBlock1 #NextPage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose .buttonBlock1 #NextPage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose .buttonBlock1 #NextPage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose #readyToPay {
   background-color: #F5F0DD;
@@ -2539,11 +2646,19 @@
   display: block;
   width: 140px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  border: none;
   margin-right: 20px;
+  position: relative;
+  background: #0C1244;
+  color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 @media (max-width: 576px) {
   .tripChoose #readyToPay .buttonBlock .backToChoosePage {
@@ -2554,19 +2669,72 @@
   }
 }
 .tripChoose #readyToPay .buttonBlock .backToChoosePage:hover {
-  color: #F5F0DD;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose #readyToPay .buttonBlock .backToChoosePage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose #readyToPay .buttonBlock #FinishPage {
   display: block;
   width: 140px;
   height: 50px;
+  border: none;
+  position: relative;
+  background: #0C1244;
+  color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
   text-align: center;
-  line-height: 50px;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
-  pointer-events: none;
 }
 .tripChoose #readyToPay .buttonBlock #FinishPage.emailcheck {
   pointer-events: auto !important;
@@ -2580,23 +2748,68 @@
   }
 }
 .tripChoose #readyToPay .buttonBlock #FinishPage:hover {
-  color: #F5F0DD;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose #readyToPay .buttonBlock #FinishPage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 
 .tripChoose_moon {
-  background-color: #0C1244;
-  color: #F5F0DD;
+  background-color: #F5F0DD;
+  color: #0C1244;
 }
 .tripChoose_moon #bgCanvas {
-  width: 100%;
-  opacity: 1;
+  width: 0%;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -100;
-  transition: height 1s;
 }
 .tripChoose_moon .dayclick {
   background-color: #F5F0DD !important;
@@ -2662,6 +2875,20 @@
   align-items: center;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .shoppingProcess {
+    width: 90%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    margin-top: 50px;
+  }
+  .tripChoose_moon .shoppingProcess img {
+    display: none;
+  }
+}
 .tripChoose_moon .shoppingProcess img {
   width: 80px;
   height: 24px;
@@ -2678,6 +2905,19 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .shoppingProcess .chooseAdate {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+  }
+  .tripChoose_moon .shoppingProcess .chooseAdate h4 {
+    letter-spacing: 1px;
+    font-size: 16rem !important;
+  }
 }
 .tripChoose_moon .shoppingProcess .chooseAdate h4:last-Child {
   margin-bottom: 20px;
@@ -2696,6 +2936,19 @@
   background-color: #F5F0DD;
   color: #0C1244;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .shoppingProcess .chooseAtrip {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+  }
+  .tripChoose_moon .shoppingProcess .chooseAtrip h4 {
+    letter-spacing: 1px;
+    font-size: 16rem !important;
+  }
+}
 .tripChoose_moon .shoppingProcess .chooseAtrip h4:last-Child {
   margin-bottom: 20px;
 }
@@ -2710,6 +2963,19 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .shoppingProcess .tallyOrder {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+  }
+  .tripChoose_moon .shoppingProcess .tallyOrder h4 {
+    letter-spacing: 1px;
+    font-size: 16rem !important;
+  }
 }
 .tripChoose_moon .shoppingProcess .tallyOrder h4:last-Child {
   margin-bottom: 20px;
@@ -2726,6 +2992,19 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .shoppingProcess .orderComplete {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #F5F0DD;
+    text-align: center;
+  }
+  .tripChoose_moon .shoppingProcess .orderComplete h4 {
+    letter-spacing: 1px;
+    font-size: 16rem !important;
+  }
+}
 .tripChoose_moon .shoppingProcess .orderComplete h4:last-Child {
   margin-bottom: 20px;
 }
@@ -2735,8 +3014,25 @@
   position: sticky;
   top: 0px;
   display: flex;
-  background-color: transparent;
+  justify-content: center;
+  background-color: #0C1244;
   z-index: 4;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .datePickerBox {
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+.tripChoose_moon .datePickerBox .datePickerBoxLeftM {
+  display: none;
+  line-height: 160px;
+  font-size: 24px;
+}
+.tripChoose_moon .datePickerBox .datePickerBoxRightM {
+  display: none;
+  line-height: 160px;
+  font-size: 24px;
 }
 .tripChoose_moon .datePickerBox .daysbutton {
   display: inline-block;
@@ -2802,7 +3098,7 @@
   height: 170px;
   position: fixed;
   right: 0;
-  top: 10%;
+  top: 15%;
   font-size: 20px;
   text-align: center;
   z-index: 100;
@@ -2831,6 +3127,11 @@
   display: none;
   z-index: 100;
   overflow-y: auto;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .BigList {
+    right: 14%;
+  }
 }
 .tripChoose_moon .BigList span {
   font-weight: bolder;
@@ -2963,6 +3264,14 @@
   border-top-right-radius: 22px;
   position: relative;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock {
+    width: 90%;
+    height: 670px;
+    border: 2px solid #F5F0DD;
+    margin: 50px auto;
+  }
+}
 .tripChoose_moon .tripChooseBlock::before {
   content: "";
   pointer-events: none;
@@ -2974,7 +3283,6 @@
   left: 0;
   z-index: 2;
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s;
 }
 .tripChoose_moon .tripChooseBlock.divCover::before {
@@ -2994,14 +3302,6 @@
   right: 10%;
   top: 25%;
 }
-.tripChoose_moon .tripChooseBlock .itineraryTitle select {
-  position: absolute;
-  left: 10%;
-  top: 25%;
-  height: 35px;
-  border-radius: 22px;
-  text-align: center;
-}
 .tripChoose_moon .tripChooseBlock .morningItineraryA {
   display: flex;
   justify-content: space-around;
@@ -3009,8 +3309,24 @@
   border-top: 2px solid #F5F0DD;
   padding: 15px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningTime {
   width: 120px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningTime {
+    display: none;
+  }
 }
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA {
   border: 1px solid #F5F0DD;
@@ -3019,12 +3335,45 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
+.tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
   margin: 22px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA #morningImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+  }
 }
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB {
   margin: 5px auto;
@@ -3035,6 +3384,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA select {
   width: 180px;
   height: 38px;
@@ -3042,6 +3398,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA #tripPriceA {
   border: 1px solid #F5F0DD;
@@ -3051,8 +3416,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB .optionBlockA #tripPriceA {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB #itineraryText {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA .morningBlockA .morningBlockB #itineraryText {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .morningItineraryA #addItineraryM {
   width: 35px;
@@ -3060,6 +3443,12 @@
   opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .morningItineraryA #addItineraryM {
+    margin-top: 50px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .noonItinerary {
   display: flex;
@@ -3071,6 +3460,22 @@
 .tripChoose_moon .tripChooseBlock .noonItinerary img {
   width: 120px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary img {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .tripChooseBlock .noonItinerary .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA {
   border: 1px solid #F5F0DD;
   display: flex;
@@ -3078,12 +3483,46 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
+.tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
   margin: 22px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA #noonImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+  }
 }
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB {
   margin: 5px auto;
@@ -3094,6 +3533,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB select {
   width: 180px;
   height: 38px;
@@ -3101,6 +3547,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB #tripPriceB {
   border: 1px solid #F5F0DD;
@@ -3110,8 +3565,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB .optionBlockB #tripPriceB {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB #itineraryTextB {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary .noonBlockA .noonBlockB #itineraryTextB {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .noonItinerary #addItineraryN {
   width: 35px;
@@ -3120,6 +3593,13 @@
   cursor: not-allowed;
   transition: all 1s;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .noonItinerary #addItineraryN {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+  }
+}
 .tripChoose_moon .tripChooseBlock .eveningItinerary {
   display: flex;
   justify-content: space-around;
@@ -3127,8 +3607,24 @@
   border-top: 1px solid #F5F0DD;
   padding: 16px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .tripChoose_moon .tripChooseBlock .eveningItinerary img {
   width: 120px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary img {
+    display: none;
+  }
 }
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA {
   border: 1px solid #F5F0DD;
@@ -3137,12 +3633,46 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
+.tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
   margin: 22px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA #eveningImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+  }
 }
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB {
   margin: 5px auto;
@@ -3153,6 +3683,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC select {
   width: 180px;
   height: 38px;
@@ -3160,6 +3697,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC #tripPriceC {
   border: 1px solid #F5F0DD;
@@ -3169,14 +3715,39 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB .optionBlockC #tripPriceC {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB #itineraryTextC {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock .eveningItinerary .eveningBlockA .eveningBlockB #itineraryTextC {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .tripChooseBlock #addItineraryE {
   width: 35px;
   height: 35px;
   opacity: 0;
   transition: all 1s;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .tripChooseBlock #addItineraryE {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+  }
 }
 .tripChoose_moon .foodChooseBlock {
   width: 1000px;
@@ -3186,6 +3757,14 @@
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
   position: relative;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock {
+    width: 90%;
+    height: 660px;
+    border: 2px solid #F5F0DD;
+    margin: 50px auto;
+  }
 }
 .tripChoose_moon .foodChooseBlock::before {
   content: "";
@@ -3225,8 +3804,24 @@
   border-top: 2px solid #F5F0DD;
   padding: 15px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .foodChooseBlock .morningFood .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .tripChoose_moon .foodChooseBlock .morningFood img {
   width: 120px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood img {
+    display: none;
+  }
 }
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodTitle {
   text-align: center;
@@ -3238,12 +3833,46 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
+.tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
   margin: 22px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA #morningFoodImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+  }
 }
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB {
   margin: 5px auto;
@@ -3255,6 +3884,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA select {
   width: 180px;
   height: 38px;
@@ -3262,6 +3898,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA #foodPriceA {
   border: 1px solid #F5F0DD;
@@ -3271,8 +3916,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB .foodOptionBlockA #foodPriceA {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB #foodTextA {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood .morningFoodA .morningFoodB #foodTextA {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .foodChooseBlock .morningFood #addFoodM {
   width: 35px;
@@ -3280,6 +3943,13 @@
   opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .morningFood #addFoodM {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+  }
 }
 .tripChoose_moon .foodChooseBlock .noonFood {
   display: flex;
@@ -3291,6 +3961,41 @@
 .tripChoose_moon .foodChooseBlock .noonFood img {
   width: 120px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood img {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .foodChooseBlock .noonFood .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.tripChoose_moon .foodChooseBlock .noonFood .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA {
   border: 1px solid #F5F0DD;
   display: flex;
@@ -3298,12 +4003,27 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
   margin: 22px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA #noonFoodImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+  }
 }
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB {
   margin: 5px auto;
@@ -3314,6 +4034,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB select {
   width: 180px;
   height: 38px;
@@ -3321,6 +4048,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB #foodPriceB {
   border: 1px solid #F5F0DD;
@@ -3330,8 +4066,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB .foodoptionBlockB #foodPriceB {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB #foodTextB {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood .noonFoodA .noonFoodB #foodTextB {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .foodChooseBlock .noonFood #addFoodN {
   width: 35px;
@@ -3340,6 +4094,13 @@
   cursor: not-allowed;
   transition: all 1s;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .noonFood #addFoodN {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+  }
+}
 .tripChoose_moon .foodChooseBlock .eveningFood {
   display: flex;
   justify-content: space-around;
@@ -3347,8 +4108,24 @@
   border-top: 1px solid #F5F0DD;
   padding: 16px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood {
+    padding: 20px;
+    padding-top: 0px;
+  }
+  .tripChoose_moon .foodChooseBlock .eveningFood .useForMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .tripChoose_moon .foodChooseBlock .eveningFood img {
   width: 120px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood img {
+    display: none;
+  }
 }
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA {
   border: 1px solid #F5F0DD;
@@ -3357,12 +4134,46 @@
   height: 170px;
   border-radius: 22px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA {
+    width: 100%;
+    border: none;
+    height: 178px;
+  }
+}
+.tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .mobileTimeM {
+  display: none;
+  width: 100px;
+  border: 1px solid #F5F0DD;
+  border-radius: 22px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .mobileTimeM {
+    display: block;
+    height: 30px;
+    margin: 0 7px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA #eveningFoodImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+  }
 }
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB {
   margin: 5px auto;
@@ -3373,6 +4184,13 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC {
+    width: 220px;
+    margin: 8px 0;
+    padding-top: 4px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC select {
   width: 180px;
   height: 38px;
@@ -3380,6 +4198,15 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -20px;
+  }
 }
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC #foodPriceC {
   border: 1px solid #F5F0DD;
@@ -3389,8 +4216,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB .foodoptionBlockC #foodPriceC {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
 .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB #foodTextC {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock .eveningFood .eveningFoodA .eveningFoodB #foodTextC {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .foodChooseBlock #addFoodE {
   width: 35px;
@@ -3398,6 +4243,13 @@
   opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .foodChooseBlock #addFoodE {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+  }
 }
 .tripChoose_moon .stayChooseBlock {
   width: 1000px;
@@ -3407,6 +4259,15 @@
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
   position: relative;
+  box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock {
+    width: 90%;
+    height: 760px;
+    border: 2px solid #F5F0DD;
+    margin: 50px auto;
+  }
 }
 .tripChoose_moon .stayChooseBlock::before {
   content: "";
@@ -3446,12 +4307,42 @@
   border-top: 2px solid #F5F0DD;
   padding: 15px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin {
+    display: inline-block;
+    position: relative;
+    padding: 13px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .cabin .cabinTitle {
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinTitle {
+    text-align: left;
+  }
+  .tripChoose_moon .stayChooseBlock .cabin .cabinTitle h4 {
+    font-size: 16rem;
+    margin-left: 30px;
+    margin-top: 20px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+  .tripChoose_moon .stayChooseBlock .cabin .cabinTitle p {
+    display: none;
+  }
 }
 .tripChoose_moon .stayChooseBlock .cabin #cabinButton {
   width: 20px;
   height: 20px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin #cabinButton {
+    position: absolute;
+    top: 27px;
+    left: 5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA {
   border: 1px solid #F5F0DD;
@@ -3461,12 +4352,29 @@
   border-radius: 22px;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA {
+    width: 100%;
+    border: none;
+    height: 200px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA #cabinImg {
   margin: 24px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA #cabinImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+    margin-top: 30px;
+    padding-left: -5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB {
   margin: 0 auto;
@@ -3477,6 +4385,14 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption {
+    width: 220px;
+    margin: 10px 0;
+    padding-top: 5px;
+    margin-left: -15px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption select {
   width: 180px;
   height: 38px;
@@ -3484,6 +4400,14 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption #cabinPrice {
   border: 1px solid #F5F0DD;
@@ -3493,8 +4417,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB .cabinOption #cabinPrice {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB #cabinText {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin .cabinBlockA .cabinBlockB #cabinText {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .cabin #addcabin {
   width: 35px;
@@ -3503,6 +4445,16 @@
   cursor: not-allowed;
   transition: all 1s;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .cabin #addcabin {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .camping {
   display: flex;
   justify-content: space-around;
@@ -3510,12 +4462,42 @@
   border-top: 1px solid #F5F0DD;
   padding: 15px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping {
+    display: inline-block;
+    position: relative;
+    padding: 13px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .camping .campingTitle {
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingTitle {
+    text-align: left;
+  }
+  .tripChoose_moon .stayChooseBlock .camping .campingTitle h4 {
+    font-size: 16rem;
+    margin-left: 30px;
+    margin-top: 20px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+  .tripChoose_moon .stayChooseBlock .camping .campingTitle p {
+    display: none;
+  }
 }
 .tripChoose_moon .stayChooseBlock .camping #campingButton {
   width: 20px;
   height: 20px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping #campingButton {
+    position: absolute;
+    top: 27px;
+    left: 5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA {
   border: 1px solid #F5F0DD;
@@ -3525,12 +4507,29 @@
   border-radius: 22px;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA {
+    width: 100%;
+    border: none;
+    height: 200px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA #campingImg {
   margin: 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA #campingImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+    margin-top: 30px;
+    padding-left: -5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB {
   margin: 0 auto;
@@ -3541,6 +4540,14 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption {
+    width: 220px;
+    margin: 10px 0;
+    padding-top: 5px;
+    margin-left: -15px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption select {
   width: 180px;
   height: 38px;
@@ -3548,6 +4555,14 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption #campingPrice {
   border: 1px solid #F5F0DD;
@@ -3557,8 +4572,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB .campingOption #campingPrice {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB #campingText {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping .campingBlockA .campingBlockB #campingText {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .camping #addCamping {
   width: 35px;
@@ -3567,6 +4600,16 @@
   cursor: not-allowed;
   transition: all 1s;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .camping #addCamping {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .villa {
   display: flex;
   justify-content: space-around;
@@ -3574,12 +4617,42 @@
   border-top: 1px solid #F5F0DD;
   padding: 16px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa {
+    display: inline-block;
+    position: relative;
+    padding: 13px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .villa .villaTitle {
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaTitle {
+    text-align: left;
+  }
+  .tripChoose_moon .stayChooseBlock .villa .villaTitle h4 {
+    font-size: 16rem;
+    margin-left: 30px;
+    margin-top: 20px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+  .tripChoose_moon .stayChooseBlock .villa .villaTitle p {
+    display: none;
+  }
 }
 .tripChoose_moon .stayChooseBlock .villa #villaButton {
   width: 20px;
   height: 20px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa #villaButton {
+    position: absolute;
+    top: 27px;
+    left: 5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA {
   border: 1px solid #F5F0DD;
@@ -3589,12 +4662,29 @@
   border-radius: 22px;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA {
+    width: 100%;
+    border: none;
+    height: 200px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA #villaImg {
-  margin: 15px;
+  margin: 24px 15px;
   width: 170px;
   height: 120px;
   line-height: 120px;
   border-radius: 21px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA #villaImg {
+    width: 120px;
+    height: 97px;
+    margin: 0;
+    display: block;
+    margin-top: 30px;
+    padding-left: -5px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB {
   margin: 0 auto;
@@ -3605,6 +4695,14 @@
   justify-content: center;
   margin: 10px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption {
+    width: 220px;
+    margin: 10px 0;
+    padding-top: 5px;
+    margin-left: -12px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption select {
   width: 180px;
   height: 38px;
@@ -3612,6 +4710,14 @@
   background-color: #0C1244;
   margin-right: 20px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption select {
+    width: 102px;
+    margin-right: 0px;
+    height: 32px;
+    font-size: 12px;
+  }
 }
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption #villaPrice {
   border: 1px solid #F5F0DD;
@@ -3621,8 +4727,26 @@
   text-align: center;
   line-height: 35px;
 }
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB .villaOption #villaPrice {
+    line-height: 30px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
 .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB #villaText {
   width: 440px;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock .villa .villaBlockA .villaBlockB #villaText {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 .tripChoose_moon .stayChooseBlock #addVilla {
   width: 35px;
@@ -3630,6 +4754,16 @@
   opacity: 0;
   cursor: not-allowed;
   transition: all 1s;
+}
+@media (max-width: 576px) {
+  .tripChoose_moon .stayChooseBlock #addVilla {
+    margin-top: 50px;
+    margin-left: -20px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+  }
 }
 .tripChoose_moon .buttonBlock1 {
   width: 300px;
@@ -3682,7 +4816,7 @@
   border: 1px solid #0C1244;
 }
 .tripChoose_moon #readyToPay {
-  background-color: transparent;
+  background-color: #0C1244;
   color: #F5F0DD;
   display: none;
 }
@@ -3858,6 +4992,9 @@
   border: 2px solid #F5F0DD;
   margin: 50px auto;
 }
+.tripChoose_moon #readyToPay .readyToPayBigList.imgbgc {
+  background-color: #0C1244;
+}
 @media (max-width: 576px) {
   .tripChoose_moon #readyToPay .readyToPayBigList {
     width: 98%;
@@ -3975,7 +5112,7 @@
   color: #FFBF44;
   font-size: 20px;
 }
-.tripChoose_moon #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice #readyToPayCouponPrice {
+.tripChoose_moon #readyToPay .readyToPayBigList .readyToPayTotalBlock .readyToPayTotalPrice #couponPriceR {
   color: #FF4444;
 }
 .tripChoose_moon #readyToPay .payBlock {
@@ -4102,6 +5239,12 @@
     text-align: center;
   }
 }
+.tripChoose_moon #readyToPay .payBlock #greenPrice {
+  display: none;
+}
+.tripChoose_moon #readyToPay .payBlock #greenOrderNums {
+  display: none;
+}
 .tripChoose_moon #readyToPay .payBlock .creditCardBlock {
   margin-top: 50px;
   border-top: 1px solid #F5F0DD;
@@ -4182,6 +5325,10 @@
   line-height: 50px;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
+  pointer-events: none;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage.emailcheck {
+  pointer-events: auto !important;
 }
 @media (max-width: 576px) {
   .tripChoose_moon #readyToPay .buttonBlock #FinishPage {

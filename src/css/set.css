@@ -295,28 +295,68 @@
   }
 }
 .set main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
-  background-color: #F5F0DD;
-}
-@media (max-width: 576px) {
-  .set main .setMain .setText .setTextBotm .setBook {
-    margin-right: 10px;
-    cursor: pointer;
-    color: #F5F0DD;
-    border: 1.5px solid #F5F0DD;
-    background-color: #0C1244;
-  }
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .set main .setMain .setText .setTextBotm .setBook:hover {
-  cursor: pointer;
-  color: #F5F0DD;
-  border: 1.5px solid #F5F0DD;
-  background-color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.set main .setMain .setText .setTextBotm .setBook:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.set main .setMain .setText .setTextBotm .setBook:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.set main .setMain .setText .setTextBotm .setBook::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.set main .setMain .setText .setTextBotm .setBook span {
+  position: relative;
+  z-index: 1;
+}
+.set main .setMain .setText .setTextBotm .setBook i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.set main .setMain .setText .setTextBotm .setBook i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.set main .setMain .setText .setTextBotm .setBook i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .set main .setMain:last-child {
   margin-bottom: 100px;
@@ -622,28 +662,68 @@
   }
 }
 .set_moon main .setMain .setText .setTextBotm .setBook {
-  border: 1px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
-  background-color: #0C1244;
-}
-@media (max-width: 576px) {
-  .set_moon main .setMain .setText .setTextBotm .setBook {
-    margin-right: 10px;
-    cursor: pointer;
-    color: #0C1244;
-    border: 1.5px solid #0C1244;
-    background-color: #F5F0DD;
-  }
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .set_moon main .setMain .setText .setTextBotm .setBook:hover {
-  cursor: pointer;
-  color: #0C1244;
-  border: 1.5px solid #0C1244;
-  background-color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.set_moon main .setMain .setText .setTextBotm .setBook:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook span {
+  position: relative;
+  z-index: 1;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.set_moon main .setMain .setText .setTextBotm .setBook i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .set_moon main .setMain:last-child {
   margin-bottom: 100px;
