@@ -63,6 +63,7 @@
 .live main .wrapper .logCabin .logCabinRight {
   margin-top: 120px;
   width: 750px;
+  overflow: hidden;
 }
 .live main .wrapper .logCabin .logCabinRight .rightTextArea {
   margin: 0 auto;
@@ -116,20 +117,69 @@
   margin-right: 10px;
 }
 .live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
-  border: 1.5px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #0C1244;
-  color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .live main .wrapper .siteLayout {
   margin: 0 auto;
@@ -348,20 +398,69 @@
   margin-right: 10px;
 }
 .live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
-  border: 1.5px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #0C1244;
-  color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .live main .wrapper .campingSiteLayout {
   margin: 0 auto;
@@ -465,20 +564,69 @@
   margin-right: 10px;
 }
 .live main .wrapper .villa .villaRight .rightTextArea .bookButton {
-  border: 1.5px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live main .wrapper .villa .villaRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #0C1244;
-  color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live main .wrapper .villa .villaRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .live main .wrapper .villaSiteLayout {
   margin: 0 auto;
@@ -670,6 +818,7 @@
 .live_moon main .wrapper {
   width: 1180px;
   margin: 0 auto;
+  color: rgba(12, 18, 68, 0.2);
 }
 .live_moon main .wrapper .breadcrumb {
   margin-top: 20px;
@@ -685,6 +834,7 @@
   width: 202px;
   text-align: center;
   margin: 190px 0 105px 110px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .logCabin .logCabinLeft .logCabinText .forestBorder {
   border: 1px solid #F5F0DD;
@@ -705,6 +855,7 @@
 .live_moon main .wrapper .logCabin .logCabinRight .rightTextArea {
   margin: 0 auto;
   width: 600px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .logCabinText02 {
   width: 600px;
@@ -754,20 +905,73 @@
   margin-right: 10px;
 }
 .live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton {
-  border: 1.5px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #F5F0DD;
-  color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live_moon main .wrapper .logCabin .logCabinRight .bookButton_RWD {
+  color: #F5F0DD;
+  border: #F5F0DD 1.5px solid;
 }
 .live_moon main .wrapper .siteLayout {
   margin: 0 auto;
@@ -911,6 +1115,7 @@
   width: 202px;
   text-align: center;
   margin: 190px 0 80px 110px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .campingTents .campingTentsLeft .campingTentsText .mountainBorder {
   border: 1px solid #F5F0DD;
@@ -939,6 +1144,7 @@
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 10px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .campingTentsText02 h4 {
   text-align: center;
@@ -980,20 +1186,69 @@
   margin-right: 10px;
 }
 .live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton {
-  border: 1.5px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #F5F0DD;
-  color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live_moon main .wrapper .campingTents .campingTentsRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .live_moon main .wrapper .campingSiteLayout {
   margin: 0 auto;
@@ -1018,6 +1273,7 @@
   width: 202px;
   text-align: center;
   margin: 190px 0 74px 110px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .villa .villaLeft .villaText .oceanBorder {
   border: 1px solid #F5F0DD;
@@ -1046,6 +1302,7 @@
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 10px;
+  color: #F5F0DD;
 }
 .live_moon main .wrapper .villa .villaRight .rightTextArea .villaText02 h4 {
   text-align: center;
@@ -1091,20 +1348,69 @@
   margin-right: 10px;
 }
 .live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton {
-  border: 1.5px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
-  margin-left: auto;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  float: right;
 }
 .live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton:hover {
-  cursor: pointer;
-  background-color: #F5F0DD;
-  color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton span {
+  position: relative;
+  z-index: 1;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.live_moon main .wrapper .villa .villaRight .rightTextArea .bookButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .live_moon main .wrapper .villaSiteLayout {
   margin: 0 auto;
@@ -1768,13 +2074,11 @@
     text-align: center;
   }
   .live main .wrapper .villaSiteLayout .bookButton_RWD {
-    border: 1.5px solid #0C1244;
     width: 100%;
     text-align: center;
     display: block;
     text-decoration: none;
     line-height: 50px;
-    color: #0C1244;
     margin: 0 auto;
     margin-top: 20px;
     font-size: 24px;
@@ -1783,6 +2087,37 @@
   .live main .wrapper .villaSiteLayout .bookButton_RWD:hover {
     background-color: #0C1244;
     color: #F5F0DD;
+  }
+
+  .live_moon main .wrapper .siteLayout .bookButton_RWD {
+    color: #F5F0DD;
+    border: 1.5px #F5F0DD solid;
+    background-color: #0C1244;
+  }
+  .live_moon main .wrapper .siteLayout .bookButton_RWD:hover {
+    color: #0C1244;
+    border: 1.5px #0C1244 solid;
+    background-color: #F5F0DD;
+  }
+  .live_moon main .wrapper .bookButton_RWD {
+    color: #F5F0DD;
+    border: 1.5px #F5F0DD solid;
+    background-color: #0C1244;
+  }
+  .live_moon main .wrapper .bookButton_RWD:hover {
+    color: #0C1244;
+    border: 1.5px #0C1244 solid;
+    background-color: #F5F0DD;
+  }
+  .live_moon main .wrapper .villaSiteLayout .bookButton_RWD {
+    color: #F5F0DD;
+    border: 1.5px #F5F0DD solid;
+    background-color: #0C1244;
+  }
+  .live_moon main .wrapper .villaSiteLayout .bookButton_RWD:hover {
+    color: #0C1244;
+    border: 1.5px #0C1244 solid;
+    background-color: #F5F0DD;
   }
 }
 

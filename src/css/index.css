@@ -239,18 +239,68 @@
   letter-spacing: -5px;
 }
 .index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
-  text-decoration: none;
-  border: 1.5px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton span {
+  position: relative;
+  z-index: 1;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.index main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .index main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD {
   border: 1.5px solid #0C1244;
@@ -391,18 +441,68 @@
   letter-spacing: -5px;
 }
 .index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
-  border: 1.5px solid #0C1244;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #0C1244;
   color: #0C1244;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
-  background-color: #0C1244;
-  color: #F5F0DD;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #F5F0DD;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton span {
+  position: relative;
+  z-index: 1;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.index main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #F5F0DD;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .index main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
   border: 1.5px solid #0C1244;
@@ -768,18 +868,68 @@
   letter-spacing: -5px;
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton {
-  border: 1.5px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover {
-  background-color: #F5F0DD;
-  color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton span {
+  position: relative;
+  z-index: 1;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.index_moon main .category .wrapper .FoodSea .foodSeaText .comments_area .viewButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .index_moon main .category .wrapper .FoodSea .foodSeaText .viewButton_RWD {
   border: 1.5px solid #F5F0DD;
@@ -890,18 +1040,68 @@
   letter-spacing: -5px;
 }
 .index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton {
-  border: 1.5px solid #F5F0DD;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  display: block;
-  text-decoration: none;
-  line-height: 50px;
+  position: relative;
+  background: #F5F0DD;
   color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover {
-  background-color: #F5F0DD;
-  color: #0C1244;
+  letter-spacing: 6px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton span {
+  position: relative;
+  z-index: 1;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.index_moon main .category .wrapper .LiveLand .LiveLandText .comments_area .viewButton i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .index_moon main .category .wrapper .LiveLand .LiveLandText .viewButton_RWD {
   border: 1.5px solid #F5F0DD;

@@ -93,6 +93,7 @@
                 .logCabinRight {
                     margin-top: 120px;
                     width: 750px;
+                    overflow: hidden;
 
                     .rightTextArea {
                         // border: 1px solid blue;
@@ -157,21 +158,83 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -447,21 +510,82 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -598,21 +722,82 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -869,6 +1054,7 @@
                         width: 202px;
                         text-align: center;
                         margin: 190px 0 105px 110px;
+                        color: $moon_color;
 
                         .forestBorder {
                             border: 1px solid $moon_color;
@@ -896,6 +1082,7 @@
                         // border: 1px solid blue;
                         margin: 0 auto;
                         width: 600px;
+                        color: $moon_color;
 
                         .logCabinText02 {
                             width: 600px;
@@ -955,23 +1142,88 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
+                    }
+                    .bookButton_RWD{
+                        color: $moon_color;
+                        border: $moon_color 1.5px solid;
                     }
                 }
             }
@@ -1148,6 +1400,8 @@
                         width: 202px;
                         text-align: center;
                         margin: 190px 0 80px 110px;
+                        color: $moon_color;
+
 
                         .mountainBorder {
                             border: 1px solid $moon_color;
@@ -1183,6 +1437,8 @@
                             margin: 0 auto;
                             margin-top: 100px;
                             margin-bottom: 10px;
+                            color: $moon_color;
+
 
                             h4 {
                                 text-align: center;
@@ -1233,21 +1489,82 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -1284,6 +1601,7 @@
                         width: 202px;
                         text-align: center;
                         margin: 190px 0 74px 110px;
+                        color: $moon_color;
 
                         .oceanBorder {
                             border: 1px solid $moon_color;
@@ -1319,6 +1637,8 @@
                             margin: 0 auto;
                             margin-top: 100px;
                             margin-bottom: 10px;
+                            color: $moon_color;
+
 
                             h4 {
                                 text-align: center;
@@ -1376,21 +1696,82 @@
                             }
                         }
 
-                        .bookButton {
-                            border: 1.5px solid $moon_color;
-                            width: 140px;
-                            height: 50px;
-                            text-align: center;
-                            display: block;
-                            text-decoration: none;
-                            line-height: 50px;
+                        .bookButton{
+                            position: relative;
+                            background: $moon_color;
                             color: $moon_color;
-                            margin-left: auto;
-
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $moon_color;
-                                color: $sun_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            float: right;
+                    
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -2235,13 +2616,13 @@
                     }
 
                     .bookButton_RWD {
-                        border: 1.5px solid $moon_color;
+                        // border: 1.5px solid $moon_color;
                         width: 100%;
                         text-align: center;
                         display: block;
                         text-decoration: none;
                         line-height: 50px;
-                        color: $moon_color;
+                        // color: $moon_color;
                         margin: 0 auto;
                         margin-top: 20px;
                         font-size: 24px;
@@ -2256,6 +2637,51 @@
             }
         }
     }
+
+    .live_moon{
+        main{
+            .wrapper{
+                .siteLayout{
+                    .bookButton_RWD{
+                        color: #F5F0DD;
+                        border: 1.5px #F5F0DD solid;
+                        background-color: #0C1244;
+
+                        &:hover{
+                            color: #0C1244;
+                            border: 1.5px #0C1244 solid;
+                            background-color: #F5F0DD;
+                        }
+                    }
+                }
+                .bookButton_RWD{
+                    color: #F5F0DD;
+                    border: 1.5px #F5F0DD solid;
+                    background-color: #0C1244;
+
+                    &:hover{
+                        color: #0C1244;
+                        border: 1.5px #0C1244 solid;
+                        background-color: #F5F0DD;
+                    }
+                }
+                .villaSiteLayout{
+                    .bookButton_RWD{
+                        color: #F5F0DD;
+                        border: 1.5px #F5F0DD solid;
+                        background-color: #0C1244;
+
+                        &:hover{
+                            color: #0C1244;
+                            border: 1.5px #0C1244 solid;
+                            background-color: #F5F0DD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 414px) {
