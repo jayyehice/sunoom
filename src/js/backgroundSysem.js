@@ -39,6 +39,18 @@ window.addEventListener("load",function(){
                         })
                 },500);
             },
+            position(auth){
+                switch(auth){
+                    case '1' :
+                        return 'Manager';
+                        break;
+                    case '10' :
+                        return 'Admin';
+                        break;
+                    default:
+                        return 'Undefined';
+                }
+            },
             
         },
         mounted() {

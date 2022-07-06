@@ -178,6 +178,25 @@
             
             .con-box .form2{
                 margin-right: 35px;
+                #forgotPwd{
+                    color: $moon_color;
+                    text-align: center;
+                    display: block;
+                    margin-top: 20px;
+                    text-shadow: none;
+                    &:link {
+                        color: $moon_color;
+                    }
+                    &:visited {
+                        color: $moon_color;
+                    }
+                    &:hover {
+                        color: $moon_color;
+                    }
+                    &:active {
+                        color: $moon_color;
+                    }
+                }
             }
             
             .con-box.left{

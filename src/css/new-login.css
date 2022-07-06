@@ -143,6 +143,25 @@
 .newLogin main .container .con-box .form2 {
   margin-right: 35px;
 }
+.newLogin main .container .con-box .form2 #forgotPwd {
+  color: #0C1244;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  text-shadow: none;
+}
+.newLogin main .container .con-box .form2 #forgotPwd:link {
+  color: #0C1244;
+}
+.newLogin main .container .con-box .form2 #forgotPwd:visited {
+  color: #0C1244;
+}
+.newLogin main .container .con-box .form2 #forgotPwd:hover {
+  color: #0C1244;
+}
+.newLogin main .container .con-box .form2 #forgotPwd:active {
+  color: #0C1244;
+}
 .newLogin main .container .con-box.left {
   /* border:1px solid red; */
   left: -2%;

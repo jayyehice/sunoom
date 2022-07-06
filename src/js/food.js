@@ -208,6 +208,37 @@ $(document).ready(function(){
 
 
             });
+
+
+            // 泡泡按鈕特效 + 延遲跳轉頁面
+            var animateButton = function(e) {
+
+                e.preventDefault;
+                //reset animation
+                e.target.classList.remove('animate');
+                    // e.target.mousemove.remove('animate');
+            
+                
+                e.target.classList.add('animate');
+                setTimeout(function(){
+                  e.target.classList.remove('animate');
+                },700);
+            };
+              
+            var bubblyButtons = document.getElementsByClassName("bubbly-button");
+              
+            //   for (var i = 0; i < bubblyButtons.length; i++) {
+            //     bubblyButtons[i].addEventListener('click', animateButton, false);
+                
+            // }
+            for (var i = 0; i < bubblyButtons.length; i++) {
+                bubblyButtons[i].addEventListener('click', animateButton, false);
+            }
+
+            $(".bubbly-button").click(function(){
+                // alert("tt");
+                // setTimeout("location.href='orderPage.html'",500) // 3秒後跳轉頁面
+            });   
             
         },
         

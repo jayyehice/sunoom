@@ -160,7 +160,7 @@ Vue.component('discuss',{
                 <ul class="tableList" v-for="(item, index) in list[content][page]">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col-5"><p>{{item[7]}}</p></li>
-                    <li class="col"><p>{{item[3]}}</p></li>
+                    <li class="col"><p>{{item[3].slice(0,5)}}...</p></li>
                     <li class="col-2"><p>{{item[6]}}</p></li>
                     <li class="col"><p>{{item[4]}}</p></li>
                     
