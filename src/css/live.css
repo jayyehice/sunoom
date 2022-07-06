@@ -670,6 +670,7 @@
 .live_moon main .wrapper {
   width: 1180px;
   margin: 0 auto;
+  color: rgba(12, 18, 68, 0.2);
 }
 .live_moon main .wrapper .breadcrumb {
   margin-top: 20px;
@@ -1561,6 +1562,7 @@
   }
   .live main .wrapper .campingSiteLayout .campingsiteLayoutwp .campingLayout_img {
     width: 100%;
+    display: none;
   }
   .live main .wrapper .bookButton_RWD {
     border: 1.5px solid #0C1244;
