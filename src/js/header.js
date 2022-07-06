@@ -116,13 +116,18 @@ $(function(){
 function imgSwitch(){
   let img_tag = document.getElementsByTagName("img");
 
+  // console.log(img_tag);
+
   for(let i=0; i<img_tag.length; i++){
-    
-    if(img_tag[i].getAttribute("src").includes("/sun/")){
-        img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
-    }else if(img_tag[i].getAttribute("src").includes("/moon/")){
-        img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
-    }
+    // console.log(img_tag[i].getAttribute("src"));
+    try{
+      if(img_tag[i].getAttribute("src").includes("/sun/")){
+          img_tag[i].src = img_tag[i].getAttribute("src").replace("sun", "moon");
+      }else if(img_tag[i].getAttribute("src").includes("/moon/")){
+          img_tag[i].src = img_tag[i].getAttribute("src").replace("moon", "sun");
+      }
+
+    }catch(error){}
 
   }
 
