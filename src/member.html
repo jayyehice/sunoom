@@ -35,7 +35,7 @@
 
             <ul class="memberPage">
                 <li><a href="#basicData">會員資料</a></li>
-                <li><a href="#changePwd">密碼修改</a></li>
+                <li><a href="#changePwd" id="changePwda">密碼修改</a></li>
                 <li><a href="#orderCheck">訂單查詢</a></li>
             </ul>
 
@@ -43,14 +43,14 @@
                 <img class="memberPic" :src="photo" alt="大頭貼">
                 <br>
 
-                <label for="file-upload" class="custom-file-upload">
-                    更換照片
-                </label>
-                <input id="file-upload" class="memberFile" type="file"/>
+                <form class="memberForm" method="POST" action="">
+                    <label for="file-upload" class="custom-file-upload">
+                        更換照片
+                    </label>
+                    <input id="file-upload" class="memberFile" type="file" @change="imgChange" name="memberImg"/>
 
                 <!-- <input class="memberFile" type="file" name="" id=""> -->
 
-                <form class="memberForm" method="POST" action="./php/member.php">
 
                     <ul>
                         <li>
@@ -78,8 +78,9 @@
                         </li>
 
                         <li>
-
-                            <input type="submit" class="btn sure" value="確認變更">
+                            <!-- <input type="text" :value="id" name="id" style="display: none;"> -->
+                            <input type="submit" class="btn sure" value="確認變更" @click="submit_b">
+                            <!-- <input type="submit" style="display: none;" id="submit_btn"> -->
                         </li>
                     </ul>
 
@@ -89,24 +90,26 @@
 
             <div id="changePwd" class="memberInner changePwd">
 
-                <form class="pwdForm" method="" action="">
+                <form class="pwdForm" method="post" action="./php/member_new_pwd.php">
               
-                    <label for="">目前密碼</label>
-                    <input type="text" class="pfOpwd" name="">
+                    <label for="">原有密碼</label>
+                    <input type="password" class="pfOpwd" name="current" v-model="current_pwd" @change="pwdInput">
 
                     <br>
                     <label for="">新密碼</label>
-                    <input type="text" class="pfNpwd" name="">
+                    <input type="password" class="pfNpwd" name="new" v-model="new_pwd1" @change="pwdInput">
 
                     <br>
                     <label class="pfSureText" for="">確認密碼</label>
-                    <input type="text" class="pfSure" name="">
+                    <input type="password" class="pfSure" name="" v-model="new_pwd2" @change="pwdInput">
 
                     <br>
-                    <input type="submit" class="btn pfYes" value="確認變更">
+                    
+                    <input type="submit" class="btn pfYes" value="變更" @click="changePwdBtn">
+                    
 
                     <br>
-                    <input type="button" class="btn pfNo" value="取消">
+                    <!-- <input type="button" class="btn pfNo" value="取消"> -->
                 </form>
 
             </div>
@@ -168,29 +171,29 @@
                             <td class="">
                                 <h6>潛水(日)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$11,994</span>
                                 <br>
                                 <h6>巨石陣(日)</h6>
                                 
-                                2<img src="./img/member/member_people.png" alt="">
+                                2<img src="./img/common/member/default.png" alt="">
                                 <span>$3,998</span>
                             </td>
                             <td class="">
                                 <h6>BBQ(日)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$3,000</span>
                                 <br>
                                 <h6>漢堡(月)</h6>
                                 
-                                4<img src="./img/member/member_people.png" alt="">
+                                4<img src="./img/common/member/default.png" alt="">
                                 <span>$1,200</span>
                             </td>
                             <td class="">
                                 <h6>帳篷露營(月)</h6>
                                 
-                                6<img src="./img/member/member_people.png" alt="">
+                                6<img src="./img/common/member/default.png" alt="">
                                 <span>$11,994</span>
                             </td>
                         </tr>

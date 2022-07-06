@@ -143,7 +143,7 @@ Vue.component('shop',{
                     <li class="col"></li>
                 </ul>
                 
-                <ul class="tableList" v-for="(item, index) in list[content][page]">
+                <ul class="tableList" v-for="(item, index) in list[content][page]" v-if="item[2] != '不需選購'">
                     <li class="col"><p>{{item[0]}}</p></li>
                     <li class="col"><p>{{item[2]}}</p></li>
                     <li class="col"><p>{{item[9]}}</p></li>
