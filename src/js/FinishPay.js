@@ -43,7 +43,7 @@ window.addEventListener('load',function(){
             // })
             // .then(response => response.json())
             // .then(text => this.orderList = text)
-            let url = `./php/Finishpay.php?ordernums=${nt}`
+            let url = `./php/FinishPay.php?ordernums=${nt}`
             fetch(url)
             .then(response => response.json())
             .then(text => {this.orderimg = text})
