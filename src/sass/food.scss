@@ -344,26 +344,97 @@ $p : 16px;
                             letter-spacing: 3px;
                             margin-bottom: 15px;
                         }
+
                         a{
                             color: $moon_color;
                             text-decoration: none;
                             letter-spacing: 3px;
                         }
 
+                        // 新版按鈕
                         .booknow{
                             float: right;
                             display: block;
-                            width: 140px;
-                            height: 50px;
+                            margin-top: -35px;
+
+                            position: relative;
+                            bottom: 0;
+                            right: 0;
+                            background: $moon_color;
+                            color: $moon_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
                             text-align: center;
-                            line-height: 50px;
-                            border: 1px solid $moon_color;
-                            margin-top: -50px;
+                    
+                            // 外框特效
                             &:hover{
-                                background-color: $moon_color;
-                                color: $sun_color;
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
+                    
 
                         
                     }
@@ -390,7 +461,7 @@ $p : 16px;
             // 燈箱開啟時的深色背景
             .bookingBoxDrop{
                 position: relative;
-                z-index: 1;
+                z-index: 2;
                 display: none;
                 position: fixed;
                 top: 0px;
@@ -407,14 +478,14 @@ $p : 16px;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50% ,-50%);
-                    z-index: 2;
+                    z-index: 3;
                     width:350px;
                     box-shadow: 1px 10px 30px lighten(#333, 60%);
                     background-color: #F5F0DD;
     
                     .boxInner{
                         position: relative;
-                        z-index: 3;
+                        z-index: 4;
                         width: 300px;
                         margin: 0 auto;
                         padding: 20px 0;
@@ -1109,18 +1180,88 @@ $p : 16px;
                             text-decoration: none;
                             letter-spacing: 3px;
                         }
+
+                        // 新版按鈕
                         .booknow{
                             float: right;
                             display: block;
-                            width: 140px;
-                            height: 50px;
+                            margin-top: -35px;
+
+                            position: relative;
+                            bottom: 0;
+                            right: 0;
+                            background: $moon_color;
+                            color: $moon_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            padding: 10px 30px;
+                            box-sizing: border-box;
                             text-align: center;
-                            line-height: 50px;
-                            border: 1px solid $moon_color;
-                            margin-top: -50px;
+                    
+                            // 外框特效
                             &:hover{
-                                background-color: $moon_color;
-                                color: $sun_color;
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
+                                display: block;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
@@ -1729,18 +1870,103 @@ $p : 16px;
                                 display: inline-block;
                                 margin-top: 0px;
                             }
+                            // 舊版按鈕
+                            // .booknow{
+                            //     float: initial;
+                            //     display: block;
+                            //     width: 50%;
+                            //     height: 60px;
+                            //     text-align: center;
+                            //     line-height: 60px;
+                            //     border: 1px solid $moon_color;
+                            //     margin-top: 0px;
+                            //     &:hover{
+                            //         background-color: $moon_color;
+                            //         color: $sun_color;
+                            //     }
+                            // }
+
+                            // RWD新版按鈕
                             .booknow{
-                                float: initial;
+                                // float: right;
                                 display: block;
-                                width: 50%;
-                                height: 60px;
+                                margin-top: 35px;
+
+                                position: relative;
+                                background: $moon_color;
+                                color: $moon_color;
+                                text-decoration: none;
+                                font-size: 16px;
+                                letter-spacing: 3px;
+                                font-weight: 400;
+                                transition: 0.5s;
+                                // padding: 10px 30px;
+                                box-sizing: border-box;
                                 text-align: center;
-                                line-height: 60px;
-                                border: 1px solid $moon_color;
-                                margin-top: 0px;
+                                width: 140px;
+                                height: 50px;
+                        
+                                // 外框特效
                                 &:hover{
-                                    background-color: $moon_color;
-                                    color: $sun_color;
+                                    letter-spacing: 6px;
+                                    background: var(--clr);
+                                    color: var(--clr);
+                                    box-shadow: 0 0 35px var(--clr);
+                                }
+                        
+                                //上面空洞左移
+                                &:hover  i::before{
+                                    width: 20px;
+                                    left: 20%;
+                                }
+                        
+                                //下面空洞右移
+                                &:hover  i::after{
+                                    width: 20px;
+                                    left: 80%;
+                                }
+                        
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    inset: 2px;
+                                    background: $sun_color;
+                                }
+                        
+                                span{
+                                    position: relative;
+                                    z-index: 1;
+                                }
+                                
+                                i{
+                                    position: absolute;
+                                    inset: 0;
+                                    display: block;
+                            
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 80%;
+                                        width: 10px;
+                                        height: 4px;
+                                        background: $sun_color;
+                                        transform:translateX(-50%) skew(325deg);
+                                        transition: 0.5s;  
+                                    }
+                            
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 20%;
+                                        width: 10px;
+                                        height: 4px;
+                                        background: $sun_color;
+                                        transform:translateX(-50%) skew(325deg);
+                                        transition: 0.5s;  
+                                    }
+                            
                                 }
                             }
                         }
@@ -2243,19 +2469,104 @@ $p : 16px;
                                 display: inline-block;
                                 margin-top: 0px;
                             }
-                            .booknow{
-                                float: initial;
+                            // 舊版按鈕
+                            // .booknow{
+                            //     float: initial;
+                            //     display: block;
+                            //     width: 50%;
+                            //     height: 60px;
+                            //     text-align: center;
+                            //     line-height: 60px;
+                            //     border: 1px solid $moon_color;
+                            //     margin-top: 0px;
+                            //     &:hover{
+                            //         background-color: $moon_color;
+                            //         color: $sun_color;
+                            //     }
+                            // }
+                        }
+
+                        // RWD新版按鈕
+                        .booknow{
+                            // float: right;
+                            display: block;
+                            margin-top: 35px;
+
+                            position: relative;
+                            background: $moon_color;
+                            color: $moon_color;
+                            text-decoration: none;
+                            font-size: 16px;
+                            letter-spacing: 3px;
+                            font-weight: 400;
+                            transition: 0.5s;
+                            // padding: 10px 30px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            width: 140px;
+                            height: 50px;
+                    
+                            // 外框特效
+                            &:hover{
+                                letter-spacing: 6px;
+                                background: var(--clr);
+                                color: var(--clr);
+                                box-shadow: 0 0 35px var(--clr);
+                            }
+                    
+                            //上面空洞左移
+                            &:hover  i::before{
+                                width: 20px;
+                                left: 20%;
+                            }
+                    
+                            //下面空洞右移
+                            &:hover  i::after{
+                                width: 20px;
+                                left: 80%;
+                            }
+                    
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                inset: 2px;
+                                background: $sun_color;
+                            }
+                    
+                            span{
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            i{
+                                position: absolute;
+                                inset: 0;
                                 display: block;
-                                width: 50%;
-                                height: 60px;
-                                text-align: center;
-                                line-height: 60px;
-                                border: 1px solid $moon_color;
-                                margin-top: 0px;
-                                &:hover{
-                                    background-color: $moon_color;
-                                    color: $sun_color;
+                        
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 80%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
                                 }
+                        
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 20%;
+                                    width: 10px;
+                                    height: 4px;
+                                    background: $sun_color;
+                                    transform:translateX(-50%) skew(325deg);
+                                    transition: 0.5s;  
+                                }
+                        
                             }
                         }
                     }
