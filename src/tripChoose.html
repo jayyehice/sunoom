@@ -388,8 +388,8 @@
                 </div>
                 <!-- 下一頁按鈕 -->
             <div class="buttonBlock1">
-                <button id="backToDatePage" @click="back()">回上一頁</button>
-                <button id="NextPage" @click="close();total()">前往結帳</button>
+                <button id="backToDatePage" @click="back()" style="--clr:#ffbf44"><span>回上一頁</span><i></i></button>
+                <button id="NextPage" @click="close();total()" style="--clr:#ffbf44"><span>前往結帳</span><i></i></button>
             </div>
         </section>
         <article id="readyToPay">
@@ -650,9 +650,9 @@
                         <p>*訂購完成可通過email登入會員查看訂單及一次性密碼。</p>
                     </div>
                     <div class="buttonBlock">
-                        <button class="backToChoosePage" type="button" @click="backToChoosePage">回上一頁</button>
-                        <button @click="SendOrder" id="FinishPage" type="button">前往付款</button>
-                        <button id="FinishPagesubmit" type="submit" style="display:none;">前往付款</button>
+                        <button class="backToChoosePage" type="button" @click="backToChoosePage" style="--clr:#ffbf44"><span>回上一頁</span><i></i></button>
+                        <button @click="SendOrder" id="FinishPage" type="button" style="--clr:#ffbf44"><span>前往付款</span><i></i></button>
+                        <button id="FinishPagesubmit" type="submit" style="display:none;"></button>
                     </div>
                     <!-- <input id="FinishPage" type="button" value="完成結帳"> -->
                 </form>
