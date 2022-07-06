@@ -124,128 +124,128 @@
     }
 
     //訂購明細表
-    .bigList{
-        width: 1000px;
-        height: auto;
-        border:2px solid $moon_color;
-        margin: 50px auto;
-        @include mobile{
-            width: 98%;
-            height: 100%;
-        }
-        .ListTitle{
-            margin: 0px auto;
-            width: 980px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: $moon_color;
-            color: $sun_color;
-            font-size: 20px;
-            @include mobile{
-                width: 98%;
-                height: 100%;
+    // .bigList{
+    //     width: 1000px;
+    //     height: auto;
+    //     border:2px solid $moon_color;
+    //     margin: 50px auto;
+    //     @include mobile{
+    //         width: 98%;
+    //         height: 100%;
+    //     }
+    //     .ListTitle{
+    //         margin: 0px auto;
+    //         width: 980px;
+    //         height: 50px;
+    //         line-height: 50px;
+    //         text-align: center;
+    //         background-color: $moon_color;
+    //         color: $sun_color;
+    //         font-size: 20px;
+    //         @include mobile{
+    //             width: 98%;
+    //             height: 100%;
 
-            }
-        }
-        .ListDate{
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            margin: 20px;
-            @include mobile{
-                margin: 10px;
-            }
+    //         }
+    //     }
+    //     .ListDate{
+    //         display: flex;
+    //         list-style: none;
+    //         justify-content: center;
+    //         margin: 20px;
+    //         @include mobile{
+    //             margin: 10px;
+    //         }
 
-            li{
-                margin-right: 20px;
-                font-size: 16px;
-                font-weight: bolder;
-                display: flex;
-                align-items: center;
-                @include mobile{
-                    margin-right: 7px;
+    //         li{
+    //             margin-right: 20px;
+    //             font-size: 16px;
+    //             font-weight: bolder;
+    //             display: flex;
+    //             align-items: center;
+    //             @include mobile{
+    //                 margin-right: 7px;
     
-                }
-            }
-            li:first-Child{
-                font-weight: bolder;
-                font-size: 16px;
-            }
+    //             }
+    //         }
+    //         li:first-Child{
+    //             font-weight: bolder;
+    //             font-size: 16px;
+    //         }
             
-        }
-        table{
-            width: 99%;
-            height: auto;
-            margin: 0 auto;
-            align-content: center;
-            border: 1px solid $moon_color;
-            th{
-                height: 50px;
-                line-height: 50px;
-                font-weight: bolder;
-                border: 1px solid $moon_color;
-            }
-            td{
-                border: 1px solid $moon_color;
-                height: 100px; 
-                vertical-align:middle;
-            }
-            td:first-child{
-                text-align: center;
-                vertical-align:middle;
-            }
-            ul{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                // grid-auto-rows: 33px;
-                // display: flex;
-                // text-align: center;
-                // justify-content: space-between;
-                @include mobile{
-                    display: block;
-                }
-                li{
-                    margin: 7px;
-                    text-align: center;
-                }
-                li:last-child{
-                    color: #FFBF44;
-                    border-left: none;
-                }
-            }
-        }
-        .totalBlock{
-            margin:  40px 20px;
-            display: flex;
-            justify-content:flex-end;
-            align-content: center;
-            height: 150px;
-            .totalTitle{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                font-size: 19.5px;
-            }
-            .totalPrice{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                line-height: 12px;
-                text-align: center;
-                span{
-                    color: #FFBF44;
-                    font-size: 20px;
-                }
-                #couponPrice{
-                    color: #FF4444;
-                }
-            }
+    //     }
+    //     table{
+    //         width: 99%;
+    //         height: auto;
+    //         margin: 0 auto;
+    //         align-content: center;
+    //         border: 1px solid $moon_color;
+    //         th{
+    //             height: 50px;
+    //             line-height: 50px;
+    //             font-weight: bolder;
+    //             border: 1px solid $moon_color;
+    //         }
+    //         td{
+    //             border: 1px solid $moon_color;
+    //             height: 100px; 
+    //             vertical-align:middle;
+    //         }
+    //         td:first-child{
+    //             text-align: center;
+    //             vertical-align:middle;
+    //         }
+    //         ul{
+    //             display: grid;
+    //             grid-template-columns: 1fr 1fr 1fr;
+    //             // grid-auto-rows: 33px;
+    //             // display: flex;
+    //             // text-align: center;
+    //             // justify-content: space-between;
+    //             @include mobile{
+    //                 display: block;
+    //             }
+    //             li{
+    //                 margin: 7px;
+    //                 text-align: center;
+    //             }
+    //             li:last-child{
+    //                 color: #FFBF44;
+    //                 border-left: none;
+    //             }
+    //         }
+    //     }
+    //     .totalBlock{
+    //         margin:  40px 20px;
+    //         display: flex;
+    //         justify-content:flex-end;
+    //         align-content: center;
+    //         height: 150px;
+    //         .totalTitle{
+    //             font-weight: bolder;
+    //             display: flex;
+    //             flex-direction: column;
+    //             justify-content: space-between;
+    //             font-size: 19.5px;
+    //         }
+    //         .totalPrice{
+    //             font-weight: bolder;
+    //             display: flex;
+    //             flex-direction: column;
+    //             justify-content: space-around;
+    //             line-height: 12px;
+    //             text-align: center;
+    //             span{
+    //                 color: #FFBF44;
+    //                 font-size: 20px;
+    //             }
+    //             #couponPrice{
+    //                 color: #FF4444;
+    //             }
+    //         }
         
-        }
-    }
+    //     }
+    // }
     .backToIndexAndCheck{
         width: 330px;
         height: 50px;
@@ -256,21 +256,162 @@
             width: 140px;
             height: 50px;
             background-color: $sun_color;
-            border: 1px solid $moon_color;
+            // border: 1px solid $moon_color;
+            border: none;
             margin-right: 50px;
+            position: relative;
+            background: $moon_color;
+            color: $moon_color;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            transition: 0.5s;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            // 外框特效
             &:hover{
-                background-color: $moon_color;
-                color: $sun_color;
+                letter-spacing: 3px;
+                background: var(--clr);
+                color: var(--clr);
+                box-shadow: 0 0 35px var(--clr);
+            }
+
+            //上面空洞左移
+            &:hover  i::before{
+                width: 20px;
+                left: 20%;
+            }
+
+            //下面空洞右移
+            &:hover  i::after{
+                width: 20px;
+                left: 80%;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 2px;
+                background: $sun_color;
+            }
+
+            span{
+                position: relative;
+                z-index: 1;
+            }
+
+            i{
+                position: absolute;
+                inset: 0;
+                display: block;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 80%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 20%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
             }
         }
         .backToMember{
             width: 140px;
             height: 50px;
             background-color: $sun_color;
-            border: 1px solid $moon_color;
+            // border: 1px solid $moon_color;
+            border: none;
+            // margin-right: 50px;
+            position: relative;
+            background: $moon_color;
+            color: $moon_color;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            transition: 0.5s;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            // 外框特效
             &:hover{
-                background-color: $moon_color;
-                color: $sun_color;
+                letter-spacing: 3px;
+                background: var(--clr);
+                color: var(--clr);
+                box-shadow: 0 0 35px var(--clr);
+            }
+
+            //上面空洞左移
+            &:hover  i::before{
+                width: 20px;
+                left: 20%;
+            }
+
+            //下面空洞右移
+            &:hover  i::after{
+                width: 20px;
+                left: 80%;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 2px;
+                background: $sun_color;
+            }
+
+            span{
+                position: relative;
+                z-index: 1;
+            }
+
+            i{
+                position: absolute;
+                inset: 0;
+                display: block;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 80%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 20%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
             }
         }
     }
@@ -283,14 +424,13 @@
 
     // 星空
     #bgCanvas {
-        width: 100%;
-        // height: 100%;
-        opacity: 1;
+        width: 0%;
+        // height: 0%;
+        opacity: 0;
         position:absolute;
         top: 0;
         left: 0;
         z-index: -100;
-        transition: height 1s;
     }
 
     select{
@@ -394,128 +534,128 @@
     }
 
     //訂購明細表
-    .bigList{
-        width: 1000px;
-        height: auto;
-        border:2px solid $moon_color;
-        margin: 50px auto;
-        @include mobile{
-            width: 98%;
-            height: 100%;
-        }
-        .ListTitle{
-            margin: 0px auto;
-            width: 980px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: $moon_color;
-            color: $sun_color;
-            font-size: 20px;
-            @include mobile{
-                width: 98%;
-                height: 100%;
+    // .bigList{
+    //     width: 1000px;
+    //     height: auto;
+    //     border:2px solid $moon_color;
+    //     margin: 50px auto;
+    //     @include mobile{
+    //         width: 98%;
+    //         height: 100%;
+    //     }
+    //     .ListTitle{
+    //         margin: 0px auto;
+    //         width: 980px;
+    //         height: 50px;
+    //         line-height: 50px;
+    //         text-align: center;
+    //         background-color: $moon_color;
+    //         color: $sun_color;
+    //         font-size: 20px;
+    //         @include mobile{
+    //             width: 98%;
+    //             height: 100%;
 
-            }
-        }
-        .ListDate{
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            margin: 20px;
-            @include mobile{
-                margin: 10px;
-            }
+    //         }
+    //     }
+    //     .ListDate{
+    //         display: flex;
+    //         list-style: none;
+    //         justify-content: center;
+    //         margin: 20px;
+    //         @include mobile{
+    //             margin: 10px;
+    //         }
 
-            li{
-                margin-right: 20px;
-                font-size: 16px;
-                font-weight: bolder;
-                display: flex;
-                align-items: center;
-                @include mobile{
-                    margin-right: 7px;
+    //         li{
+    //             margin-right: 20px;
+    //             font-size: 16px;
+    //             font-weight: bolder;
+    //             display: flex;
+    //             align-items: center;
+    //             @include mobile{
+    //                 margin-right: 7px;
     
-                }
-            }
-            li:first-Child{
-                font-weight: bolder;
-                font-size: 16px;
-            }
+    //             }
+    //         }
+    //         li:first-Child{
+    //             font-weight: bolder;
+    //             font-size: 16px;
+    //         }
             
-        }
-        table{
-            width: 99%;
-            height: auto;
-            margin: 0 auto;
-            align-content: center;
-            border: 1px solid $moon_color;
-            th{
-                height: 50px;
-                line-height: 50px;
-                font-weight: bolder;
-                border: 1px solid $moon_color;
-            }
-            td{
-                border: 1px solid $moon_color;
-                height: 100px; 
-                vertical-align:middle;
-            }
-            td:first-child{
-                text-align: center;
-                vertical-align:middle;
-            }
-            ul{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                // grid-auto-rows: 33px;
-                // display: flex;
-                // text-align: center;
-                // justify-content: space-between;
-                @include mobile{
-                    display: block;
-                }
-                li{
-                    margin: 7px;
-                    text-align: center;
-                }
-                li:last-child{
-                    color: #FFBF44;
-                    border-left: none;
-                }
-            }
-        }
-        .totalBlock{
-            margin:  40px 20px;
-            display: flex;
-            justify-content:flex-end;
-            align-content: center;
-            height: 150px;
-            .totalTitle{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                font-size: 19.5px;
-            }
-            .totalPrice{
-                font-weight: bolder;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                line-height: 12px;
-                text-align: center;
-                span{
-                    color: #FFBF44;
-                    font-size: 20px;
-                }
-                #couponPrice{
-                    color: #FF4444;
-                }
-            }
+    //     }
+    //     table{
+    //         width: 99%;
+    //         height: auto;
+    //         margin: 0 auto;
+    //         align-content: center;
+    //         border: 1px solid $moon_color;
+    //         th{
+    //             height: 50px;
+    //             line-height: 50px;
+    //             font-weight: bolder;
+    //             border: 1px solid $moon_color;
+    //         }
+    //         td{
+    //             border: 1px solid $moon_color;
+    //             height: 100px; 
+    //             vertical-align:middle;
+    //         }
+    //         td:first-child{
+    //             text-align: center;
+    //             vertical-align:middle;
+    //         }
+    //         ul{
+    //             display: grid;
+    //             grid-template-columns: 1fr 1fr 1fr;
+    //             // grid-auto-rows: 33px;
+    //             // display: flex;
+    //             // text-align: center;
+    //             // justify-content: space-between;
+    //             @include mobile{
+    //                 display: block;
+    //             }
+    //             li{
+    //                 margin: 7px;
+    //                 text-align: center;
+    //             }
+    //             li:last-child{
+    //                 color: #FFBF44;
+    //                 border-left: none;
+    //             }
+    //         }
+    //     }
+    //     .totalBlock{
+    //         margin:  40px 20px;
+    //         display: flex;
+    //         justify-content:flex-end;
+    //         align-content: center;
+    //         height: 150px;
+    //         .totalTitle{
+    //             font-weight: bolder;
+    //             display: flex;
+    //             flex-direction: column;
+    //             justify-content: space-between;
+    //             font-size: 19.5px;
+    //         }
+    //         .totalPrice{
+    //             font-weight: bolder;
+    //             display: flex;
+    //             flex-direction: column;
+    //             justify-content: space-around;
+    //             line-height: 12px;
+    //             text-align: center;
+    //             span{
+    //                 color: #FFBF44;
+    //                 font-size: 20px;
+    //             }
+    //             #couponPrice{
+    //                 color: #FF4444;
+    //             }
+    //         }
         
-        }
-    }
+    //     }
+    // }
     .backToIndexAndCheck{
         width: 330px;
         height: 50px;
@@ -526,21 +666,162 @@
             width: 140px;
             height: 50px;
             background-color: $sun_color;
-            border: 1px solid $moon_color;
+            // border: 1px solid $moon_color;
+            border: none;
             margin-right: 50px;
+            position: relative;
+            background: $moon_color;
+            color: $moon_color;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            transition: 0.5s;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            // 外框特效
             &:hover{
-                background-color: $moon_color;
-                color: $sun_color;
+                letter-spacing: 3px;
+                background: var(--clr);
+                color: var(--clr);
+                box-shadow: 0 0 35px var(--clr);
+            }
+
+            //上面空洞左移
+            &:hover  i::before{
+                width: 20px;
+                left: 20%;
+            }
+
+            //下面空洞右移
+            &:hover  i::after{
+                width: 20px;
+                left: 80%;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 2px;
+                background: $sun_color;
+            }
+
+            span{
+                position: relative;
+                z-index: 1;
+            }
+
+            i{
+                position: absolute;
+                inset: 0;
+                display: block;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 80%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 20%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
             }
         }
         .backToMember{
             width: 140px;
             height: 50px;
             background-color: $sun_color;
-            border: 1px solid $moon_color;
+            // border: 1px solid $moon_color;
+            border: none;
+            // margin-right: 50px;
+            position: relative;
+            background: $moon_color;
+            color: $moon_color;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            transition: 0.5s;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            // 外框特效
             &:hover{
-                background-color: $moon_color;
-                color: $sun_color;
+                letter-spacing: 3px;
+                background: var(--clr);
+                color: var(--clr);
+                box-shadow: 0 0 35px var(--clr);
+            }
+
+            //上面空洞左移
+            &:hover  i::before{
+                width: 20px;
+                left: 20%;
+            }
+
+            //下面空洞右移
+            &:hover  i::after{
+                width: 20px;
+                left: 80%;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 2px;
+                background: $sun_color;
+            }
+
+            span{
+                position: relative;
+                z-index: 1;
+            }
+
+            i{
+                position: absolute;
+                inset: 0;
+                display: block;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 80%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 20%;
+                    width: 10px;
+                    height: 4px;
+                    background: $sun_color;
+                    transform:translateX(-50%) skew(325deg);
+                    transition: 0.5s;  
+                }
+
             }
         }
     }
