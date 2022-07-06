@@ -1953,5 +1953,29 @@
 
         }
     }
+
+    .index_moon{
+        main{
+            .category{
+                .wrapper{
+                    .FoodSea{
+                        .foodSeaText{
+                            h3{
+                                background-color: $moon_color;
+                            }
+                        }
+                    }
+
+                    .LiveLand{
+                        .LiveLandText{
+                            h3{
+                                background-color: $moon_color;
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }      
 }
 

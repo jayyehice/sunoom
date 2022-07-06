@@ -2640,6 +2640,7 @@
     }
 
     .live_moon{
+        
         main{
             .wrapper{
                 .siteLayout{
@@ -2679,6 +2680,15 @@
                         }
                     }
                 }
+                .villa{
+                    .villaLeft{
+                        .villaText{
+                            .oceanBorder{
+                                border: 1.5px solid $moon_color;
+                            }
+                        }
+                    }
+                }   
             }
         }
     }
