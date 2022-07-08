@@ -16,6 +16,7 @@ window.addEventListener("load", function(){
             memberid:0,
             memberphoto:'./img/common/member/default_big.jpg',
             membername:'訪客',
+            add_comment:false,
         },
         methods: {
             render_li(e){
@@ -131,6 +132,7 @@ window.addEventListener("load", function(){
                 this.memberid = sessionStorage.getItem('id');
                 this.memberphoto = sessionStorage.getItem('photo');
                 this.membername = sessionStorage.getItem('first_name');
+                this.add_comment = true;
             }else{
                 this.memberid = 0;
                 this.memberphoto = './img/common/member/default_big.jpg';

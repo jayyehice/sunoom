@@ -265,7 +265,7 @@
                 <div class="task_container" id="article_comment">
                     <p class="title1">評論:</p>
     
-                    <div class="task_add_block">
+                    <div class="task_add_block" v-show="add_comment">
                         <input type="text" class="task_name" placeholder="有想到什麼嗎?快來分享您的心得吧~">
                         <button type="button" class="task_add" id="task_add" @click="add_new_comment">新增評論</button>
                     </div>
