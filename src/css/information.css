@@ -82,9 +82,12 @@
   position: relative;
 }
 .information main .map .wrapper .sunMap .allmap {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .information main .map .wrapper .sunMap .bbq {
   z-index: 1;
@@ -240,8 +243,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .information main .map .wrapper .sunMap .iconBox .fa-circle-xmark {
@@ -276,9 +277,12 @@
   position: relative;
 }
 .information main .map .wrapper .moonMap .allmap {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   display: none;
 }
 .information main .map .wrapper .moonMap .m_juice {
@@ -424,8 +428,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .information main .map .wrapper .moonMap .iconBox .fa-circle-xmark {
@@ -543,7 +545,8 @@
 .information main .island_intro .wrapper .origin .triangle_img .triangle_left {
   width: 92px;
   height: 370px;
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -551,7 +554,8 @@
 .information main .island_intro .wrapper .origin .triangle_img .triangle_right {
   width: 92px;
   height: 370px;
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -565,12 +569,14 @@
 .information main .island_intro .wrapper .origin .triangle_img .triangle_up {
   width: 180px;
   height: 180px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .information main .island_intro .wrapper .origin .triangle_img .triangle_down {
   width: 180px;
   height: 180px;
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+          clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 .information main .island_intro .wrapper .origin > h5 {
   width: 70%;
@@ -878,9 +884,12 @@
   display: none;
 }
 .information_moon main .map .wrapper .sunMap .allmap {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .information_moon main .map .wrapper .sunMap .bbq {
   z-index: 1;
@@ -1036,8 +1045,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .information_moon main .map .wrapper .sunMap .iconBox .fa-circle-xmark {
@@ -1072,9 +1079,12 @@
   position: relative;
 }
 .information_moon main .map .wrapper .moonMap .allmap {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   display: inline-block;
 }
 .information_moon main .map .wrapper .moonMap .m_juice {
@@ -1220,8 +1230,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(106, 117, 153, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .information_moon main .map .wrapper .moonMap .iconBox .fa-circle-xmark {
@@ -1339,7 +1347,8 @@
 .information_moon main .island_intro .wrapper .origin .triangle_img .triangle_left {
   width: 92px;
   height: 370px;
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1347,7 +1356,8 @@
 .information_moon main .island_intro .wrapper .origin .triangle_img .triangle_right {
   width: 92px;
   height: 370px;
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1361,12 +1371,14 @@
 .information_moon main .island_intro .wrapper .origin .triangle_img .triangle_up {
   width: 180px;
   height: 180px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .information_moon main .island_intro .wrapper .origin .triangle_img .triangle_down {
   width: 180px;
   height: 180px;
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+          clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 .information_moon main .island_intro .wrapper .origin > h5 {
   width: 70%;
@@ -1731,6 +1743,17 @@
   }
 }
 /* 地圖燈箱動畫 */
+@-webkit-keyframes scale1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes scale1 {
   0% {
     transform: scale(1);
@@ -1749,6 +1772,4 @@
   right: 200px;
   cursor: pointer;
   display: none;
-}
-
-/*# sourceMappingURL=information.css.map */
+}/*# sourceMappingURL=information.css.map */

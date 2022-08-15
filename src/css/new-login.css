@@ -93,6 +93,12 @@
   width: 70%;
   margin-left: 15%;
 }
+.newLogin main .container input::-moz-placeholder {
+  color: rgb(160, 160, 160);
+}
+.newLogin main .container input:-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
 .newLogin main .container input::placeholder {
   color: rgb(160, 160, 160);
 }
@@ -101,6 +107,12 @@
   outline: none;
   border-bottom: 1px solid rgba(158, 162, 29, 0.5019607843);
   transition: 0.5s;
+}
+.newLogin main .container input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.newLogin main .container input:focus:-ms-input-placeholder {
+  opacity: 0;
 }
 .newLogin main .container input:focus::placeholder {
   opacity: 0;
@@ -295,6 +307,12 @@
   outline: none;
   cursor: pointer;
 }
+.newLogin_moon main .container input::-moz-placeholder {
+  color: rgb(160, 160, 160);
+}
+.newLogin_moon main .container input:-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
 .newLogin_moon main .container input::placeholder {
   color: rgb(160, 160, 160);
 }
@@ -303,6 +321,12 @@
   outline: none;
   border-bottom: 1px solid rgba(158, 162, 29, 0.5019607843);
   transition: 0.5s;
+}
+.newLogin_moon main .container input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.newLogin_moon main .container input:focus:-ms-input-placeholder {
+  opacity: 0;
 }
 .newLogin_moon main .container input:focus::placeholder {
   opacity: 0;
@@ -397,6 +421,4 @@
 .newLogin_moon main .container .form-box button:hover {
   background-color: #d3c961;
   color: #fff;
-}
-
-/*# sourceMappingURL=new-login.css.map */
+}/*# sourceMappingURL=new-login.css.map */

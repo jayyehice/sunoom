@@ -7,6 +7,7 @@ footer .moon_icon {
   display: none;
 }
 footer section {
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
@@ -215,6 +216,7 @@ moon 底下
   display: block;
 }
 .moon footer section {
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
@@ -441,7 +443,6 @@ moon 底下
     justify-content: space-between;
     margin-top: 15vh;
   }
-
   .moon footer {
     position: static;
   }
@@ -474,6 +475,4 @@ moon 底下
     width: 100%;
     margin-top: 10vh;
   }
-}
-
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */

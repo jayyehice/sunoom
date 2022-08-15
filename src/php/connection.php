@@ -1,11 +1,18 @@
 <?php
 
+    //Localhost 連接 DB
+    $db_host = "localhost";
+    $db_user = "root";
+    $db_pass = "formysql2";
+    $db_select = "sunoom";
+
+
     //AWS DB
     
-    $db_host = "tibame0301.comnfqgxiwqx.us-east-1.rds.amazonaws.com";
-    $db_user = "sunoom";
-    $db_pass = "Tibame!03";
-    $db_select = "sunoom";
+    // $db_host = "tibame0301.comnfqgxiwqx.us-east-1.rds.amazonaws.com";
+    // $db_user = "sunoom";
+    // $db_pass = "Tibame!03";
+    // $db_select = "sunoom";
 
 
     //Tibame DB

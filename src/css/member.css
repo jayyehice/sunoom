@@ -201,12 +201,6 @@
   box-sizing: border-box;
   color: #0C1244;
 }
-@media (max-width: 579px) {
-  .member main .basicData input {
-    width: 330px;
-    height: 60px;
-  }
-}
 .member main .basicData input[type=file] {
   position: fixed;
   right: 100%;
@@ -843,7 +837,7 @@
 }
 @media (max-width: 579px) {
   .member_moon main .basicData input {
-    width: 380px;
+    width: 330px;
     height: 60px;
   }
 }
@@ -1297,6 +1291,4 @@
   background-color: #F5F0DD;
   color: #0C1244;
   cursor: pointer;
-}
-
-/*# sourceMappingURL=member.css.map */
+}/*# sourceMappingURL=member.css.map */

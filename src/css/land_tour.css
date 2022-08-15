@@ -132,7 +132,8 @@
   opacity: 1;
   top: 200px;
   /* visibility: inherit; */
-  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .land_tour main .banner .schedule-wrapper .event-item .chName1 {
   top: 0px;
@@ -168,7 +169,6 @@
   /* visibility: inherit; */
   text-transform: uppercase;
   letter-spacing: 1px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .land_tour main .banner .schedule-wrapper .event-item .discover1 {
@@ -688,7 +688,8 @@
   opacity: 1;
   top: 200px;
   /* visibility: inherit; */
-  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .land_tour_moon main .banner .schedule-wrapper .event-item .chName1 {
   top: 0px;
@@ -724,7 +725,6 @@
   /* visibility: inherit; */
   text-transform: uppercase;
   letter-spacing: 1px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .land_tour_moon main .banner .schedule-wrapper .event-item .discover1 {
@@ -1376,7 +1376,6 @@
   .land_tour main a {
     text-decoration: none;
   }
-
   .land_tour_moon main .breadcrumbs .wrapper {
     width: 100%;
   }
@@ -1616,6 +1615,4 @@
   .land_tour_moon main .instagram #ig_pop_up #ig_pop_up_content #ig_pop_up_right #ig_author #ig_author_img {
     width: 40px;
   }
-}
-
-/*# sourceMappingURL=land_tour.css.map */
+}/*# sourceMappingURL=land_tour.css.map */

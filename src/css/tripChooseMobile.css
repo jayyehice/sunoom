@@ -92,6 +92,20 @@
   border: 1px solid #0C1244;
   position: relative;
 }
+.tripChooseMobile .datePickerBox .datePickerBoxLeftM {
+  font-size: 96px;
+  display: none;
+  position: absolute;
+}
+@media (max-width: 576px) {
+  .tripChooseMobile .datePickerBox .datePickerBoxLeftM {
+    display: block;
+    top: 50%;
+  }
+}
+.tripChooseMobile .datePickerBox .datePickerBoxRightM {
+  display: none;
+}
 .tripChooseMobile .datePickerBox .dateTitle p {
   margin: 20px;
 }
@@ -113,7 +127,8 @@
   align-items: center;
   background-color: #0C1244;
   color: #F5F0DD;
-  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   width: 50px;
   height: 170px;
   position: fixed;
@@ -954,7 +969,8 @@
   align-items: center;
   background-color: #F5F0DD;
   color: #0C1244;
-  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   width: 50px;
   height: 170px;
   position: fixed;
@@ -1687,6 +1703,4 @@
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
   cursor: pointer;
-}
-
-/*# sourceMappingURL=tripChooseMobile.css.map */
+}/*# sourceMappingURL=tripChooseMobile.css.map */

@@ -101,7 +101,8 @@
 }
 .discuss .wrapper main .official_article .banner_1 img {
   height: 100%;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .discuss .wrapper main .official_article .banner_1 .text_1 {
   position: absolute;
@@ -136,7 +137,8 @@
 }
 .discuss .wrapper main .official_article .banner_2 img {
   width: 100%;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .discuss .wrapper main .official_article .banner_2 .photo_1 {
   /* border:1px solid red; */
@@ -561,6 +563,12 @@
   transform: scale(1.01);
   transform-origin: center center;
 }
+.discuss .pop-up-out .task_container .task_add_block .task_name::-moz-placeholder {
+  color: lightgray;
+}
+.discuss .pop-up-out .task_container .task_add_block .task_name:-ms-input-placeholder {
+  color: lightgray;
+}
 .discuss .pop-up-out .task_container .task_add_block .task_name::placeholder {
   color: lightgray;
 }
@@ -711,6 +719,12 @@
   padding: 5px 10px;
   outline: none;
   box-sizing: border-box;
+}
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::-moz-placeholder {
+  color: lightgray;
+}
+.discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update:-ms-input-placeholder {
+  color: lightgray;
 }
 .discuss .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
   color: lightgray;
@@ -989,7 +1003,8 @@
 }
 .discuss_moon .wrapper main .official_article .banner_1 img {
   height: 100%;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .discuss_moon .wrapper main .official_article .banner_1 .text_1 {
   position: absolute;
@@ -1024,7 +1039,8 @@
 }
 .discuss_moon .wrapper main .official_article .banner_2 img {
   width: 100%;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .discuss_moon .wrapper main .official_article .banner_2 .photo_1 {
   /* border:1px solid red; */
@@ -1446,6 +1462,12 @@
   transform: scale(1.01);
   transform-origin: center center;
 }
+.discuss_moon .pop-up-out .task_container .task_add_block .task_name::-moz-placeholder {
+  color: lightgray;
+}
+.discuss_moon .pop-up-out .task_container .task_add_block .task_name:-ms-input-placeholder {
+  color: lightgray;
+}
 .discuss_moon .pop-up-out .task_container .task_add_block .task_name::placeholder {
   color: lightgray;
 }
@@ -1595,6 +1617,12 @@
   padding: 5px 10px;
   outline: none;
   box-sizing: border-box;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::-moz-placeholder {
+  color: lightgray;
+}
+.discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update:-ms-input-placeholder {
+  color: lightgray;
 }
 .discuss_moon .pop-up-out .task_container .task_list_parent .task_list > li > .item_flex > .middle_block .task_name_update::placeholder {
   color: lightgray;
@@ -1771,11 +1799,11 @@
 
 /* RWD 576px以下字型大小 */
 @media screen and (max-width: 575.98px) {
-  .discuss .wrapper {
+  .discuss footer section .wrapper {
     width: 100%;
   }
-  .discuss footer section .wrapper{
-    width:100%;
+  .discuss .wrapper {
+    width: 100%;
   }
   .discuss .wrapper main hr {
     width: 90%;
@@ -1972,7 +2000,6 @@
     width: 140px;
     margin: 0 auto;
   }
-
   .discuss_moon .wrapper {
     width: 100%;
   }
@@ -2169,6 +2196,4 @@
     width: 140px;
     margin: 0 auto;
   }
-}
-
-/*# sourceMappingURL=discuss.css.map */
+}/*# sourceMappingURL=discuss.css.map */

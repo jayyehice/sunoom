@@ -265,7 +265,8 @@
 .allPage .packageTour {
   position: absolute;
   bottom: 0px;
-  clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+  -webkit-clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
+          clip-path: polygon(50% 0%, 100% 81%, 100% 100%, 0 100%, 0 80%);
   background-color: #FFE8BD;
   border-bottom: 50px solid #FFDA91;
   border-left: 50px solid #FFDA91;
@@ -361,6 +362,4 @@
     top: 70%;
     transform: translate(-75%, -70%);
   }
-}
-
-/*# sourceMappingURL=tripIndex.css.map */
+}/*# sourceMappingURL=tripIndex.css.map */

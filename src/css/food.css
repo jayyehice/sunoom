@@ -618,9 +618,12 @@
   border: 1px solid #0C1244;
 }
 .food main .wrapper_bottom .map .foodicon {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .food main .wrapper_bottom .map .juice {
   z-index: 1;
@@ -676,8 +679,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .food main .wrapper_bottom .map .iconBox .close {
@@ -1111,9 +1112,12 @@
   border: 1px solid #F5F0DD;
 }
 .food_moon main .wrapper_bottom .map .foodicon {
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .food_moon main .wrapper_bottom .map .juice {
   top: 425px;
@@ -1165,8 +1169,6 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(245, 240, 221, 0.8);
-  -moz-box-shadow: 0px 0px 5px #444444;
-  -webkit-box-shadow: 0px 0px 5px #444444;
   box-shadow: 0px 0px 5px #444444;
 }
 .food_moon main .wrapper_bottom .map .iconBox .fa-circle-xmark {
@@ -1196,7 +1198,8 @@
   line-height: 50px;
   text-align: center;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   background-color: #F5F0DD;
   color: #0C1244;
   border-radius: 4px;
@@ -1239,11 +1242,13 @@
 }
 .food_moon main .wrapper_bottom .bubbly-button.animate:before {
   display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
+  -webkit-animation: topBubbles ease-in-out 0.75s forwards;
+          animation: topBubbles ease-in-out 0.75s forwards;
 }
 .food_moon main .wrapper_bottom .bubbly-button.animate:after {
   display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
+  -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
+          animation: bottomBubbles ease-in-out 0.75s forwards;
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2217,9 +2222,12 @@
     position: relative;
   }
   .food_moon main .wrapper_bottom .map .foodicon {
-    animation-name: scale1;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scale1;
+            animation-name: scale1;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
   .food_moon main .wrapper_bottom .map .juice {
     top: 180px;
@@ -2278,6 +2286,17 @@
   }
 }
 /* 地圖燈箱動畫 */
+@-webkit-keyframes scale1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes scale1 {
   0% {
     transform: scale(1);
@@ -2289,6 +2308,18 @@
     transform: scale(1);
   }
 }
+@-webkit-keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
 @keyframes topBubbles {
   0% {
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
@@ -2298,6 +2329,18 @@
   }
   100% {
     background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@-webkit-keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
@@ -2362,11 +2405,11 @@
 }
 .bubbly-button.animate:before {
   display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
+  -webkit-animation: topBubbles ease-in-out 0.75s forwards;
+          animation: topBubbles ease-in-out 0.75s forwards;
 }
 .bubbly-button.animate:after {
   display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
-}
-
-/*# sourceMappingURL=food.css.map */
+  -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
+          animation: bottomBubbles ease-in-out 0.75s forwards;
+}/*# sourceMappingURL=food.css.map */

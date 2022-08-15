@@ -20,7 +20,26 @@
 }
 
 .notCheck {
-  animation: notCheck 0.2s;
+  -webkit-animation: notCheck 0.2s;
+          animation: notCheck 0.2s;
+}
+
+@-webkit-keyframes notCheck {
+  0% {
+    transform: translate(2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
 }
 
 @keyframes notCheck {
@@ -252,6 +271,7 @@
 .tripChoose .datePickerBox {
   width: 1280px;
   margin: 0px auto;
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   display: flex;
@@ -334,7 +354,8 @@
   align-items: center;
   background-color: #0C1244;
   color: #F5F0DD;
-  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   width: 50px;
   height: 170px;
   position: fixed;
@@ -431,7 +452,6 @@
 .tripChoose .BigList ul li:first-Child {
   text-align: center;
   width: 150px;
-  overflow: auto;
 }
 .tripChoose .BigList ul li:nth-Child(2) {
   width: 50px;
@@ -2569,7 +2589,8 @@
   background-color: #F5F0DD;
   font-size: 20px;
   text-align: center;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 .tripChoose #readyToPay .payBlock .payWayMobile {
   display: none;
@@ -2800,8 +2821,8 @@
 }
 
 .tripChoose_moon {
-  background-color: #F5F0DD;
-  color: #0C1244;
+  background-color: #0C1244;
+  color: #F5F0DD;
 }
 .tripChoose_moon #bgCanvas {
   width: 0%;
@@ -3011,6 +3032,7 @@
 .tripChoose_moon .datePickerBox {
   width: 1280px;
   margin: 0px auto;
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   display: flex;
@@ -3093,7 +3115,8 @@
   align-items: center;
   background-color: #F5F0DD;
   color: #0C1244;
-  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   width: 50px;
   height: 170px;
   position: fixed;
@@ -4771,14 +4794,21 @@
   display: flex;
 }
 .tripChoose_moon .buttonBlock1 #backToDatePage {
-  display: block;
   width: 140px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  border: none;
   margin-right: 20px;
+  position: relative;
+  background: #F5F0DD;
+  color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 @media (max-width: 576px) {
   .tripChoose_moon .buttonBlock1 #backToDatePage {
@@ -4789,18 +4819,72 @@
   }
 }
 .tripChoose_moon .buttonBlock1 #backToDatePage:hover {
-  color: #0C1244;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose_moon .buttonBlock1 #backToDatePage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose_moon .buttonBlock1 #NextPage {
   display: block;
   width: 140px;
   height: 50px;
+  border: none;
+  position: relative;
+  background: #F5F0DD;
+  color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
   text-align: center;
-  line-height: 50px;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
 }
 @media (max-width: 576px) {
   .tripChoose_moon .buttonBlock1 #NextPage {
@@ -4811,9 +4895,55 @@
   }
 }
 .tripChoose_moon .buttonBlock1 #NextPage:hover {
-  color: #0C1244;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose_moon .buttonBlock1 #NextPage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose_moon .buttonBlock1 #NextPage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose_moon .buttonBlock1 #NextPage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.tripChoose_moon .buttonBlock1 #NextPage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose_moon .buttonBlock1 #NextPage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose_moon .buttonBlock1 #NextPage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose_moon .buttonBlock1 #NextPage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose_moon #readyToPay {
   background-color: #0C1244;
@@ -5221,7 +5351,8 @@
   background-color: #0C1244;
   font-size: 20px;
   text-align: center;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 .tripChoose_moon #readyToPay .payBlock .payWayMobile {
   display: none;
@@ -5298,11 +5429,19 @@
   display: block;
   width: 140px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
+  border: none;
   margin-right: 20px;
+  position: relative;
+  background: #F5F0DD;
+  color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
 }
 @media (max-width: 576px) {
   .tripChoose_moon #readyToPay .buttonBlock .backToChoosePage {
@@ -5313,19 +5452,72 @@
   }
 }
 .tripChoose_moon #readyToPay .buttonBlock .backToChoosePage:hover {
-  color: #0C1244;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose_moon #readyToPay .buttonBlock .backToChoosePage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
 }
 .tripChoose_moon #readyToPay .buttonBlock #FinishPage {
   display: block;
   width: 140px;
   height: 50px;
+  border: none;
+  position: relative;
+  background: #F5F0DD;
+  color: #F5F0DD;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 30px;
+  box-sizing: border-box;
   text-align: center;
-  line-height: 50px;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
-  pointer-events: none;
 }
 .tripChoose_moon #readyToPay .buttonBlock #FinishPage.emailcheck {
   pointer-events: auto !important;
@@ -5339,9 +5531,53 @@
   }
 }
 .tripChoose_moon #readyToPay .buttonBlock #FinishPage:hover {
-  color: #0C1244;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
+  letter-spacing: 3px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
 }
-
-/*# sourceMappingURL=tripChoose.css.map */
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0C1244;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage span {
+  position: relative;
+  z-index: 1;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}
+.tripChoose_moon #readyToPay .buttonBlock #FinishPage i:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #0C1244;
+  transform: translateX(-50%) skew(325deg);
+  transition: 0.5s;
+}/*# sourceMappingURL=tripChoose.css.map */

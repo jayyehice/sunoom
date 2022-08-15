@@ -775,7 +775,8 @@ main .listTitle .pop_up .formBody_04 .content_04 ul li > input {
 }
 main .listTitle .pop_up .formBody_04 .content_04 ul li > p {
   width: 420px;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
   padding: 0 10px;
 }
 main .listTitle .pop_up .formBody_04 .content_04 ul li > textarea {
@@ -956,6 +957,4 @@ main .listTitle .pop_up .formBody_06 .buttonBlock_06 button:hover {
 }
 main .table > :not(:first-child) {
   border-top: 0px solid currentColor;
-}
-
-/*# sourceMappingURL=backgroundSystem.css.map */
+}/*# sourceMappingURL=backgroundSystem.css.map */

@@ -1,5 +1,24 @@
 .notCheck {
-  animation: notCheck 0.2s infinite;
+  -webkit-animation: notCheck 0.2s infinite;
+          animation: notCheck 0.2s infinite;
+}
+
+@-webkit-keyframes notCheck {
+  0% {
+    transform: translate(2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
 }
 
 @keyframes notCheck {
@@ -1340,6 +1359,4 @@
   color: #0C1244;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
-}
-
-/*# sourceMappingURL=orderPage.css.map */
+}/*# sourceMappingURL=orderPage.css.map */

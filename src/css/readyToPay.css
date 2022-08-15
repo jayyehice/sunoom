@@ -400,7 +400,8 @@
   background-color: #F5F0DD;
   font-size: 20px;
   text-align: center;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 #readyToPay .payBlock .payWayMobile {
   display: none;
@@ -462,13 +463,8 @@
   display: flex;
   margin: 20px 0;
 }
-<<<<<<< HEAD
-.readyToPay #FinishPage {
-  display: inline-block;
-=======
 #readyToPay #FinishPage {
   display: block;
->>>>>>> dev
   width: 140px;
   height: 50px;
   text-align: center;
@@ -486,32 +482,6 @@
   }
 }
 #readyToPay #FinishPage:hover {
-  color: #F5F0DD;
-  background-color: #0C1244;
-  border: 1px solid #F5F0DD;
-}
-.readyToPay .bottomBtn {
-  text-align: center;
-}
-.readyToPay .previousPage {
-  display: inline-block;
-  width: 140px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #F5F0DD;
-  border: 1px solid #0C1244;
-  margin: 50px auto;
-}
-@media (max-width: 576px) {
-  .readyToPay .previousPage {
-    margin-top: 20px;
-    width: 300px;
-    height: 60px;
-    border-radius: 30px;
-  }
-}
-.readyToPay .previousPage:hover {
   color: #F5F0DD;
   background-color: #0C1244;
   border: 1px solid #F5F0DD;
@@ -915,7 +885,8 @@
   background-color: #0C1244;
   font-size: 20px;
   text-align: center;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 .readyToPay_moon .payBlock .payWayMobile {
   display: none;
@@ -1026,6 +997,4 @@
   color: #0C1244;
   background-color: #F5F0DD;
   border: 1px solid #0C1244;
-}
-
-/*# sourceMappingURL=readyTopay.css.map */
+}/*# sourceMappingURL=readyTopay.css.map */

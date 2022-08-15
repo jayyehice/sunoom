@@ -132,7 +132,8 @@ h1, h2, h3, h4, h5, h6, p {
   opacity: 1;
   top: 200px;
   /* visibility: inherit; */
-  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .sea main .banner .schedule-wrapper .event-item .chName1 {
   top: 0px;
@@ -168,7 +169,6 @@ h1, h2, h3, h4, h5, h6, p {
   /* visibility: inherit; */
   text-transform: uppercase;
   letter-spacing: 1px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .sea main .banner .schedule-wrapper .event-item .discover1 {
@@ -822,9 +822,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sea main .photo .wrapper1 .ig {
   border-radius: 50%;
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .sea main .photo .wrapper2 {
   display: flex;
@@ -832,34 +835,24 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sea main .photo .wrapper2 .ig {
   border-radius: 50%;
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .sea .bubble {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
-  -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(255, 255, 255);
   height: 200px;
   position: absolute;
   width: 200px;
 }
-.sea .bubble:after {
-  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* IE10+ */
+.sea .bubble:after { /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 12+ */ /* IE10+ */
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#80ffffff", endColorstr="#00ffffff",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
   content: "";
   height: 180px;
@@ -1512,9 +1505,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sea_moon main .photo .wrapper1 .ig {
   border-radius: 50%;
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .sea_moon main .photo .wrapper2 {
   display: flex;
@@ -1522,9 +1518,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .sea_moon main .photo .wrapper2 .ig {
   border-radius: 50%;
-  animation-name: scale1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scale1;
+          animation-name: scale1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 575.98px) {
@@ -1638,7 +1637,8 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: 1;
     top: 170px;
     /* visibility: inherit; */
-    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
   }
   .sea main .banner .schedule-wrapper .event-item .chName1 {
     top: 0px;
@@ -1674,7 +1674,6 @@ h1, h2, h3, h4, h5, h6, p {
     /* visibility: inherit; */
     text-transform: uppercase;
     letter-spacing: 1px;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   .sea main .banner .schedule-wrapper .event-item .discover1 {
@@ -2409,9 +2408,12 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .sea main .photo .wrapper1 .ig {
     border-radius: 50%;
-    animation-name: scale1;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scale1;
+            animation-name: scale1;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
   .sea main .photo .wrapper2 {
     display: flex;
@@ -2419,34 +2421,24 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .sea main .photo .wrapper2 .ig {
     border-radius: 50%;
-    animation-name: scale1;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scale1;
+            animation-name: scale1;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
   .sea .bubble {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
-    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), inset 0px 5px 15px 2.5px rgb(255, 255, 255);
     height: 100px;
     position: absolute;
     width: 100px;
   }
-  .sea .bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* IE10+ */
+  .sea .bubble:after { /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 12+ */ /* IE10+ */
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#80ffffff", endColorstr="#00ffffff",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
     box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.3);
     content: "";
     height: 90px;
@@ -2566,7 +2558,8 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: 1;
     top: 170px;
     /* visibility: inherit; */
-    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
   }
   .sea_moon main .banner .schedule-wrapper .event-item .chName1 {
     top: 0px;
@@ -2602,7 +2595,6 @@ h1, h2, h3, h4, h5, h6, p {
     /* visibility: inherit; */
     text-transform: uppercase;
     letter-spacing: 1px;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   .sea_moon main .banner .schedule-wrapper .event-item .discover1 {
@@ -3336,9 +3328,12 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .sea_moon main .photo .wrapper1 .ig {
     border-radius: 50%;
-    animation-name: scale1;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scale1;
+            animation-name: scale1;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
   .sea_moon main .photo .wrapper2 {
     display: flex;
@@ -3346,9 +3341,23 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .sea_moon main .photo .wrapper2 .ig {
     border-radius: 50%;
-    animation-name: scale1;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scale1;
+            animation-name: scale1;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+}
+@-webkit-keyframes scale1 {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.8);
   }
 }
 @keyframes scale1 {
@@ -3360,6 +3369,52 @@ h1, h2, h3, h4, h5, h6, p {
   }
   100% {
     transform: scale(0.8);
+  }
+}
+@-webkit-keyframes float1 {
+  0% {
+    left: 0px;
+    transform: scale(0.9);
+  }
+  10% {
+    left: 100px;
+    transform: scale(0.95);
+  }
+  20% {
+    left: 200px;
+    transform: scale(1);
+  }
+  30% {
+    left: 300px;
+    transform: scale(0.95);
+  }
+  40% {
+    left: 400px;
+    transform: scale(0.9);
+  }
+  50% {
+    left: 500px;
+    transform: scale(0.95);
+  }
+  60% {
+    left: 600px;
+    transform: scale(1);
+  }
+  70% {
+    left: 700px;
+    transform: scale(0.95);
+  }
+  80% {
+    left: 800px;
+    transform: scale(0.9);
+  }
+  90% {
+    left: 900px;
+    transform: scale(0.95);
+  }
+  100% {
+    left: 1000px;
+    transform: scale(1);
   }
 }
 @keyframes float1 {
@@ -3408,6 +3463,14 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scale(1);
   }
 }
+@-webkit-keyframes float2 {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 2000px;
+  }
+}
 @keyframes float2 {
   0% {
     left: 0px;
@@ -3434,14 +3497,6 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: -100%;
   }
 }
-@-moz-keyframes animateBubble {
-  0% {
-    margin-top: 1000px;
-  }
-  100% {
-    margin-top: -100%;
-  }
-}
 @keyframes animateBubble {
   0% {
     margin-top: 1000px;
@@ -3451,14 +3506,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 @-webkit-keyframes sideWays {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 50px;
-  }
-}
-@-moz-keyframes sideWays {
   0% {
     margin-left: 0px;
   }
@@ -3477,112 +3524,80 @@ h1, h2, h3, h4, h5, h6, p {
 /* 背景泡泡 */
 .x1 {
   -webkit-animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
   animation: animateBubble 25s linear infinite, sideWays 0s ease-in-out infinite alternate;
   left: -5%;
   top: 5%;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
   transform: scale(0.6);
 }
 
 .x2 {
   -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
   left: 5%;
   top: 80%;
-  -webkit-transform: scale(0.4);
-  -moz-transform: scale(0.4);
   transform: scale(0.4);
 }
 
 .x3 {
   -webkit-animation: animateBubble 28s linear infinite, sideWays 0s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 28s linear infinite, sideWays 0s ease-in-out infinite alternate;
   animation: animateBubble 28s linear infinite, sideWays 0s ease-in-out infinite alternate;
   left: 10%;
   top: 40%;
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
   transform: scale(0.7);
 }
 
 .x4 {
   -webkit-animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
   animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
   left: 20%;
   top: 0;
-  -webkit-transform: scale(0.3);
-  -moz-transform: scale(0.3);
   transform: scale(0.3);
 }
 
 .x5 {
   -webkit-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
   left: 30%;
   top: 50%;
-  -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
   transform: scale(0.5);
 }
 
 .x6 {
   -webkit-animation: animateBubble 21s linear infinite, sideWays 0s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 21s linear infinite, sideWays 0s ease-in-out infinite alternate;
   animation: animateBubble 21s linear infinite, sideWays 0s ease-in-out infinite alternate;
   left: 50%;
   top: 0;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
   transform: scale(0.8);
 }
 
 .x7 {
   -webkit-animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
   animation: animateBubble 20s linear infinite, sideWays 0s ease-in-out infinite alternate;
   left: 65%;
   top: 70%;
-  -webkit-transform: scale(0.4);
-  -moz-transform: scale(0.4);
   transform: scale(0.4);
 }
 
 .x8 {
   -webkit-animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
   animation: animateBubble 22s linear infinite, sideWays 1s ease-in-out infinite alternate;
   left: 80%;
   top: 10%;
-  -webkit-transform: scale(0.3);
-  -moz-transform: scale(0.3);
   transform: scale(0.3);
 }
 
 .x9 {
   -webkit-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
   animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
   left: 90%;
   top: 50%;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
   transform: scale(0.6);
 }
 
 .x10 {
   -webkit-animation: animateBubble 26s linear infinite, sideWays 0s ease-in-out infinite alternate;
-  -moz-animation: animateBubble 26s linear infinite, sideWays 0s ease-in-out infinite alternate;
   animation: animateBubble 26s linear infinite, sideWays 0s ease-in-out infinite alternate;
   left: 80%;
   top: 80%;
-  -webkit-transform: scale(0.3);
-  -moz-transform: scale(0.3);
   transform: scale(0.3);
-}
-
-/*# sourceMappingURL=sea.css.map */
+}/*# sourceMappingURL=sea.css.map */

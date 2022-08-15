@@ -32,7 +32,8 @@
 .index .indexHeader .wrapper .videoWrappper .index_video {
   top: 0;
   left: 0;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   position: absolute;
   z-index: -99;
   width: 100%;
@@ -87,7 +88,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   pointer-events: none;
 }
 .index main .news {
@@ -133,14 +135,6 @@
   /*Chrome, Safari*/
 }
 @keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-moz-keyframes cloudMove01 {
   from {
     right: 2%;
   }
@@ -336,14 +330,6 @@
   /*Chrome, Safari*/
 }
 @keyframes cloudMove02 {
-  from {
-    top: 5%;
-  }
-  to {
-    top: -25%;
-  }
-}
-@-moz-keyframes cloudMove02 {
   from {
     top: 5%;
   }
@@ -762,14 +748,6 @@
   /*Chrome, Safari*/
 }
 @keyframes cloudMove01 {
-  from {
-    right: 2%;
-  }
-  to {
-    right: 15%;
-  }
-}
-@-moz-keyframes cloudMove01 {
   from {
     right: 2%;
   }
@@ -1503,13 +1481,10 @@
   .index main .traffic .wrapper ul {
     display: unset;
   }
-
   .index_moon main .category .wrapper .FoodSea .foodSeaText h3 {
     background-color: #0C1244;
   }
   .index_moon main .category .wrapper .LiveLand .LiveLandText h3 {
     background-color: #0C1244;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
