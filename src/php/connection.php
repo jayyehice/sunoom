@@ -1,11 +1,19 @@
 <?php
 
+    //jue DB
+    
+    $db_host = "127.0.0.1";
+    $db_user = "root";
+    $db_pass = "password";
+    $db_select = "sunoom";
+
+
     //AWS DB
     
-    $db_host = "tibame0301.comnfqgxiwqx.us-east-1.rds.amazonaws.com";
-    $db_user = "sunoom";
-    $db_pass = "Tibame!03";
-    $db_select = "sunoom";
+    // $db_host = "tibame0301.comnfqgxiwqx.us-east-1.rds.amazonaws.com";
+    // $db_user = "sunoom";
+    // $db_pass = "Tibame!03";
+    // $db_select = "sunoom";
 
 
     //Tibame DB
